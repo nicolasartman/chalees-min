@@ -1,0 +1,41 @@
+{
+  "name": "learning-prototype",
+  "version": "0.0.1",
+  "description": "TBD",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasartman/learning-prototype.git"
+  },
+  "author": "Nicolas Artman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicolasartman/learning-prototype/issues"
+  },
+  "homepage": "https://github.com/nicolasartman/learning-prototype#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-plugin-dedent": "^2.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cli": "^1.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tap": "^0.1.3",
+    "gulp-watch": "^4.3.5",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "firebase": "^2.4.1"
+  }
+}
