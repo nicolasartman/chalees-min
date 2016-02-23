@@ -1,2 +1,13 @@
+.row-gap-small {
+  margin-top: 2em; }
+
+.row-gap-medium {
+  margin-top: 4em; }
+
+.row-gap-large {
+  margin-top: 6em; }
+
+.row-gap-huge {
+  margin-top: 8em; }
 
 /*# sourceMappingURL=app.css.map */

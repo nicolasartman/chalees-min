@@ -1,6 +1,11 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
+var del = require('del');
+
+gulp.task('clean', function () {
+  del('dist');
+})
 
 gulp.task('js', function () {
   gulp.src('src/js/**/*')
@@ -35,4 +40,4 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('default', ['js', 'scss', 'browser-sync']);
+gulp.task('default', ['clean', 'js', 'scss', 'browser-sync']);

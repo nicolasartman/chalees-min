@@ -1,0 +1,14 @@
+@each $size, $margin in ('small': 2em, 'medium': 4em, 'large': 6em, 'huge': 8em) {
+  .row-gap-#{$size} {
+    margin-top: $margin;
+  }
+}
+
+html {
+  // One rem is now equivalent 10px, but the user can still scale their text as they wish
+//  font-size: 62.5%;
+}
+
+body {
+//  font-size: 1.6rem;
+}
