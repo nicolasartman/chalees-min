@@ -7,8 +7,31 @@
 html {
   // One rem is now equivalent 10px, but the user can still scale their text as they wish
 //  font-size: 62.5%;
+background: pink;
 }
 
 body {
 //  font-size: 1.6rem;
+}
+
+.pull-right {
+  float: right;
+}
+
+.main-nav {
+  $background: #DB3B0B;
+  height: 34px;
+  background-color: $background;
+  color: white;
+  
+  .pure-menu-link {
+    color: white;
+    &:hover {
+      background-color: lighten($background, 4%);      
+    }
+    
+    &:active, &:focus {      
+      background-color: lighten($background, 8%);
+    }
+  }
 }

@@ -8,12 +8,11 @@
 </head>
 <body class="layout">
 	<header class="header">
-		<nav class="home-menu pure-menu pure-menu-horizontal">
-			Needs-a-name!
+		<nav class="home-menu pure-menu pure-menu-horizontal main-nav">
+			Needs-a-name!?
 
-			<ul class="pure-menu-list">
-				<li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-				<li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+			<ul class="pure-menu-list pull-right">
+				<li class="pure-menu-item"><a href="#" onclick="signInWithGoogle()" class="pure-menu-link">Sign in with Google</a></li>
 			</ul>
 		</nav>						
 	</header>
@@ -25,8 +24,9 @@
 			</div>				
 		</div>
 	</main>
-		
+	
+	<script src="//cdn.auth0.com/js/lock-8.2.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-	<script src="/dist/app.js"></script>
+	<script src="/dist/app.min.js"></script>
 </body>
 </html>

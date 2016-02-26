@@ -1,7 +1,9 @@
-// test
+import React from 'react';
 
+import some from './some-component.js';
+import '../scss/styles.scss';
 
-window.loginWithGoogle = () => {
+window.signInWithGoogle = () => {
   const rootRef = new Firebase("https://learning-prototype.firebaseio.com");
   rootRef.authWithOAuthPopup("google", function(error, authData) {
     if (error) {
