@@ -22,18 +22,36 @@ const Header = React.createClass({
   showLock: function () {
     this.props.lock.show(this.props.onAuth);
   },
+  logout: function () {
+    
+  },
   render: function () {
+    const logoutUrl = 'https://learning-prototype.auth0.com/v2/logout?returnto=' +
+      encodeURI(window.location.host + window.location.pathname);
+    const userSection = this.props.authProfile ? (
+      <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+        {this.props.authProfile && this.props.authProfile.name}
+        <ul className="pure-menu-children">
+          <li className="pure-menu-item">
+            <a className="pure-menu-link" href="" onClick={this.logout}>Sign Out</a>
+          </li>
+        </ul>
+      </li>
+    ) : (
+      <li className="pure-menu-item">      
+        <a href="#" onClick={this.showLock} className="pure-menu-link">
+          <span> Sign in with Google</span>
+        </a>
+      </li>
+    );
+    
     return (
       <header id="header" className="header">
       	<nav className="home-menu pure-menu pure-menu-horizontal main-nav">
       		Needs-a-name!?
 
       		<ul className="pure-menu-list pull-right">
-      			<li className="pure-menu-item">
-              <a href="#" onClick={this.showLock} className="pure-menu-link">
-                Sign in with Google
-              </a>
-            </li>
+            {userSection}
       		</ul>
       	</nav>
       </header>
@@ -55,7 +73,7 @@ const Application = React.createClass({
         // TODO: why on earth doesn't this work with pify and fun.bind?
         this.lock.getProfile(hash['id_token'], (error, profile) => {
           this.setState({authProfile: profile, isLoggedIn: true});
-          console.log(this.authProfile);
+          console.log(profile);
 
           uploader.getAwsToken(hash['id_token'], (error, {Credentials}) => {
             console.log('aws credentials', Credentials);
@@ -64,6 +82,9 @@ const Application = React.createClass({
         });
       }
     }
+  },
+  getInitialState: function () {
+    return {};
   },
   onDrop: function ([file]) {
     console.log(file.name);
@@ -76,7 +97,7 @@ const Application = React.createClass({
   render: function () {
     return (
       <div>
-        <Header lock={this.lock} authProfile={this.authProfile} />
+        <Header lock={this.lock} authProfile={this.state.authProfile} />
         <main id="main">
         	<div className="row">
             <div className="col-xs-12">
