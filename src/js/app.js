@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import some from './some-component.js';
+import pify from 'pify';
+import 'babel-polyfill';
+import * as uploader from './uploader.js';
+import Auth0Lock from 'auth0-lock';
 import '../scss/styles.scss';
+import Dropzone from 'react-dropzone';
 
 // const signInWithGoogle = () => {
 //   const rootRef = new Firebase("https://learning-prototype.firebaseio.com");
@@ -15,21 +18,9 @@ import '../scss/styles.scss';
 //   });
 // }
 
-
-const awsConfig = {
-  bucket:         'assets.tests.auth0.com',
-  folder_prefix:  'learning-prototype-user-uploads/',
-  role:           'arn:aws:iam::010616021751:role/access-to-s3-per-user',  // AWS role arn
-  principal:      'arn:aws:iam::010616021751:saml-provider/auth0-provider', // AWS saml provider arn
-  domain:         'matugit.auth0.com',                // Auth0 domain
-  clientID:       'bm70oLevwEM6PjICBnczyNySHjFkDcNR', // Auth0 app client id
-  targetClientId: 'jAbmUzhI7KZ5cWG8gsyT3IaTg0dS9KZV' // Auth0 AWS API client id
-};
-
-
 const Header = React.createClass({
   showLock: function () {
-    this.props.lock.show()
+    this.props.lock.show(this.props.onAuth);
   },
   render: function () {
     return (
@@ -45,27 +36,55 @@ const Header = React.createClass({
             </li>
       		</ul>
       	</nav>
-      </header>  
+      </header>
     )
   }
 })
 
 const Application = React.createClass({
   componentWillMount: function () {
-    this.lock = new Auth0Lock('zvMJBINrPP41PVpc0OSfNxD3V4nQoVu9', 'learning-prototype.auth0.com');
+    this.lock = new Auth0Lock(
+      'zvMJBINrPP41PVpc0OSfNxD3V4nQoVu9', 'learning-prototype.auth0.com');
+
+    const hash = this.lock.parseHash();
+
+    if (hash) {
+      if (hash.error) {
+        alert('There was an error logging in ' + hash.error);
+      } else {
+        // TODO: why on earth doesn't this work with pify and fun.bind?
+        this.lock.getProfile(hash['id_token'], (error, profile) => {
+          this.setState({authProfile: profile, isLoggedIn: true});
+          console.log(this.authProfile);
+
+          uploader.getAwsToken(hash['id_token'], (error, {Credentials}) => {
+            console.log('aws credentials', Credentials);
+            this.setState({awsCredentials: Credentials})
+          });
+        });
+      }
+    }
+  },
+  onDrop: function ([file]) {
+    console.log(file.name);
+    if (file && file.name && this.state.isLoggedIn) {
+      uploader.uploadFile(this.state.authProfile.user_id, file, (error, result) => {
+        console.log('uploaded file!', error, result)
+      });
+    }
   },
   render: function () {
     return (
       <div>
-    		<Header lock={this.lock} />
-    		<main id="main">
+        <Header lock={this.lock} authProfile={this.authProfile} />
+        <main id="main">
         	<div className="row">
-        		<div className="col-xs-12">
-        			content!!
-        		</div>				
-        	</div>    
-    		</main>
-      </div>    
+            <div className="col-xs-12">
+              <Dropzone onDrop={this.onDrop} />
+            </div>
+          </div>
+        </main>
+      </div>
     );
   }
 })
