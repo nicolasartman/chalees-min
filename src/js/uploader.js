@@ -30,7 +30,15 @@ export async function uploadFile(file) {
     bucket.putObject(params, function (error, data) {
       console.log('file upload complete in upload.js', error, data);
       if (error) {reject(error);}
-      else {resolve(data);}
+      else {
+        bucket.getSignedUrl('getObject', {
+          Key: objectKey,
+          Expires: 60 * 60 * 24 * 30
+        }, (error, url) => {
+          if (error) {reject(error);}
+          else {resolve(url);}
+        });
+      }
     });    
   });
 }

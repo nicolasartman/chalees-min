@@ -4,18 +4,13 @@
   }
 }
 
-html {
-  // One rem is now equivalent 10px, but the user can still scale their text as they wish
-//  font-size: 62.5%;
-//background: pink;
-}
-
-body {
-//  font-size: 1.6rem;
-}
-
 .pull-right {
   float: right;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .main-nav {
@@ -33,5 +28,9 @@ body {
     &:active, &:focus {      
       background-color: lighten($background, 8%);
     }
+  }
+  
+  .pure-menu-children {
+    background-color: $background;
   }
 }

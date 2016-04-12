@@ -1,6 +1,7 @@
 import Auth0 from 'auth0-js';
 import Auth0Lock from 'auth0-lock';
 import config from './config.js';
+import Firebase from 'firebase';
 
 // The AWS SDK lacks browser support so this workaround just uses the prebuilt file
 // that's loaded in index.html
@@ -69,8 +70,15 @@ const firebaseCredentialsPromise = loginPromise.then((idToken) => new Promise((r
   }, (error, result) => {
     if (error) {reject(error);}
     else {
-      console.log('successfully authed to firebase')
-      resolve(result);
+      console.log('firebase delegation call result', result);
+      const ref = new Firebase('https://learning-prototype.firebaseio.com');
+      ref.authWithCustomToken(result.id_token, function (error, authData) {
+        if (error) {reject(error);}
+        else {
+          console.log('successfully authed to firebase');
+          resolve(authData);
+        }
+      });
     }
   })
 }))
@@ -82,15 +90,18 @@ export async function fetchAwsCredentials() {
   return awsCredentialsPromise.then(({Credentials}) => Credentials);
 }
 export async function fetchFirebaseCredentials() {
-  return awsCredentialsPromise.then(({Credentials}) => Credentials);
+  return firebaseCredentialsPromise;
 }
 
 
 let loggedIn = false;
-loginPromise.then(() => loggedIn = true);
+const fullyLoggedInPromise = Promise.all([
+  loginPromise,
+  awsCredentialsPromise,
+  firebaseCredentialsPromise
+]).then(() => loggedIn = true);
 
-export const isLoggedIn = () => loggedIn;
-
+export const whenLoggedIn = () => fullyLoggedInPromise;
 
 export function showLoginPrompt() {
   auth0Lock.show();
