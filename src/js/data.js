@@ -13,13 +13,15 @@ export async function onUpdate(handler) {
     console.log('user data update', snapshot.val());
     handler(snapshot.val());
   })
-}
+};
 
-export function set(data) {
+export async function set(data) {
+  await auth.fetchFirebaseCredentials();
+
   if (rootRef.getAuth() === null) {
     throw new Error('this should never be called before login');
   }
   const dataRef = rootRef.child(rootRef.getAuth().auth.fb_id);
-  dataRef.update(data);  
+  dataRef.update(data);
 }
 

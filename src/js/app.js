@@ -45,6 +45,8 @@ const Application = React.createClass({
               <h3>Reflect</h3>
               <p>Take a picture and drop it here</p>
               <ImageResponse itemId="step-1" loggedIn={this.state.loggedIn} response={this.state.data['step-1']} />
+            </div>
+            <div className="pure-u-1 row-gap-medium">
               <TextResponse itemId="step-2" loggedIn={this.state.loggedIn} response={this.state.data['step-2']} />
             </div>
           </div>

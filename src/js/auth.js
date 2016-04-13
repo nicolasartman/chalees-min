@@ -2,9 +2,6 @@ import Auth0 from 'auth0-js';
 import Auth0Lock from 'auth0-lock';
 import config from './config.js';
 import Firebase from 'firebase';
-
-// The AWS SDK lacks browser support so this workaround just uses the prebuilt file
-// that's loaded in index.html
 const AWS = window.AWS;
 
 const auth0Lock = new Auth0Lock(
@@ -36,7 +33,7 @@ if (hash) {
   }
 } else {
   loginPromise = Promise.reject(new Error('User is signed out'));
-}
+}  
 
 const userProfilePromise = loginPromise.then((idToken) => new Promise((resolve, reject) => {
   auth0Lock.getProfile(idToken, (error, profile) => {
@@ -57,7 +54,12 @@ const awsCredentialsPromise = loginPromise.then((idToken) => new Promise((resolv
   }, (error, result) => {
     if (error) {reject(error);}
     else {
-      console.log('successfully authed to aws')
+      console.log('successfully authed to aws', result)
+      AWS.config.credentials = new AWS.Credentials(
+          result.Credentials.AccessKeyId,
+          result.Credentials.SecretAccessKey,
+          result.Credentials.SessionToken);
+      AWS.config.region = 'ap-southeast-1';
       resolve(result);
     }
   });
@@ -99,7 +101,8 @@ const fullyLoggedInPromise = Promise.all([
   loginPromise,
   awsCredentialsPromise,
   firebaseCredentialsPromise
-]).then(() => loggedIn = true);
+])
+.then(() => loggedIn = true);
 
 export const whenLoggedIn = () => fullyLoggedInPromise;
 

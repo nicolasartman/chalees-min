@@ -7,7 +7,7 @@ const style = {
   minHeight: '200px'
 }
 
-const ImageAnswer = React.createClass({
+const TextResponse = React.createClass({
   getInitialState: function () {
     return {
       response: this.props.response
@@ -43,4 +43,4 @@ const ImageAnswer = React.createClass({
   }
 });
 
-export default ImageAnswer;
+export default TextResponse;
