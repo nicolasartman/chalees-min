@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory, Redirect } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
 import pify from 'pify';
 import 'babel-polyfill';
 import * as uploader from './uploader.js';
@@ -51,7 +51,7 @@ const Application = React.createClass({
 })
 
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={Application}>
       <IndexRoute component={HomePage} />
       <Route path="chapter/:id" component={Chapter} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import * as auth from './auth.js';
 
 const Header = React.createClass({
@@ -35,7 +36,7 @@ const Header = React.createClass({
       <header id="header" className="header">
       	<nav className="home-menu pure-menu pure-menu-horizontal main-nav">
           <ul className="pure-menu-list">
-        		<a href="#" className="pure-menu-link">Chalees Min School</a>
+        		<Link to="/" className="pure-menu-link">Chalees Min School</Link>
           </ul>
 
       		<ul className="pure-menu-list pull-right">
