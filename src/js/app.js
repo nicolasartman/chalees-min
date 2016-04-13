@@ -62,6 +62,15 @@ const Application = React.createClass({
                 <TextResponse itemId="step-2" loggedIn={this.state.loggedIn} response={this.state.data['step-2']} />
               </HtmlWidget>
             </div>
+            <div className="pure-u-1 row-gap-medium">
+              <HtmlWidget time="10">
+                <h3>Conduct your own experiment</h3>
+                <p>
+                  Follow the instructions in the link on how to conduct your own experiment on flowers. <a href="http://goo.gl/cuf63n">http://goo.gl/cuf63n</a>
+                </p>
+                <img src="http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
+              </HtmlWidget>
+            </div>
           </div>
         </main>
       </div>
