@@ -6,6 +6,7 @@ import * as uploader from './uploader.js';
 import * as auth from './auth.js';
 import ImageResponse from './image-response.js';
 import TextResponse from './text-response.js';
+import VideoInstruction from './video-instruction.js';
 import Header from './header.js';
 import '../scss/styles.scss';
 import * as data from './data.js';
@@ -41,6 +42,11 @@ const Application = React.createClass({
         <Header lock={this.lock} authProfile={this.state.authProfile} loggedIn={this.state.loggedIn} />
         <main id="main" className="content">
           <div className="pure-g">
+            <div className="pure-u-1">
+              <h3>Learn</h3>
+              <p>Why do plants produce flowers? Watch this video to find out.</p>
+              <VideoInstruction />
+            </div>
             <div className="pure-u-1">
               <h3>Reflect</h3>
               <p>Take a picture and drop it here</p>
