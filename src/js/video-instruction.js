@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 const VideoInstruction = React.createClass({
   render: function() {
     const opts = {
-      width: '800'  // This matches the width of the other responses
+      width: '100%'  // This matches the width of the other responses
     };
     return (
       <YouTube videoId="EArZXsRXsj4" opts={opts} />

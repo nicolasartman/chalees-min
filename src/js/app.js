@@ -7,6 +7,7 @@ import * as auth from './auth.js';
 import ImageResponse from './image-response.js';
 import TextResponse from './text-response.js';
 import VideoInstruction from './video-instruction.js';
+import HtmlWidget from './html-widget.js';
 import Header from './header.js';
 import '../scss/styles.scss';
 import * as data from './data.js';
@@ -43,17 +44,23 @@ const Application = React.createClass({
         <main id="main" className="content">
           <div className="pure-g">
             <div className="pure-u-1">
-              <h3>Learn</h3>
-              <p>Why do plants produce flowers? Watch this video to find out.</p>
-              <VideoInstruction />
+              <HtmlWidget time="4">
+                <h3>Learn</h3>
+                <p>Why do plants produce flowers? Watch this video to find out.</p>
+                <VideoInstruction />
+              </HtmlWidget>
             </div>
             <div className="pure-u-1">
-              <h3>Reflect</h3>
-              <p>Take a picture and drop it here</p>
-              <ImageResponse itemId="step-1" loggedIn={this.state.loggedIn} response={this.state.data['step-1']} />
+              <HtmlWidget time="6">
+                <h3>Reflect</h3>
+                <p>Take a picture and drop it here</p>
+                <ImageResponse itemId="step-1" loggedIn={this.state.loggedIn} response={this.state.data['step-1']} />
+              </HtmlWidget>
             </div>
             <div className="pure-u-1 row-gap-medium">
-              <TextResponse itemId="step-2" loggedIn={this.state.loggedIn} response={this.state.data['step-2']} />
+              <HtmlWidget time="10">
+                <TextResponse itemId="step-2" loggedIn={this.state.loggedIn} response={this.state.data['step-2']} />
+              </HtmlWidget>
             </div>
           </div>
         </main>
