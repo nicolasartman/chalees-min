@@ -8,7 +8,7 @@ const VideoInstruction = React.createClass({
     };
     return (
       <YouTube videoId={this.props.videoId} opts={opts} />
-    )
+    );
   }
 });
 
