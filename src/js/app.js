@@ -47,7 +47,7 @@ const Application = React.createClass({
               <HtmlWidget time="4">
                 <h3>Learn</h3>
                 <p>Why do plants produce flowers? Watch this video to find out.</p>
-                <VideoInstruction />
+                <VideoInstruction videoId="EArZXsRXsj4" />
               </HtmlWidget>
             </div>
             <div className="pure-u-1">

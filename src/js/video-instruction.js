@@ -7,7 +7,7 @@ const VideoInstruction = React.createClass({
       width: '100%'  // This matches the width of the other responses
     };
     return (
-      <YouTube videoId="EArZXsRXsj4" opts={opts} />
+      <YouTube videoId={this.props.videoId} opts={opts} />
     )
   }
 });
