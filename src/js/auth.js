@@ -68,7 +68,7 @@ async function fetchFirebaseAuthorization(idToken) {
 // Requires the JWT received from the delegation token endpoint call for firebase
 async function authorizeToFirebaseDb(firebaseIdToken) {
   return new Promise((resolve, reject) => {
-    const ref = new Firebase('https://learning-prototype.firebaseio.com');
+    const ref = new Firebase('https://chalees-min.firebaseio.com');
     ref.authWithCustomToken(firebaseIdToken, function (error, authData) {
       if (error) {reject(error);}
       else {

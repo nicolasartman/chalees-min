@@ -7,8 +7,8 @@ module.exports = {
     path.join(__dirname, 'src/js/app.js')
   ],
   output: {
-    path: path.join(__dirname, "dist/"),
-    publicPath: "/dist/",
+    path: path.join(__dirname, "public/"),
+    publicPath: "/",
     filename: "app.min.js"
   },
   module: {

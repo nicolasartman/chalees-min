@@ -39,9 +39,9 @@ const Chapter = React.createClass({
               <HtmlWidget time="10">
                 <h3>Conduct your own experiment</h3>
                 <p>
-                  Follow the instructions in the link on how to conduct your own experiment on flowers. <a href="http://goo.gl/cuf63n">http://goo.gl/cuf63n</a>
+                  Follow the instructions in the link on how to conduct your own experiment on flowers. <a href="https://goo.gl/cuf63n">https://goo.gl/cuf63n</a>
                 </p>
-                <img src="http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
+                <img src="https://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
               </HtmlWidget>
             </div>
           </div>

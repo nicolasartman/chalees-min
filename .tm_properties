@@ -1,0 +1,6 @@
+excludeDirectories = "{minified,coverage,node_modules,bower_modules,dist}"
+excludeFiles = "{public/*.min.js,public/*.min.js.map}"
+
+# Default indentation
+softTabs         = true
+tabSize          = 2

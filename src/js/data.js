@@ -1,7 +1,7 @@
 import * as auth from './auth.js';
 import Firebase from 'firebase';
 
-const rootRef = new Firebase('https://learning-prototype.firebaseio.com/prototypeOne');
+const rootRef = new Firebase('https://chalees-min.firebaseio.com/prototypeOne');
 
 export async function onUpdate(handler) {
   await auth.authorize();

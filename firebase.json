@@ -1,0 +1,19 @@
+{
+  "firebase": "chalees-min",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**",
+    "src",
+    "tmtags",
+    "webpack.config.js",
+    "LICENSE",
+    "README.md",
+    ".DS_Store"
+  ],
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }]
+}

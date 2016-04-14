@@ -34,7 +34,7 @@ const Application = React.createClass({
       this.setState({isLoggedIn: true});
       data.onUpdate((data) => {
         console.log('updated data');
-        this.setState({data});
+        this.setState({data: data || {}});
       });
     } catch (error) {
       this.setState({isLoggedIn: false})
