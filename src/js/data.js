@@ -4,23 +4,17 @@ import Firebase from 'firebase';
 const rootRef = new Firebase('https://learning-prototype.firebaseio.com/prototypeOne');
 
 export async function onUpdate(handler) {
-  await auth.fetchFirebaseCredentials();
-  console.log('setting up firebase update subscription');
-  console.log('arggggg', rootRef.getAuth());
+  await auth.authorize();
   const dataRef = rootRef.child(rootRef.getAuth().auth.fb_id);
 
   dataRef.on('value', function (snapshot) {
-    console.log('user data update', snapshot.val());
+    console.log('firebase user data update', snapshot.val());
     handler(snapshot.val());
   })
 };
 
 export async function set(data) {
-  await auth.fetchFirebaseCredentials();
-
-  if (rootRef.getAuth() === null) {
-    throw new Error('this should never be called before login');
-  }
+  await auth.authorize();
   const dataRef = rootRef.child(rootRef.getAuth().auth.fb_id);
   dataRef.update(data);
 }

@@ -13,7 +13,7 @@ const bucket = new AWS.S3({
 
 export async function uploadFile(file) {
   const credentials = await auth.fetchAwsCredentials();
-  const profile = await auth.fetchUserProfile();
+  const {profile} = await auth.authorize();
   
   // TODO: figure out why this is needed, since AWS' SDK already has credentials configured
   bucket.config.credentials = new AWS.Credentials(

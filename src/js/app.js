@@ -14,26 +14,31 @@ import HomePage from './home-page.js';
 import Header from './header.js';
 import '../scss/styles.scss';
 import * as data from './data.js';
+import localStore from 'store';
 
-// const signInWithGoogle = () => {
-//   const rootRef = new Firebase("https://learning-prototype.firebaseio.com");
-//   rootRef.authWithOAuthPopup("google", function(error, authData) {
-//     if (error) {
-//       console.log("Login Failed!", error);
-//     } else {
-//       console.log("Authenticated successfully with payload:", authData);
-//     }
-//   });
-// }
+// Authorize them to all services if they're signed in
 
 const Application = React.createClass({
   componentDidMount: async function () {
-    data.onUpdate((data) => {
-      console.log('updated data');
-      this.setState({data});
-    });
-    await auth.whenLoggedIn();
-    this.setState({loggedIn: true});
+    if (!localStore.enabled) {
+      // TODO: give a nice in-page dismissable alert instead
+      alert('You may be using an unsupported browser or be in a private ' +
+        'browsing session, so we will not be able to keep you logged in and ' +
+        'save your progress reliably. Please switch browser or into a regular ' +
+        'window if you can, and also do not hesitate to let us know about this. ' +
+      'Thank you for your understanding.');
+    }
+    
+    try {
+      await auth.authorize();      
+      this.setState({isLoggedIn: true});
+      data.onUpdate((data) => {
+        console.log('updated data');
+        this.setState({data});
+      });
+    } catch (error) {
+      this.setState({isLoggedIn: false})
+    }
   },
   getInitialState: function () {
     return {
@@ -43,8 +48,8 @@ const Application = React.createClass({
   render: function () {
     return (
       <div>
-        <Header lock={this.lock} authProfile={this.state.authProfile} loggedIn={this.state.loggedIn} />
-        {React.cloneElement(this.props.children, { loggedIn: this.state.loggedIn, data: this.state.data })}
+        <Header lock={this.lock} authProfile={this.state.authProfile} loggedIn={this.state.isLoggedIn} />
+        {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
       </div>
     );
   }
