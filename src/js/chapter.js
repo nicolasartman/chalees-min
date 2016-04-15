@@ -41,7 +41,7 @@ const Chapter = React.createClass({
                 <p>
                   Follow the instructions in the link on how to conduct your own experiment on flowers. <a href="https://goo.gl/cuf63n">https://goo.gl/cuf63n</a>
                 </p>
-                <img src="https://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
+                <img src="http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
               </HtmlWidget>
             </div>
           </div>

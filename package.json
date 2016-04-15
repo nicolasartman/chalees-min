@@ -7,7 +7,7 @@
     "start": "gulp",
     "dev": "webpack-dev-server --hot --inline --history-api-fallback --content-base public/",
     "build": "webpack -p",
-    "deploy": "npm run build && firebase deploy && firebase open"
+    "deploy": "npm run build && firebase deploy && ./open-site-in-browser.sh"
   },
   "repository": {
     "type": "git",
@@ -55,6 +55,7 @@
     "json-loader": "^0.5.4",
     "jwt-decode": "^2.0.1",
     "node-sass": "^3.4.2",
+    "openurl": "^1.1.1",
     "pify": "^2.3.0",
     "pinkie-promise": "^2.0.0",
     "react": "^15.0.0",
