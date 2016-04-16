@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "dev": "webpack-dev-server --hot --inline --history-api-fallback --content-base public/",
-    "build": "webpack -p",
+    "build": "webpack --config webpack.production.config.js",
     "deploy": "npm run build && firebase deploy && ./open-site-in-browser.sh"
   },
   "repository": {
