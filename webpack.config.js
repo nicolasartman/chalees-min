@@ -39,5 +39,5 @@ module.exports = {
       include: scssSourcePath
     }]
   },
-  devtool: 'source-map'
+  devtool: 'eval-source-map'
 }
