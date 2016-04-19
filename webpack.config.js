@@ -1,12 +1,13 @@
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
 
 const jsSourcePath = path.join(__dirname, '/src/js');
 const scssSourcePath = path.join(__dirname, '/src/scss');
 
 module.exports = {
-  entry: [
-    path.join(__dirname, 'src/js/index.js')
-  ],
+  entry: {
+    app: path.join(__dirname, 'src/js/index.js')
+  },
   output: {
     path: path.join(__dirname, "public/"),
     publicPath: "/",
@@ -31,7 +32,6 @@ module.exports = {
     }, {
       test: /\.jsx?$/,
       loaders: ['react-hot', 'babel-loader'],
-      exclude: /node_modules/,
       include: jsSourcePath
     }, {
       test: /\.scss$/,
@@ -39,5 +39,20 @@ module.exports = {
       include: scssSourcePath
     }]
   },
-  devtool: 'eval-source-map'
+  plugins: [new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    filename: 'vendor.min.js', // TODO: add hash in production
+    // Despite the name, this can be passed a function that acts as an includeChunk?()
+    // predicate. By using this we can always include resources from node_modules
+    // in the vendor file and thus version them separately.
+    minChunks: function (module, count) {
+      return module.resource && module.resource.startsWith(
+        path.join(__dirname, 'node_modules'));
+    }
+  })],
+  // this isn't a specific keyword - you can include the strings eval, cheap, module,
+  // and source-map in any order. they're basically all just flags that it magically
+  // checks for and does stuff based on.
+  devtool: 'working cheaper, makes us eval, do it modules, make us source-maps'
+  // you could instead 
 }
