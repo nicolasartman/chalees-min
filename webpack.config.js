@@ -66,6 +66,11 @@ module.exports = {
     )
   ]
   .concat(isProduction ? [
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new WebpackMd5Hash(),
     new ManifestPlugin(),
     new ChunkManifestPlugin({
