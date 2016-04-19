@@ -73,14 +73,14 @@ module.exports = {
       manifestVariable: "webpackManifest"
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({
-    //     compress: {
-    //         warnings: false
-    //     },
-    //     // No idea if this works or silently fails. it's a valid uglifyjs option, but
-    //     // this is webpack, so misconfigurations => silent failure.
-    //     screwIe8: true
-    // })
+    new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            warnings: false
+        },
+        // No idea if this works or silently fails. it's a valid uglifyjs option, but
+        // this is webpack, so misconfigurations => silent failure.
+        screwIe8: true
+    })
   ] : [])
   .concat(new HtmlWebpackPlugin({
     template: './src/html/index.template.html',
