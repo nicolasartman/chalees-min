@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
-import 'babel-polyfill';
 import * as uploader from './uploader.js';
 import * as auth from './auth.js';
 import Chapter from './chapter.js';
@@ -9,6 +8,7 @@ import HomePage from './home-page.js';
 import Application from './application.js';
 import localStore from 'store';
 
+import '../scss/pure.scss';
 import '../scss/styles.scss';
 
 if (!localStore.enabled) {

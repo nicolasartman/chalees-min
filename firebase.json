@@ -1,6 +1,6 @@
 {
   "firebase": "chalees-min",
-  "public": "public",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",

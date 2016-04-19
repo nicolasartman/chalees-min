@@ -1,6 +1,5 @@
 import React from 'react';
 import pify from 'pify';
-import 'babel-polyfill';
 import ImageResponse from './image-response.js';
 import TextResponse from './text-response.js';
 import VideoInstruction from './video-instruction.js';
