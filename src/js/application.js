@@ -23,7 +23,6 @@ const Application = React.createClass({
       this.setState({isLoggedIn: false})
     }
   },
-
   getInitialState: function () {
     return {
       data: {}

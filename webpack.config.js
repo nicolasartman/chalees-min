@@ -39,20 +39,25 @@ module.exports = {
       include: scssSourcePath
     }]
   },
-  plugins: [new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    filename: 'vendor.min.js', // TODO: add hash in production
-    // Despite the name, this can be passed a function that acts as an includeChunk?()
-    // predicate. By using this we can always include resources from node_modules
-    // in the vendor file and thus version them separately.
-    minChunks: function (module, count) {
-      return module.resource && module.resource.startsWith(
-        path.join(__dirname, 'node_modules'));
-    }
-  })],
+  plugins: [
+    // TODO: add in production
+    // new webpack.optimize.OccurrenceOrderPlugin(preferEntry),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.min.js', // TODO: add hash in production
+      // Despite the name, this can be passed a function that acts as an includeChunk?()
+      // predicate. By using this we can always include resources from node_modules
+      // in the vendor file and thus version them separately.
+      minChunks: function (module, count) {
+        return module.resource && module.resource.startsWith(
+          path.join(__dirname, 'node_modules'));
+        }
+      }
+    )
+  ],
   // this isn't a specific keyword - you can include the strings eval, cheap, module,
   // and source-map in any order. they're basically all just flags that it magically
   // checks for and does stuff based on.
-  devtool: 'working cheaper, makes us eval, do it modules, make us source-maps'
+  devtool: 'working cheaper, do it modules, make us source-maps'
   // you could instead 
 }
