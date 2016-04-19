@@ -18,7 +18,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist/"),
     publicPath: "/",
-    filename: isProduction ? "app.[chunkhash:7].min.js" : "app.min.js"
+    filename: isProduction ? "app.[chunkhash].min.js" : "app.min.js"
   },
   module: {
     noParse: [
@@ -41,6 +41,8 @@ module.exports = {
       loaders: (isProduction ? [] : ['react-hot']).concat('babel-loader'),
       include: jsSourcePath
     }, {
+      // TODO: minify styles and create an actual css file instead of this
+      // style tag inlining stuff.
       test: /\.scss$/,
       loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
       include: scssSourcePath
@@ -52,7 +54,7 @@ module.exports = {
     // new webpack.optimize.OccurrenceOrderPlugin(preferEntry),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: isProduction ? 'vendor.[chunkhash:7].min.js' : 'vendor.min.js',
+      filename: isProduction ? 'vendor.[chunkhash].min.js' : 'vendor.min.js',
       // Despite the name, this can be passed a function that acts as an includeChunk?()
       // filter predicate. By using this we can always include resources from node_modules
       // in the vendor file and thus version them separately.
