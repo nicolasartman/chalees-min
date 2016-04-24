@@ -5,6 +5,7 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const jsSourcePath = path.join(__dirname, '/src/js');
 const scssSourcePath = path.join(__dirname, '/src/scss');
@@ -44,7 +45,7 @@ module.exports = {
       // TODO: minify styles and create an actual css file instead of this
       // style tag inlining stuff.
       test: /\.scss$/,
-      loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
+      loaders: ['style', 'css?sourceMap', 'postcss', 'sass?sourceMap'],
       include: scssSourcePath
     }, {
       test: /\.(png|jpg|svg)$/,
@@ -54,6 +55,12 @@ module.exports = {
         limit: 8192
       }
     }]
+  },
+  postcss: function () {
+    return {
+      defaults: [autoprefixer],
+      cleaner:  [autoprefixer({ browsers: ['last 2 versions'] })]
+    };
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),

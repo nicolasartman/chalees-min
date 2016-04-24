@@ -16,7 +16,7 @@ const Application = React.createClass({
   componentDidMount: async function () {
     try {
       await auth.authorize();      
-      this.setState({isLoggedIn: true});
+      // this.setState({isLoggedIn: true});
 
       data.onUpdate((data) => {
         console.log('updated data');
