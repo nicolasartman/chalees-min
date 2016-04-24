@@ -8,7 +8,6 @@ import HomePage from './home-page.js';
 import Application from './application.js';
 import localStore from 'store';
 
-import '../scss/pure.scss';
 import '../scss/styles.scss';
 
 if (!localStore.enabled) {

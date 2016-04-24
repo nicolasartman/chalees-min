@@ -1,5 +1,5 @@
 excludeDirectories = "{minified,coverage,node_modules,bower_modules,dist}"
-excludeFiles = "{public/*.min.js,public/*.min.js.map,public/*.min.css}"
+excludeFiles = "{public/*.min.js,public/*.min.js.map,public/*.min.css,stats.json}"
 
 # Default indentation
 softTabs         = true

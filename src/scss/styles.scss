@@ -1,3 +1,32 @@
+@import "pure";
+@import "pure-grids-responsive";
+
+$chalees-red: #A60008;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  
+  &.homepage {
+    max-width: 80em;
+  }
+  &.chapter {
+    max-width: 60em;
+  }
+}
+
 @each $size, $margin in ('small': 2em, 'medium': 4em, 'large': 6em, 'huge': 8em) {
   .row-gap-#{$size} {
     margin-top: $margin;
@@ -7,30 +36,146 @@
 .pull-right {
   float: right;
 }
-
-.content {
-  max-width: 800px;
-  margin: 0 auto;
+// Add grid cell horizontal padding
+div[class*="pure-u-"] {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
+// ====================================
+// = Loading Overlay and Intro Styles =
+// ====================================
+
+@-webkit-keyframes "heartpulse" {
+  0% {
+    transform: scale(1);
+  }
+  49% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $chalees-red;
+  z-index: 10000000;
+  color: darken(white, 3%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loading-overlay-logo {
+  animation: heartpulse 2s ease-out infinite;
+}
+.loading-overlay-message {
+  font-size: 1.5em;
+}
+
+.loading-overlay.fade-out-leave {
+  opacity: 1.0;
+}
+.loading-overlay.fade-out-leave.fade-out-leave-active {
+  opacity: 0;
+  transition: opacity 1000ms linear;
+}
+
+// =================
+// = Header Styles =
+// =================
+
+// old background color
+// $header-background: #DB3B0B;
+
+$header-background: $chalees-red;
+.header {
+  background-color: $header-background;
+}
+  
 .main-nav {
-  $background: #DB3B0B;
-  height: 34px;
-  background-color: $background;
+  height: 3em;
+  background-color: $header-background;
   color: white;
   
   .pure-menu-link {
     color: white;
+    padding: 1em 1em;
     &:hover {
-      background-color: lighten($background, 4%);      
+      background-color: lighten($header-background, 4%);      
     }
     
     &:active, &:focus {      
-      background-color: lighten($background, 8%);
+      background-color: lighten($header-background, 8%);
     }
   }
   
   .pure-menu-children {
-    background-color: $background;
+    background-color: $header-background;
   }
+}
+
+.header-brand {
+  padding: 1em 0;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  
+  .header-brand-logo {
+    height: 1em;
+    width: auto;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+// ===================
+// = Homepage styles =
+// ===================
+
+.homepage-tile {
+  margin-bottom: 2em;
+  
+  a {
+    text-decoration: none;
+  }
+}
+.homepage-tile-content {
+  background-color: #EEE;
+  background-color: #333;
+  border: 1px solid #555;
+//  border: 1px solid $chalees-red;
+  position: relative;
+}
+.homepage-tile-title {
+  text-align: center;
+  min-height: 4em;
+  padding: 1em 0.5em;
+  color: #7FB4FF;
+//  color: #CCC;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.homepage-tile-chapter-number {
+  font-size: 0.7em;
+  color: darken(white, 10%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 0.75em;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }

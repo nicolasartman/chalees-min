@@ -46,6 +46,13 @@ module.exports = {
       test: /\.scss$/,
       loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
       include: scssSourcePath
+    }, {
+      test: /\.(png|jpg|svg)$/,
+      loader: 'url-loader',
+      query: {
+        name: '[hash:15]',
+        limit: 8192
+      }
     }]
   },
   plugins: [

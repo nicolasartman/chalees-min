@@ -1,38 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router';
+import HomepageTile from './homepage-tile.js';
+
+// Images
+import flowerMarketImage from '../images/flower-market.jpg';
+import magnetImage from '../images/magnets.jpg';
+import foodSourcesImage from '../images/food-sources.jpg';
 
 const HomePage = React.createClass({
   render: function() {
     return (
-      <div>
-        <h2>Grade 6 Science</h2>
+      <div className="container homepage">
+
         <div className="pure-g">
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/EArZXsRXsj4/0.jpg" />
-            <p><Link to="/chapter/7">Chapter 7: Why do plants produce flowers?</Link></p>
-          </div>
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/yjSNU62kxZo/0.jpg" />
-            <p><Link to="/chapter/13">Chapter 13: When do magnets misbehave?</Link></p>
-          </div>
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/zHeWx_AifLs/0.jpg" />
-            <p><Link to="/chapter/1">Chapter 1: Where does food come from?</Link></p>
+          <div className="pure-u-1">
+            <h2>Grade 6 Science</h2>
           </div>
         </div>
+
         <div className="pure-g">
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/EArZXsRXsj4/0.jpg" />
-            <p><Link to="/chapter/7">Chapter 7: Why do plants produce flowers?</Link></p>
-          </div>
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/yjSNU62kxZo/0.jpg" />
-            <p><Link to="/chapter/13">Chapter 13: When do magnets misbehave?</Link></p>
-          </div>
-          <div className="pure-u-1-3 some-style">
-            <img className="pure-img" src="https://img.youtube.com/vi/zHeWx_AifLs/0.jpg" />
-            <p><Link to="/chapter/1">Chapter 1: Where does food come from?</Link></p>
-          </div>
+          <HomepageTile photo={foodSourcesImage} chapterNumber={1} title="Where does food come from?" />
+          <HomepageTile photo={flowerMarketImage} chapterNumber={7} title="Why do plants produce flowers?" />
+          <HomepageTile photo={magnetImage} chapterNumber={13} title="When do magnets misbehave?" />
+          <HomepageTile photo={foodSourcesImage} chapterNumber={1} title="Where does food come from?" />
+          <HomepageTile photo={flowerMarketImage} chapterNumber={7} title="Why do plants produce flowers?" />
+          <HomepageTile photo={magnetImage} chapterNumber={13} title="When do magnets misbehave?" />
+          <HomepageTile photo={foodSourcesImage} chapterNumber={1} title="Where does food come from?" />
+          <HomepageTile photo={flowerMarketImage} chapterNumber={7} title="Why do plants produce flowers?" />
+          <HomepageTile photo={magnetImage} chapterNumber={13} title="When do magnets misbehave?" />
+          <HomepageTile photo={foodSourcesImage} chapterNumber={1} title="Where does food come from?" />
+          <HomepageTile photo={flowerMarketImage} chapterNumber={7} title="Why do plants produce flowers?" />
+          <HomepageTile photo={magnetImage} chapterNumber={13} title="When do magnets misbehave?" />
+          <HomepageTile photo={foodSourcesImage} chapterNumber={1} title="Where does food come from?" />
+          <HomepageTile photo={flowerMarketImage} chapterNumber={7} title="Why do plants produce flowers?" />
+          <HomepageTile photo={magnetImage} chapterNumber={13} title="When do magnets misbehave?" />
         </div>
         {this.props.children}
       </div>

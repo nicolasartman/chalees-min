@@ -5,7 +5,10 @@ import ImageResponse from './image-response.js';
 import TextResponse from './text-response.js';
 import VideoInstruction from './video-instruction.js';
 import HtmlWidget from './html-widget.js';
+import LoadingOverlay from './loading-overlay.js';
 import * as data from './data.js';
+import localStore from 'store';
+
 
 // Authorize them to all services if they're signed in
 
@@ -14,13 +17,20 @@ const Application = React.createClass({
     try {
       await auth.authorize();      
       this.setState({isLoggedIn: true});
+
       data.onUpdate((data) => {
         console.log('updated data');
         this.setState({data: data || {}});
-        console.log('test');
       });
+
+      // TODO: tie this state to the first firebase value event instead
+      console.log('setting state to is ready');
+      this.setState({isReady: true});
     } catch (error) {
-      this.setState({isLoggedIn: false})
+      this.setState({isLoggedIn: false});
+
+      // TODO: improve this logic?
+      this.setState({isReady: true});
     }
   },
   getInitialState: function () {
@@ -30,7 +40,8 @@ const Application = React.createClass({
   },
   render: function () {
     return (
-      <div className="pie">
+      <div>
+        <LoadingOverlay shouldShow={!this.state.isReady} />
         <Header lock={this.lock} authProfile={this.state.authProfile} loggedIn={this.state.isLoggedIn} />
         {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
       </div>

@@ -6,14 +6,13 @@ import VideoInstruction from './video-instruction.js';
 import HtmlWidget from './html-widget.js';
 import HomePage from './home-page.js';
 import Header from './header.js';
-import '../scss/styles.scss';
 import * as data from './data.js';
 
 const Chapter = React.createClass({
   render: function() {
     return (
       <div>
-        <main id="main" className="content">
+        <main id="main" className="container chapter">
           <div className="pure-g">
             <div className="pure-u-1">
               <HtmlWidget time="4">

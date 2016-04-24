@@ -81,7 +81,10 @@ async function authorizeToFirebaseDb(firebaseIdToken) {
 
 function validateAuthorizations(authorizations) {
   console.log('decoded jwt', decodeJwt(authorizations.idToken));
-  return true;
+  const expirationTime = decodeJwt(authorizations.idToken).exp * 1000;
+  let result = expirationTime && new Date().getTime() < expirationTime;
+  console.log('cached authorizations are ', result ? 'valid' : 'invalid');
+  return result;
 }
 
 export async function authorize() {
@@ -90,6 +93,9 @@ export async function authorize() {
     // TODO: refresh any authorization that is close to expiring
     console.log('returning cached authorizations', cachedAuthorizations);
     return Promise.resolve(cachedAuthorizations);
+  } else {
+    // clear cached authorizations
+    localStore.remove('authorizations');
   }
   
   let loginPromise;
