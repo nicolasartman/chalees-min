@@ -7,8 +7,25 @@ import LearningItem from './learning-item.js';
 import HomePage from './home-page.js';
 import Header from './header.js';
 import * as data from './data.js';
+import * as chapters from '../json/chapters.json';
 
 const Chapter = React.createClass({
+  getInitialState: function() {
+    return {
+      chapter: {
+        video: {},
+        response: {},
+        question: {},
+        experiment: {}
+      }
+    };
+  },
+  componentDidMount: function() {
+    // Hardcode to the magnets chapter if there isn't existing dummy data for the given chapter
+    this.setState({
+      chapter: chapters[this.props.params.id] || chapters[13]
+    });
+  },
   render: function() {
     return (
       <div>
@@ -16,32 +33,30 @@ const Chapter = React.createClass({
           <div className="pure-g">
             <div className="pure-u-1">
               <LearningItem time="4">
-                <h3>Learn</h3>
-                <p>Why do plants produce flowers? Watch this video to find out.</p>
-                <VideoInstruction videoId="EArZXsRXsj4" />
+              <h3>{this.state.chapter.video.title}</h3>
+                <p>{this.state.chapter.video.description}</p>
+                <VideoInstruction videoId={this.state.chapter.video.videoId} />
               </LearningItem>
             </div>
             <div className="pure-u-1">
               <LearningItem time="6">
-                <h3>Reflect</h3>
-                <p>Take a picture and drop it here</p>
+                <h3>{this.state.chapter.response.title}</h3>
+                <p>{this.state.chapter.response.description}</p>
                 <ImageResponse itemId="step-1" loggedIn={this.props.loggedIn} response={this.props.data['step-1']} />
               </LearningItem>
             </div>
             <div className="pure-u-1 row-gap-medium">
               <LearningItem time="10">
-                <h3>Reflect</h3>
-                <p>Write down your thoughts about flowers</p>
+                <h3>{this.state.chapter.question.title}</h3>
+                <p>{this.state.chapter.question.description}</p>
                 <TextResponse itemId="step-2" loggedIn={this.props.loggedIn} response={this.props.data['step-2']} />
               </LearningItem>
             </div>
             <div className="pure-u-1 row-gap-medium">
               <LearningItem time="10">
-                <h3>Conduct your own experiment</h3>
-                <p>
-                  Follow the instructions in the link on how to conduct your own experiment on flowers. <a href="https://goo.gl/cuf63n">https://goo.gl/cuf63n</a>
-                </p>
-                <img className="pure-img" src="http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg" />
+                <h3>{this.state.chapter.experiment.title}</h3>
+                <p>{this.state.chapter.experiment.description}</p>
+                <img className="pure-img" src={this.state.chapter.experiment.image} />
               </LearningItem>
             </div>
           </div>
