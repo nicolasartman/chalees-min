@@ -24,7 +24,7 @@ const TextResponse = React.createClass({
     });
   },
   componentWillReceiveProps: function (newProps) {
-    console.log('new props', newProps);
+    // console.log('new props', newProps);
     if (newProps.response != this.props.response) {
       this.setState({
         response: newProps.response

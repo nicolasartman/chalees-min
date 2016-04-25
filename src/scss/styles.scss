@@ -1,8 +1,17 @@
 @import "pure";
 @import "pure-grids-responsive";
 
+// =============
+// = Variables =
+// =============
+
 $chalees-red: #A60008;
 $chalees-red: lighten(#A60008, 7%);
+
+
+// ==================
+// = General Styles =
+// ==================
 
 html {
   box-sizing: border-box;
@@ -17,7 +26,6 @@ body {
     font-family: helvetica;
   }
 }
-
 
 .container {
   margin: 0 auto;
@@ -44,6 +52,10 @@ body {
 div[class*="pure-u-"] {
   padding-left: 1em;
   padding-right: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
 }
 
 // ====================================
@@ -96,20 +108,14 @@ div[class*="pure-u-"] {
 // = Header Styles =
 // =================
 
-// old background color
-// $header-background: #DB3B0B;
-
-$header-background: $chalees-red;
 .header {
-  background-color: $header-background;
   background-color: white;
-  border-bottom: 2px solid $header-background;
+  border-bottom: 2px solid $chalees-red;
 }
   
 .main-nav {
   $header-text-color: black;
   height: 3em;
-//  background-color: $header-background;
   color: $header-text-color;
   
   .pure-menu-link {
@@ -123,10 +129,6 @@ $header-background: $chalees-red;
     
   }
   
-//  .pure-menu-children {
-//    background-color: $header-background;
-//  }
-
   .header-brand {
     // TODO: reconcile
     padding: 1em 0;

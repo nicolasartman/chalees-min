@@ -1,14 +1,10 @@
 import React from 'react';
 import * as auth from './auth.js';
-import Header from './header.js';
-import ImageResponse from './image-response.js';
-import TextResponse from './text-response.js';
-import VideoInstruction from './video-instruction.js';
-import HtmlWidget from './html-widget.js';
-import LoadingOverlay from './loading-overlay.js';
 import * as data from './data.js';
 import localStore from 'store';
 
+import Header from './header.js';
+import LoadingOverlay from './loading-overlay.js';
 
 // Authorize them to all services if they're signed in
 
