@@ -81,7 +81,11 @@ const ImageResponse = React.createClass({
         </div>
       );
     } else {
-      message = 'Drop an image here or click on this box to choose one';
+      message = (
+        <div style={{position: 'absolute', top: '50%', textAlign: 'center', width: '80%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}}>
+          Drag and drop a picture here, or click/tap on this area to choose a picture 
+        </div>
+      );
     }
     
     let uploadedImage = this.state.uploadedImageUrl ? 
