@@ -12,7 +12,7 @@ const HomePage = React.createClass({
     return (
       <div className="container homepage">
 
-        <div className="pure-g">
+        <div className="pure-g row-gap-small">
           <div className="pure-u-1">
             <h2>Grade 6 Science</h2>
           </div>

@@ -2,6 +2,7 @@
 @import "pure-grids-responsive";
 
 $chalees-red: #A60008;
+$chalees-red: lighten(#A60008, 7%);
 
 html {
   box-sizing: border-box;
@@ -11,7 +12,10 @@ html {
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #F7F7F7;
+  &, & .pure-g [class *= "pure-u"] {
+    font-family: helvetica;
+  }
 }
 
 
@@ -27,7 +31,7 @@ body {
   }
 }
 
-@each $size, $margin in ('small': 2em, 'medium': 4em, 'large': 6em, 'huge': 8em) {
+@each $size, $margin in ('small': 1em, 'medium': 2em, 'large': 3em, 'huge': 4em) {
   .row-gap-#{$size} {
     margin-top: $margin;
   }
@@ -46,7 +50,7 @@ div[class*="pure-u-"] {
 // = Loading Overlay and Intro Styles =
 // ====================================
 
-@-webkit-keyframes "heartpulse" {
+@keyframes "heartpulse" {
   0% {
     transform: scale(1);
   }
@@ -98,69 +102,86 @@ div[class*="pure-u-"] {
 $header-background: $chalees-red;
 .header {
   background-color: $header-background;
+  background-color: white;
+  border-bottom: 2px solid $header-background;
 }
   
 .main-nav {
+  $header-text-color: black;
   height: 3em;
-  background-color: $header-background;
-  color: white;
+//  background-color: $header-background;
+  color: $header-text-color;
   
   .pure-menu-link {
-    color: white;
+    color: $header-text-color;
     padding: 1em 1em;
-    &:hover {
-      background-color: lighten($header-background, 4%);      
+    // TODO: try to achieve font weight 500
+    font-weight: 500;
+    &:hover, &:active, &:focus {
+      background-color: darken(white, 5%);
     }
     
-    &:active, &:focus {      
-      background-color: lighten($header-background, 8%);
-    }
   }
   
-  .pure-menu-children {
-    background-color: $header-background;
+//  .pure-menu-children {
+//    background-color: $header-background;
+//  }
+
+  .header-brand {
+    // TODO: reconcile
+    padding: 1em 0;
+    display: inline-block;
+    text-decoration: none;
+    color: $header-text-color;
+  
+    .header-brand-logo {
+      height: 1em;
+      width: auto;
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+    }
   }
 }
 
-.header-brand {
-  padding: 1em 0;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  
-  .header-brand-logo {
-    height: 1em;
-    width: auto;
-    margin-right: 5px;
-    position: relative;
-    top: 2px;
-  }
-}
 
 // ===================
 // = Homepage styles =
 // ===================
 
 .homepage-tile {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  // TODO: reduce back to 1.5em on mobile
   
   a {
     text-decoration: none;
-  }
+  }  
 }
 .homepage-tile-content {
   background-color: #EEE;
   background-color: #333;
+  background-color: #555;
   border: 1px solid #555;
 //  border: 1px solid $chalees-red;
   position: relative;
 }
+.homepage-tile-picture-container {
+  overflow: hidden;
+}
+// todo: make the scale effect transition out smoothly
+.homepage-tile-picture {
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+.homepage-tile:hover .homepage-tile-picture {
+  transform: scale(1.1);
+}
 .homepage-tile-title {
   text-align: center;
-  min-height: 4em;
-  padding: 1em 0.5em;
+  min-height: 2em;
+  padding: 0.4em 0.5em;
   color: #7FB4FF;
-//  color: #CCC;
+  color: #EEE;
 
   display: flex;
   align-items: center;
