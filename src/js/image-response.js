@@ -4,12 +4,14 @@ import Dropzone from 'react-dropzone';
 import * as data from './data';
 
 const style = {
-  width: '100%',
-  height: 150,
+  width: 400,
+  height: 200,
   borderWidth: 2,
   borderColor: '#666',
   borderStyle: 'dashed',
-  borderRadius: 5
+  borderRadius: 5,
+  position: 'relative',
+  paddingTop: '4em',
 };
 const activeStyle = {
   borderStyle: 'solid',
@@ -21,8 +23,12 @@ const rejectStyle = {
 };
 
 const imagePreviewStyle = {
-  maxHeight: '100%',
-  width: 'auto'
+  maxHeight: style.height - style.borderWidth * 2,
+  maxWidth: style.width - style.borderWidth * 2,
+  width: 'auto',
+  position: 'absolute',
+  top: 0,
+  left: 0
 }
 
 const ImageResponse = React.createClass({
@@ -61,16 +67,21 @@ const ImageResponse = React.createClass({
   render: function () {
     let message;
     if (this.state.currentFile && !this.state.isUploading) {
+      // Dropped {this.state.currentFile.name}
       message = (
-        <p>
-          Dropped {this.state.currentFile.name}
-          <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
-        </p>
+        <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
       );
     } else if (this.state.isUploading) {
-      message = 'uploading...';
+      message = (
+        <div>
+          <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
+          <div style={{position: 'absolute', top: '50%', width: '40%', right: 0, transform: 'translateY(-50%)'}}>
+            Uploading (not fully ready, so this will likely not finish)
+          </div>
+        </div>
+      );
     } else {
-      message = 'Drop an image here';
+      message = 'Drop an image here or click on this box to choose one';
     }
     
     let uploadedImage = this.state.uploadedImageUrl ? 
