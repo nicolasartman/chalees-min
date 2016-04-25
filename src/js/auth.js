@@ -4,6 +4,8 @@ import config from './config.js';
 import Firebase from 'firebase';
 import localStore from 'store';
 import decodeJwt from 'jwt-decode';
+import { browserHistory } from 'react-router';
+
 const AWS = window.AWS;
 
 const auth0Lock = new Auth0Lock(
@@ -109,7 +111,9 @@ export async function authorize() {
       } else {
         // Clear the hash from the url
         window.location.hash = '';
-        
+        // Redirect the user back to the URL they were at before logging in
+        browserHistory.push(hash.state);
+
         // Ensure the token is still valid
         const idToken = hash['id_token'];
         const tokenExpireTime = decodeJwt(idToken).exp * 1000;
@@ -146,5 +150,11 @@ export async function reauthorize() {
 }
 
 export function showLoginPrompt() {
-  auth0Lock.show();
+  auth0Lock.show({
+    authParams: {
+      responseType: 'token',
+      callbackURL: window.location.origin,
+      state: window.location.pathname
+    }
+  });
 }
