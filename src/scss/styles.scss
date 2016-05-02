@@ -1,5 +1,6 @@
 @import "pure";
 @import "pure-grids-responsive";
+@import "loading-spinner";
 
 // =============
 // = Variables =
@@ -89,20 +90,45 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 1em;
+}
+.loading-overlay-heart {
+  $height: 377px;
+  animation: heartpulse 2s ease-out infinite;
+  height: $height;
+  @media (max-width: 47.9em) {
+    height: $height * 0.75;
+  }
 }
 .loading-overlay-logo {
-  animation: heartpulse 2s ease-out infinite;
+  $height: 34px;
+  margin-top: 1em;
+  height: $height;
+  @media (max-width: 47.9em) {
+    height: $height * 0.85;
+  }
 }
 .loading-overlay-message {
   font-size: 1.5em;
+  @media (max-width: 47.9em) {
+    font-size: 1.2em;
+  }
+  text-align: center;
+  margin: 1em 0 1.5em 0;
 }
-
 .loading-overlay.fade-out-leave {
   opacity: 1.0;
 }
 .loading-overlay.fade-out-leave.fade-out-leave-active {
   opacity: 0;
   transition: opacity 200ms linear;
+}
+
+// Scale everything down a bit on mobile
+@media (max-width: 47.9em) {
+  .loading-overlay img {
+    
+  }
 }
 
 // =================

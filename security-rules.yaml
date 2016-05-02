@@ -4,9 +4,6 @@ functions:
 root:
   .read: isAdmin()
   .write: false
-  sentinel:
-    .read: true
-    .write: false
   responses:
     $responseKey:
       .read: data.userKey == auth.fb_id

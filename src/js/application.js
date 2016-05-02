@@ -22,10 +22,6 @@ const Application = React.createClass({
         console.log('updated data');
         this.setState({data: data || {}});
       });
-
-      // TODO: tie this state to the first firebase value event instead
-      console.log('setting state to is ready');
-      this.setState({isReady: true});
     } catch (error) {
       this.setState({isLoggedIn: false});
     }

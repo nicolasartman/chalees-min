@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 import * as auth from './auth.js';
 import localStore from 'store';
 
-import logo from '../images/chalees-min-logo-navbar.png';
+import logo from '../images/chalees-min-logo.png';
+import logoHighDpi from '../images/chalees-min-logo@2x.png';
 
 const Header = React.createClass({
   showLoginPrompt: function () {
@@ -46,7 +47,7 @@ const Header = React.createClass({
             	<nav className="home-menu pure-menu pure-menu-horizontal main-nav">
                 <ul className="pure-menu-list">
               		<Link to="/" className="header-brand">
-                    <img src={logo} role="presentation" className="header-brand-logo" />
+                    <img src={logo} srcset={logo + " 1x, " + logoHighDpi + " 2x"} role="presentation" className="header-brand-logo" />
                   </Link>
                 </ul>
 
