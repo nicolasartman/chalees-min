@@ -142,12 +142,12 @@ h1, h2, h3, h4, h5, h6 {
   
 .main-nav {
   $header-text-color: black;
-  height: 4em;
+  height: 3em;
   color: $header-text-color;
   
   .pure-menu-link {
     color: $header-text-color;
-    padding: 1.45em 1em;
+    padding: 1em 1em;
     // TODO: try to achieve font weight 500
     font-weight: 500;
     &:hover, &:active, &:focus {
@@ -164,12 +164,36 @@ h1, h2, h3, h4, h5, h6 {
     color: $header-text-color;
   
     .header-brand-logo {
-      height: 1.6em;
+      height: 1em;
       width: auto;
       margin-right: 5px;
     }
   }
+  
+  // Larger header on desktop widths
+  @media (min-width: 48em) {
+    height: 4em;
+    .pure-menu-link {
+      padding: 1.45em 1em;
+    }
+    .header-brand .header-brand-logo {
+      height: 1.6em;
+    }
+  }
+  
+  // Right align dropdown menu children on items pulled right
+  .pull-right .pure-menu-children {
+    left: inherit;
+    right: 0;
+  }
+  .pure-menu-children {
+    border: 1px solid #BBB;
+    border-top-width: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    min-width: 100%;
+  }
 }
+
 
 
 // ===================

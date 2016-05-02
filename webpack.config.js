@@ -27,15 +27,6 @@ module.exports = {
       /aws\-sdk/
     ],
     loaders: [{
-      test: /node_modules[\\\/]auth0-lock[\\\/].*\.js$/,
-      loaders: [
-        'transform-loader/cacheable?brfs',
-        'transform-loader/cacheable?packageify'
-      ],
-    }, {
-      test: /node_modules[\\\/]auth0-lock[\\\/].*\.ejs$/,
-      loader: 'transform-loader/cacheable?ejsify',
-    }, {
       test: /\.json$/,
       loader: 'json-loader'
     }, {
@@ -52,7 +43,7 @@ module.exports = {
       test: /\.(png|jpg|svg)$/,
       loader: 'url-loader',
       query: {
-        name: '[hash:15]',
+        name: '[name].[hash:10].[ext]',
         limit: 8192
       }
     }]

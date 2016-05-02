@@ -3,16 +3,16 @@ import { Link } from 'react-router';
 import HomepageTile from './homepage-tile.js';
 
 // Images
-import chapter1Image from '../images/Chapter 1 Thumbnail.jpg';
-import chapter2Image from '../images/Chapter 2 Thumbnail.jpg';
-import chapter3Image from '../images/Chapter 3 Thumbnail.jpg';
-import chapter5Image from '../images/Chapter 5 Thumbnail.jpg';
-import chapter6Image from '../images/Chapter 6 Thumbnail.jpg';
-import chapter7Image from '../images/Chapter 7 Thumbnail.jpg';
-import chapter11Image from '../images/Chapter 11 Thumbnail.jpg';
-import chapter13Image from '../images/Chapter 13 Thumbnail.jpg';
-import chapter14Image from '../images/Chapter 14 Thumbnail.jpg';
-import chapter16Image from '../images/Chapter 16 Thumbnail.jpg';
+import chapter1Image from '../images/chapter-1-thumbnail.jpg';
+import chapter2Image from '../images/chapter-2-thumbnail.jpg';
+import chapter3Image from '../images/chapter-3-thumbnail.jpg';
+import chapter5Image from '../images/chapter-5-thumbnail.jpg';
+import chapter6Image from '../images/chapter-6-thumbnail.jpg';
+import chapter7Image from '../images/chapter-7-thumbnail.jpg';
+import chapter11Image from '../images/chapter-11-thumbnail.jpg';
+import chapter13Image from '../images/chapter-13-thumbnail.jpg';
+import chapter14Image from '../images/chapter-14-thumbnail.jpg';
+import chapter16Image from '../images/chapter-16-thumbnail.jpg';
 
 const HomePage = React.createClass({
   render: function() {

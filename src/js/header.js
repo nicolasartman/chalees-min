@@ -7,9 +7,9 @@ import logo from '../images/chalees-min-logo.png';
 import logoHighDpi from '../images/chalees-min-logo@2x.png';
 
 const Header = React.createClass({
-  showLoginPrompt: function () {
-    auth.showLoginPrompt();
-  },
+  showFacebookLoginPrompt: () => auth.showFacebookLoginPrompt(),
+  showGoogleLoginPrompt: () => auth.showGoogleLoginPrompt(),
+  getInitialState: () => ({}),
   componentWillMount: async function () {
     const {profile} = await auth.authorize();
     this.setState({name: profile.name});
@@ -22,21 +22,35 @@ const Header = React.createClass({
     window.location.href = logoutUrl;
   },
   render: function () {
-    const userSection = this.props.loggedIn ? (
-      <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-        <a className="pure-menu-link" href="#">{this.state.name}</a>
-        <ul className="pure-menu-children">
-          <li className="pure-menu-item">
-            <a className="pure-menu-link" href="#" onClick={this.logOut}>Sign Out</a>
-          </li>
-        </ul>
-      </li>
+    const userSection = this.state.name ? (
+      <ul className="pure-menu-list pull-right">      
+        <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <a className="pure-menu-link" href="#">{this.state.name}</a>
+          <ul className="pure-menu-children">
+            <li className="pure-menu-item">
+              <a className="pure-menu-link" href="#" onClick={this.logOut}>Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     ) : (
-      <li className="pure-menu-item">
-        <a href="#" onClick={this.showLoginPrompt} className="pure-menu-link">
-          <span>Sign In</span>
-        </a>
-      </li>
+      <ul className="pure-menu-list pull-right">  
+        <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <a className="pure-menu-link" href="#">Sign In</a>
+          <ul className="pure-menu-children">
+            <li className="pure-menu-item">
+              <a href="#" onClick={this.showGoogleLoginPrompt} className="pure-menu-link">
+                <span>Sign In With Google</span>
+              </a>
+            </li>
+            <li className="pure-menu-item">
+              <a href="#" onClick={this.showFacebookLoginPrompt} className="pure-menu-link">
+                <span>Sign In With Facebook</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     );
 
     return (
@@ -51,9 +65,7 @@ const Header = React.createClass({
                   </Link>
                 </ul>
 
-            		<ul className="pure-menu-list pull-right">
-                  {userSection}
-            		</ul>
+                {userSection}
             	</nav>
             </div>
           </div>

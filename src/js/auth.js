@@ -1,10 +1,11 @@
 import Auth0 from 'auth0-js';
-import Auth0Lock from 'auth0-lock';
 import config from './config.js';
 import Firebase from 'firebase';
 import localStore from 'store';
 import decodeJwt from 'jwt-decode';
 import { browserHistory } from 'react-router';
+
+import heartIcon from '../images/chalees-min-logo-icon.svg';
 
 // Minimum time to display the loading message before letting it clear.
 // This ensures there isn't a flash of the loading screen and then a fade-out
@@ -13,13 +14,11 @@ const MINIMUM_LOADING_TIME = 1 * 1000;
 
 const AWS = window.AWS;
 
-const auth0Lock = new Auth0Lock(
-  'zvMJBINrPP41PVpc0OSfNxD3V4nQoVu9', 'learning-prototype.auth0.com');
-
 var auth0 = new Auth0({
   domain:         config.auth0.domain,
   clientID:       config.auth0.clientID,
-  // callbackURL:    'dummy'
+  callbackURL:    window.location.protocol + "//" + window.location.hostname +
+                  (window.location.port ? ':' + window.location.port: '')
 });
 
 const firebaseRef = new Firebase('https://chalees-min.firebaseio.com');
@@ -28,7 +27,7 @@ let authorizationPromise;
 
 async function fetchProfile(idToken) {
   return new Promise((resolve, reject) => {
-    auth0Lock.getProfile(idToken, (error, profile) => {
+    auth0.getProfile(idToken, (error, profile) => {
       if (error) {reject(error);}
       else {
         console.log('successfully authed to auth0 profile')
@@ -108,7 +107,7 @@ export async function authorize() {
   
   let loginPromise;
   if (!authorizationPromise) {
-    const hash = auth0Lock.parseHash();
+    const hash = auth0.parseHash(window.location.hash);
 
     if (hash) {
       if (hash.error) {
@@ -116,7 +115,7 @@ export async function authorize() {
         loginPromise = Promise.reject(new Error('User failed to log in'));
       } else {
         // Clear the hash from the url
-        window.location.hash = '';
+        // window.location.hash = '';
         // Redirect the user back to the URL they were at before logging in
         browserHistory.push(hash.state);
 
@@ -170,13 +169,23 @@ export async function reauthorize() {
   return authorize();
 }
 
-export function showLoginPrompt() {
-  auth0Lock.show({
-    authParams: {
-      responseType: 'token',
-      callbackURL: window.location.protocol + "//" + window.location.hostname + 
-                    (window.location.port ? ':' + window.location.port: ''),
-      state: window.location.pathname
-    }
-  });
+
+const defaultLoginOptions = {
+  responseType: 'token',
+  scope: 'openid offline_access',
+  callbackOnLocationHash: true  
+};
+
+export function showGoogleLoginPrompt() {
+  auth0.login(Object.assign({}, defaultLoginOptions, {
+    connection: 'google-oauth2',
+    state: window.location.pathname,
+  }));
+}
+
+export function showFacebookLoginPrompt() {
+  auth0.login(Object.assign({}, defaultLoginOptions, {
+    connection: 'facebook',
+    state: window.location.pathname,
+  }));
 }

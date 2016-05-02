@@ -35,7 +35,7 @@ const Application = React.createClass({
     return (
       <div>
         <LoadingOverlay shouldShow={!this.state.isReady} />
-        <Header lock={this.lock} authProfile={this.state.authProfile} loggedIn={this.state.isLoggedIn} />
+        <Header/>
         {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
       </div>
     );
