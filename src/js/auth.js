@@ -157,7 +157,7 @@ export async function whenReady() {
   // but the loading screen doesn't clear before the minimum load time, even if
   // the authorization is rejected immediately.
   if (!isReadyPromise) {
-    const readyPromise = authorize().then(() => firebaseRef.once('sentinel'));
+    const readyPromise = authorize().then(() => firebaseRef.child('.info/connected').once('value'));
     isReadyPromise = new Promise((resolve, reject) => {
       window.setTimeout(resolve, MINIMUM_LOADING_TIME);
     }).then(() => readyPromise);
