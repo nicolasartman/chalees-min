@@ -39,7 +39,6 @@ const VideoInstruction = function(props) {
     return (
       <div style={containerStyle}>
         <div style={loadingMessageStyle}>
-          <div style={{marginBottom: '1em', fontSize: '1.25em'}}>Loading video</div>
           <LoadingSpinner />
         </div>
         <iframe style={videoStyle} id="youtube-player" type="text/html" width="640" height="390"
