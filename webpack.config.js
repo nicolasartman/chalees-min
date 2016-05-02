@@ -46,12 +46,9 @@ module.exports = {
       // TODO: minify styles and create an actual css file instead of this
       // style tag inlining stuff.
       test: /\.scss$/,
-      loaders: [
-        'style',
-        'css?sourceMap',
-        'postcss',
-        'sass?sourceMap'
-      ],
+      loader: ExtractTextPlugin.extract(
+        'style', 
+        (isProduction ? 'css?minimize' : 'css?sourceMap') + '!postcss!sass?sourceMap'),
       include: scssSourcePath
     }, {
       test: /\.(png|jpg|svg)$/,
@@ -83,10 +80,10 @@ module.exports = {
           path.join(__dirname, 'node_modules'));
         }
       }
-    )
-    // new ExtractTextPlugin("site.min.css", {
-    //   allChunks: true
-    // })
+    ),
+    new ExtractTextPlugin("site.min.css", {
+      allChunks: true
+    })
   ]
   .concat(isProduction ? [
     new webpack.DefinePlugin({
