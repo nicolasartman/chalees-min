@@ -15,5 +15,6 @@
   "rewrites": [{
     "source": "**",
     "destination": "/index.html"
-  }]
+  }],
+  "rules": "security-rules.json"
 }
