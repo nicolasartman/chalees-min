@@ -174,7 +174,8 @@ export function showLoginPrompt() {
   auth0Lock.show({
     authParams: {
       responseType: 'token',
-      callbackURL: window.location.origin,
+      callbackURL: window.location.protocol + "//" + window.location.hostname + 
+                    (window.location.port ? ':' + window.location.port: ''),
       state: window.location.pathname
     }
   });
