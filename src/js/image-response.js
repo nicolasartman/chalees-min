@@ -4,7 +4,7 @@ import Dropzone from 'react-dropzone';
 import * as data from './data';
 
 const style = {
-  width: 400,
+  width: '100%',
   height: 200,
   borderWidth: 2,
   borderColor: '#666',
