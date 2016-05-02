@@ -43,8 +43,6 @@ module.exports = {
       loaders: (isProduction ? [] : ['react-hot']).concat('babel-loader'),
       include: jsSourcePath
     }, {
-      // TODO: minify styles and create an actual css file instead of this
-      // style tag inlining stuff.
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         'style', 
@@ -109,6 +107,7 @@ module.exports = {
   ] : [])
   .concat(new HtmlWebpackPlugin({
     template: './src/html/index.template.html',
+    favicon: './src/images/favicons/favicon.ico',
     inject: 'body'
   })),
   
