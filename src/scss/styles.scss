@@ -5,8 +5,7 @@
 // = Variables =
 // =============
 
-$chalees-red: #A60008;
-$chalees-red: lighten(#A60008, 7%);
+$chalees-red: #ca000a;
 
 
 // ==================
@@ -117,12 +116,12 @@ h1, h2, h3, h4, h5, h6 {
   
 .main-nav {
   $header-text-color: black;
-  height: 3em;
+  height: 4em;
   color: $header-text-color;
   
   .pure-menu-link {
     color: $header-text-color;
-    padding: 1em 1em;
+    padding: 1.45em 1em;
     // TODO: try to achieve font weight 500
     font-weight: 500;
     &:hover, &:active, &:focus {
@@ -133,17 +132,15 @@ h1, h2, h3, h4, h5, h6 {
   
   .header-brand {
     // TODO: reconcile
-    padding: 1em 0;
+    padding: 1.2em 0;
     display: inline-block;
     text-decoration: none;
     color: $header-text-color;
   
     .header-brand-logo {
-      height: 1em;
+      height: 1.6em;
       width: auto;
       margin-right: 5px;
-      position: relative;
-      top: 2px;
     }
   }
 }

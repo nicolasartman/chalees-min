@@ -38,18 +38,18 @@ const Chapter = React.createClass({
                 <VideoInstruction videoId={this.state.chapter.video.videoId} />
               </LearningItem>
             </div>
-            <div className="pure-u-1">
-              <LearningItem time="6">
-                <h3>{this.state.chapter.response.title}</h3>
-                <p>{this.state.chapter.response.description}</p>
-                <ImageResponse itemId="step-1" loggedIn={this.props.loggedIn} response={this.props.data['step-1']} />
-              </LearningItem>
-            </div>
             <div className="pure-u-1 row-gap-medium">
               <LearningItem time="10">
                 <h3>{this.state.chapter.question.title}</h3>
                 <p>{this.state.chapter.question.description}</p>
                 <TextResponse itemId="step-2" loggedIn={this.props.loggedIn} response={this.props.data['step-2']} />
+              </LearningItem>
+            </div>
+            <div className="pure-u-1 row-gap-medium">
+              <LearningItem time="6">
+                <h3>{this.state.chapter.response.title}</h3>
+                <p>{this.state.chapter.response.description}</p>
+                <ImageResponse itemId="step-1" loggedIn={this.props.loggedIn} response={this.props.data['step-1']} />
               </LearningItem>
             </div>
             <div className="pure-u-1 row-gap-medium">

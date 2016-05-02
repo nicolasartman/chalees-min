@@ -47,7 +47,6 @@ const Header = React.createClass({
                 <ul className="pure-menu-list">
               		<Link to="/" className="header-brand">
                     <img src={logo} role="presentation" className="header-brand-logo" />
-                    Chalees Min School
                   </Link>
                 </ul>
 
