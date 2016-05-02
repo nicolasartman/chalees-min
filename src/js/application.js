@@ -10,8 +10,12 @@ import LoadingOverlay from './loading-overlay.js';
 
 const Application = React.createClass({
   componentDidMount: async function () {
+    const handleReady = () => this.setState({isReady: true});
+    auth.whenReady()
+      .then(handleReady, handleReady);
+
     try {
-      await auth.authorize();      
+      await auth.authorize();
       this.setState({isLoggedIn: true});
 
       data.onUpdate((data) => {
@@ -24,9 +28,6 @@ const Application = React.createClass({
       this.setState({isReady: true});
     } catch (error) {
       this.setState({isLoggedIn: false});
-
-      // TODO: improve this logic?
-      this.setState({isReady: true});
     }
   },
   getInitialState: function () {

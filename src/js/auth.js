@@ -6,6 +6,11 @@ import localStore from 'store';
 import decodeJwt from 'jwt-decode';
 import { browserHistory } from 'react-router';
 
+// Minimum time to display the loading message before letting it clear.
+// This ensures there isn't a flash of the loading screen and then a fade-out
+// for users with very fast connections
+const MINIMUM_LOADING_TIME = 1 * 1000;
+
 const AWS = window.AWS;
 
 const auth0Lock = new Auth0Lock(
@@ -17,6 +22,7 @@ var auth0 = new Auth0({
   // callbackURL:    'dummy'
 });
 
+const firebaseRef = new Firebase('https://chalees-min.firebaseio.com');
 
 let authorizationPromise;
 
@@ -70,8 +76,8 @@ async function fetchFirebaseAuthorization(idToken) {
 // Requires the JWT received from the delegation token endpoint call for firebase
 async function authorizeToFirebaseDb(firebaseIdToken) {
   return new Promise((resolve, reject) => {
-    const ref = new Firebase('https://chalees-min.firebaseio.com');
-    ref.authWithCustomToken(firebaseIdToken, function (error, authData) {
+    
+    firebaseRef.authWithCustomToken(firebaseIdToken, function (error, authData) {
       if (error) {reject(error);}
       else {
         console.log('successfully authed to firebase itself');
@@ -142,6 +148,21 @@ export async function authorize() {
   }
   
   return authorizationPromise;
+}
+
+
+let isReadyPromise;
+export async function whenReady() {
+  // The flow is constructed so the authorization and wait promise run concurrently,
+  // but the loading screen doesn't clear before the minimum load time, even if
+  // the authorization is rejected immediately.
+  if (!isReadyPromise) {
+    const readyPromise = authorize().then(() => firebaseRef.once('sentinel'));
+    isReadyPromise = new Promise((resolve, reject) => {
+      window.setTimeout(resolve, MINIMUM_LOADING_TIME);
+    }).then(() => readyPromise);
+  }
+  return isReadyPromise;
 }
 
 export async function reauthorize() {

@@ -24,7 +24,7 @@ const LoadingOverlay = React.createClass({
     );
 
     return (
-      <ReactCSSTransitionGroup transitionName="fade-out" transitionEnterTimeout={0} transitionLeaveTimeout={1000}>
+      <ReactCSSTransitionGroup transitionName="fade-out" transitionEnterTimeout={0} transitionLeaveTimeout={250}>
         {this.props.shouldShow ? loadingOverlay : <div />}
       </ReactCSSTransitionGroup>
     );
