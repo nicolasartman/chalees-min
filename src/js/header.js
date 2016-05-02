@@ -23,8 +23,8 @@ const Header = React.createClass({
   },
   render: function () {
     const userSection = this.state.name ? (
-      <ul className="pure-menu-list pull-right">      
-        <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+      <ul className="pure-menu-list">
+        <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover main-nav-user-menu">
           <a className="pure-menu-link" href="#">{this.state.name}</a>
           <ul className="pure-menu-children">
             <li className="pure-menu-item">
@@ -34,7 +34,7 @@ const Header = React.createClass({
         </li>
       </ul>
     ) : (
-      <ul className="pure-menu-list pull-right">  
+      <ul className="pure-menu-list main-nav-user-menu">  
         <li className="user-menu pure-menu-item pure-menu-has-children pure-menu-allow-hover">
           <a className="pure-menu-link" href="#">Sign In</a>
           <ul className="pure-menu-children">
@@ -59,11 +59,9 @@ const Header = React.createClass({
           <div className="pure-g">
             <div className="pure-u-1">
             	<nav className="home-menu pure-menu pure-menu-horizontal main-nav">
-                <ul className="pure-menu-list">
-              		<Link to="/" className="header-brand">
-                    <img src={logo} srcset={logo + " 1x, " + logoHighDpi + " 2x"} role="presentation" className="header-brand-logo" />
-                  </Link>
-                </ul>
+            		<Link to="/" className="header-brand">
+                  <img src={logo} srcset={logo + " 1x, " + logoHighDpi + " 2x"} role="presentation" className="header-brand-logo" />
+                </Link>
 
                 {userSection}
             	</nav>

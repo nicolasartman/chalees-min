@@ -1,6 +1,7 @@
 @import "pure";
 @import "pure-grids-responsive";
 @import "loading-spinner";
+@import "typography";
 
 // =============
 // = Variables =
@@ -56,9 +57,6 @@ div[class*="pure-u-"] {
   padding-right: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-}
 
 // ====================================
 // = Loading Overlay and Intro Styles =
@@ -131,23 +129,34 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// =================
-// = Header Styles =
-// =================
+// =========================
+// = Navigation Bar Styles =
+// =========================
 
 .header {
   background-color: white;
   border-bottom: 2px solid $chalees-red;
+  box-shadow: 0 6px 8px rgba(0,0,0, 0.10);
 }
-  
+
 .main-nav {
+  $height-desktop: 3.5em;
+  $height-mobile: 3em;
   $header-text-color: black;
-  height: 3em;
+  
+  height: $height-mobile;
   color: $header-text-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
   .pure-menu-link {
     color: $header-text-color;
-    padding: 1em 1em;
+    height: $height-mobile;
+    line-height: $height-mobile;
+    padding-top: 0;
+    padding-bottom: 0;
+    
     // TODO: try to achieve font weight 500
     font-weight: 500;
     &:hover, &:active, &:focus {
@@ -158,39 +167,61 @@ h1, h2, h3, h4, h5, h6 {
   
   .header-brand {
     // TODO: reconcile
-    padding: 1.2em 0;
     display: inline-block;
+    
     text-decoration: none;
-    color: $header-text-color;
   
     .header-brand-logo {
-      height: 1em;
+      height: 1.18em;
       width: auto;
       margin-right: 5px;
+      vertical-align: middle;
     }
   }
   
-  // Larger header on desktop widths
-  @media (min-width: 48em) {
-    height: 4em;
-    .pure-menu-link {
-      padding: 1.45em 1em;
-    }
-    .header-brand .header-brand-logo {
-      height: 1.6em;
+  & > .pure-menu-list > .pure-menu-item {
+    $border-color-hover: #BBB;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;    
+    
+    &:hover {
+      border-color: $border-color-hover;      
     }
   }
   
-  // Right align dropdown menu children on items pulled right
-  .pull-right .pure-menu-children {
-    left: inherit;
-    right: 0;
-  }
   .pure-menu-children {
-    border: 1px solid #BBB;
+    $border-color: #BBB;
+    border: 1px solid $border-color;
     border-top-width: 2px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0, 0.2);
     min-width: 100%;
+    
+    & .pure-menu-item {
+      border-bottom: 1px solid lighten($border-color, 7%);
+      
+      &:last-child {
+        border-bottom: none;
+      };
+    }
+
+    // Right align dropdown menu children since the user menu is pulled right
+    left: inherit;
+    right: -1px; // the top menu has a border, so account for that
+
+  }
+
+  // Use a larger header on desktop widths
+  @media (min-width: 48em) {
+    height: 3.5em;
+    .header-brand .header-brand-logo {
+      height: 1.4em;
+    }
+    .pure-menu-link {
+      height: $height-desktop;
+      line-height: $height-desktop;
+    }
   }
 }
 
