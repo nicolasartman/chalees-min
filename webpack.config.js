@@ -72,7 +72,10 @@ module.exports = {
     ),
     new ExtractTextPlugin("site.min.css", {
       allChunks: true
-    })
+    }),
+    new webpack.ProvidePlugin({
+        React: "react"
+    }),
   ]
   .concat(isProduction ? [
     new webpack.DefinePlugin({
