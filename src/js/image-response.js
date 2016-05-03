@@ -1,6 +1,7 @@
-import * as uploader from './uploader.js';
 import React from 'react';
 import Dropzone from 'react-dropzone';
+import * as uploader from './uploader.js';
+import * as auth from './auth.js';
 import * as data from './data';
 
 const style = {
@@ -24,7 +25,7 @@ const rejectStyle = {
 
 const imagePreviewStyle = {
   maxHeight: style.height - style.borderWidth * 2,
-  maxWidth: style.width - style.borderWidth * 2,
+  // maxWidth: style.width - style.borderWidth * 2,
   width: 'auto',
   position: 'absolute',
   top: 0,
@@ -36,6 +37,11 @@ const ImageResponse = React.createClass({
     return {
       uploadedImageUrl: this.props.response
     };
+  },
+  componentDidMount: async function () {
+    // Only enable the buttons if the user is logged in
+    await auth.authorize();
+    this.setState({isSignedIn: true});
   },
   componentWillReceiveProps: function (newProps) {
     if (newProps.response !== this.props.uploadedImageUrl) {
@@ -97,7 +103,7 @@ const ImageResponse = React.createClass({
           {message}
         </Dropzone>
         <div>
-          <button className="pure-button" onClick={this.onSave} disabled={!this.props.loggedIn || !this.state.currentFile || this.state.isUploading}>Save</button>
+          <button className="pure-button" onClick={this.onSave} disabled={!this.state.isSignedIn || !this.state.currentFile || this.state.isUploading}>Save</button>
         </div>
         {uploadedImage}
       </div>

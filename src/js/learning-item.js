@@ -13,23 +13,20 @@ const learningItemStyle = {
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  padding: '1em',
+  padding: '1.25em 1.25em',
   marginTop: '1.5em',
   background: 'white',
   border: '1px solid #E0E0E0',
-  borderRadius: '5px',
+  borderRadius: 5,
 };
 
 
 const timeContainerStyle = {
-  // marginRight: '1em',
   marginLeft: '1em',
   minWidth: '4em',
-  // minWidth: '100%',
   padding: '0.5em 0',
   color: '#EEE',
   display: 'flex',
-  // flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: styleConstants.chaleesPurple,
