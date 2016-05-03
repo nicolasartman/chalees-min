@@ -9,7 +9,9 @@
     "dev": "webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress",
     "build": "PRODUCTION=true webpack --progress",
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",
-    "deploy": "npm run build && fireplan security-rules.yaml && firebase deploy && ./open-site-in-browser.sh"
+    "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
+    "deploy": "npm run _prepare-deploy && firebase deploy && ./open-site-in-browser.sh",
+    "stage": "npm run _prepare-deploy && firebase deploy --firebase \"chalees-staging\" && ./open-site-in-browser.sh --staging"
   },
   "repository": {
     "type": "git",
@@ -87,6 +89,7 @@
     "react-dom": "^15.0.0",
     "react-dropzone": "^3.4.0",
     "react-hot-loader": "^1.3.0",
+    "react-markdown": "^2.2.0",
     "react-router": "^2.1.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.2",
