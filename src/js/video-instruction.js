@@ -1,7 +1,6 @@
 import React from 'react';
 import LoadingSpinner from './loading-spinner.js';
 
-
 const containerStyle = {
 	position: 'relative',
 	paddingBottom: '56.25%', // 16:9
@@ -33,6 +32,7 @@ const VideoInstruction = function(props) {
   const opts = {
     width: '100%'  // This matches the width of the other responses
   };
+  console.log('within video instruction', props);
 
   // If multiple players get used on a page, this needs a unique id
   if (props.videoId) {

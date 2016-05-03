@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
+
 import * as uploader from './uploader.js';
 import * as auth from './auth.js';
 import Chapter from './chapter.js';
@@ -20,7 +21,7 @@ if (!localStore.enabled) {
 }
 
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={Application}>
       <IndexRoute component={HomePage} />
       <Route path="chapter/:id" component={Chapter} />

@@ -10,46 +10,24 @@ import * as data from './data.js';
 import chapters from './chapter-data.js';
 
 const Chapter = React.createClass({
-  getInitialState: function() {
-    return {
-      chapter: {
-        video: {},
-        response: {},
-        question: {},
-        experiment: {}
-      }
-    };
-  },
+  getInitialState: () => ({}),
   componentDidMount: function() {
-    // Hardcode to the magnets chapter if there isn't existing dummy data for the given chapter
     this.setState({
-      chapter: chapters[this.props.params.id] || chapters[13]
+      chapterId: this.props.params.id
     });
   },
   render: function() {
+    // Use the magnets chapter if there isn't existing dummy data for the given one
+    const currentChapter = chapters[this.state.chapterId] || chapters[13];
+    
     return (
       <div>
         <main id="main" className="container chapter">
           <div className="pure-g">
             <div className="pure-u-1">
-              <LearningItem time="4" title={this.state.chapter.video.title} instructions={this.state.chapter.video.description}>
-                <VideoInstruction videoId={this.state.chapter.video.videoId} />
-              </LearningItem>
-            </div>
-            <div className="pure-u-1">
-              <LearningItem time="10" title={this.state.chapter.question.title} instructions={this.state.chapter.question.description}>
-                <TextResponse itemId="step-2" loggedIn={this.props.loggedIn} response={this.props.data['step-2']} />
-              </LearningItem>
-            </div>
-            <div className="pure-u-1">
-              <LearningItem time="6" title={this.state.chapter.response.title} instructions={this.state.chapter.response.description}>
-                <ImageResponse itemId="step-1" loggedIn={this.props.loggedIn} response={this.props.data['step-1']} />
-              </LearningItem>
-            </div>
-            <div className="pure-u-1">
-              <LearningItem time="10" title={this.state.chapter.experiment.title} instructions={this.state.chapter.experiment.description}>
-                <img className="pure-img" src={this.state.chapter.experiment.image} />
-              </LearningItem>
+              {(currentChapter.items || []).map((item, index) => (
+                <LearningItem key={index} {...item} />
+              ))}
             </div>
           </div>
         </main>
