@@ -17,7 +17,7 @@ const data = {
         At the end of the video, we present a few questions for you to think about. Here they are again:
           - Where does water come from?
           - Where does petrol come from?
-          - Where does snot come from
+          - Where does snot come from?
         
         Select a question you want to think about more. You can pick from the list above or think of a new question of your own.
         
