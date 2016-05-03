@@ -1,13 +1,8 @@
+@import "variables";
 @import "pure";
 @import "pure-grids-responsive";
 @import "loading-spinner";
 @import "typography";
-
-// =============
-// = Variables =
-// =============
-
-$chalees-red: #ca000a;
 
 
 // ==================
@@ -119,7 +114,7 @@ div[class*="pure-u-"] {
 }
 .loading-overlay.fade-out-leave.fade-out-leave-active {
   opacity: 0;
-  transition: opacity 200ms linear;
+  transition: opacity 250ms linear;
 }
 
 // Scale everything down a bit on mobile
@@ -281,3 +276,4 @@ div[class*="pure-u-"] {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
