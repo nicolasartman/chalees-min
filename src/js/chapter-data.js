@@ -53,10 +53,10 @@ const data = {
     },
     {
       time: '?',
-      kind: 'custom',
+      kind: 'image',
       title: 'Conduct your own experiment',
-      instructions: 'Follow the instructions in the link on how to conduct your own experiment on flowers. https://goo.gl/cuf63n',
-      image: 'http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg'
+      instructions: 'Follow the instructions in the link on how to conduct your own experiment on flowers. [Click here for the instructions](https://goo.gl/cuf63n)',
+      src: 'http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg'
     }]
   },
   '13': {
@@ -75,13 +75,16 @@ const data = {
       time: '?',
       kind: 'imageResponse',
       title: 'Pick question to investigate and share',
-      instructions: '1) Pick a question from the link that you want to learn more about. http://goo.gl/e2acXh\n2) Write it on a piece of paper; paste it on a wall.\n3) Take a picture and upload here'
+      instructions: dedent`
+        1) Pick a question from the link that you want to learn more about from [here](http://goo.gl/e2acXh).
+        2) Write it on a piece of paper; paste it on a wall.
+        3) Take a picture and upload here.`
     }, {
       time: '?',
-      kind: 'custom',
+      kind: 'image',
       title: 'Conduct your own experiment',
-      instructions: 'Follow the instructions in the link on how to conduct your own curie point experiment. http://goo.gl/LWKF9o',
-      image: 'https://d30su0b7sry5gh.cloudfront.net/repo/dyOJMXVz/images/S1gqnvfC.jpg'
+      instructions: 'Follow the instructions in the link on how to conduct your own curie point experiment. [Click here for the instructions](http://goo.gl/LWKF9o).',
+      src: 'https://d30su0b7sry5gh.cloudfront.net/repo/dyOJMXVz/images/S1gqnvfC.jpg'
     }]
   }  
 };

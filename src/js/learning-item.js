@@ -1,9 +1,12 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 
+// The different types of learning item widgets
 import VideoInstruction from './video-instruction.js';
 import TextResponse from './text-response.js';
 import ImageResponse from './image-response.js';
+import ImageContent from './image-content.js';
+
 import styleConstants from './style-constants.js';
 
 const learningItemStyle = {
@@ -44,9 +47,16 @@ const infoContainerStyle = {
 const kinds = {
   'video': VideoInstruction,
   'textResponse': TextResponse,
-  'imageResponse': ImageResponse
+  'imageResponse': ImageResponse,
+  'image': ImageContent
 };
 
+// Render all links from markdown so they open in a new window so the learner
+// doesn't potentially lose progress
+const linkRenderer = (linkNode) => {
+  return <a href={linkNode.href} title={linkNode.title}
+            target="_blank" children={linkNode.children} />;
+}
 
 const LearningItem = (props) => {
   // due to jsx syntax particularities, the name has to be accessed as a property
@@ -68,7 +78,7 @@ const LearningItem = (props) => {
             <h3 style={{margin: 0}}>{props.title}</h3>
           </div>
         </div>
-        <Markdown escapeHtml={true} source={props.instructions || ''} />
+        <Markdown source={props.instructions || ''} renderers={{'Link': linkRenderer}}/>
         {content}
       </div>
     </div>
