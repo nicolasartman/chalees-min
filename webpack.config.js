@@ -13,6 +13,11 @@ const scssSourcePath = path.join(__dirname, '/src/scss');
 
 const isProduction = process.env.PRODUCTION;
 
+// Notes:
+// 
+// Do not change the length of the hashes without updating firebase.json
+// or it'll break the cache configuration.
+
 module.exports = {
   entry: {
     app: path.join(__dirname, 'src/js/index.js')
@@ -20,7 +25,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist/"),
     publicPath: "/",
-    filename: isProduction ? "app.[chunkhash].min.js" : "app.min.js"
+    filename: isProduction ? "app.hash-[chunkhash:12].min.js" : "app.min.js"
   },
   module: {
     noParse: [
@@ -40,10 +45,10 @@ module.exports = {
         (isProduction ? 'css?minimize' : 'css?sourceMap') + '!postcss!sass?sourceMap'),
       include: scssSourcePath
     }, {
-      test: /\.(png|jpg|svg)$/,
+      test: /\.(png|jpg|gif|svg)$/,
       loader: 'url-loader',
       query: {
-        name: '[name].[hash:10].[ext]',
+        name: '[name].hash-[hash:12].[ext]',
         limit: 8192
       }
     }]
@@ -60,7 +65,7 @@ module.exports = {
     // new webpack.optimize.OccurrenceOrderPlugin(preferEntry),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: isProduction ? 'vendor.[chunkhash].min.js' : 'vendor.min.js',
+      filename: isProduction ? 'vendor.hash-[chunkhash:12].min.js' : 'vendor.min.js',
       // Despite the name, this can be passed a function that acts as an includeChunk?()
       // filter predicate. By using this we can always include resources from node_modules
       // in the vendor file and thus version them separately.
@@ -70,7 +75,7 @@ module.exports = {
         }
       }
     ),
-    new ExtractTextPlugin("site.min.css", {
+    new ExtractTextPlugin(isProduction ? "site.min.hash-[chunkhash:12].css" : "site.min.css", {
       allChunks: true
     }),
     new webpack.ProvidePlugin({
