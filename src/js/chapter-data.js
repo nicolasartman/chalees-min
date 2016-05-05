@@ -24,11 +24,7 @@ const data = {
         Select a question you want to think about more. You can pick from the list above or think of a new question of your own.
         
         Then write it in the box below.`,
-      fakes: [
-        'Where does the silverware that I eat with come from?',
-        'Where does cheese come from?',
-        'Where do the bricks that made my house come from?',
-      ]
+      useFakePeerResponses: true
     }, {
       kind: 'textResponse',
       time: 10,

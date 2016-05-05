@@ -2,6 +2,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import * as data from './data.js';
 import * as auth from './auth.js';
 
+// temporary: fake peer responses
+import sidPhoto from '../images/fake-responses/sid.png';
+import prabsimarPhoto from '../images/fake-responses/prabsimar.png';
+import koushikiPhoto from '../images/fake-responses/koushiki.png';
+
 const style = {
   width: '100%',
   minHeight: '200px'
@@ -23,7 +28,7 @@ const TextResponse = React.createClass({
   getInitialState: function () {
     return {
       response: this.props.response,
-      peerResponses: []
+      useFakePeerResponses: false
     }
   },
   onChange: function (event) {
@@ -37,12 +42,9 @@ const TextResponse = React.createClass({
     // });
     
     // Use fake data
-    if (this.props.fakes) {
-      this.setState({
-        peerResponses: this.props.fakes,
-        currentPeerResponse: 0
-      });
-    }
+    this.setState({
+      useFakePeerResponses: this.props.useFakePeerResponses
+    });
   },
   componentDidMount: async function () {
     // Only enable the buttons if the user is logged in
@@ -64,15 +66,42 @@ const TextResponse = React.createClass({
         <div>
           <button className="pure-button" disabled={!this.state.isSignedIn} onClick={this.onSave}>Save</button>
         </div>
-        {this.state.peerResponses.length ? (
+        {this.state.useFakePeerResponses ? (
           <div style={{marginTop: '1.5em'}}>
             <h4 style={{margin: 0}}>Here are some thoughts your fellow learners shared:</h4>
             <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
-              {this.state.peerResponses.map((response, index) => (
-                <li key={"peer-response-" + index} style={{fontStyle: 'italic', margin: '1em 1em 0 1em'}}>
-                  {response}
-                </li>
-              ))}
+              <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+                <div style={{width: '3em', marginRight: '0.75em'}}>
+                  <img src={koushikiPhoto} className="pure-img"/>
+                </div>
+                <div>
+                  <span style={{fontStyle: 'italic'}}>Where does the silverware that I eat with come from?</span>
+                  <br />
+                  &mdash;Koushiki
+                </div>
+              </li>
+          
+              <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+                <div style={{width: '3em', marginRight: '0.75em'}}>
+                  <img src={sidPhoto} className="pure-img"/>
+                </div>
+                <div>
+                  <span style={{fontStyle: 'italic'}}>Where does cheese come from?</span>
+                  <br />
+                  &mdash;Sid
+                </div>
+              </li>
+          
+              <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+                <div style={{width: '3em', marginRight: '0.75em'}}>
+                  <img src={prabsimarPhoto} className="pure-img"/>
+                </div>
+                <div>
+                  <span style={{fontStyle: 'italic'}}>Where do the bricks that made my house come from?</span>
+                  <br />
+                  &mdash;Parbsimar
+                </div>
+              </li>
             </ul>
           </div>
         ) : null}
