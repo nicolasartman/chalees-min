@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import * as auth from './auth.js';
 import localStore from 'store';
+
+import * as auth from './auth.js';
+import config from './config.js';
 
 import logo from '../images/chalees-min-logo.png';
 import logoHighDpi from '../images/chalees-min-logo@2x.png';
@@ -18,7 +20,7 @@ const Header = React.createClass({
     localStore.remove('authorizations');
 
     const logoutUrl = 'https://learning-prototype.auth0.com/v2/logout?returnTo=' +
-      encodeURI(window.location.href);
+      encodeURI(window.location.href) + "&client_id=" + config.auth0.clientId;
     window.location.href = logoutUrl;
   },
   render: function () {

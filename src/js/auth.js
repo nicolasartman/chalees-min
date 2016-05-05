@@ -16,7 +16,7 @@ const AWS = window.AWS;
 
 var auth0 = new Auth0({
   domain:         config.auth0.domain,
-  clientID:       config.auth0.clientID,
+  clientID:       config.auth0.clientId,
   callbackURL:    window.location.protocol + "//" + window.location.hostname +
                   (window.location.port ? ':' + window.location.port: '')
 });

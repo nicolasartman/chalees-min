@@ -9,7 +9,7 @@ const aws = {
 
 const auth0 = {
   domain:         'learning-prototype.auth0.com',
-  clientID:       'zvMJBINrPP41PVpc0OSfNxD3V4nQoVu9'
+  clientId:       'zvMJBINrPP41PVpc0OSfNxD3V4nQoVu9'
 }
 
 const exports = {
