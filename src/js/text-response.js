@@ -97,7 +97,7 @@ const TextResponse = React.createClass({
                   <img src={prabsimarPhoto} className="pure-img"/>
                 </div>
                 <div>
-                  <span style={{fontStyle: 'italic'}}>Where do the bricks that made my house come from?</span>
+                  <span style={{fontStyle: 'italic'}}>Where does concrete come from?</span>
                   <br />
                   &mdash;Parbsimar
                 </div>
