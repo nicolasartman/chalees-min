@@ -120,7 +120,7 @@ export async function authorize() {
         browserHistory.push(hash.state);
 
         // Ensure the token is still valid
-        const idToken = hash['id_token'];
+        const idToken = hash.idToken;
         const tokenExpireTime = decodeJwt(idToken).exp * 1000;
         if (tokenExpireTime < new Date().getTime()) {
           loginPromise = Promise.reject(new Error('JWT expired'));
