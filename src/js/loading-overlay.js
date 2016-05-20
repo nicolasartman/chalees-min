@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import _ from 'lodash';
+import random from 'lodash.random';
 
 import LoadingSpinner from './loading-spinner.js';
 
@@ -15,7 +15,7 @@ const messages = [
 const LoadingOverlay = React.createClass({
   getInitialState: function () {
     return {
-      message: messages[_.random(messages.length - 1)]
+      message: messages[random(messages.length - 1)]
     }
   },
   render: function () {
