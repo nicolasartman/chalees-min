@@ -4,6 +4,7 @@ import * as data from './data.js';
 import localStore from 'store';
 
 import Header from './header.js';
+import Footer from './footer.js';
 import LoadingOverlay from './loading-overlay.js';
 
 // Authorize them to all services if they're signed in
@@ -35,8 +36,9 @@ const Application = React.createClass({
     return (
       <div>
         <LoadingOverlay shouldShow={!this.state.isReady} />
-        <Header/>
+        <Header />
         {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
+        <Footer />
       </div>
     );
   }

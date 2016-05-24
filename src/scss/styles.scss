@@ -11,6 +11,8 @@
 
 html {
   box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -21,6 +23,8 @@ body {
   &, & .pure-g [class *= "pure-u"] {
     font-family: helvetica;
   }
+  // For sticky footer, see http://mystrd.at/modern-clean-css-sticky-footer/
+  margin: 0 0 100px;
 }
 
 .container {
@@ -219,7 +223,15 @@ div[class*="pure-u-"] {
   }
 }
 
-
+.footer {
+  border-top: 2px solid rgba(0,0,0, 0.10);
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
 
 // ===================
 // = Homepage styles =
