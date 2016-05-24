@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-route
 import * as uploader from './uploader.js';
 import * as auth from './auth.js';
 import Chapter from './chapter.js';
+import Contact from './contact.js';
 import HomePage from './home-page.js';
 import Application from './application.js';
 import localStore from 'store';
@@ -25,6 +26,7 @@ ReactDOM.render((
     <Route path="/" component={Application}>
       <IndexRoute component={HomePage} />
       <Route path="chapter/:id" component={Chapter} />
+      <Route path="contact" component={Contact} />
       <Redirect from="*" to="/" />
     </Route>
   </Router>
