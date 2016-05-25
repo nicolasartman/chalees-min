@@ -2,8 +2,8 @@ functions:
   - isAdmin: root.admins[auth.fb_id] == true
 
 root:
-  .read: isAdmin()
-  .write: false
+  .read: auth.uid == 'upkeeper' || isAdmin()
+  .write: auth.uid == 'upkeeper'
   responses:
     $responseKey:
       .read: data.userKey == auth.fb_id

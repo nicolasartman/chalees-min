@@ -12,7 +12,7 @@
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",
     "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
     "deploy": "npm run _prepare-deploy && firebase deploy && ./open-site-in-browser.sh",
-    "stage": "npm run _prepare-deploy && firebase deploy --firebase \"chalees-staging\" && ./open-site-in-browser.sh --staging"
+    "stage": "npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging"
   },
   "repository": {
     "type": "git",
@@ -80,7 +80,7 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "firebase": "^2.4.1",
-    "firebase-tools": "^2.2.1",
+    "firebase-tools": "^3.0.0",
     "json-loader": "^0.5.4",
     "jwt-decode": "^2.0.1",
     "lodash.random": "^3.0.0",
