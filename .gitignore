@@ -42,3 +42,6 @@ dist
 # compiled firebase security rules -- the source is kept in the yaml file,
 # and it only needs to be compiled for firebase-tools to upload it
 security-rules.json
+
+# local development configuration file
+dev.config.js

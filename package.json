@@ -6,13 +6,13 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "dev": "webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress",
-    "prod-dev": "PRODUCTION=true webpack-dev-server --history-api-fallback --content-base dist/ --progress --compress",
+    "dev": "fireplan security-rules.yaml && firebase deploy --only=\"database,storage\" && webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress",
+    "optim-dev": "PRODUCTION=true webpack-dev-server --history-api-fallback --content-base dist/ --progress --compress",
     "build": "PRODUCTION=true webpack --progress",
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",
     "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
-    "deploy": "npm run _prepare-deploy && firebase deploy && ./open-site-in-browser.sh",
-    "stage": "npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging"
+    "deploy": "DEPLOY_TARGET=production npm run _prepare-deploy && firebase deploy --project \"chalees-min\" && ./open-site-in-browser.sh",
+    "stage": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging"
   },
   "repository": {
     "type": "git",

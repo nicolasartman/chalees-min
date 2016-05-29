@@ -82,6 +82,9 @@ module.exports = {
       React: 'react',
       'window.firebase': 'firebase'
     }),
+    new webpack.DefinePlugin({
+      '__DEPLOY_TARGET__': JSON.stringify(process.env.DEPLOY_TARGET || null)
+    }),
   ]
   .concat(isProduction ? [
     new webpack.DefinePlugin({
