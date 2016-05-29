@@ -8,6 +8,7 @@ Currently in private prototyping. More info coming in the future.
 1. `npm install`
 1. Set up firebase: `npm install -g firebase-tools` then `firebase login` and follow the prompts
 1. Create a new firebase project at firebase.google.com
+1. Enable the google auth provider for the project under the firebase console auth section (see firebase's latest docs for more info)
 1. Set your local development firebase project to be the default: `firebase use <your firebase project name>`
 1. Create a file in the root of your repository named `dev.config.js` with contents like this
   ```
