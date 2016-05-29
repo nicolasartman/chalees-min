@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
+import localStore from 'store';
+import firebase from 'firebase';
+
+// Has to be at the top to initialize firebase configuration
+import './initialize-firebase.js';
 
 import * as uploader from './uploader.js';
 import * as auth from './auth.js';
@@ -8,7 +13,6 @@ import Chapter from './chapter.js';
 import Contact from './contact.js';
 import HomePage from './home-page.js';
 import Application from './application.js';
-import localStore from 'store';
 
 import '../scss/styles.scss';
 

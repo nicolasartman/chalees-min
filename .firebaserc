@@ -1,5 +1,7 @@
 {
   "projects": {
-    "production": "chalees-min"
+    "default": "chalees-min",
+    "production": "chalees-min",
+    "staging": "chalees-staging"
   }
 }

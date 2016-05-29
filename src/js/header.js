@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import localStore from 'store';
 
 import * as auth from './auth.js';
-import config from './config.js';
 
 import logo from '../images/chalees-min-logo.png';
 import logoHighDpi from '../images/chalees-min-logo@2x.png';
@@ -13,15 +12,12 @@ const Header = React.createClass({
   showGoogleLoginPrompt: () => auth.showGoogleLoginPrompt(),
   getInitialState: () => ({}),
   componentWillMount: async function () {
-    const {profile} = await auth.authorize();
-    this.setState({name: profile.name});
+    const user = await auth.authorize();
+    console.log('header: user', user);
+    this.setState({name: user.displayName});
   },
-  logOut: function () {
-    localStore.remove('authorizations');
-
-    const logoutUrl = 'https://learning-prototype.auth0.com/v2/logout?returnTo=' +
-      encodeURI(window.location.href) + "&client_id=" + config.auth0.clientId;
-    window.location.href = logoutUrl;
+  logOut: async function () {
+    await auth.signOut();
   },
   render: function () {
     const userSection = this.state.name ? (

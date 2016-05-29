@@ -28,9 +28,6 @@ module.exports = {
     filename: isProduction ? "app.hash-[hash:12].min.js" : "app.min.js"
   },
   module: {
-    noParse: [
-      /aws\-sdk/
-    ],
     loaders: [{
       test: /\.json$/,
       loader: 'json-loader'
