@@ -1,4 +1,3 @@
-import Firebase from 'firebase';
 import localStore from 'store';
 import decodeJwt from 'jwt-decode';
 import { browserHistory } from 'react-router';

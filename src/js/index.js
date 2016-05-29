@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
 import localStore from 'store';
-import firebase from 'firebase';
 
 // Has to be at the top to initialize firebase configuration
 import './initialize-firebase.js';

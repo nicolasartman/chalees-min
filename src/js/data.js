@@ -1,5 +1,4 @@
 import * as auth from './auth.js';
-import Firebase from 'firebase';
 
 const rootRef = firebase.database().ref();
 

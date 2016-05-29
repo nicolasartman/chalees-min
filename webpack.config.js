@@ -75,11 +75,12 @@ module.exports = {
         }
       }
     ),
-    new ExtractTextPlugin(isProduction ? "site.min.hash-[hash:12].css" : "site.min.css", {
+    new ExtractTextPlugin(isProduction ? 'site.min.hash-[hash:12].css' : "site.min.css", {
       allChunks: true
     }),
     new webpack.ProvidePlugin({
-        React: "react"
+      React: 'react',
+      'window.firebase': 'firebase'
     }),
   ]
   .concat(isProduction ? [
