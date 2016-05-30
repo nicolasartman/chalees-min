@@ -44,6 +44,7 @@
     "eslint": "^2.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "firebase-tools": "^3.0.0",
     "fireplan": "^0.2.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
@@ -56,6 +57,7 @@
     "gulp-watch": "^4.3.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.16.0",
+    "image-webpack-loader": "^1.8.0",
     "lodash": "^4.11.1",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.2",
@@ -64,7 +66,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-manifest-plugin": "^1.0.0",
-    "firebase-tools": "^3.0.0",
     "webpack-md5-hash": "0.0.5"
   },
   "dependencies": {

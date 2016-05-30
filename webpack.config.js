@@ -14,9 +14,15 @@ const scssSourcePath = path.join(__dirname, '/src/scss');
 const isProduction = process.env.PRODUCTION;
 
 // Notes:
-// 
-// Do not change the length of the hashes without updating firebase.json
-// or it'll break the cache configuration.
+//
+// Do not change the length of the hashes below without updating
+// firebase.json or it'll break the cache configuration.
+
+
+const fileLoaderConfig = {
+  name: '[name].hash-[hash:12].[ext]',
+  limit: 8192
+};
 
 module.exports = {
   entry: {
@@ -38,16 +44,16 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
-        'style', 
+        'style',
         (isProduction ? 'css?minimize' : 'css?sourceMap') + '!postcss!sass?sourceMap'),
       include: scssSourcePath
     }, {
       test: /\.(png|jpg|gif|svg)$/,
-      loader: 'url-loader',
-      query: {
-        name: '[name].hash-[hash:12].[ext]',
-        limit: 8192
-      }
+      loaders: ['url?'+JSON.stringify(fileLoaderConfig)]
+      
+      // Image optimization: seems to not really save any data right now, might be worth adding back
+      // in later
+      // loaders: isProduction ? ['url?'+JSON.stringify(fileLoaderConfig), 'image-webpack'] : ['url'],
     }, {
       test: /\.html$/,
       loader: "html"
@@ -59,6 +65,21 @@ module.exports = {
       cleaner:  [autoprefixer({ browsers: ['last 2 versions'] })]
     };
   },
+  // Optimize images for production -- see above, not doing much at this point
+  // imageWebpackLoader: {
+  //   optimizationLevel: 4,
+  //   pngquant: {
+  //     quality: "80-90",
+  //     speed: 2
+  //   },
+  //   svgo: {
+  //     plugins: [{
+  //       removeViewBox: false
+  //     }, {
+  //       removeEmptyAttrs: false
+  //     }]
+  //   }
+  // },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     // TODO: add in production
@@ -113,7 +134,7 @@ module.exports = {
     favicon: './src/images/favicons/favicon.ico',
     inject: 'body'
   })),
-  
+
   // this isn't a specific keyword - you can include the strings eval, cheap, module,
   // and source-map in any order. they're basically all just flags that it magically
   // checks for and does stuff based on. I chose to space separate them to make it clearer

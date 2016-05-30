@@ -34,12 +34,14 @@
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T5DDQR');</script>
     <!-- End Google Tag Manager -->
+    
+    <main id="application"></main>
 
-    <img src="../images/chalees-min-heart.png" width="1" height="1" style="position: absolute; top: -100px; left: -100px;"/>
-    <div id="application"></div>
+    <!-- Force immediate loading of this image to ensure it's ready when the splash screen comes up -->
+    <img src="../images/chalees-min-heart.png" style="position: absolute; top: -100000px; left: -100000px;"/>
+
+    <!-- Scripts -->
     <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
-    
-    
     <!-- All other site scripts will get inserted below here -->
     
   </body>
