@@ -1,6 +1,3 @@
-console.log('deploy target', __DEPLOY_TARGET__);
-
-
 let config;
 
 // Initialize Firebase with the appropriate database

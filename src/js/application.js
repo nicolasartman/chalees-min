@@ -1,7 +1,6 @@
 import React from 'react';
 import * as auth from './auth.js';
 import * as data from './data.js';
-import localStore from 'store';
 
 import Header from './header.js';
 import Footer from './footer.js';
