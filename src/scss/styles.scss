@@ -289,3 +289,34 @@ div[class*="pure-u-"] {
   text-align: center;
 }
 
+
+// =======================
+// = Chapter Page Styles =
+// =======================
+
+.learning-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.25em 1.25em;
+  margin-top: 1.5em;
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+}
+
+.learning-item-header {
+  display: flex;
+  align-items: center,
+}
+
+.learning-item-time {
+  margin-left: 1em;
+  min-width: 4em;
+  padding: 0.5em 0;
+  color: #EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $chalees-purple;
+}
