@@ -35,7 +35,6 @@ const timeContainerStyle = {
 const headerStyle = {
   display: 'flex',
   alignItems: 'center',
-  flexDirection: 'row-reverse',
 }
 const infoContainerStyle = {
   width: '100%',
@@ -63,6 +62,12 @@ const LearningItem = (props) => {
     <div style={learningItemStyle}>
       <div style={{width: '100%'}}>
         <div style={headerStyle}>
+          {props.presenterImagePath ? (
+            <img style={{marginRight: 15}} src={"https://chalees-min.imgix.net" + props.presenterImagePath + "?w=34&h=44"} />
+          ) : null}
+          <div style={infoContainerStyle}>
+            <h3 style={{margin: 0}}>{props.title}</h3>
+          </div>
           <div style={timeContainerStyle} className="learning-item-time">
             <div style={{fontWeight: 'bold', marginRight: '0.25em'}}>
               {props.time}
@@ -70,9 +75,6 @@ const LearningItem = (props) => {
             <div>
               Min
             </div>
-          </div>
-          <div style={infoContainerStyle}>
-            <h3 style={{margin: 0}}>{props.title}</h3>
           </div>
         </div>
         <Markdown source={props.instructions || ''} renderers={{'Link': linkRenderer}}/>

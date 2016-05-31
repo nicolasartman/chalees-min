@@ -10,6 +10,8 @@ const data = {
       kind: 'imageResponse',
       time: 10,
       title: 'Share what you have learned',
+      // @KUNAL: here's how to add an image
+      // presenterImagePath: '/test.jpg',
       instructions: 'Use a pencil and paper to draw a picture that shows what you have learned from this video. Then take a picture of it and share it here.'
     }, {
       kind: 'textResponse',
