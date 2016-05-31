@@ -37,7 +37,7 @@ const Application = React.createClass({
         <LoadingOverlay shouldShow={!this.state.isReady} />
         <Header />
         {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
-        <Footer />
+        { /* <Footer /> */ }
       </div>
     );
   }
