@@ -16,6 +16,7 @@ const data = {
     }, {
       kind: 'textResponse',
       time: 6,
+      short: true,
       title: 'Pick a question to investigate',
       instructions: dedent`
       At the end of the video, we present a few questions for you to think about. Here they are again:

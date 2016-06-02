@@ -7,12 +7,6 @@ import sidPhoto from '../images/fake-responses/sid.png';
 import prabsimarPhoto from '../images/fake-responses/prabsimar.png';
 import koushikiPhoto from '../images/fake-responses/koushiki.png';
 
-const style = {
-  width: '100%',
-  minHeight: '200px'
-}
-
-
 // const peerResponseContainerStyle = {
 //   width: '100%',
 //   minHeight: '20em'
@@ -62,9 +56,12 @@ const TextResponse = React.createClass({
   render: function () {
     return (
       <div>
-        <textarea className="pure-input-1" value={this.state.response} onChange={this.onChange} style={style}></textarea>
+        {this.props.short ? 
+          (<input type="text" className="pure-input" value={this.state.response} onChange={this.onChange} style={{width: '100%'}} />) :
+          (<textarea className="pure-input" value={this.state.response} onChange={this.onChange} style={{width: '100%',minHeight: '200px'}}></textarea>)
+        }
         <div>
-          <button className="pure-button" disabled={!this.state.isSignedIn} onClick={this.onSave}>Save</button>
+          <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn} onClick={this.onSave}>Save</button>
         </div>
         {this.state.useFakePeerResponses ? (
           <div style={{marginTop: '1.5em'}}>
