@@ -2,6 +2,7 @@ import React from 'react';
 import Markdown from 'react-markdown';
 
 // The different types of learning item widgets
+import MultipleChoiceResponse from './multiple-choice-response.js';
 import VideoInstruction from './video-instruction.js';
 import TextResponse from './text-response.js';
 import ImageResponse from './image-response.js';
@@ -10,6 +11,7 @@ import ImageContent from './image-content.js';
 import styleConstants from './style-constants.js';
 
 const kinds = {
+  'multipleChoice': MultipleChoiceResponse,
   'video': VideoInstruction,
   'textResponse': TextResponse,
   'imageResponse': ImageResponse,
