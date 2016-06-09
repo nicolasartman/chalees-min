@@ -31,7 +31,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist/"),
     publicPath: "/",
-    filename: isProduction ? "app.hash-[hash:12].min.js" : "app.min.js"
+    filename: isProduction ? "app.hash-[chunkhash:12].min.js" : "app.min.js"
   },
   module: {
     loaders: [{
@@ -86,7 +86,7 @@ module.exports = {
     // new webpack.optimize.OccurrenceOrderPlugin(preferEntry),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: isProduction ? 'vendor.hash-[hash:12].min.js' : 'vendor.min.js',
+      filename: isProduction ? 'vendor.hash-[chunkhash:12].min.js' : 'vendor.min.js',
       // Despite the name, this can be passed a function that acts as an includeChunk?()
       // filter predicate. By using this we can always include resources from node_modules
       // in the vendor file and thus version them separately.
@@ -96,7 +96,7 @@ module.exports = {
         }
       }
     ),
-    new ExtractTextPlugin(isProduction ? 'site.min.hash-[hash:12].css' : "site.min.css", {
+    new ExtractTextPlugin(isProduction ? 'site.min.hash-[contenthash:12].css' : 'site.min.css', {
       allChunks: true
     }),
     new webpack.ProvidePlugin({
