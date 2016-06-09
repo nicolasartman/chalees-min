@@ -402,7 +402,7 @@ div[class*="pure-u-"] {
   
   transition: all 0.15s linear;
   
-  &:hover {
+  &:hover, &:active {
     color: white;
     background-color: $button-color;
   }
@@ -412,7 +412,7 @@ div[class*="pure-u-"] {
     $button-color: hsl(0, 0, 30%);
     border: 2px solid $button-color;
 
-    &:hover {
+    &:hover, &:active {
       color: white;
       background-color: $button-color;
     }
