@@ -277,6 +277,22 @@ const data = {
       title: 'Teach a friend',
       instructions: 'Find a friend that you can teach what you have learned in this chapter. Tell them everything you know, answer their questions. Then write down your experiences on what happened here.',
     }]
+  },
+  '999': {
+    items: [{
+      kind: 'multipleChoice',
+      time: 2,
+      title: 'Multiple Choice Example 1',
+      instructions: 'Select all that apply',
+      choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4']
+    }, {
+      kind: 'multipleChoice',
+      time: 2,
+      title: 'Multiple Choice Example 2',
+      instructions: 'Select only one',
+      maxSelected: 1,
+      choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] 
+    }]
   }
 }
 
