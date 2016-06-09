@@ -330,6 +330,22 @@ div[class*="pure-u-"] {
 }
 
 
+// Login gate that covers interactive widgets for signed-out users
+.login-gate-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: transparent;
+  
+  transition: all 0.1s ease-in;
+  
+  &:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  };
+}
+
 
 // =========
 // = Forms =
@@ -371,5 +387,34 @@ div[class*="pure-u-"] {
 @media (min-width: 80em) {
   .hidden-xl {
     display: none !important;
+  }
+}
+
+
+// =================
+// = Button Styles =
+// =================
+
+.pure-button {
+  $button-color: $chalees-red;
+  border: 2px solid $button-color;
+  background-color: white;
+  
+  transition: all 0.15s linear;
+  
+  &:hover {
+    color: white;
+    background-color: $button-color;
+  }
+  
+  // Additional button variations
+  &.button-secondary {
+    $button-color: hsl(0, 0, 30%);
+    border: 2px solid $button-color;
+
+    &:hover {
+      color: white;
+      background-color: $button-color;
+    }
   }
 }
