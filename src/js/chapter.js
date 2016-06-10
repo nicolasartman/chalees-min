@@ -65,7 +65,7 @@ const Chapter = React.createClass({
   },
   componentWillUnmount: function () {
     window.clearInterval(this.scrollCheckInterval);
-    window.removeEventListener(this.scrollListener);
+    window.removeEventListener('scroll', this.scrollListener);
   },
   render: function() {
     // Use the magnets chapter if there isn't existing dummy data for the given one
