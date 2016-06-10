@@ -311,6 +311,16 @@ div[class*="pure-u-"] {
   background: white;
   border: 1px solid #E0E0E0;
   border-radius: 5px;
+  
+  
+  // experimental
+  transition: opacity 0.2s linear;
+  opacity: 0.5;
+  
+  &.focused {
+    opacity: 1;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .learning-item-header {
