@@ -1,4 +1,17 @@
 import React from 'react';
+import styleConstants from './style-constants.js';
+
+const unselectedChoiceStyle = {
+  backgroundColor: 'transparent',
+  outline: 'none'
+};
+
+const selectedChoiceStyle = {
+  color: styleConstants.chaleesPurple,
+  fontWeight: 'bold',
+  backgroundColor: 'transparent',
+  outline: 'none'
+}
 
 const Choice = React.createClass({
   getInitialState: function() {
@@ -11,8 +24,9 @@ const Choice = React.createClass({
   render: function() {
     return (
       <li>
-      <button onClick={this.props.onSelect}>{this.props.choice}</button>
-        <div style={this.state.selected ? {'display': 'block'} : {'display': 'none'}}>Selected</div>
+      {/* TODO: change unicode checkmark character to a glyph? */}
+      <button style={this.state.selected ? selectedChoiceStyle : unselectedChoiceStyle} 
+              onClick={this.props.onSelect}>{this.props.choice + (this.state.selected ? ' \u2713' : '')}</button>
       </li>
     )
   }
