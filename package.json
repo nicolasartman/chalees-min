@@ -5,14 +5,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
     "dev": "fireplan security-rules.yaml && firebase deploy --only=\"database,storage\" && webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress",
     "optim-dev": "PRODUCTION=true webpack-dev-server --history-api-fallback --content-base dist/ --progress --compress",
     "build": "PRODUCTION=true webpack --progress",
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",
-    "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
     "deploy": "DEPLOY_TARGET=production npm run _prepare-deploy && firebase deploy --project \"chalees-min\" && ./open-site-in-browser.sh",
-    "stage": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging"
+    "stage": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging",
+    "ci-deploy-staging": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" --token=$FIREBASE_TOKEN_STAGING --non-interactive deploy",
+    "ci-deploy-production": "DEPLOY_TARGET=production npm run _prepare-deploy && firebase --project \"chalees-min\" --token=$FIREBASE_TOKEN_PRODUCTION --non-interactive deploy",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
