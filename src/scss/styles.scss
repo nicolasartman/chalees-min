@@ -31,6 +31,10 @@ body {
   margin: 0 auto;
   padding: 0 1em;
   
+  @media (max-width: $max-width-sm) {
+    padding: 0;
+  }
+  
   &.homepage {
     max-width: 80em;
     padding-bottom: 3em;
@@ -93,7 +97,7 @@ div[class*="pure-u-"] {
   $height: 377px;
   animation: heartpulse 2s ease-out infinite;
   height: $height;
-  @media (max-width: 47.9em) {
+  @media (max-width: $max-width-sm) {
     height: $height * 0.75;
   }
 }
@@ -101,13 +105,13 @@ div[class*="pure-u-"] {
   $height: 34px;
   margin-top: 1em;
   height: $height;
-  @media (max-width: 47.9em) {
+  @media (max-width: $max-width-sm) {
     height: $height * 0.85;
   }
 }
 .loading-overlay-message {
   font-size: 1.5em;
-  @media (max-width: 47.9em) {
+  @media (max-width: $max-width-sm) {
     font-size: 1.2em;
   }
   text-align: center;
@@ -122,7 +126,7 @@ div[class*="pure-u-"] {
 }
 
 // Scale everything down a bit on mobile
-@media (max-width: 47.9em) {
+@media (max-width: $max-width-sm) {
   .loading-overlay img {
     
   }
@@ -307,7 +311,7 @@ div[class*="pure-u-"] {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1.25em 1.25em;
-  margin-top: 1.5em;
+  margin-top: 3em;
   background: white;
   border: 1px solid #E0E0E0;
 //  border-radius: 5px;
@@ -376,7 +380,7 @@ div[class*="pure-u-"] {
   }
 }
 
-@media (min-width: 35.5em) and (max-width: 47.95em) {
+@media (min-width: 35.5em) and (max-width: $max-width-sm) {
   .hidden-sm {
     display: none !important;
   }
@@ -427,4 +431,13 @@ div[class*="pure-u-"] {
       background-color: $button-color;
     }
   }
+}
+
+// ===============================
+// = Temporary Hacktacular Hacks =
+// ===============================
+
+.container.chapter > .pure-g > .pure-u-1 {
+  padding-left: 0;
+  padding-right: 0;
 }

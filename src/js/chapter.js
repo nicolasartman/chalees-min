@@ -64,7 +64,7 @@ const Chapter = React.createClass({
       }, 100);
 
       updateFocusedLearningItem();
-    }, 1000)
+    }, 100)
   },
   componentWillUnmount: function () {
     window.clearInterval(this.scrollCheckInterval);
