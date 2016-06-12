@@ -34,7 +34,7 @@ const LearningItem = (props) => {
       <div style={{width: '100%'}}>
         <div className="learning-item-header">
           {props.presenterImagePath ? (
-            <img style={{marginRight: 15}} src={"https://chalees-min.imgix.net" + props.presenterImagePath + "?w=34&h=44"} />
+            <img style={{marginRight: 15}} src={"https://chalees-min.imgix.net" + props.presenterImagePath + "?w=34&h=44&auto=format"} />
           ) : null}
           <div style={{width: '100%'}}>
             <h3 style={{margin: 0}}>{props.title}</h3>
