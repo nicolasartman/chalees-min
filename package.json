@@ -12,8 +12,10 @@
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",
     "deploy": "DEPLOY_TARGET=production npm run _prepare-deploy && firebase deploy --project \"chalees-min\" && ./open-site-in-browser.sh",
     "stage": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" deploy && ./open-site-in-browser.sh --staging",
-    "ci-deploy-staging": "DEPLOY_TARGET=staging npm run _prepare-deploy && firebase --project \"chalees-staging\" --token=$FIREBASE_TOKEN_STAGING --non-interactive deploy",
-    "ci-deploy-production": "DEPLOY_TARGET=production npm run _prepare-deploy && firebase --project \"chalees-min\" --token=$FIREBASE_TOKEN_PRODUCTION --non-interactive deploy",
+    "_ci-prepare-deploy": "npm run ci-build && fireplan security-rules.yaml",
+    "ci-build": "PRODUCTION=true webpack",
+    "ci-deploy-staging": "DEPLOY_TARGET=staging npm run _ci-prepare-deploy && firebase --project \"chalees-staging\" --token=$FIREBASE_TOKEN_STAGING --non-interactive deploy",
+    "ci-deploy-production": "DEPLOY_TARGET=production npm run _ci-prepare-deploy && firebase --project \"chalees-min\" --token=$FIREBASE_TOKEN_PRODUCTION --non-interactive deploy",
     "test": "npm run build"
   },
   "repository": {
