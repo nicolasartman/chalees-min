@@ -4,7 +4,7 @@ const data = {
       kind: 'video',
       time: 4,
       title: 'Where does food come from?',
-      instructions: 'Watch this short video to take a journey from your dinner plate all the way to the farm.',
+      instructions: 'Watch this short video to take a journey from your dinner plate all the way to the farm!',
       videoId: 'zHeWx_AifLs'
     }, {
       kind: 'imageResponse',
