@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background-color: #F0F0F0;
+  background-color: $body-background-color;
   &, & .pure-g [class *= "pure-u"] {
     font-family: helvetica;
   }
@@ -463,7 +463,7 @@ div[class*="pure-u-"] {
   max-width: 1000px;
   max-height: 700px;
   border: 1px solid #555;
-  background: #fff;
+  background: $body-background-color;
   overflow: auto;
   -Webkit-overflow-scrolling: touch;
   border-radius: 3px;
