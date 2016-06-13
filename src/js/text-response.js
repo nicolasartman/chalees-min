@@ -2,6 +2,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Modal from 'react-modal';
 import * as data from './data.js';
 import * as auth from './auth.js';
+import styles from './style-constants.js';
 
 import logo from '../images/chalees-min-logo-icon.svg';
 
@@ -120,14 +121,13 @@ const TextResponse = React.createClass({
             </ul>
           </div>
         ) : null}
-        <Modal isOpen={this.state.isModalOpen} style={{content:{maxWidth: "60em", margin: "auto", background: '#F7F7F7'}, overlay: {background: 'rgba(0,0,0,0.7)'}}}>
+        <Modal isOpen={this.state.isModalOpen} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay">
           <div style={{textAlign: 'center'}}>
-            <h1>Please Sign In <img src={logo}/></h1>
+            <h1><img src={logo}/> Please Sign In</h1>
             <p>This lets us save your thoughts so you can come back to them.</p>
-            <p>We don&apos;t save your personal information &amp; can&apos;t post on your wall.</p>
             <p style={{marginTop: '2em'}}><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showGoogleLoginPrompt}>Sign in with Google</button></p>
             <p><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showFacebookLoginPrompt}>Sign in with Facebook</button></p>
-            <p style={{marginTop: '2em'}}>
+            <p>
               <button onClick={this.closeModal} style={{width: '100%', maxWidth: '15em'}} className="pure-button button-secondary">Not Yet</button>
             </p>
           </div>

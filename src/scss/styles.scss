@@ -1,6 +1,7 @@
 @import "variables";
 @import "pure";
 @import "pure-grids-responsive";
+@import "responsive-helpers";
 @import "loading-spinner";
 @import "typography";
 @import "transitions";
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  background-color: #F7F7F7;
+  background-color: #F0F0F0;
   &, & .pure-g [class *= "pure-u"] {
     font-family: helvetica;
   }
@@ -139,7 +140,7 @@ div[class*="pure-u-"] {
 .header {
   background-color: white;
   border-bottom: 2px solid $chalees-red;
-  box-shadow: 0 6px 8px rgba(0,0,0, 0.10);
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.4);
 }
 
 .main-nav {
@@ -251,24 +252,19 @@ div[class*="pure-u-"] {
 
 .homepage-tile {
   margin-bottom: 3em;
-  // TODO: reduce back to 1.5em on mobile
   
   a {
     text-decoration: none;
   }  
 }
 .homepage-tile-content {
-  background-color: #EEE;
-  background-color: #333;
-  background-color: #555;
-  border: 1px solid #555;
-//  border: 1px solid $chalees-red;
+  border: 1px solid #999;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 .homepage-tile-picture-container {
   overflow: hidden;
 }
-// todo: make the scale effect transition out smoothly
 .homepage-tile-picture {
   transform: scale(1);
   transition: transform 0.5s ease-in-out;
@@ -277,11 +273,13 @@ div[class*="pure-u-"] {
   transform: scale(1.1);
 }
 .homepage-tile-title {
+  position: absolute;
+  bottom: 0;
   text-align: center;
-  min-height: 2em;
+  min-height: 2.5em;
   padding: 0.4em 0.5em;
-  color: #7FB4FF;
   color: #EEE;
+  background-color: rgba(0, 0, 0, 0.5);
 
   display: flex;
   align-items: center;
@@ -313,18 +311,18 @@ div[class*="pure-u-"] {
   padding: 1.25em 1.25em;
   margin-top: 3em;
   background: white;
-  border: 1px solid #E0E0E0;
-//  border-radius: 5px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  box-shadow: 0px 0px 7px transparentize($chalees-purple, 0.7);
+
+  // experimental -- disabled until we can find a compatible, performant solution
+  //  transition: opacity 0.2s linear;
+  //  opacity: 0.5;
   
-  
-  // experimental
-  transition: opacity 0.2s linear;
-  opacity: 0.5;
-  
-  &.focused {
-    opacity: 1;
-    box-shadow: 0px 0px 20px 5px transparentize($chalees-purple, 0.7);
-  }
+  //  &.focused {
+  //    opacity: 1;
+  //    box-shadow: 0px 0px 20px 5px transparentize($chalees-purple, 0.7);
+  //  }
 }
 
 .learning-item-header {
@@ -374,31 +372,31 @@ div[class*="pure-u-"] {
 // = Utility =
 // ===========
 
-@media (max-width: 35.45em) {
+@include media-phone {
   .hidden-xs {
     display: none !important;
   }
 }
 
-@media (min-width: 35.5em) and (max-width: $max-width-sm) {
+@include media-tablet {
   .hidden-sm {
     display: none !important;
   }
 }
 
-@media (min-width: 48em) and (max-width: 63.95em) {
+@include media-laptop {
   .hidden-md {
     display: none !important;
   }
 }
 
-@media (min-width: 64em) and (max-width: 79.95em) {
+@include media-desktop {
   .hidden-lg {
     display: none !important;
   }
 }
 
-@media (min-width: 80em) {
+@include media-desktop-large {
   .hidden-xl {
     display: none !important;
   }
@@ -410,11 +408,14 @@ div[class*="pure-u-"] {
 // =================
 
 .pure-button {
-  $button-color: $chalees-red;
-  border: 2px solid $button-color;
-  background-color: white;
-  
+  $button-color: $chalees-purple;
   transition: all 0.15s linear;
+  border: 2px solid $button-color;
+
+  &, &:focus {
+    background-color: white;    
+    background-image: none;
+  }  
   
   &:hover, &:active {
     color: white;
@@ -423,14 +424,65 @@ div[class*="pure-u-"] {
   
   // Additional button variations
   &.button-secondary {
-    $button-color: hsl(0, 0, 30%);
+    $button-color: hsl(0, 0, 50%);
     border: 2px solid $button-color;
+    color: hsl(0, 0, 20%);
+    border: 2px solid $button-color;
+
+    &, &:focus {
+      background-color: white;    
+    }  
 
     &:hover, &:active {
       color: white;
       background-color: $button-color;
     }
   }
+}
+
+// ================
+// = Modal Styles =
+// ================
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 2em;
+  max-width: 1000px;
+  max-height: 700px;
+  border: 1px solid #555;
+  background: #fff;
+  overflow: auto;
+  -Webkit-overflow-scrolling: touch;
+  border-radius: 3px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include media-tablet-and-smaller {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transform: none;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
 }
 
 // ===============================

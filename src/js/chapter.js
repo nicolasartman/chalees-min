@@ -17,66 +17,80 @@ const Chapter = React.createClass({
     this.setState({
       chapterId: parseInt(this.props.params.id, 10)
     });
-
-    // ultra hack. needs to be refactored majorly.
-    window.setTimeout(() => {      
-      const learningItems = [...ReactDom.findDOMNode(this).querySelectorAll('.learning-item')]
-        .map(item => ({
-          top: item.offsetTop,
-          node: item
-        }));
-
-      let recentlyScrolled = false;
-      let focusedLearningItem = null;
-
-      this.scrollListener = () => recentlyScrolled = true;
-
-      window.addEventListener('scroll', this.scrollListener);
-
-      function updateFocusedLearningItem() {
-        recentlyScrolled = false;
-        const scrollTop = window.pageYOffset;
-
-        let focusedItem = null;
-        let index = 0;
-        while (focusedItem === null && index < learningItems.length) {
-          // If the item is the topmost one in the page (with a UX allowance
-          // so part of the item can be scrolled past while still considering
-          // it in focus)
-          if (learningItems[index].top > scrollTop - 150) {
-            focusedItem = learningItems[index];
-          } else {
-            index += 1;
-          }
-        }
-
-        if (focusedItem && focusedLearningItem !== focusedItem) {
-          focusedLearningItem = focusedItem;
-          learningItems.map(item => item.node.classList.remove('focused'));
-          focusedLearningItem.node.classList.add('focused');
-        }
-      }
-
-      this.scrollCheckInterval = window.setInterval(() => {
-        if (recentlyScrolled) {
-         updateFocusedLearningItem()
-        }
-      }, 100);
-
-      updateFocusedLearningItem();
-    }, 100)
   },
+  // disabled until we find a more efficient way to do it or
+  // decide it's worth the additional complexity
+  // initializeVisualFocusEffect: function () {
+  //   // hacky. needs to be refactored once any of this data is fetched asynchronously.
+  //   const learningItems = [...ReactDom.findDOMNode(this).querySelectorAll('.learning-item')]
+  //     .map(element => ({
+  //       topBound: Math.round(element.offsetTop + (element.offsetHeight * 0.4)),
+  //       bottomBound: Math.round(element.offsetTop + (element.offsetHeight * 0.6)),
+  //       node: element
+  //     }));
+  //
+  //   let recentlyScrolled = false;
+  //   let focusedLearningItems = [];
+  //
+  //   this.scrollListener = () => recentlyScrolled = true;
+  //
+  //   window.addEventListener('scroll', this.scrollListener);
+  //
+  //   function updateFocusedLearningItem() {
+  //     recentlyScrolled = false;
+  //     const viewportTop = window.pageYOffset;
+  //     const viewportBottom = viewportTop + window.innerHeight;
+  //
+  //     let newlyFocusedItems = [];
+  //     const numberOfLearningItems = learningItems.length;
+  //
+  //     // All the items that have over 25% of themselves viewable are considered
+  //     // focused
+  //     for (let index = 0; index < numberOfLearningItems; index += 1) {
+  //       // If the item is the topmost one in the page (with a UX allowance
+  //       // so part of the item can be scrolled past while still considering
+  //       // it in focus)
+  //       if (learningItems[index].bottomBound > viewportTop &&
+  //           learningItems[index].topBound < viewportBottom) {
+  //         newlyFocusedItems.push(learningItems[index]);
+  //       }
+  //     }
+  //
+  //     console.log('focused items (new, current)', newlyFocusedItems, focusedLearningItems);
+  //
+  //     // If the set of focused items has changed, update which elements have the class
+  //     if (newlyFocusedItems.length !== focusedLearningItems.length ||
+  //         newlyFocusedItems[0] !== focusedLearningItems[0]) {
+  //       learningItems.map(item => item.node.classList.remove('focused'));
+  //       newlyFocusedItems.map(item => item.node.classList.add('focused'));
+  //       focusedLearningItems = newlyFocusedItems;
+  //     }
+  //   }
+  //
+  //   this.scrollCheckInterval = window.setInterval(() => {
+  //     if (recentlyScrolled) {
+  //      updateFocusedLearningItem()
+  //     }
+  //   }, 100);
+  //
+  //   updateFocusedLearningItem();
+  // },
   componentWillUnmount: function () {
-    window.clearInterval(this.scrollCheckInterval);
-    window.removeEventListener('scroll', this.scrollListener);
+    // disabled for now -- see note above
+    // window.clearInterval(this.scrollCheckInterval);
+    // window.removeEventListener('scroll', this.scrollListener);
   },
   render: function() {
-    console.log('huh??', this.state.chapterId);
-
     // Use the magnets chapter if there isn't existing dummy data for the given one
     const currentChapter = chapters.find(chapter => chapter.number === this.state.chapterId);
-    console.log('currentChapter', currentChapter);
-
+    
+    // hackity hack -- disabled. see note above
+    // if (currentChapter && !this.focusEffectInitialized) {
+    //   console.log('init focus effect');
+    //   this.focusEffectInitialized = true;
+    //   window.setTimeout(this.initializeVisualFocusEffect);
+    // }
+    
     return currentChapter ? (
       <div>
         <main id="main" className="container chapter">
