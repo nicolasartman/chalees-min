@@ -319,10 +319,11 @@ div[class*="pure-u-"] {
   border-radius: 3px;
   box-shadow: 0px 0px 7px transparentize($chalees-purple, 0.7);
 
-  @include media-phone {
+  @include media-tablet-and-smaller {
     border-right: none;
     border-left: none;
     border-radius: 0;
+    margin-top: 1.75em;
   }
 
   // experimental -- disabled until we can find a compatible, performant solution
