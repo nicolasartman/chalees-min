@@ -20,8 +20,8 @@ const HomePage = React.createClass({
         </div>
 
         <div className="pure-g">
-          {chapters.map(chapter => (
-            <HomepageTile imagePath={chapter.thumbnailImagePath} chapterNumber={chapter.number} title={chapter.title} />
+          {chapters.map((chapter, index) => (
+            <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterNumber={chapter.number} title={chapter.title} />
           ))}
         </div>
         {this.props.children}
