@@ -459,7 +459,7 @@ div[class*="pure-u-"] {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  padding: 2em;
+  padding: 3em;
   max-width: 1000px;
   max-height: 700px;
   border: 1px solid #555;
@@ -471,12 +471,14 @@ div[class*="pure-u-"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: $modal-z-index;
   
   @include media-tablet-and-smaller {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 2em;
     border: none;
     transform: none;
   }
@@ -488,7 +490,8 @@ div[class*="pure-u-"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: $modal-overlay-z-index;
 }
 
 .ReactModal__Body--open {

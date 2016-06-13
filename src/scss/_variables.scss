@@ -1,5 +1,10 @@
 $chalees-red: #ca000a;
 $chalees-purple: #5A508B;
 
+$modal-overlay-z-index: 10000;
+$modal-z-index: $modal-overlay-z-index + 1;
 
+//deprecated
 $max-width-sm: 47.95em;
+
+
