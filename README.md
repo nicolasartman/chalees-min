@@ -1,4 +1,4 @@
-# chalees-min
+# Chalees Min School
 
 Currently in private prototyping. More info coming in the future.
 
@@ -26,3 +26,9 @@ Currently in private prototyping. More info coming in the future.
   You can grab the value from the firebase console by clicking the giant "add to web app" buttons that generate a similar snippet to the above.
 
 1. `npm run dev` will upload the security rules to your dev instance and start a local development server
+
+## Technology and Thanks
+
+Chalees Min School is supported by the incredible work of many open source developers and a number of generous companies.
+
+<img src="browserstack-logo.svg" height="1em" />
