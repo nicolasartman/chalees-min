@@ -88,8 +88,8 @@ const ImageResponse = React.createClass({
       );
     } else {
       message = (
-        <div style={{position: 'absolute', top: '50%', textAlign: 'center', width: '80%', left: '50%', transform: 'translateY(-50%) translateX(-50%)'}}>
-          Drag and drop a picture here, or click/tap on this area to choose a picture 
+        <div className="image-upload-message">
+          Drag and drop a picture here or click/tap here to pick one
         </div>
       );
     }
