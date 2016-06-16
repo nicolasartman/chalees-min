@@ -1,8 +1,5 @@
 import React from 'react';
 import styleConstants from './style-constants.js';
-import selectedIcon from '../images/icons/multiple-choice-selected.svg';
-import notSelectedIcon from '../images/icons/multiple-choice-not-selected.svg';
-
 
 const unselectedChoiceStyle = {
   backgroundColor: 'transparent',
