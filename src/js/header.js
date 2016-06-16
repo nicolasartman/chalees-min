@@ -5,7 +5,7 @@ import * as auth from './auth.js';
 
 import logo from '../images/chalees-min-logo.png';
 import logoHighDpi from '../images/chalees-min-logo@2x.png';
-import mobileMenuIcon from '../images/menu-icon.svg';
+import mobileMenuIcon from '../images/icons/menu-icon.svg';
 
 const Header = React.createClass({
   showFacebookLoginPrompt: () => auth.showFacebookLoginPrompt(),

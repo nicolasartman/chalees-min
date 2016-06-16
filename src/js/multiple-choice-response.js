@@ -1,5 +1,8 @@
 import React from 'react';
 import styleConstants from './style-constants.js';
+import selectedIcon from '../images/icons/multiple-choice-selected.svg';
+import notSelectedIcon from '../images/icons/multiple-choice-not-selected.svg';
+
 
 const unselectedChoiceStyle = {
   backgroundColor: 'transparent',
@@ -13,63 +16,38 @@ const selectedChoiceStyle = {
   outline: 'none'
 }
 
-const Choice = React.createClass({
-  getInitialState: function() {
-    return {selected: false};
-  },
-  onSelect: function() {
-    // Toggle between "selected" and "unselected"
-    this.setState({selected: !this.state.selected})
-  },
-  render: function() {
-    return (
-      <li>
-      {/* TODO: change unicode checkmark character to a glyph? */}
-      <button style={this.state.selected ? selectedChoiceStyle : unselectedChoiceStyle} 
-              onClick={this.props.onSelect}>{this.props.choice + (this.state.selected ? ' \u2713' : '')}</button>
-      </li>
-    )
-  }
-})
-
 const MultipleChoiceResponse = React.createClass({
   getInitialState: function() {
     // Keep track of all currently selected child choices
-    return {selected: []};
+    return {selectedChoices: new Set()};
   },
-  onSelect: function(choice) {
-    let selected = this.state.selected;
-    const index = selected.indexOf(choice);
-    if (index > -1) {
-      // The chosen option is already selected, so remove it to de-select it
-      selected.splice(index, 1);
+  toggleChoice: function (choiceIndex) {
+    // Deselection
+    if (this.state.selectedChoices.has(choiceIndex)) {
+      // the set state below will pick up this mutative change and ensure it's recognized,
+      // since unfortunately the native api works overly mutatively.
+      this.state.selectedChoices.delete(choiceIndex);
     } else {
-      // The chosen option is not already selected, so add it as the most recently selected choice
-      selected.push(choice);
-      if (selected.length > this.props.maxSelected) {
-        // Remove the least-recently added choice if we've reached quota
-        const removedChoice = selected.splice(0, 1);
-        // De-select the just-removed choice on the client
-        this.refs['choice' + removedChoice[0]].onSelect();
-      }
+      if (this.props.maxSelected === 1) {this.state.selectedChoices.clear();}
+      this.setState({selectedChoices: this.state.selectedChoices.add(choiceIndex)});
     }
-    // Apply (de-)selection to the child choice on the client
-    this.refs['choice' + choice].onSelect();
-    this.setState({selected: selected});
+    this.setState({
+      maxMultiselectionReached: this.props.maxSelected > 1 &&
+        this.state.selectedChoices.size === this.props.maxSelected
+    });
   },
   render: function() {
     return (
-      <ol>
-        {this.props.choices.map(function(choice, index) {
-          const onSelectBound = this.onSelect.bind(this, index);
-          return (
-            <Choice key={'choice-' + index}
-                    ref={'choice' + index}
-                    choice={choice} 
-                    onSelect={onSelectBound} />
-          );
-        }.bind(this))}
-      </ol>
+      <div className="choices">
+        {this.props.choices.map((choice, index) => (
+          <button key={index}
+                  disabled={this.state.maxMultiselectionReached && !this.state.selectedChoices.has(index)}
+                  className={'choice' + (this.state.selectedChoices.has(index) ? ' selected' : '')}
+                  onClick={() => this.toggleChoice(index)}>
+            {choice}
+          </button>
+        ))}
+      </div>
     );
   }
 });

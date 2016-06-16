@@ -317,6 +317,13 @@ const data = [{
     instructions: 'Select only one',
     maxSelected: 1,
     choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] 
+  }, {
+    kind: 'multipleChoice',
+    time: 3,
+    title: 'Multiple Choice Example 3',
+    instructions: 'Select up to two',
+    maxSelected: 2,
+    choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] 
   }]
 }];
 

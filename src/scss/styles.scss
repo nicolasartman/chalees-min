@@ -291,7 +291,7 @@ div[class*="pure-u-"] {
   width: 100%;
 }
 .homepage-tile-chapter-number {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: darken(white, 10%);
   position: absolute;
   left: 0;
@@ -382,6 +382,51 @@ div[class*="pure-u-"] {
   transform: translateY(-50%) translateX(-50%);
 }
 
+// Multiple Choice Learning Items
+// ------------------------------
+
+.learning-item {
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 5em;
+    justify-content: space-between;
+  }
+
+  .choice {
+    width: 22.5%;
+    min-height: 8em;
+    outline: none;
+    background-color: white;
+    border: 2px solid hsl(0, 0, 70%);
+    padding: 1em 2em;
+    transition-property: background-color, border, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    margin: 0.5em 0;
+
+    @include media-tablet {
+      width: 48%;
+      min-height: 7em;
+    }
+
+    @include media-phone {
+      width: 100%;
+      min-height: 4em;
+    }
+
+    &.selected {
+      background-color: lighten($chalees-purple, 50%);
+      border: 2px solid $chalees-purple;
+    }
+    
+    &[disabled] {
+      color: #AAA;
+      border: 2px solid hsl(0, 0, 85%);
+    }
+  } 
+}
+
 
 // =========
 // = Forms =
@@ -390,6 +435,8 @@ div[class*="pure-u-"] {
 .pure-input {
   border: 1px solid hsl(0, 0, 75%);
 }
+
+
 
 
 // ===========
