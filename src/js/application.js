@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import * as auth from './auth.js';
 import * as data from './data.js';
 
@@ -36,7 +37,9 @@ const Application = React.createClass({
       <div>
         <LoadingOverlay shouldShow={!this.state.isReady} />
         <Header />
-        {React.cloneElement(this.props.children, { loggedIn: this.state.isLoggedIn, data: this.state.data })}
+        <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+          {React.cloneElement(this.props.children, { key: location.pathname, loggedIn: this.state.isLoggedIn, data: this.state.data })}
+        </ReactCSSTransitionGroup>
         { /* <Footer /> */ }
       </div>
     );

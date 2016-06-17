@@ -61,6 +61,35 @@ div[class*="pure-u-"] {
   padding-right: 1em;
 }
 
+// ===================
+// = Page Transition =
+// ===================
+
+$page-transition-easing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+$page-transition-slide-distance: 20px;
+$page-transition-duration: 1s;
+
+.page-enter {
+  opacity: 0.01;
+  transition: opacity $page-transition-duration/2 $page-transition-easing-function, transform $page-transition-duration/2 $page-transition-easing-function;
+  transform: translateY($page-transition-slide-distance);
+}
+
+.page-enter.page-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.page-leave {
+  opacity: 1;
+  transition: opacity $page-transition-duration/2 $page-transition-easing-function, transform $page-transition-duration/2 $page-transition-easing-function;
+  transform: translateY(0px);
+}
+
+.page-leave.page-leave-active {
+  opacity: 0;
+  transform: translateY(-1 * $page-transition-slide-distance);
+}
 
 // ====================================
 // = Loading Overlay and Intro Styles =

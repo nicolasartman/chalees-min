@@ -1,18 +1,6 @@
 import React from 'react';
 import styleConstants from './style-constants.js';
 
-const unselectedChoiceStyle = {
-  backgroundColor: 'transparent',
-  outline: 'none'
-};
-
-const selectedChoiceStyle = {
-  color: styleConstants.chaleesPurple,
-  fontWeight: 'bold',
-  backgroundColor: 'transparent',
-  outline: 'none'
-}
-
 const MultipleChoiceResponse = React.createClass({
   getInitialState: function() {
     // Keep track of all currently selected child choices

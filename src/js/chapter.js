@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import pify from 'pify';
 import ImageResponse from './image-response.js';
 import TextResponse from './text-response.js';
@@ -91,19 +92,19 @@ const Chapter = React.createClass({
     //   window.setTimeout(this.initializeVisualFocusEffect);
     // }
     
-    return currentChapter ? (
+    return (
       <div>
         <main id="main" className="container chapter">
           <div className="pure-g">
             <div className="pure-u-1">
-              {(currentChapter.items || []).map((item, index) => (
+              {((currentChapter && currentChapter.items) || []).map((item, index) => (
                 <LearningItem key={index} {...item} />
               ))}
             </div>
           </div>
         </main>
       </div>
-    ) : null;
+    )
   }
 });
 
