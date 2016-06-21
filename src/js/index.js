@@ -1,3 +1,7 @@
+// Polyfills for mobile safari and IE
+import 'core-js/fn/array/find';
+import 'core-js/fn/array/includes';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
