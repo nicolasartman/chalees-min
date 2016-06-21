@@ -11,15 +11,16 @@ const data = [{
   }, {
     kind: 'imageResponse',
     time: 10,
-    title: 'Share what you have learned',
+    title: 'Draw what you have learned',
     // @KUNAL: here's how to add an image
-    // presenterImagePath: '/test.jpg',
+    presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Use a pencil and paper to draw a picture that shows what you have learned from this video. Then take a picture of it and share it here.'
   }, {
     kind: 'textResponse',
     time: 6,
     short: true,
     title: 'Pick a question to investigate',
+    presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     At the end of the video, we present a few questions for you to think about. Here they are again:
     - Where does water come from?
@@ -33,8 +34,15 @@ const data = [{
   }, {
     kind: 'textResponse',
     time: 10,
-    title: 'Conduct your own research',
-    instructions: 'Spend a few minutes doing research on the question you selected above. Write down the summary of your research below.'
+    title: 'Plan your own research',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: 'Spend a few minutes creating a plan for the things you will do to answer the question above. Write down who you plan to talk to, what websites you plan to visit.'
+  }, {
+    kind: 'video',
+    time: 2,
+    title: 'Herbivore, Carnivore, Omnivore',
+    instructions: 'Really silly song that will get stuck in your head.',
+    videoId: 'wjkqIt_H-ko'
   }]
 }, {
   number: 2,
@@ -67,6 +75,34 @@ const data = [{
     title: 'Learning to knit',
     instructions: 'Watch this video to learn more about knitting and life.',
     videoId: '0EL7M44_Ey0',
+  }, {
+    kind: 'textResponse',
+    time: 5,
+    title: 'Select a video title',
+    instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Learning to knit with Peg” to something new, what would you call it.',
+    fakeResponseType: 'wordCloud'
+  }, {
+    kind: 'imageResponse',
+    time: 15,
+    title: 'Read and Draw',
+    instructions: 'From your textbook, read the section on “Some Plant Fibres”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+  }, {
+    kind: 'video',
+    time: 3,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: '1u2uRhDeQOI',
+  }]
+}, {
+  number: 4,
+  thumbnailImagePath: '/chapter-thumbnails/chapter-4.png',
+  title: 'Sorting Materials Into Groups',
+  items: [{
+    kind: 'video',
+    time: 2,
+    title: 'Sorting Materials Into Groups',
+    instructions: 'We found this chapter to be incredibly boring. Watch to see if you agree.',
+    videoId: 'irfJePkITGM',
   }, {
     kind: 'textResponse',
     time: 5,
@@ -184,6 +220,38 @@ const data = [{
     }
   ]
 }, {
+  number: 8,
+  thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
+  title: 'Body Movements',
+  items: [{
+    kind: 'video',
+    time: 7,
+    title: 'What keeps our bones together',
+    instructions: 'Watch to learn more about the hinge joint, the ball and socket joint, ligaments and humility.',
+    videoId: 'x4k1JP8LsNY',
+  }, {
+    kind: 'textResponse',
+    time: 5,
+    title: 'Let’s think about the video',
+    instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
+  }, {
+    kind: 'imageResponse',
+    time: 15,
+    title: 'Read and Draw',
+    instructions: 'From your textbook, read the section 6.2, “Could there be other ways to bring changes”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+  }, {
+    kind: 'video',
+    time: 3,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: 'rYiRcrny4vs',
+  }, {
+    kind: 'textResponse',
+    time: 10,
+    title: 'Let’s think about the video',
+    instructions: 'Summarize what you have learned in this video and write it below.',
+  }]
+}, {
   number: 11,
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
@@ -256,6 +324,32 @@ const data = [{
     title: 'How to convert seawater to drinking water?',
     instructions: 'Watch this video to learn how evaporation helps purify water.',
     videoId: 'yeoN0Pmg_tI',
+  }, {
+    kind: 'textResponse',
+    time: 5,
+    title: 'Let’s think about the video',
+    instructions: 'Summarize what you have learned in this video here.',
+  }, {
+    kind: 'imageResponse',
+    time: 15,
+    title: 'Read and Draw',
+    instructions: 'From your textbook, read the section 14.3, “Water Cycle”. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
+  }, {
+    kind: 'textResponse',
+    time: 5,
+    title: 'Making a test',
+    instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
+  }]
+}, {
+  number: 15,
+  thumbnailImagePath: '/chapter-thumbnails/chapter-15.png',
+  title: 'Air Around Us',
+  items: [{
+    kind: 'video',
+    time: 2,
+    title: 'Composition of air',
+    instructions: 'What do we breathe in? What do we breathe out? Watch to find out.',
+    videoId: 'TA2s6uo_vTQ',
   }, {
     kind: 'textResponse',
     time: 5,
