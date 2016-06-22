@@ -415,13 +415,10 @@ $page-transition-duration: 1s;
 // Image response learning items
 // -----------------------------
 
-.image-upload-message {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  width: 80%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+.image-upload-dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // Multiple Choice Learning Items
@@ -599,64 +596,6 @@ $page-transition-duration: 1s;
 
 .ReactModal__Body--open {
   overflow: hidden;
-}
-
-// ==================================================
-// = Experimental Homepage Transition Out Animation =
-// ==================================================
-
-$animation-experiment-duration: 750ms;
-
-.homepage-tile {
-  background-color: $body-background-color;
-  transition: transform $animation-experiment-duration linear;
-}
-.homepage-tile-content {
-  transition: opacity $animation-experiment-duration/2 linear;
-  opacity: 1;
-}
-.homepage-tile.animating-out {
-  z-index: 1000;
-  transform: scale(10);
-  
-  .homepage-tile-content{
-    opacity: 0;
-  }
-  
-  .homepage-tile-picture, .homepage-tile-picture:hover {
-    transform: none;
-  };
-}
-// stuck on the body to prevent scrollbars
-.homepage-transition-out-active {
-  overflow: hidden;
-}
-
-.chapter-fade-enter {
-  opacity: 0.01;
-}
-
-.chapter-fade-enter.chapter-fade-enter-active {
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.chapter-fade-leave {
-  opacity: 1;
-}
-
-.chapter-fade-leave.chapter-fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 1s ease-in;
-}
-
-.chapter-fade-appear {
-  opacity: 0.01;
-  transition: opacity 1s ease-in;
-}
-
-.chapter-fade-appear.chapter-fade-appear-active {
-  opacity: 1;
 }
 
 // ===============================

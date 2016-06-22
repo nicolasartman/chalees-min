@@ -11,8 +11,6 @@ const style = {
   borderColor: '#666',
   borderStyle: 'dashed',
   borderRadius: 5,
-  position: 'relative',
-  paddingTop: '4em',
 };
 const activeStyle = {
   borderStyle: 'solid',
@@ -22,15 +20,6 @@ const rejectStyle = {
   borderStyle: 'solid',
   backgroundColor: '#ffdddd'
 };
-
-const imagePreviewStyle = {
-  maxHeight: style.height - style.borderWidth * 2,
-  // maxWidth: style.width - style.borderWidth * 2,
-  width: 'auto',
-  position: 'absolute',
-  top: 0,
-  left: 0
-}
 
 const ImageResponse = React.createClass({
   getInitialState: function () {
@@ -75,11 +64,11 @@ const ImageResponse = React.createClass({
     if (this.state.currentFile && !this.state.isUploading) {
       // Dropped {this.state.currentFile.name}
       message = (
-        <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
+        <img className="pure-img" style={{maxHeight: '100%'}} src={this.state.currentFile.preview} />
       );
     } else if (this.state.isUploading) {
       message = (
-        <div>
+        <div style={{display: 'flex'}}>
           <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
           <div style={{position: 'absolute', top: '50%', width: '40%', right: 0, transform: 'translateY(-50%)'}}>
             Uploading (not fully ready, so this will likely not finish)
@@ -99,7 +88,7 @@ const ImageResponse = React.createClass({
 
     return (
       <div>
-        <Dropzone onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
+        <Dropzone className="image-upload-dropzone" onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
           {message}
         </Dropzone>
         <div>
