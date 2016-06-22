@@ -14,6 +14,7 @@ html {
   box-sizing: border-box;
   position: relative;
   min-height: 100%;
+  min-width: 320px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -208,8 +209,10 @@ $page-transition-duration: 1s;
       height: 1.18em;
       width: auto;
       margin-right: 5px;
-      vertical-align: middle;
+      vertical-align: middle;      
     }
+    
+    
   }
   
   & > .pure-menu-list > .pure-menu-item {
@@ -241,11 +244,10 @@ $page-transition-duration: 1s;
     // Right align dropdown menu children since the user menu is pulled right
     left: inherit;
     right: -1px; // the top menu has a border, so account for that
-
   }
 
   
-  // Use a larger header on desktop widths
+  // Use a larger header on desktop widths...
   @media (min-width: 48em) {
     height: 3.5em;
     .header-brand .header-brand-logo {
@@ -257,12 +259,23 @@ $page-transition-duration: 1s;
     }
   }
   
-  // And a smaller logo on small phones
-  @media (max-width: 35.45em) {
+  // ...And a smaller logo on small phones
+  @include media-phone {
     .header-brand .header-brand-logo {
       height: 1.1em;
     }
   }
+  
+  // Very small phone screen special accomodations. A bit too one-off.
+  @media (max-width: 25em) {
+    .header-brand .header-brand-logo {
+      height: 1em;
+      position: relative;
+      top: -1px;
+    }
+  }
+  
+  
 }
 
 .footer {

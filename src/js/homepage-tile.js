@@ -6,7 +6,7 @@ export default (props) => (
     <div className="homepage-tile-content">
       <Link to={"/chapter/" + props.chapterNumber}>
         <div className="homepage-tile-picture-container">
-          <img className="homepage-tile-picture pure-img" src={'https://chalees-min.imgix.net' + props.imagePath + '?w=500&h=281&fit=crop&auto=format,compress'} />
+          <img className="homepage-tile-picture pure-img" src={'https://chalees-min.imgix.net' + props.imagePath + '?w=550&h=309&fit=crop&auto=format,compress'} />
           <div className="homepage-tile-title">
             {props.title}
           </div>
