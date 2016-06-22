@@ -1,6 +1,7 @@
 import * as auth from './auth.js';
+// import rootRef from '../database.js';
 
-const rootRef = firebase.database().ref();
+// const rootRef = firebase.database().ref();
 
 export async function onUpdate(handler) {
   const {user} = await auth.authorize();

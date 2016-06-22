@@ -13,7 +13,6 @@ const Header = React.createClass({
   getInitialState: () => ({}),
   componentWillMount: async function () {
     const user = await auth.authorize();
-    console.log('header: user', user);
     this.setState({name: user.displayName});
   },
   logOut: async function () {

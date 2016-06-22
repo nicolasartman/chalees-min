@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 // Polyfills for mobile safari and IE
+=======
+// Polyfills for mobile safari and such
+>>>>>>> Stashed changes
 import 'core-js/fn/array/find';
 import 'core-js/fn/array/includes';
 

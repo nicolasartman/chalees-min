@@ -1,14 +1,14 @@
 functions:
-  - isAdmin: root.admins[auth.fb_id] == true
+  - isAdmin: root.admins[auth.uid] == true
 
 root:
   .read: auth.uid == 'upkeeper' || isAdmin()
   .write: auth.uid == 'upkeeper'
   responses:
     $responseKey:
-      .read: data.userKey == auth.fb_id
-      .write: next.userKey == auth.fb_id
-      .value: $responseKey == data.userKey + '|' + data.itemKey
+      .read: data.userKey == auth.uid
+      .write: next.userKey == auth.uid
+      .value: $responseKey == next.userKey + '|' + next.itemKey
       userKey: required indexed string
       setKey: required indexed string
       itemKey: required indexed string
@@ -16,7 +16,7 @@ root:
       content: required string
   items:
     .write: isAdmin()
-    .read: auth.fb_id != null
+    .read: auth.uid != null
     $itemKey:
       setKey: required indexed string
       highlightedResponses:

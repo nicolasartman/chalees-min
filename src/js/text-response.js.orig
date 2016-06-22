@@ -1,13 +1,16 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import * as data from './data.js';
 import styles from './style-constants.js';
-import * as actions from './actions/actions.js';
+<<<<<<< Updated upstream
 import LoginGate from './login-gate.js';
+=======
+import * as actions from './actions/actions.js';
 import {connect} from 'react-redux';
 import {createSelector} from 'reselect';
 import identity from 'lodash/identity';
 
 import logo from '../images/chalees-min-logo-icon.svg';
+>>>>>>> Stashed changes
 
 // temporary: fake responses
 // fake peer responses
@@ -126,6 +129,21 @@ const TextResponse = React.createClass({
           <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn} onClick={this.onSave}>Save</button>
         </div>
         {this.state.displayResponses ? this.constructor.fakeResponses[this.props.fakeResponseType] : null}
+<<<<<<< Updated upstream
+=======
+        
+        <Modal isOpen={this.state.isModalOpen} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay">
+          <div style={{textAlign: 'center'}}>
+            <h1><img src={logo}/> Please Sign In</h1>
+            <p>This lets us save your thoughts so you can come back to them.</p>
+            <p style={{marginTop: '2em'}}><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showGoogleLoginPrompt}>Sign in with Google</button></p>
+            <p><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showFacebookLoginPrompt}>Sign in with Facebook</button></p>
+            <p>
+              <button onClick={this.closeModal} style={{width: '100%', maxWidth: '15em'}} className="pure-button button-secondary">Not Yet</button>
+            </p>
+          </div>
+        </Modal>
+>>>>>>> Stashed changes
       </div>
     )
   }
