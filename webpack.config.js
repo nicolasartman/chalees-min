@@ -43,9 +43,9 @@ module.exports = {
       include: jsSourcePath
     }, {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract(
-        'style',
-        (isProduction ? 'css?minimize' : 'css?sourceMap') + '!postcss!sass?sourceMap'),
+      loader: isProduction ?
+        ExtractTextPlugin.extract('style', 'css?minimize!postcss!sass?sourceMap') :
+        'style!css?sourceMap!postcss!sass?sourceMap',
       include: scssSourcePath
     }, {
       test: /\.(png|jpg|gif|svg)$/,
@@ -96,9 +96,6 @@ module.exports = {
         }
       }
     ),
-    new ExtractTextPlugin(isProduction ? 'site.min.hash-[contenthash:12].css' : 'site.min.css', {
-      allChunks: true
-    }),
     new webpack.ProvidePlugin({
       React: 'react',
       'window.firebase': 'firebase'
@@ -127,7 +124,10 @@ module.exports = {
         // No idea if this works or silently fails. it's a valid uglifyjs option, but
         // this is webpack, so misconfigurations => silent failure.
         screwIe8: true
-    })
+    }),
+    new ExtractTextPlugin(isProduction ? 'site.min.hash-[contenthash:12].css' : 'site.min.css', {
+      allChunks: true
+    }),
   ] : [])
   .concat(new HtmlWebpackPlugin({
     template: './src/html/index.template.html',
