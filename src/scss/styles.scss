@@ -406,9 +406,11 @@ $page-transition-duration: 1s;
   
   &:hover {
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
   };
+  
+  z-index: $login-gate-overlay-z-index;
 }
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styleConstants from './style-constants.js';
+import LoginGate from './login-gate.js';
 
 const MultipleChoiceResponse = React.createClass({
   getInitialState: function() {
@@ -23,15 +24,19 @@ const MultipleChoiceResponse = React.createClass({
   },
   render: function() {
     return (
-      <div className="choices">
-        {this.props.choices.map((choice, index) => (
-          <button key={index}
-                  disabled={this.state.maxMultiselectionReached && !this.state.selectedChoices.has(index)}
-                  className={'choice' + (this.state.selectedChoices.has(index) ? ' selected' : '')}
-                  onClick={() => this.toggleChoice(index)}>
-            {choice}
-          </button>
-        ))}
+      <div>
+        <LoginGate>
+          <div className="choices">
+            {this.props.choices.map((choice, index) => (
+              <button key={index}
+                      disabled={this.state.maxMultiselectionReached && !this.state.selectedChoices.has(index)}
+                      className={'choice' + (this.state.selectedChoices.has(index) ? ' selected' : '')}
+                      onClick={() => this.toggleChoice(index)}>
+                {choice}
+              </button>
+            ))}
+          </div>
+        </LoginGate>
       </div>
     );
   }

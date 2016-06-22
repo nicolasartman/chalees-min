@@ -3,6 +3,7 @@ import Dropzone from 'react-dropzone';
 import * as uploader from './uploader.js';
 import * as auth from './auth.js';
 import * as data from './data';
+import LoginGate from './login-gate.js';
 
 const style = {
   width: '100%',
@@ -87,9 +88,11 @@ const ImageResponse = React.createClass({
 
     return (
       <div>
-        <Dropzone className="image-upload-dropzone" onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
-          {message}
-        </Dropzone>
+        <LoginGate>
+          <Dropzone className="image-upload-dropzone" onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
+            {message}
+          </Dropzone>
+        </LoginGate>
         <div>
           <button style={{marginTop: '1em'}} className="pure-button" onClick={this.onSave} disabled={this.state.isUploading}>{this.state.isUploading ? 'Uploading' : 'Save'}</button>
         </div>
