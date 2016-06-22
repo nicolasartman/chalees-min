@@ -38,46 +38,45 @@ const ImageResponse = React.createClass({
     }
   },
   onDrop: async function ([file]) {
+    if (this.state.isUploading) {return;}
     console.log('dropped', file);
     if (file && file.name) {
       this.setState({currentFile: file});
     }
   },
   onSave: async function () {
-    this.setState({isUploading: true})
-    const uploadedImageUrl = await uploader.uploadFile(this.state.currentFile);
-    console.log('image upload url', uploadedImageUrl);
-
-    // TODO: save to firebase
-    this.setState({
-      uploadedImageUrl: uploadedImageUrl,
-      isUploading: false,
-      currentFile: null
-    });
+    if (this.state.currentFile) {
+      this.setState({isUploading: true})
+      // const uploadedImageUrl = await uploader.uploadFile(this.state.currentFile);
+      // console.log('image upload url', uploadedImageUrl);
+      
+      // TEMP
+      
+      return;
+      // TODO: save to firebase
+      this.setState({
+        uploadedImageUrl: uploadedImageUrl,
+        isUploading: false,
+        currentFile: null
+      });
     
-    data.set({
-      [this.props.itemId]: uploadedImageUrl
-    });
+      // data.set({
+      //   [this.props.itemId]: uploadedImageUrl
+      // });
+    } else {
+      window.alert('Please choose your image first');
+      // TODO: turn this into a modal or something?
+    }
   },
   render: function () {
     let message;
-    if (this.state.currentFile && !this.state.isUploading) {
-      // Dropped {this.state.currentFile.name}
+    if (this.state.currentFile) {
       message = (
         <img className="pure-img" style={{maxHeight: '100%'}} src={this.state.currentFile.preview} />
       );
-    } else if (this.state.isUploading) {
-      message = (
-        <div style={{display: 'flex'}}>
-          <img style={imagePreviewStyle} src={this.state.currentFile.preview} />
-          <div style={{position: 'absolute', top: '50%', width: '40%', right: 0, transform: 'translateY(-50%)'}}>
-            Uploading (not fully ready, so this will likely not finish)
-          </div>
-        </div>
-      );
     } else {
       message = (
-        <div className="image-upload-message">
+        <div className="image-upload-message" style={{padding: '0 1.5em', textAlign: 'center'}}>
           Drag and drop a picture here or click/tap here to pick one
         </div>
       );
@@ -92,7 +91,7 @@ const ImageResponse = React.createClass({
           {message}
         </Dropzone>
         <div>
-          <button className="pure-button" onClick={this.onSave} disabled={!this.state.isSignedIn || !this.state.currentFile || this.state.isUploading}>Save</button>
+          <button style={{marginTop: '1em'}} className="pure-button" onClick={this.onSave} disabled={this.state.isUploading}>{this.state.isUploading ? 'Uploading' : 'Save'}</button>
         </div>
         {uploadedImage}
       </div>
