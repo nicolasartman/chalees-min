@@ -57,13 +57,31 @@ const data = [{
   }, {
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    short: true,
+    title: 'Tweet what you\'ve learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter2',
   }, {
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
-    instructions: 'From your textbook, read the section on either Proteins or Fats. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    From your textbook, read the section 2.2, What Do Various Nutrients Do For Our Body? 
+
+    Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
+  },{
+    kind: 'video',
+    time: 10,
+    title: 'Balanced Diet',
+    instructions: 'Which foods should we eat more of, and which should we eat less?',
+    videoId: 'n-q8-f2unHY'
+  },,{
+    kind: 'video',
+    time: 1,
+    title: 'And finally ...',
+    instructions: 'Here is a song about Chapter 2, that you can sing on your way to school',
+    videoId: '4hHYX2qUJ9U'
   }]
 }, {
   number: 3,
