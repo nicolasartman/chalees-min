@@ -16,6 +16,7 @@ export function handleTestIncrement() {
 export async function initialize() {
   console.log('initialized reactions');
   const user = await authorize();
+  return; // TEMP: TODO: Delete
   const ref = rootRef.child('responses').orderByChild('userKey').equalTo(user.id)
   
   const handleResponseUpdate = snapshot => console.log(snapshot.val());

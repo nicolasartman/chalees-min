@@ -1,4 +1,3 @@
-import React from 'react';
 import styleConstants from './style-constants.js';
 import LoginGate from './login-gate.js';
 

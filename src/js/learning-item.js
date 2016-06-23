@@ -1,4 +1,3 @@
-import React from 'react';
 import Markdown from 'react-markdown';
 
 // The different types of learning item widgets

@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {Provider} from 'react-redux';
 import * as auth from './auth.js';

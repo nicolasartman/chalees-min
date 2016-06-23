@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default () => (
   <div className="loading-spinner">
     <div className="bounce1"></div>

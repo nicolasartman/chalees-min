@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router';
 import HomepageTile from './homepage-tile.js';
 import chaptersData from './chapter-data.js';

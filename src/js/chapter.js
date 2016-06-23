@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDom from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import pify from 'pify';
