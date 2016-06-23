@@ -45,3 +45,6 @@ security-rules.json
 
 # local development configuration file
 dev.config.js
+
+# Gif diff leftovers
+*.orig

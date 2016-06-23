@@ -26,7 +26,7 @@ const LoginGate = React.createClass({
       <div>
         <div style={{position: 'relative'}}>
           {!this.state.isSignedIn ? <div className="login-gate-overlay" onClick={this.onLoginGateClick}>
-                                      <div style={{position: 'absolute', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)'}}>Click Here to Sign In and Save Your Thoughts</div>
+                                      <div style={{position: 'absolute', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)'}}>Please Sign In</div>
                                     </div> : null}
           {this.props.children}
         </div>
