@@ -5,7 +5,8 @@ import * as actions from './actions/actions.js';
 import LoginGate from './login-gate.js';
 import {connect} from 'react-redux';
 import {createSelector} from 'reselect';
-import identity from 'lodash/identity';
+import * as auth from './auth.js';
+import cond from 'lodash/fp/cond';
 
 import logo from '../images/chalees-min-logo-icon.svg';
 
@@ -14,8 +15,6 @@ import logo from '../images/chalees-min-logo-icon.svg';
 import sidPhoto from '../images/fake-responses/sid.png';
 import prabsimarPhoto from '../images/fake-responses/prabsimar.png';
 import koushikiPhoto from '../images/fake-responses/koushiki.png';
-// fake word cloud response
-import wordCloudPhoto from '../images/fake-responses/word-cloud.png';
 
 // const peerResponseContainerStyle = {
 //   width: '100%',
@@ -32,63 +31,18 @@ const TextResponse = React.createClass({
   getInitialState: function () {
     return {
       response: this.props.response,
-      displayResponses: false
-    }
-  },
-  statics: {
-    // TODO: this should move to learning-item.js as constants for all response types
-    fakeResponses: {
-      'peer': (
-        <div style={{marginTop: '1.5em'}}>
-          <h4 style={{margin: 0}}>Here are some thoughts your fellow learners shared:</h4>
-          <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
-            <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-              <div style={{width: '3em', marginRight: '0.75em'}}>
-                <img src={koushikiPhoto} className="pure-img"/>
-              </div>
-              <div>
-                <span style={{fontStyle: 'italic'}}>Where does the silverware that I eat with come from?</span>
-                <br />
-                &mdash;Koushiki
-              </div>
-            </li>
-  
-            <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-              <div style={{width: '3em', marginRight: '0.75em'}}>
-                <img src={sidPhoto} className="pure-img"/>
-              </div>
-              <div>
-                <span style={{fontStyle: 'italic'}}>Where does cheese come from?</span>
-                <br />
-                &mdash;Sid
-              </div>
-            </li>
-  
-            <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-              <div style={{width: '3em', marginRight: '0.75em'}}>
-                <img src={prabsimarPhoto} className="pure-img"/>
-              </div>
-              <div>
-                <span style={{fontStyle: 'italic'}}>Where does concrete come from?</span>
-                <br />
-                &mdash;Parbsimar
-              </div>
-            </li>
-          </ul>
-        </div>
-      ),
-      'wordCloud': (
-        <div style={{marginTop: '1.5em'}}>
-          <h4 style={{margin: 0}}>Here are some thoughts your fellow learners shared:</h4>
-          <img src={wordCloudPhoto} className='pure-img' />
-        </div>
-      )
+      responseSubmitted: false
     }
   },
   onChange: function (event) {
     this.setState({
       response: event.target.value
     });
+  },
+  componentDidMount: async function () {
+    // Only enable the buttons if the user is logged in
+    const user = await auth.authorize();
+    this.setState({isSignedIn: !!user});
   },
   onSave: function () {
     // data.set({
@@ -99,7 +53,8 @@ const TextResponse = React.createClass({
     
     // Use fake data
     this.setState({
-      displayResponses: true
+      saving: true,
+      responseSubmitted: true
     });
   },
   componentWillReceiveProps: function (newProps) {
@@ -112,42 +67,79 @@ const TextResponse = React.createClass({
   },
   sendTestAction: actions.incrementTest,
   render: function () {
+    // TODO: refactor and make more generic
+    const createFakePeerResponses = () => {console.log('called!'); return (
+      <div style={{marginTop: '1.5em'}}>
+        <h4 style={{margin: 0}}>Here are some thoughts your fellow learners shared:</h4>
+        <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '3em', marginRight: '0.75em'}}>
+              <img src={koushikiPhoto} className="pure-img"/>
+            </div>
+            <div>
+              <span style={{fontStyle: 'italic'}}>Where does the silverware that I eat with come from?</span>
+              <br />
+              &mdash;Koushiki
+            </div>
+          </li>
+
+          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '3em', marginRight: '0.75em'}}>
+              <img src={sidPhoto} className="pure-img"/>
+            </div>
+            <div>
+              <span style={{fontStyle: 'italic'}}>Where does cheese come from?</span>
+              <br />
+              &mdash;Sid
+            </div>
+          </li>
+
+          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+            <div style={{width: '3em', marginRight: '0.75em'}}>
+              <img src={prabsimarPhoto} className="pure-img"/>
+            </div>
+            <div>
+              <span style={{fontStyle: 'italic'}}>Where does concrete come from?</span>
+              <br />
+              &mdash;Parbsimar
+            </div>
+          </li>
+        </ul>
+      </div>
+    )};
+
+    const createFakeWordCloudResponse = (wordCloudImagePath) => (
+      <div style={{marginTop: '1.5em'}}>
+        <h4 style={{margin: 0}}>Here&apos;s a cloud of words your fellow learners used in their answer:</h4>
+        <img src={'https://chalees-min.imgix.net' + wordCloudImagePath + '?w=726&h=408&fit=clamp&auto=format,compress'} className='pure-img' />
+      </div>
+    );
+    
+    
     return (
       <div>
         <LoginGate>
           <div style={{position: 'relative'}}>
             {this.props.short ? 
-              (<input type="text" className="pure-input" value={this.state.response} onChange={this.onChange} style={{width: '100%'}} />) :
-              (<textarea className="pure-input" value={this.state.response} onChange={this.onChange} style={{width: '100%',minHeight: '200px'}}></textarea>)
+              (<input type="text" className="pure-input" onChange={this.onChange} style={{width: '100%'}} />) :
+              (<textarea className="pure-input" onChange={this.onChange} style={{width: '100%',minHeight: '200px'}}></textarea>)
             }
           </div>
         </LoginGate>
         <div>
-          <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn} onClick={this.onSave}>Save</button>
+            <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn || this.state.saving} onClick={this.onSave}>{this.state.saving ? 'Saving...' : 'Save'}</button>
         </div>
-        {this.state.displayResponses ? this.constructor.fakeResponses[this.props.fakeResponseType] : null}
+        {cond([
+          [() => !this.props.hacks || !this.state.responseSubmitted, () => null],
+          [() => this.props.hacks.wordCloudImagePath,
+            () => createFakeWordCloudResponse(this.props.hacks.wordCloudImagePath)],
+          [() => this.props.hacks.showFakePeerResponses, createFakePeerResponses],
+        ])()}
       </div>
     )
   }
 });
 
-// {this.state.peerResponses.length ? (
-//   <div style={{position: 'relative', height: '20em'}}>
-//     <ReactCSSTransitionGroup transitionName="fade-switch" transitionEnterTimeout={700} transitionLeaveTimeout={700}>
-//       {this.state.peerResponses.map((response, responseNumber) => (
-//         this.state.currentPeerResponse === responseNumber ?
-//           <PeerResponse key={responseNumber} text={'test' + responseNumber} /> : null
-//       ))}
-//     </ReactCSSTransitionGroup>
-//     <div style={{position: absolute}}></div>
-//   </div>
-// ) : null}
-
-
-const testSelector = createSelector(state => state.identityReducer.get('test'), identity);
-
-const TextResponseContainer = connect((state) => ({
-  test: testSelector(state)
-}))(TextResponse);
+const TextResponseContainer = connect((state) => ({}))(TextResponse);
 
 export default TextResponseContainer;
