@@ -130,7 +130,9 @@ const data = [{
     time: 5,
     title: 'Select a video title',
     instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Learning to knit with Peg” to something new, what would you call it.',
-    fakeResponseType: 'wordCloud'
+    hacks: {
+      wordCloudImagePath: '/prefab-word-clouds/test-cloud.png'
+    }
   }, {
     kind: 'imageResponse',
     time: 15,
