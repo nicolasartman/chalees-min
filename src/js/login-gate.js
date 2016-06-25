@@ -22,6 +22,7 @@ const LoginGate = React.createClass({
     this.setState({isSignedIn: true});
   },
   render: function() {
+    // TODO: change close modal X button to glyph
     return (
       <div>
         <div style={{position: 'relative'}}>
@@ -32,7 +33,10 @@ const LoginGate = React.createClass({
         </div>
         <Modal isOpen={this.state.isModalOpen} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay">
           <div style={{textAlign: 'center'}}>
-            <h1><img src={logo}/> Please Sign In</h1>
+            <div className='modal-header'>
+              <button className='close-button' aria-hidden='true' onClick={this.closeModal}>X</button>
+              <h1><img src={logo}/> Please Sign In</h1>
+            </div>
             <p>This lets us save your thoughts so you can come back to them.</p>
             <p style={{marginTop: '2em'}}><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showGoogleLoginPrompt}>Sign in with Google</button></p>
             <p><button style={{width: '100%', maxWidth: '15em'}}className="pure-button" onClick={auth.showFacebookLoginPrompt}>Sign in with Facebook</button></p>
