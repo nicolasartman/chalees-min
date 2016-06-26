@@ -141,5 +141,5 @@ module.exports = {
   // and source-map in any order. they're basically all just flags that it magically
   // checks for and does stuff based on. I chose to space separate them to make it clearer
   // where the keyword boundaries are.
-  devtool: isProduction ? 'source-map' : 'cheap module source-map'
+  devtool: isProduction ? false : 'cheap module source-map'
 }
