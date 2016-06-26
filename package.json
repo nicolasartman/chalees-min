@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "_prepare-deploy": "npm run build && fireplan security-rules.yaml",
-    "dev": "fireplan security-rules.yaml && firebase deploy --only=\"database,storage\" && webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress",
+    "dev": "fireplan security-rules.yaml && firebase deploy --only=\"database,storage\" && webpack-dev-server --hot --inline --history-api-fallback --content-base dist/ --progress --host 0.0.0.0",
     "optim-dev": "PRODUCTION=true webpack-dev-server --history-api-fallback --content-base dist/ --progress --compress",
     "build": "PRODUCTION=true webpack --progress",
     "build-size": "npm run build -s -- --json | webpack-bundle-size-analyzer",

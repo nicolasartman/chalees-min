@@ -28,12 +28,15 @@ const LearningItem = (props) => {
   // due to jsx syntax particularities, the name has to be accessed as a property
   const Child = kinds[props.kind];
   const content = Child ? <Child {...props} /> : props.children;
+  const presenterImageUrl = 'https://chalees-min.imgix.net' +
+    props.presenterImagePath + '?w=34&h=34&auto=format&mask=ellipse';
+  
   return (
     <div className="learning-item">
       <div style={{width: '100%'}}>
         <div className="learning-item-header">
           {props.presenterImagePath ? (
-            <img style={{marginRight: 15}} src={"https://chalees-min.imgix.net" + props.presenterImagePath + "?w=34&h=34&auto=format&mask=ellipse"} />
+            <img style={{marginRight: 15, width: 'auto', height: '100%', minWidth: 34}} src={presenterImageUrl} srcSet={presenterImageUrl + '&dpr=2 2x'} />
           ) : null}
           <div style={{width: '100%'}}>
             <h3 style={{margin: 0}}>{props.title}</h3>
