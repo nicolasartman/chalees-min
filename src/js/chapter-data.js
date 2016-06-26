@@ -92,22 +92,42 @@ const data = [{
   items: [{
     kind: 'video',
     time: 4,
-    title: 'Learning to knit',
-    instructions: 'Watch this video to learn more about knitting and life.',
+    title: 'How I learned to knit',
+    instructions: 'Here is a story of how I learned to knit and then learned something interesting about life.',
     videoId: '0EL7M44_Ey0',
   }, {
     kind: 'textResponse',
-    time: 5,
-    title: 'Select a video title',
-    instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Learning to knit with Peg” to something new, what would you call it.',
+    time: 10,
+    title: 'Tell us your learning story',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Have you ever gone from knowing nothing about a subject to knowing a lot. 
+
+      Tell us about that time. What were you learning? What was difficult about that time? Who helped you?`,
     hacks: {
       wordCloudImagePath: '/prefab-word-clouds/test-cloud.png'
     },
   }, {
+    time: 5,
+    kind: 'image',
+    title: 'Cotton\'s Journey',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: 'Cotton goes from the field, to fibre, to yarn to fabric. Study the image below to see how cotton shirts are made.',
+    //@Nick - Request to get source images for this learning item in S3 
+    //src: '/learning-item-image/cotton-journey.png'
+    src: 'http://i.imgur.com/Tnterwe.png'
+    }, {
+    kind: 'video',
+    time: 5,
+    title: 'How cotton is made',
+    instructions: 'This video gives a very thorough overview of how cotton is made from farm to fabric.',
+    videoId: 'kH_b3Heo48I',
+  }, {
     kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: 'From your textbook, read the section on “Some Plant Fibres”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+    time: 10,
+    title: 'Draw what you have learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.'
   }, {
     kind: 'video',
     time: 3,
