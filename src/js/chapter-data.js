@@ -7,7 +7,9 @@ const data = [{
     time: 4,
     title: 'Where does food come from?',
     instructions: 'Watch this short video to take a journey from your dinner plate all the way to the farm.',
-    videoId: 'zHeWx_AifLs'
+    videoId: 'zHeWx_AifLs',
+    // @kunal: here's how to add a different start time
+    // startTime: 10,
   }, {
     kind: 'imageResponse',
     time: 10,
