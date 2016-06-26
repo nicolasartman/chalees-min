@@ -113,10 +113,8 @@ const data = [{
     title: 'Cotton\'s Journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Cotton goes from the field, to fibre, to yarn to fabric. Study the image below to see how cotton shirts are made.',
-    //@Nick - Request to get source images for this learning item in S3 
-    //src: '/learning-item-image/cotton-journey.png'
-    src: 'http://i.imgur.com/Tnterwe.png'
-    }, {
+    imagePath: '/learning-items/cotton-journey.png'
+  }, {
     kind: 'video',
     time: 5,
     title: 'How cotton is made',
@@ -260,9 +258,8 @@ const data = [{
     kind: 'image',
     title: 'Conduct your own experiment',
     instructions: 'Follow the instructions in the link on how to conduct your own experiment on flowers. [Click here for the instructions](https://goo.gl/cuf63n)',
-      src: 'http://cdn.instructables.com/FA6/OOPP/I916FK0J/FA6OOPPI916FK0J.MEDIUM.jpg'
-    }
-  ]
+    imagePath: '/learning-items/flowers-experiment.jpg'
+  }]
 }, {
   number: 8,
   thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
@@ -356,7 +353,7 @@ const data = [{
     kind: 'image',
     title: 'Conduct your own experiment',
     instructions: 'Follow the instructions in the link on how to conduct your own curie point experiment. [Click here for the instructions](http://goo.gl/LWKF9o).',
-    src: 'https://d30su0b7sry5gh.cloudfront.net/repo/dyOJMXVz/images/S1gqnvfC.jpg'
+    imagePath: '/learning-items/13-magnets-experiment.jpg'
   }]
 }, {
   number: 14,

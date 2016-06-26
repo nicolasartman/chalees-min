@@ -1,3 +1,3 @@
 export default (props) => (
-  <img src={props.src} />
+  <img src={`https://chalees-min.imgix.net${props.imagePath}?w=726&fit=clip&auto=format,compress`} />
 )
