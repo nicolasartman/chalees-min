@@ -11,12 +11,25 @@ const data = [{
     // @kunal: here's how to add a different start time
     // startTime: 10,
   }, {
+    kind: 'multipleChoice',
+    time: 3,
+    title: 'Our food\'s journey',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The food that we eat in our homes goes through which of the following places. 
+
+    Select all that apply`,
+    choices: ['Farm', 'Bank', 'Subzi Mandi', 'Market']
+  }, {
     kind: 'imageResponse',
     time: 10,
     title: 'Draw what you have learned',
     // @KUNAL: here's how to add an image
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned from this video. Then take a picture of it and share it here.'
+    instructions: dedent`
+    Use a pencil and paper to draw a picture that shows what you have learned from this video. 
+
+    Then take a picture of it and share it here.`
   }, {
     kind: 'textResponse',
     time: 6,
@@ -40,7 +53,10 @@ const data = [{
     time: 10,
     title: 'Plan your own research',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Spend a few minutes creating a plan for the things you will do to answer the question above. Write down who you plan to talk to, what websites you plan to visit.'
+    instructions: dedent`
+    Spend a few minutes creating a plan for the things you will do to answer the question above. 
+
+    Write down who you plan to talk to, what websites you plan to visit.`
   }, {
     kind: 'video',
     time: 2,
