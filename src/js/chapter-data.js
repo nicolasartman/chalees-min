@@ -46,7 +46,23 @@ const data = [{
         
     Then write it in the box below.`,
     hacks: {
-      showFakePeerResponses: true
+      fakePeerResponses: [
+        {
+          studentName: 'Sid',
+          imagePath: '/fake-responses/sid.png',
+          response: 'Where does the silverware that I eat with come from?'
+        },
+        {
+          studentName: 'Prabsimar',
+          imagePath: '/fake-responses/prabsimar.png',
+          response: 'Where does cheese come from?'
+        },
+        {
+          studentName: 'Koushiki',
+          imagePath: '/fake-responses/koushiki.png',
+          response: 'Where does concrete come from?'
+        }
+      ]
     }
   }, {
     kind: 'textResponse',

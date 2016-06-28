@@ -67,46 +67,25 @@ const TextResponse = React.createClass({
   },
   sendTestAction: actions.incrementTest,
   render: function () {
-    // TODO: refactor and make more generic
-    const createFakePeerResponses = () => {console.log('called!'); return (
+    const createFakePeerResponses = (fakePeerResponses) => (
       <div style={{marginTop: '1.5em'}}>
         <h4 style={{margin: 0}}>Here are some thoughts your fellow learners shared:</h4>
         <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
-          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-            <div style={{width: '3em', marginRight: '0.75em'}}>
-              <img src={koushikiPhoto} className="pure-img"/>
-            </div>
-            <div>
-              <span style={{fontStyle: 'italic'}}>Where does the silverware that I eat with come from?</span>
-              <br />
-              &mdash;Koushiki
-            </div>
-          </li>
-
-          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-            <div style={{width: '3em', marginRight: '0.75em'}}>
-              <img src={sidPhoto} className="pure-img"/>
-            </div>
-            <div>
-              <span style={{fontStyle: 'italic'}}>Where does cheese come from?</span>
-              <br />
-              &mdash;Sid
-            </div>
-          </li>
-
-          <li style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
-            <div style={{width: '3em', marginRight: '0.75em'}}>
-              <img src={prabsimarPhoto} className="pure-img"/>
-            </div>
-            <div>
-              <span style={{fontStyle: 'italic'}}>Where does concrete come from?</span>
-              <br />
-              &mdash;Parbsimar
-            </div>
-          </li>
+          {fakePeerResponses.map((fakeResponse, index) => (
+            <li key={index} style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+              <div style={{width: '3em', marginRight: '0.75em'}}>
+                <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34'} className="pure-img"/>
+              </div>
+              <div>
+                <span style={{fontStyle: 'italic'}}>{fakeResponse.response}</span>
+                <br />
+                &mdash;{fakeResponse.studentName}
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
-    )};
+    );
 
     const createFakeWordCloudResponse = (wordCloudImagePath) => (
       <div style={{marginTop: '1.5em'}}>
@@ -133,7 +112,8 @@ const TextResponse = React.createClass({
           [() => !this.props.hacks || !this.state.responseSubmitted, () => null],
           [() => this.props.hacks.wordCloudImagePath,
             () => createFakeWordCloudResponse(this.props.hacks.wordCloudImagePath)],
-          [() => this.props.hacks.showFakePeerResponses, createFakePeerResponses],
+          [() => this.props.hacks.fakePeerResponses, 
+            () => createFakePeerResponses(this.props.hacks.fakePeerResponses)],
         ])()}
       </div>
     )
