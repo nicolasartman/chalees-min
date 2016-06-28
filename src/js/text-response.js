@@ -74,7 +74,7 @@ const TextResponse = React.createClass({
           {fakePeerResponses.map((fakeResponse, index) => (
             <li key={index} style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
               <div style={{width: '3em', marginRight: '0.75em'}}>
-                <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34'} className="pure-img"/>
+                <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34&auto=format&mask=ellipse'} className="pure-img"/>
               </div>
               <div>
                 <span style={{fontStyle: 'italic'}}>{fakeResponse.response}</span>
