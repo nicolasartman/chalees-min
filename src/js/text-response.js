@@ -89,7 +89,7 @@ const TextResponse = React.createClass({
 
     const createFakeWordCloudResponse = (wordCloudImagePath) => (
       <div style={{marginTop: '1.5em'}}>
-        <h4 style={{margin: 0}}>Here&apos;s a cloud of words your fellow learners used in their answer:</h4>
+        <div style={{margin: 0, fontSize: '1em'}}>Here are some of the most common words other students used while answering this quiz.</div>
         <img src={'https://chalees-min.imgix.net' + wordCloudImagePath + '?w=726&h=408&fit=clamp&auto=format,compress'} className='pure-img' />
       </div>
     );
