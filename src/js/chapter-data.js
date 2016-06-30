@@ -18,7 +18,7 @@ const data = [{
     instructions: dedent`
     The food that we eat in our homes goes through which of the following places. 
 
-    Select all that apply`,
+    Select all that apply.`,
     choices: ['Farm', 'Bank', 'Subzi Mandi', 'Market']
   }, {
     kind: 'imageResponse',
@@ -27,9 +27,9 @@ const data = [{
     // @KUNAL: here's how to add an image
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a pencil and paper to draw a picture that shows what you have learned from this video. 
+    Use a pencil and paper to draw a picture that shows what you have learned from the video above. 
 
-    Then take a picture of it and share it here.`
+    Then take a picture of the drawing from your phone and share it here.`
   }, {
     kind: 'textResponse',
     time: 6,
@@ -50,7 +50,7 @@ const data = [{
         {
           studentName: 'Sid',
           imagePath: '/fake-responses/sid.png',
-          response: 'Where does the silverware that I eat with come from?'
+          response: 'Where does TV come from?'
         },
         {
           studentName: 'Prabsimar',
@@ -60,7 +60,7 @@ const data = [{
         {
           studentName: 'Koushiki',
           imagePath: '/fake-responses/koushiki.png',
-          response: 'Where does concrete come from?'
+          response: 'Where do books come from?'
         }
       ]
     }
@@ -72,7 +72,10 @@ const data = [{
     instructions: dedent`
     Spend a few minutes creating a plan for the things you will do to answer the question above. 
 
-    Write down who you plan to talk to, what websites you plan to visit.`
+    Write down who you plan to talk to, what websites you plan to visit.`,
+    hacks: {
+      wordCloudImagePath: '/prefab-word-clouds/research-wordcloud5.png'
+    }
   }, {
     kind: 'video',
     time: 2,
@@ -91,19 +94,29 @@ const data = [{
     instructions: 'Watch this video to learn more about carbohydrates, sugars and roughage.',
     videoId: '8-A37Y4KuN0'
   }, {
+    kind: 'multipleChoice',
+    time: 3,
+    title: 'The purpose of carbohydrates',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Why do we need carbohydrates? 
+
+    Select all that apply.`,
+    choices: ['To lose weight', 'For Energy', 'To make friends', 'To get good marks']
+  }, {
     kind: 'textResponse',
     time: 5,
     short: true,
     title: 'Tweet what you\'ve learned',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter2',
+    instructions: 'Summarize what you have learned in the video above in 140 characters; then tweet it with #chapter2',
   }, {
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    From your textbook, read the section 2.2, What Do Various Nutrients Do For Our Body? 
+    From your textbook, read the section 2.2, _What Do Various Nutrients Do For Our Body?_ 
 
     Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
   },{
@@ -154,6 +167,7 @@ const data = [{
     title: 'How cotton is made',
     instructions: 'This video gives a very thorough overview of how cotton is made from farm to fabric.',
     videoId: 'kH_b3Heo48I',
+    startTime: 20
   }, {
     kind: 'imageResponse',
     time: 10,
@@ -178,24 +192,31 @@ const data = [{
     instructions: 'We found this chapter to be incredibly boring. Watch to see if you agree.',
     videoId: 'irfJePkITGM',
   }, {
-    kind: 'textResponse',
-    time: 5,
-    title: 'Select a video title',
-    instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Learning to knit with Peg” to something new, what would you call it.',
-    hacks: {
-      wordCloudImagePath: '/prefab-word-clouds/test-cloud.png'
-    }
+    kind: 'multipleChoice',
+    time: 3,
+    title: 'Suggest an idea for a video',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    maxSelected: 1,
+    instructions: dedent`
+    Tell us a topic from this chapter that is interesting to you. 
+
+    We will collect responses from all students taking this quiz, and then make a video on one of those topics.`,
+    choices: ['Appearance', 'Hardness', 'Solubility', 'Transparency']
   }, {
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
-    instructions: 'From your textbook, read the section on “Some Plant Fibres”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    From your textbook, read the section on _Transparency._ 
+
+    Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`
   }, {
     kind: 'video',
-    time: 3,
+    time: 2,
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
-    videoId: '1u2uRhDeQOI',
+    videoId: 'rgNpbH_4en4',
   }]
 }, {
   number: 5,
@@ -257,11 +278,6 @@ const data = [{
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'rYiRcrny4vs',
-  }, {
-    kind: 'textResponse',
-    time: 10,
-    title: 'Let’s think about the video',
-    instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
   number: 7,
