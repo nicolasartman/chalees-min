@@ -510,7 +510,11 @@ const data = [{
     kind: 'multipleChoice',
     time: 2,
     title: 'Multiple Choice Example 1',
-    instructions: 'Select all that apply',
+    instructions: dedent`
+      Select all that apply.
+    
+      Select Option 1 and 2, Option 3 and 4, or Option 5, and save to see an automatic response.
+    `,
     choices: [
       {
         id: 'opt1',
@@ -533,6 +537,20 @@ const data = [{
         text: 'Option 5'
       }
     ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1', 'opt2'],
+        response: 'This is an automatic response to demonstrate selecting multiple options.'
+      },
+      {
+        answerSet: ['opt3', 'opt4'],
+        response: 'This is an automatic response to demonstrate selecting multiple options.'
+      },
+      {
+        answerSet: ['opt5'],
+        response: 'This is an automatic response to demonstrate selecting one option.'
+      }
+    ]
   }, {
     kind: 'multipleChoice',
     time: 2,

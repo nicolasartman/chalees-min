@@ -1,5 +1,6 @@
 import styleConstants from './style-constants.js';
 import LoginGate from './login-gate.js';
+import {difference} from 'lodash';
 import * as auth from './auth.js';
 
 const MultipleChoiceResponse = React.createClass({
@@ -27,12 +28,28 @@ const MultipleChoiceResponse = React.createClass({
         this.state.selectedChoices.size === this.props.maxSelected
     });
   },
+  toggleResponses: function() {
+    const selectedChoicesArray = [...this.state.selectedChoices];
+    // Check each automatic response to see if the currently selected choices
+    // match any answer set provided
+    const responses = this.props.automaticResponses.filter((item) => (
+      difference(selectedChoicesArray, item.answerSet).length === 0 &&
+      difference(item.answerSet, selectedChoicesArray).length === 0
+    )).map((item) => (
+      item.response
+    ));
+    
+    this.setState({responses: responses});
+  },
   onSave: function() {
+    // Modify automatic feedback shown after user submits choices
+    this.toggleResponses();
+    
     // data.set({
     //   [this.props.itemId]: this.state.response
     // });
     
-    // TODO:
+    // TODO: finish implementing
     actions.saveResponse(this.state.response);
     
     // Use fake data
@@ -54,6 +71,9 @@ const MultipleChoiceResponse = React.createClass({
                 {choice.text}
               </button>
             ))}
+          </div>
+          <div className="responses">
+            {this.state.responses}
           </div>
         </LoginGate>
         <div>
