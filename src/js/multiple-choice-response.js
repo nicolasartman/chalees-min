@@ -6,15 +6,15 @@ const MultipleChoiceResponse = React.createClass({
     // Keep track of all currently selected child choices
     return {selectedChoices: new Set()};
   },
-  toggleChoice: function (choiceIndex) {
+  toggleChoice: function (choiceId) {
     // Deselection
-    if (this.state.selectedChoices.has(choiceIndex)) {
+    if (this.state.selectedChoices.has(choiceId)) {
       // the set state below will pick up this mutative change and ensure it's recognized,
       // since unfortunately the native api works overly mutatively.
-      this.state.selectedChoices.delete(choiceIndex);
+      this.state.selectedChoices.delete(choiceId);
     } else {
       if (this.props.maxSelected === 1) {this.state.selectedChoices.clear();}
-      this.setState({selectedChoices: this.state.selectedChoices.add(choiceIndex)});
+      this.setState({selectedChoices: this.state.selectedChoices.add(choiceId)});
     }
     this.setState({
       maxMultiselectionReached: this.props.maxSelected > 1 &&
@@ -26,12 +26,12 @@ const MultipleChoiceResponse = React.createClass({
       <div>
         <LoginGate>
           <div className="choices">
-            {this.props.choices.map((choice, index) => (
-              <button key={index}
-                      disabled={this.state.maxMultiselectionReached && !this.state.selectedChoices.has(index)}
-                      className={'choice' + (this.state.selectedChoices.has(index) ? ' selected' : '')}
-                      onClick={() => this.toggleChoice(index)}>
-                {choice}
+            {this.props.choices.map((choice) => (
+              <button key={choice.id}
+                      disabled={this.state.maxMultiselectionReached && !this.state.selectedChoices.has(choice.id)}
+                      className={'choice' + (this.state.selectedChoices.has(choice.id) ? ' selected' : '')}
+                      onClick={() => this.toggleChoice(choice.id)}>
+                {choice.text}
               </button>
             ))}
           </div>

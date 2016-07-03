@@ -19,7 +19,24 @@ const data = [{
     The food that we eat in our homes goes through which of the following places. 
 
     Select all that apply.`,
-    choices: ['Farm', 'Bank', 'Subzi Mandi', 'Market']
+    choices: [
+      {
+        id: 'farm',
+        text: 'Farm'
+      },
+      {
+        id: 'bank',
+        text: 'Bank'
+      },
+      {
+        id: 'subziMandi',
+        text: 'Subzi Mandi'
+      },
+      {
+        id: 'market',
+        text: 'Market'
+      }
+    ] 
   }, {
     kind: 'imageResponse',
     time: 10,
@@ -494,21 +511,84 @@ const data = [{
     time: 2,
     title: 'Multiple Choice Example 1',
     instructions: 'Select all that apply',
-    choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4']
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Option 1'
+      },
+      {
+        id: 'opt2',
+        text: 'Option 2'
+      },
+      {
+        id: 'opt3',
+        text: 'Option 3'
+      },
+      {
+        id: 'opt4',
+        text: 'Option 4'
+      },
+      {
+        id: 'opt5',
+        text: 'Option 5'
+      }
+    ],
   }, {
     kind: 'multipleChoice',
     time: 2,
     title: 'Multiple Choice Example 2',
     instructions: 'Select only one',
     maxSelected: 1,
-    choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] 
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Option 1'
+      },
+      {
+        id: 'opt2',
+        text: 'Option 2'
+      },
+      {
+        id: 'opt3',
+        text: 'Option 3'
+      },
+      {
+        id: 'opt4',
+        text: 'Option 4'
+      },
+      {
+        id: 'opt5',
+        text: 'Option 5'
+      }
+    ]
   }, {
     kind: 'multipleChoice',
     time: 3,
     title: 'Multiple Choice Example 3',
     instructions: 'Select up to two',
     maxSelected: 2,
-    choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'] 
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Option 1'
+      },
+      {
+        id: 'opt2',
+        text: 'Option 2'
+      },
+      {
+        id: 'opt3',
+        text: 'Option 3'
+      },
+      {
+        id: 'opt4',
+        text: 'Option 4'
+      },
+      {
+        id: 'opt5',
+        text: 'Option 5'
+      }
+    ]
   }]
 }];
 
