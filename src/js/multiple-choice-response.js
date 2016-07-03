@@ -1,10 +1,16 @@
 import styleConstants from './style-constants.js';
 import LoginGate from './login-gate.js';
+import * as auth from './auth.js';
 
 const MultipleChoiceResponse = React.createClass({
   getInitialState: function() {
     // Keep track of all currently selected child choices
     return {selectedChoices: new Set()};
+  },
+  componentDidMount: async function () {
+    // Only enable the buttons if the user is logged in
+    await auth.authorize();
+    this.setState({isSignedIn: true});
   },
   toggleChoice: function (choiceId) {
     // Deselection
@@ -19,6 +25,20 @@ const MultipleChoiceResponse = React.createClass({
     this.setState({
       maxMultiselectionReached: this.props.maxSelected > 1 &&
         this.state.selectedChoices.size === this.props.maxSelected
+    });
+  },
+  onSave: function() {
+    // data.set({
+    //   [this.props.itemId]: this.state.response
+    // });
+    
+    // TODO:
+    actions.saveResponse(this.state.response);
+    
+    // Use fake data
+    this.setState({
+      saving: true,
+      responseSubmitted: true
     });
   },
   render: function() {
@@ -36,6 +56,9 @@ const MultipleChoiceResponse = React.createClass({
             ))}
           </div>
         </LoginGate>
+        <div>
+            <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn || this.state.saving} onClick={this.onSave}>{this.state.saving ? 'Saving...' : 'Save'}</button>
+        </div>
       </div>
     );
   }
