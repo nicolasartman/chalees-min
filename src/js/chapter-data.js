@@ -16,35 +16,54 @@ const data = [{
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The food that we eat in our homes goes through which of the following places. 
+    The food that we eat goes through all of the following places, except for one. 
 
-    Select all that apply.`,
+    Select the odd one out.`,
+    maxSelected: 1,
     choices: [
       {
-        id: 'farm',
+        id: 'opt1',
         text: 'Farm'
       },
       {
-        id: 'bank',
+        id: 'opt2',
         text: 'Bank'
       },
       {
-        id: 'subziMandi',
+        id: 'opt3',
         text: 'Subzi Mandi'
       },
       {
-        id: 'market',
+        id: 'opt4',
         text: 'Market'
       }
-    ] 
-  }, {
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'As we saw in the video, the food\'s journey begins in the farm.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Correct. Our food does not go through the bank. It would be weird if it did.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'The Subzi Mandi or the Big Vegetable Market is where food is sold in bulk.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Local markets are places where we most often buy our food.'
+      }
+    ]
+  },  {
     kind: 'imageResponse',
     time: 10,
     title: 'Draw what you have learned',
     // @KUNAL: here's how to add an image
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a pencil and paper to draw a picture that shows what you have learned from the video above. 
+    Use a _pen and paper_ to draw a picture that shows what you have learned from the video above. 
 
     Then take a picture of the drawing from your phone and share it here.`
   }, {
@@ -116,10 +135,44 @@ const data = [{
     title: 'The purpose of carbohydrates',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Why do we need carbohydrates? 
-
-    Select all that apply.`,
-    choices: ['To lose weight', 'For Energy', 'To make friends', 'To get good marks']
+    Why do we need carbohydrates? `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'To lose weight'
+      },
+      {
+        id: 'opt2',
+        text: 'For Energy'
+      },
+      {
+        id: 'opt3',
+        text: 'To make friends'
+      },
+      {
+        id: 'opt4',
+        text: 'To get good marks'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Ummm. Nowhere in this video or chapter have we spoken about losing weight.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Correct. Carbohydrates are one of the most important sources of energy in our food.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'You need kindness (and not carbohydrates) to make new friends.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Even though you need to study Carbohydrates to score well in your exams, this is not the correct reason for needing carbohydrates.'
+      }
+    ]
   }, {
     kind: 'textResponse',
     time: 5,
@@ -127,6 +180,20 @@ const data = [{
     title: 'Tweet what you\'ve learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Summarize what you have learned in the video above in 140 characters; then tweet it with #chapter2',
+    hacks: {
+      fakePeerResponses: [
+        {
+          studentName: 'Prabsimar',
+          imagePath: '/fake-responses/prabsimar.png',
+          response: 'Carbs give energy. they are in bread, beans, fruits and veggies. can of soda has 39g; love nimbu pani; dietary fibre eases poop #chapter2'
+        },
+        {
+          studentName: 'Koushiki',
+          imagePath: '/fake-responses/koushiki.png',
+          response: 'Ceres is goddess of grain. Grains have carbohydrates. Carbohydrates provide energy. Energy is good. Love the dance at the end #chapter2'
+        }
+      ]
+    }
   }, {
     kind: 'imageResponse',
     time: 15,
