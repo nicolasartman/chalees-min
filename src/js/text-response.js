@@ -28,35 +28,36 @@ import koushikiPhoto from '../images/fake-responses/koushiki.png';
 // );
 
 const TextResponse = React.createClass({
-  getInitialState: function () {
-    return {
-      response: this.props.response,
-      responseSubmitted: false
-    }
+  propTypes: {
+    response: React.PropTypes.any
   },
+  // getInitialState: function () {
+  //   return {
+  //     response: this.props.response,
+  //     responseSubmitted: false
+  //   }
+  // },
   onChange: function (event) {
-    this.setState({
-      response: event.target.value
-    });
+    this.props.setResponse(event.target.value);
   },
-  componentDidMount: async function () {
-    // Only enable the buttons if the user is logged in
-    const user = await auth.authorize();
-    this.setState({isSignedIn: !!user});
-  },
-  onSave: function () {
-    // data.set({
-    //   [this.props.itemId]: this.state.response
-    // });
-    
-    actions.saveResponse(this.state.response);
-    
-    // Use fake data
-    this.setState({
-      saving: true,
-      responseSubmitted: true
-    });
-  },
+  // componentDidMount: async function () {
+  //   // Only enable the buttons if the user is logged in
+  //   const user = await auth.authorize();
+  //   // this.setState({isSignedIn: !!user});
+  // },
+  // onSave: function () {
+  //   // data.set({
+  //   //   [this.props.itemId]: this.state.response
+  //   // });
+  //
+  //   actions.saveResponse(this.state.response);
+  //
+  //   // Use fake data
+  //   this.setState({
+  //     saving: true,
+  //     responseSubmitted: true
+  //   });
+  // },
   componentWillReceiveProps: function (newProps) {
     // console.log('new props', newProps);
     if (newProps.response != this.props.response) {
@@ -98,16 +99,25 @@ const TextResponse = React.createClass({
     return (
       <div>
         <LoginGate>
-          <div style={{position: 'relative'}}>
-            {this.props.short ? 
-              (<input type="text" className="pure-input" onChange={this.onChange} style={{width: '100%'}} />) :
-              (<textarea className="pure-input" onChange={this.onChange} style={{width: '100%',minHeight: '200px'}}></textarea>)
-            }
-          </div>
+          {cond([
+            [() => this.props.short, () => (
+              <input
+                type="text"
+                className="pure-input"
+                value={this.props.response || ''}
+                onChange={this.onChange}
+                style={{width: '100%'}} />
+            )],
+            [() => true, () => (
+              <textarea
+                className="pure-input"
+                value={this.props.response || ''}
+                onChange={this.onChange}
+                style={{width: '100%', minHeight: '200px'}}>
+              </textarea>
+            )]
+          ])()}
         </LoginGate>
-        <div>
-            <button className="pure-button" style={{marginTop: 15}} disabled={!this.state.isSignedIn || this.state.saving} onClick={this.onSave}>{this.state.saving ? 'Saving...' : 'Save'}</button>
-        </div>
         {cond([
           [() => !this.props.hacks || !this.state.responseSubmitted, () => null],
           [() => this.props.hacks.wordCloudImagePath,
@@ -120,6 +130,5 @@ const TextResponse = React.createClass({
   }
 });
 
-const TextResponseContainer = connect((state) => ({}))(TextResponse);
 
-export default TextResponseContainer;
+export default TextResponse;

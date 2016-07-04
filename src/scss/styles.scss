@@ -521,8 +521,13 @@ $page-transition-duration: 1s;
 
 .pure-button {
   $button-color: $chalees-purple;
+  $border-width: 2px;
   transition: all 0.15s linear;
-  border: 2px solid $button-color;
+  border: $border-width solid $button-color;
+  
+  &:disabled {
+    border: $border-width solid transparent;
+  }
 
   &, &:focus {
     background-color: white;    

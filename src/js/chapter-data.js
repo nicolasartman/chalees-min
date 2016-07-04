@@ -3,6 +3,7 @@ const data = [{
   title: 'Food: Where Does It Come From?',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
   items: [{
+    id: 'where-does-food-come-from',
     kind: 'video',
     time: 4,
     title: 'Where does food come from?',
@@ -11,14 +12,15 @@ const data = [{
     // @kunal: here's how to add a different start time
     // startTime: 10,
   }, {
+    id: 'our-foods-journey',
     kind: 'multipleChoice',
     time: 3,
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The food that we eat goes through all of the following places, except for one. 
+      The food that we eat goes through all of the following places, except for one. 
 
-    Select the odd one out.`,
+      Select the odd one out.`,
     maxSelected: 1,
     choices: [
       {
@@ -57,6 +59,7 @@ const data = [{
       }
     ]
   },  {
+    id: 'draw-what-you-have-learned',
     kind: 'imageResponse',
     time: 10,
     title: 'Draw what you have learned',
@@ -67,6 +70,7 @@ const data = [{
 
     Then take a picture of the drawing from your phone and share it here.`
   }, {
+    id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
     time: 6,
     short: true,
@@ -101,6 +105,7 @@ const data = [{
       ]
     }
   }, {
+    id: 'plan-your-own-research',
     kind: 'textResponse',
     time: 10,
     title: 'Plan your own research',
@@ -113,6 +118,7 @@ const data = [{
       wordCloudImagePath: '/prefab-word-clouds/research-wordcloud5.png'
     }
   }, {
+    id: 'herbivore,-carnivore,-omnivore',
     kind: 'video',
     time: 2,
     title: 'Herbivore, Carnivore, Omnivore',
@@ -124,12 +130,14 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-2.jpg',
   title: 'Components Of Food',
   items: [{
+    id: 'carbohydrates',
     kind: 'video',
     time: 4,
     title: 'Carbohydrates',
     instructions: 'Watch this video to learn more about carbohydrates, sugars and roughage.',
     videoId: '8-A37Y4KuN0'
   }, {
+    id: 'the-purpose-of-carbohydrates',
     kind: 'multipleChoice',
     time: 3,
     title: 'The purpose of carbohydrates',
@@ -174,6 +182,7 @@ const data = [{
       }
     ]
   }, {
+    id: 'tweet-what-youve-learned',
     kind: 'textResponse',
     time: 5,
     short: true,
@@ -195,6 +204,7 @@ const data = [{
       ]
     }
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
@@ -204,12 +214,14 @@ const data = [{
 
     Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
   },{
+    id: 'balanced-diet',
     kind: 'video',
     time: 10,
     title: 'Balanced Diet',
     instructions: 'Which foods should we eat more of, and which should we eat less?',
     videoId: 'n-q8-f2unHY'
   },,{
+    id: 'and-finally-...',
     kind: 'video',
     time: 1,
     title: 'And finally ...',
@@ -221,12 +233,14 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-3.jpg',
   title: 'Fibre To Fabric',
   items: [{
+    id: 'how-i-learned-to-knit',
     kind: 'video',
     time: 4,
     title: 'How I learned to knit',
     instructions: 'Here is a story of how I learned to knit and then learned something interesting about life.',
     videoId: '0EL7M44_Ey0',
   }, {
+    id: 'tell-us-your-learning-story',
     kind: 'textResponse',
     time: 10,
     title: 'Tell us your learning story',
@@ -239,6 +253,7 @@ const data = [{
       wordCloudImagePath: '/prefab-word-clouds/test-cloud.png'
     },
   }, {
+    id: 'cottons-journey',
     time: 5,
     kind: 'image',
     title: 'Cotton\'s Journey',
@@ -246,6 +261,7 @@ const data = [{
     instructions: 'Cotton goes from the field, to fibre, to yarn to fabric. Study the image below to see how cotton shirts are made.',
     imagePath: '/learning-items/cotton-journey.png'
   }, {
+    id: 'how-cotton-is-made',
     kind: 'video',
     time: 5,
     title: 'How cotton is made',
@@ -253,12 +269,14 @@ const data = [{
     videoId: 'kH_b3Heo48I',
     startTime: 20
   }, {
+    id: 'draw-what-you-have-learned',
     kind: 'imageResponse',
     time: 10,
     title: 'Draw what you have learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.'
   }, {
+    id: 'singing-the-chapter',
     kind: 'video',
     time: 3,
     title: 'Singing the chapter',
@@ -270,12 +288,14 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-4.png',
   title: 'Sorting Materials Into Groups',
   items: [{
+    id: 'sorting-materials-into-groups',
     kind: 'video',
     time: 2,
     title: 'Sorting Materials Into Groups',
     instructions: 'We found this chapter to be incredibly boring. Watch to see if you agree.',
     videoId: 'irfJePkITGM',
   }, {
+    id: 'suggest-an-idea-for-a-video',
     kind: 'multipleChoice',
     time: 3,
     title: 'Suggest an idea for a video',
@@ -287,6 +307,7 @@ const data = [{
     We will collect responses from all students taking this quiz, and then make a video on one of those topics.`,
     choices: ['Appearance', 'Hardness', 'Solubility', 'Transparency']
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
@@ -296,6 +317,7 @@ const data = [{
 
     Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`
   }, {
+    id: 'singing-the-chapter',
     kind: 'video',
     time: 2,
     title: 'Singing the chapter',
@@ -307,17 +329,20 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-5.jpg',
   title: 'Separation of Substances',
   items: [{
+    id: 'how-does-salt-dissolve-in-water',
     kind: 'video',
     time: 5,
     title: 'How does salt dissolve in water',
     instructions: 'This video highlights how salt is made and how it dissolves in water',
     videoId: 'mBoJ3Y3S4VE',
   }, {
+    id: 'summarize-what-you-have-learned',
     kind: 'imageResponse',
     time: 15,
     title: 'Summarize what you have learned',
     instructions: 'Use a pencil and paper to draw a picture that shows what you have learned from this video. Then take a picture of it and upload it here.',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
@@ -331,6 +356,7 @@ const data = [{
     - Filteration
     Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it below.`,
   }, {
+    id: 'making-a-test',
     kind: 'textResponse',
     time: 5,
     title: 'Making a test',
@@ -341,22 +367,26 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-6.jpg',
   title: 'Changes Around Us',
   items: [{
+    id: 'the-train-track-behind-facebook’s-office',
     kind: 'video',
     time: 3,
     title: 'The train track behind facebook’s office',
     instructions: 'This video highlights how expansion causes train tracks to buckle',
     videoId: 'ceJivu4wlM0',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 5,
     title: 'Let’s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section 6.2, “Could there be other ways to bring changes”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
   }, {
+    id: 'singing-the-chapter',
     kind: 'video',
     time: 3,
     title: 'Singing the chapter',
@@ -369,6 +399,7 @@ const data = [{
   title: 'Getting To Know Plants',
   // All the times in this item are completely made-up
   items: [{
+    id: 'why-do-plants-produce-flowers?',
     time: 6,
     kind: 'video',
     title: 'Why do plants produce flowers?',
@@ -376,18 +407,21 @@ const data = [{
     videoId: 'EArZXsRXsj4'
   },
   {
+    id: 'reflect-picture',
     time: 10,
     kind: 'imageResponse',
     title: 'Reflect',
     instructions: 'Take a picture and drop it here'
   },
   {
+    id: 'reflect',
     time: 8,
     kind: 'textResponse',
     title: 'Reflect',
     instructions: 'Write down your thoughts about flowers'
   },
   {
+    id: 'conduct-your-own-experiment',
     time: 10,
     kind: 'image',
     title: 'Conduct your own experiment',
@@ -399,28 +433,33 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
   title: 'Body Movements',
   items: [{
+    id: 'what-keeps-our-bones-together',
     kind: 'video',
     time: 7,
     title: 'What keeps our bones together',
     instructions: 'Watch to learn more about the hinge joint, the ball and socket joint, ligaments and humility.',
     videoId: 'x4k1JP8LsNY',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 5,
     title: 'Let’s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section 6.2, “Could there be other ways to bring changes”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
   }, {
+    id: 'singing-the-chapter',
     kind: 'video',
     time: 3,
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'rYiRcrny4vs',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 10,
     title: 'Let’s think about the video',
@@ -431,28 +470,33 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
   items: [{
+    id: 'can-shadows-be-colourful?',
     kind: 'video',
     time: 3,
     title: 'Can shadows be colourful?',
     instructions: 'Watch this video to learn if a shadow can be blue, green, yellow and other colours.',
     videoId: 'MKW3uUM9xDU',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 5,
     title: 'Let’s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter11',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section 11.4, “Mirrors and Reflections”. Then use a pen and pencil to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.',
   }, {
+    id: 'singing-the-chapter',
     kind: 'video',
     time: 3,
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'lo9naFiH778',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 10,
     title: 'Let’s think about the video',
@@ -464,17 +508,20 @@ const data = [{
   title: 'Fun With Magnets',
   // All the times in this item are completely made-up
   items: [{
+    id: 'when-do-magnets-misbehave?',
     time: 4,
     kind: 'video',
     title: 'When do magnets misbehave?',
     instructions: 'Heat has something to do with magnets not behaving as usual. Watch this video to find out.',
     videoId: 'yjSNU62kxZo'
   }, {
+    id: 'share-what-you-have-learned',
     time: 6,
     kind: 'textResponse',
     title: 'Share what you have learned',
     instructions: 'What did you learn? Discuss your response with a friend and write it here.'
   }, {
+    id: 'pick-question-to-investigate-and-share',
     time: 10,
     kind: 'imageResponse',
     title: 'Pick question to investigate and share',
@@ -483,6 +530,7 @@ const data = [{
       2) Write it on a piece of paper; paste it on a wall.
       3) Take a picture and upload here.`
   }, {
+    id: 'conduct-your-own-experiment',
     time: 15,
     kind: 'image',
     title: 'Conduct your own experiment',
@@ -494,22 +542,26 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-14.jpg',
   title: 'Water',
   items: [{
+    id: 'how-to-convert-seawater-to-drinking-water?',
     kind: 'video',
     time: 3,
     title: 'How to convert seawater to drinking water?',
     instructions: 'Watch this video to learn how evaporation helps purify water.',
     videoId: 'yeoN0Pmg_tI',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 5,
     title: 'Let’s think about the video',
     instructions: 'Summarize what you have learned in this video here.',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section 14.3, “Water Cycle”. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
   }, {
+    id: 'making-a-test',
     kind: 'textResponse',
     time: 5,
     title: 'Making a test',
@@ -520,22 +572,26 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-15.png',
   title: 'Air Around Us',
   items: [{
+    id: 'composition-of-air',
     kind: 'video',
     time: 2,
     title: 'Composition of air',
     instructions: 'What do we breathe in? What do we breathe out? Watch to find out.',
     videoId: 'TA2s6uo_vTQ',
   }, {
+    id: 'let’s-think-about-the-video',
     kind: 'textResponse',
     time: 5,
     title: 'Let’s think about the video',
     instructions: 'Summarize what you have learned in this video here.',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section 14.3, “Water Cycle”. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
   }, {
+    id: 'making-a-test',
     kind: 'textResponse',
     time: 5,
     title: 'Making a test',
@@ -546,22 +602,26 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-16.jpg',
   title: 'Garbage In, Garbage Out',
   items: [{
+    id: 'landfill-in-hawaii-and-new-delhi',
     kind: 'video',
     time: 3,
     title: 'Landfill in Hawaii and New Delhi',
     instructions: 'This video highlights how landfills work on different sides of the earth',
     videoId: 'GXogi1FV_Iw',
   }, {
+    id: 'select-a-video-title',
     kind: 'textResponse',
     time: 5,
     title: 'Select a video title',
     instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Landfill in Hawaii and New Delhi” to something more appropriate, what would it be? ',
   }, {
+    id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
     instructions: 'From your textbook, read the section on Vermicomposting. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
   }, {
+    id: 'teach-a-friend',
     kind: 'textResponse',
     time: 15,
     title: 'Teach a friend',
@@ -574,6 +634,7 @@ const data = [{
   thumbnailImagePath: '/chalees-min-heart.png',
   title: 'Test lesson',
   items: [{
+    id: 'multiple-choice-example-1',
     kind: 'multipleChoice',
     time: 2,
     title: 'Multiple Choice Example 1',
@@ -619,6 +680,7 @@ const data = [{
       }
     ]
   }, {
+    id: 'multiple-choice-example-2',
     kind: 'multipleChoice',
     time: 2,
     title: 'Multiple Choice Example 2',
@@ -647,6 +709,7 @@ const data = [{
       }
     ]
   }, {
+    id: 'multiple-choice-example-3',
     kind: 'multipleChoice',
     time: 3,
     title: 'Multiple Choice Example 3',
@@ -676,5 +739,37 @@ const data = [{
     ]
   }]
 }];
+
+
+// validate that all data items have ids that are unique
+const learningItems = flattenDeep(data.map(chapter => {
+  if (!chapter.items) {
+    alert(`Catastrophic error in chapter-data.js: chapter ${chapter.number} lacks an items list`);
+    throw new Error();
+  }
+  chapter.items.map(item => {
+    if (!item.id) {
+      alert('Catastrophic error in chapter-data.js: the learning item printed below lack an id. ' +
+        'It must have a unique id:\n' + JSON.stringify(item, null, 2));
+      throw new Error();
+    } else if (!/^[\w\d-]+$/.test(item.id)) {
+      alert(`Catastrophic error in chapter-data.js: item id ${item.id} ` + 
+        'should only contain letters, numbers, and hyphens');
+      throw new Error();
+    }
+  })
+  
+  return chapter.items;
+}));
+
+
+const learningItemIds = learningItems.map(item => item.id)
+if (uniq(learningItemIds).length !== learningItemIds.length) {
+  alert('Catastrophic error in chapter-data.js: there are two or more ' + 
+    'learning items with the same id! Dumping all the ids');
+  document.write(learningItemIds.sort().join('<br />'));
+  throw new Error();
+}
+
 
 export default data;

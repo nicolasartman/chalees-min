@@ -9,87 +9,66 @@ import HomePage from './home-page.js';
 import Header from './header.js';
 import * as data from './data.js';
 import chapters from './chapter-data.js';
+import database from './database.js';
+import {authorize} from './auth.js';
 
 const Chapter = React.createClass({
-  getInitialState: () => ({}),
-  componentDidMount: function() {
-    console.log('mounted chapter component', this.props.params.id);
+  getInitialState: () => ({
+    chapterId: null,
+    learningItemResponses: {},
+    learningItemSaveHandlers: {}
+  }),
+  componentDidMount: async function () {
+    const chapterNumber = parseInt(this.props.params.id, 10)
     this.setState({
-      chapterId: parseInt(this.props.params.id, 10)
+      chapterId: chapterNumber,
     });
+    this.initializeSubscriptions(chapterNumber)
   },
-  // disabled until we find a more efficient way to do it or
-  // decide it's worth the additional complexity
-  // initializeVisualFocusEffect: function () {
-  //   // hacky. needs to be refactored once any of this data is fetched asynchronously.
-  //   const learningItems = [...ReactDom.findDOMNode(this).querySelectorAll('.learning-item')]
-  //     .map(element => ({
-  //       topBound: Math.round(element.offsetTop + (element.offsetHeight * 0.4)),
-  //       bottomBound: Math.round(element.offsetTop + (element.offsetHeight * 0.6)),
-  //       node: element
-  //     }));
-  //
-  //   let recentlyScrolled = false;
-  //   let focusedLearningItems = [];
-  //
-  //   this.scrollListener = () => recentlyScrolled = true;
-  //
-  //   window.addEventListener('scroll', this.scrollListener);
-  //
-  //   function updateFocusedLearningItem() {
-  //     recentlyScrolled = false;
-  //     const viewportTop = window.pageYOffset;
-  //     const viewportBottom = viewportTop + window.innerHeight;
-  //
-  //     let newlyFocusedItems = [];
-  //     const numberOfLearningItems = learningItems.length;
-  //
-  //     // All the items that have over 25% of themselves viewable are considered
-  //     // focused
-  //     for (let index = 0; index < numberOfLearningItems; index += 1) {
-  //       // If the item is the topmost one in the page (with a UX allowance
-  //       // so part of the item can be scrolled past while still considering
-  //       // it in focus)
-  //       if (learningItems[index].bottomBound > viewportTop &&
-  //           learningItems[index].topBound < viewportBottom) {
-  //         newlyFocusedItems.push(learningItems[index]);
-  //       }
-  //     }
-  //
-  //     console.log('focused items (new, current)', newlyFocusedItems, focusedLearningItems);
-  //
-  //     // If the set of focused items has changed, update which elements have the class
-  //     if (newlyFocusedItems.length !== focusedLearningItems.length ||
-  //         newlyFocusedItems[0] !== focusedLearningItems[0]) {
-  //       learningItems.map(item => item.node.classList.remove('focused'));
-  //       newlyFocusedItems.map(item => item.node.classList.add('focused'));
-  //       focusedLearningItems = newlyFocusedItems;
-  //     }
-  //   }
-  //
-  //   this.scrollCheckInterval = window.setInterval(() => {
-  //     if (recentlyScrolled) {
-  //      updateFocusedLearningItem()
-  //     }
-  //   }, 100);
-  //
-  //   updateFocusedLearningItem();
-  // },
-  componentWillUnmount: function () {
-    // disabled for now -- see note above
-    // window.clearInterval(this.scrollCheckInterval);
-    // window.removeEventListener('scroll', this.scrollListener);
+  async initializeSubscriptions(chapterId) {
+    this.databaseReferences = [];
+    const currentChapter = chapters.find(chapter => chapter.number === chapterId);
+    const user = await authorize();
+    if (user) {
+      this.databaseReferences = currentChapter.items.map((learningItem) => {
+        const ref = database.child('responses').child(`${user.uid}|${learningItem.id}`)
+
+        // Update the local data whenever it updates in the db
+        ref.on('value', (snapshot) => {
+          console.log('=======Firebase state update', snapshot.val());
+          this.setState((state) => {
+            const {content: learningItemResponse} = snapshot.val();
+            state.learningItemResponses[learningItem.id] = learningItemResponse || null;
+            return state;
+          })         
+        }); 
+            
+        // Create simple save handlers for the items with pre-filled item-specific data
+        const saveHandler = studentResponse => {
+          const payload = {
+            userKey: user.uid,
+            itemKey: learningItem.id,
+            setKey: String(currentChapter.number),
+            kind: learningItem.kind,
+            content: studentResponse
+          }
+          console.log('firebase payload:', payload);
+          return ref.set(payload);
+        }
+        this.setState((previousState) => {
+          const newState = previousState;
+          newState.learningItemSaveHandlers[learningItem.id] = saveHandler;
+        });
+        
+        return ref;
+      });
+    }
   },
-  render: function() {
-    // Use the magnets chapter if there isn't existing dummy data for the given one
+  componentWillUnmount() {
+    this.databaseReferences.map(subscription => subscription.off());
+  },
+  render() {
     const currentChapter = chapters.find(chapter => chapter.number === this.state.chapterId);
-    
-    // hackity hack -- disabled. see note above
-    // if (currentChapter && !this.focusEffectInitialized) {
-    //   console.log('init focus effect');
-    //   this.focusEffectInitialized = true;
-    //   window.setTimeout(this.initializeVisualFocusEffect);
-    // }
     
     return (
       <div>
@@ -100,7 +79,12 @@ const Chapter = React.createClass({
                 Chapter {currentChapter && currentChapter.number}: {currentChapter && currentChapter.title}
               </h2>
               {((currentChapter && currentChapter.items) || []).map((item, index) => (
-                <LearningItem key={index} {...item} />
+                <LearningItem
+                  key={index} 
+                  response={this.state.learningItemResponses[item.id]} 
+                  handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
+                  {...item}
+                />
               ))}
             </div>
           </div>

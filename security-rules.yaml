@@ -8,12 +8,12 @@ root:
     $responseKey:
       .read: data.userKey == auth.uid
       .write: next.userKey == auth.uid
-      .value: $responseKey == next.userKey + '|' + next.itemKey
+      .value: $responseKey == next.userKey + '|' + next.setKey + '|' + next.itemKey
       userKey: required indexed string
       setKey: required indexed string
       itemKey: required indexed string
       kind: required string
-      content: required string
+      content: required any
   items:
     .write: isAdmin()
     .read: auth.uid != null
