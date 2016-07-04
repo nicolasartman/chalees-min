@@ -679,7 +679,7 @@ const data = [{
       },
       {
         answerSet: ['opt5'],
-        response: 'This is an automatic response to demonstrate selecting one option.'
+        response: 'This is an automatic response to demonstrate selecting one option.  **bold** ![image](https://i.ytimg.com/vi/6sta6Gkpgcw/maxresdefault.jpg)'
       }
     ]
   }, {

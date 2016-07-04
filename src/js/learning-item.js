@@ -1,6 +1,6 @@
-import Markdown from 'react-markdown';
 import identity from 'lodash/identity';
 import cond from 'lodash/cond';
+import Markdown from './markdown';
 
 // The different types of learning item widgets
 import MultipleChoiceResponse from './multiple-choice-response.js';
@@ -18,13 +18,6 @@ const kinds = {
   'imageResponse': ImageResponse,
   'image': ImageContent
 };
-
-// Render all links from markdown so they open in a new window so the learner
-// doesn't potentially lose progress
-const linkRenderer = (linkNode) => {
-  return <a href={linkNode.href} title={linkNode.title}
-            target="_blank" children={linkNode.children} />;
-}
 
 const LearningItem = React.createClass({
   propTypes: {
@@ -139,7 +132,7 @@ const LearningItem = React.createClass({
               </div>
             </div>
           </div>
-          <Markdown source={props.instructions || ''} renderers={{'Link': linkRenderer}}/>
+          <Markdown source={props.instructions} />
           {content}
           {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
               <button

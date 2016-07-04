@@ -1,6 +1,7 @@
 import styleConstants from './style-constants.js';
 import LoginGate from './login-gate.js';
 import intersection from 'lodash/intersection';
+import Markdown from './markdown.js';
 
 const MultipleChoiceResponse = React.createClass({
   getInitialState: () => ({}),
@@ -64,7 +65,7 @@ const MultipleChoiceResponse = React.createClass({
           ))}
         </div>
         <div className="responses">
-          {this.state.feedback}
+          <Markdown source={this.state.feedback} />
         </div>
       </LoginGate>
     );

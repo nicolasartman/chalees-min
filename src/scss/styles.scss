@@ -636,6 +636,14 @@ $page-transition-duration: 1s;
   overflow: hidden;
 }
 
+// ===================
+// = Markdown Styles =
+// ===================
+
+.markdown img {
+  max-width: 100%;
+}
+
 // ===============================
 // = Temporary Hacktacular Hacks =
 // ===============================
