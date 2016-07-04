@@ -31,7 +31,8 @@ const Chapter = React.createClass({
     const user = await authorize();
     if (user) {
       this.databaseReferences = currentChapter.items.map((learningItem) => {
-        const ref = database.child('responses').child(`${user.uid}|${learningItem.id}`)
+        const ref = database.child('responses')
+          .child(`${user.uid}|${currentChapter.number}|${learningItem.id}`);
 
         // Update the local data whenever it updates in the db
         ref.on('value', (snapshot) => {

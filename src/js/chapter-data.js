@@ -1,3 +1,6 @@
+import uniq from 'lodash/uniq';
+import flattenDeep from 'lodash/flattenDeep';
+
 const data = [{
   number: 1,
   title: 'Food: Where Does It Come From?',
@@ -118,7 +121,7 @@ const data = [{
       wordCloudImagePath: '/prefab-word-clouds/research-wordcloud5.png'
     }
   }, {
-    id: 'herbivore,-carnivore,-omnivore',
+    id: 'herbivore-carnivore-omnivore',
     kind: 'video',
     time: 2,
     title: 'Herbivore, Carnivore, Omnivore',
@@ -220,8 +223,8 @@ const data = [{
     title: 'Balanced Diet',
     instructions: 'Which foods should we eat more of, and which should we eat less?',
     videoId: 'n-q8-f2unHY'
-  },,{
-    id: 'and-finally-...',
+  },{
+    id: 'and-finally',
     kind: 'video',
     time: 1,
     title: 'And finally ...',
@@ -367,17 +370,17 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-6.jpg',
   title: 'Changes Around Us',
   items: [{
-    id: 'the-train-track-behind-facebook’s-office',
+    id: 'the-train-track-behind-facebooks-office',
     kind: 'video',
     time: 3,
-    title: 'The train track behind facebook’s office',
+    title: 'The train track behind facebook\'s office',
     instructions: 'This video highlights how expansion causes train tracks to buckle',
     videoId: 'ceJivu4wlM0',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video',
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
   }, {
     id: 'read-and-draw',
@@ -399,7 +402,7 @@ const data = [{
   title: 'Getting To Know Plants',
   // All the times in this item are completely made-up
   items: [{
-    id: 'why-do-plants-produce-flowers?',
+    id: 'why-do-plants-produce-flowers',
     time: 6,
     kind: 'video',
     title: 'Why do plants produce flowers?',
@@ -440,10 +443,10 @@ const data = [{
     instructions: 'Watch to learn more about the hinge joint, the ball and socket joint, ligaments and humility.',
     videoId: 'x4k1JP8LsNY',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video-one',
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
   }, {
     id: 'read-and-draw',
@@ -459,10 +462,10 @@ const data = [{
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'rYiRcrny4vs',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video-two',
     kind: 'textResponse',
     time: 10,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
@@ -470,17 +473,17 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
   items: [{
-    id: 'can-shadows-be-colourful?',
+    id: 'can-shadows-be-colourful',
     kind: 'video',
     time: 3,
     title: 'Can shadows be colourful?',
     instructions: 'Watch this video to learn if a shadow can be blue, green, yellow and other colours.',
     videoId: 'MKW3uUM9xDU',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video',
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter11',
   }, {
     id: 'read-and-draw',
@@ -496,10 +499,10 @@ const data = [{
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'lo9naFiH778',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video-two',
     kind: 'textResponse',
     time: 10,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
@@ -508,7 +511,7 @@ const data = [{
   title: 'Fun With Magnets',
   // All the times in this item are completely made-up
   items: [{
-    id: 'when-do-magnets-misbehave?',
+    id: 'when-do-magnets-misbehave',
     time: 4,
     kind: 'video',
     title: 'When do magnets misbehave?',
@@ -542,17 +545,17 @@ const data = [{
   thumbnailImagePath: '/chapter-thumbnails/chapter-14.jpg',
   title: 'Water',
   items: [{
-    id: 'how-to-convert-seawater-to-drinking-water?',
+    id: 'how-to-convert-seawater-to-drinking-water',
     kind: 'video',
     time: 3,
     title: 'How to convert seawater to drinking water?',
     instructions: 'Watch this video to learn how evaporation helps purify water.',
     videoId: 'yeoN0Pmg_tI',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video-one',
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video here.',
   }, {
     id: 'read-and-draw',
@@ -579,10 +582,10 @@ const data = [{
     instructions: 'What do we breathe in? What do we breathe out? Watch to find out.',
     videoId: 'TA2s6uo_vTQ',
   }, {
-    id: 'let’s-think-about-the-video',
+    id: 'lets-think-about-the-video',
     kind: 'textResponse',
     time: 5,
-    title: 'Let’s think about the video',
+    title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video here.',
   }, {
     id: 'read-and-draw',
@@ -613,7 +616,7 @@ const data = [{
     kind: 'textResponse',
     time: 5,
     title: 'Select a video title',
-    instructions: 'We don’t like the title of this video. If you were to rename the video from its current title “Landfill in Hawaii and New Delhi” to something more appropriate, what would it be? ',
+    instructions: 'We don\'t like the title of this video. If you were to rename the video from its current title “Landfill in Hawaii and New Delhi” to something more appropriate, what would it be?',
   }, {
     id: 'read-and-draw',
     kind: 'imageResponse',
@@ -742,11 +745,19 @@ const data = [{
 
 
 // validate that all data items have ids that are unique
-const learningItems = flattenDeep(data.map(chapter => {
+const learningItems = data.map(chapter => {
   if (!chapter.items) {
     alert(`Catastrophic error in chapter-data.js: chapter ${chapter.number} lacks an items list`);
     throw new Error();
   }
+  
+  const chapterItemIds = chapter.items.map(item => item.id);
+  if (uniq(chapterItemIds).length !== chapterItemIds.length) {
+    alert('Catastrophic error in chapter-data.js: there are two or more ' + 
+      'learning items with the same id! Ids: ' + chapterItemIds.join('\n'));
+    throw new Error();
+  }
+  
   chapter.items.map(item => {
     if (!item.id) {
       alert('Catastrophic error in chapter-data.js: the learning item printed below lack an id. ' +
@@ -758,18 +769,6 @@ const learningItems = flattenDeep(data.map(chapter => {
       throw new Error();
     }
   })
-  
-  return chapter.items;
-}));
-
-
-const learningItemIds = learningItems.map(item => item.id)
-if (uniq(learningItemIds).length !== learningItemIds.length) {
-  alert('Catastrophic error in chapter-data.js: there are two or more ' + 
-    'learning items with the same id! Dumping all the ids');
-  document.write(learningItemIds.sort().join('<br />'));
-  throw new Error();
-}
-
+});
 
 export default data;
