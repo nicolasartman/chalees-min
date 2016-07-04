@@ -13,7 +13,7 @@ root:
       setKey: required indexed string
       itemKey: required indexed string
       kind: required string
-      content: required any
+      content: any
   items:
     .write: isAdmin()
     .read: auth.uid != null
