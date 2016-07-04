@@ -31,10 +31,6 @@ const MultipleChoiceResponse = React.createClass({
       }
     }
     this.props.setResponse(selectedChoices);
-    this.setState({
-      maxMultiselectionReached: this.props.maxSelected > 1 &&
-        selectedChoices.length === this.props.maxSelected
-    });
   },
   isChoiceSelected(choice) {
     return this.props.response && this.props.response.find(
@@ -56,12 +52,15 @@ const MultipleChoiceResponse = React.createClass({
     this.setState({feedback: feedbackItem ? feedbackItem.response : null});
   },
   render() {
+    const maxMultiselectionReached = this.props.maxSelected > 1 &&
+      this.props.response && this.props.response.length >= this.props.maxSelected;
+    
     return (
       <LoginGate>
         <div className="choices">
           {this.props.choices.map((choice) => (
             <button key={choice.id}
-                    disabled={this.state.maxMultiselectionReached && !this.isChoiceSelected(choice)}
+                    disabled={maxMultiselectionReached && !this.isChoiceSelected(choice)}
                     className={'choice' + (this.isChoiceSelected(choice) ? ' selected' : '')}
                     onClick={() => this.toggleChoice(choice)}>
               {choice.text}
