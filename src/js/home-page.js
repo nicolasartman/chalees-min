@@ -6,7 +6,7 @@ import sortBy from 'lodash/sortBy';
 // Clone the chapters since sort mutates the array
 const chapters = sortBy(
   [...chaptersData].filter(chapter => !chapter.hidden),
-  'id'
+  chapter => parseInt(chapter.id, 10)
 );
 
 const HomePage = React.createClass({
