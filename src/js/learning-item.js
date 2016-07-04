@@ -108,6 +108,16 @@ const LearningItem = React.createClass({
         </div>
       </div>
     );
+    
+    // TODO
+    // {cond([
+    //   [() => !this.props.hacks || !this.state.responseSubmitted, () => null],
+    //   [() => this.props.hacks.wordCloudImagePath,
+    //     () => createFakeWordCloudResponse(this.props.hacks.wordCloudImagePath)],
+    //   [() => this.props.hacks.fakePeerResponses,
+    //     () => createFakePeerResponses(this.props.hacks.fakePeerResponses)],
+    // ])()}
+    //
   },
 });
 

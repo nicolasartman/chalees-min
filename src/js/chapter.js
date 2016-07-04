@@ -19,20 +19,19 @@ const Chapter = React.createClass({
     learningItemSaveHandlers: {}
   }),
   componentDidMount: async function () {
-    const chapterNumber = parseInt(this.props.params.id, 10)
     this.setState({
-      chapterId: chapterNumber,
+      chapterId: this.props.params.id,
     });
-    this.initializeSubscriptions(chapterNumber)
+    this.initializeSubscriptions(this.props.params.id)
   },
   async initializeSubscriptions(chapterId) {
     this.databaseReferences = [];
-    const currentChapter = chapters.find(chapter => chapter.number === chapterId);
+    const currentChapter = chapters.find(chapter => chapter.id === chapterId);
     const user = await authorize();
     if (user) {
       this.databaseReferences = currentChapter.items.map((learningItem) => {
         const ref = database.child('responses')
-          .child(`${user.uid}|${currentChapter.number}|${learningItem.id}`);
+          .child(`${user.uid}|${currentChapter.id}|${learningItem.id}`);
 
         // Update the local data whenever it updates in the db
         ref.on('value', (snapshot) => {
@@ -49,7 +48,7 @@ const Chapter = React.createClass({
           const payload = {
             userKey: user.uid,
             itemKey: learningItem.id,
-            setKey: String(currentChapter.number),
+            setKey: String(currentChapter.id),
             kind: learningItem.kind,
             content: studentResponse
           }
@@ -69,7 +68,7 @@ const Chapter = React.createClass({
     this.databaseReferences.map(subscription => subscription.off());
   },
   render() {
-    const currentChapter = chapters.find(chapter => chapter.number === this.state.chapterId);
+    const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId);
     
     return (
       <div>
@@ -77,7 +76,7 @@ const Chapter = React.createClass({
           <div className="pure-g">
             <div className="pure-u-1">
               <h2 style={{textAlign: 'center', marginTop: '2em'}}>
-                Chapter {currentChapter && currentChapter.number}: {currentChapter && currentChapter.title}
+                Chapter {currentChapter && currentChapter.id}: {currentChapter && currentChapter.title}
               </h2>
               {((currentChapter && currentChapter.items) || []).map((item, index) => (
                 <LearningItem

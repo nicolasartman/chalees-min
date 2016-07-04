@@ -1,11 +1,13 @@
 import { Link } from 'react-router';
 import HomepageTile from './homepage-tile.js';
 import chaptersData from './chapter-data.js';
+import sortBy from 'lodash/sortBy';
 
 // Clone the chapters since sort mutates the array
-const chapters = [...chaptersData]
-  .filter(chapter => !chapter.hidden)
-  .sort((chapterA, chapterB) => chapterA.number - chapterB.number);
+const chapters = sortBy(
+  [...chaptersData].filter(chapter => !chapter.hidden),
+  'id'
+);
 
 const HomePage = React.createClass({
   render: function() {
@@ -20,7 +22,7 @@ const HomePage = React.createClass({
 
         <div className="pure-g">
           {chapters.map((chapter, index) => (
-            <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterNumber={chapter.number} title={chapter.title} />
+            <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
           ))}
         </div>
         {this.props.children}

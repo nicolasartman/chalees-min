@@ -2,7 +2,7 @@ import uniq from 'lodash/uniq';
 import flattenDeep from 'lodash/flattenDeep';
 
 const data = [{
-  number: 1,
+  id: '1',
   title: 'Food: Where Does It Come From?',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
   items: [{
@@ -129,7 +129,7 @@ const data = [{
     videoId: 'wjkqIt_H-ko'
   }]
 }, {
-  number: 2,
+  id: '2',
   thumbnailImagePath: '/chapter-thumbnails/chapter-2.jpg',
   title: 'Components Of Food',
   items: [{
@@ -232,7 +232,7 @@ const data = [{
     videoId: '4hHYX2qUJ9U'
   }]
 }, {
-  number: 3,
+  id: '3',
   thumbnailImagePath: '/chapter-thumbnails/chapter-3.jpg',
   title: 'Fibre To Fabric',
   items: [{
@@ -287,7 +287,7 @@ const data = [{
     videoId: '1u2uRhDeQOI',
   }]
 }, {
-  number: 4,
+  id: '4',
   thumbnailImagePath: '/chapter-thumbnails/chapter-4.png',
   title: 'Sorting Materials Into Groups',
   items: [{
@@ -328,7 +328,7 @@ const data = [{
     videoId: 'rgNpbH_4en4',
   }]
 }, {
-  number: 5,
+  id: '5',
   thumbnailImagePath: '/chapter-thumbnails/chapter-5.jpg',
   title: 'Separation of Substances',
   items: [{
@@ -366,7 +366,7 @@ const data = [{
     instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
   }]
 }, {
-  number: 6,
+  id: '6',
   thumbnailImagePath: '/chapter-thumbnails/chapter-6.jpg',
   title: 'Changes Around Us',
   items: [{
@@ -397,7 +397,7 @@ const data = [{
     videoId: 'rYiRcrny4vs',
   }]
 }, {
-  number: 7,
+  id: '7',
   thumbnailImagePath: '/chapter-thumbnails/chapter-7.jpg',
   title: 'Getting To Know Plants',
   // All the times in this item are completely made-up
@@ -432,7 +432,7 @@ const data = [{
     imagePath: '/learning-items/flowers-experiment.jpg'
   }]
 }, {
-  number: 8,
+  id: '8',
   thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
   title: 'Body Movements',
   items: [{
@@ -469,7 +469,7 @@ const data = [{
     instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
-  number: 11,
+  id: '11',
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
   items: [{
@@ -506,7 +506,7 @@ const data = [{
     instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
-  number: 13,
+  id: '13',
   thumbnailImagePath: '/chapter-thumbnails/chapter-13.jpg',
   title: 'Fun With Magnets',
   // All the times in this item are completely made-up
@@ -541,7 +541,7 @@ const data = [{
     imagePath: '/learning-items/13-magnets-experiment.jpg'
   }]
 }, {
-  number: 14,
+  id: '14',
   thumbnailImagePath: '/chapter-thumbnails/chapter-14.jpg',
   title: 'Water',
   items: [{
@@ -571,7 +571,7 @@ const data = [{
     instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
   }]
 }, {
-  number: 15,
+  id: '15',
   thumbnailImagePath: '/chapter-thumbnails/chapter-15.png',
   title: 'Air Around Us',
   items: [{
@@ -601,7 +601,7 @@ const data = [{
     instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
   }]
 }, {
-  number: 16,
+  id: '16',
   thumbnailImagePath: '/chapter-thumbnails/chapter-16.jpg',
   title: 'Garbage In, Garbage Out',
   items: [{
@@ -633,7 +633,7 @@ const data = [{
 }, {
   // causes it to not show up on the homepage
   hidden: true,
-  number: 999,
+  id: '999',
   thumbnailImagePath: '/chalees-min-heart.png',
   title: 'Test lesson',
   items: [{
@@ -747,7 +747,7 @@ const data = [{
 // validate that all data items have ids that are unique
 const learningItems = data.map(chapter => {
   if (!chapter.items) {
-    alert(`Catastrophic error in chapter-data.js: chapter ${chapter.number} lacks an items list`);
+    alert(`Catastrophic error in chapter-data.js: chapter ${chapter.id} lacks an items list`);
     throw new Error();
   }
   

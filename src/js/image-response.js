@@ -93,9 +93,6 @@ const ImageResponse = React.createClass({
             {message}
           </Dropzone>
         </LoginGate>
-        <div>
-          <button style={{marginTop: '1em'}} className="pure-button" onClick={this.onSave} disabled={this.state.isUploading}>{this.state.isUploading ? 'Uploading' : 'Save'}</button>
-        </div>
         {uploadedImage}
       </div>
     )
