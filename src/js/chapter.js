@@ -32,18 +32,22 @@ const Chapter = React.createClass({
         const ref = database.child('responses')
           .child(`${user.uid}|${currentChapter.id}|${learningItem.id}`);
 
+        const updateLearningItemState = (learningItemId, newLearningItemResponse) => {
+          this.setState((state) => {
+            state.learningItemResponses[learningItemId] = newLearningItemResponse || null;
+            return state;
+          });          
+        };
+        
         // Update the local data whenever it updates in the db
         ref.on('value', (snapshot) => {
           console.log('=======Firebase state update', snapshot.val());
-          this.setState((state) => {
-            const {content: learningItemResponse} = snapshot.val();
-            state.learningItemResponses[learningItem.id] = learningItemResponse || null;
-            return state;
-          })         
+          const updatedLearningItem = snapshot.val();
+          updateLearningItemState(updatedLearningItem.itemKey, updatedLearningItem.content)
         }); 
             
         // Create simple save handlers for the items with pre-filled item-specific data
-        const saveHandler = studentResponse => {
+        const saveHandler = (studentResponse) => {
           const payload = {
             userKey: user.uid,
             itemKey: learningItem.id,
@@ -51,7 +55,13 @@ const Chapter = React.createClass({
             kind: learningItem.kind,
             content: studentResponse
           }
-          return ref.set(payload);
+          const resultPromise = ref.set(payload);
+
+          // Firebase doesn't emit events for the client's own set operations, so we have
+          // to do the update manually
+          updateLearningItemState(learningItem.id, studentResponse);
+
+          return resultPromise;
         }
         this.setState((previousState) => {
           const newState = previousState;
