@@ -2,7 +2,6 @@ import Dropzone from 'react-dropzone';
 import uuid from 'node-uuid';
 import * as uploader from './uploader.js';
 import {authorize} from './auth.js';
-import * as data from './data';
 import LoginGate from './login-gate.js';
 import storage from './storage.js';
 import cond from 'lodash/fp/cond';

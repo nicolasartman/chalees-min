@@ -1,7 +1,6 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {Provider} from 'react-redux';
 import * as auth from './auth.js';
-import * as data from './data.js';
 import * as reactions from './reactions/reactions.js';
 import getStore from './get-store.js';
 // import {DevTools, DebugPanel, LogMonitor} from 'redux-devtools';

@@ -1,5 +1,4 @@
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import * as data from './data.js';
 import styles from './style-constants.js';
 import * as actions from './actions/actions.js';
 import LoginGate from './login-gate.js';
@@ -36,9 +35,6 @@ const TextResponse = React.createClass({
   },
   componentDidMount() {
     this.props.allowSaving();
-    this.props.addBeforeSaveHook(() => {
-      console.log('before save hook fired');
-    });
   },
   render: function () {
     const createFakePeerResponses = (fakePeerResponses) => (

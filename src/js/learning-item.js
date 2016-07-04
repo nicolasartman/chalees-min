@@ -56,6 +56,9 @@ const LearningItem = React.createClass({
   addBeforeSaveHook(handler) {
     this.setState({handleBeforeSaveAction: handler});
   },
+  addAfterSaveHook(handler) {
+    this.setState({handleAfterSave: handler});
+  },
   displaySaveResultMessage(recentSaveStatus) {
     window.clearTimeout(this.saveResultMessageTimeout);
     this.setState({recentSaveStatus});
@@ -73,15 +76,19 @@ const LearningItem = React.createClass({
       
       if (saveStatus === 'failure' && result) {
         console.error('Save failed with error', result);
+        return Promise.reject(result);
+      } else {
+        return result;
       }
     };
     
     const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
+    const handleAfterSave = this.state.handleAfterSave || identity;
     
     // If a before-save hook was provided and returned a result, use that as the
     // new response and update the state to match, else use the current state.response
     // value
-    return Promise.resolve(handleBeforeSaveAction())
+    const savePromise = Promise.resolve(handleBeforeSaveAction())
       .then((beforeSaveHookResult) => {
         this.setSaveButtonLabel('Saving...');
         if (beforeSaveHookResult) {
@@ -90,6 +97,9 @@ const LearningItem = React.createClass({
         return this.props.handleSave(beforeSaveHookResult || this.state.response);
       })
       .then(createSaveCompletionHandler('success'), createSaveCompletionHandler('failure'));
+    
+    // Allow learning items to run additional processing in response to the save completing
+    handleAfterSave(savePromise);
   },
   render() {
     const props = this.props;
@@ -103,6 +113,7 @@ const LearningItem = React.createClass({
         allowSaving={this.setAllowSaving}
         setSaveStatusMessage={this.setSaveButtonLabel}
         addBeforeSaveHook={this.addBeforeSaveHook}
+        addAfterSaveHook={this.addAfterSaveHook}
         response={this.state.response} />
     ) : props.children;
     
