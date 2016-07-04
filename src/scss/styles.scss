@@ -518,7 +518,12 @@ $page-transition-duration: 1s;
       color: #AAA;
       border: 2px solid hsl(0, 0, 85%);
     }
-  } 
+  }
+  .multiple-choice-selection-feedback {
+    display: flex;
+    align-items: center;
+//    justify-content: center;
+  }
 }
 
 
