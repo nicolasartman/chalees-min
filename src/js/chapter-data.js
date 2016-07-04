@@ -16,7 +16,7 @@ const data = [{
     // startTime: 10,
   }, {
     id: 'our-foods-journey',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
@@ -141,7 +141,7 @@ const data = [{
     videoId: '8-A37Y4KuN0'
   }, {
     id: 'the-purpose-of-carbohydrates',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 3,
     title: 'The purpose of carbohydrates',
     presenterImagePath: '/instructors/kunal2.jpg',
@@ -299,7 +299,7 @@ const data = [{
     videoId: 'irfJePkITGM',
   }, {
     id: 'suggest-an-idea-for-a-video',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Suggest an idea for a video',
     presenterImagePath: '/instructors/kunal2.jpg',
@@ -638,7 +638,7 @@ const data = [{
   title: 'Test lesson',
   items: [{
     id: 'multiple-choice-example-1',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 2,
     title: 'Multiple Choice Example 1',
     instructions: dedent`
@@ -684,7 +684,7 @@ const data = [{
     ]
   }, {
     id: 'multiple-choice-example-2',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 2,
     title: 'Multiple Choice Example 2',
     instructions: 'Select only one',
@@ -713,7 +713,7 @@ const data = [{
     ]
   }, {
     id: 'multiple-choice-example-3',
-    kind: 'multipleChoice',
+    kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Multiple Choice Example 3',
     instructions: 'Select up to two',

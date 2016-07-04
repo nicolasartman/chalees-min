@@ -12,7 +12,7 @@ import ImageContent from './image-content.js';
 import styleConstants from './style-constants.js';
 
 const kinds = {
-  'multipleChoice': MultipleChoiceResponse,
+  'multipleChoiceResponse': MultipleChoiceResponse,
   'video': VideoInstruction,
   'textResponse': TextResponse,
   'imageResponse': ImageResponse,
