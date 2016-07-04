@@ -2,6 +2,8 @@ import identity from 'lodash/identity';
 import cond from 'lodash/cond';
 import Markdown from './markdown';
 
+import {authorize} from './auth.js';
+
 // The different types of learning item widgets
 import MultipleChoiceResponse from './multiple-choice-response.js';
 import VideoInstruction from './video-instruction.js';
@@ -24,12 +26,20 @@ const LearningItem = React.createClass({
     handleSave: React.PropTypes.func.isRequired,
   },
   getInitialState: () => ({
+    userIsSignedIn: false,
     response: null,
     saveIsEnabled: true,
     saveButtonLabel: 'Save',
   }),
   componentWillReceiveProps(newProps) {
     this.setState({response: newProps.response});
+  },
+  // TODO: add auth check here and disable save if not authed
+  async componentWillMount() {
+    const user = await authorize();
+    if (user) {
+      this.setState({userIsSignedIn: true});
+    }
   },
   setResponse(response) {
     this.setState({response});
@@ -114,7 +124,7 @@ const LearningItem = React.createClass({
       props.presenterImagePath + '?w=34&h=34&auto=format&mask=ellipse';
 
     return (
-      <div className="learning-item">
+      <div className={`learning-item ${this.props.className || ''}`}>
         <div style={{width: '100%'}}>
           <div className="learning-item-header">
             {props.presenterImagePath ? (
@@ -137,7 +147,7 @@ const LearningItem = React.createClass({
           {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
               <button
                 className="pure-button"
-                disabled={!this.state.saveIsEnabled /* TODO: add login criteria */}
+                disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
                 onClick={this.handleSave}
               >
                 {this.state.saveButtonLabel}
