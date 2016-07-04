@@ -31,7 +31,8 @@ const ImageResponse = React.createClass({
   },
   componentDidMount: async function () {
     this.props.allowSaving();
-    this.props.addBeforeSaveHook(() => this.beforeSaveHook());
+    this.props.addBeforeSaveHook(this.beforeSaveHook);
+    this.props.addAfterSaveHook(this.afterSaveHook);
   },
   onDrop: async function ([file]) {
     if (this.state.isUploading) {return;}
@@ -62,16 +63,19 @@ const ImageResponse = React.createClass({
       window.alert('Please choose a picture first');
     }
   },
+  afterSaveHook(savePromise) {
+    savePromise.then(() => this.setState({currentFile: null}));
+  },
   render: function () {
     let image;
-    if (this.props.response) {
-      image = (
-        <img className="pure-img" style={{maxHeight: '100%'}} src={this.props.response} />
-      )
-    } else if (this.state.currentFile) {
+    if (this.state.currentFile) {
       image = (
         <img className="pure-img" style={{maxHeight: '100%'}} src={this.state.currentFile.preview} />
       );
+    } else if (this.props.response) {
+      image = (
+        <img className="pure-img" style={{maxHeight: '100%'}} src={this.props.response} />
+      )
     } else {
       image = (
         <div className="image-upload-message" style={{padding: '0 1.5em', textAlign: 'center'}}>
