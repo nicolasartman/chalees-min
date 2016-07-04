@@ -77,6 +77,10 @@ const Chapter = React.createClass({
   },
   render() {
     const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId);
+    const isChapterComplete = 
+      ((currentChapter && currentChapter.items) || []).filter((item) => (
+        item.kind.endsWith("Response")
+      )).length === Object.keys(this.state.learningItemResponses).length;
     
     return (
       <div>
@@ -92,7 +96,9 @@ const Chapter = React.createClass({
                   key={index}
                   response={this.state.learningItemResponses[item.id]} 
                   handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
-                  {...item} />
+                  isChapterComplete={isChapterComplete}
+                  {...item}
+                />
               ))}
             </div>
           </div>
