@@ -91,6 +91,7 @@
     "lodash": "^4.13.1",
     "lodash.random": "^3.0.0",
     "node-sass": "^3.4.2",
+    "node-uuid": "^1.4.7",
     "openurl": "^1.1.1",
     "pify": "^2.3.0",
     "pinkie-promise": "^2.0.0",

@@ -64,18 +64,31 @@ const LearningItem = React.createClass({
   },
   handleSave() {
     this.disableSave();
-    this.setSaveButtonLabel('Saving...');
     this.setState({recentSaveStatus: null});
 
-    const createSaveCompletionHandler = (saveStatus) => () => {
+    const createSaveCompletionHandler = (saveStatus) => (result) => {
       this.enableSave();
       this.setSaveButtonLabel('Save');
       this.displaySaveResultMessage(saveStatus);
+      
+      if (saveStatus === 'failure' && result) {
+        console.error('Save failed with error', result);
+      }
     };
     
     const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
+    
+    // If a before-save hook was provided and returned a result, use that as the
+    // new response and update the state to match, else use the current state.response
+    // value
     return Promise.resolve(handleBeforeSaveAction())
-      .then(() => this.props.handleSave(this.state.response))
+      .then((beforeSaveHookResult) => {
+        this.setSaveButtonLabel('Saving...');
+        if (beforeSaveHookResult) {
+          this.setState({response: beforeSaveHookResult})
+        }
+        return this.props.handleSave(beforeSaveHookResult || this.state.response);
+      })
       .then(createSaveCompletionHandler('success'), createSaveCompletionHandler('failure'));
   },
   render() {
@@ -88,6 +101,7 @@ const LearningItem = React.createClass({
         disableSave={this.disableSave}
         setResponse={this.setResponse}
         allowSaving={this.setAllowSaving}
+        setSaveStatusMessage={this.setSaveButtonLabel}
         addBeforeSaveHook={this.addBeforeSaveHook}
         response={this.state.response} />
     ) : props.children;

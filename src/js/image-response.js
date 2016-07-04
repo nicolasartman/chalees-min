@@ -1,9 +1,11 @@
-import React from 'react';
 import Dropzone from 'react-dropzone';
+import uuid from 'node-uuid';
 import * as uploader from './uploader.js';
-import * as auth from './auth.js';
+import {authorize} from './auth.js';
 import * as data from './data';
 import LoginGate from './login-gate.js';
+import storage from './storage.js';
+import cond from 'lodash/fp/cond';
 
 const style = {
   width: '100%',
@@ -29,14 +31,8 @@ const ImageResponse = React.createClass({
     };
   },
   componentDidMount: async function () {
-    // Only enable the buttons if the user is logged in
-    await auth.authorize();
-    this.setState({isSignedIn: true});
-  },
-  componentWillReceiveProps: function (newProps) {
-    if (newProps.response !== this.props.uploadedImageUrl) {
-      this.setState({uploadedImageUrl: newProps.response})
-    }
+    this.props.allowSaving();
+    this.props.addBeforeSaveHook(() => this.beforeSaveHook());
   },
   onDrop: async function ([file]) {
     if (this.state.isUploading) {return;}
@@ -45,38 +41,40 @@ const ImageResponse = React.createClass({
       this.setState({currentFile: file});
     }
   },
-  onSave: async function () {
-    if (this.state.currentFile) {
-      this.setState({isUploading: true})
-      // const uploadedImageUrl = await uploader.uploadFile(this.state.currentFile);
-      // console.log('image upload url', uploadedImageUrl);
+  async beforeSaveHook() {
+    const file = this.state.currentFile
+    if (file) {
+      this.props.setSaveStatusMessage('Uploading...');
+      this.setState({isUploading: true});
       
-      // TEMP
+      const user = await authorize();
+      const ref = storage.child(`${user.uid}|${uuid.v4()}`);
+      const uploadTask = ref.put(file);
       
-      return;
-      // TODO: save to firebase
-      this.setState({
-        uploadedImageUrl: uploadedImageUrl,
-        isUploading: false,
-        currentFile: null
+      // Perform the image upload
+      return new Promise((resolve, reject) => {
+        uploadTask.on('state_changed', () => {}, error => {
+          reject(error);
+        }, () => {
+          resolve(uploadTask.snapshot.downloadURL);
+        })
       });
-    
-      // data.set({
-      //   [this.props.itemId]: uploadedImageUrl
-      // });
     } else {
-      window.alert('Please choose your image first');
-      // TODO: turn this into a modal or something?
+      window.alert('Please choose a picture first');
     }
   },
   render: function () {
-    let message;
-    if (this.state.currentFile) {
-      message = (
+    let image;
+    if (this.props.response) {
+      image = (
+        <img className="pure-img" style={{maxHeight: '100%'}} src={this.props.response} />
+      )
+    } else if (this.state.currentFile) {
+      image = (
         <img className="pure-img" style={{maxHeight: '100%'}} src={this.state.currentFile.preview} />
       );
     } else {
-      message = (
+      image = (
         <div className="image-upload-message" style={{padding: '0 1.5em', textAlign: 'center'}}>
           Drag and drop a picture here or click/tap here to pick one
         </div>
@@ -90,10 +88,9 @@ const ImageResponse = React.createClass({
       <div>
         <LoginGate>
           <Dropzone className="image-upload-dropzone" onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
-            {message}
-          </Dropzone>
+            {image}
+          </Dropzone>        
         </LoginGate>
-        {uploadedImage}
       </div>
     )
   }
