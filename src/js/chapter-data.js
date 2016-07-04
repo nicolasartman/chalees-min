@@ -66,7 +66,6 @@ const data = [{
     kind: 'imageResponse',
     time: 10,
     title: 'Draw what you have learned',
-    // @KUNAL: here's how to add an image
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Use a _pen and paper_ to draw a picture that shows what you have learned from the video above. 
@@ -74,7 +73,11 @@ const data = [{
     Then take a picture of the drawing from your phone and share it here.`,
     // @NICK: This needs to be tested
     hacks: {
-      imageResponseFeedback: '/image-response-feedback/dl-where-food-comes-from.jpg'
+      afterBody: {
+        show: 'ifResponse',
+        preface: 'Here is an image that ??????',
+        feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
+      }
     }
   }, {
     id: 'pick-a-question-to-investigate',
@@ -84,32 +87,36 @@ const data = [{
     title: 'Pick a question to investigate',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    At the end of the video, we present a few questions for you to think about. Here they are again:
-    - Where does water come from?
-    - Where does petrol come from?
-    - Where does snot come from?
+      At the end of the video, we present a few questions for you to think about. Here they are again:
+      - Where does water come from?
+      - Where does petrol come from?
+      - Where does snot come from?
         
-    Select a question you want to think about more. You can pick from the list above or think of a new question of your own.
+      Select a question you want to think about more. You can pick from the list above or think of a new question of your own.
         
-    Then write it in the box below.`,
+      Then write it in the box below.`,
     hacks: {
-      fakePeerResponses: [
-        {
-          studentName: 'Sid',
-          imagePath: '/fake-responses/sid.png',
-          response: 'Where does TV come from?'
-        },
-        {
-          studentName: 'Prabsimar',
-          imagePath: '/fake-responses/prabsimar.png',
-          response: 'Where does cheese come from?'
-        },
-        {
-          studentName: 'Koushiki',
-          imagePath: '/fake-responses/koushiki.png',
-          response: 'Where do books come from?'
-        }
-      ]
+      afterBody: {
+        preface: 'Here are some thoughts your fellow learners shared',
+        show: 'ifResponse',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Where does TV come from?'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Where does cheese come from?'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'Where do books come from?'
+          }
+        ]        
+      }
     }
   }, {
     id: 'plan-your-own-research',
@@ -122,7 +129,11 @@ const data = [{
 
     Write down who you plan to talk to, what websites you plan to visit.`,
     hacks: {
-      wordCloudImagePath: '/prefab-word-clouds/research-wordcloud5.png'
+      afterBody: {
+        preface: 'Here is a word cloud with common words other learners used to describe their plans.',
+        show: 'ifResponse',
+        feedbackImagePath: '/prefab-word-clouds/research-wordcloud5.png',
+      }
     }
   }, {
     id: 'herbivore-carnivore-omnivore',
@@ -197,18 +208,22 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Summarize what you have learned in the video above in 140 characters; then tweet it with #chapter2',
     hacks: {
-      fakePeerResponses: [
-        {
-          studentName: 'Prabsimar',
-          imagePath: '/fake-responses/prabsimar.png',
-          response: 'Carbs give energy. they are in bread, beans, fruits and veggies. can of soda has 39g; love nimbu pani; dietary fibre eases poop #chapter2'
-        },
-        {
-          studentName: 'Koushiki',
-          imagePath: '/fake-responses/koushiki.png',
-          response: 'Ceres is goddess of grain. Grains have carbohydrates. Carbohydrates provide energy. Energy is good. Love the dance at the end #chapter2'
-        }
-      ]
+      afterBody: {
+        preface: 'Here are some tweets from your fellow learners!',
+        show: 'ifResponse',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Carbs give energy. they are in bread, beans, fruits and veggies. can of soda has 39g; love nimbu pani; dietary fibre eases poop #chapter2'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'Ceres is goddess of grain. Grains have carbohydrates. Carbohydrates provide energy. Energy is good. Love the dance at the end #chapter2'
+          }
+        ]
+      }
     }
   }, {
     id: 'read-and-draw',
@@ -222,7 +237,11 @@ const data = [{
     Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
     // @NICK: This needs to be tested
     hacks: {
-      imageResponseFeedback: '/image-response-feedback/dl-components-of-food.jpeg'
+      afterBody: {
+        preface: 'Check out this illustration of the many components of food and their uses.',
+        show: 'ifResponse',
+        feedbackImagePath: '/image-response-feedback/dl-components-of-food.jpeg',
+      }
     }
   },{
     id: 'balanced-diet',
@@ -261,13 +280,17 @@ const data = [{
 
       Tell us about that time. What were you learning? What was difficult about that time? Who helped you?`,
     hacks: {
-      fakePeerResponses: [
-        {
-          studentName: 'Prabsimar',
-          imagePath: '/fake-responses/prabsimar.png',
-          response: 'Dance was really difficult for me at first. I knew I liked it, but I was concerned about how people would judge me. But after a few times of dancing on stage, I realized that I really loved it. I am glad I am still dancing today. It is so much fun.'
-        }
-      ]
+      afterBody: {
+        preface: 'Here is a story one of your fellow learners shared:',
+        show: 'ifResponse',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Dance was really difficult for me at first. I knew I liked it, but I was concerned about how people would judge me. But after a few times of dancing on stage, I realized that I really loved it. I am glad I am still dancing today. It is so much fun.'
+          }
+        ],
+      }
     }
   }, {
     id: 'cottons-journey',
@@ -292,9 +315,12 @@ const data = [{
     title: 'Draw what you have learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.',
-    // @NICK: This needs to be tested
     hacks: {
-      imageResponseFeedback: '/image-response-feedback/dl-fibre-to-fabric.png'
+      afterBody: {
+        preface: 'Take a look at this comic that shows how fibre goes from cotton in a field into a dress!',
+        show: 'ifResponse',
+        feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'        
+      }
     }    
   }, {
     id: 'singing-the-chapter',
@@ -374,7 +400,11 @@ const data = [{
     Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
     // @NICK: This needs to be tested
     hacks: {
-      imageResponseFeedback: '/image-response-feedback/dl-sorting-materials.jpg'
+      afterBody: {
+        preface: 'Here is a cartoon that shows transparency in a funny way.',
+        show: 'ifResponse',
+        feedbackImagePath: '/image-response-feedback/dl-sorting-materials.jpg'        ,
+      }
     }
   }, {
     id: 'singing-the-chapter',

@@ -92,8 +92,7 @@ const Chapter = React.createClass({
                   key={index}
                   response={this.state.learningItemResponses[item.id]} 
                   handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
-                  {...item}
-                />
+                  {...item} />
               ))}
             </div>
           </div>

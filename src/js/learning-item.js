@@ -1,6 +1,7 @@
 import identity from 'lodash/identity';
-import cond from 'lodash/cond';
+import cond from 'lodash/fp/cond';
 import Markdown from './markdown';
+import getIn from 'lodash/get';
 
 import {authorize} from './auth.js';
 
@@ -10,8 +11,8 @@ import VideoInstruction from './video-instruction.js';
 import TextResponse from './text-response.js';
 import ImageResponse from './image-response.js';
 import ImageContent from './image-content.js';
-
-import styleConstants from './style-constants.js';
+import HackFeedback from './hack-feedback.js';
+import lockIcon from '../images/icons/lock-icon.svg';
 
 const kinds = {
   'multipleChoiceResponse': MultipleChoiceResponse,
@@ -34,7 +35,6 @@ const LearningItem = React.createClass({
   componentWillReceiveProps(newProps) {
     this.setState({response: newProps.response});
   },
-  // TODO: add auth check here and disable save if not authed
   async componentWillMount() {
     const user = await authorize();
     if (user) {
@@ -47,7 +47,7 @@ const LearningItem = React.createClass({
   enableSave() {
     this.setState({saveIsEnabled: true});
   },
-  disableSave() {    
+  disableSave() {
     this.setState({saveIsEnabled: false});
   },
   setSaveButtonLabel(saveButtonLabel) {
@@ -76,7 +76,7 @@ const LearningItem = React.createClass({
       this.enableSave();
       this.setSaveButtonLabel('Save');
       this.displaySaveResultMessage(saveStatus);
-      
+
       if (saveStatus === 'failure' && result) {
         console.error('Save failed with error', result);
         return Promise.reject(result);
@@ -84,10 +84,10 @@ const LearningItem = React.createClass({
         return result;
       }
     };
-    
+
     const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
     const handleAfterSave = this.state.handleAfterSave || identity;
-    
+
     // If a before-save hook was provided and returned a result, use that as the
     // new response and update the state to match, else use the current state.response
     // value
@@ -100,9 +100,30 @@ const LearningItem = React.createClass({
         return this.props.handleSave(beforeSaveHookResult || this.state.response);
       })
       .then(createSaveCompletionHandler('success'), createSaveCompletionHandler('failure'));
-    
+
     // Allow learning items to run additional processing in response to the save completing
     handleAfterSave(savePromise);
+  },
+  createHackFeedback(data, response) {
+    const showBehavior = data && data.show;
+    
+    return cond([
+      [() => showBehavior === 'ifResponse' && response, () => (
+          <HackFeedback data={this.props.hacks.afterBody} />
+      )],
+      [() => showBehavior === 'locked', () => (
+        <div className={response ? '' : 'hack-feedback-lock'}>
+          <HackFeedback data={data} />
+          <div className="hack-feedback-lock-fader">
+            <img src={lockIcon} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
+            Share your thoughts to see more
+          </div>
+        </div>
+      )],
+      [() => data && !showBehavior, () => (
+          <HackFeedback data={data} />
+      )],
+    ])();
   },
   render() {
     const props = this.props;
@@ -119,32 +140,42 @@ const LearningItem = React.createClass({
         addAfterSaveHook={this.addAfterSaveHook}
         response={this.state.response} />
     ) : props.children;
-    
+
     const presenterImageUrl = 'https://chalees-min.imgix.net' +
       props.presenterImagePath + '?w=34&h=34&auto=format&mask=ellipse';
 
     return (
       <div className={`learning-item ${this.props.className || ''}`}>
         <div style={{width: '100%'}}>
-          <div className="learning-item-header">
-            {props.presenterImagePath ? (
-              <img style={{marginRight: 15, width: 'auto', height: '100%', minWidth: 34}} src={presenterImageUrl} srcSet={presenterImageUrl + '&dpr=2 2x'} />
-            ) : null}
-            <div style={{width: '100%'}}>
-              <h3 style={{margin: 0}}>{props.title}</h3>
-            </div>
-            <div className="learning-item-time">
-              <div style={{fontWeight: 'bold', marginRight: '0.25em'}}>
-                {props.time}
+          <div className="learning-item-section">
+            {/* Header and instructions */}
+            <div className="learning-item-header">
+              {props.presenterImagePath ? (
+                <img style={{marginRight: 15, width: 'auto', height: '100%', minWidth: 34}} src={presenterImageUrl} srcSet={presenterImageUrl + '&dpr=2 2x'} />
+              ) : null}
+              <div style={{width: '100%'}}>
+                <h3 style={{margin: 0}}>{props.title}</h3>
               </div>
-              <div>
-                Min
+              <div className="learning-item-time">
+                <div style={{fontWeight: 'bold', marginRight: '0.25em'}}>
+                  {props.time}
+                </div>
+                <div>
+                  Min
+                </div>
               </div>
             </div>
-          </div>
-          <Markdown source={props.instructions} />
-          {content}
-          {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
+            <Markdown source={props.instructions} />
+                    
+            <div className="hack-feedback-container hack-feedback-before-body">
+              {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
+            </div>
+
+            {/* Learning item body */}
+            {content}
+          
+            {/* Save button */}
+            {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
               <button
                 className="pure-button"
                 disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
@@ -163,20 +194,15 @@ const LearningItem = React.createClass({
                   )],
                 ])()}
               </span>
-          </div>)}
+            </div>)}
+          </div>
+          
+          <div className="hack-feedback-container hack-feedback-after-body">
+            {this.createHackFeedback(this.props.hacks && this.props.hacks.afterBody, this.props.response)}
+          </div>
         </div>
       </div>
     );
-    
-    // TODO
-    // {cond([
-    //   [() => !this.props.hacks || !this.state.responseSubmitted, () => null],
-    //   [() => this.props.hacks.wordCloudImagePath,
-    //     () => createFakeWordCloudResponse(this.props.hacks.wordCloudImagePath)],
-    //   [() => this.props.hacks.fakePeerResponses,
-    //     () => createFakePeerResponses(this.props.hacks.fakePeerResponses)],
-    // ])()}
-    //
   },
 });
 
