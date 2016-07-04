@@ -50,7 +50,7 @@ const data = [{
       },
       {
         answerSet: ['opt2'],
-        response: 'Correct. Our food does not go through the bank. It would be weird if it did.'
+        response: '__Correct__. Our food does not go through the bank. It would be weird if it did.'
       },
       {
         answerSet: ['opt3'],
@@ -253,8 +253,14 @@ const data = [{
 
       Tell us about that time. What were you learning? What was difficult about that time? Who helped you?`,
     hacks: {
-      wordCloudImagePath: '/prefab-word-clouds/test-cloud.png'
-    },
+      fakePeerResponses: [
+        {
+          studentName: 'Prabsimar',
+          imagePath: '/fake-responses/prabsimar.png',
+          response: 'Dance was really difficult for me at first. I knew I liked it, but I was concerned about how people would judge me. But after a few times of dancing on stage, I realized that I really loved it. I am glad I am still dancing today. It is so much fun.'
+        }
+      ]
+    }
   }, {
     id: 'cottons-journey',
     time: 5,
@@ -308,7 +314,42 @@ const data = [{
     Tell us a topic from this chapter that is interesting to you. 
 
     We will collect responses from all students taking this quiz, and then make a video on one of those topics.`,
-    choices: ['Appearance', 'Hardness', 'Solubility', 'Transparency']
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Appearance'
+      },
+      {
+        id: 'opt2',
+        text: 'Hardness'
+      },
+      {
+        id: 'opt3',
+        text: 'Solubility'
+      },
+      {
+        id: 'opt4',
+        text: 'Transparency'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Thank you. We will collect all student responses and make a video on the most popular choice.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Thank you. We will collect all student responses and make a video on the most popular choice.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Thank you. We will collect all student responses and make a video on the most popular choice.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Thank you. We will collect all student responses and make a video on the most popular choice.'
+      }
+    ]
   }, {
     id: 'read-and-draw',
     kind: 'imageResponse',
@@ -340,28 +381,32 @@ const data = [{
     videoId: 'mBoJ3Y3S4VE',
   }, {
     id: 'summarize-what-you-have-learned',
-    kind: 'imageResponse',
+    kind: 'textResponse',
     time: 15,
+    presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Summarize what you have learned',
-    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned from this video. Then take a picture of it and upload it here.',
+    instructions: 'Summarize the video above in your own words here.',
   }, {
     id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
+    presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Read and Draw',
     instructions: dedent`
     From your textbook, read any 3 sections from the following list
-    — Threshing
+    - Threshing
     - Winnowing
     - Sieving
     - Sedimentation
     - Decantation
     - Filteration
-    Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it below.`,
+
+    Then use a pen and paper to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it below.`,
   }, {
     id: 'making-a-test',
     kind: 'textResponse',
     time: 5,
+    presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Making a test',
     instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
   }]
@@ -379,6 +424,7 @@ const data = [{
   }, {
     id: 'lets-think-about-the-video',
     kind: 'textResponse',
+    short: true,    
     time: 5,
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
@@ -387,7 +433,10 @@ const data = [{
     kind: 'imageResponse',
     time: 15,
     title: 'Read and Draw',
-    instructions: 'From your textbook, read the section 6.2, “Could there be other ways to bring changes”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+    instructions: dedent`
+    From your textbook, read the section 6.2, _Could there be other ways to bring a change_. 
+
+    Then use a pen and paper to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.`,
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
