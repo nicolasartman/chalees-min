@@ -484,6 +484,7 @@ $page-transition-duration: 1s;
 // = Utility =
 // ===========
 
+// Responsive
 @include media-phone {
   .hidden-xs {
     display: none !important;
@@ -514,6 +515,20 @@ $page-transition-duration: 1s;
   }
 }
 
+// Layout
+.content-vertical-center {
+  display: flex;
+  align-items: center;
+}
+.content-horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 // =================
 // = Button Styles =

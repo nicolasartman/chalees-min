@@ -1,4 +1,6 @@
 import Markdown from 'react-markdown';
+import identity from 'lodash/identity';
+import cond from 'lodash/cond';
 
 // The different types of learning item widgets
 import MultipleChoiceResponse from './multiple-choice-response.js';
@@ -48,15 +50,33 @@ const LearningItem = React.createClass({
   setSaveButtonLabel(saveButtonLabel) {
     this.setState({saveButtonLabel});
   },
+  setAllowSaving() {
+    this.setState({shouldAllowSaving: true});
+  },
+  addBeforeSaveHook(handler) {
+    this.setState({handleBeforeSaveAction: handler});
+  },
+  displaySaveResultMessage(recentSaveStatus) {
+    window.clearTimeout(this.saveResultMessageTimeout);
+    this.setState({recentSaveStatus});
+    this.saveResultMessageTimeout = window.setTimeout(
+      () => this.setState({recentSaveStatus: null}), 2500);
+  },
   handleSave() {
     this.disableSave();
     this.setSaveButtonLabel('Saving...');
-    const handleSaveCompletion = () => {
+    this.setState({recentSaveStatus: null});
+
+    const createSaveCompletionHandler = (saveStatus) => () => {
       this.enableSave();
       this.setSaveButtonLabel('Save');
-    }
-    return this.props.handleSave(this.state.response)
-      .then(handleSaveCompletion, handleSaveCompletion);
+      this.displaySaveResultMessage(saveStatus);
+    };
+    
+    const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
+    return Promise.resolve(handleBeforeSaveAction())
+      .then(() => this.props.handleSave(this.state.response))
+      .then(createSaveCompletionHandler('success'), createSaveCompletionHandler('failure'));
   },
   render() {
     const props = this.props;
@@ -67,6 +87,8 @@ const LearningItem = React.createClass({
         enableSave={this.enableSave}
         disableSave={this.disableSave}
         setResponse={this.setResponse}
+        allowSaving={this.setAllowSaving}
+        addBeforeSaveHook={this.addBeforeSaveHook}
         response={this.state.response} />
     ) : props.children;
     
@@ -94,17 +116,26 @@ const LearningItem = React.createClass({
           </div>
           <Markdown source={props.instructions || ''} renderers={{'Link': linkRenderer}}/>
           {content}
-          <div>
+          {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
               <button
                 className="pure-button"
-                style={{marginTop: 15}}
                 disabled={!this.state.saveIsEnabled /* TODO: add login criteria */}
                 onClick={this.handleSave}
               >
                 {this.state.saveButtonLabel}
               </button>
-          </div>
-          
+              <span style={{marginLeft: '15px'}}>
+                {cond([
+                  [() => !this.state.recentSaveStatus, () => null],
+                  [() => this.state.recentSaveStatus === 'success', () => (
+                    <span>Saved successfully!</span>
+                  )],
+                  [() => this.state.recentSaveStatus === 'failure', () => (
+                    <span>Save failed, please try again.</span>
+                  )],
+                ])()}
+              </span>
+          </div>)}
         </div>
       </div>
     );

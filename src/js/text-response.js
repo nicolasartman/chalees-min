@@ -34,6 +34,12 @@ const TextResponse = React.createClass({
   onChange: function (event) {
     this.props.setResponse(event.target.value);
   },
+  componentDidMount() {
+    this.props.allowSaving();
+    this.props.addBeforeSaveHook(() => {
+      console.log('before save hook fired');
+    });
+  },
   render: function () {
     const createFakePeerResponses = (fakePeerResponses) => (
       <div style={{marginTop: '1.5em'}}>
