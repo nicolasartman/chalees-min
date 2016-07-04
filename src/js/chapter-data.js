@@ -71,7 +71,11 @@ const data = [{
     instructions: dedent`
     Use a _pen and paper_ to draw a picture that shows what you have learned from the video above. 
 
-    Then take a picture of the drawing from your phone and share it here.`
+    Then take a picture of the drawing from your phone and share it here.`,
+    // @NICK: This needs to be tested
+    hacks: {
+      imageResponseFeedback: '/image-response-feedback/dl-where-food-comes-from.jpg'
+    }
   }, {
     id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
@@ -216,6 +220,10 @@ const data = [{
     From your textbook, read the section 2.2, _What Do Various Nutrients Do For Our Body?_ 
 
     Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
+    // @NICK: This needs to be tested
+    hacks: {
+      imageResponseFeedback: '/image-response-feedback/dl-components-of-food.jpeg'
+    }
   },{
     id: 'balanced-diet',
     kind: 'video',
@@ -283,7 +291,11 @@ const data = [{
     time: 10,
     title: 'Draw what you have learned',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.'
+    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.',
+    // @NICK: This needs to be tested
+    hacks: {
+      imageResponseFeedback: '/image-response-feedback/dl-fibre-to-fabric.png'
+    }    
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
@@ -359,7 +371,11 @@ const data = [{
     instructions: dedent`
     From your textbook, read the section on _Transparency._ 
 
-    Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`
+    Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
+    // @NICK: This needs to be tested
+    hacks: {
+      imageResponseFeedback: '/image-response-feedback/dl-sorting-materials.jpg'
+    }
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
