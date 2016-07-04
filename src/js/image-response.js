@@ -35,17 +35,18 @@ const ImageResponse = React.createClass({
     this.props.addAfterSaveHook(this.afterSaveHook);
   },
   onDrop: async function ([file]) {
-    if (this.state.isUploading) {return;}
     console.log('dropped', file);
+    if (this.state.isProcessing) {return;}
     if (file && file.name) {
+      this.props.enableSave();
       this.setState({currentFile: file});
     }
   },
   async beforeSaveHook() {
-    const file = this.state.currentFile
+    const file = this.state.currentFile;
     if (file) {
       this.props.setSaveStatusMessage('Uploading...');
-      this.setState({isUploading: true});
+      this.setState({isProcessing: true});
       
       const user = await authorize();
       const ref = storage.child(`${user.uid}|${uuid.v4()}`);
@@ -64,7 +65,13 @@ const ImageResponse = React.createClass({
     }
   },
   afterSaveHook(savePromise) {
-    savePromise.then(() => this.setState({currentFile: null}));
+    savePromise.then(() => {
+      this.setState({
+        currentFile: undefined,
+        isProcessing: false,
+      });
+      this.props.disableSave();
+    })
   },
   render: function () {
     let image;
