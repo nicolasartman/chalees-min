@@ -7,7 +7,6 @@ import VideoInstruction from './video-instruction.js';
 import LearningItem from './learning-item.js';
 import HomePage from './home-page.js';
 import Header from './header.js';
-import * as data from './data.js';
 import chapters from './chapter-data.js';
 import database from './database.js';
 import {authorize} from './auth.js';
@@ -52,7 +51,6 @@ const Chapter = React.createClass({
             kind: learningItem.kind,
             content: studentResponse
           }
-          console.log('firebase payload:', payload);
           return ref.set(payload);
         }
         this.setState((previousState) => {

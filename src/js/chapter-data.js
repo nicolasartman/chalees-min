@@ -754,7 +754,8 @@ const learningItems = data.map(chapter => {
   const chapterItemIds = chapter.items.map(item => item.id);
   if (uniq(chapterItemIds).length !== chapterItemIds.length) {
     alert('Catastrophic error in chapter-data.js: there are two or more ' + 
-      'learning items with the same id! Ids: ' + chapterItemIds.join('\n'));
+      'learning items with the same ids within a single chapter! Ids in this chapter: \n' +
+      chapterItemIds.join('\n'));
     throw new Error();
   }
   
@@ -770,5 +771,7 @@ const learningItems = data.map(chapter => {
     }
   })
 });
+
+// TODO: add automaticResponses id validation too
 
 export default data;
