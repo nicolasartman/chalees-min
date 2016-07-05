@@ -3,7 +3,7 @@ import cond from 'lodash/fp/cond';
 const createFakePeerResponses = (fakePeerResponses) => (
   <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
     {fakePeerResponses.map((fakeResponse, index) => (
-      <li key={index} style={{margin: '1em 1em 0 1em', display: 'flex', alignItems: 'center'}}>
+      <li key={index} className="peer-response">
         <div style={{minWidth: '3em', marginRight: '0.75em'}}>
           <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34&auto=format&mask=ellipse'} className="pure-img"/>
         </div>
