@@ -75,7 +75,7 @@ const data = [{
     hacks: {
       afterBody: {
         show: 'ifResponse',
-        preface: 'Here is an image that ??????',
+        preface: 'Here is a colorful drawing by another learner, showing some of the important places food travels through on its way to our plates!',
         feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
       }
     }
