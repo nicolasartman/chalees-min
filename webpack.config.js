@@ -62,7 +62,7 @@ module.exports = {
   postcss: function () {
     return {
       defaults: [autoprefixer],
-      cleaner:  [autoprefixer({ browsers: ['last 2 versions'] })]
+      cleaner:  [autoprefixer({ browsers: ['last 2 versions', 'iOS >= 7']})]
     };
   },
   // Optimize images for production -- see above, not doing much at this point
