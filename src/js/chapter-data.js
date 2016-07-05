@@ -834,7 +834,54 @@ const data = [{
         id: 'opt5',
         text: 'Option 5'
       }
-    ]
+    ],
+    hacks: {
+      // this can be beforeBody or afterBody - the functionality is identical
+      // except beforebody configurations can't use show: 'locked' (if set to that
+      // they'll simply act like show: 'ifResponse')
+      afterBody: {
+        
+        preface: 'this is the text that prefaces the fake peer data',
+        
+        // can be 'ifResponse', 'locked', or left out to show all the time
+        // 
+        // 'ifResponse' shows it only if there is a saved response for that item
+        // (it does not show while they're typing/selecting but before they've ever
+        // hit save for that item).
+        // 
+        // 'locked' shows a preview of the content and displays a locked message over it
+        // until a response has been saved. after that, the response appears in full.
+        //
+        // setting the value to null or false or leaving it out causes the hack feedback
+        // to be shown all the time.
+        show: 'ifResponse',
+        
+        // you can have either of the following present:
+        
+        // An image to display as the feedback that will be resized to fit the space available
+        feedbackImagePath: '/test.jpg',
+        
+        // a list of fake peer responses, in the same format as below
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Where does TV come from?'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Where does cheese come from?'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'Where do books come from?'
+          }
+        ],
+        
+      }
+    }
   }, {
     locked: true,
     id: 'adorable-kittens',
