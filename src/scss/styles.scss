@@ -365,6 +365,7 @@ $page-transition-duration: 1s;
   border: 1px solid #CCC;
   border-radius: 3px;
   box-shadow: 0px 0px 12px 1px transparentize(black, 0.7);
+  position: relative;
   
   .learning-item-section {
     padding: 1.25em 1.25em;    
@@ -379,6 +380,24 @@ $page-transition-duration: 1s;
   
   &.first-item {
     margin-top: 0;
+  }
+
+  // Locked learning item that requires completion to access;
+  .learning-item-lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+    .learning-item-lock-message {
+      padding: 2em;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 5px;
+      color: white;
+    }
+    z-index: 1000;
   }
 }
 
@@ -397,6 +416,7 @@ $page-transition-duration: 1s;
   justify-content: center;
   background-color: $chalees-purple;
 }
+
 
 
 // Login gate that covers interactive widgets for signed-out users

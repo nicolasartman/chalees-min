@@ -13,6 +13,7 @@ import ImageResponse from './image-response.js';
 import ImageContent from './image-content.js';
 import HackFeedback from './hack-feedback.js';
 import lockIcon from '../images/icons/lock-icon.svg';
+import lockIconInverse from '../images/icons/lock-icon-inverse.svg';
 
 const kinds = {
   'multipleChoiceResponse': MultipleChoiceResponse,
@@ -104,7 +105,7 @@ const LearningItem = React.createClass({
       .then(result => this.handleSaveSuccess(result), error => this.handleSaveFailure(error));
 
     // Allow learning items to run additional processing in response to the save completing
-    handleAfterSave(savePromise).then(() => {}, () => {});
+    Promise.resolve(handleAfterSave(savePromise)).then(() => {}, () => {});
   },
   createHackFeedback(data, response) {
     const showBehavior = data && data.show;
@@ -206,6 +207,14 @@ const LearningItem = React.createClass({
             {this.createHackFeedback(this.props.hacks && this.props.hacks.afterBody, this.props.response)}
           </div>
         </div>
+        {this.props.locked && !this.props.isChapterComplete && (
+          <div className="learning-item-lock content-center">
+            <div className="learning-item-lock-message">
+              <img src={lockIconInverse} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
+              Answer all of the questions in this chapter to view!
+            </div>
+          </div>
+        )}
       </div>
     );
   },

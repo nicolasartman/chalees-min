@@ -835,6 +835,15 @@ const data = [{
         text: 'Option 5'
       }
     ]
+  }, {
+    locked: true,
+    id: 'adorable-kittens',
+    kind: 'video',
+    time: 4,
+    title: 'Adorable Kittens!',
+    instructions: 'Watch these kittens be insanely cute!',
+    videoId: 'OtRRUEs3o0c',
+    startTime: 8
   }]
 }];
 
