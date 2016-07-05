@@ -37,9 +37,11 @@ const ImageResponse = React.createClass({
   onDrop: async function ([file]) {
     console.log('dropped', file);
     if (this.state.isProcessing) {return;}
-    if (file && file.name) {
+    if (file && file.name && file.type && file.type.includes("image")) {
       this.props.enableSave();
       this.setState({currentFile: file});
+    } else {
+      alert("Please make sure to provide a picture!");
     }
   },
   async beforeSaveHook() {
@@ -97,7 +99,15 @@ const ImageResponse = React.createClass({
     return (
       <div>
         <LoginGate>
-          <Dropzone className="image-upload-dropzone" onDrop={this.onDrop} style={style} activeStyle={activeStyle} rejectStyle={rejectStyle} multiple={false}>
+          <Dropzone
+            className="image-upload-dropzone" 
+            onDrop={this.onDrop} 
+            style={style} 
+            activeStyle={activeStyle} 
+            rejectStyle={rejectStyle} 
+            multiple={false}
+            accept="image/*"
+          >
             {image}
           </Dropzone>        
         </LoginGate>
