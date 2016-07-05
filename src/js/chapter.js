@@ -48,6 +48,12 @@ const Chapter = React.createClass({
             
         // Create simple save handlers for the items with pre-filled item-specific data
         const saveHandler = (studentResponse) => {
+          // Don't allow saving null, undefined, empty string, or empty arrays
+          if (studentResponse === undefined || studentResponse === null || studentResponse === '' ||
+            (Array.isArray(studentResponse) && studentResponse.length === 0)) {
+            return Promise.reject({code: 'NO_RESPONSE_GIVEN'});
+          }
+          
           const payload = {
             userKey: user.uid,
             itemKey: learningItem.id,

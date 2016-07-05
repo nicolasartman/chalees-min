@@ -68,22 +68,24 @@ const LearningItem = React.createClass({
     this.saveResultMessageTimeout = window.setTimeout(
       () => this.setState({recentSaveStatus: null}), 2500);
   },
+  handleSaveFinish() {
+    this.enableSave();
+    this.setSaveButtonLabel('Save');    
+  },
+  handleSaveSuccess(result) {
+    this.handleSaveFinish();
+    this.displaySaveResultMessage('success');
+    return result;
+  },
+  handleSaveFailure(error) {
+    console.warn('Save failed with error', error);
+    this.handleSaveFinish();
+    this.displaySaveResultMessage(error);
+    return Promise.reject(error);
+  },
   handleSave() {
     this.disableSave();
     this.setState({recentSaveStatus: null});
-
-    const createSaveCompletionHandler = (saveStatus) => (result) => {
-      this.enableSave();
-      this.setSaveButtonLabel('Save');
-      this.displaySaveResultMessage(saveStatus);
-
-      if (saveStatus === 'failure' && result) {
-        console.error('Save failed with error', result);
-        return Promise.reject(result);
-      } else {
-        return result;
-      }
-    };
 
     const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
     const handleAfterSave = this.state.handleAfterSave || identity;
@@ -99,10 +101,10 @@ const LearningItem = React.createClass({
         }
         return this.props.handleSave(beforeSaveHookResult || this.state.response);
       })
-      .then(createSaveCompletionHandler('success'), createSaveCompletionHandler('failure'));
+      .then(result => this.handleSaveSuccess(result), error => this.handleSaveFailure(error));
 
     // Allow learning items to run additional processing in response to the save completing
-    handleAfterSave(savePromise);
+    handleAfterSave(savePromise).then(() => {}, () => {});
   },
   createHackFeedback(data, response) {
     const showBehavior = data && data.show;
@@ -187,10 +189,13 @@ const LearningItem = React.createClass({
                 {cond([
                   [() => !this.state.recentSaveStatus, () => null],
                   [() => this.state.recentSaveStatus === 'success', () => (
-                    <span>Saved successfully!</span>
+                    <span className="text-success">Saved successfully!</span>
                   )],
-                  [() => this.state.recentSaveStatus === 'failure', () => (
-                    <span>Save failed, please try again.</span>
+                  [() => this.state.recentSaveStatus.code === 'NO_RESPONSE_GIVEN', () => (
+                    <span className="text-error">Please make sure to provide a response</span>
+                  )],
+                  [() => this.state.recentSaveStatus, () => (
+                    <span className="text-error">Save failed, please try again</span>
                   )],
                 ])()}
               </span>

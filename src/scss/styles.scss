@@ -522,7 +522,6 @@ $page-transition-duration: 1s;
   .multiple-choice-selection-feedback {
     display: flex;
     align-items: center;
-//    justify-content: center;
   }
 }
 
@@ -586,6 +585,16 @@ $page-transition-duration: 1s;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// Text
+
+.text-success {
+  color: #3F823E;
+}
+
+.text-error {
+  color: #D95D00;
 }
 
 // =================
