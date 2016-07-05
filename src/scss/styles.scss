@@ -356,6 +356,15 @@ $page-transition-duration: 1s;
 // = Chapter Page Styles =
 // =======================
 
+.chapter-title {
+  text-align: left;
+  margin: 1em 0;
+  
+  @include media-tablet-and-smaller {
+    margin: 20px;
+  }
+}
+
 .learning-item {
   display: flex;
   justify-content: flex-start;
@@ -746,3 +755,4 @@ $page-transition-duration: 1s;
   display: flex;
   align-items: center;
 }
+

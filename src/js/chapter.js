@@ -93,7 +93,7 @@ const Chapter = React.createClass({
         <main id="main" className="container chapter">
           <div className="pure-g">
             <div className="pure-u-1">
-              <h2 style={{textAlign: 'left', margin: '1em 0'}}>
+              <h2 className="chapter-title">
                 <strong>Chapter {currentChapter && currentChapter.id}</strong> &ndash; {currentChapter && currentChapter.title}
               </h2>
               {((currentChapter && currentChapter.items) || []).map((item, index) => (
