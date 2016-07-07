@@ -74,8 +74,8 @@ const data = [{
     // @NICK: This needs to be tested
     hacks: {
       afterBody: {
-        show: 'ifResponse',
-        preface: 'Here is a colorful drawing by another learner, showing some of the important places food travels through on its way to our plates!',
+        //show: 'ifResponse',
+        preface: 'Here is how Koushiki, another student, answered this quiz.',
         feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
       }
     }
@@ -98,7 +98,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here are some thoughts your fellow learners shared',
-        show: 'ifResponse',
+        show: 'locked',
         fakePeerResponses: [
           {
             studentName: 'Sid',
@@ -131,7 +131,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here is a word cloud with common words other learners used to describe their plans.',
-        show: 'ifResponse',
+        show: 'locked',
         feedbackImagePath: '/prefab-word-clouds/research-wordcloud5.png',
       }
     }
@@ -141,7 +141,8 @@ const data = [{
     time: 2,
     title: 'Herbivore, Carnivore, Omnivore',
     instructions: 'Really silly song that will get stuck in your head.',
-    videoId: 'wjkqIt_H-ko'
+    videoId: 'wjkqIt_H-ko',
+    locked: true
   }]
 }, {
   id: '2',
@@ -188,7 +189,7 @@ const data = [{
       },
       {
         answerSet: ['opt2'],
-        response: 'Correct. Carbohydrates are one of the most important sources of energy in our food.'
+        response: '__Correct.__ Carbohydrates are one of the most important sources of energy in our food.'
       },
       {
         answerSet: ['opt3'],
@@ -210,7 +211,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here are some tweets from your fellow learners!',
-        show: 'ifResponse',
+        show: 'locked',
         fakePeerResponses: [
           {
             studentName: 'Prabsimar',
@@ -238,8 +239,8 @@ const data = [{
     // @NICK: This needs to be tested
     hacks: {
       afterBody: {
-        preface: 'Check out this illustration of the many components of food and their uses.',
-        show: 'ifResponse',
+        preface: 'Here is what another student submitted as a response to this question.',
+        show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-components-of-food.jpeg',
       }
     }
@@ -254,9 +255,10 @@ const data = [{
     id: 'and-finally',
     kind: 'video',
     time: 1,
-    title: 'And finally ...',
+    title: 'A Song on Chapter 2',
     instructions: 'Here is a song about Chapter 2, that you can sing on your way to school',
-    videoId: '4hHYX2qUJ9U'
+    videoId: '4hHYX2qUJ9U',
+    locked: true
   }]
 }, {
   id: '3',
@@ -282,7 +284,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here is a story one of your fellow learners shared:',
-        show: 'ifResponse',
+        show: 'locked',
         fakePeerResponses: [
           {
             studentName: 'Prabsimar',
@@ -317,8 +319,8 @@ const data = [{
     instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.',
     hacks: {
       afterBody: {
-        preface: 'Take a look at this comic that shows how fibre goes from cotton in a field into a dress!',
-        show: 'ifResponse',
+        preface: 'Here is a comic that another student in the class submitted.',
+        //show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'        
       }
     }    
@@ -329,6 +331,7 @@ const data = [{
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: '1u2uRhDeQOI',
+    locked: true
   }]
 }, {
   id: '4',
@@ -402,7 +405,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here is a cartoon that shows transparency in a funny way.',
-        show: 'ifResponse',
+        show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-sorting-materials.jpg'        ,
       }
     }
@@ -490,6 +493,7 @@ const data = [{
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'rYiRcrny4vs',
+    locked: true
   }]
 }, {
   id: '7',
