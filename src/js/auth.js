@@ -35,7 +35,7 @@ export async function authorize() {
           }
         }, function onError(error) {
           alert('Error Authenticating. Please let us know about this, thank you!');
-          console.log(error);
+          log(error);
           unsubscribe();
         });
       }      

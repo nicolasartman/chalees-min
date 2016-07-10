@@ -23,6 +23,8 @@ const fileLoaderConfig = {
   name: '[name].hash-[hash:12].[ext]',
   limit: 8192
 };
+const jsProductionLoaders = ['bows', 'babel'];
+const jsDevelopmentLoaders = ['react-hot'].concat(jsProductionLoaders);
 
 module.exports = {
   entry: {
@@ -39,7 +41,7 @@ module.exports = {
       loader: 'json-loader'
     }, {
       test: /\.jsx?$/,
-      loaders: (isProduction ? [] : ['react-hot']).concat('babel-loader'),
+      loaders: (isProduction ? jsProductionLoaders : jsDevelopmentLoaders),
       include: jsSourcePath
     }, {
       test: /\.scss$/,

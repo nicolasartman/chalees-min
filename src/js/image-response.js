@@ -35,7 +35,7 @@ const ImageResponse = React.createClass({
     this.props.addAfterSaveHook(this.afterSaveHook);
   },
   onDrop: async function ([file]) {
-    console.log('dropped', file);
+    log('dropped', file);
     if (this.state.isProcessing) {return;}
     if (file && file.name && file.type && file.type.includes("image")) {
       this.props.enableSave();

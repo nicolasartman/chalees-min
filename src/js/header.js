@@ -12,7 +12,7 @@ const Header = React.createClass({
   getInitialState: () => ({}),
   componentWillMount: async function () {
     const user = await auth.authorize();
-    console.log('MOOOOOOOOOOOOOOOOO', user);
+    log('MOOOOOOOOOOOOOOOOO', user);
     if (user && user.hasOwnProperty('displayName') && !user.displayName) {
       this.setState({name: 'Account'});
     } else if (user) {

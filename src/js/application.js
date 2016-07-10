@@ -26,10 +26,10 @@ const Application = React.createClass({
       this.setState({isLoggedIn: true});
 
       // data.onUpdate((data) => {
-      //   console.log('updated data');
+      //   log('updated data');
       //   this.setState({data: data || {}});
       // });
-      console.log(user);
+      log(user);
       reactions.initialize();
     } catch (error) {
       this.setState({isLoggedIn: false});

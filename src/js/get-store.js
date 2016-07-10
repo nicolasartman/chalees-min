@@ -6,7 +6,7 @@ const actionHandlers = {
 };
 
 const identityReducer = (state = Immutable.Map({}), action) => {
-  console.log('reducer was called', state, state.get('test'), action);
+  log('reducer was called', state, state.get('test'), action);
   
   const actionHandler = actionHandlers[action.type];
   

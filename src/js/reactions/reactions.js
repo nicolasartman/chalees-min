@@ -14,12 +14,12 @@ export function handleTestIncrement() {
 }
 
 export async function initialize() {
-  console.log('initialized reactions');
+  log('initialized reactions');
   const user = await authorize();
   return; // TEMP: TODO: Delete
   const ref = rootRef.child('responses').orderByChild('userKey').equalTo(user.id)
   
-  const handleResponseUpdate = snapshot => console.log(snapshot.val());
+  const handleResponseUpdate = snapshot => log(snapshot.val());
   
   ref.on('child_added', handleResponseUpdate);
   ref.on('child_changed', handleResponseUpdate);

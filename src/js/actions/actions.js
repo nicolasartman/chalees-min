@@ -16,6 +16,6 @@ export async function saveResponse(text) {
     kind: 'textResponse',
     content: text
   };
-  console.log('payload', payload);
+  log('payload', payload);
   return rootRef.child(`responses/${user.uid}|testorama`).set(payload);
 }

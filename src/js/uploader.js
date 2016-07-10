@@ -35,9 +35,9 @@ export async function uploadFile(file) {
   // };
   //
   // return new Promise((resolve, reject) => {
-  //   console.log('file upload in progress...');
+  //   log('file upload in progress...');
   //   bucket.putObject(params, function (error, data) {
-  //     console.log('file upload complete in upload.js', error, data);
+  //     log('file upload complete in upload.js', error, data);
   //     if (error) {reject(error);}
   //     else {
   //       bucket.getSignedUrl('getObject', {

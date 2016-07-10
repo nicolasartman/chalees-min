@@ -41,7 +41,7 @@ const Chapter = React.createClass({
         
         // Update the local data whenever it updates in the db
         ref.on('value', (snapshot) => {
-          console.log('=======Firebase state update', snapshot.val());
+          log('=======Firebase state update', snapshot.val());
           const updatedLearningItem = snapshot.val();
           updateLearningItemState(updatedLearningItem.itemKey, updatedLearningItem.content)
         }); 
