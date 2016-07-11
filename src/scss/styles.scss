@@ -472,7 +472,7 @@ $page-transition-duration: 1s;
     display: none;
   }
   .hack-feedback-lock {
-    $height: 150px;
+    $height: 225px;
     height: $height;
     overflow-y: hidden;
     position: relative;
@@ -480,7 +480,7 @@ $page-transition-duration: 1s;
     .hack-feedback-lock-fader {
       display: block;
       text-align: center;
-      padding-top: $height * 0.7;
+      padding-top: $height * 0.8;
       color: hsl(0, 0, 30%);
       font-style: italic;
       position: absolute;

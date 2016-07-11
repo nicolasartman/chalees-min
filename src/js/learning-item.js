@@ -119,7 +119,7 @@ const LearningItem = React.createClass({
           <HackFeedback data={data} />
           <div className="hack-feedback-lock-fader">
             <img src={lockIcon} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
-            Share your thoughts to see more
+            Answer this quiz to see more
           </div>
         </div>
       )],
