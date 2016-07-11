@@ -85,7 +85,7 @@ const Chapter = React.createClass({
     const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId);
     const isChapterComplete = 
       ((currentChapter && currentChapter.items) || []).filter((item) => (
-        item.kind.endsWith("Response")
+        item.kind.endsWith("Response") && !item.locked
       )).length === Object.keys(this.state.learningItemResponses).length;
     
     return (
