@@ -450,6 +450,10 @@ $page-transition-duration: 1s;
 .hack-feedback-container {
   $section-background-color: #F7F7F7;
   
+  .hack-feedback-preface {
+    display: flex;
+    align-items: flex-start;
+  }
   
   &.hack-feedback-before-body{
     .learning-item-section {
@@ -493,6 +497,12 @@ $page-transition-duration: 1s;
         $section-background-color 80%,
         $section-background-color 100%);
     }
+  }
+  
+  .peer-response {
+    margin: 1em 1em 0 1em;
+    display: flex;
+    align-items: flex-start;
   }
 }
 
@@ -550,7 +560,12 @@ $page-transition-duration: 1s;
   }
   .multiple-choice-selection-feedback {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    
+    // Workaround for the paragraph margins
+    > .markdown > p:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -750,9 +765,4 @@ $page-transition-duration: 1s;
 }
 
 
-.peer-response {
-  margin: 1em 1em 0 1em;
-  display: flex;
-  align-items: center;
-}
 

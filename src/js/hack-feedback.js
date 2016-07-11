@@ -19,7 +19,12 @@ const createFakePeerResponses = (fakePeerResponses) => (
 
 const HackFeedback = ({data}) => (
   <div className="hack-feedback learning-item-section">
-    <div>{data.preface}</div>
+    <div className="hack-feedback-preface">
+      <div style={{minWidth: '42px'}}>
+        <img className="pure-img" src='https://chalees-min.imgix.net/multiple-choice-feedback-instructor.png?w=34&h=34&auto=format&mask=ellipse' />
+      </div>
+      <div>{data.preface}</div>
+    </div>
     {cond([
       [() => data.fakePeerResponses, () => createFakePeerResponses(data.fakePeerResponses)],
       [() => data.feedbackImagePath, () => (
