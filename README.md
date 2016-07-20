@@ -34,3 +34,6 @@ Chalees Min School is supported by the incredible work of many open source devel
 - ![BrowserStack Logo](browserstack-logo.png)
 
   BrowserStack has graciously supported us with their Live and Screenshots features, which allows us to rapidly verify Chalees Min works well across a wide variety of desktop and mobile devices.
+  
+  
+  IGNORE ME!
