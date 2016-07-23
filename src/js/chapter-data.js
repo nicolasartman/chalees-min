@@ -136,6 +136,13 @@ const data = [{
       }
     }
   }, {
+    id: 'grade6-chapter1-song',
+    kind: 'video',
+    time: 3,
+    title: 'Chapter Revision',
+    instructions: 'This song will help you revise the entire chapter.',
+    videoId: 'geHAaWbqz_Q'
+  }, {
     id: 'herbivore-carnivore-omnivore',
     kind: 'video',
     time: 2,
