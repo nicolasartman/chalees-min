@@ -587,7 +587,7 @@ const data = [{
     kind: 'video',
     time: 3,
     title: 'The train track behind facebook\'s office',
-    instructions: 'This video highlights how expansion causes train tracks to buckle',
+    instructions: 'This video highlights how _expansion_ causes train tracks to bend.',
     videoId: 'ceJivu4wlM0',
   }, {
     id: 'lets-think-about-the-video',
@@ -596,15 +596,131 @@ const data = [{
     time: 5,
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
+    hacks: {
+      afterBody: {
+        preface: 'Here are some thoughts your fellow learners shared',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Metals expand on heaing. Not just in the lab but also in our world. #chapter6'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Bridges and train tracks are made of metals which expand on heating. That is reversible. #chapter 6'
+          }
+        ]        
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: dedent`
-    From your textbook, read the section 6.2, _Could there be other ways to bring a change_. 
-
-    Then use a pen and paper to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.`,
+    id: 'reversible-or-not-1',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'I am not sure how you would reverse this. Once a page is burnt, it is burnt.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. This is an irreversible reaction.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Burning a Page. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/page-burning.jpg',
+      }
+    }
+  }, {
+    id: 'reversible-or-not-2',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. You can heat the mixture of salt and water. The water will evaporate leaving the salt behind.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'I think you can reverse this reaction by heating the mixture and evaporating the water.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Mixing salt in water. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/salt-and-water.png',
+      }
+    }
+  }, {
+    id: 'reversible-or-not-3',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Clearly this is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is still a joke question. But then again, once Salman makes a commitment, then that is irreversible.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Salman making a commitment. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/salman-khan.jpeg',
+      }
+    }
+  }, {
+    id: 'metals-expand',
+    kind: 'video',
+    time: 3,
+    title: 'Expansion and Contraction',
+    instructions: 'Watch how a metal expands on heating and contracts on cooling.',
+    videoId: 'tPJLFDekxZA',
+    startTime: 6
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
