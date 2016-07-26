@@ -327,7 +327,7 @@ const data = [{
     hacks: {
       afterBody: {
         preface: 'Here is a comic that another student in the class submitted.',
-        //show: 'locked',
+        show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'        
       }
     }    
@@ -431,40 +431,152 @@ const data = [{
   items: [{
     id: 'how-does-salt-dissolve-in-water',
     kind: 'video',
-    time: 5,
+    time: 6,
     title: 'How does salt dissolve in water',
     instructions: 'This video highlights how salt is made and how it dissolves in water',
     videoId: 'mBoJ3Y3S4VE',
   }, {
+    id: 'process-to-separate-salt-water',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Separating Salt and Water',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which of the following processes is used to separate salt that is dissolved in water?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Threshing'
+      },
+      {
+        id: 'opt2',
+        text: 'Winnowing'
+      },
+      {
+        id: 'opt3',
+        text: 'Evaporation'
+      },
+      {
+        id: 'opt4',
+        text: 'Filtration'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Are you thinking of separating grains of wheat from its stalk (or stem)? That is Threshing.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Think of the phrase Winnowing in the Wind. While that process will separate two mixtures of different weights, it won\'t separate salt that is dissolved in water.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. When water evaporates, it leaves the dissolved salt behind.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'So this option can be confusing. Think about it — salt that is dissolved in water will go right through a sieve or a filter. Thus this option will not work.'
+      }
+    ]
+  }, {
     id: 'summarize-what-you-have-learned',
     kind: 'textResponse',
-    time: 15,
+    time: 10,
     presenterImagePath: '/instructors/kunal2.jpg',
-    title: 'Summarize what you have learned',
-    instructions: 'Summarize the video above in your own words here.',
+    title: 'Summarize the Video',
+    instructions: dedent`
+    You have watched the _How Does Salt Dissolve in Water_ video above. 
+
+    Now, summarize what you have learned by watching that video in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is what Koushiki, one of your fellow students, shared:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            Oh there were so many things to think about here. The first thing I saw was a salt farm. It looks really pretty, and I want to visit it some day. The salt looks like snow from a distance. I also learned that salt is left behind when seawater evaporates.
+
+            We zoomed into water, which is H2O. We also looked at salt which is NaCl. I think when we mix salt and water, we Na and Cl are separated by H and O and that causes salt to dissolve.
+
+            I want to Google to see what happens when we heat up salt and water. 
+
+            Also, sardar maine apka namak khaya hai - totally funny.`
+          }
+        ],
+      }
+    }
   }, {
+    id: 'sedimentation',
+    time: 2,
+    kind: 'image',
+    title: 'Sedimentation',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Our science book defines sedimentation as the following: _When the heavier component in a mixture settles after water is added to it._ 
+
+    To me, that sounds a lot like Marriage. See the comparison below.`,
+    imagePath: '/learning-items/sedimentation-marriage.jpeg'
+  }, {
+    id: 'decantation-movie',
+    time: 2,
+    kind: 'image',
+    title: 'Decantation (through Jab We Met)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    If you saw the movie _Jab We Met_, you probably remember __Hotel Decent__. 
+
+    Change one letter in that hotel name, and you get __Hotel Decant__.
+
+    Decant (or its noun Decantation), means to remove water or liquid without disturbing the sediment. 
+
+    Hopefully this image below will help you remember the definition of Decantation.`,
+    imagePath: '/learning-items/decantation-jab-we-met.jpeg'
+  }, {
+    id: 'Sieving',
+    time: 2,
+    kind: 'image',
+    title: 'Seiving',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Sieving is the process of separating mixtures of different sizes. For instance, sand and stones.
+
+    I made the image below, as a joke, but I think it can help you remember the definition of Sieving. At the risk of making the joke unfunny, here is the meaning of the image below: 
+    
+    _When a goalkeeper prevents a goal, we call it a good Save. That sounds a lot like the word Sieve. So this goalkeeper below, uses Sieves to separate footballs from nets._`,
+    imagePath: '/learning-items/sieving1.jpeg'
+  },{
     id: 'read-and-draw',
     kind: 'imageResponse',
-    time: 15,
+    time: 10,
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Read and Draw',
     instructions: dedent`
-    From your textbook, read any 3 sections from the following list
+    From your science book, read the following sections
     - Threshing
     - Winnowing
-    - Sieving
-    - Sedimentation
-    - Decantation
     - Filteration
 
     Then use a pen and paper to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it below.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'Here is how Koushiki, another student, answered this quiz.',
+        feedbackImagePath: '/image-response-feedback/threshing-winnowing-filtration.jpeg'
+      }
+    }
   }, {
-    id: 'making-a-test',
-    kind: 'textResponse',
-    time: 5,
-    presenterImagePath: '/instructors/kunal2.jpg',
-    title: 'Making a test',
-    instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
+    id: 'singing-chapter-5-class6',
+    kind: 'video',
+    time: 3,
+    title: 'Revising the chapter',
+    instructions: 'Here is a song that will help you revise the chapter.',
+    videoId: 'mXs7LJga60c',
+    locked: true
   }]
 }, {
   id: '6',
@@ -475,7 +587,7 @@ const data = [{
     kind: 'video',
     time: 3,
     title: 'The train track behind facebook\'s office',
-    instructions: 'This video highlights how expansion causes train tracks to buckle',
+    instructions: 'This video highlights how _expansion_ causes train tracks to bend.',
     videoId: 'ceJivu4wlM0',
   }, {
     id: 'lets-think-about-the-video',
@@ -484,15 +596,131 @@ const data = [{
     time: 5,
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
+    hacks: {
+      afterBody: {
+        preface: 'Here are some thoughts your fellow learners shared',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Metals expand on heaing. Not just in the lab but also in our world. #chapter6'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Bridges and train tracks are made of metals which expand on heating. That is reversible. #chapter 6'
+          }
+        ]        
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: dedent`
-    From your textbook, read the section 6.2, _Could there be other ways to bring a change_. 
-
-    Then use a pen and paper to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.`,
+    id: 'reversible-or-not-1',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'I am not sure how you would reverse this. Once a page is burnt, it is burnt.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. This is an irreversible reaction.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Burning a Page. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/page-burning.jpg',
+      }
+    }
+  }, {
+    id: 'reversible-or-not-2',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. You can heat the mixture of salt and water. The water will evaporate leaving the salt behind.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'I think you can reverse this reaction by heating the mixture and evaporating the water.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Mixing salt in water. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/salt-and-water.png',
+      }
+    }
+  }, {
+    id: 'reversible-or-not-3',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Reversible or Irreversible',
+    //instructions: 'Select up to two',
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Reversible'
+      },
+      {
+        id: 'opt2',
+        text: 'Irreversible'
+      }
+    ],
+        automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Clearly this is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is still a joke question. But then again, once Salman makes a commitment, then that is irreversible.'
+      }
+    ],
+    hacks: {
+      beforeBody: {        
+        preface: 'Salman making a commitment. Is it reversible or irreversible?',        
+        feedbackImagePath: '/learning-items/salman-khan.jpeg',
+      }
+    }
+  }, {
+    id: 'metals-expand',
+    kind: 'video',
+    time: 3,
+    title: 'Expansion and Contraction',
+    instructions: 'Watch how a metal expands on heating and contracts on cooling.',
+    videoId: 'tPJLFDekxZA',
+    startTime: 6
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
