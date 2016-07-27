@@ -594,6 +594,7 @@ const data = [{
     kind: 'textResponse',
     short: true,    
     time: 5,
+    presenterImagePath: '/instructors/kunal2.jpg',    
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
     hacks: {
@@ -619,7 +620,12 @@ const data = [{
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Burning a Page. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/page-burning.jpg)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -640,19 +646,18 @@ const data = [{
         answerSet: ['opt2'],
         response: '__Correct__. This is an irreversible reaction.'
       }
-    ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Burning a Page. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/page-burning.jpg',
-      }
-    }
+    ]
   }, {
     id: 'reversible-or-not-2',
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Mixing salt in water. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salt-and-water.png)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -673,19 +678,18 @@ const data = [{
         answerSet: ['opt2'],
         response: 'I think you can reverse this reaction by heating the mixture and evaporating the water.'
       }
-    ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Mixing salt in water. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/salt-and-water.png',
-      }
-    }
+    ]
   }, {
     id: 'reversible-or-not-3',
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Salman making a commitment. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salman-khan.jpeg)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -700,19 +704,13 @@ const data = [{
         automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: 'Clearly this is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
+        response: 'Clearly this question is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
       },
       {
         answerSet: ['opt2'],
-        response: 'This is still a joke question. But then again, once Salman makes a commitment, then that is irreversible.'
+        response: 'This question is still a joke. But then again, once Salman makes a commitment, then that is irreversible.'
       }
     ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Salman making a commitment. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/salman-khan.jpeg',
-      }
-    }
   }, {
     id: 'metals-expand',
     kind: 'video',
