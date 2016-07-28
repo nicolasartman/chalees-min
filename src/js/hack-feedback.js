@@ -8,7 +8,7 @@ const createFakePeerResponses = (fakePeerResponses) => (
           <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34&auto=format&mask=ellipse'} className="pure-img"/>
         </div>
         <div>
-          <span style={{fontStyle: 'italic'}}>{fakeResponse.response}</span>
+          <span style={{fontStyle: 'italic', whiteSpace: 'pre-line'}}>{fakeResponse.response}</span>
           <br />
           &mdash;{fakeResponse.studentName}
         </div>

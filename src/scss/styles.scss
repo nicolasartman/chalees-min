@@ -538,7 +538,6 @@ $page-transition-duration: 1s;
     transition-timing-function: ease;
     margin: 0.5em 0;
     
-    
     @include media-laptop-and-larger {
       flex: 1;
       & + .choice {
