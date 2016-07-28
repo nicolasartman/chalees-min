@@ -299,7 +299,7 @@ $page-transition-duration: 1s;
 // ===================
 
 .homepage-tile {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   
   @include media-phone {
     margin-bottom: 1.5em;
@@ -527,7 +527,7 @@ $page-transition-duration: 1s;
   }
 
   .choice {
-    width: 22.5%;
+    min-width: 22.5%;
     min-height: 8em;
     outline: none;
     background-color: white;
@@ -537,6 +537,14 @@ $page-transition-duration: 1s;
     transition-duration: 0.3s;
     transition-timing-function: ease;
     margin: 0.5em 0;
+    
+    
+    @include media-laptop-and-larger {
+      flex: 1;
+      & + .choice {
+        margin-left: 1em;
+      }      
+    }
 
     @include media-tablet {
       width: 48%;
