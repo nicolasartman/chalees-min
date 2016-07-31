@@ -210,7 +210,8 @@ const LearningItem = React.createClass({
         {this.props.locked && !this.props.isChapterComplete && (
           <div className="learning-item-lock content-center">
             <div className="learning-item-lock-message">
-              <img src={lockIconInverse} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
+              <img src={lockIconInverse} ariaHidden style={{height: '2em', position: 'relative', marginBottom: '0.5em'}}/>
+              <br />
               Answer all of the questions in this chapter to view!
             </div>
           </div>
