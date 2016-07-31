@@ -51,7 +51,7 @@ const Header = React.createClass({
           <ul className="pure-menu-children">
             <li className="pure-menu-item">
               <a href="#" onClick={this.showGoogleLoginPrompt} className="pure-menu-link">
-                <span>Sign In With Google</span>
+                <span>Sign In With GMail (Google)</span>
               </a>
             </li>
             <li className="pure-menu-item">
