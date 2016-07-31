@@ -68,10 +68,10 @@ const MultipleChoiceResponse = React.createClass({
           ))}
         </div>
         {this.state.feedback && (<div className="multiple-choice-selection-feedback">
-          <div style={{minWidth: '42px'}}>
+          <div className="feedback-image" style={{minWidth: '42px'}}>
             <img className="pure-img" src='https://chalees-min.imgix.net/multiple-choice-feedback-instructor.png?w=34&h=34&auto=format&mask=ellipse' />
           </div>
-          <Markdown source={this.state.feedback} />
+          <Markdown className="feedback-text" source={this.state.feedback} />
         </div>)}
       </LoginGate>
     );

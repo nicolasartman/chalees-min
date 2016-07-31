@@ -8,7 +8,7 @@ const linkRenderer = (linkNode) => {
 };
 
 const MarkdownCustomized = (props) => (
-  <Markdown className="markdown" source={props.source || ''} renderers={{'Link': linkRenderer}}/>
+  <Markdown className={'markdown ' + (props.className || '')} source={props.source || ''} renderers={{'Link': linkRenderer}}/>
 );
 
 export default MarkdownCustomized;

@@ -4,10 +4,10 @@ const createFakePeerResponses = (fakePeerResponses) => (
   <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
     {fakePeerResponses.map((fakeResponse, index) => (
       <li key={index} className="peer-response">
-        <div style={{minWidth: '3em', marginRight: '0.75em'}}>
+        <div className="peer-image" style={{minWidth: '3em', marginRight: '0.75em'}}>
           <img src={'https://chalees-min.imgix.net' + fakeResponse.imagePath + '?w=34&h=34&auto=format&mask=ellipse'} className="pure-img"/>
         </div>
-        <div>
+        <div className="peer-response-text">
           <span style={{fontStyle: 'italic', whiteSpace: 'pre-line'}}>{fakeResponse.response}</span>
           <br />
           &mdash;{fakeResponse.studentName}
@@ -20,10 +20,10 @@ const createFakePeerResponses = (fakePeerResponses) => (
 const HackFeedback = ({data}) => (
   <div className="hack-feedback learning-item-section">
     <div className="hack-feedback-preface">
-      <div style={{minWidth: '42px'}}>
+      <div className="hack-feedback-preface-image" style={{minWidth: '3em'}}>
         <img className="pure-img" src='https://chalees-min.imgix.net/multiple-choice-feedback-instructor.png?w=34&h=34&auto=format&mask=ellipse' />
       </div>
-      <div>{data.preface}</div>
+      <div className="hack-feedback-preface-text">{data.preface}</div>
     </div>
     {cond([
       [() => data.fakePeerResponses, () => createFakePeerResponses(data.fakePeerResponses)],

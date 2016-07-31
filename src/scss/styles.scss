@@ -501,10 +501,25 @@ $page-transition-duration: 1s;
     }
   }
   
+  .hack-feedback-preface-image {
+    align-self: flex-start;
+  }
+  
+  .hack-feedback-preface-text {
+    align-self: center;
+  }
+  
   .peer-response {
     margin: 1em 1em 0 1em;
     display: flex;
-    align-items: flex-start;
+    
+    .peer-image {
+      align-self: flex-start;
+    }
+    
+    .peer-response-text {
+      align-self: center;
+    }
   }
 }
 
@@ -573,6 +588,10 @@ $page-transition-duration: 1s;
     // Workaround for the paragraph margins
     > .markdown > p:first-child {
       margin-top: 0;
+    }
+    
+    .feedback-text {
+      align-self: center;
     }
   }
 }
