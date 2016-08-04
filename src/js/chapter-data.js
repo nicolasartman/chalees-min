@@ -17,7 +17,7 @@ const data = [{
   }, {
     id: 'our-foods-journey',
     kind: 'multipleChoiceResponse',
-    time: 3,
+    time: 1,
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
@@ -75,7 +75,7 @@ const data = [{
     hacks: {
       afterBody: {
         //show: 'ifResponse',
-        preface: 'Here is how Koushiki, another student, answered this quiz.',
+        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School.',
         feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
       }
     }
@@ -97,7 +97,7 @@ const data = [{
       Then write it in the box below.`,
     hacks: {
       afterBody: {
-        preface: 'Here are some thoughts your fellow learners shared',
+        preface: 'Here are some thoughts your fellow students have shared',
         show: 'locked',
         fakePeerResponses: [
           {
@@ -130,7 +130,7 @@ const data = [{
     Write down who you plan to talk to, what websites you plan to visit.`,
     hacks: {
       afterBody: {
-        preface: 'Here is a word cloud with common words other learners used to describe their plans.',
+        preface: 'The image below contains the common words other students used to describe their plans.',
         show: 'locked',
         feedbackImagePath: '/prefab-word-clouds/research-wordcloud5.png',
       }
@@ -530,12 +530,12 @@ const data = [{
     instructions: dedent`
     If you saw the movie _Jab We Met_, you probably remember __Hotel Decent__. 
 
-    Change one letter in that hotel name, and you get __Hotel Decant__.
+    Change one letter in that hotel name, and you get __Decant__.
 
     Decant (or its noun Decantation), means to remove water or liquid without disturbing the sediment. 
 
     Hopefully this image below will help you remember the definition of Decantation.`,
-    imagePath: '/learning-items/decantation-jab-we-met.jpeg'
+    imagePath: '/learning-items/decantation-jabwemet2.jpeg'
   }, {
     id: 'Sieving',
     time: 2,
@@ -594,6 +594,7 @@ const data = [{
     kind: 'textResponse',
     short: true,    
     time: 5,
+    presenterImagePath: '/instructors/kunal2.jpg',    
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
     hacks: {
@@ -619,7 +620,12 @@ const data = [{
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Burning a Page. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/page-burning.jpg)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -640,19 +646,18 @@ const data = [{
         answerSet: ['opt2'],
         response: '__Correct__. This is an irreversible reaction.'
       }
-    ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Burning a Page. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/page-burning.jpg',
-      }
-    }
+    ]
   }, {
     id: 'reversible-or-not-2',
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Mixing salt in water. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salt-and-water.png)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -673,19 +678,18 @@ const data = [{
         answerSet: ['opt2'],
         response: 'I think you can reverse this reaction by heating the mixture and evaporating the water.'
       }
-    ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Mixing salt in water. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/salt-and-water.png',
-      }
-    }
+    ]
   }, {
     id: 'reversible-or-not-3',
     kind: 'multipleChoiceResponse',
     time: 3,
     title: 'Reversible or Irreversible',
-    //instructions: 'Select up to two',
+    instructions: dedent`
+    Salman making a commitment. Is it reversible or irreversible?
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salman-khan.jpeg)
+    `,
+    presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     choices: [
       {
@@ -700,19 +704,13 @@ const data = [{
         automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: 'Clearly this is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
+        response: 'Clearly this question is a joke. But then again, once Salman makes a commitment, then that is irreversible.'
       },
       {
         answerSet: ['opt2'],
-        response: 'This is still a joke question. But then again, once Salman makes a commitment, then that is irreversible.'
+        response: 'This question is still a joke. But then again, once Salman makes a commitment, then that is irreversible.'
       }
     ],
-    hacks: {
-      beforeBody: {        
-        preface: 'Salman making a commitment. Is it reversible or irreversible?',        
-        feedbackImagePath: '/learning-items/salman-khan.jpeg',
-      }
-    }
   }, {
     id: 'metals-expand',
     kind: 'video',
@@ -732,9 +730,8 @@ const data = [{
   }]
 }, {
   id: '7',
-  thumbnailImagePath: '/chapter-thumbnails/chapter-7.jpg',
+  thumbnailImagePath: '/chapter-thumbnails/chapter-7-flower.jpg',
   title: 'Getting To Know Plants',
-  // All the times in this item are completely made-up
   items: [{
     id: 'why-do-plants-produce-flowers',
     time: 6,
@@ -742,29 +739,311 @@ const data = [{
     title: 'Why do plants produce flowers?',
     instructions: 'Why do plants produce flowers? Watch this video to find out.',
     videoId: 'EArZXsRXsj4'
-  },
-  {
-    id: 'reflect-picture',
-    time: 10,
-    kind: 'imageResponse',
-    title: 'Reflect',
-    instructions: 'Take a picture and drop it here'
-  },
-  {
-    id: 'reflect',
-    time: 8,
-    kind: 'textResponse',
-    title: 'Reflect',
-    instructions: 'Write down your thoughts about flowers'
-  },
-  {
-    id: 'conduct-your-own-experiment',
-    time: 10,
+  }, {
+    id: 'parts-of-flower',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Parts of a flower',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Select the option that is __not__ a part of Stamen in a flower`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Anther'
+      },
+      {
+        id: 'opt2',
+        text: 'Pollen'
+      },
+      {
+        id: 'opt3',
+        text: 'Filament'
+      },
+      {
+        id: 'opt4',
+        text: 'Ovary'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Anther is a part of Stamen. Watch the video above at 2 minute 30 seconds to review.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Pollen is also a part of Stamen. Pollination occurs when pollen from male part of one flower travels to the female part of another flower.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Ahh... Filament is a part of Stamen. I know it can be annoying for me to say in the video that, _"the names of parts of flower do not matter,"_ and for me to quiz you on those names now. Sorry.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Ovary is a part of Pistil, which is the female part of the flower.'
+      }
+    ]
+  }, {
+    id: 'herbs',
+    time: 1,
     kind: 'image',
-    title: 'Conduct your own experiment',
-    instructions: 'Follow the instructions in the link on how to conduct your own experiment on flowers. [Click here for the instructions](https://goo.gl/cuf63n)',
-    imagePath: '/learning-items/flowers-experiment.jpg'
-  }]
+    title: 'What are Herbs?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The poster below is from a movie made in 1978. While the movie is older than both you and me, it still can teach us something about Herbs.
+
+    Herbs are usually short plants with green and tender stems.`,
+    imagePath: '/learning-items/what-are-herbs.jpeg'
+  }, {
+    id: 'shrubs-and-trees',
+    time: 1,
+    kind: 'image',
+    title: 'The difference between Shrubs and Trees',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Lemons grow on a Shrub. __Shrubs__ generally have branches near the base of the stem
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/shrubs-low-branches.jpeg)
+    
+    __Trees__, however, have branches in the upper part of the stem. They are also taller than Shrubs.
+    `,
+    imagePath: '/learning-items/trees-high-branches.jpeg'
+  }, {
+    id: 'creepers',
+    time: 2,
+    kind: 'image',
+    title: 'What are Climbers?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Plants that take support on neighbouring structures and climb up are called Climbers. 
+ 
+    [Click here](http://www.pbslearningmedia.org/asset/lsps07_int_plantmovies/) and then on Video 3 to see them in action.`,
+    imagePath: '/learning-items/climber2.png'
+  }, {
+    id: 'reflect-herbs-shrubs-trees-creepers',
+    time: 4,
+    kind: 'textResponse',
+    title: 'Teaching what you have learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine you had to teach everything you have learned thus far in this chapter to a friend. That includes everything you have learned about _flowers, herbs, shrubs, trees, and climbers._ 
+
+    What would you say to your friend while teaching them? Write your response in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is what Sid had to say about this quiz.',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`Herbs are small and tender. Now I am singing the song, main tulsi tere aangan ki. 
+
+            Shrubs have low branches. Trees are tall with high branches. Those were nice pictures.
+
+            Flowers are amazing. Plants make flowers to make more of themselves. Pollen is necessary to turn flowers into fruits. I loved the video of the flower turning to pear.`
+          }
+        ]        
+      }
+    }
+  }, {
+    id: 'function-of-stem',
+    time: 1,
+    kind: 'video',
+    title: 'Stems: What do they do?',
+    instructions: dedent`
+    One of the major functions of the stem is to carry water from the roots to the leaves. The leaves need water to make food for the plant.
+
+    Here is a video that proves that the stem carries water.`,
+    videoId: 'AMvEVnAFCNA'
+  }, {
+    id: 'path-of-water-in-stem',
+    time: 2,
+    kind: 'video',
+    title: 'How does water get up the stem',
+    instructions: dedent`
+    This video offers a great view of how the water moves up the stem of a plant.`,
+    videoId: '9-dicqNoODg'
+  }, {
+    id: 'tweet-function-of-stem',
+    time: 2,
+    kind: 'textResponse',
+    short: true,
+    title: 'Tweeting about stem',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    What is the function of stem? Write it in the box below and then tweet it with #stemtastic `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is what Prabsimar tweeted.',
+        //show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`Like a truck, stem transports water. Horn Ok Please. Use dipper at night. #stemtastic`
+          }
+        ]        
+      }
+    }
+  }, {
+    id: 'leaf-petiole',
+    time: 1,
+    kind: 'image',
+    title: 'What is Petiole?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Petiole is a part of the leaf that is attached to the stem. 
+
+    Here is a great way to rememeber that: Petiole comes from the prefix _Ped_. _Ped_ is used in words like Pedestrian or Pedicure. It has to do with the feet. 
+
+    You can think of the Petiole as the foot or the base of the leaf that connects to the stem.`,
+    imagePath: '/learning-items/petiole-pedestrian.jpeg'
+  }, {
+    id: 'leaf-veins',
+    time: 1,
+    kind: 'image',
+    title: 'What are Veins?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Veins help carry water and nutrients in a leaf. 
+
+    This is similar to veins in the human body, which help carry blood throughout the body.`,
+    imagePath: '/learning-items/veins-leaf.jpeg'
+  }, {
+    id: 'venation-reticulate-and-parallel',
+    time: 2,
+    kind: 'image',
+    title: 'What does Venation mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The word _Venation_ comes from the word _Veins_. You can think of Venation as the design or pattern created by veins in a leaf.
+
+    In the image below, you will see examples of both Reticulate Venation (on the left of image) and Parallel Venation (on the right of image).
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/venation2.jpeg)
+    
+    Now __Parallel Venation__ is easy to understand. It happens when the pattern created by the veins is parallel to each other. This happens in coconut and banana leaves.
+
+    Let us think about __Reticulate Venation__.
+
+    Reticulate just means a pattern or design that looks like a network or net. We can find these patterns in Giraffes, Leaves and Pythons.
+    `,
+    imagePath: '/learning-items/reticulate-venation.jpeg'
+  }, {
+    id: 'transpiration',
+    time: 1,
+    kind: 'image',
+    title: 'What is Transpiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Now you probably know that Transpiration is the process by which plants lose water from their leaves. This water is lost in the form of vapour. 
+
+    The amazing thing about this is that plants like the Corn Plant, lose about 2 litres of water every day.
+    `,
+    imagePath: '/learning-items/transpiration-water-loss.jpeg'
+  }, {
+    id: 'photosynthesis-picture',
+    time: 7,
+    kind: 'imageResponse',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Photosynthesis ',
+    instructions: dedent`
+    We know that you have been taught the concept of photosynthesis several times. So we will not bore you with another lecture on it. Here is a chance to be creative, however. 
+
+    Draw a picture, using a _pen and paper_, that you think describes the process of photosynthesis.
+
+    Then take a photo of that drawing with your phone and upload it here. `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is an image of photosynthesis we got from Wikipedia. It shows that plants take water from soil and carbon dioxide from air, to make food and release oxygen.',
+        show: 'locked',
+        feedbackImagePath: '/learning-items/Photosynthesis.gif',
+      }
+    }
+  }, {
+    id: 'how-much-sugar',
+    time: 2,
+    kind: 'video',
+    title: 'How much sugar do plants make?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Plants make food through the process of Photosynthesis. We know that. 
+
+    But how much food (or sugar/carbohydrates) do they make in a day? Let us find out.
+    `,
+    videoId: '2PL-T9Cuj84',
+    startTime: 19,
+  }, {
+    id: 'roots-function',
+    time: 1,
+    kind: 'image',
+    title: 'Roots: What is their function?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Roots anchor a plant. That means they keep the plant steady in one place.  
+
+    They also absorb water and nutrients from the soil. Plants needs both water and nutrients to make food.
+
+    There are two main types of roots: Fibrous and Tap roots. The image below features Fibrous Roots, where all roots seem similar to each other. 
+    `,
+    imagePath: '/learning-items/roots-anchor.jpeg'
+  }, {
+    id: 'parallel-venation-fibrous-roots',
+    time: 1,
+    kind: 'image',
+    title: 'Parallel Venation and Fibrous Roots',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The science book says the following on page-64.
+
+    _"plants having leaves with parallel venation have fibrous roots."_
+
+    We can understand this with the help of coconut trees. The leaves of coconut trees have parallel venation. That means that if you look at them really closely, you will see that the veins are mostly parallel to each other.
+
+    The coconut trees also have fibrous roots. 
+    `,
+    imagePath: '/learning-items/parallel-venation-fibrous-roots2.jpeg'
+  }, {
+    id: 'parallel-venation-fibrous-roots-rememeber',
+    time: 1,
+    kind: 'image',
+    title: 'An easy way to remember',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    I find the following sentence really hard to remember.
+
+    _"plants having leaves with parallel venation have fibrous roots."_
+
+    To remember this sentence, I think of the movie Barfi.
+    `,
+    imagePath: '/learning-items/reticulate-venation-tap-roots-barfi2.jpeg'
+  }, {
+    id: 'reticulate-venation-tap-roots',
+    time: 1,
+    kind: 'image',
+    title: 'Reticulate Venation and Tap Roots',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Carrots have tap roots. That means they have only one primary root. 
+
+    The leaves of a Carrot Plants have reticulate venation. That means that if we look at them really closely, we will see that their veins make a net-like pattern.
+    `,
+    imagePath: '/learning-items/reticulate-venation-tap-roots.jpeg'
+  }, {
+    id: 'revising-the-chapter',
+    time: 2,
+    kind: 'video',
+    title: 'Revising the chapter',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is a song that will help you revise this chapter.
+    `,
+    videoId: 'EqOAK8Y7RoE',
+    locked: true,
+  },
+  ]
 }, {
   id: '8',
   thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
