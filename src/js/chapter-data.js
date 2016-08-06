@@ -1056,30 +1056,277 @@ const data = [{
     instructions: 'Watch to learn more about the hinge joint, the ball and socket joint, ligaments and humility.',
     videoId: 'x4k1JP8LsNY',
   }, {
-    id: 'lets-think-about-the-video-one',
+    id: 'which-joint-is-it-one',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Identify the joint',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Read the following description:
+
+      _360 degree movement; found in shoulders and hips; similar to shower heads_
+
+      This description is talking about which joint?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Hinge Joint'
+      },
+      {
+        id: 'opt2',
+        text: 'Fevicol Joint'
+      },
+      {
+        id: 'opt3',
+        text: 'Ball and Socket Joint'
+      },
+      {
+        id: 'opt4',
+        text: 'Immovable Joint'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Hinge joint only has 180 degree movement. This response is incorrect.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Clearly this option was an attempt at a joke. Keep thinking.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. A Ball and Socket Joint has 360 degree movement. Both shoulder and hip are examples of this joint.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'If a joint is immovable, how can it have 360 degree movement. Keep thinking.'
+      }
+    ]
+  }, {
+    id: 'which-joint-is-it-two',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Identify the joint (again)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which joint is in motion in the image below?
+
+      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/bicep-curl-2.gif)`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Hinge Joint'
+      },
+      {
+        id: 'opt2',
+        text: 'Immovable Joint'
+      },
+      {
+        id: 'opt3',
+        text: 'Ball and Socket Joint'
+      },
+      {
+        id: 'opt4',
+        text: 'Fevicol Joint'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. The body builder is moving his right elbow. Elbows are classified as Hinge joints.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'The body builder is moving his right elbow. It is not immovable. Keep thinking '
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Examples of Ball and Socket Joint include hips and shoulders. It seems to me that the body builder is moving his right elbow. '
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Clearly this answer was an attempt at a joke. I wonder if you thought it was correct or if you just wanted to see the feedback.'
+      }
+    ]
+  }, {
+    id: 'no-bones',
+    time: 1,
+    kind: 'image',
+    title: 'What would happen if we had no bones?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is an attempt at the question: _What would happen if we had no bones?_ 
+
+    Bones give framework and shape to our body.
+    `,
+    imagePath: '/learning-items/no-skeleton-5.jpeg'
+  }, {
+    id: 'broken-bone',
     kind: 'textResponse',
+    time: 3,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Have you ever broken a bone?',
+    instructions: dedent`
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/have-you-broken-bone-2.jpeg)
+
+    Have you ever suffered a broken bone? What was that like? Did it hurt? Tell us in the box below.
+    `,
+  }, {
+    id: 'making-ball-and-socket-joint',
+    kind: 'video',
     time: 5,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
+    title: 'Making a model of Ball and Socket Joint',
+    instructions: 'Here are step by step instructions on how to construct a model of ball and socket joint. (There is no sound in this video.)',
+    videoId: 'myJh2Zc9tnk',
+    startTime: 20,
+  }, {
+    id: 'pivot-meaning',
+    kind: 'video',
+    time: 3,
+    title: 'What does the word Pivot mean?',
+    instructions: dedent`
+    Before we learn about Pivotal Joints. Let us think about the word Pivot.
+
+    The word _Pivot_ means to turn around a central point.
+
+    Many basketball players master a move called the Pivot. Watch this video to find out more.`,
+    videoId: 'erx6kfO6tfw',
+    startTime: 35,
+  }, {
+    id: 'pivotal-joints',
+    time: 1,
+    kind: 'image',
+    title: 'Pivotal Joints',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The place where our neck joins our head is a _Pivotal Joint_. 
+
+    You and President Obama are able to say no because of that Pivotal Joint.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/obama-pivot.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'fixed-joints',
+    time: 1,
+    kind: 'image',
+    title: 'Fixed or Immovable Joints',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Immovable joints, as the name suggests, do not move. We can find them in the skull. 
+    `,
+    imagePath: '/learning-items/immovable-joints-skull-2.jpeg'
+  }, {
+    id: 'pelvic-bones',
+    time: 1,
+    kind: 'image',
+    title: 'Pelvic Bones',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Pelvic bones are the bones we sit on. These bones are also connected to the thigh bones
+    `,
+    imagePath: '/learning-items/pelvic-bones.jpeg'
+  }, {
+    id: 'friction',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Friction',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Do you think we experience friction in our joints when our bones rub against each other?
+
+      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/rubbing-our-hands-2.jpeg)`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      },
+      {
+        id: 'opt3',
+        text: 'I do not know'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. We experience friction when we rub our hands together; we also experience friction when our bones rub against each other.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'We experience friction when our bones rub against each other. That can cause wear and tear. In the next section, we will see how our body prevents that from happening.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'It is ok to not know things. We experience friction when our bones rub against each other. In the next section, we will see how our body prevents that from happening. '
+      }
+    ]
+  }, {
+    id: 'cartilage',
+    time: 2,
+    kind: 'image',
+    title: 'Cartilage',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Cartilage covers the ends of our bones and reduces friction in our joints. 
+
+    It is a little bit like the lubricant that is added in cars to prevent friction between moving parts of an engine.
+    `,
+    imagePath: '/learning-items/cartilage-lubricant.jpeg'
+  }, {
+    id: 'muscles',
+    time: 2,
+    kind: 'image',
+    title: 'Muscles — They work in pairs',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When you lift your forearm, the bicep and the tricep work together to make that happen. 
+
+    Study the image below to see how that works. 
+    `,
+    imagePath: '/learning-items/muscles.jpeg'
+  }, {
+    id: 'muscles-animation',
+    time: 1,
+    kind: 'image',
+    title: 'Muscles — An Animation',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    See the bicep and tricep in action when you move your elbow.
+
+    Notice how the _bicep_ contracts (becomes shorter and bigger) when we raise are forearm. And the _tricep_ relaxes.
+
+    Also notice how the _tricep_ contracts when we extend our forearm. And the _bicep_ relaxes.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/muscles-bicep-tricep-animation.gif)
+    
+    _Source: Niwadare - Own work, CC BY-SA 4.0_`,
+    imagePath: '/learning-items/white-space-2.jpeg'
   }, {
     id: 'read-and-draw',
     kind: 'imageResponse',
-    time: 15,
+    time: 8,
+    presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Read and Draw',
-    instructions: 'From your textbook, read the section 6.2, “Could there be other ways to bring changes”. Then use a pen and pencil to draw a cartoon of what you have learned from those sections. Take a picture of that cartoon and upload it here.',
+    instructions: dedent`
+    From your textbook, read the section 8.2, _“Gait of Animals”_. 
+
+    Then use a pen and pencil to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
-    time: 3,
+    time: 2,
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
-    videoId: 'rYiRcrny4vs',
-  }, {
-    id: 'lets-think-about-the-video-two',
-    kind: 'textResponse',
-    time: 10,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video and write it below.',
+    videoId: 'jkHI2_RN_eY',
+    locked: true
   }]
 }, {
   id: '11',
