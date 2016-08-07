@@ -21,6 +21,8 @@ const data = [{
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
+      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/food-apples.jpeg)
+
       The food that we eat goes through all of the following places, except for one. 
 
       Select the odd one out.`,
@@ -75,10 +77,18 @@ const data = [{
     hacks: {
       afterBody: {
         //show: 'ifResponse',
+        show: 'locked',
         preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School.',
         feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
       }
     }
+  }, {
+    id: 'herbivore-carnivore-omnivore',
+    kind: 'video',
+    time: 2,
+    title: 'Herbivore, Carnivore, Omnivore',
+    instructions: 'Really silly song that will get stuck in your head.',
+    videoId: 'wjkqIt_H-ko',
   }, {
     id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
@@ -87,14 +97,14 @@ const data = [{
     title: 'Pick a question to investigate',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      At the end of the video, we present a few questions for you to think about. Here they are again:
-      - Where does water come from?
-      - Where does petrol come from?
-      - Where does snot come from?
+      At the end of the _Where Does Food Come From_ video, we present a few questions. Here they are again:
+      - Where does __water__ come from?
+      - Where does __petrol__ come from?
+      - Where does __snot__ come from?
         
-      Select a question you want to think about more. You can pick from the list above or think of a new question of your own.
+      Select a question you like. You can pick from the list above or think of a new question of your own.
         
-      Then write it in the box below.`,
+      Then write that question in the box below.`,
     hacks: {
       afterBody: {
         preface: 'Here are some thoughts your fellow students have shared',
@@ -125,9 +135,11 @@ const data = [{
     title: 'Plan your own research',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Spend a few minutes creating a plan for the things you will do to answer the question above. 
+    Now that you have selected a question, spend a few minutes creating a plan for the things you will do to answer that question. 
 
-    Write down who you plan to talk to, what websites you plan to visit.`,
+    Think about who you plan to talk to, what websites you plan to visit. 
+
+    Write your plan in the box below.`,
     hacks: {
       afterBody: {
         preface: 'The image below contains the common words other students used to describe their plans.',
@@ -141,14 +153,7 @@ const data = [{
     time: 3,
     title: 'Chapter Revision',
     instructions: 'This song will help you revise the entire chapter.',
-    videoId: 'geHAaWbqz_Q'
-  }, {
-    id: 'herbivore-carnivore-omnivore',
-    kind: 'video',
-    time: 2,
-    title: 'Herbivore, Carnivore, Omnivore',
-    instructions: 'Really silly song that will get stuck in your head.',
-    videoId: 'wjkqIt_H-ko',
+    videoId: 'geHAaWbqz_Q',
     locked: true
   }]
 }, {
@@ -169,6 +174,8 @@ const data = [{
     title: 'The purpose of carbohydrates',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/pizza-carbohydrates-energy.jpeg)
+
     Why do we need carbohydrates? `,
     maxSelected: 1,
     choices: [
@@ -234,6 +241,13 @@ const data = [{
       }
     }
   }, {
+    id: 'balanced-diet',
+    kind: 'video',
+    time: 10,
+    title: 'Balanced Diet',
+    instructions: 'Which foods should we eat more of, and which should we eat less?',
+    videoId: 'n-q8-f2unHY'
+  }, , {
     id: 'read-and-draw',
     kind: 'imageResponse',
     time: 15,
@@ -246,19 +260,12 @@ const data = [{
     // @NICK: This needs to be tested
     hacks: {
       afterBody: {
-        preface: 'Here is what another student submitted as a response to this question.',
+        preface: 'The image below was made and uploaded by Prabsimar, a student of class 6 at Ahlcon International School.',
         show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-components-of-food.jpeg',
       }
     }
-  },{
-    id: 'balanced-diet',
-    kind: 'video',
-    time: 10,
-    title: 'Balanced Diet',
-    instructions: 'Which foods should we eat more of, and which should we eat less?',
-    videoId: 'n-q8-f2unHY'
-  },{
+  }, {
     id: 'and-finally',
     kind: 'video',
     time: 1,
