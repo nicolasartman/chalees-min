@@ -90,6 +90,19 @@ const data = [{
     instructions: 'Really silly song that will get stuck in your head.',
     videoId: 'wjkqIt_H-ko',
   }, {
+    id: 'what-does-edible-mean',
+    time: 2,
+    kind: 'image',
+    title: 'What does edible mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Edible simply means something that is eatable. 
+
+    In Thailand, some insects are considered edible (or eatable).
+
+    Now please do not eat some insects after reading this and get me into trouble.`,
+    imagePath: '/learning-items/edible-eatable-insects.jpeg'
+  }, {
     id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
     time: 6,
