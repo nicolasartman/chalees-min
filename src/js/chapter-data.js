@@ -161,6 +161,17 @@ const data = [{
       }
     }
   }, {
+    id: 'nectar-flowers',
+    time: 1,
+    kind: 'image',
+    title: 'What does nectar look like?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Nectar is the sweet juice of flowers. Bees love it and make honey from it.
+
+    Here is a honeysuckle flower and a drop of nectar falling from it.`,
+    imagePath: '/learning-items/nectar-flower.jpeg'
+  }, {
     id: 'grade6-chapter1-song',
     kind: 'video',
     time: 3,
