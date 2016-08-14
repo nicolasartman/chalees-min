@@ -1360,6 +1360,260 @@ const data = [{
     locked: true
   }]
 }, {
+  id: '9',
+  title: 'Living Organisms and Their Surroundings',
+  thumbnailImagePath: '/chapter-thumbnails/thumbnail-living-organisms.png',
+  items: [{
+    id: '5-animals-5-interesting-facts',
+    kind: 'video',
+    time: 2,
+    title: '5 animals, 5 interesting facts, in under 2 minutes',
+    instructions: 'This video introduces you to interesting things about animals like a sea horse, turtles and jellyfish.',
+    videoId: 'Dl3vQtPry4s',
+  }, {
+    id: 'tweet-what-youve-learned',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Tweet what you\'ve learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: 'Summarize what you have learned in the video above in 140 characters; then tweet it with #chapter9',
+    hacks: {
+      afterBody: {
+        preface: 'Here are some tweets from other students:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Sea horses are amazing. They carry their young and eat all the time. #chapter9'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'Wow I did not think Giant Grouper was that big. 7 1/2 Just Biebers. hehe #chapter9'
+          },
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Turtles cannot breathe under water. They hold their breath for 40 minutes. Amazing! #chapter9'
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'habitat-sweet-habitat',
+    time: 1,
+    kind: 'image',
+    title: 'What does habitat mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Habitat simply means Home. 
+
+    Have you ever seen a _Home Sweet Home_ sign on a door before. From now on, when you see that sign, I want you think of _Habitat Sweet Habitat._
+    `,
+    imagePath: '/learning-items/home-sweet-home-habitat.jpeg'
+  }, {
+    id: 'adaptation-fish-hyena',
+    time: 2,
+    kind: 'image',
+    title: 'What is Adaptation?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Notice the fish in the image below. It has an eyespot towards its back. This fish is trying to adapt in water by fooling its predator. If a predator comes to attack this fish, they are likely to cause damage to the tail and not the head.  
+
+    Notice the Hyena with its cubs in a burrow. A Hyena adapts to the hot environment by living in a burrow during the day; it comes out at night when it is cooler.
+
+    These are both examples of adaptation. Adaptation is the presence of features or habits that enable a plant or animal to live in a particular space.
+    `,
+    imagePath: '/learning-items/adaptation-fish-hyena.jpeg'
+  }, {
+    id: 'adaptation-camel-nostrils',
+    time: 1,
+    kind: 'image',
+    title: 'Can you close your nostrils?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Camels can close their nostrils. This is an excellent example of how Camels have adapted to the desert environment. 
+
+    By closing their nostrils, Camels can keep the desert sand out of their nose.
+
+    You can learn more about [Camel adaptations here.](http://www.vtaide.com/png/camel-adaptations4.htm)
+    `,
+    imagePath: '/learning-items/camels-close-nostrils-adaptation.jpeg'
+  }, {
+    id: 'adaptation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Fish have streamlined shape. This __________ allows them to move easily under water. 
+
+      Select the correct option.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'habitat'
+      },
+      {
+        id: 'opt2',
+        text: 'news'
+      },
+      {
+        id: 'opt3',
+        text: 'adaptation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Habitat does not make sense here. This habitat allows them move easily under water? That does not sound right.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'The news that fish have a streamlined body does nothing for the fish.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct.__ Fish have adapted to have a streamlined body so they can swim easily.'
+      }
+    ]
+  }, {
+    id: 'desert-plants',
+    time: 5,
+    kind: 'image',
+    title: 'Adaptation by desert plants',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Click on the link below to see an incredible video about plants in the in desert environment. 
+    
+    This video includes adaptations made by the cactus plant to survive desert conditions.
+
+    [Click here](http://www.pbslearningmedia.org/asset/tdc02_vid_desert/) to see the video.
+    `,
+    imagePath: '/learning-items/cactus.jpg'
+  }, {
+    id: 'biotic',
+    time: 1,
+    kind: 'image',
+    title: 'What does the word biotic mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word Biotic, I think of Bio or Biology. Biology, I know, is the study of life.
+
+    Thus, Biotic simply means living things like plants and animals. The cat and the flower in the image below are biotic components of their habitats.
+    `,
+    imagePath: '/learning-items/biotic-living-things.jpeg'
+  }, {
+    id: 'abiotic-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Soil, water and air are the __________ factors of a habitat. 
+
+      Select the correct option.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'biotic'
+      },
+      {
+        id: 'opt2',
+        text: 'abiotic'
+      },
+      {
+        id: 'opt3',
+        text: 'probiotic'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Biotic means living things. Soil, air and water are non-living things.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Abiotic refers to the non-living things that make up a habitat.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Ummm, clearly this was an attempt at a joke.'
+      }
+    ]
+  }, {
+    id: 'adaptation-in-cold-climates',
+    time: 1,
+    kind: 'image',
+    title: 'Adaptations in cold climates',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is how animals adapt to colder climates. Yaks grow really long hair to help protect themselves from cold.
+
+    Penguins adapt by huddling together. This helps them conserve heat.
+    `,
+    imagePath: '/learning-items/adaptation-cold-yak-penguins.jpeg'
+  }, {
+    id: 'whales-blowholes',
+    kind: 'video',
+    time: 1,
+    title: 'Whales breathing through their blowholes',
+    instructions: 'Whales do not have gills and cannot breathe under water. They rise to the surface of water and breathe through their blowholes, which is at the top of their head.',
+    videoId: 'FzQoTsTS1eQ',
+  }, {
+    id: 'adaptation-in-ocean',
+    time: 2,
+    kind: 'image',
+    title: 'Adaptations in Oceans',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Whales have adapted to life in the ocean.
+
+    They breathe using their blowholes (or "noses"), which are at the top of their head. But the blowholes did not always use to be there.
+
+    Millions of years ago, their blowholes were in the front of their heads. We know this because scientists have discovered old fossils (or bones) of Whales from millions of years ago.
+
+    Now that the blowhole is at the top of their head, it is easier for the Whales to breathe without rising too far out of water.
+    `,
+    imagePath: '/learning-items/adaptation-ocean-whales-blowhole.jpeg'
+  }, {
+    id: 'adaptations-in-grasslands',
+    time: 1,
+    kind: 'image',
+    title: 'Adaptations in Grasslands',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Lions have adapted to their grassy habitats.
+
+    Their light brown colour helps them hide in dry grasslands, which is where they wait and hunt their prey.
+    `,
+    imagePath: '/learning-items/lion-grassland.jpg'
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 10,
+    title: 'Draw what you have learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Read section 9.4 _Characteristics of the Living Beings_ from your science book.
+
+    Then use a _pen and paper_ to draw a picture that shows what you have learned from that section. 
+
+    Take a picture of the drawing from your phone and share it here.`,
+  }, {
+    id: 'grade6-chapter9-song',
+    kind: 'video',
+    time: 3,
+    title: 'Chapter Revision',
+    instructions: 'This song will help you revise the entire chapter.',
+    videoId: 'ltBAeITg3wI',
+    locked: true
+  }]
+}, {
   id: '11',
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
