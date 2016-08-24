@@ -791,5 +791,34 @@ $page-transition-duration: 1s;
   padding-right: 0;
 }
 
+.contact-background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: calc(100% + 100px);
+  height: 100%;
+  z-index: -1;
+  transform: translateX(-50px);
+}
 
+.contact-enter {
+  transform: translateX(0px);
+  opacity: 0.01;
+  transition: opacity 1800ms ease-out, transform 2000ms ease-out;
+}
 
+.contact-enter.contact-enter-active {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+.contact-leave {
+  opacity: 1;
+  transition: opacity 2000ms ease-in-out;
+}
+
+.contact-leave.contact-leave-active {
+  opacity: 0.01;
+}
