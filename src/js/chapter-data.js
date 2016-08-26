@@ -1614,6 +1614,293 @@ const data = [{
     locked: true
   }]
 }, {
+  id: '10',
+  thumbnailImagePath: '/chapter-thumbnails/thumbnail-measurement.jpg',
+  title: 'Motion and Measurement of Distances',
+  items: [{
+    id: 'means-of-transport-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Means of transport',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which of the following means of transportation is __not__ used commonly?
+
+      I know this quiz is easy. But let us begin with an easy question in this chapter.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Airplane'
+      },
+      {
+        id: 'opt2',
+        text: 'Bus'
+      },
+      {
+        id: 'opt3',
+        text: 'Train'
+      },
+      {
+        id: 'opt4',
+        text: 'Cat'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Many people around the world use airplanes as a regular means of transport.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Bus is an extremely commonly used means of transport.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Millions of people use trains regularly in our country.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct.__ Clearly people do not use cats as a means of transportation. If they did, it would be considered animal cruelty.'
+      }
+    ]
+  }, {
+    id: 'spirit-to-mars',
+    kind: 'video',
+    time: 6,
+    title: 'Getting to Mars',
+    instructions: dedent`
+    Alright now for some exciting means of transport. 
+
+    We do not go to Mars often. But in 2003, NASA, an American space agency, sent a robot to Mars. Its name was Spirit Rover. 
+
+    It took Spirit 7 months to get to Mars from Earth. This video is an animation of the journey Spirit took.`,
+    videoId: 'XRCIzZHpFtY',
+    startTime: 21,
+  }, {
+    id: 'what-did-spirit-see-on-mars',
+    kind: 'video',
+    time: 4,
+    title: 'What did Spirit see on Mars?',
+    instructions: dedent`
+    The Spirit Rover operated on Mars for several years.
+
+    This video is a NASA report on what Spirit saw in its first 5 years on Mars.`,
+    videoId: 'EIr03Cz-3zc',
+  }, {
+    id: 'si-units',
+    time: 2,
+    kind: 'image',
+    title: 'International System of Units',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    OK, back to Earth and our science book.
+
+    The book on page 99 talks about the _International System of Units_ which are used all over the world. But it uses the short form as __SI__ and not __IS.__
+
+    Why is that?
+
+    That is because the French invented the International System of Units. And in French that translates to _Système International dunités_. Therefore the abbreviation is __SI__. 
+    `,
+    imagePath: '/learning-items/internationa-system-units.jpeg'
+  }, {
+    id: 'si-units-metre-kg-sec',
+    time: 1,
+    kind: 'image',
+    title: 'Length, Weight and Time',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The International System of Units (SI) has __3__ main units.
+
+    Length is measured in metres. For instance, the pizza in the image is 1 metre long, which is similar to the length of a guitar.
+
+    The standard unit for weight is kilogram, and time is seconds.
+    `,
+    imagePath: '/learning-items/one-metre-pizza.jpeg'
+  }, {
+    id: 'why-not-use-feet',
+    kind: 'textResponse',
+    time: 5,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Why do we need a standard unit for length?',
+    instructions: 'Why don\'t we use our feet to measure length? Why do we need a standard unit like metre to measure length?',
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'Here is how Koushiki, a student of Class 6 at Ahlcon International School in Delhi answered this question. She says, "People have feet of different sizes. Babies have small feet. Adults have large feet. We need a unit that everyone can agree on."',
+        feedbackImagePath: '/learning-items/baby-feet.jpeg'
+      }
+    }    
+  }, {
+    id: 'one-metre-100-centimetres',
+    time: 2,
+    kind: 'image',
+    title: '1m = 100cm. How can you remember this formula?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    _1 metre = 100 centimetres_.
+
+    One way I try to remember this formula is by thinking of the word _centi_ that can refer to 100. Think of the word _century_ when someone scores a 100 runs in cricket. 
+
+    _Centi_, more accurately means 1/100 (or one hundredth). If you take a metre (which is the size of a guitar), and divide it into 100 equal parts, each one of those parts is a centimetre.
+    `,
+    imagePath: '/learning-items/one-metre-100-centimetres.jpeg'
+  }, {
+    id: 'millimetres',
+    time: 6,
+    kind: 'image',
+    title: 'Millimetre',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The thickness of a credit card is about 1 millimetre long. 
+
+    [Click here](https://www.mathsisfun.com/measure/metric-length.html) to see similar examples that explain the relationship between millimetres, centimetres, metres, and kilometres.
+    `,
+    imagePath: '/learning-items/one-millimetre-thickness-credit-card.jpeg'
+  }, {
+    id: 'which-is-greater-1',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Which is greater?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which of the following two values is greater?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '1 metre'
+      },
+      {
+        id: 'opt2',
+        text: '105 centimetres'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '1 metre = 100 centimetres. And 100 centimetres is less than 105 centimetres.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ 105 centimetres is greater than 100 centimetres (or 1 metre).'
+      }
+    ]
+  }, {
+    id: 'which-is-greater-2',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Which is greater?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which of the following three values is greatest?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '2 metres'
+      },
+      {
+        id: 'opt2',
+        text: '200 centimetres'
+      },
+      {
+        id: 'opt3',
+        text: '2100 millimetres'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '2 metres = 200 centimetres = 2000 millimetres. That is less that 2100 millimetres.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '200 centimetres = 2000 millimetres. That is less than 2100 millimetres.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct.__ 2100 millimetres = 210 centimetres = 2.1 metres. This is the greatest of the three values.'
+      }
+    ]
+  }, {
+    id: 'errors-in-measurement',
+    time: 2,
+    kind: 'image',
+    title: 'Errors in Measurement',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here are two main errors in measurement:
+
+    1) In some scales, the ends may be broken. You may not be able to see the zero mark clearly. In such cases, you should avoid taking measurements from the zero mark of the scale. You can begin from any other full mark, like 1 cm.
+    
+    2) You should place your eye directly in front of point where the measurement is to be taken. 
+    `,
+    imagePath: '/learning-items/errors-while-taking-measurements-2.jpeg'
+  }, {
+    id: 'parallax',
+    time: 2,
+    kind: 'image',
+    title: 'Eye placement while taking measurements',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    What happens if you do not place your eye above the point of measurement?
+
+    Check out the image below. If you are at point A, you are likely to see a star with a blue background. But if you are at point B, you are likely to see a star with a red background.
+
+    Where you place your eye changes what you see.
+    `,
+    imagePath: '/learning-items/parallax.jpeg'
+  }, {
+    id: 'rectilinear-motion',
+    time: 1,
+    kind: 'image',
+    title: 'What is Rectilinear Motion?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word Rectilinear, I think of the word __linear__. When I think of the word linear, I think of the word __line__.
+ 
+    Rectilinear motion is motion in a straight line. 
+
+    _Recti_, in case you are wondering, simply means straight.
+    `,
+    imagePath: '/learning-items/rectilinear-motion-marching-army.jpeg'
+  }, {
+    id: 'circular-motion',
+    time: 1,
+    kind: 'image',
+    title: 'What is Circular Motion?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In circular motion, an object moves such that its distance from a fixed point remains the same. 
+
+    The dog in the image below is in circular motion. Its distance from the center of the swing is always the same.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/circular-motion-3.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'periodic-motion',
+    time: 1,
+    kind: 'image',
+    title: 'What is Periodic Motion?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This is the type of motion which repeats itself periodically (or again and again).
+
+    Like the moon revolving around the earth.
+    `,
+    imagePath: '/learning-items/periodic-motion-moon-earth.jpeg'
+  }, {
+    id: 'grade6-chapter10-song',
+    kind: 'video',
+    time: 3,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: 'CHFiPUxpGyk',
+    locked: true
+  }]
+}, {
   id: '11',
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
