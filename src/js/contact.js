@@ -9,22 +9,25 @@ const Contact = React.createClass({
     }
   },
   componentWillMount: function() {
-    this.state.intervalId = setInterval(function() {
+    this.state.intervalId = setInterval(() => {
       this.setState({current: (this.state.current + 1) % (this.state.items.length)});
-    }.bind(this), 5000);
+    }, 5000);
   },
   componentWillUnmount: function() {
     clearInterval(this.state.intervalId);
   },
   render: function() {
-    var items = this.state.items.map(function(item, i) {
+    var items = this.state.items.map((item, i) => {
       return (
         <div style={{backgroundImage: `url('https://chalees-min.imgix.net${item}?w=1000&fit=clip&auto=format,compress')`, backgroundPosition: 'center', backgroundSize: 'cover'}} className='contact-background' key={i} />
       );
-    }.bind(this));
+    });
     return (
       <div>
-        <ReactCSSTransitionGroup transitionName="contact" transitionEnterTimeout={2000} transitionLeaveTimeout={2000}>
+        <div className="contact-message">
+          Text
+        </div>
+        <ReactCSSTransitionGroup component="div" transitionName="contact" transitionEnterTimeout={2000} transitionLeaveTimeout={2000}>
           {items[this.state.current]}
         </ReactCSSTransitionGroup>
       </div>
