@@ -25,8 +25,11 @@ const Contact = React.createClass({
     return (
       <div>
         <div className="contact-message">
-          Text
-        </div>
+          Chalees was made with love all around the world. Please reach out and tell us about your journey in the world. Or ask any question you may have.
+          <br />
+          <br />
+          <span className="contact-email">hi@chaleesmin.school</span>
+          </div>
         <ReactCSSTransitionGroup component="div" transitionName="contact" transitionEnterTimeout={2000} transitionLeaveTimeout={2000}>
           {items[this.state.current]}
         </ReactCSSTransitionGroup>
