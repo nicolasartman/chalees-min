@@ -2014,23 +2014,215 @@ const data = [{
     instructions: 'What do we breathe in? What do we breathe out? Watch to find out.',
     videoId: 'TA2s6uo_vTQ',
   }, {
-    id: 'lets-think-about-the-video',
+    id: 'tweet-what-youve-learned',
     kind: 'textResponse',
     time: 5,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video here.',
+    short: true,
+    title: 'Tweet what you\'ve learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: 'Summarize what you have learned in the video above in 140 characters; then tweet it with #chapter15',
+    hacks: {
+      afterBody: {
+        preface: 'Here are some tweets from your fellow learners!',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'we breathe in air and not just oxygen. #chapter15'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'not only do we breathe in oxygen, but we breathe out oxygen also. wow. #chapter15'
+          }
+        ]
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: 'From your textbook, read the section 14.3, “Water Cycle”. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
+    id: 'wind',
+    time: 1,
+    kind: 'image',
+    title: 'Wind',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is something easy, something you perhaps already know.
+
+    Air in motion is called wind.
+    `,
+    imagePath: '/learning-items/wind.jpeg'
   }, {
-    id: 'making-a-test',
+    id: 'air-occupies-space',
+    kind: 'video',
+    time: 2,
+    title: 'Air occupies space',
+    instructions: dedent`
+    Can we see that air occupies space? Yes.
+
+    Watch this simple video to see how air occupies space inside an empty cup. 
+    `,
+    videoId: 'WBNNfKT6Kk0',
+    startTime : 7
+  }, {
+    id: 'atmosphere',
+    time: 1,
+    kind: 'image',
+    title: 'Atmosphere',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The layer of air surrounding the earth is called atmosphere.
+
+    It consists of many gases, including nitrogen, oxygen, carbon dioxide and a few others.
+    `,
+    imagePath: '/learning-items/atmosphere.jpeg'
+  }, {
+    id: 'how-thick-is-atmosphere',
+    time: 1,
+    kind: 'image',
+    title: 'How thick is the atmosphere?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    If the earth were the size of a basketball, the thickness of the atmosphere could be modeled by a thin sheet of plastic wrapped around the ball.
+
+    Source: NASA
+    `,
+    imagePath: '/learning-items/earth-basketball-atmosphere.jpeg'
+  }, {
+    id: 'air-supports-burning',
+    kind: 'video',
+    time: 2,
+    title: 'Air supports burning',
+    instructions: dedent`
+    Activity 3, on Page 148 of the book asks you to put candles in the middle of shallow containers with water. It also asks to light the candle and then cover it with an inverted glass.
+
+    The candle goes out (extinguishes) after some time. Watch this video to see that experiment. 
+    `,
+    videoId: 'Y81tQqvyftA',
+    startTime : 35
+  }, {
+    id: 'oxygen-supports-burning',
+    kind: 'video',
+    time: 2,
+    title: 'Oxygen supports burning',
+    instructions: dedent`
+    Why did the candle extinguish in the previous video?
+
+    The book says that the candle goes out after the limited oxygen inside the glass is completely used up. It says that oxygen supports burning.
+
+    It is not clear to me that oxygen supports burning.
+
+    Well, the following video will show clearly that oxygen supports burning.
+  `,
+    videoId: '_JkHB1hV7Hw',
+    startTime : 36
+  }, {
+    id: 'mountaineers-carry-oxygen',
+    time: 2,
+    kind: 'image',
+    title: 'Why do mountaineers carry oxygen?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    As the mountaineer climbs, the atmosphere thins out and thus there is less air to breathe. Less air means less oxygen. Thus they have to carry oxygen with them.
+
+    Note that there is less oxygen at the top of the mountain, but there is also less nitrogen, carbon dioxide and other gasses that make up the air we breathe.
+
+    Source: vmeverest09.com
+    `,
+    imagePath: '/learning-items/mountaineers-oxygen-cylinders.jpeg'
+  }, {
+    id: 'co2-extinguis-fire',
+    kind: 'video',
+    time: 2,
+    title: 'Carbon dioxide is used to extinguish fires',
+    instructions: dedent`
+    Watch this video to see how carbon dioxide can be used to put out (or extinguish) fires. 
+    `,
+    videoId: '1z_ApF2n-5Y',
+    startTime : 4
+  }, {
+    id: 'what-is-respiration',
+    time: 2,
+    kind: 'image',
+    title: 'What is respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Respiration is the act of breathing. I remember this definition by thinking of the following scenario.
+
+    As the air quality gets worse in Delhi, people have started wearing __Respirators.__ A respirator is a mask that helps in breathing by removing dust particles from air.
+
+    Thus respiration is the act of breathing. While breathing, we take in all the gases that make up air, and use oxygen to convert food into energy. 
+    `,
+    imagePath: '/learning-items/respirators.jpeg'
+  }, {
+    id: 'which-gas-respiration',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Respiration Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which gas in the atmosphere is essential for respiration?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Nitrogen'
+      },
+      {
+        id: 'opt2',
+        text: 'Oxygen'
+      },
+      {
+        id: 'opt3',
+        text: 'Argon'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'We breathe in a lot of nitrogen with every breath. But we breath out almost all of it back. Nitrogen is inert; that means our body does not use it.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Oxygen is essential for humans. We breathe in oxygen with every breath, which is used to break down the food we eat into energy.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Argon makes for a very small percentage of the atmosphere. This gas is not essential for respiration.'
+      }
+    ]
+  }, {
+    id: 'air-in-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Air in soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Air (and thus oxygen) is present in soil. That is how animals that live in burrows underneath the ground are able to breathe.
+
+    How does the air get in the soil? Well, the burrows make spaces available for air to move in and out of the soil. However, when it rains, water fills up all the spaces occupied by the air in the soil. Therefore, animals living in the soil emerge out for respiration.  
+    `,
+    imagePath: '/learning-items/burrow-air-soil.jpeg'
+  }, {
+    id: 'exchange-of-gases',
     kind: 'textResponse',
-    time: 5,
-    title: 'Making a test',
-    instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
+    time: 10,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Exchange of gases',
+    instructions: dedent`
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/elephants-plants.jpg)
+
+    How do plants and animals work to exchange gases in the atmosphere? Write down your thoughts in the box below.
+
+    Read section 15.4, _How is oxygen in the atmosphere replaced,_ from your book before answering this question.
+    `,
+  }, {
+    id: 'singing-the-chapter',
+    kind: 'video',
+    time: 1,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: 'frAt__t13yM',
+    locked: true
   }]
 }, {
   id: '16',
