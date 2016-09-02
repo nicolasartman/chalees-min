@@ -50,7 +50,7 @@ const Application = React.createClass({
             <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
               {React.cloneElement(this.props.children, { key: location.pathname, loggedIn: this.state.isLoggedIn, data: this.state.data })}
             </ReactCSSTransitionGroup>
-            { /* <Footer /> */ }
+            <Footer />
           </div>
         </Provider>
       </div>
