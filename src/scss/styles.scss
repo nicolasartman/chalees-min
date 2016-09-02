@@ -285,13 +285,20 @@ $page-transition-duration: 1s;
 }
 
 .footer {
-  border-top: 2px solid rgba(0,0,0, 0.10);
-  background-color: white;
+  background-color: $body-background-color;
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 67px;
   width: 100%;
+  text-align: center;
+  span, span > a {
+    vertical-align: middle;
+    display: inline;
+  }
+  :hover {
+    background-color: $body-background-color;
+  }
 }
 
 // ===================
