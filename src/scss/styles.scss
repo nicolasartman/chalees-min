@@ -285,19 +285,20 @@ $page-transition-duration: 1s;
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $body-background-color;
   position: absolute;
   left: 0;
   bottom: 0;
   height: 67px;
   width: 100%;
-  text-align: center;
   span, span > a {
-    vertical-align: middle;
-    display: inline;
+    display: inline-block;
   }
-  :hover {
-    background-color: $body-background-color;
+  a, :hover, :active {
+    background-color: transparent;
   }
 }
 
