@@ -12,10 +12,10 @@ const Footer = React.createClass({
                     Contact Us
                   </Link> | 
                   <a href='https://www.facebook.com/chaleesmin/' className="pure-menu-link">
-                    <img src="https://chalees-min.imgix.net/third-party-images/facebook.png?w=16&h=16&auto=format" />
+                    Facebook
                   </a> | 
                   <a href='https://www.twitter.com/professorkunal' className="pure-menu-link">
-                    <img src="https://chalees-min.imgix.net/third-party-images/twitter.png?w=16&h=16&auto=format" />
+                    Twitter
                   </a>
                 </span>
               </nav>
