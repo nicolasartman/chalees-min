@@ -12,8 +12,9 @@ const data = [{
     title: 'Where does food come from?',
     instructions: 'Watch this short video to take a journey from your dinner plate all the way to the farm.',
     videoId: 'zHeWx_AifLs',
-    // @kunal: here's how to add a different start time
+    // @kunal: here's how to add a different start and end time
     // startTime: 10,
+    // endTime: 15,
   }, {
     id: 'our-foods-journey',
     kind: 'multipleChoiceResponse',
