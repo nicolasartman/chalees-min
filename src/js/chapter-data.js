@@ -1939,6 +1939,157 @@ const data = [{
     instructions: 'Summarize what you have learned in this video and write it below.',
   }]
 }, {
+  id: '12',
+  thumbnailImagePath: '/chapter-thumbnails/chapter-12.jpg',
+  title: 'Electricity and Circuits',
+  items: [{
+    id: 'what-is-an-electric-cell',
+    time: 1,
+    kind: 'image',
+    title: 'What is an electric cell?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    An electric cell produces electricity from the chemicals inside it. 
+
+    This electricity can be used by devices like a TV remote. The reaction between the chemicals in the cell produces electricity. Some cells have chemicals like Zinc and Carbon in them (shown here in the picture of the leaking cell below).
+
+    By the way, people in some countries refer to a cell by other names like a battery. 
+    `,
+    imagePath: '/learning-items/electric-cell.jpeg'
+  }, {
+    id: 'terminals-of-a-cell',
+    time: 1,
+    kind: 'image',
+    title: 'Terminals of an electric cell',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    An electric cell has two terminals — positive and negative.
+
+    There are several different types of cells in the image below. Each one of them produces a different amount of electric current.
+
+    But they all have a positive terminal — this is generally the end with a tiny bump. They also have a negative terminals. 
+    `,
+    imagePath: '/learning-items/cell-terminals.jpeg'
+  }, {
+    id: 'short-circuit',
+    time: 2,
+    kind: 'video',
+    title: 'Connecting the terminals of a cell',
+    instructions: dedent`
+    Please do not repeat this experiment without adult supervision.
+
+    When we connect the two ends of a cell (without using any device like a bulb), excessive current starts moving from the positive to the negative terminal. This makes the wire really hot, and can also burn your hand. 
+
+    Within a short duration (generally a few seconds), the cell is completely drained and becomes useless. This situation is called a short circuit.
+    `,
+    videoId: '_LAunryCu9c',
+    startTime: 5,
+    endTime: 29,
+  }, {
+    id: 'electric-bulb-filament',
+    time: 1,
+    kind: 'image',
+    title: 'Filament inside a bulb',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A filament inside a bulb is a thin wire that gives off light when electric current passes through it.
+
+    If this wire breaks, the path of electric current also breaks, and thus the bulb does not glow; the bulb is said to be fused.`,
+    imagePath: '/learning-items/filament.jpeg'
+  }, {
+    id: 'what-is-an-electric-circuit',
+    time: 1,
+    kind: 'image',
+    title: 'What is an electric circuit?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Clearly, electric circuit is not Arshad Warsis character from the movie Munnabhai MBBS.
+
+    It instead is a path for electricity to flow through the terminals of the cell.
+    `,
+    imagePath: '/learning-items/electric-circuit.jpeg'
+  }, {
+    id: 'draw-a-circuit',
+    time: 10,
+    kind: 'imageResponse',
+    title: 'Draw a circuit',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/draw-circuit-cell-bulb-wires.jpeg)
+
+      Draw an electric circuit with the materials listed in the image above — 2 cells, lots of wires, 1 bulb.
+
+      Then use your phone to take a photo of the circuit you have drawn and upload it in the box below.
+      `
+  }, {
+    id: 'conductors-insulators',
+    time: 3,
+    kind: 'video',
+    title: 'Conductors and Insulators',
+    instructions: dedent`
+    Materials that allow electricity to pass through them are called conductors. Examples include most metals, you, and graphite (which is found in pencils).
+
+    In this experiment a large amount of current is applied to graphite within the pencil. This current is equal to about 25 cells working together. 
+
+    Graphite is a good conductor of electricity, so it lets current flow through it. Since we are applying a lot of current, the pencil starts to burn, and very soon the graphite begins to glow. In the end, the electric current applied is so strong that it breaks the graphite.
+    `,
+    videoId: 'lnn7Px6XsTA',
+    startTime: 0,
+    endTime: 142,
+  }, {
+    id: 'cotton-thread',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Conductor or Insulator?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/cotton-yarn.jpeg)
+
+      Can cotton threads be used in place of wires in electric circuits?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes, they can be used'
+      },
+      {
+        id: 'opt2',
+        text: 'No, they cannot be used'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Hmm. Cotton threads are insulators. That means they do not let electric current pass through them. Thus they cannot be used in place of wires in a circuit.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ Cotton threads are insulators. That means they do not let electric current flow through them. Thus they cannot replace wires in a circuit.'
+      }
+    ]
+  }, {
+    id: 'will-it-glow',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Will the bulb glow?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/circuit-screwdriver.jpeg)
+
+    Will the bulb in the image glow?
+
+    Explain your answer in the box below.`,
+    
+  }, {
+    id: 'singing-the-chapter',
+    kind: 'video',
+    time: 1,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: 'DD524zj0TDw',
+    locked: true
+  }]
+}, {
   id: '13',
   thumbnailImagePath: '/chapter-thumbnails/chapter-13.jpg',
   title: 'Fun With Magnets',
