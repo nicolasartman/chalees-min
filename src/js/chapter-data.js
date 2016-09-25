@@ -22,7 +22,7 @@ const data = [{
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/food-apples.jpeg)
+      ![a bunch of apples](/learning-items/food-apples.jpeg)
 
       The food that we eat goes through all of the following places, except for one. 
 
