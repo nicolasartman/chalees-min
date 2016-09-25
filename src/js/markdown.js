@@ -10,9 +10,9 @@ const linkRenderer = (linkNode) => {
 // Render images through imgix if their paths start with a / so we can
 // serve optimized images inside markdown regions. 
 const imgixBase = 'https://chalees-min.imgix.net';
-const imgixParameters = 'w=800&fit=clip&auto=format,compress';
+const imgixParameters = 'w=800&fit=max&auto=format';
 const imageRenderer = (imageNode) => {
-  const imageSource = imageNode.src.startsWith('/')
+  const imageSource = imageNode.src.startsWith('/') && !imageNode.src.endsWith('.gif')
     ? `${imgixBase}${imageNode.src}?${imgixParameters}`
     : imageNode.src;
   return <img src={imageSource} alt={imageNode.alt} title={imageNode.title} />
