@@ -12,7 +12,7 @@ const linkRenderer = (linkNode) => {
 const imgixBase = 'https://chalees-min.imgix.net';
 const imgixParameters = 'w=800&fit=max&auto=format';
 const imageRenderer = (imageNode) => {
-  const imageSource = imageNode.src.startsWith('/') && !imageNode.src.endsWith('.gif')
+  const imageSource = imageNode.src.startsWith('/')
     ? `${imgixBase}${imageNode.src}?${imgixParameters}`
     : imageNode.src;
   return <img src={imageSource} alt={imageNode.alt} title={imageNode.title} />
