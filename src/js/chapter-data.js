@@ -199,8 +199,8 @@ const data = [{
     title: 'The purpose of carbohydrates',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/pizza-carbohydrates-energy.jpeg)
-
+    ![pizza carbohydrates energy](/learning-items/pizza-carbohydrates-energy.jpeg)
+    
     Why do we need carbohydrates? `,
     maxSelected: 1,
     choices: [
@@ -655,7 +655,7 @@ const data = [{
     instructions: dedent`
     Burning a Page. Is it reversible or irreversible?
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/page-burning.jpg)
+    ![burning page](/learning-items/page-burning.jpg)
     `,
     presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
@@ -687,7 +687,7 @@ const data = [{
     instructions: dedent`
     Mixing salt in water. Is it reversible or irreversible?
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salt-and-water.png)
+    ![salt and water](/learning-items/salt-and-water.png)
     `,
     presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
@@ -719,7 +719,7 @@ const data = [{
     instructions: dedent`
     Salman making a commitment. Is it reversible or irreversible?
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/salman-khan.jpeg)
+    ![salman khan commitment](/learning-items/salman-khan.jpeg)
     `,
     presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
@@ -836,7 +836,7 @@ const data = [{
     instructions: dedent`
     Lemons grow on a Shrub. __Shrubs__ generally have branches near the base of the stem
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/shrubs-low-branches.jpeg)
+    ![shrubs are trees with low branches](/learning-items/shrubs-low-branches.jpeg)
     
     __Trees__, however, have branches in the upper part of the stem. They are also taller than Shrubs.
     `,
@@ -954,7 +954,7 @@ const data = [{
 
     In the image below, you will see examples of both Reticulate Venation (on the left of image) and Parallel Venation (on the right of image).
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/venation2.jpeg)
+    ![leaf venation](/learning-items/venation2.jpeg)
     
     Now __Parallel Venation__ is easy to understand. It happens when the pattern created by the veins is parallel to each other. This happens in coconut and banana leaves.
 
@@ -1202,7 +1202,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Have you ever broken a bone?',
     instructions: dedent`
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/have-you-broken-bone-2.jpeg)
+    ![broken bone](/learning-items/have-you-broken-bone-2.jpeg)
 
     Have you ever suffered a broken bone? What was that like? Did it hurt? Tell us in the box below.
     `,
@@ -1270,7 +1270,7 @@ const data = [{
     instructions: dedent`
       Do you think we experience friction in our joints when our bones rub against each other?
 
-      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/rubbing-our-hands-2.jpeg)`,
+      ![rubbing hands friction](/learning-items/rubbing-our-hands-2.jpeg)`,
     maxSelected: 1,
     choices: [
       {
@@ -2015,7 +2015,7 @@ const data = [{
     title: 'Draw a circuit',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/draw-circuit-cell-bulb-wires.jpeg)
+      ![electric circuit with cell bulb and wires](/learning-items/draw-circuit-cell-bulb-wires.jpeg)
 
       Draw an electric circuit with the materials listed in the image above — 2 cells, lots of wires, 1 bulb.
 
@@ -2043,7 +2043,7 @@ const data = [{
     title: 'Conductor or Insulator?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/cotton-yarn.jpeg)
+     ![cotton yarn](/learning-items/cotton-yarn.jpeg)
 
       Can cotton threads be used in place of wires in electric circuits?`,
     maxSelected: 1,
@@ -2074,7 +2074,7 @@ const data = [{
     title: 'Will the bulb glow?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/circuit-screwdriver.jpeg)
+   ![circuit screwdriver](/learning-items/circuit-screwdriver.jpeg)
 
     Will the bulb in the image glow?
 
@@ -2361,7 +2361,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Exchange of gases',
     instructions: dedent`
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/elephants-plants.jpg)
+    ![animals plants exchange of gases elephants](/learning-items/elephants-plants.jpg)
 
     How do plants and animals work to exchange gases in the atmosphere? Write down your thoughts in the box below.
 
