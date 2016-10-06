@@ -79,8 +79,8 @@ const data = [{
       afterBody: {
         //show: 'ifResponse',
         show: 'locked',
-        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School.',
-        feedbackImagePath: '/image-response-feedback/dl-where-food-comes-from.jpg'
+        preface: 'The picture below was made and uploaded by Krishvi, a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/image-response-feedback/krishvi-where-food-comes-from.jpg'
       }
     }
   }, {
@@ -989,9 +989,9 @@ const data = [{
     Then take a photo of that drawing with your phone and upload it here. `,
     hacks: {
       afterBody: {
-        preface: 'Here is an image of photosynthesis we got from Wikipedia. It shows that plants take water from soil and carbon dioxide from air, to make food and release oxygen.',
+        preface: 'This image was made by a student of Class 6 at Ahlcon International School. It shows that plants use sunlight and carbon dioxide (and water), to make food and release oxygen.',
         show: 'locked',
-        feedbackImagePath: '/learning-items/Photosynthesis.gif',
+        feedbackImagePath: '/image-response-feedback/photosynthesis.jpg',
       }
     }
   }, {
