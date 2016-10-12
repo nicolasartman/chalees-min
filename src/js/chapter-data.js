@@ -2385,27 +2385,230 @@ export const chapter6Data = [{
     kind: 'video',
     time: 3,
     title: 'Landfill in Hawaii and New Delhi',
-    instructions: 'This video highlights how landfills work on different sides of the earth',
+    instructions: 'Watch this video to see how landfills work in Hawaii and New Delhi',
     videoId: 'GXogi1FV_Iw',
   }, {
-    id: 'select-a-video-title',
+    id: 'landfill-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      _______ is an area where the garbage collected from a city is dumped.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Fulfill'
+      },
+      {
+        id: 'opt2',
+        text: 'Landstop'
+      },
+      {
+        id: 'opt3',
+        text: 'Landfill'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'To fulfill something is to accomplish that thing. It is not related to garbage.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Landstop is not the correct answer'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__.'
+      }
+    ]
+  }, {
+    id: 'better-view-of-landfill',
+    kind: 'video',
+    time: 2,
+    title: 'Mountains of garbage in New Delhi',
+    instructions: 'This video will give you a great view of a garbage mountain in Delhi.',
+    videoId: 'ini4iVj_IYw',
+    endTime: 117
+  }, {
+    id: 'how-to-do-composting',
+    kind: 'video',
+    time: 3,
+    title: 'How to make compost at home',
+    instructions: 'Here is a tutorial on how to turn plant waste (like food scraps) into compost at home.',
+    videoId: 'UDbyNIBFlN0',
+  }, {
+    id: 'food-waste-to-compost-and-biogas',
+    kind: 'video',
+    time: 6,
+    title: 'Making compost from kachra (waste)',
+    instructions: 'In this video, Aamir Khan talks about how waste can be used to produce compost and biogas.',
+    videoId: 'M1wL4Ywt9TU',
+    endTime: 360,
+  }, {
+    id: 'composting-definition',
+    time: 1,
+    kind: 'image',
+    title: 'Composting: A definition',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The process of converting plant and animal waste into manure is called composting
+
+    Plant waste (like banana leaves) and animal waste (like horse poop), both shown in this image, are ingredients for composting. Manure, shown at the bottom of this image, is the result of composting.
+
+    Manure is mixed with the soil on farms to enrich the soil with nutrients like Nitrogen.
+    `,
+    imagePath: '/learning-items/composting.jpeg'
+  }, {
+    id: 'what-is-manure',
+    time: 1,
+    kind: 'image',
+    title: 'What is manure?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Manure is the fertilizer that is produced at the end of composting.
+
+    This fertilizer can be mixed with the soil on farms to enrich the soil with nutrients like Nitrogen.
+    `,
+    imagePath: '/learning-items/manure.jpeg'
+  }, {
+    id: 'using-plastics-in-compost',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Using plastics in a compost',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![plastic bags](/learning-items/plastic-bags.jpeg)
+
+      Can plastic bags be used in a compost?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'That is incorrect. Plastic bags do not decompose; thus they need to be reused or recycled. They cannot be used in a Compost.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Plastic bags cannot be used in a compost.'
+      }
+    ]
+  }, {
+    id: 'types-of-dustbins',
+    time: 1,
+    kind: 'image',
+    title: 'Two types of dustbins',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Some cities in India provide two types of dustbins for garbage collection. One green, and the other blue.
+
+    The green dustbin is meant for plant waste like leftover food. This waste is biodegradable; in other words, this waste can rot or decompose. Since this waste is damp, it is also called wet waste.
+
+    The blue dustbin is meant for objects like plastics and glass, which do not biodegrade and need to be recycled. This type of waste is sometimes called dry waste.
+    
+    Sometimes, I have noticed, that people do not put the right type of waste in the correct dustbin.
+    `,
+    imagePath: '/learning-items/dustbin-types-wet-dry-waste.jpeg'
+  }, {
+    id: 'harmful-effects-of-burning-leaves',
+    time: 1,
+    kind: 'image',
+    title: 'Harmful effects of burning leaves',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Burning leaves can be dangerous for our health.
+
+    A news report from 2016 suggests that _burning dry leaves, plastic, and other forms of waste along road sides add toxic gases to air. Doctors say inhaling these fumes is at least 10 times more harmful than inhaling the smoke emitted by vehicles._
+    `,
+    imagePath: '/learning-items/burning-leaves-harmful.jpeg'
+  }, {
+    id: 'vermicomposting',
+    time: 1,
+    kind: 'image',
+    title: 'Vermicomposting',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The method of making compost from kitchen garbage using redworms is called vermicomposting. 
+
+    The word _Vermi_ simply means _Worms_.
+    `,
+    imagePath: '/learning-items/vermicomposting.jpeg'
+  }, {
+    id: 'how-is-vermicomposting-done',
+    kind: 'video',
+    time: 5,
+    title: 'How to do vermicomposting at home?',
+    instructions: 'Worms eat food scraps, which become compost as they pass through their body.',
+    videoId: 'UmXgPXafoPo',
+    startTime: 166,
+    endTime: 451,
+  }, {
+    id: 'vermicomposting-is-worm-poop',
+    kind: 'video',
+    time: 1,
+    title: 'Vermicomposting is actually worm poop',
+    instructions: 'Worms eat food waste (like vegetable scraps) and convert it into their poop. This poop is the manure or fertilizer that is used in farms.',
+    videoId: 'V8miLevRI_o',
+    startTime: 90,
+    endTime: 147,
+  }, {
+    id: 'separating-worms-and-compost',
     kind: 'textResponse',
     time: 5,
-    title: 'Select a video title',
-    instructions: 'We don\'t like the title of this video. If you were to rename the video from its current title “Landfill in Hawaii and New Delhi” to something more appropriate, what would it be?',
+    short: true,
+    title: 'Separating worms and compost',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     ![redworms vermicomposting](/learning-items/redworms.jpeg)
+
+      Once the compost is ready, how can we separate worms from compost?
+
+      Write your thoughts in the space below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is the response from Siddharth, a fellow student who answered this question.',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Add a small amount of new food waste in one corner of the pit. 
+
+            All the worms shift to that part of the bin. 
+
+            Remove the worm free compost from your bin.`
+          }
+        ]
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: 'From your textbook, read the section on Vermicomposting. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
+    id: 'how-to-recycle-paper',
+    kind: 'video',
+    time: 5,
+    title: 'How to recycle paper?',
+    instructions: 'Here is a tutorial on how to recycle paper at home.',
+    videoId: '7JBOjKpU_mg',
   }, {
-    id: 'teach-a-friend',
-    kind: 'textResponse',
-    time: 15,
-    title: 'Teach a friend',
-    instructions: 'Find a friend that you can teach what you have learned in this chapter. Tell them everything you know, answer their questions. Then write down your experiences on what happened here.',
-  }]
+    id: 'grade6-chapter16-song',
+    kind: 'video',
+    time: 1,
+    title: 'Chapter Revision',
+    instructions: 'This song will help you revise the entire chapter.',
+    videoId: 'vB9ZNxKF2zQ',
+    locked: true
+  }, ]
 }, {
   // causes it to not show up on the homepage
   hidden: true,
