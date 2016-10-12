@@ -1,7 +1,7 @@
 import uniq from 'lodash/uniq';
 import flattenDeep from 'lodash/flattenDeep';
 
-const data = [{
+export const chapter6Data = [{
   id: '1',
   title: 'Food: Where Does It Come From?',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
@@ -24,7 +24,7 @@ const data = [{
     instructions: dedent`
       ![a bunch of apples](/learning-items/food-apples.jpeg)
 
-      The food that we eat goes through all of the following places, except for one. 
+      The food that we eat goes through all of the following places, except for one.
 
       Select the odd one out.`,
     maxSelected: 1,
@@ -71,7 +71,7 @@ const data = [{
     title: 'Draw what you have learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a _pen and paper_ to draw a picture that shows what you have learned from the video above. 
+    Use a _pen and paper_ to draw a picture that shows what you have learned from the video above.
 
     Then take a picture of the drawing from your phone and share it here.`,
     // @NICK: This needs to be tested
@@ -97,7 +97,7 @@ const data = [{
     title: 'What does edible mean?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Edible simply means something that is eatable. 
+    Edible simply means something that is eatable.
 
     In Thailand, some insects are considered edible (or eatable).
 
@@ -115,9 +115,9 @@ const data = [{
       - Where does __water__ come from?
       - Where does __petrol__ come from?
       - Where does __snot__ come from?
-        
+
       Select a question you like. You can pick from the list above or think of a new question of your own.
-        
+
       Then write that question in the box below.`,
     hacks: {
       afterBody: {
@@ -139,7 +139,7 @@ const data = [{
             imagePath: '/fake-responses/koushiki.png',
             response: 'Where do books come from?'
           }
-        ]        
+        ]
       }
     }
   }, {
@@ -149,9 +149,9 @@ const data = [{
     title: 'Plan your own research',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Now that you have selected a question, spend a few minutes creating a plan for the things you will do to answer that question. 
+    Now that you have selected a question, spend a few minutes creating a plan for the things you will do to answer that question.
 
-    Think about who you plan to talk to, what websites you plan to visit. 
+    Think about who you plan to talk to, what websites you plan to visit.
 
     Write your plan in the box below.`,
     hacks: {
@@ -200,7 +200,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![pizza carbohydrates energy](/learning-items/pizza-carbohydrates-energy.jpeg)
-    
+
     Why do we need carbohydrates? `,
     maxSelected: 1,
     choices: [
@@ -279,7 +279,7 @@ const data = [{
     title: 'Read and Draw',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    From your textbook, read the section 2.2, _What Do Various Nutrients Do For Our Body?_ 
+    From your textbook, read the section 2.2, _What Do Various Nutrients Do For Our Body?_
 
     Then use a pencil and paper to draw a cartoons of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
     // @NICK: This needs to be tested
@@ -317,7 +317,7 @@ const data = [{
     title: 'Tell us your learning story',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      Have you ever gone from knowing nothing about a subject to knowing a lot. 
+      Have you ever gone from knowing nothing about a subject to knowing a lot.
 
       Tell us about that time. What were you learning? What was difficult about that time? Who helped you?`,
     hacks: {
@@ -360,9 +360,9 @@ const data = [{
       afterBody: {
         preface: 'Here is a comic that another student in the class submitted.',
         show: 'locked',
-        feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'        
+        feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'
       }
-    }    
+    }
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
@@ -391,7 +391,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     maxSelected: 1,
     instructions: dedent`
-    Tell us a topic from this chapter that is interesting to you. 
+    Tell us a topic from this chapter that is interesting to you.
 
     We will collect responses from all students taking this quiz, and then make a video on one of those topics.`,
     choices: [
@@ -437,7 +437,7 @@ const data = [{
     title: 'Read and Draw',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    From your textbook, read the section on _Transparency._ 
+    From your textbook, read the section on _Transparency._
 
     Then use a pen and paper to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
     // @NICK: This needs to be tested
@@ -519,7 +519,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Summarize the Video',
     instructions: dedent`
-    You have watched the _How Does Salt Dissolve in Water_ video above. 
+    You have watched the _How Does Salt Dissolve in Water_ video above.
 
     Now, summarize what you have learned by watching that video in the box below.`,
     hacks: {
@@ -535,7 +535,7 @@ const data = [{
 
             We zoomed into water, which is H2O. We also looked at salt which is NaCl. I think when we mix salt and water, we Na and Cl are separated by H and O and that causes salt to dissolve.
 
-            I want to Google to see what happens when we heat up salt and water. 
+            I want to Google to see what happens when we heat up salt and water.
 
             Also, sardar maine apka namak khaya hai - totally funny.`
           }
@@ -549,7 +549,7 @@ const data = [{
     title: 'Sedimentation',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Our science book defines sedimentation as the following: _When the heavier component in a mixture settles after water is added to it._ 
+    Our science book defines sedimentation as the following: _When the heavier component in a mixture settles after water is added to it._
 
     To me, that sounds a lot like Marriage. See the comparison below.`,
     imagePath: '/learning-items/sedimentation-marriage.jpeg'
@@ -560,11 +560,11 @@ const data = [{
     title: 'Decantation (through Jab We Met)',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    If you saw the movie _Jab We Met_, you probably remember __Hotel Decent__. 
+    If you saw the movie _Jab We Met_, you probably remember __Hotel Decent__.
 
     Change one letter in that hotel name, and you get __Decant__.
 
-    Decant (or its noun Decantation), means to remove water or liquid without disturbing the sediment. 
+    Decant (or its noun Decantation), means to remove water or liquid without disturbing the sediment.
 
     Hopefully this image below will help you remember the definition of Decantation.`,
     imagePath: '/learning-items/decantation-jabwemet2.jpeg'
@@ -578,7 +578,7 @@ const data = [{
     Sieving is the process of separating mixtures of different sizes. For instance, sand and stones.
 
     I made the image below, as a joke, but I think it can help you remember the definition of Sieving. At the risk of making the joke unfunny, here is the meaning of the image below: 
-    
+
     _When a goalkeeper prevents a goal, we call it a good Save. That sounds a lot like the word Sieve. So this goalkeeper below, uses Sieves to separate footballs from nets._`,
     imagePath: '/learning-items/sieving1.jpeg'
   },{
@@ -624,9 +624,9 @@ const data = [{
   }, {
     id: 'lets-think-about-the-video',
     kind: 'textResponse',
-    short: true,    
+    short: true,
     time: 5,
-    presenterImagePath: '/instructors/kunal2.jpg',    
+    presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Let\'s think about the video',
     instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter6',
     hacks: {
@@ -644,7 +644,7 @@ const data = [{
             imagePath: '/fake-responses/prabsimar.png',
             response: 'Bridges and train tracks are made of metals which expand on heating. That is reversible. #chapter 6'
           }
-        ]        
+        ]
       }
     }
   }, {
@@ -837,7 +837,7 @@ const data = [{
     Lemons grow on a Shrub. __Shrubs__ generally have branches near the base of the stem
 
     ![shrubs are trees with low branches](/learning-items/shrubs-low-branches.jpeg)
-    
+
     __Trees__, however, have branches in the upper part of the stem. They are also taller than Shrubs.
     `,
     imagePath: '/learning-items/trees-high-branches.jpeg'
@@ -848,8 +848,8 @@ const data = [{
     title: 'What are Climbers?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Plants that take support on neighbouring structures and climb up are called Climbers. 
- 
+    Plants that take support on neighbouring structures and climb up are called Climbers.
+
     [Click here](http://www.pbslearningmedia.org/asset/lsps07_int_plantmovies/) and then on Video 3 to see them in action.`,
     imagePath: '/learning-items/climber2.png'
   }, {
@@ -859,7 +859,7 @@ const data = [{
     title: 'Teaching what you have learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Imagine you had to teach everything you have learned thus far in this chapter to a friend. That includes everything you have learned about _flowers, herbs, shrubs, trees, and climbers._ 
+    Imagine you had to teach everything you have learned thus far in this chapter to a friend. That includes everything you have learned about _flowers, herbs, shrubs, trees, and climbers._
 
     What would you say to your friend while teaching them? Write your response in the box below.`,
     hacks: {
@@ -870,13 +870,13 @@ const data = [{
           {
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
-            response: dedent`Herbs are small and tender. Now I am singing the song, main tulsi tere aangan ki. 
+            response: dedent`Herbs are small and tender. Now I am singing the song, main tulsi tere aangan ki.
 
             Shrubs have low branches. Trees are tall with high branches. Those were nice pictures.
 
             Flowers are amazing. Plants make flowers to make more of themselves. Pollen is necessary to turn flowers into fruits. I loved the video of the flower turning to pear.`
           }
-        ]        
+        ]
       }
     }
   }, {
@@ -916,7 +916,7 @@ const data = [{
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`Like a truck, stem transports water. Horn Ok Please. Use dipper at night. #stemtastic`
           }
-        ]        
+        ]
       }
     }
   }, {
@@ -926,9 +926,9 @@ const data = [{
     title: 'What is Petiole?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Petiole is a part of the leaf that is attached to the stem. 
+    Petiole is a part of the leaf that is attached to the stem.
 
-    Here is a great way to rememeber that: Petiole comes from the prefix _Ped_. _Ped_ is used in words like Pedestrian or Pedicure. It has to do with the feet. 
+    Here is a great way to rememeber that: Petiole comes from the prefix _Ped_. _Ped_ is used in words like Pedestrian or Pedicure. It has to do with the feet.
 
     You can think of the Petiole as the foot or the base of the leaf that connects to the stem.`,
     imagePath: '/learning-items/petiole-pedestrian.jpeg'
@@ -939,7 +939,7 @@ const data = [{
     title: 'What are Veins?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Veins help carry water and nutrients in a leaf. 
+    Veins help carry water and nutrients in a leaf.
 
     This is similar to veins in the human body, which help carry blood throughout the body.`,
     imagePath: '/learning-items/veins-leaf.jpeg'
@@ -955,7 +955,7 @@ const data = [{
     In the image below, you will see examples of both Reticulate Venation (on the left of image) and Parallel Venation (on the right of image).
 
     ![leaf venation](/learning-items/venation2.jpeg)
-    
+
     Now __Parallel Venation__ is easy to understand. It happens when the pattern created by the veins is parallel to each other. This happens in coconut and banana leaves.
 
     Let us think about __Reticulate Venation__.
@@ -970,7 +970,7 @@ const data = [{
     title: 'What is Transpiration?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Now you probably know that Transpiration is the process by which plants lose water from their leaves. This water is lost in the form of vapour. 
+    Now you probably know that Transpiration is the process by which plants lose water from their leaves. This water is lost in the form of vapour.
 
     The amazing thing about this is that plants like the Corn Plant, lose about 2 litres of water every day.
     `,
@@ -982,7 +982,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Photosynthesis ',
     instructions: dedent`
-    We know that you have been taught the concept of photosynthesis several times. So we will not bore you with another lecture on it. Here is a chance to be creative, however. 
+    We know that you have been taught the concept of photosynthesis several times. So we will not bore you with another lecture on it. Here is a chance to be creative, however.
 
     Draw a picture, using a _pen and paper_, that you think describes the process of photosynthesis.
 
@@ -1001,7 +1001,7 @@ const data = [{
     title: 'How much sugar do plants make?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Plants make food through the process of Photosynthesis. We know that. 
+    Plants make food through the process of Photosynthesis. We know that.
 
     But how much food (or sugar/carbohydrates) do they make in a day? Let us find out.
     `,
@@ -1014,11 +1014,11 @@ const data = [{
     title: 'Roots: What is their function?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Roots anchor a plant. That means they keep the plant steady in one place.  
+    Roots anchor a plant. That means they keep the plant steady in one place.
 
     They also absorb water and nutrients from the soil. Plants needs both water and nutrients to make food.
 
-    There are two main types of roots: Fibrous and Tap roots. The image below features Fibrous Roots, where all roots seem similar to each other. 
+    There are two main types of roots: Fibrous and Tap roots. The image below features Fibrous Roots, where all roots seem similar to each other.
     `,
     imagePath: '/learning-items/roots-anchor.jpeg'
   }, {
@@ -1034,7 +1034,7 @@ const data = [{
 
     We can understand this with the help of coconut trees. The leaves of coconut trees have parallel venation. That means that if you look at them really closely, you will see that the veins are mostly parallel to each other.
 
-    The coconut trees also have fibrous roots. 
+    The coconut trees also have fibrous roots.
     `,
     imagePath: '/learning-items/parallel-venation-fibrous-roots2.jpeg'
   }, {
@@ -1058,7 +1058,7 @@ const data = [{
     title: 'Reticulate Venation and Tap Roots',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Carrots have tap roots. That means they have only one primary root. 
+    Carrots have tap roots. That means they have only one primary root.
 
     The leaves of a Carrot Plants have reticulate venation. That means that if we look at them really closely, we will see that their veins make a net-like pattern.
     `,
@@ -1190,7 +1190,7 @@ const data = [{
     title: 'What would happen if we had no bones?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Here is an attempt at the question: _What would happen if we had no bones?_ 
+    Here is an attempt at the question: _What would happen if we had no bones?_
 
     Bones give framework and shape to our body.
     `,
@@ -1234,7 +1234,7 @@ const data = [{
     title: 'Pivotal Joints',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The place where our neck joins our head is a _Pivotal Joint_. 
+    The place where our neck joins our head is a _Pivotal Joint_.
 
     You and President Obama are able to say no because of that Pivotal Joint.
 
@@ -1248,7 +1248,7 @@ const data = [{
     title: 'Fixed or Immovable Joints',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Immovable joints, as the name suggests, do not move. We can find them in the skull. 
+    Immovable joints, as the name suggests, do not move. We can find them in the skull.
     `,
     imagePath: '/learning-items/immovable-joints-skull-2.jpeg'
   }, {
@@ -1307,7 +1307,7 @@ const data = [{
     title: 'Cartilage',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Cartilage covers the ends of our bones and reduces friction in our joints. 
+    Cartilage covers the ends of our bones and reduces friction in our joints.
 
     It is a little bit like the lubricant that is added in cars to prevent friction between moving parts of an engine.
     `,
@@ -1319,9 +1319,9 @@ const data = [{
     title: 'Muscles — They work in pairs',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    When you lift your forearm, the bicep and the tricep work together to make that happen. 
+    When you lift your forearm, the bicep and the tricep work together to make that happen.
 
-    Study the image below to see how that works. 
+    Study the image below to see how that works.
     `,
     imagePath: '/learning-items/muscles.jpeg'
   }, {
@@ -1338,7 +1338,7 @@ const data = [{
     Also notice how the _tricep_ contracts when we extend our forearm. And the _bicep_ relaxes.
 
     ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/muscles-bicep-tricep-animation.gif)
-    
+
     _Source: Niwadare - Own work, CC BY-SA 4.0_`,
     imagePath: '/learning-items/white-space-2.jpeg'
   }, {
@@ -1348,7 +1348,7 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     title: 'Read and Draw',
     instructions: dedent`
-    From your textbook, read the section 8.2, _“Gait of Animals”_. 
+    From your textbook, read the section 8.2, _“Gait of Animals”_.
 
     Then use a pen and pencil to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.`,
   }, {
@@ -1409,7 +1409,7 @@ const data = [{
     title: 'What does habitat mean?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Habitat simply means Home. 
+    Habitat simply means Home.
 
     Have you ever seen a _Home Sweet Home_ sign on a door before. From now on, when you see that sign, I want you think of _Habitat Sweet Habitat._
     `,
@@ -1421,7 +1421,7 @@ const data = [{
     title: 'What is Adaptation?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Notice the fish in the image below. It has an eyespot towards its back. This fish is trying to adapt in water by fooling its predator. If a predator comes to attack this fish, they are likely to cause damage to the tail and not the head.  
+    Notice the fish in the image below. It has an eyespot towards its back. This fish is trying to adapt in water by fooling its predator. If a predator comes to attack this fish, they are likely to cause damage to the tail and not the head.
 
     Notice the Hyena with its cubs in a burrow. A Hyena adapts to the hot environment by living in a burrow during the day; it comes out at night when it is cooler.
 
@@ -1435,7 +1435,7 @@ const data = [{
     title: 'Can you close your nostrils?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Camels can close their nostrils. This is an excellent example of how Camels have adapted to the desert environment. 
+    Camels can close their nostrils. This is an excellent example of how Camels have adapted to the desert environment.
 
     By closing their nostrils, Camels can keep the desert sand out of their nose.
 
@@ -1449,7 +1449,7 @@ const data = [{
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      Fish have streamlined shape. This __________ allows them to move easily under water. 
+      Fish have streamlined shape. This __________ allows them to move easily under water.
 
       Select the correct option.`,
     maxSelected: 1,
@@ -1488,8 +1488,8 @@ const data = [{
     title: 'Adaptation by desert plants',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Click on the link below to see an incredible video about plants in the in desert environment. 
-    
+    Click on the link below to see an incredible video about plants in the in desert environment.
+
     This video includes adaptations made by the cactus plant to survive desert conditions.
 
     [Click here](http://www.pbslearningmedia.org/asset/tdc02_vid_desert/) to see the video.
@@ -1514,7 +1514,7 @@ const data = [{
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      Soil, water and air are the __________ factors of a habitat. 
+      Soil, water and air are the __________ factors of a habitat.
 
       Select the correct option.`,
     maxSelected: 1,
@@ -1602,7 +1602,7 @@ const data = [{
     instructions: dedent`
     Read section 9.4 _Characteristics of the Living Beings_ from your science book.
 
-    Then use a _pen and paper_ to draw a picture that shows what you have learned from that section. 
+    Then use a _pen and paper_ to draw a picture that shows what you have learned from that section.
 
     Take a picture of the drawing from your phone and share it here.`,
   }, {
@@ -1671,9 +1671,9 @@ const data = [{
     time: 6,
     title: 'Getting to Mars',
     instructions: dedent`
-    Alright now for some exciting means of transport. 
+    Alright now for some exciting means of transport.
 
-    We do not go to Mars often. But in 2003, NASA, an American space agency, sent a robot to Mars. Its name was Spirit Rover. 
+    We do not go to Mars often. But in 2003, NASA, an American space agency, sent a robot to Mars. Its name was Spirit Rover.
 
     It took Spirit 7 months to get to Mars from Earth. This video is an animation of the journey Spirit took.`,
     videoId: 'XRCIzZHpFtY',
@@ -1701,7 +1701,7 @@ const data = [{
 
     Why is that?
 
-    That is because the French invented the International System of Units. And in French that translates to _Système International dunités_. Therefore the abbreviation is __SI__. 
+    That is because the French invented the International System of Units. And in French that translates to _Système International dunités_. Therefore the abbreviation is __SI__.
     `,
     imagePath: '/learning-items/internationa-system-units.jpeg'
   }, {
@@ -1731,7 +1731,7 @@ const data = [{
         preface: 'Here is how Koushiki, a student of Class 6 at Ahlcon International School in Delhi answered this question. She says, "People have feet of different sizes. Babies have small feet. Adults have large feet. We need a unit that everyone can agree on."',
         feedbackImagePath: '/learning-items/baby-feet.jpeg'
       }
-    }    
+    }
   }, {
     id: 'one-metre-100-centimetres',
     time: 2,
@@ -1741,7 +1741,7 @@ const data = [{
     instructions: dedent`
     _1 metre = 100 centimetres_.
 
-    One way I try to remember this formula is by thinking of the word _centi_ that can refer to 100. Think of the word _century_ when someone scores a 100 runs in cricket. 
+    One way I try to remember this formula is by thinking of the word _centi_ that can refer to 100. Think of the word _century_ when someone scores a 100 runs in cricket.
 
     _Centi_, more accurately means 1/100 (or one hundredth). If you take a metre (which is the size of a guitar), and divide it into 100 equal parts, each one of those parts is a centimetre.
     `,
@@ -1753,7 +1753,7 @@ const data = [{
     title: 'Millimetre',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The thickness of a credit card is about 1 millimetre long. 
+    The thickness of a credit card is about 1 millimetre long.
 
     [Click here](https://www.mathsisfun.com/measure/metric-length.html) to see similar examples that explain the relationship between millimetres, centimetres, metres, and kilometres.
     `,
@@ -1834,8 +1834,8 @@ const data = [{
     Here are two main errors in measurement:
 
     1) In some scales, the ends may be broken. You may not be able to see the zero mark clearly. In such cases, you should avoid taking measurements from the zero mark of the scale. You can begin from any other full mark, like 1 cm.
-    
-    2) You should place your eye directly in front of point where the measurement is to be taken. 
+
+    2) You should place your eye directly in front of point where the measurement is to be taken.
     `,
     imagePath: '/learning-items/errors-while-taking-measurements-2.jpeg'
   }, {
@@ -1860,8 +1860,8 @@ const data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     When I think of the word Rectilinear, I think of the word __linear__. When I think of the word linear, I think of the word __line__.
- 
-    Rectilinear motion is motion in a straight line. 
+
+    Rectilinear motion is motion in a straight line.
 
     _Recti_, in case you are wondering, simply means straight.
     `,
@@ -1873,7 +1873,7 @@ const data = [{
     title: 'What is Circular Motion?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    In circular motion, an object moves such that its distance from a fixed point remains the same. 
+    In circular motion, an object moves such that its distance from a fixed point remains the same.
 
     The dog in the image below is in circular motion. Its distance from the center of the swing is always the same.
 
@@ -1949,11 +1949,11 @@ const data = [{
     title: 'What is an electric cell?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    An electric cell produces electricity from the chemicals inside it. 
+    An electric cell produces electricity from the chemicals inside it.
 
     This electricity can be used by devices like a TV remote. The reaction between the chemicals in the cell produces electricity. Some cells have chemicals like Zinc and Carbon in them (shown here in the picture of the leaking cell below).
 
-    By the way, people in some countries refer to a cell by other names like a battery. 
+    By the way, people in some countries refer to a cell by other names like a battery.
     `,
     imagePath: '/learning-items/electric-cell.jpeg'
   }, {
@@ -1967,7 +1967,7 @@ const data = [{
 
     There are several different types of cells in the image below. Each one of them produces a different amount of electric current.
 
-    But they all have a positive terminal — this is generally the end with a tiny bump. They also have a negative terminals. 
+    But they all have a positive terminal — this is generally the end with a tiny bump. They also have a negative terminals.
     `,
     imagePath: '/learning-items/cell-terminals.jpeg'
   }, {
@@ -1978,7 +1978,7 @@ const data = [{
     instructions: dedent`
     Please do not repeat this experiment without adult supervision.
 
-    When we connect the two ends of a cell (without using any device like a bulb), excessive current starts moving from the positive to the negative terminal. This makes the wire really hot, and can also burn your hand. 
+    When we connect the two ends of a cell (without using any device like a bulb), excessive current starts moving from the positive to the negative terminal. This makes the wire really hot, and can also burn your hand.
 
     Within a short duration (generally a few seconds), the cell is completely drained and becomes useless. This situation is called a short circuit.
     `,
@@ -2029,7 +2029,7 @@ const data = [{
     instructions: dedent`
     Materials that allow electricity to pass through them are called conductors. Examples include most metals, you, and graphite (which is found in pencils).
 
-    In this experiment a large amount of current is applied to graphite within the pencil. This current is equal to about 25 cells working together. 
+    In this experiment a large amount of current is applied to graphite within the pencil. This current is equal to about 25 cells working together.
 
     Graphite is a good conductor of electricity, so it lets current flow through it. Since we are applying a lot of current, the pencil starts to burn, and very soon the graphite begins to glow. In the end, the electric current applied is so strong that it breaks the graphite.
     `,
@@ -2079,7 +2079,7 @@ const data = [{
     Will the bulb in the image glow?
 
     Explain your answer in the box below.`,
-    
+
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
@@ -2211,7 +2211,7 @@ const data = [{
     instructions: dedent`
     Can we see that air occupies space? Yes.
 
-    Watch this simple video to see how air occupies space inside an empty cup. 
+    Watch this simple video to see how air occupies space inside an empty cup.
     `,
     videoId: 'WBNNfKT6Kk0',
     startTime : 7
@@ -2247,7 +2247,7 @@ const data = [{
     instructions: dedent`
     Activity 3, on Page 148 of the book asks you to put candles in the middle of shallow containers with water. It also asks to light the candle and then cover it with an inverted glass.
 
-    The candle goes out (extinguishes) after some time. Watch this video to see that experiment. 
+    The candle goes out (extinguishes) after some time. Watch this video to see that experiment.
     `,
     videoId: 'Y81tQqvyftA',
     startTime : 35
@@ -2287,7 +2287,7 @@ const data = [{
     time: 2,
     title: 'Carbon dioxide is used to extinguish fires',
     instructions: dedent`
-    Watch this video to see how carbon dioxide can be used to put out (or extinguish) fires. 
+    Watch this video to see how carbon dioxide can be used to put out (or extinguish) fires.
     `,
     videoId: '1z_ApF2n-5Y',
     startTime : 4
@@ -2302,7 +2302,7 @@ const data = [{
 
     As the air quality gets worse in Delhi, people have started wearing __Respirators.__ A respirator is a mask that helps in breathing by removing dust particles from air.
 
-    Thus respiration is the act of breathing. While breathing, we take in all the gases that make up air, and use oxygen to convert food into energy. 
+    Thus respiration is the act of breathing. While breathing, we take in all the gases that make up air, and use oxygen to convert food into energy.
     `,
     imagePath: '/learning-items/respirators.jpeg'
   }, {
@@ -2351,7 +2351,7 @@ const data = [{
     instructions: dedent`
     Air (and thus oxygen) is present in soil. That is how animals that live in burrows underneath the ground are able to breathe.
 
-    How does the air get in the soil? Well, the burrows make spaces available for air to move in and out of the soil. However, when it rains, water fills up all the spaces occupied by the air in the soil. Therefore, animals living in the soil emerge out for respiration.  
+    How does the air get in the soil? Well, the burrows make spaces available for air to move in and out of the soil. However, when it rains, water fills up all the spaces occupied by the air in the soil. Therefore, animals living in the soil emerge out for respiration.
     `,
     imagePath: '/learning-items/burrow-air-soil.jpeg'
   }, {
@@ -2419,7 +2419,7 @@ const data = [{
     title: 'Multiple Choice Example 1',
     instructions: dedent`
       Select all that apply.
-    
+
       Select Option 1 and 2, Option 3 and 4, or Option 5, and save to see an automatic response.
     `,
     choices: [
@@ -2521,27 +2521,27 @@ const data = [{
       // except beforebody configurations can't use show: 'locked' (if set to that
       // they'll simply act like show: 'ifResponse')
       afterBody: {
-        
+
         preface: 'this is the text that prefaces the fake peer data',
-        
+
         // can be 'ifResponse', 'locked', or left out to show all the time
-        // 
+        //
         // 'ifResponse' shows it only if there is a saved response for that item
         // (it does not show while they're typing/selecting but before they've ever
         // hit save for that item).
-        // 
+        //
         // 'locked' shows a preview of the content and displays a locked message over it
         // until a response has been saved. after that, the response appears in full.
         //
         // setting the value to null or false or leaving it out causes the hack feedback
         // to be shown all the time.
         show: 'ifResponse',
-        
+
         // you can have either of the following present:
-        
+
         // An image to display as the feedback that will be resized to fit the space available
         feedbackImagePath: '/test.jpg',
-        
+
         // a list of fake peer responses, in the same format as below
         fakePeerResponses: [
           {
@@ -2560,7 +2560,7 @@ const data = [{
             response: 'Where do books come from?'
           }
         ],
-        
+
       }
     }
   }, {
@@ -2575,29 +2575,63 @@ const data = [{
   }]
 }];
 
+export const chapter7Data = [{
+  id: ' 1',
+  thumbnailImagePath: '/chalees-min-heart.png',
+  title: 'Placeholder',
+  items: [{
+    id: 'placeholder-item',
+    kind: 'video',
+    time: 2,
+    title: 'grade 7 chapter 1 placeholder item',
+    instructions: dedent`
+      This is a placeholder
+    `,
+    videoId: '1z_ApF2n-5Y',
+    startTime : 4
+  }, {
+    id: 'placeholder-2',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'another placeholder example',
+    instructions: 'delete this once real data is here',
+    maxSelected: 2,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Option 1'
+      },
+      {
+        id: 'opt2',
+        text: 'Option 2'
+      }
+    ]
+  }]
+}]
+
 
 // validate that all data items have ids that are unique
-const learningItems = data.map(chapter => {
+const learningItems = [...chapter6Data, ...chapter7Data].map(chapter => {
   if (!chapter.items) {
     alert(`Catastrophic error in chapter-data.js: chapter ${chapter.id} lacks an items list`);
     throw new Error();
   }
-  
+
   const chapterItemIds = chapter.items.map(item => item.id);
   if (uniq(chapterItemIds).length !== chapterItemIds.length) {
-    alert('Catastrophic error in chapter-data.js: there are two or more ' + 
+    alert('Catastrophic error in chapter-data.js: there are two or more ' +
       'learning items with the same ids within a single chapter! Ids in this chapter: \n' +
       chapterItemIds.join('\n'));
     throw new Error();
   }
-  
+
   chapter.items.map(item => {
     if (!item.id) {
       alert('Catastrophic error in chapter-data.js: the learning item printed below lack an id. ' +
         'It must have a unique id:\n' + JSON.stringify(item, null, 2));
       throw new Error();
     } else if (!/^[\w\d-]+$/.test(item.id)) {
-      alert(`Catastrophic error in chapter-data.js: item id ${item.id} ` + 
+      alert(`Catastrophic error in chapter-data.js: item id ${item.id} ` +
         'should only contain letters, numbers, and hyphens');
       throw new Error();
     }
@@ -2605,5 +2639,3 @@ const learningItems = data.map(chapter => {
 });
 
 // TODO: add automaticResponses id validation too
-
-export default data;
