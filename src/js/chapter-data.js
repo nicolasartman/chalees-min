@@ -750,7 +750,8 @@ export const chapter6Data = [{
     title: 'Expansion and Contraction',
     instructions: 'Watch how a metal expands on heating and contracts on cooling.',
     videoId: 'tPJLFDekxZA',
-    startTime: 6
+    startTime: 7,
+    endTime: 40,
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
@@ -1955,7 +1956,7 @@ export const chapter6Data = [{
 
     By the way, people in some countries refer to a cell by other names like a battery.
     `,
-    imagePath: '/learning-items/electric-cell.jpeg'
+    imagePath: '/learning-items/electric-cell-battery.jpeg'
   }, {
     id: 'terminals-of-a-cell',
     time: 1,
@@ -1995,7 +1996,7 @@ export const chapter6Data = [{
     A filament inside a bulb is a thin wire that gives off light when electric current passes through it.
 
     If this wire breaks, the path of electric current also breaks, and thus the bulb does not glow; the bulb is said to be fused.`,
-    imagePath: '/learning-items/filament.jpeg'
+    imagePath: '/learning-items/filament-electric-bulb.jpeg'
   }, {
     id: 'what-is-an-electric-circuit',
     time: 1,
@@ -2779,36 +2780,457 @@ export const chapter6Data = [{
 }];
 
 export const chapter7Data = [{
-  id: ' 1',
-  thumbnailImagePath: '/chalees-min-heart.png',
-  title: 'Placeholder',
+  id: ' 2',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/Grade7-Chapter2-Thumbnail.png',
+  title: 'Nutrition in Animals',
   items: [{
-    id: 'placeholder-item',
+    id: 'chapeter-2-video',
     kind: 'video',
-    time: 2,
-    title: 'grade 7 chapter 1 placeholder item',
+    time: 8,
+    title: 'Food\'s Journey',
     instructions: dedent`
-      This is a placeholder
+      In this video we talk to a person who experiences a lot of digestion-related problems. 
+
+      Through our conversation, we discuss the journey of food from the mouth to the toilet.
     `,
-    videoId: '1z_ApF2n-5Y',
-    startTime : 4
+    videoId: 'vdKeOul-CWM',
   }, {
-    id: 'placeholder-2',
+    id: 'digestive-system-quiz',
     kind: 'multipleChoiceResponse',
-    time: 3,
-    title: 'another placeholder example',
-    instructions: 'delete this once real data is here',
-    maxSelected: 2,
+    time: 1,
+    title: 'Digestive System Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Look at the arrow in the image below. Which part of the digestive system is the arrow pointing towards?
+
+      ![digestive system quiz](/learning-items/grade7/digestive-system-quiz-2.jpeg)`,
+    maxSelected: 1,
     choices: [
       {
         id: 'opt1',
-        text: 'Option 1'
+        text: 'Small Intestine'
       },
       {
         id: 'opt2',
-        text: 'Option 2'
+        text: 'Gall Bladder'
+      },
+      {
+        id: 'opt3',
+        text: 'Oesophagus'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'That is incorrect. Small intestine is the largest gland in the body, and can be seen towards the bottom of the image.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, that is not the gall bladder.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. This is the Oesophagus or the Foodpipe.'
       }
     ]
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 10,
+    title: 'Draw what you have learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We discussed a lot of new ideas while talking to Sunil Sir in the video above.
+    
+    Use a _pen and paper_ to draw a picture that shows everything you learned from that video.
+
+    Then take a photo of that drawing from your phone and upload it here.`,
+  }, {
+    id: 'ingestion-digestion-egestion',
+    time: 1,
+    kind: 'image',
+    title: 'Ingestion, Digestion, Egestion',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Ingestion, simply put, is eating. The word _Ingestion_, reminds me of the word _Insert._ When we eat, we are ingesting (or inserting) food in our body. 
+
+    Digestion is the process of breaking food down into smaller substances that can be used by the body.
+
+    Egestion is the removal of faecal matter (poop) from the body.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/ingestion-digestion-egestion-gif3.gif)
+
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'ingestion-starfish',
+    kind: 'video',
+    time: 2,
+    title: 'Ingestion in Starfish',
+    instructions: dedent`
+      Here is a video that shows how starfish eat. 
+
+      A starfish pops out its stomach through its mouth to eat its food.
+    `,
+    videoId: 'vw0apxiWzQ8',
+  }, {
+    id: 'egestion',
+    time: 1,
+    kind: 'image',
+    title: 'What is Egestion?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Egestion is the process of removing faecal matter (or poop) from the body.
+    `,
+    imagePath: '/learning-items/grade7/egestion.jpeg'
+  }, {
+    id: 'egestion-exit',
+    time: 1,
+    kind: 'image',
+    title: 'A way to remember Egestion',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word, _Egestion_, I think of the word _Exit_.
+
+    Exit means for us to leave or go out of a building.
+
+    Egestion means for poop to leave or exit our body.
+    `,
+    imagePath: '/learning-items/grade7/egestion-exit.jpeg'
+  }, {
+    id: 'alimentary-canal',
+    time: 1,
+    kind: 'image',
+    title: 'What is the Alimentary Canal?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Alimentary means food or nourishment.
+
+    Canal means path or passage.
+
+    Alimentary Canal is the passage through which the food passes in our body.
+
+    It includes the mouth, oesophagus, stomach, small intestine, large instestine, rectum and anus. 
+    `,
+    imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
+  }, {
+    id: 'how-to-remember-alimentary-canal',
+    time: 1,
+    kind: 'image',
+    title: 'A way to remember Alimentary Canal',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In 2013, a book named Gulp was released. The sub-title of the book is _Adventures on the Alimentary Canal_.
+
+    I use the image on the cover of this book to remember the meaning of Alimentary Canal.
+
+    Alimentary Canal is path along which the food passes in our body. It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum, and anus.
+    `,
+    imagePath: '/learning-items/grade7/alimentary-canal-food-passage.jpeg'
+  }, {
+    id: 'teach-a-friend',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Teach a Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
+
+    What will you tell him/her that will help them remember the definition of Alimentary Canal? Write your answer in the box below.`,
+    
+  }, {
+    id: 'mouth-or-stomach',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Stomach or Mouth or Small Intestine?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![digestive system quiz](/learning-items/grade7/man-eating.jpg)
+
+      Where does digestion begin?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Stomach'
+      },
+      {
+        id: 'opt2',
+        text: 'Mouth'
+      },
+      {
+        id: 'opt3',
+        text: 'Small Intestine'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The food enters our body through the mouth and the saliva in the mouth starts converting Starch into Simple Sugars. Thus digestion begins in the mouth.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The saliva in the mouth converts Starch (that can be found in foods like pasta) into simple sugars. These simple sugars can be used to provide energy to our body.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Not correct. Digestion begins in the mouth.'
+      }
+    ]
+  }, {
+    id: 'saliva-and-starch',
+    time: 1,
+    kind: 'image',
+    title: 'Saliva and Starch',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Starch can be found in foods like pasta. It is sometimes known as a complex sugar. 
+
+    Saliva can begin the process of digestion by turning the complex sugars in Starch into simple sugars. Our body can then use these simple sugars for energy.
+    `,
+    imagePath: '/learning-items/grade7/saliva-breaks-starch-into-sugar.jpeg'
+  }, {
+    id: 'milk-teeth',
+    time: 1,
+    kind: 'image',
+    title: 'What are Milk Teeth?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Milk teeth are the set of teeth that grow during the first year of the life of the baby.
+
+    One reason why milk teeth are called milk teeth is that they resemble the colour of milk.
+    `,
+    imagePath: '/learning-items/grade7/milk-teeth.jpeg'
+  }, {
+    id: 'teeth-type-and-decay',
+    time: 5,
+    kind: 'image',
+    title: 'Let us talk about adult teeth',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+
+    ![woman teeth](/learning-items/grade7/woman-teeth.jpg)
+
+    Humans have four types of teeth: Incisors, Canines, Pre-Molars, and Molars. [This video](https://www.youtube.com/watch?v=UA8o59seAow) will introduce you to different types of teeth.
+
+    Also, bacteria in the mouth react with the leftover food that is stuck between teeth to produce acid. This acid can damage the teeth. [This video](https://www.youtube.com/watch?v=_oIlv59bTL4) shows how proper brushing can avoid tooth decay. 
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'tongue',
+    kind: 'video',
+    time: 3,
+    title: 'How your tongue works',
+    instructions: dedent`
+      Your tongue can taste a few different flavours like sweet (ice cream), sour (lemon), salty (potato chips), bitter (coffee) and umami (soy sauce). 
+
+      This video will show you how your tongue does all that. 
+    `,
+    videoId: 'C4rdqXXzPGU',
+    endTime: 198,
+  }, {
+    id: 'tongue-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Tongue Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      The tongue helps in mixing food with saliva.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__.  '
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Tongue does help in mixing saliva with the food.'
+      }
+    ]
+  }, {
+    id: 'stomach-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Let us talk about the Stomach',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![human stomach](/learning-items/grade7/stomach3.jpeg)
+
+      We learned earlier in the chapter that after the Oesophagus, the food comes to the Stomach. 
+
+      The stomach is like a mixie or blender, where the food mixes with digestive juices and _______ acid.
+
+      Can you tell us the name of the acid?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Amino Acid'
+      },
+      {
+        id: 'opt2',
+        text: 'Hydrochloric Acid'
+      },
+      {
+        id: 'opt3',
+        text: 'Titanic Acid'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Proteins are converted into simpler substances called amino acids in the small intestine.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Stomach releases Hydrochloric Acid, which kills the harmful bacteria in the food. The stomach also releases digestive juices which break down proteins into simpler substances.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Titanic acid is a chemical made from the element Titanium, which does not exist in the stomach. '
+      }
+    ]
+  }, {
+    id: 'chapeter-2-video-small-intestine',
+    kind: 'video',
+    time: 3,
+    title: 'Recap of Small Intestine',
+    instructions: dedent`
+      I know we have seen this video before. But let us watch the small intestine portion of this video again, to recap what we had learned previously.
+    `,
+    videoId: 'vdKeOul-CWM',
+    startTime: 322,
+    endTime: 410,
+  }, {
+    id: 'bile-small-intestine',
+    time: 1,
+    kind: 'image',
+    title: 'Bile and the Small Intestine',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Liver produces Bile.
+
+    Bile is a yellowish-green liquid that is temporarily stored in the Gall Bladder. It is eventually send to the Small Intestine where it helps in the digestion of fats.
+    `,
+    imagePath: '/learning-items/grade7/liver-bile-gall-bladder-small-intestine-fats2.jpeg'
+  }, {
+    id: 'no-bile',
+    time: 1,
+    kind: 'image',
+    title: 'What if we had no Bile?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Our body needs bile to digest fats.
+
+    If we did not produce any bile then the fats would not be digested and would be passed in our poop. The indigestible fats will then give our poop a white, greasy look. 
+    `,
+    imagePath: '/learning-items/grade7/no-bile-white-poop.jpeg'
+  }, {
+    id: 'large-intestine-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Function of Large Intestine',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![human stomach](/learning-items/grade7/large-intestine.jpeg)
+
+      What is the function of large intestine?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Absorb water from undigested food'
+      },
+      {
+        id: 'opt2',
+        text: 'Produce bile'
+      },
+      {
+        id: 'opt3',
+        text: 'Store poop'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. One of the functions of large intestine is to absorb water and salts from the undigested food.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Bile is produced in the liver.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is __also correct__. Faecal matter (or poop) is stored in rectum which is part of the large intestine.'
+      }
+    ]
+  }, {
+    id: 'digestive-system-recap',
+    time: 1,
+    kind: 'image',
+    title: 'Digestive System Recap',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Based on studying this entire chapter, here is a summary of how the food gets digested:
+    
+    _Saliva_
+     - breaks starch into simple sugars
+    
+    _Stomach_
+     - HCl kills harmful bacteria
+     - digestive juices break down proteins
+    
+    _Small Intestine_
+     - bile breaks down fats
+     - pancreatic juice
+        -  turns carbohydrates into simple sugars
+        - turns fats into fatty acids
+        - turns proteins into amino acids
+    `,
+    imagePath: '/learning-items/grade7/digestive-system-recap.jpeg'
+  }, {
+    id: 'digestion-in-cows',
+    kind: 'video',
+    time: 1,
+    title: 'Digestion in Cows',
+    instructions: dedent`
+      When cows eat, they quickly swallow the grass and store it in a part of the stomach called __rumen__. 
+
+      Here the food is partially digested and is called _cud_. 
+
+      But later the cud returns to the mouth in small lumps and the cow chews it again. This process is called __rumination__ and these animals are called __ruminants__.
+    `,
+    videoId: 'svw5KA8YlAA',
+    startTime: 40,
+    endTime: 81,
+  }, {
+    id: 'chewing-cud',
+    kind: 'video',
+    time: 1,
+    title: 'How cows eat',
+    instructions: dedent`
+      If you see this video closely at 0:18, you will notice that the cow brings the cud back to her mouth to chew it again.
+    `,
+    videoId: 'n-cOASb3e_Y',
+  }, {
+    id: 'summary-video',
+    kind: 'video',
+    time: 7,
+    title: 'Bonus - Revision Video',
+    instructions: 'This video will help you revise the entire chapter.',
+    videoId: 'zr4onA2k_LY',
+    locked: true
   }]
 }]
 
