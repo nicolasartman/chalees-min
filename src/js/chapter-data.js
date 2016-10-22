@@ -2780,6 +2780,376 @@ export const chapter6Data = [{
 }];
 
 export const chapter7Data = [{
+  id: ' 1',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter1-thumbnail2.jpeg',
+  title: 'Nutrition in Plants',
+  items: [{
+    id: 'chapeter-1-video',
+    kind: 'video',
+    time: 3,
+    title: 'Autotroph, Heterotroph and Saprotroph',
+    instructions: dedent`
+      These 3 words can be confusing. 
+
+      Watch this short video to understand and remember the meaning of Autotroph, Heterotroph and Saprotroph.
+    `,
+    videoId: 'vdKeOul-CWM',
+  }, {
+    id: 'green-plants-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![green plant](/learning-items/grade7/green-plants-2.jpg)
+
+      Green plants make their own food and are thus called ___________`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Autotrophs'
+      },
+      {
+        id: 'opt2',
+        text: 'Heterotrophs'
+      },
+      {
+        id: 'opt3',
+        text: 'Saprotrophs'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. _Auto_ means self and _troph_ means food or nourishment. _Autotrophs_ means organisms that make their own food.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, Heterotroph is not correct. _Hetero_ means other and _troph_ means food or nourishment. Examples include you, your dog and the pitcher plant.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'No, Saprotroph is not correct. _Sapro_ means dead or decaying and _troph_ means food or nourishment. Examples include mushrooms and worms.'
+      }
+    ]
+  }, {
+    id: 'teach-a-friend',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Teach a Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![saprotroph mushrooms](/learning-items/grade7/mushrooms-2.jpg)
+
+    Imagine a friend of yours is struggling to remember the definition of Saprotrophs.
+
+    What will you tell him/her that will help them remember the definition of Saprotrophs? Write your answer in the box below.`,
+    
+  }, {
+    id: 'photosynthesis-again',
+    time: 1,
+    kind: 'image',
+    title: 'Photosynthesis - Ek Aur Baar',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    I know you have been studying photosynthesis for years now. And that it may be boring. But since the definition of photosynthesis is in the science book, let us look at it one more time.
+
+    Sun is the source of energy of most living organisms. 
+
+    Plants use sunlight, carbon dioxide from the air, and water from the soil to make food (carbohydrates) and produce oxygen. This process is called photosynthesis.
+
+    In the absence of photosynthesis, there would be no food, and life would be impossible on earth.`,
+    
+    imagePath: '/learning-items/grade7/photosynthesis.jpeg',
+
+  }, {
+    id: 'photosynthesis-video',
+    kind: 'video',
+    time: 3,
+    title: 'Photosynthesis - A Simple Video',
+    instructions: dedent`
+      Here is a simple video that explains the reaction of photosynthesis. `,
+    videoId: '-rsYk4eCKnA',
+    endTime: 172,
+  }, {
+    id: 'stomata-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We know that plants get water from the soil. 
+
+    How do they absorb Carbon dioxide and give out Oxygen?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'From their roots'
+      },
+      {
+        id: 'opt2',
+        text: 'From tiny openings in their leaves'
+      },
+      {
+        id: 'opt3',
+        text: 'I do not know'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Plants absorb water from their roots, and not Carbon dioxide.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Tiny openings on the leaves allow plants to absorb Carbon dioxide and give out Oxygen. These openings are called Stomata. We will learn about them next.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'That is ok. Let us move to the next item to learn more about how plants absorb Carbon dioxide and give out Oxygen.'
+      }
+    ]
+  }, {
+    id: 'stomata-means-mouths',
+    time: 1,
+    kind: 'image',
+    title: 'What is Stomata?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Stomata is a Greek word, which means mouths.
+
+    In the picture below, we have zoomed into an image of the leaf. There you see two stomata that look like tiny mouths surrounded by swollen lips.
+
+    Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
+  
+    imagePath: '/learning-items/grade7/stomata-means-mouths.jpeg',
+
+  }, {
+    id: 'stomata-another-look',
+    time: 1,
+    kind: 'image',
+    title: 'Stomata: Another Look',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
+  
+    imagePath: '/learning-items/grade7/stomata-diagram.jpeg',
+
+  }, {
+    id: 'stomata-microscope-open-close',
+    time: 1,
+    kind: 'image',
+    title: 'Open and Closed Stomata',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Stomata open to absorb carbon dioxide, which is needed for photosynthesis. 
+
+    Now, when stomata are open, water is also lost.
+
+    Therefore, when carbon dioxide is not needed by the plant, the stomata close to avoid water loss.
+
+    Here you are looking at a microscopic image of an open and closed stoma.`,
+  
+    imagePath: '/learning-items/grade7/stomata-from-microscope-2.jpeg',
+
+  }, {
+    id: 'make-an-exam',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Make an Exam Question',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine you were creating a final exam on the topic of Stomata.
+
+    What is the most diffifult stomata-related question you would ask in that exam?
+
+    Tell us in the space below.`,
+    
+  }, {
+    id: 'cholorophyll-meaning',
+    time: 1,
+    kind: 'image',
+    title: 'What is Chlorophyll?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    _Chloro_ means green. 
+    _Phlly_ means leaf.
+
+    Chlorophyll is a green pigment in leaves that captures energy from sunlight, which is later used to make food.
+
+    In the image below, we have zoomed into a picture of a leaf. The green substance inside the round spheres is Chlorophyll.
+    `, 
+    imagePath: '/learning-items/grade7/chlorophyll-definition-3.jpeg',
+  }, {
+    id: 'cholorophyll-analogy',
+    time: 1,
+    kind: 'image',
+    title: 'Chlorophyll is like Solar Panels',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Chlorophyll is like Solar Panels; they both help capture energy from the sun.
+
+    The energy captured by Chlorophyll is used to make food for plants.
+    
+    The enrgy capture by Solar Panels is used to light homes.
+    `,
+    imagePath: '/learning-items/grade7/chlorophyll-like-solar-panels.jpeg',
+  }, {
+    id: 'can-humans-photosynthesize',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Can humans photosynthesise?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![saprotroph mushrooms](/learning-items/grade7/beach-human-photosynthesis.jpg)
+
+    Like plants, can humans make their own food using sunlight and water?
+
+    In other words, could you sit in the sun for a while, and make the food that your body needs using the process of photosynthesis?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Humans do not have Chlorophyll, which is needed to convert the energy from the Sun to food.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Humans cannot photosynthesise. That means we cannot sit in the Sun for a few hours and convert sunlight into food. This is because we do not have Chlorophyll.'
+      }
+    ]
+  }, {
+    id: 'photosynthesis-experiment',
+    time: 6,
+    kind: 'image',
+    title: 'Seeing Photosynthesis Happen - Video',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+
+    ![sunflower photosynthesis teeth](/learning-items/grade7/sunflower.jpg)
+
+      In this [YouTube Video](https://www.youtube.com/watch?v=ZnY9_wMZZWI&t=6s), a teacher shows how leaves produce oxygen through the process of photosynthesis.
+
+      If you watch till the end, you will be amazed by this experiment.
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'amarbel-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![green plant](/learning-items/grade7/amarbel-2.jpeg)
+
+      The yellow plant you see in this image is called _Amarbel_ or _Cuscuta_.
+
+      It derives its food from the green plant in this image.
+
+      Is the _Amarbel_ an autotroph, heterotroph or saprotroph?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Autotroph'
+      },
+      {
+        id: 'opt2',
+        text: 'Heterotroph'
+      },
+      {
+        id: 'opt3',
+        text: 'Saprotroph'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'No, this is not correct. _Auto_ means self and _troph_ means food or nourishment. That means plants that make their own food.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. _Hetero_ means other and _troph_ means food or nourishment. Since the Amarbel derives its nutrition from another plant it is called a Heterotroph. Amarbel is also called a parasite. We will learn about parasites next.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'No, Saprotroph is not correct. _Sapro_ means dead or decaying and _troph_ means food or nourishment. Examples include mushrooms and worms. Amarbel derives its nutrition from the green plant; and the green plant is not dead.'
+      }
+    ]
+  }, {
+    id: 'parasites-and-hosts',
+    time: 1,
+    kind: 'image',
+    title: 'Parasites and Hosts',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A parasite is an organism that derives its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites & humans are their hosts
+    
+    Amarbel, the yellow plant you saw in a previous example, is also a parasite.
+
+    You can think of parasites as heterotrophs.
+    `,
+    imagePath: '/learning-items/grade7/parasites-lice-host.jpeg',
+  }, {
+    id: 'insectivorous-plants',
+    kind: 'video',
+    time: 2,
+    title: 'Insectivorous Plants',
+    instructions: dedent`
+      Insect eating plants are called Insectivorous Plants.
+
+      In the video below, you will see how a Pitcher Plant consumes a snail. 
+
+      When a snail (or some insect) lands in the pitcher, they are digested by the digestive juices inside the pitcher. 
+
+      Plants like the Pitcher Plant, do not get all of the nutrition they need from photosynthesis, and thus need to feed on snails and other insects.
+      `,
+    videoId: 'BjWtAjdl4a0',
+  }, {
+    id: 'insectivorous-plants-toilet',
+    kind: 'video',
+    time: 2,
+    title: 'Some Plants Act Like Toilets',
+    instructions: dedent`
+      You may have heard that plants need Nitrogen, and that they get some of that nitrogen from soil.
+
+      Pitcher Plant is different. It acts as a toilet for some animals, who come to lick the nectar from the plant, and end up dropping their faeces (or poop) inside the pitcher.
+
+      The poop is rich in nitrogen and acts as a fertilizer for the Pitcher Plant. This makes the pitcher plant a toilet for some animals in the jungle.
+      `,
+    videoId: 'TwL7K_loRjM',
+    endTime: 77,
+  }, {
+    id: 'lizard-time-lapse',
+    kind: 'video',
+    time: 2,
+    title: 'Bonus Video - Lizard eaten by Ants',
+    instructions: dedent`
+      This video was taken over several hours and then run in fast forward mode.
+
+      Here, a dead lizard is completely eaten by Ants, in only a few hours.
+
+      Thus Ants can be called Saprotrophs.
+      `,
+    videoId: 'R3Mt2E1M6dU',
+    startTime: 10,
+    locked: true,
+
+  },]
+}, {
   id: ' 2',
   thumbnailImagePath: '/chapter-thumbnails/grade7/Grade7-Chapter2-Thumbnail.png',
   title: 'Nutrition in Animals',
