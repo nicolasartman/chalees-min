@@ -572,7 +572,7 @@ export const chapter6Data = [{
     id: 'Sieving',
     time: 2,
     kind: 'image',
-    title: 'Seiving',
+    title: 'Sieving',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Sieving is the process of separating mixtures of different sizes. For instance, sand and stones.
@@ -637,7 +637,7 @@ export const chapter6Data = [{
           {
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
-            response: 'Metals expand on heaing. Not just in the lab but also in our world. #chapter6'
+            response: 'Metals expand on heating. Not just in the lab but also in our world. #chapter6'
           },
           {
             studentName: 'Prabsimar',
@@ -929,7 +929,7 @@ export const chapter6Data = [{
     instructions: dedent`
     Petiole is a part of the leaf that is attached to the stem.
 
-    Here is a great way to rememeber that: Petiole comes from the prefix _Ped_. _Ped_ is used in words like Pedestrian or Pedicure. It has to do with the feet.
+    Here is a great way to remember that: Petiole comes from the prefix _Ped_. _Ped_ is used in words like Pedestrian or Pedicure. It has to do with the feet.
 
     You can think of the Petiole as the foot or the base of the leaf that connects to the stem.`,
     imagePath: '/learning-items/petiole-pedestrian.jpeg'
@@ -2965,7 +2965,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Imagine you were creating a final exam on the topic of Stomata.
 
-    What is the most diffifult stomata-related question you would ask in that exam?
+    What is the most difficult stomata-related question you would ask in that exam?
 
     Tell us in the space below.`,
     
@@ -2995,7 +2995,7 @@ export const chapter7Data = [{
 
     The energy captured by Chlorophyll is used to make food for plants.
     
-    The enrgy capture by Solar Panels is used to light homes.
+    The energy capture by Solar Panels is used to light homes.
     `,
     imagePath: '/learning-items/grade7/chlorophyll-like-solar-panels.jpeg',
   }, {
@@ -3280,7 +3280,7 @@ export const chapter7Data = [{
 
     Alimentary Canal is the passage through which the food passes in our body.
 
-    It includes the mouth, oesophagus, stomach, small intestine, large instestine, rectum and anus. 
+    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus. 
     `,
     imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
   }, {
@@ -3602,7 +3602,367 @@ export const chapter7Data = [{
     videoId: 'zr4onA2k_LY',
     locked: true
   }]
-}]
+}, {
+  id: ' 3',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter3-thumbnail.png',
+  title: 'Fibre to Fabric',
+  items: [{
+    id: 'chapter-3-video',
+    kind: 'video',
+    time: 5,
+    title: 'From Sheep Hair to Sweaters',
+    instructions: dedent`
+      In this video we interview a sheep farmer who raises 200 sheep.
+
+      Watch to see how sheep hair are converted into woollen sweaters.
+    `,
+    videoId: 'vdKeOul-CWM',
+  }, {
+    id: 'green-plants-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Scouring Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+      What does the word Scouring mean?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Cleaning sheep hair'
+      },
+      {
+        id: 'opt2',
+        text: 'Rolling fibre into yarn'
+      },
+      {
+        id: 'opt3',
+        text: 'Searching for something'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Scouring means to clean grease and dust from sheep hair.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. Rolling fibre into yarn is called _Spinning_.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Actually, this is __also correct.__ The word _scouring_ can also mean to search for something. Like scouring the internet, or searching for something on the internet.'
+      }
+    ]
+  }, {
+    id: 'most-surprising-thing',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Most Surprising Thing',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![saprotroph mushrooms](/learning-items/grade7/interview-with-sheep-farmer.jpeg)
+
+    I hope you watched the video with Mr. Gulzar in the beginning of this chapter.
+
+    What was the most surprising thing you learned in that video?
+
+    Write your answer in the box below.`,
+  }, {
+    id: 'fleece-means-hair',
+    time: 1,
+    kind: 'image',
+    title: 'Fleece means Hair',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Fleece, simply put, means hair. I am sure you have heard this nursery rhyme: 
+
+    _Mary had a little lamb, her fleece was white as snow._
+
+    The word _fleece_ refers to the hair of lamb.`,
+    
+    imagePath: '/learning-items/grade7/fleece-means-hair.jpeg',
+
+  }, {
+    id: 'what-does-rearing-mean',
+    time: 1,
+    kind: 'image',
+    title: 'What does rearing mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Rearing means to raise or to take care of someone.
+
+    _Child rearing_ is the act of raising a child.
+
+    _Sheep rearing_ is the act of raising sheep. `,
+    
+    imagePath: '/learning-items/grade7/rearing-means-to-raise.jpeg',
+
+  }, {
+    id: 'shearing',
+    kind: 'video',
+    time: 3,
+    title: 'What is Sheep Shearing?',
+    instructions: dedent`
+      This is a video os a sheep farmer in New Zealand cutting the hair of his sheep using an electric hair cutter.
+
+      Shearing is the process by which the woollen fleece (hair) of an animal like sheep is cut off.`,
+    videoId: 'WYEASlmt3vc',
+    startTime: 15,
+  }, {
+    id: 'animals-that-yield-wool',
+    time: 1,
+    kind: 'image',
+    title: 'Animals that yield wool',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Several, animals all around the world are raised for their wool. These include:
+
+     - Yak in Tibet
+     - Angora Goats in J&K
+     - Llamas in South America
+     - Alpacas in South America`,
+    
+    imagePath: '/learning-items/grade7/animals-that-yield-wool.jpeg',
+
+  }, {
+    id: 'wool-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Which of the following animal does not yield wool?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yak'
+      },
+      {
+        id: 'opt2',
+        text: 'Camel'
+      },
+      {
+        id: 'opt3',
+        text: 'Goat'
+      },
+      {
+        id: 'opt4',
+        text: 'Woolly Dog'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'That is incorrect. Yaks are raised in Tibet and their thick hair can be used to make wool.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'That is incorrect. The fur or hair on the body of camels can be used as wool.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'That is incorrect. Angora goats found in Jammu and Kashmir grow hair that can be used to make shawls.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Woolly Dogs are an extinct animal. That means, they no longer exist. When they were alive, they were found in North America, and their fur was used to make blankets.'
+      }
+    ]
+  }, {
+    id: 'do-sheep-feel-cold-after-they-are-sheared',
+    time: 1,
+    kind: 'image',
+    title: 'Do sheep feel cold after shearing?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Yes.
+
+    The sheep grow hair not because we need sweaters, but because the sheep need hair to protect themselves from cold. 
+
+    So sheep can feel cold after they are sheared; specially if they are sheared in winters. In some cases, the sheep can even die of cold.`,
+  
+    imagePath: '/learning-items/grade7/do-sheep-feel-cold-after-they-are-sheared.jpeg',
+
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 10,
+    title: 'Draw what you have learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here are some of the steps needed to produce sweaters from the hair of a sheep:
+
+    _Shearing, Scouring, Colouring, Spinning, Weaving_
+
+    Use a _pen and paper_ to draw a picture that shows each one of these steps.
+
+    Then take a photo of the drawing from your phone and upload it here.`,
+  }, {
+    id: 'what-is-sericulture',
+    time: 1,
+    kind: 'image',
+    title: 'What is Sericulture?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    _Seri_ means silk. _Culture_ means to raise or grow something.
+
+    To remember the word Sericulture, I think of the word _Agriculture_, which is the process of raising crops.
+
+    Thus, Sericulture is the process of raising silkworms to produce silk.`,
+  
+    imagePath: '/learning-items/grade7/sericulture-raising-silkworms.jpeg',
+
+  }, {
+    id: 'process-of-making-silk',
+    kind: 'video',
+    time: 3,
+    title: 'Process of Making Silk',
+    instructions: dedent`
+      Here is the process of making silk:
+       - Female silk moths (or flying insects) lays thousands of eggs.
+       - The eggs turn into larvae (or the baby version of an insect). These larvae are called caterpillars or silkworms.
+       - The silkworms eat mulberry leaves for about 25-30 days.
+       - Silkworm begin to secrete a fibre and covers itself in that fibre. This covering is called a cocoon. 
+       - The silkworm inside the cocoon develops into a silk moth (or flying insect).
+       - To obtain silk, the cocoons are boiled. This kills the silkworm inside and prevents it from turning into a moth and coming out of the cocoon.
+       -  Silk fibres from cocoons are removed and then spun together to make silk thread.
+       `,
+    videoId: 'eqFm_7KyfHI',
+    endTime: 211,
+  }, {
+    id: 'larvae-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Silkworm Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Silkworm is (a) a caterpillar, (b) a larva. 
+
+    Choose the correct option.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'a'
+      },
+      {
+        id: 'opt2',
+        text: 'b'
+      },
+      {
+        id: 'opt3',
+        text: 'both a and b'
+      },
+      {
+        id: 'opt4',
+        text: 'neither a nor b'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'The silkworm is a caterpillar. But it is also called a larva. Larva means an immature or young form of an insect. The plural of larva is larvae.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'The silkworm is a larva. Larva means an immature or young form of an insect. The plural of larva is larvae. But the silkworm is also called a caterpillar.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. The silkworm is both a caterpillar and a larva. Larva means an immature or young form of an insect. The plural of larva is larvae.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect.'
+      }
+    ]
+  },  {
+    id: 'silk-moth-laying-eggs',
+    kind: 'video',
+    time: 1,
+    title: 'The Silk Moth laying Eggs',
+    instructions: dedent`
+      The first step in the making of silk involves the silk moth laying eggs.
+
+      This video shows that process.
+       `,
+    videoId: '8k6gKTZaJwA',
+    endTime: 36,
+  }, {
+    id: 'silkworms-emerging-from-eggs',
+    kind: 'video',
+    time: 2,
+    title: 'Silkworms emerging from Eggs',
+    instructions: dedent`
+      1-2 weeks after the silk moth has laid eggs, the eggs hatch into silkworms or caterpillars.
+
+      This video shows the process of caterpillars emerging from eggs.
+       `,
+    videoId: 'yU1_CdMjam8',
+  }, {
+    id: 'silkworms-eat-mulberry-leaves',
+    kind: 'video',
+    time: 1,
+    title: 'Silkworms eat Mulberry Leaves',
+    instructions: dedent`
+      The silkworms (or caterpillars) love to eat mulberry leaves. They eat day and night, and increase their body size 10,000 times.
+
+      This video shows the slow process of silkworms eating mulberry leaves.
+       `,
+    videoId: 'yPcKWW-wewI',
+  }, {
+    id: 'silkworms-spinning-a-cocoon',
+    kind: 'video',
+    time: 1,
+    title: 'Silkworms Spin a Cocoon',
+    instructions: dedent`
+      The silkworms (or caterpillars) secrete a silk fibre, and cover themselves in that fibre by making a cocoon.
+
+      This video is running in fast forward mode. It shows 11 hours of recorded video tape in just 1 minute.
+       `,
+    videoId: 'NPVEug_uFZk',
+    startTime: 10,
+    endTime: 70,
+  }, {
+    id: 'why-are-cocoons-boiled',
+    kind: 'video',
+    time: 4,
+    title: 'Why are Cocoons Boiled?',
+    instructions: dedent`
+      A few weeks after the caterpillar has spun a cocoon, it develops into a silk moth (or a flying insect). They emerge from the cocoon by braking the cocoon and the silk thread.
+      
+      To prevent the moth from breaking the delicate thread, the cocoons are boiled. This kills the moth inside. The undamaged silk thread can then be removed from the cocoon.
+
+      The video below shows what would happen if the cocoons were __not__ boiled — in that case the silk moth would emerge from the cocoon. This video running in fast forward mode. It shows 16 minutes of recorded video tape in 4 minutes.
+       `,
+    videoId: 'ClXjhUmJf4w',
+    }, {
+    id: 'teach-a-friend',
+    kind: 'textResponse',
+    time: 10,
+    title: 'Teach a Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine a friend of yours is struggling to understand the process with which silks are made.
+
+    What will you tell him/her that can help them understand that enitre process? Write your answer in the box below.`,
+    
+  }, {
+    id: 'bonus-sericulture-video',
+    kind: 'video',
+    time: 2,
+    title: 'Revision of Sericuture',
+    instructions: dedent`
+      This video will help you revise the sericulture process.
+      `,
+    videoId: '77ktNSPFbwQ',
+    locked: true,
+
+  },]
+}, ]
 
 
 // validate that all data items have ids that are unique
