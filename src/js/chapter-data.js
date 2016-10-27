@@ -3962,6 +3962,383 @@ export const chapter7Data = [{
     locked: true,
 
   },]
+}, {
+  id: ' 8',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter8-thumbnail.jpg',
+  title: 'Winds, Storms and Cyclones',
+  items: [{
+    id: 'chapter-8-video',
+    kind: 'video',
+    time: 5,
+    title: 'How Cyclones Work',
+    instructions: dedent`
+      In this video, we travel to Sri Lanka to learn how Cyclones get started in the ocean. We also witness the devastation they can cause on land.
+    `,
+    videoId: 'vdKeOul-CWM',
+  }, {
+    id: 'cyclone-location-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Cyclone Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+     Which of the following places is __unlikely__ to be affected by a cyclone?
+
+     ![cities in india affected by cyclone](/learning-items/grade7/cyclones-in-india.jpeg)
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Delhi'
+      },
+      {
+        id: 'opt2',
+        text: 'Puri'
+      },
+      {
+        id: 'opt3',
+        text: 'Mangaluru'
+      },
+      {
+        id: 'opt4',
+        text: 'Chennai'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Delhi is landlocked, which means that it is not next to the ocean. And thus it is unlikely to be affected by a cyclone.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Puri is on the east coast of India. In 1999, Puri and other places in Odisha, were struck by a devastating category-5 cyclone named Pradip.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'Mangaluru is a port city in Karnataka and has unfortunately had to face many cyclones in the past.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Chennai is the capital of Tamil Nadu and is a coastal city. In 2010, Cyclone Jal caused a lot of devastation in eastern parts of India, including in Chennai.'
+      }
+    ]
+  }, {
+    id: 'teach-a-friend-cyclones',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Teach a Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![On the beach](/learning-items/grade7/on-beach-2.jpeg)
+
+    Imagine a friend of yours watched the video on cyclones in the beginning of this chapter, but they are still confused about how cyclones form in the ocean.
+
+    What will you tell your friend that can help them understand the process with which cyclones get started in the ocean? Write your answer in the box below.`,
+  }, {
+    id: 'air-exerts-pressure',
+    kind: 'video',
+    time: 3,
+    title: 'Air Exerts Pressure',
+    instructions: dedent`
+      If you watch this video till the end, you will see a huge steel drum get crushed. Clearly, some force is crushing the drum. What is it? The answer is the pressure exerted by air from outside the drum. Let us find out how.
+
+      Water was added to a drum and then that water was boiled. This meant that the water in the drum converted to steam and escaped.
+
+      Then the drum was put in ice water. This caused any steam left inside the drum to condense back into water, thus reducing the amount of air inside the drum.
+
+      Now less air inside the drum means that the air pressure inside the drum has decreased. But the air pressure outside the drum continues to be the same as before. 
+
+      This difference is air pressure crushes the steel drum.
+    `,
+    videoId: 'JsoE4F2Pb20',
+  }, {
+    id: 'air-has-weight',
+    kind: 'video',
+    time: 1,
+    title: 'Does Air have Weight?',
+    instructions: dedent`
+      Yes, it does. Watch this experiment that proves that air has weight.
+    `,
+    videoId: 'o5LT_wfI98w',
+    startTime: 18
+  }, {
+    id: 'air-pressure-equals-car',
+    time: 2,
+    kind: 'image',
+    title: 'How much pressure does the air exert?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine a pillar of air above your head. Further imagine that this pillar continues to the edge of the atmosphere.
+    
+    ![pillar of air](/learning-items/grade7/imagine-a-pillar-of-air.jpeg)
+
+    We have seen that air has weight. So that means that this pillar of air must also have some weight. And all of this weight above our head must exert some pressure on us.
+
+    The pressure exerted by the air above of our head is similar to the pressure exerted on us if we were carrying a car on our head.`,
+    
+    imagePath: '/learning-items/grade7/air-pressure-similar-to-a-car.jpeg',
+
+  }, {
+    id: 'why-dont-we-get-crushed',
+    time: 2,
+    kind: 'image',
+    title: 'Why dont we feel all that air pressure?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We experience a lot of air pressure from the air around us. But the air pressure in our lungs, ears and stomach is the same as the air pressure outside our bodies, which ensures that we don’t get crushed.`,
+    imagePath: '/learning-items/grade7/why-dont-we-feel-air-pressure.jpeg',
+
+  }, {
+    id: 'holes-in-banners',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Air Pressure Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![holes in banners](/learning-items/grade7/wind-holes-banners.jpg)
+
+    Why are holes made in banners and hoardings?
+
+    Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            We just learnt that air exerts pressure.
+
+            Air would also exert pressure on the banner. And if the wind gets strong, it can cause the banner to fly.
+
+            The holes in the banner will allow the wind to move through the banner and thus reduce the air pressure.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'wind-speed-air-pressure',
+    kind: 'video',
+    time: 1,
+    title: 'Fast Moving Air creates Low Pressure',
+    instructions: dedent`
+      This statement can be hard to understand, but the video below will help.
+
+      When we blow air on top of a piece of paper, the paper rises. Why?
+
+      When we blow air on top of a piece of paper, the air on top is moving faster than the air below the paper. 
+
+      Fast moving air creates low pressure. So there is low pressure on top of paper, and high at the bottom. This difference in pressure is what lifts the paper. 
+    `,
+    videoId: 'MYXiL2wGDAw',
+  }, {
+    id: 'wind-speed-air-pressure-another-example',
+    time: 2,
+    kind: 'image',
+    title: 'Fast Moving Air creates Low Pressure (again)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Airplanes fly because _fast moving air creates low pressure._
+
+    The wings of airplanes are designed such that the air on top of the wing travels faster than the air below the wing. 
+
+    This creates low pressure on top and high pressure below the wing. And this difference in pressure lifts the airplane.`,
+    
+    imagePath: '/learning-items/grade7/fast-moving-air-creates-low-pressure.jpeg',
+
+  }, {
+    id: 'air-expands-heating',
+    kind: 'video',
+    time: 2,
+    title: 'Air Expands on Heating',
+    instructions: dedent`
+      The bottle in the video is not empty. It has air inside it.
+
+      When we put the bottle in hot water, the air inside the bottle expands, thus inflating the balloon. 
+
+      When we put the bottle in ice cold water, the air inside the balloon contracts, thus deflating the balloon. 
+
+      Air expands on heating and contracts on cooling.
+    `,
+    videoId: 'ZPErStqSSMk',
+    startTime: 15,
+  }, {
+    id: 'warm-air-rises',
+    time: 1,
+    kind: 'image',
+    title: 'Warm Air Rises',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We can see warm air rising in hot air balloons, candle lanterns and steam from a pressure cooker.`,
+    
+    imagePath: '/learning-items/grade7/warm-air-rises.jpeg',
+
+  }, {
+    id: 'making-hot-air-balloon',
+    kind: 'video',
+    time: 8,
+    title: 'Making a Hot Air Balloon',
+    instructions: dedent`
+      Follow the instructions in this video to make a hot air balloon with things that you can find at home.
+    `,
+    videoId: 'HTimRtAmSMs',
+  }, {
+    id: 'warm-air-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      You want to buy a house. Would you like to buy a house that has windows but no ventilators?
+
+      Write your response in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Warm air rises.
+
+            A ventilator is at the top of the house where air can come in and go out. So if there is no ventilator in the house, hot air will have no way to leave the house. 
+
+            I do not want to live in a very hot house.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'monsoon-winds',
+    time: 1,
+    kind: 'image',
+    title: 'Monsoon Winds',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Winds are generated due to uneven heating of land and water.
+
+    In summers, land warms up faster than the ocean. The air above land heats up, expands and rises. And the air from the ocean moves towards the land. These winds carry water vapour with them and cause monsoons.
+
+    The opposite happens in winters, where the winds move from the land to the ocean.
+    `,
+    
+    imagePath: '/learning-items/grade7/monsoon-winds-summer.jpeg',
+
+  }, {
+    id: 'monsoon-winds-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Monsoon Winds Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Fill in the blank:
+
+    In winters, the wind blows from ______ to _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'ocean to land'
+      },
+      {
+        id: 'opt2',
+        text: 'land to ocean'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'That is incorrect. The wind blows from ocean to land in summers.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. In winters, the winds blow from the land to the ocean. This is called land breeze.'
+      }
+    ]
+  }, {
+    id: 'eye-of-the-storm',
+    time: 1,
+    kind: 'image',
+    title: 'Back to Cyclones',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We started this chapter by talking about Cyclones. Let us talk about them some more.
+
+    Specifically, the eye of the storm.
+
+    The eye of the storm is the center of the cyclone and is a calm area. Surrounding it are winds moving at really high speeds. `,
+  
+    imagePath: '/learning-items/grade7/eye-of-the-storm-cyclone.jpeg',
+
+  }, {
+    id: 'satellites-that-monitor-cyclones',
+    time: 1,
+    kind: 'image',
+    title: 'Satellites That Monitor Cyclones',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Cyclones can be devastating. Luckily, we have satellites in space that can help us detect the cyclones ahead of time, so we can warn the people who will be affected by them.
+
+    Here is a satellite launched by India on September 8, 2016. Its name is INSAT 3DR. 
+
+    You can also see an image produced by this satellite, through which can see if cyclones are starting in the ocean.`,
+  
+    imagePath: '/learning-items/grade7/satellites-that-monitor-cyclones.jpeg',
+
+  }, {
+    id: 'anemometer',
+    time: 1,
+    kind: 'image',
+    title: 'Anemometer',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Anemometer is a device that is used to measure wind speeds. They can be useful when flying kites, or when flying airplanes, or when reporting on a cyclone.
+
+    They get their name from _Anemoi_, the wind gods in Greek mythology.`,
+  
+    imagePath: '/learning-items/grade7/anemometer.jpeg',
+
+  }, {
+    id: 'tornado',
+    time: 1,
+    kind: 'image',
+    title: 'Tornadoes',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A tornado is a dark, funnel shaped cloud that reaches the ground.
+
+    They suck everything in their path near the base and throw them out near the top, thus causing a lot of damage.
+
+    Tornadoes generally form over land; while Cyclones form over the ocean.`,
+  
+    imagePath: '/learning-items/grade7/tornadoes.jpeg',
+
+  }, {
+    id: 'more-tornado',
+    time: 3,
+    kind: 'image',
+    title: 'Video on Tornado',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![tornadoes](/learning-items/grade7/tornado.jpeg)
+
+    3 out of 4 Tornadoes occur in the USA. [Here is a video](http://video.nationalgeographic.com/video/101-videos/tornadoes-101) that shows how tornadoes occur. 
+
+    The video says that the tornado can spin up to 300 miles per hour. That is about 482 kilometers per hour.
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg',
+    locked: true
+  }, ]
 }, ]
 
 
