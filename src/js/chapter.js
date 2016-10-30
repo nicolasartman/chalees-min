@@ -98,16 +98,20 @@ const Chapter = React.createClass({
               <h2 className="chapter-title">
                 <strong>Chapter {currentChapter && currentChapter.id}</strong> &ndash; {currentChapter && currentChapter.title}
               </h2>
-              {((currentChapter && currentChapter.items) || []).map((item, index) => (
-                <LearningItem
-                  className={index === 0 && 'first-item'}
-                  key={index}
-                  response={this.state.learningItemResponses[item.id]}
-                  handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
-                  isChapterComplete={isChapterComplete}
-                  {...item}
-                />
-              ))}
+              {/* The transitionName below is totally wrong, but it's not worth fixing right now
+                because we're doing a full rewrite */}
+              <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                {((currentChapter && currentChapter.items) || []).map((item, index) => (
+                  <LearningItem
+                    className={index === 0 && 'first-item'}
+                    key={index}
+                    response={this.state.learningItemResponses[item.id]}
+                    handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
+                    isChapterComplete={isChapterComplete}
+                    {...item}
+                  />
+                ))}
+              </ReactCSSTransitionGroup>
             </div>
           </div>
         </main>

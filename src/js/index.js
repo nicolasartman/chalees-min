@@ -15,6 +15,7 @@ import Chapter from './chapter.js';
 import Contact from './contact.js';
 import HomePage from './home-page.js';
 import Application from './application.js';
+import Header from './header.js';
 
 import '../scss/styles.scss';
 
@@ -22,8 +23,8 @@ ReactDOM.render((
   <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={Application}>
       <IndexRoute component={HomePage} />
-      <Route path="chapter/:id" component={Chapter} />
-      <Route path="contact" component={Contact} />
+      <Route path="chapter/:id" components={{children: Chapter, header: Header}} />
+      <Route path="contact" components={{children: Contact, header: Header}} />
       <Redirect from="*" to="/" />
     </Route>
   </Router>

@@ -5,7 +5,6 @@ import * as reactions from './reactions/reactions.js';
 import getStore from './get-store.js';
 // import {DevTools, DebugPanel, LogMonitor} from 'redux-devtools';
 
-import Header from './header.js';
 import Footer from './footer.js';
 import LoadingOverlay from './loading-overlay.js';
 
@@ -46,10 +45,8 @@ const Application = React.createClass({
         <Provider store={store}>
           <div>
             <LoadingOverlay shouldShow={!this.state.isReady} />
-            <Header />
-            <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-              {React.cloneElement(this.props.children, { key: location.pathname, loggedIn: this.state.isLoggedIn, data: this.state.data })}
-            </ReactCSSTransitionGroup>
+            {this.props.header}
+            {React.cloneElement(this.props.children, { key: location.pathname, loggedIn: this.state.isLoggedIn, data: this.state.data })}
             <Footer />
           </div>
         </Provider>
