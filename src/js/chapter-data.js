@@ -2134,26 +2134,315 @@ export const chapter6Data = [{
     kind: 'video',
     time: 3,
     title: 'How to convert seawater to drinking water?',
-    instructions: 'Watch this video to learn how evaporation helps purify water.',
+    instructions: 'Watch this video to see how evaporation can purify seawater.',
     videoId: 'yeoN0Pmg_tI',
   }, {
-    id: 'lets-think-about-the-video-one',
+    id: 'evaporation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Water Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      The video above shows that water vapour can turn back into water droplets.
+
+      This process of changing water vapour into water droplets is called _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Evaporation'
+      },
+      {
+        id: 'opt2',
+        text: 'Condensation'
+      },
+      {
+        id: 'opt3',
+        text: 'Water Cycle'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Evaporation happens when liquid water turns into water vapour.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ The process of changing water vapour into water is called condensation.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Evaporation and Condensation are two important stages of the Water Cycle.'
+      }
+    ]
+  }, {
+    id: 'how-much-water',
+    time: 1,
+    kind: 'image',
+    title: 'How Much Water Do We Use?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    How much water does a person in a large city like Delhi use everyday?
+
+    _240 litres per person per day._ 
+
+    That is equal to about 24 buckets of water each day (if each bucket holds 10 litres of water). 
+    `,
+    imagePath: '/learning-items/how-much-water-does-someone-use-in-delhi-everyday.jpeg'
+  }, {
+    id: 'how-much-water-do-you-use',
+    kind: 'textResponse',
+    time: 6,
+    short: true,
+    title: 'How Much Water Do You Use?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Fill out _Table 14.1 on Page 136_ of your science book, and tell us how many litres of water you use on a daily basis?
+
+    Is it more than or less that 240 litres?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are some responses from other students',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'I think I use less than 200 litres of water. It was tough to calculate as we use water as a family.'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'I use 180 litres of water. I was surprised that a lot of water is used in flushing the toilet.'
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'where-does-water-come-from',
+    time: 1,
+    kind: 'image',
+    title: 'Where Does Water Come From?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Drinking water in our homes comes from rivers, lakes, ponds and wells. In many cities like Delhi, however, these water sources are being polluted.
+
+    For instance, in this image sewage water (that means water with poop) is released into Yamuna. The Yamuna river is an important source of drinking water for the people of Delhi. Similar examples can be seen in other major cities of India also.
+
+    _Source: NYTimes_
+    `,
+    imagePath: '/learning-items/sewage-water-yamuna.jpeg'
+  }, {
+    id: 'what-happens-when-people-donot-get-water',
+    time: 1,
+    kind: 'image',
+    title: 'What If We Do Not Get Water?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Water shortages can cause violent fights. 
+
+    In large parts of India, people (mostly women) spend a lot of time collecting drinking water for their families.
+
+    Watch these two videos — [Video 1](http://video.nytimes.com/video/2006/09/28/world/1194817098866/part-1-water-woes-in-india.html) and [Video 2](http://video.nytimes.com/video/2006/09/28/world/1194817115048/part-2-water-woes-in-india.html) — from the New York Times to see the current state of fresh water in Indian cities.
+    
+    Even though these videos were made in 2006, the situation has only gotten worse in the last decade.
+    `,
+    imagePath: '/learning-items/water-shortage.jpeg'
+  }, {
+    id: 'water-cycle',
+    kind: 'video',
+    time: 4,
+    title: 'Water Cycle',
+    instructions: dedent`
+    The circulation of water between oceans and land is known as Water Cycle.
+
+    It involves processes like evaporation, transpiration and condensation.`,
+    videoId: 'jFjI6y46QRk',
+    endTime: 255,
+  }, {
+    id: 'seeing-evaporation-happen',
+    kind: 'video',
+    time: 2,
+    title: 'Seeing Evaporation Happen',
+    instructions: dedent`
+    Evaporation is the process of changing liquid water into water vapour. You can see evaporation happen in this video.
+
+    This video was filmed for 2 hours. Here it is played in fast forward mode in under 2 minutes.`,
+    videoId: 'AUHw1Cs8r5Y',
+  }, {
+    id: 'transpiration',
+    time: 1,
+    kind: 'image',
+    title: 'Transpiration',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We have learned about transpiration before. Sorry for boring you, but here it is again.
+
+    Transpiration is the process with which plants lose water.
+
+    A single corn plant, for example, can lose up to 2 litres of water everyday due to transpiration.`,
+    imagePath: '/learning-items/transpiration-water-loss.jpeg'
+  }, {
+    id: 'transpiration-in-jungle',
+    kind: 'video',
+    time: 1,
+    title: 'Transpiration in a Jungle',
+    instructions: dedent`
+    Plants lose water through transpiration. Here we see trees in a jungle lose water in the form of vapour. This water vapour forms clouds, which rain down on earth again.`,
+    videoId: 'w_v8TXhN7Xk',
+  }, {
+    id: 'what-is-happening-here-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Image Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which process is taking place in the image below?
+
+      _Hint:_ This photo was taken by a satellite and shows part of the Amazon rainforest in South America.
+
+      ![amazon rainforest transpiration condensation](/learning-items/amazon-transpiration-condensation.jpeg)`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Collection of Ground Water'
+      },
+      {
+        id: 'opt2',
+        text: 'Transpiration'
+      },
+      {
+        id: 'opt3',
+        text: 'Flood'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. We are looking at an image of a forest from space. Ground water is not visible here.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ The most likely thing that is happening in this picture is that the trees in the forest are losing water through Transpiration. And that lost water vapour is then condensing to form clouds.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. '
+      }
+    ]
+  }, {
+    id: 'how-are-clouds-formed',
+    time: 1,
+    kind: 'image',
+    title: 'How Are Clouds Formed?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Evaporation and Transpiration convert water from its liquid state into a gas. This gas, otherwise known as water vapour, rises, cools, and condenses into tiny water droplets.
+
+    These water droplets come together to form clouds.
+    `,
+    imagePath: '/learning-items/how-are-clouds-formed.jpeg'
+  }, {
+    id: 'condensation-quiz',
     kind: 'textResponse',
     time: 5,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video here.',
+    short: true,
+    title: 'Tiny Drops of Water',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Take out a cooled bottle of water from the refrigerator and keep it on a table.
+
+    After some time you will see some water droplets on the outside of the bottle. Why?
+
+    ![condensation around a bottle](/learning-items/condensation-around-bottle.jpeg)    
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+              Yes, I have seen this happen. Not just with water, but with all other cold drinks also. I think this is because of condensation. 
+
+              There is water vapour in the air around the bottle. The bottle is cold. That cold bottle cools the water vapour, which condenses back into tiny water droplets. We see these water droplets outside the bottle.`
+          }
+        ]
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: 'From your textbook, read the section 14.3, “Water Cycle”. Then use a pen and pencil to draw an image of what you have learned from that section. Take a picture of that image and upload it here.',
+    id: 'what-is-ground-water',
+    time: 1,
+    kind: 'image',
+    title: 'What is Ground Water?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    After it rains, some rain water is absorbed by soil. This water can be found underground in the cracks and spaces in soil, and is called ground water.
+
+    We extract this water through wells.
+    `,
+    imagePath: '/learning-items/ground-water.jpeg'
   }, {
-    id: 'making-a-test',
-    kind: 'textResponse',
-    time: 5,
-    title: 'Making a test',
-    instructions: 'Imagine you were creating a final exam on this chapter. What questions would you ask your students in that test?',
+    id: 'drought-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Water Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![drought](/learning-items/drought.jpeg)
+
+      No rainfall for a year or longer can lead to a _______.
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Flood'
+      },
+      {
+        id: 'opt2',
+        text: 'Drought'
+      },
+      {
+        id: 'opt3',
+        text: 'The song ghanan ghanan from Lagaan'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Excessive rains cause floods.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ Lack of rains for an extended period can lead to a drought. Plants and animals have a very difficult time surviving in droughts.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'I tried to be funny with this answer choice. This answer choice was clearly a joke.'
+      }
+    ]
+  }, {
+    id: 'rainwater-harvesting',
+    kind: 'video',
+    time: 9,
+    title: 'Rainwater Harvesting',
+    instructions: dedent`
+    Rainwater Harvesting is a way to collect water when it rains so it can be used later.
+
+    In this video, Aamir Khan talks to several amazing people who have set up rainwater harvesting systems to conserve water in cities and villages.`,
+    videoId: 'DhgaCEP6jn4',
+  }, {
+    id: 'singing-the-chapter',
+    kind: 'video',
+    time: 1,
+    title: 'Singing the chapter',
+    instructions: 'Watch this video to review the chapter in only a few minutes',
+    videoId: 'Wqh2xTl2lLQ',
+    locked: true
   }]
 }, {
   id: '15',
