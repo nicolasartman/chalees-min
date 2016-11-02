@@ -324,7 +324,7 @@ $page-transition-duration: 1s;
   .pure-menu-link:active,
   .pure-menu-link:focus,
   .pure-menu-children {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #DDDDDD; // similar to the picture sky color
   }
 }
 
