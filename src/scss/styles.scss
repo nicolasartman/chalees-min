@@ -791,7 +791,7 @@ $page-transition-duration: 1s;
     background-image: none;
   }  
   
-  &:hover, &:active {
+  &:hover, &:active, &.active {
     color: white;
     background-color: $button-color;
   }

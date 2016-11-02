@@ -36,10 +36,10 @@ const HomePage = React.createClass({
             Science Lessons in 40 Minutes or Less
           </div>
           <div className="homepage-grade-choices">
-            <button onClick={() => this.setState({grade7: false, grade6: true})} className="pure-button" style={{marginRight: 20}}>
+            <button onClick={() => this.setState({grade7: false, grade6: true})} className={`pure-button ${this.state.grade6 ? 'active' : ''}`} style={{marginRight: 20}}>
               Grade 6 Science
             </button>
-            <button onClick={() => this.setState({grade7: true, grade6: false})} className="pure-button">
+            <button onClick={() => this.setState({grade7: true, grade6: false})} className={`pure-button ${this.state.grade7 ? 'active' : ''}`}>
               Grade 7 Science
             </button>
           </div>
