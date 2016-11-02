@@ -24,9 +24,9 @@ const HomePage = React.createClass({
       <div className="container homepage">
         <div className="homepage-background-hack" />
         {/* Wrapping this in main-nav is a dirty hack, but we're rewriting everything so this is a special exception hack */}
-        <div className="main-nav homepage-user-menu-container">
+        <nav className="home-menu pure-menu pure-menu-horizontal main-nav home-nav">
           <UserMenu />
-        </div>
+        </nav>
         
         <div className={`homepage-banner-area ${(this.state.grade6 || this.state.grade7) ? 'open' : ''}`}>
           <div className="homepage-title-primary">
