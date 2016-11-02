@@ -22,6 +22,7 @@ const HomePage = React.createClass({
   render: function() {
     return (
       <div className="container homepage">
+        <div className="homepage-background-hack" />
         {/* Wrapping this in main-nav is a dirty hack, but we're rewriting everything so this is a special exception hack */}
         <div className="main-nav homepage-user-menu-container">
           <UserMenu />

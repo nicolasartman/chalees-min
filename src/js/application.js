@@ -47,7 +47,7 @@ const Application = React.createClass({
             <LoadingOverlay shouldShow={!this.state.isReady} />
             {this.props.header}
             {React.cloneElement(this.props.children, { key: location.pathname, loggedIn: this.state.isLoggedIn, data: this.state.data })}
-            <Footer />
+            {this.props.footer || (<Footer />)}
           </div>
         </Provider>
       </div>

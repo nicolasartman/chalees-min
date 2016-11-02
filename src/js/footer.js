@@ -2,8 +2,9 @@ import { Link } from 'react-router';
 
 const Footer = React.createClass({
   render: function() {
+    const props = this.props;
     return (
-      <footer id="footer" className="footer">
+      <footer id="footer" className={`footer ${props.className || ''}`}>
           <div className="pure-g">
             <div className="pure-u-1">
               <nav className="footer-menu pure-menu pure-menu-horizontal">
