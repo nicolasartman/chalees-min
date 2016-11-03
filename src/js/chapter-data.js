@@ -3905,7 +3905,7 @@ export const chapter7Data = [{
 
       Watch to see how sheep hair are converted into woollen sweaters.
     `,
-    videoId: 'vdKeOul-CWM',
+    videoId: '1Iy2Yg92Sa4',
   }, {
     id: 'green-plants-quiz',
     kind: 'multipleChoiceResponse',
