@@ -1228,6 +1228,7 @@ export const chapter6Data = [{
     Many basketball players master a move called the Pivot. Watch this video to find out more.`,
     videoId: 'erx6kfO6tfw',
     startTime: 35,
+    endTime: 53,
   }, {
     id: 'pivotal-joints',
     time: 1,
