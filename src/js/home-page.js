@@ -33,7 +33,7 @@ const HomePage = React.createClass({
             <img src={logo} className="homepage-logo" />
           </div>
           <div className="homepage-title-secondary">
-            Science Lessons in 40 Minutes or Less
+            Science lessons in 40 minutes or less
           </div>
           <div className="homepage-grade-choices">
             <button onClick={() => this.setState({grade7: false, grade6: true})} className={`pure-button ${this.state.grade6 ? 'active' : ''}`} style={{marginRight: 20}}>
