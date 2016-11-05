@@ -21,7 +21,7 @@ const HomePage = React.createClass({
   
   render: function() {
     return (
-      <div className="container homepage">
+      <div className="homepage">
         <div className="homepage-background-hack" />
         {/* Wrapping this in main-nav is a dirty hack, but we're rewriting everything so this is a special exception hack */}
         <nav className="home-menu pure-menu pure-menu-horizontal main-nav home-nav">
@@ -46,17 +46,21 @@ const HomePage = React.createClass({
         </div>      
         
         <div className={`homepage-grade-section ${(this.state.grade6 || this.state.grade7) ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>
-          <div className={`pure-g ${this.state.grade6 ? 'thing' : 'notthing'}`}>
-            {chapter6Lessons.map((chapter, index) => (
-              <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
-            ))}
-          </div>
+          <div className="homepage-grade-section-fader" />
+          <div className="container homepage-grade-section-body">
+            <div className={`pure-g ${this.state.grade6 ? 'selected-chapter' : 'not-selected-chapter'}`}>
+              {chapter6Lessons.map((chapter, index) => (
+                <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
+              ))}
+            </div>
         
-          <div className={`pure-g ${this.state.grade7 ? 'thing' : 'notthing'}`}>
-            {chapter7Lessons.map((chapter, index) => (
-              <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
-            ))}
+            <div className={`pure-g ${this.state.grade7 ? 'selected-chapter' : 'not-selected-chapter'}`}>
+              {chapter7Lessons.map((chapter, index) => (
+                <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
+              ))}
+            </div>
           </div>
+          <div className="homepage-grade-section-bottom-fader" />
         </div>
         {this.props.children}
       </div>
