@@ -4253,6 +4253,396 @@ export const chapter7Data = [{
 
   },]
 }, {
+  id: ' 11',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
+  title: 'Transportation in Animals and Plants',
+  items: [{
+    id: 'components-of-blood',
+    time: 1,
+    kind: 'image',
+    title: 'Blood Components',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    There are 4 main components of blood: Red Blood Cells, White Blood Cells, Platelets, and Plasma. 
+
+    This image shows what they look like. We will discuss each one of them in this chapter.`,
+    
+    imagePath: '/learning-items/grade7/components-of-blood-2.jpeg',
+
+  }, {
+    id: 'chapter-11-video-rbc',
+    kind: 'video',
+    time: 2,
+    title: 'Red Blood Cells',
+    instructions: dedent`
+      Red Blood Cells (RBCs) are an important part of our blood.
+
+      RBCs also have an incredible substance inside them called Haemoglobin, which can join very easily with oxygen. 
+
+      Thus, red blood cells can take oxygen to all parts of our body. Here is a song to help you remember the function of red blood cells.
+    `,
+    videoId: 'Y2_A18dqeFY',
+  }, {
+    id: 'rbc-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+     Red Blood Cells contain ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'White Blood Cells'
+      },
+      {
+        id: 'opt2',
+        text: 'Haemoglobin'
+      },
+      {
+        id: 'opt3',
+        text: 'Platelets'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Red Blood Cells and White Blood Cells are separate parts of blood.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Haemoglobin gives RBCs their red colour and can easily bind with oxygen.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Red Blood Cells and Platelets are separate parts of blood.'
+      }
+    ]
+  }, {
+    id: 'white-blood-cells',
+    kind: 'video',
+    time: 1,
+    title: 'White Blood Cells',
+    instructions: dedent`
+      White Blood Cells help our body fight against germs. This is a video of a White Blood Cell killing a bacterium (_singular of bacteria_).
+    `,
+    videoId: 'JnlULOjUhSQ',
+  }, {
+    id: 'platelets',
+    time: 1,
+    kind: 'image',
+    title: 'Platelets',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Have you ever fallen down and started to bleed? 
+
+    If so, you may have noticed that a dark red clot forms to prevent blood from flowing outside your body. Platelets help create that clot.
+    `,
+    imagePath: '/learning-items/grade7/platelets-blood-clot.jpeg',
+
+  }, {
+    id: 'platelets-name',
+    time: 1,
+    kind: 'image',
+    title: 'Why are Platelets called Platelets?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This is what  platelets look like when seen through a microscope. 
+
+    They get their name because they look like small plates.
+    `,
+    imagePath: '/learning-items/grade7/platelets-name-small-plates-2.jpeg',
+
+  }, {
+    id: 'platelets-shape',
+    time: 1,
+    kind: 'image',
+    title: 'What Happens During an Injury?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When blood begins to flow out of our body due to an injury, platelets start to look like an octopus, with long tentacles. 
+
+    This new shape helps the platelets form a seal that stops blood from flowing out of our body.
+    `,
+    imagePath: '/learning-items/grade7/platelets-shape-clot.jpeg',
+
+  }, {
+    id: 'platelets-quiz',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Platelets Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    What will happen if there are no platelets in our body?
+
+    Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            I just learned that platelets help us when we get injured. 
+
+            They make that solid, red-looking substance on the skin that stops blood from flowing out of our body.
+
+            So if there are no platelets left in our body, we should be very careful, as even a small injury will not heal.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'platelets-function',
+    kind: 'video',
+    time: 1,
+    title: 'How Platelets Work',
+    instructions: dedent`
+      This video shows how platelets work when blood starts flowing out of our body.
+
+      There are some tough vocabulary words in this video. __Do not__ worry about them. Focus on the animation to see how platelets work.
+    `,
+    videoId: 'KtmHdGRBE2E',
+    startTime: 26,
+  }, {
+    id: 'plasma',
+    time: 1,
+    kind: 'image',
+    title: 'Plasma',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Plasma is the fluid part of blood in which all the rest of the blood components travel.
+    `,
+    imagePath: '/learning-items/grade7/plasma-function.jpeg',
+
+  }, /*{
+    id: 'plasma-is-yellow',
+    time: 1,
+    kind: 'image',
+    title: 'Can Blood be Yellow?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Yes. Well, at least part of the blood is yellow.
+
+    In this image you see plasma after it was extracted from blood and kept in a bag. Clearly, plasma is yellow.
+    `,
+    imagePath: '/learning-items/grade7/plasma-is-yellow-2.jpeg',
+
+  },*/ {
+    id: 'blood-components-centrifuge',
+    time: 1,
+    kind: 'image',
+    title: 'Different Blood Components',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This image shows the 4 components of blood after we have separated them using a machine called centrifuge.
+
+    As you can see, Plasma and Red Blood Cells make up most of the blood. 
+
+    And yes, if we extract plasma from blood, we find that it is yellow in colour.
+    `,
+    imagePath: '/learning-items/grade7/blood-components-centrifuge-2.jpeg',
+
+  }, {
+    id: 'blood-vessels',
+    time: 1,
+    kind: 'image',
+    title: 'What are Blood Vessels',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word Vessel, I think of large ships that carry goods across oceans.
+
+    In a similar way, Blood Vessels are tubes that carry blood to all parts of the body. Two main types of blood vessels are Arteries and Veins.
+    `,
+    imagePath: '/learning-items/grade7/blood-vessels.jpeg',
+
+  }, {
+    id: 'arteries-veins',
+    time: 1,
+    kind: 'image',
+    title: 'What are Arteries and Veins?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Arteries and Veins are blood vessels; they carry blood in our body.
+
+    Arteries carry oxygen-rich blood from the heart to all parts of the body.
+
+    Veins carry carbon dioxide from all parts of the body back to the heart.
+    `,
+    imagePath: '/learning-items/grade7/arteries-veins.jpeg',
+
+  }, {
+    id: 'arteries-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+     The blood from the heart is transported to all parts of the body by the ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Veins'
+      },
+      {
+        id: 'opt2',
+        text: 'Arteries'
+      },
+      {
+        id: 'opt3',
+        text: 'Post Man'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Veins take blood from the body to the heart.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Blood from the heart is transported to all parts of the body through the arteries.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is clearly me trying to make a joke.'
+      }
+    ]
+  }, {
+    id: 'way-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'Memorizing Arteries and Veins',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is one way in which I try to remember the function of arteries and veins.
+
+    The first letter in the word arteries is _"a"_ which reminds me that arteries take blood  away from the heart.
+
+    Vein contains the letters _"in"_. That reminds me that veins take blood back in towards the heart.
+    `,
+    imagePath: '/learning-items/grade7/remember-arteries-veins.jpeg',
+
+  }, {
+    id: 'veins-valves',
+    time: 1,
+    kind: 'image',
+    title: 'Veins have Valves',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Veins carry blood filled with carbon dioxide and other waste products from the body back to the heart.
+
+    It is important that this blood flow only in the direction towards the heart, and not away from it.
+
+    Thus veins have valves. A valve is a flap that allows a fluid like blood to flow in one direction.
+
+    Muscles around veins squeeze to push the blood towards the heart. Once the blood has moved through a section of the vein, the valve closes which prevents that blood from flowing backwards.
+    `,
+    imagePath: '/learning-items/grade7/veins-have-valves.jpeg',
+
+  }, {
+    id: 'capillaries',
+    time: 1,
+    kind: 'image',
+    title: 'Capillaries',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When arteries reach cells they turn into really thin tubes called capillaries. 
+
+    The walls of capillaries are really thin.
+
+    These thin walls allow capillaries to transfer water and oxygen from the  blood to cells; and also carbon dioxide from the cells to blood.`,
+    imagePath: '/learning-items/grade7/capillaries.jpeg',
+
+  }, {
+    id: 'arteries-capillaries-veins',
+    time: 1,
+    kind: 'image',
+    title: 'Arteries, Capillaries, Veins',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is the relationship between arteries capillaries and veins.
+
+    Arteries carry oxygen rich blood from the heart to our body.
+
+    Upon reaching cells, arteries turn into capillaries. The capillaries supply our cells with oxygen and food. They also pick up waste products like carbon dioxide from cells.
+
+    These capillaries then combine to become veins, which carry blood back to the heart.`,
+    imagePath: '/learning-items/grade7/arteries-capillaries-veins.jpeg',
+
+  }, {
+    id: 'capillaries-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+     Arteries and Veins are joined by a network of ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Lungs'
+      },
+      {
+        id: 'opt2',
+        text: 'Capillaries'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. '
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Capillaries are the thin tubes that join arteries and veins.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is clearly me trying to make a joke.'
+      }
+    ]
+  }, {
+    id: 'pulmonary-joints',
+    time: 1,
+    kind: 'image',
+    title: 'What does Pulmonary mean?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The word _Pulmon_ simply means lungs.
+
+    So when you think of pulmonary, think of lungs.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/pulmon-lung-gif2.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'pulmonary-arteries-veins',
+    time: 1,
+    kind: 'image',
+    title: 'Pulmonary Arteries and Veins',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We know that Pulmonary means lungs.
+
+    Thus, pulmonary arteries and veins connect the heart to the lungs. 
+
+    Arteries take blood away from the heart; thus blood goes from the heart to the lungs in the pulmonary arteries.
+
+    Veins take the blood back to the heart; thus blood goes from the lungs to the heart in the pulmonary veins.`,
+    imagePath: '/learning-items/grade7/pulmonary-arteries-veins.jpeg',
+
+  },   ]
+}, {
   id: ' 8',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter8-thumbnail.jpg',
   title: 'Winds, Storms and Cyclones',
@@ -4629,7 +5019,7 @@ export const chapter7Data = [{
     imagePath: '/learning-items/white-space-2.jpeg',
     locked: true
   }, ]
-}, ]
+},]
 
 
 // validate that all data items have ids that are unique
