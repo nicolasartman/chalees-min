@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import HomepageTile from './homepage-tile.js';
 import UserMenu from './user-menu.js';
+import Footer from './footer.js';
 import {chapter6Data, chapter7Data} from './chapter-data.js';
 import sortBy from 'lodash/sortBy';
 import logo from '../images/chalees-min-logo@2x.png';
@@ -46,7 +47,6 @@ const HomePage = React.createClass({
         </div>      
         
         <div className={`homepage-grade-section ${(this.state.grade6 || this.state.grade7) ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>
-          <div className="homepage-grade-section-fader" />
           <div className="container homepage-grade-section-body">
             <div className={`pure-g ${this.state.grade6 ? 'selected-chapter' : 'not-selected-chapter'}`}>
               {chapter6Lessons.map((chapter, index) => (
@@ -60,9 +60,10 @@ const HomePage = React.createClass({
               ))}
             </div>
           </div>
-          <div className="homepage-grade-section-bottom-fader" />
         </div>
         {this.props.children}
+        
+        <Footer className={!(this.state.grade6 || this.state.grade7) ? 'homepage-footer' : 'homepage-footer-open'} />
       </div>
     );
   }
