@@ -5019,6 +5019,189 @@ export const chapter7Data = [{
     imagePath: '/learning-items/white-space-2.jpeg',
     locked: true
   }, ]
+}, {
+  id: ' 13',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter13-thumbnail2.jpeg',
+  title: 'Motion and Time',
+  items: [{
+    id: 'chapter-13-video',
+    kind: 'video',
+    time: 5,
+    title: 'How Pendulums Work',
+    instructions: dedent`
+      We travel to Japan in this video to see the largest pendulum clock in the world. And then to a tall building with pendulums on the roof. 
+
+      While doing that, we answer these questions:
+       - Why are pendulums used in clocks?
+       - Will a heavier pendulum swing faster than a lighter pendulum?
+       - Other than clocks, where are pendulums used?
+    `,
+    videoId: 'F4ApOc4p-CE',
+  }, {
+    id: 'pendulum-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Pendulum Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![pendulum swinging](/learning-items/grade7/pendulum-time-period.jpeg)
+
+     The time taken for the pendulum to swing from O to B, then from B to A, and then back to O is called _________?     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Time Period'
+      },
+      {
+        id: 'opt2',
+        text: 'Oscillation'
+      },
+      {
+        id: 'opt3',
+        text: 'Bob'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Time period is the time taken by a pendulum to complete one full oscillation. If we begin measuring time from the position labelled O (otherwise known as equilibrium point), then it is the time taken for the pendulum to return back to that position O.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. Oscillation means to move back and forth around a central point.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'No, this is not correct. Bob is the name of the ball in the pendulum.'
+      }
+    ]
+  }, {
+    id: 'speed-video',
+    kind: 'video',
+    time: 1,
+    title: 'What is Speed?',
+    instructions: dedent`
+      Speed is how fast an object moves. Here is the formula: 
+
+      Speed = Distance / Time
+
+      Here is a video that can help you remember this formula.
+    `,
+    videoId: '--LkIupj0jI',
+  }, {
+    id: 'what-is-the-speed',
+    time: 1,
+    kind: 'image',
+    title: 'How Fast?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    How fast does a cheetah run? 
+
+    How fast does Usain Bolt, Olympic gold medal winner, run? 
+
+    What is the speed of the earth per second`,   
+    imagePath: '/learning-items/grade7/speed-cheetah.jpeg',
+
+  }, {
+    id: 'speed-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 4,
+    title: 'Speed Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![car speed](/learning-items/grade7/car.jpeg)
+
+     Imagine a car goes from point A to point B. 
+
+     The speed of the car was 40 km per hour and the it took 1 hour to finish the journey . Given this information, will you be able to calculate the distance between the two points?     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Speed = Distance / Time. Therefore Distance = Speed X Time. We know the speed (40 km per hour). We know the time (1 hour). Therefore the distance between the two points is 40 X 1 = 40 kilometres.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Hmm. Given this information, we think you can calculate the distance.'
+      }
+    ]
+  }, {
+    id: 'speed-units',
+    kind: 'video',
+    time: 3,
+    title: 'Units of Speed',
+    instructions: dedent`
+      Speed is measured in kilometres per hour. For instance, we may say that a car moves at 50 km per hour.
+
+      We can show this in a different way. 
+
+      We can say that the same car moves at 14 metres per second.
+
+      This video shows how to convert speed from kilometres per hour to metres per second.
+    `,
+    videoId: '2M_FC4nKqag',
+    endTime: 200,
+  }, {
+    id: 'what-is-an-odometer',
+    time: 1,
+    kind: 'image',
+    title: 'What is an Odometer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A speedometer measures speed.
+
+    An odometer measures the distance travelled by an object. 
+
+    We can find odometers in the dashboard of a car.`,   
+    imagePath: '/learning-items/grade7/odometer.jpeg',
+
+  }, {
+    id: 'what-is-a-line-graph',
+    kind: 'video',
+    time: 2,
+    title: 'What is a Line Graph?',
+    instructions: dedent`
+      A line graph is a picture that shows points on a graph connected by a line.
+
+      In this video, we create a line graph to show how many apples were eaten in a month. 
+    `,
+    videoId: 'n2YkbdNORp8',
+    endTime: 200,
+  }, {
+    id: 'more-line-graph',
+    kind: 'video',
+    time: 6,
+    title: 'How to read a Line Graph',
+    instructions: dedent`
+      Here is another video that teaches how to read a line graph. 
+    `,
+    videoId: 'ZTrAuUjcYVw',
+    endTime: 330,
+  }, {
+    id: 'distance-time-graph',
+    kind: 'video',
+    time: 9,
+    title: 'Distance Time Graph',
+    instructions: dedent`
+      Distance time graph shows the amount of distance travelled over time. In other words, it shows the speed of an object.
+    `,
+    videoId: 'qb82WZeWN8g',
+    startTime: 9,
+    endTime: 405,
+  }, ]
 },]
 
 
