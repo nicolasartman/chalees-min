@@ -5078,6 +5078,20 @@ export const chapter7Data = [{
       }
     ]
   }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw and Share',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![partial pendulum](/learning-items/grade7/partial-pendulum.jpeg)
+
+    I hope you watched the video on pendulums in the beginning of this chapter.
+
+    Now use a _pen and paper_ to draw a picture that shows everything you learned from that video on pendulums.
+
+    Then take a photo of the drawing from your phone and share it here.`,
+  }, {
     id: 'speed-video',
     kind: 'video',
     time: 1,
@@ -5107,8 +5121,8 @@ export const chapter7Data = [{
   }, {
     id: 'speed-quiz',
     kind: 'multipleChoiceResponse',
-    time: 4,
-    title: 'Speed Quiz',
+    time: 2,
+    title: 'What is the Speed?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![car speed](/learning-items/grade7/car.jpeg)
@@ -5139,6 +5153,48 @@ export const chapter7Data = [{
       }
     ]
   }, {
+    id: 'calculate-the-speed',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Speed Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![car speed](/learning-items/grade7/train2.jpg)
+
+     The distance between two stations in 240 km. A train takes 4 hours to cover this distance.
+
+     What is the speed of this train?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '960 km per hour'
+      },
+      {
+        id: 'opt2',
+        text: '60 km'
+      },
+      {
+        id: 'opt3',
+        text: '60 km per hour'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Speed = Distance / Time. It seems you have multiplied distance (240 km) and time (4 hours) to get this answer.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Speed = Distance / Time. So, 240 / 4 = 60. But the units of speed need to be km per hour and not km.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Speed = Distance / Time. So, 240 km / 4 hours = 60 km per hour.'
+      },
+    ]
+  }, {
     id: 'speed-units',
     kind: 'video',
     time: 3,
@@ -5154,6 +5210,46 @@ export const chapter7Data = [{
     `,
     videoId: '2M_FC4nKqag',
     endTime: 200,
+  }, {
+    id: 'change-units',
+    kind: 'multipleChoiceResponse',
+    time: 3,
+    title: 'Changing Units',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Convert 90 km per hour into metres per second (m/s).
+
+     What is the answer?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '10 m/s'
+      },
+      {
+        id: 'opt2',
+        text: '20 m/s'
+      },
+      {
+        id: 'opt3',
+        text: '25 m/s'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. '
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, not correct.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__.'
+      },
+    ]
   }, {
     id: 'what-is-an-odometer',
     time: 1,
@@ -5201,6 +5297,21 @@ export const chapter7Data = [{
     videoId: 'qb82WZeWN8g',
     startTime: 9,
     endTime: 405,
+  }, {
+    id: 'exercises-chapter13',
+    time: 10,
+    kind: 'image',
+    title: 'Exercises from Chapter 13',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![tornadoes](/learning-items/grade7/chapter-13.jpeg)
+
+    There are some tough questions in the exercises at the end of Chapter 13 in the science book.
+
+    These two videos — [Video 1](https://www.youtube.com/watch?v=28iBkdkdtjk) and [Video 2](https://www.youtube.com/watch?v=VYy3Tl0Kmfw) — will guide you through those questions.
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg',
+    locked: true
   }, ]
 },]
 
