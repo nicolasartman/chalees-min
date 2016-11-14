@@ -4641,6 +4641,16 @@ export const chapter7Data = [{
     Veins take the blood back to the heart; thus blood goes from the lungs to the heart in the pulmonary veins.`,
     imagePath: '/learning-items/grade7/pulmonary-arteries-veins.jpeg',
 
+  }, {
+    id: 'excretory-system',
+    kind: 'video',
+    time: 2,
+    title: 'Excretory System',
+    instructions: dedent`
+      This poem in Hindi explains how Urine is excreted from our body.
+    `,
+    videoId: 'Qc6JoAQotjQ',
+    locked: true
   },   ]
 }, {
   id: ' 8',
