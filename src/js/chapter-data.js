@@ -5030,6 +5030,481 @@ export const chapter7Data = [{
     locked: true
   }, ]
 }, {
+  id: ' 17',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter17--thumbnail.jpg',
+  title: 'Forests: Our Lifeline',
+  items: [{
+    id: 'chapter-17-video',
+    kind: 'video',
+    time: 2,
+    title: 'A Walk Through The Forest',
+    instructions: dedent`
+      In this video we walk through the forest and think about these ideas: 
+       - humus
+       - canopy
+       - forests and oxygen
+    `,
+    videoId: 'F4ApOc4p-CE',
+  }, {
+    id: 'humus-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz on Plants',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![dead leaves plants](/learning-items/grade7/dead-plants.jpg)
+
+     Micro-organisms act upon dead plants to produce _________.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'sand'
+      },
+      {
+        id: 'opt2',
+        text: 'mushrooms'
+      },
+      {
+        id: 'opt3',
+        text: 'humus'
+      },
+      {
+        id: 'opt4',
+        text: 'wood'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Sand is produced from stones and rocks.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. '
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Micro-organisms decompose dead plants to create a dark coloured substance in soil called humus. Humus improves the fertility of soil.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'No, this is not correct. '
+      }
+    ]
+  }, {
+    id: 'what-is-tree-crown',
+    time: 1,
+    kind: 'image',
+    title: 'What is a Tree Crown?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The branchy part of the tree above the stem is called the crown.
+ 
+    The word crown usually refers to an ornament worn by someone on the __top__ of their head — like a king or a queen. ![crown](/learning-items/grade7/crown-2.png)  
+
+    Similarly, the __top__ of the tree, is also called a crown. `,   
+    imagePath: '/learning-items/grade7/tree-crown.jpeg',
+
+  }, {
+    id: 'canopy-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Tree Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![overlapping leaves canopy](/learning-items/grade7/forest-canopy.jpeg)
+
+     Overlapping leaves and branches of many trees that together look like the roof of a forest is called _________.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'crown'
+      },
+      {
+        id: 'opt2',
+        text: 'canopy'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The top of a single tree is called a crown.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. A canopy is formed by a collection of tree crowns.'
+      }
+    ]
+  }, {
+    id: 'understorey',
+    time: 1,
+    kind: 'image',
+    title: 'Understorey',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Understorey comprises of all trees growing between the canopy and forest floor.
+
+    You can think of _understorey_ as all plants growing below the canopy and above the forest floor.`,   
+    imagePath: '/learning-items/grade7/understorey.jpeg',
+
+  }, {
+    id: 'herbs-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Forest Layers Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![herbs layer](/learning-items/grade7/understorey-quiz.jpeg)
+
+     Herbs form the ________ layer in the forest.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'top'
+      },
+      {
+        id: 'opt2',
+        text: 'lowest'
+      },
+      {
+        id: 'opt3',
+        text: 'middle'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Giant trees form the top layer in a forest. Herbs, on the other hand, are short plants with tender stems.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Herbs are short plants and form the lowest layer in the forest.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Shrubs and tall grasses form the middle layer in the forest.'
+      }
+    ]
+  }, /*{
+    id: 'balance-of-gases',
+    time: 1,
+    kind: 'image',
+    title: 'Balance of Oxygen and Carbon dioxide',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Plants use carbon dioxide and produce oxygen. And humans need oxygen.
+
+    More than 20% of the world’s oxygen is produced by the trees in the Amazon rainforest.`,   
+    imagePath: '/learning-items/grade7/forests-balance-oxygen-carbon-dioxide.jpeg',
+
+  },*/{
+    id: 'humus',
+    time: 1,
+    kind: 'image',
+    title: 'Humus',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Dead leaves and plants are decomposed by worms and bacteria into a dark coloured substance called humus.
+
+    Humus helps the soil retain moisture and thus is very helpful in droughts. Humus also has nutrients needed by plants; thus humus makes the soil more fertile.`,   
+    imagePath: '/learning-items/grade7/leaves-decompose-humus-earthworms.jpeg',
+
+  }, {
+    id: 'decomposers-quiz',
+    kind: 'textResponse',
+    time: 6,
+    short: true,
+    title: 'Decomposers',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![worms decomposers](/learning-items/grade7/worms-2.jpg)
+
+    What are decomposers? Name any two of them. What do they do in the forest?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            Organisms that convert dead plants and animals into humus are called Decomposers.
+
+            Examples include: worms, bacteria, fungi.
+
+            Decomposers turn dead things into humus. Humus makes the soil more fertile.`
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'how-animals-help-forests',
+    time: 1,
+    kind: 'image',
+    title: 'How Animals Help Forests',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Animals can spread tree seeds in a forest, and thus help the forest grow.
+
+    Consider a raccoon, an animal found in the forests of North America. A raccoon eats fruits from a tree including the seeds inside the fruit. 
+
+    A few hours later, the raccoon poops out waste, which includes seeds they had previously eaten. These seeds now have a chance to blossom into a new fruit tree.
+
+    Animals like the raccoon can help regenerate forests by dispersing the seeds of trees.`,   
+    imagePath: '/learning-items/grade7/seed-dispersal-animals-raccoon.jpeg',
+
+  }, {
+    id: 'birds-spreading-seeds',
+    kind: 'video',
+    time: 2,
+    title: 'Birds Spreading Seeds',
+    instructions: dedent`
+      Watch this short video to see how birds spread seeds and help a forest grow.
+    `,
+    videoId: 'qQnaIZtbv18',
+    startTime: 20,
+  }, {
+    id: 'animal-poop-ferilizer',
+    kind: 'video',
+    time: 2,
+    title: 'Animal Poop is Good for Trees',
+    instructions: dedent`
+      Animal poop is rich in nitrogen and provides nutrients for trees to grow. Animal dung (or poop) acts as fertilizer for plants.
+
+      In this video, we will see how an animal gets some nourishment from a pitcher plant, and in turn offers its poop to the plant.
+    `,
+    videoId: 'TwL7K_loRjM',
+  }, {
+    id: 'dead-animals-turn-into-humus',
+    kind: 'video',
+    time: 1,
+    title: 'Dead Animals turn into Humus',
+    instructions: dedent`
+      Much like dead leaves, dead animals are decomposed by micro-organisms into humus.
+
+      Thus, even the dead bodies of animals are useful for plants in the forests. 
+
+      This video was recorded over 7 days, and is played in fast forward mode.
+    `,
+    videoId: 'C6sFP_7Vezg',
+  }, {
+    id: 'animal-help-forests-quiz',
+    kind: 'textResponse',
+    time: 6,
+    //short: true,
+    title: 'How Animals Help Forests',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![animals forests](/learning-items/grade7/animals-seed-dispersal.jpeg)
+
+    Explain how animals living in the forest help it grow and regenerate.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Here are some ways I can think in which animals help grow the forests:
+
+             1) Animals help in seed dispersal. They eat fruits, and when they poop, the seeds are deposited. These seeds can turn into new trees.
+
+             2) Dead bodies of animals are converted to humus after decomposition. This increases the fertility of soil.
+
+             3) Animal poop acts as a fertilizer for the soil in the forest.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'forests-water-cycle-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Forests and Water Cycle',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which process is taking place in the image below?
+
+      _Hint:_ This photo was taken by a satellite and shows part of the Amazon rainforest in South America.
+
+      ![amazon rainforest transpiration condensation](/learning-items/amazon-transpiration-condensation.jpeg)`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Collection of Ground Water'
+      },
+      {
+        id: 'opt2',
+        text: 'Transpiration'
+      },
+      {
+        id: 'opt3',
+        text: 'Flood'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. We are looking at an image of a forest from space. Ground water is not visible here.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ The most likely thing that is happening in this picture is that the trees in the forest are losing water through Transpiration. And that water vapour is then condensing to form clouds, which rains down on earth.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. '
+      }
+    ]
+  }, {
+    id: 'products-from-forests',
+    time: 1,
+    kind: 'image',
+    title: 'Products from Forests',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We get a large number of products from forests. They include honey, wax, gum, wood, paper, oil and medicines.
+
+    In fact, more than 25% of medicines we use originate in rainforests around the world.
+
+    Below you will see two examples of medicines that originate in forests and are used to treat asthma and cancer.`,   
+    imagePath: '/learning-items/grade7/medicines-from-forests-asthma-cancer.jpeg',
+
+  }, {
+    id: 'forests-products-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Pick the Odd One',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![forest](/learning-items/grade7/forests-quiz.jpeg)
+
+      Which of the following is __not__ a forest product? `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Gum'
+      },
+      {
+        id: 'opt2',
+        text: 'Plywood'
+      },
+      {
+        id: 'opt3',
+        text: 'Sealing Wax'
+      },
+      {
+        id: 'opt4',
+        text: 'Kerosene'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Gum is secreted by many trees in the forest including Plum trees.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Wood is plentiful in the forest.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Wax is obtained from trees in the forest.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Kerosene and other petroleum products are dug up from under the ground.'
+      }
+    ]
+  }, {
+    id: 'how-forests-prevent-flood',
+    time: 1,
+    kind: 'image',
+    title: 'How Forests Prevent Floods',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Forests slow down the fall of rain water.
+
+    It can take up to 10 minutes for a falling raindrop to travel from a rainforest\`s thick canopy to the floor of the forest.
+
+    This extra time allows the water that reaches the floor to seep underground before more water gathers. Floods are prevented since forests do not allow the rain water to gather or accumulate.`,   
+    imagePath: '/learning-items/grade7/how-forests-prevent-floods.jpeg',
+  }, {
+    id: 'soil-erosion',
+    time: 1,
+    kind: 'image',
+    title: 'How Forests Prevent Soil Erosion',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Roots of forest trees bind soil together. But if trees are not present, then soil is washed away or eroded. 
+
+    In this picture you can observe that in the absence of trees, soil is eroded into the sea.`,   
+    imagePath: '/learning-items/grade7/soil-erosion.jpeg',
+  }, {
+    id: 'forests-prevent-floods-quiz',
+    kind: 'textResponse',
+    time: 6,
+    short: true,
+    title: 'Forests and Floods Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![animals forests](/learning-items/grade7/forests-quiz.jpeg)
+
+    How do forests prevent floods?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            The first thing we have to think about is the canopy of a forest. It is the overlapping leaves and branches of trees high up in the forest.
+
+            The canopy is thick and it slows down the movement of rainwater.
+
+            Since rainwater takes more time to reach the forest floor, water does not accumulate. In this way, forests prevent floods.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'forests-in-india',
+    time: 1,
+    kind: 'image',
+    title: 'Forests in India',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    21% of India is under forest cover.`,   
+    imagePath: '/learning-items/grade7/india-area-under-forest.jpeg',
+  }, {
+    id: 'deforestation',
+    time: 1,
+    kind: 'image',
+    title: 'Deforestation',
+    locked: true,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Deforestation is the destruction of forests to make land available for other uses like farming and animal grazing.
+
+    Every second an area of the rainforest the size of a football pitch is cut down.`,   
+    imagePath: '/learning-items/grade7/deforestation.jpeg',
+  }, ]
+},{
   id: ' 13',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter13-thumbnail2.jpeg',
   title: 'Motion and Time',
