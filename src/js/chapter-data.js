@@ -3083,7 +3083,7 @@ export const chapter7Data = [{
 
       Watch this short video to understand and remember the meaning of Autotroph, Heterotroph and Saprotroph.
     `,
-    videoId: 'vdKeOul-CWM',
+    videoId: 'cvQK7hXTWDE',
   }, {
     id: 'green-plants-quiz',
     kind: 'multipleChoiceResponse',
