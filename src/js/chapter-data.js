@@ -5798,6 +5798,408 @@ export const chapter7Data = [{
     imagePath: '/learning-items/white-space-2.jpeg',
     locked: true
   }, ]
+}, {
+  id: ' 14',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter14-thumbnail.png',
+  title: 'Electric Current and its Effects',
+  items: [{
+    id: 'chapter-14-video',
+    kind: 'video',
+    time: 5,
+    title: 'When a Wire Becomes a Magnet',
+    instructions: dedent`
+      When current flows through a wire, it acts like a magnet.
+
+      This fundamental fact of nature has changed our lives. We use this fact to build things like the electric doorbells and really fast trains. 
+
+      Let us travel to Japan in this video to see how this works.
+    `,
+    videoId: 'F4ApOc4p-CE',
+  }, {
+    id: 'electromagnet-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Electromagnet Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![electric wires](/learning-items/grade7/electric-wires.jpeg)
+
+     When electric current flows through a wire, the wire behaves like a _________?     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Stone'
+      },
+      {
+        id: 'opt2',
+        text: 'Magnet'
+      },
+      {
+        id: 'opt3',
+        text: 'Pendulum'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'No, this is not correct.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. When electric current flows through a wire, the wire starts acting like a magnet.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'No, this is not correct.'
+      }
+    ]
+  }, {
+    id: 'magnetic-effect-of-current',
+    kind: 'video',
+    time: 1,
+    title: 'Magnetic Effect of Current',
+    instructions: dedent`
+      When current flows through a wire, it acts like a magnet.
+
+      In this video a coil of wire is connected to a battery and a compass is placed inside the coil. Before the coil is connected to the battery, the compass points towards the Earths north pole.
+
+      As soon as the coil of wire is connected to the battery, it starts acting like a magnet. The compass feels the influence of this new magnet and thus moves.
+    `,
+    videoId: 'AgZHqfIBkUI',
+    startTime: 5,
+  }, {
+    id: 'make-an-electromagnet',
+    kind: 'video',
+    time: 2,
+    title: 'Make an Electromagnet',
+    instructions: dedent`
+      Use simple materials found in your home to create an electromagnet that can lift things.
+    `,
+    videoId: 'bH2VpzHtIh0',
+    startTime: 41,
+    endTime: 142,
+  }, {
+    id: 'electromagnet-quiz-2',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Electromagnet Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![plastic bags](/learning-items/grade7/plastic-bags-2.jpeg)
+
+    Do you think an electromagnet can be used to separate plastic bags from a heap?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student named Koushiki',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            Plastic bags are not magnetic.
+
+            So no, an electromagnet, or any other magnet, will not be able to separate a plastic bag from a heap.
+
+            An electromagnet will be able to find a needle in a pile of grass.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'electric-bell',
+    kind: 'video',
+    time: 1,
+    title: 'How an Electric Bell Works',
+    instructions: dedent`
+      See how an electromagnet is used to make a doorbell.
+    `,
+    videoId: '2Y80QG-F7Fs',
+  }, {
+    id: 'circuit-symbols',
+    time: 1,
+    kind: 'image',
+    title: 'Symbols for Electric Components',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here are some symbols that are used to represent electrical components like bulb and cells in a circuit. 
+ 
+    A diagram that uses these symbols to show an electric circuit is called a circuit diagram. `,   
+    imagePath: '/learning-items/grade7/electric-symbols.jpeg',
+
+  }, {
+    id: 'how-to-draw-a-circuit-diagram',
+    kind: 'video',
+    time: 1,
+    title: 'How to Draw a Circuit Diagram',
+    instructions: dedent`
+      This video will teach you how to draw a circuit diagram. You may remember that the symbol for the bulb is drawn in this manner: ![electric bulb symbol ](/learning-items/grade7/bulb-1.jpeg)
+
+      This video uses the following symbol for the bulb: ![electric bulb symbol ](/learning-items/grade7/bulb-2.jpeg) It is ok to use this symbol.
+    `,
+    videoId: 'taszKVykMBQ',
+  }, {
+    id: 'why-use-circuit-symbols',
+    time: 1,
+    kind: 'image',
+    title: 'Why Use Electric Symbols',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Why do we use symbols when drawing components like bulbs and cells in a circuit?
+
+    Well, it can be easy to draw a circuit with these symbols.
+
+    Consider a circuit with a few cells and several bulbs like the one in the image below. It would be hard to draw this circuit as it is shown in the picture. The easy thing to do would be to use symbols for components like bulb and cells to draw the circuit.`,   
+    imagePath: '/learning-items/grade7/electric-circuit-without-symbols.jpeg',
+  }, {
+    id: 'remembering-symbol-for-cell',
+    time: 1,
+    kind: 'image',
+    title: 'Symbol for Cell',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In the symbol of the electric cell, the positive end is shown using a long line, and the negative end is shown using a short line.
+
+    This can be hard to remember. The image below will help you remember this detail.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/cell-battery-symbol-gif.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'circuit-diagram-symbol',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Will The Bulb Glow?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![electric wires](/learning-items/grade7/will-it-glow-bulb.jpeg)
+
+     Will the bulb in this circuit diagram light up?    
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. The circuit is closed. That means that the switch is turned ON and therefore electricity will flow through the circuit and the bulb will glow.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. The bulb will glow. The switch is in the ON position and thus the bulb will light up.'
+      }
+    ]
+  }, {
+    id: 'draw-a-circuit-diagram',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw a Circuit Diagram',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Use a pen and paper to draw the following circuit: 
+
+    _A circuit that contains a light bulb, a battery and an OFF switch._ 
+
+    Then take a photo of your drawing from a phone and upload it here.`,
+  }, {
+    id: 'connecting-cells-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Connecting Cells Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![electric wires](/learning-items/grade7/connecting-cells-to-make-battery-wrong.jpeg)
+
+     There are 4 cells in this image that are connected with wires.
+
+     Are the cells connected in the correct way? 
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The cells are not connected properly. For electricity to flow, the positive end of one cell needs to be connected to the negative end of another cell. The two cells on the right side of the picture are not connected properly.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The cells in this image are not connected properly. The negative ends of the two cells on the right side of the picture are connected to each other. To make things work the negative end of one cell needs to be connected to the positive end of another cell.'
+      }
+    ]
+  }, {
+    id: 'circuit-diagram-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Circuit Diagram Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![circuit diagram](/learning-items/grade7/connecting-cells-to-form-battery.jpeg)
+
+    What change would you make in this circuit diagram to make the bulb glow?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student named Sid',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            There are 2 cells that make a battery in this circuit.
+
+            But those cells are not connected properly. The positive ends of the cells are connected together, which is wrong.
+
+            I will turn one of the cells so that the positive end of one cell is connected to the negative end of the other cell. This way electricity will start flowing through the circuit and the bulb will light up.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'heating-effect-of-current',
+    time: 1,
+    kind: 'image',
+    title: 'Heating Effects of Current',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Metals give off heat when current passes through them. Specially a metal named Nichrome, which is a mix of Nickel and Chromium. 
+
+    Nichrome is used in several household appliances, like a toaster.`,   
+    imagePath: '/learning-items/grade7/heating-effect-current-nichrome.jpeg',
+
+  }, {
+    id: 'nichrome-heat',
+    kind: 'video',
+    time: 2,
+    title: 'Heating a Nichrome Wire',
+    instructions: dedent`
+      When we heat a Nichrome wire, it starts to glow and give off heat.
+
+      As we increase the amount of current through the nichrome wire, it gives off even more heat. Watch this video to see that effect.
+
+      While watching this video, do not worry about what the narrator is saying. All he is doing is increasing the amount of current passing through the wire.
+    `,
+    videoId: '2HhLfvstD9E',
+    endTime: 93,
+  }, {
+    id: 'what-is-a-fuse',
+    time: 1,
+    kind: 'image',
+    title: 'What is a Fuse?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here are two examples of what a fuse looks like.
+
+    A fuse is a thin wire in an electrical circuit that melts when too much current flows through it.`,   
+    imagePath: '/learning-items/grade7/what-does-a-fuse-look-like.jpeg',
+
+  }, {
+    id: 'fuse-inside-plug',
+    time: 1,
+    kind: 'image',
+    title: 'Fuse Inside a Plug',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We can find a fuse inside an electrical plug.
+
+    Imagine this plug is connected to a toaster. Further imagine if suddenly there is an excessive amount of current flowing through the wires. This current will certainly damage the toaster.
+
+    The fuse can protect the toaster. 
+
+    This thin wire melts when too much current flows through it. This means that the circuit is no longer complete and current stops flowing through the toaster.`,   
+    imagePath: '/learning-items/grade7/fuse-inside-electric-plug.jpeg',
+
+  }, {
+    id: 'fuse-inside-ac',
+    time: 1,
+    kind: 'image',
+    title: 'Fuse Inside an Air Conditioner',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The electrical circuit of an air conditioner also has a fuse.
+
+    The fuse protects the air conditioner in case a large amount of current starts flowing through the circuit.`,   
+    imagePath: '/learning-items/grade7/fuse-inside-air-conditioner.jpeg',
+
+  }, {
+    id: 'how-does-a-fuse-work',
+    kind: 'video',
+    time: 1,
+    title: 'How Does a Fuse Work?',
+    instructions: dedent`
+      Appliances like heaters, televisions and air conditioners run on electricity. These appliances can catch fire or be destroyed if a large current is passed through them.
+
+      A fuse can solve this problem.
+
+      A fuse is a metal wire that melts when too much current flows through it. So if a fuse is a part of an electrical circuit, and a large amount of current flows through the circuit, then the fuse will melt. 
+
+      Once the fuse melts the circuit is no longer fully connected and thus the flow of current will stop; that will protect the appliance from getting destroyed.
+
+      In this video current is passed through a fuse. The amount of current is then increased. After a point, the fuse becomes red hot and melts.
+    `,
+    videoId: 'QjE1k17MsqM',
+  }, {
+    id: 'electrician-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Electrician Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![electrician](/learning-items/grade7/electrician.jpeg)
+
+    An electrician is carrying some repairs in your house. He wants to replace a fuse with a piece of wire. Would you agree? Give reasons.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student named Prabsimar',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            No, I will not agree with the electrician. 
+
+            The wire used for making a fuse has a low melting point and therefore any random wire cannot be used to replace the fuse. 
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'how-steady-is-your-hand',
+    kind: 'video',
+    time: 2,
+    title: 'Game - How Steady is Your Hand?',
+    instructions: dedent`
+      Use simple materials to make a game that can tell if your hand is steady.
+    `,
+    videoId: 'LdKPos_fgUY',
+    endTime: 164,
+    locked: true,
+  },  ]
 },]
 
 
