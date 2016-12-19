@@ -1,9 +1,15 @@
 module Main exposing (..)
 
 import App exposing (..)
-import Html exposing (program)
+import Navigation exposing (program)
 
 
 main : Program Never Model Msg
 main =
-    program { view = view, init = init, update = update, subscriptions = subscriptions }
+    Navigation.program
+        RouteChange
+        { view = view
+        , init = init
+        , update = update
+        , subscriptions = subscriptions
+        }
