@@ -1,36 +1,20 @@
 module App exposing (..)
 
 import Html exposing (Html, text, div, button, br)
-import Html.Events exposing (onClick)
 import Navigation
 import UrlParser
-
-
-type alias Model =
-    { message : String
-    , location : Maybe Route
-    }
+import Model exposing (..)
+import HomeFrame
 
 
 init : Navigation.Location -> ( Model, Cmd Msg )
 init location =
     ( { message = ""
+      , page = Home
       , location = UrlParser.parsePath route location
       }
     , Cmd.none
     )
-
-
-type Msg
-    = NavigateTo Route
-    | RouteChange Navigation.Location
-    | NoOp
-
-
-type Route
-    = Home
-    | Potato
-    | Temp String
 
 
 getRouteUrl : Route -> String
@@ -75,15 +59,28 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ text model.message
-        , br [] []
-        , button [ onClick (NavigateTo Potato) ] [ text "go to potato town!" ]
-        , br [] []
-        , button [ onClick (NavigateTo Home) ] [ text "go back home!" ]
-        , br [] []
-        , button [ onClick (NavigateTo (Temp "TODO")) ] [ text "TODO: IMPLEMENT ME!" ]
-        ]
+    case model.page of
+        Home ->
+            HomeFrame.view model
+
+        Potato ->
+            div [] []
+
+        Temp whocares ->
+            div [] []
+
+
+
+-- div []
+--     [ Html.text model.message
+--     , br [] []
+--     , button [ onClick (NavigateTo Potato) ] [ Html.text "go to potato town!" ]
+--     , br [] []
+--     , button [ onClick (NavigateTo Home) ] [ Html.text "go back home!" ]
+--     , br [] []
+--     , button [ onClick (NavigateTo (Temp "TODO")) ] [ Html.text "TODO: IMPLEMENT ME!" ]
+--     ]
+--
 
 
 subscriptions : Model -> Sub Msg
