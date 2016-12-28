@@ -4253,6 +4253,435 @@ export const chapter7Data = [{
 
   },]
 }, {
+  id: ' 5',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter5--thumbnail.png',
+  title: 'Acids, Bases and Salts',
+  items: [{
+    id: 'chapter-3-video',
+    kind: 'video',
+    time: 3,
+    title: 'Using a Tabla to Learn About Acids & Bases',
+    instructions: dedent`
+      In this video, we will use the Tabla to learn about acids and bases.
+
+      Yes, you read that correctly. 
+
+      We will see that acids are sour and bases are bitter. We will also see how acids and bases change the colour of litmus paper. We will do all of this while listening to the sounds made by the Tabla.
+    `,
+    videoId: '1Iy2Yg92Sa4',
+  }, {
+    id: 'acid-litmus-paper-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Litmus Paper on Acids',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![nitric acid](/learning-items/grade7/nitric-acid-3.jpeg)
+      
+      Nitric Acid turns blue litmus paper red.
+
+      True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Acids turn blue litmus paper red. And Nitric Acid is an acid.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct.'
+      }
+    ]
+  }, {
+    id: 'bases-litmus-paper-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Litmus Paper on Bases',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![soap solution base](/learning-items/grade7/soap-solution-2.jpeg)
+      
+      Soap solution is a base, which turns red litmus paper blue.
+
+      True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Bases turn red litmus paper blue. And soap solution is a base.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct.'
+      }
+    ]
+  }, {
+    id: 'indicators',
+    time: 1,
+    kind: 'image',
+    title: 'Indicators',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    An indicator is a substance used to test if something is an acid or base.
+ 
+    Some examples are: litmus paper, turmeric (or haldi), and china rose (or gudhal).`,
+    
+    imagePath: '/learning-items/grade7/indicators-litmus-paper-turmeric-china-rose.jpeg',
+
+  }, {
+    id: 'lichens',
+    time: 1,
+    kind: 'image',
+    title: 'Where Does Litmus Paper Come From?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The image below is of Lichen.
+
+    Lichen contains a dye (or colour) called Litmus. 
+
+    Litmus can be extracted from Lichen and is made available as litmus paper or litmus solution.`,
+    
+    imagePath: '/learning-items/grade7/lichen-litmus.jpeg',
+
+  }, {
+    id: 'litmus-paper-test',
+    kind: 'video',
+    time: 2,
+    title: 'Detecting Acids and Bases with Litmus Paper',
+    instructions: dedent`
+      Acids turn _blue_ litmus paper red. Also, acids do not change the colour of _red_ litmus paper. 
+
+      Bases turn _red_ litmus paper blue. And bases do not change the colour of _blue_ litmus paper.
+      
+      Watch this video to see how.
+      `,
+    videoId: '6DCBWK_Hg5w',
+    startTime: 34,
+  }, {
+    id: 'acidic-or-basic',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Acidic or Basic?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![window cleaner ammonia base](/learning-items/grade7/window-cleaner.jpeg)
+      
+      Ammonia is found in many window cleaners. It turns red litmus blue. 
+
+      What is its nature?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Acidic'
+      },
+      {
+        id: 'opt2',
+        text: 'Basic'
+      },
+      {
+        id: 'opt3',
+        text: 'Neutral'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'No, this is not correct. Acids do not change the colour of red litmus paper.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Bases turn red litmus paper blue.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'No, this is not correct.'
+      }
+    ]
+  }, {
+    id: 'lemon-acidic-video',
+    kind: 'video',
+    time: 1,
+    title: 'Lemons are Acidic',
+    instructions: dedent`
+      Lemons are acidic. They turn blue litmus paper red.
+    `,
+    videoId: '1F7LWNW4ae4',
+  }, {
+    id: 'acidic-basic-neutral',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Acidic, Basic or Neutral?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![blue litmus paper no colour change](/learning-items/grade7/blue-litmus-stays-blue.jpeg)
+
+    Blue litmus paper was dipped in a solution. It remains blue, and does not change colour. 
+
+    What is the nature of the solution? Please explain.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            I know the solution is not acid. 
+
+            Because when blue litmus paper is dipped in an acid, it changes colour to red.
+
+            That means the solution could either be basic or neutral.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'turmeric',
+    time: 1,
+    kind: 'image',
+    title: 'What is Turmeric?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Turmeric means Haldi in Hindi; it is used in cooking.`,
+    
+    imagePath: '/learning-items/grade7/turmeric-haldi.jpeg',
+
+  }, {
+    id: 'turmeric-as-an-indicator',
+    kind: 'video',
+    time: 1,
+    title: 'Turmeric as an Indicator',
+    instructions: dedent`
+      This video shows how Turmeric solution can be used to identify bases and acids.
+
+      If we add turmeric solution to bases, their colour changes to red.
+
+      If we add turmeric solution to acids or neutral substances, their colour does not change.
+    `,
+    videoId: 'Olezbt9cxfo',
+    startTime: 31,
+    endTime: 83,
+  }, {
+    id: 'turmeric-a-way-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'Turmeric: A Way To Remember',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The following sentence is hard to remember:
+    
+    _If we add turmeric solution to bases, their colour changes to red._
+
+    The GIF below can help us remember that turmeric turns bases to red.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/turmeric-turns-base-red-gif.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'china-rose-as-an-indicator',
+    kind: 'video',
+    time: 2,
+    title: 'China Rose as an Indicator',
+    instructions: dedent`
+      China Rose is a flower; another name of China Rose is Hibiscus or Gudhal (in Hindi).
+
+      We can make China Rose solution (or Hibiscus solution) by soaking the petals of this flower in hot water. 
+
+      If we add china rose solution to bases, their colour changes to green.
+
+      If we add china rose solution to acids, their colour changes to dark pink.
+    `,
+    videoId: 'vHAhZ5iUQXY',
+    startTime: 80,
+  }, {
+    id: 'china-rose-a-way-to-remember',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'China Rose: A Way To Remember',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which country does this flag represent?
+
+      ![china rose gudhal flag](/learning-items/grade7/china-rose-gurhal-flag.jpeg)      
+`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'China'
+      },
+      {
+        id: 'opt2',
+        text: 'India'
+      },
+      {
+        id: 'opt3',
+        text: 'No Country'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'No, this is not correct. This flag does not represent China.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. This flag does not represent India.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          __Correct__. This flag represents no country, but instead is a way to remember how China Rose is used as an indicator.
+
+          Acids turn dark pink if we add china rose solution to them.
+
+          Bases turn green if we add china rose solution to them.
+
+          ![china rose indicator remember](/learning-items/grade7/china-rose-gurhal-flag-solution.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'neutralisation',
+    kind: 'video',
+    time: 1,
+    title: 'Neutralisation',
+    instructions: dedent`
+      Watch this video and notice at __1 minute 24 seconds__ when lemon water (which is an acid) is added to soap solution (which is a base). 
+
+      After adding a few drops of lemon water, you will notice that the colour of soap solution is no longer red. 
+
+      This happens because as lemon water, an acid, is added to soap water, a base, the solution becomes neither acidic nor basic. At that point the solution is neutral.
+
+      When an acid and base are mixed, they neutralise or cancel out the effect of each other. This reaction is called neutralisation.      
+    `,
+    videoId: 'Olezbt9cxfo',
+    startTime: 31,
+  }, {
+    id: 'neutralisation-an-example',
+    kind: 'video',
+    time: 1,
+    title: 'Neutralisation: An Example',
+    instructions: dedent`
+      Hydrochloric Acid (HCl) is found in toilet cleaners; it is an acid.
+
+      Sodium Hydroxide (NaOH) is found in soaps; it is a base.
+
+      When we mix HCl and NaOH, neutralisation occurs. This reaction produces salt, water and heat.   
+    `,
+    videoId: '-eN0Tt2Gu0I',
+  }, {
+    id: 'turmeric-quiz',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Acidic, Basic or Neutral?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![turmeric](/learning-items/grade7/turmeric.jpeg)
+
+    Three liquids are given to you. 
+
+    One is Hydrochloric Acid (HCl), another is Sodium Hydroxide (NaOH) and the third is sugar solution. But these liquids are not labelled, so you do not know which is which. 
+
+    You only have turmeric indicator. How will you identify the 3 liquids?
+`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            I will add the the turmeric solution to each of the 3 liquids.
+
+            I know that turmeric will turn a base red. So the liquid that turns red is Sodium Hydroxide.
+
+            Then we are left with HCl and sugar solution, but we still do not know which is which.
+
+            So I will add Sodium Hydroxide (NaOH) to both solutions. The one where neutralisation reaction occurs to produce heat, salt and water is an acid i.e. HCl.
+
+            The remaining solution is sugar solution.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'ant-bite',
+    time: 1,
+    kind: 'image',
+    title: 'Ant Bite',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When ants bite, they inject formic acid into the skin.
+
+    To treat it we apply baking soda on the skin, which is a base.
+
+    This is an example of neutralisation in real life.`,
+    imagePath: '/learning-items/grade7/ants-formic-acid-baking-soda-2.jpeg',
+  }, {
+    id: 'antacid',
+    time: 1,
+    kind: 'image',
+    title: 'Antacid',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+   The first part of the word _antacid_ reminds me of other words like _anticlockwise_ and _antibacterial_.
+
+   The word _anti_ is used in front of other words to reverse their meaning.
+
+   Thus, when I think of the word antacid, I think of anti-acid, or a base.
+
+   Our stomach contains an acid called HCl. Excess of that acid can cause stomach problems. To reverse or neutralise the effect of too much acid, we drink a base in the form of an antacid like Eno.`,
+  imagePath: '/learning-items/grade7/antacid-base.jpeg',
+  }, {
+    id: 'tables-from-chapter',
+    time: 10,
+    kind: 'image',
+    title: 'Answers to Table 5.2, 5.3 and 5.5',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![table 5.2 partial](/learning-items/grade7/table-5-2-litmus-test-partial.jpeg)
+    Click on the links below to see answers from Table 5.2, 5.3 and 5.5 in this chapter. 
+
+    We strongly recommend that you perform the activities in these tables and then check here to confirm your answers.
+
+    [Table 5.2](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-2-litmus-test.jpeg) — Effect on red and blue litmus paper 
+
+    [Table 5.3](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-3-turmeric-test.jpeg) — Turmeric Test 
+
+    [Table 5.5](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-5-turmeric-china-rose-litmus-test.jpeg) — Effect on litmus paper, turmeric and china rose solution 
+    `,
+  imagePath: '/learning-items/white-space-2.jpeg',
+  locked: true,
+  }, ]
+}, {
   id: ' 11',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
   title: 'Transportation in Animals and Plants',
@@ -5044,7 +5473,7 @@ export const chapter7Data = [{
        - canopy
        - forests and oxygen
     `,
-    videoId: 'F4ApOc4p-CE',
+    videoId: '1_axgwGfCHw',
   }, {
     id: 'humus-quiz',
     kind: 'multipleChoiceResponse',
