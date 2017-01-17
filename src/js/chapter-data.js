@@ -4682,6 +4682,449 @@ export const chapter7Data = [{
   locked: true,
   }, ]
 }, {
+  id: ' 6',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter6-thumbnail-3.jpeg',
+  title: 'Physical and Chemical Changes',
+  items: [{
+    id: 'matchstick-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Physical or Chemical Change',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![burning match stick](/learning-items/grade7/quiz-match-physical-chemical-change.jpg)
+      
+      Is burning a matchstick a physical or a chemical change?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Physical Change'
+      },
+      {
+        id: 'opt2',
+        text: 'Chemical Change'
+      },
+      {
+        id: 'opt3',
+        text: 'I Do Not Know'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. But that is ok, since we have not taught you anything about Physical or Chemical changes yet. We will learn that next.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Burning a matchstick is a chemical change. In chemical changes new substances are produced. When a matchstick burns, heat and light are produced.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'That is completely ok, since we have not taught you anything about Physical or Chemical changes yet. We will learn that next.'
+      }
+    ]
+  }, {
+    id: 'log-of-wood-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![cutting log of wood](/learning-items/grade7/cutting-log-wood.jpeg)
+      
+      Cutting a log of wood into pieces is a chemical change. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Cutting wood only produces smaller pieces of wood. Since no new substance is produced, cutting a log of wood into smaller pieces is a Physical Change.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Cutting a log of wood into pieces is NOT a chemical change. Cutting wood only produces smaller pieces of wood. Since no new substance is produced, cutting a log of wood into smaller pieces is a Physical Change.'
+      }
+    ]
+  }, {
+    id: 'melting-wax-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Physical or Chemical Change',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![melting candle wax](/learning-items/grade7/melting-candle-wax.jpeg)
+      
+      Is __melting__ of wax a physical or chemical change?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Physical Change'
+      },
+      {
+        id: 'opt2',
+        text: 'Chemical Change'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. When wax melts it turns from a solid to a liquid. Then after some time it cools to become a solid again. This time, however, the wax has a different shape. Since no new substance is produced in this process, __melting__ of wax is a physical change. __Burning__ of wax to produce heat and light, however, is a chemical change.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. When wax __melts__, we turn wax from a solid to a liquid. That is a physical change. But when wax __burns__, we turn wax into heat and light. That is a chemical change.'
+      }
+    ]
+  }, {
+    id: 'leaves-to-manure-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![formation of manure from leaves](/learning-items/grade7/leaves-to-manure.jpeg)
+      
+      Formation of manure from leaves is a physical change. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Formation of manure from leaves is NOT a physical change. When leaves decompose, a new substance called manure is produced. Thus this process is a chemical change.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Formation of manure from leaves is a chemical change. As you know, a chemical change is one where a new substance is produced. When leaves decompose, manure is produced, which is a new substance.'
+      }
+    ]
+  }, {
+    id: 'dissolving-sugar-in-water-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Physical or Chemical Change',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![dissolving sugar in water](/learning-items/grade7/mixing-sugar-water.jpeg)
+      
+      Is dissolving sugar in water a physical or chemical change?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Physical Change'
+      },
+      {
+        id: 'opt2',
+        text: 'Chemical Change'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. When we dissolve sugar in water, the sugar molecules remain intact and are not changed. Thus, this is a physical change. On the other hand, when we dissolve salt in water, the salt molecules separate causing a chemical reaction.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Although I admit that this quiz can be tough to understand. When we dissolve sugar in water, the sugar molecules remain intact and are not changed. Since no new substance is formed, dissolving sugar in water is a physical change. On the other hand, when we dissolve salt in water, the salt molecules separate to create something new; thus mixing salt in water is a chemical reaction.'
+      }
+    ]
+  }, {
+    id: 'iron-rust-same-substance-true-false',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Iron and Rust are the same substance. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Iron and rust are __not__ the same substance. Rust is produced when iron and oxygen react in the presence of water. The chemical name of rust is Iron Oxide.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Iron and rust are __not__ the same substance. The chemical name of rust is Iron Oxide. To put it simply, rust is produced when iron and oxygen react in the presence of water. '
+      }
+    ]
+  }, {
+    id: 'condensation-steam-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![condensation of steam](/learning-items/grade7/condensation-of-steam.jpeg)
+      
+      Condensation of steam is not a chemical change. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Condensation of steam is a physical change. As we mentioned earlier in the chapter, a change of state (for example, from gas to liquid) is called a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Condensation of steam is a physical change. When the state of an object changes (for example, from gas to liquid) we call that change a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+      }
+    ]
+  }, {
+    id: 'lpg-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Physical or Chemical Change',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![lpg gas cylinder](/learning-items/grade7/lpg-cylinder-2.jpeg)
+      
+      The gas we use in the kitchen is called Liquified Petroleum Gas (LPG). 
+
+      In the cylinder it exists as a liquid. When it comes out from the cylinder it becomes a gas (Change A), and then it burns (Change B).
+
+      The following statements pertain to these changes. Choose the correct one.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Change A is a chemical change'
+      },
+      {
+        id: 'opt2',
+        text: 'Change B is a chemical change'
+      },
+      {
+        id: 'opt3',
+        text: 'Both Change A and B are chemical changes'
+      },
+      {
+        id: 'opt4',
+        text: 'Neither A nor B are chemical changes'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Change A is liquid turning into gas. That is a change of state, which is a physical change.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Change B is burning of gas to produce heat and light. This change creates a substance that did not exist previously and thus is a chemical change.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Change A is liquid turning into gas. That is a physical change.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Change B is burning of gas to produce heat and light. This change creates a substance that did not exist previously and thus is a chemical change.'
+      }
+    ]
+  }, {
+    id: 'anaerobic-bacteria-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Physical or Chemical Change',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+      Anaerobic bacteria digest animal waste and produce biogas (Change A). 
+
+      The biogas is then burnt as fuel (Change B). 
+
+      The following statements pertain to these changes. Choose the correct one.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Change A is a chemical change'
+      },
+      {
+        id: 'opt2',
+        text: 'Change B is a chemical change'
+      },
+      {
+        id: 'opt3',
+        text: 'Both Change A and B are chemical changes'
+      },
+      {
+        id: 'opt4',
+        text: 'Neither A nor B are chemical changes'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Change A is using animal waste to produce biogas. This change creates a substance that did not exist previously and thus is a chemical change.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Change B involves burning fuel to produce heat and light. This change creates a substance that did not exist previously and thus is a chemical change.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Both Change A and Change B produce substances that did not exist previously, and thus both Change A and Change B are chemical changes.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Both Change A and Change B produce substances that did not exist previously, and thus both are chemical changes.'
+      }
+    ]
+  }, {
+    id: 'burning-candle-physical-chemical-changes',
+    kind: 'textResponse',
+    time: 5,
+    short: false,
+    title: 'Physical and Chemical Changes',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![burning candle](/learning-items/grade7/candle-burning.jpeg)
+
+    When a candle burns, both physical and chemical changes take place. Identify these changes. 
+
+    Also, give another example of a familiar process in which both the chemical and physical changes take place.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            I can think of several changes that happen when a candle burns. 
+
+            When the wax melts, it just changes from solid to liquid, which is a physical change.
+
+            When the wax burns, it is used to produce heat and light. Since a new substance is produced, it is a chemical change.
+
+            When we cook food we see both physical and chemical changes. For example, when we cook vegetables that is a chemical change; and when we boil water that is a physical change. Also, when we roll the dough to make chapatis, that is a physical change. And finally when we put those chapatis on a tava or pan to bake them, that is a chemical change. 
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'rusting-iron-objects-coastal-areas',
+    kind: 'textResponse',
+    time: 5,
+    short: false,
+    title: 'Rusting in Coastal Areas',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![rusting ship in coastal areas](/learning-items/grade7/rust-ship-near-beach.jpeg)
+
+    Explain why rusting of iron objects is faster in coastal areas than in deserts. 
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Oxygen and water are needed for iron objects to rust.
+
+            Oxygen is present everywhere.
+
+            In coastal areas, air has more moisture (or water) because of the nearby sea. The water from the sea evaporates and is present as moisture in the air. The air in deserts, however, is dry because there is not water body close by.
+
+            Since more moisture is available in the air in coastal areas, iron objects like ships and iron doors rust faster.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'baking-soda-lemon-juice',
+    kind: 'textResponse',
+    time: 3,
+    short: false,
+    locked: true,
+    title: 'Final Quiz with Video',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![baking soda and lemon juice produce carbon dioxide](/learning-items/grade7/baking-soda-lemon-juice.jpeg)
+
+    When baking soda is mixed with lemon juice, bubbles are formed with the evolution of a gas. You can see a [video of that experiment here.](https://www.youtube.com/watch?v=o71ezx5fPZY)
+
+    What type of change is it? Explain. 
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            I liked the video link in this quiz. 
+
+            When baking soda is mixed with lemon juice, bubbles are produced. These are due to a gas called carbon dioxide.
+
+            Since a new substance is produced here, this change is a chemical change.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'burning-magnesium-strip',
+    kind: 'video',
+    time: 1,
+    title: 'Burning a Magnesium Strip',
+    instructions: dedent`
+      Here you will see a teacher burn a magnesium strip. By the way, magnesium strips or ribbons are used to ignite fireworks.
+
+      When the magnesium strip burns, it produces a bright white light, and a powdery ash. The ash is called magnesium oxide.
+
+      Burning of a magnesium ribbon is a chemical change because this reaction produces two new substances —  ash and light.
+    `,
+    videoId: 'dH6p5YwEME4',
+    startTime: 5,
+  }, ]
+}, {
   id: ' 11',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
   title: 'Transportation in Animals and Plants',
@@ -5459,6 +5902,189 @@ export const chapter7Data = [{
     locked: true
   }, ]
 }, {
+  id: ' 15',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter15-thumbnail.jpg',
+  title: 'Light',
+  items: [{
+    id: 'light-straight-line-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![light bulb straight line](/learning-items/grade7/light-travels-in-straight-line2.jpg)
+
+     Light travels in ________ lines.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'zig-zag'
+      },
+      {
+        id: 'opt2',
+        text: 'curved'
+      },
+      {
+        id: 'opt3',
+        text: 'straight'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Light travels in straight lines. Look at _figure 15.2 on page 174_ of your science book to learn more.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. '
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Light travels in straight lines. Look at _figure 15.2 on page 174_ of your science book to learn more.'
+      }
+    ]
+  }, {
+    id: 'reflection-light-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz on Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![polished surface mirror light change direction](/learning-items/grade7/polished-surface-mirror-light-change-direction.jpeg)
+
+     Any polished or shiny surface can act like a mirror.
+
+     Mirror changes the direction of light that falls on it. This change in direction of light by a mirror is called ________ of light.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'dissection'
+      },
+      {
+        id: 'opt2',
+        text: 'reflection'
+      },
+      {
+        id: 'opt3',
+        text: 'rejection'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The word dissection is generally used when doctors dissect a body in an operation room.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The change in direction of light caused by a mirror is called reflection.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Rejection has nothing to do with light.'
+      }
+    ]
+  }, {
+    id: 'image-object-plane-mirror',
+    time: 1,
+    kind: 'image',
+    title: 'Image and Object',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    If a cat is in front of a mirror, then it appears that a similar cat is also behind the mirror.
+
+    The cat which appears behind the mirror is called an __image__.
+
+    The cat itself is called the __object__. `,   
+    imagePath: '/learning-items/grade7/image-object-plane-mirror.jpg',
+
+  }, {
+    id: 'plane-mirror-image',
+    kind: 'video',
+    time: 3,
+    title: 'Image Formed By Plane Mirrors',
+    instructions: dedent`
+      Images formed by plane mirrors (or flat mirrors) are __erect__. Erect means upright. When you stand in front of a mirror, your image in the mirror shows your head placed above your body, and not under it. This means that your image in the mirror is erect (an not inverted)..
+
+      Images formed by plane mirrors (or flat mirrors) are __the same size as the object__. The image is not bigger or smaller than the object.
+
+      Images fomed by plane mirrors (or flat mirrors) are __the same distance behind the mirror as the object is in front of them__. You will see an experiment in the video that will demonstrate this fact.
+
+      Images fomed by plane mirrors (or flat mirrors) are __virtual__. That means that even if we tried, we could not get the image from the mirror on to a screen placed either in front or behind the mirror.
+    `,
+    videoId: 'qWT92yaGy2k',
+    endTime: 217,
+  }, {
+    id: 'plane-mirror-front-back-inversion',
+    kind: 'video',
+    time: 3,
+    title: 'Right is Left and Left is Right',
+    instructions: dedent`
+      In an image formed by a mirror, the left side of the object is seen on the right side in the image, and right side of the object appears to be on the left side in the image.
+
+      You can see this phenomenon used in Ambulances. Watch this video to learn more.
+    `,
+    videoId: 'qWT92yaGy2k',
+    startTime: 217,
+  }, {
+    id: 'concave-mirror-a-way-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'Concave Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A concave mirror is a spherical mirror with an inward buldge.
+
+    A way to remember this is to think of a cave, whose mouth also has an inward buldge.
+
+    Thus convex mirror is a spherical mirror with an outward buldge.`,   
+    imagePath: '/learning-items/grade7/concave-mirror-inward-buldge.jpg',
+
+  }, {
+    id: 'convex-concave-converging-diverging',
+    time: 1,
+    kind: 'image',
+    title: 'Converging and Diverging Lenses',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A convex lens converges (bends inward) the light generally falling on it. Therefore, it is called a __converging lens__. This lens is shown on the top of the gif.
+
+    On the other hand, a concave lens diverges (bends outward) the light and is called a __diverging lens__. This lens is shown on the bottom of the gif.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/convex-concave-converging-diverging-lens.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'prism-sunlight-seven-colours',
+    time: 1,
+    kind: 'image',
+    title: 'Coloured Sunlight',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Sunlight consists of 7 colours. These are: Violet, Indigo, Blue, Green, Yellow, Orange, Red. We can remember them with the acronym VIBGYOR.
+
+    These colours together create white light. 
+
+    When white light passes through a prism, we can see all of the 7 component colours.`,   
+    imagePath: '/learning-items/grade7/colour-spectrum-white-light.jpg',
+
+  }, {
+    id: 'how-do-we-see-objects',
+    time: 1,
+    kind: 'image',
+    title: 'How Do We See Objects?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Ok, so we know that white light comprises of 7 colours.
+
+    A leaf looks green because when white light falls on it, it absorbs all colours, but reflects green. Thus our eye perceives the leaf as green.`,   
+    imagePath: '/learning-items/grade7/how-do-we-see-objects.jpg',
+
+  },  ]
+}, {
   id: ' 17',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter17--thumbnail.jpg',
   title: 'Forests: Our Lifeline',
@@ -5950,7 +6576,7 @@ export const chapter7Data = [{
        - Will a heavier pendulum swing faster than a lighter pendulum?
        - Other than clocks, where are pendulums used?
     `,
-    videoId: 'F4ApOc4p-CE',
+    videoId: 'ivaWog3Vayk',
   }, {
     id: 'pendulum-quiz',
     kind: 'multipleChoiceResponse',
