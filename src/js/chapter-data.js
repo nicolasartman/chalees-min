@@ -4717,13 +4717,63 @@ export const chapter7Data = [{
       },
       {
         answerSet: ['opt2'],
-        response: '__Correct__. Burning a matchstick is a chemical change. In chemical changes new substances are produced. When a matchstick burns, heat and light are produced.'
+        response: '__Correct__. Burning a matchstick is a chemical change. In a chemical change, new substances are produced. In this case, when a matchstick burns, new substances like heat and light are produced.'
       },
       {
         answerSet: ['opt3'],
         response: 'That is completely ok, since we have not taught you anything about Physical or Chemical changes yet. We will learn that next.'
       }
     ]
+  }, {
+    id: 'physical-changes',
+    time: 1,
+    kind: 'image',
+    title: 'What are Physical Changes?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Any change to the _shape, size, colour or state_ of a substance is called a physical change.
+
+    __Changing Shape:__ Cutting a piece of paper is a physical change.
+
+    __Changing Size:__ Crushing chalk into chalk powder is a physical change.
+
+    __Changing Colour:__ Heating an iron rod until it is red hot is a physical change.
+
+    __Changing State:__ Boiling water is a physical change.
+
+    No new substances are produced as a result of this change. 
+
+    For example, when we cut paper, we are still left with small bits of paper. We have not produced a new substance in this process.`,
+  imagePath: '/learning-items/grade7/physical-change4.jpg',
+  }, {
+    id: 'chemical-changes',
+    time: 1,
+    kind: 'image',
+    title: 'What are Chemical Changes?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Any change where new substances are formed is a chemical change.
+
+    Burning a matchstick is a chemical change, because new substances like heat and light are produced as a result of lighting a match.
+
+    Rusting of iron is a chemical change, because rust, which is a new substance, is produced.
+
+    Also, converting a plant found in the rainforest to cancer medicine requires several chemical changes.`,
+  imagePath: '/learning-items/grade7/chemical-change2.jpg',
+  }, {
+    id: 'burning-magnesium-strip',
+    kind: 'video',
+    time: 1,
+    title: 'Burning a Magnesium Strip',
+    instructions: dedent`
+      Here you will see a teacher burn a magnesium strip. By the way, magnesium strips or ribbons are used to ignite fireworks.
+
+      When the magnesium strip burns, it produces a bright white light, and powdery ash. The ash is called magnesium oxide.
+
+      Burning of the magnesium ribbon is a __chemical change__ because this reaction produces two new substances —  ash and light.
+    `,
+    videoId: 'dH6p5YwEME4',
+    startTime: 5,
   }, {
     id: 'log-of-wood-physical-or-chemical',
     kind: 'multipleChoiceResponse',
@@ -4787,6 +4837,21 @@ export const chapter7Data = [{
       }
     ]
   }, {
+    id: 'activity-6-7',
+    kind: 'video',
+    time: 2,
+    title: 'Video of Activity 6.7',
+    instructions: dedent`
+      Ok, feel free to watch this video with __no sound__. Do not worry if you do not understand what the teacher in this video is saying. Focus on what he is doing.
+
+      The teacher in this video has a blue solution (copper sulphate). He drops an iron nail into that solution. The nail gets coated with a brown film of copper. If he keeps the nail in the solution for 30 minutes, the blue solution changes to green (iron sulphate).
+
+      The point of this video is that _Copper Sulphate (blue) and Iron_, react to make _Copper and Iron Sulphate (green)_.
+
+      Since two new products are formed here, this is a __chemical change__.
+    `,
+    videoId: 'KmhD8BmEFIo',
+  }, {
     id: 'leaves-to-manure-physical-or-chemical',
     kind: 'multipleChoiceResponse',
     time: 1,
@@ -4810,7 +4875,7 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: 'This is not correct. Formation of manure from leaves is NOT a physical change. When leaves decompose, a new substance called manure is produced. Thus this process is a chemical change.'
+        response: 'This is not correct. Formation of manure from leaves is NOT a physical change. When leaves decompose, a new substance called manure is produced. Thus, this process is a chemical change.'
       },
       {
         answerSet: ['opt2'],
@@ -4849,6 +4914,50 @@ export const chapter7Data = [{
       }
     ]
   }, {
+    id: 'condensation-steam-physical-or-chemical',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![condensation of steam](/learning-items/grade7/condensation-of-steam.jpeg)
+      
+      Condensation of steam is not a chemical change. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Condensation of steam is a physical change. As we mentioned earlier in the chapter, a change of state (for example, from gas to liquid) is called a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. Condensation of steam is a physical change. When the state of an object changes (for example, from gas to liquid) we call that change a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+      }
+    ]
+  }, {
+    id: 'rusting-of-iron',
+    time: 1,
+    kind: 'image',
+    title: 'Rusting of Iron',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Iron is used in bridges, cars, boats and many other devices found in our homes.
+
+    Over time water and oxygen can react with iron to produce iron oxide, which is otherwise known as rust. Since a new substance is produced in this reaction (rust from iron), this is a chemical change.
+
+    And oh, rust can destroy iron and reduce its strength`,
+  imagePath: '/learning-items/grade7/rusting-of-iron2.jpg',
+  }, {
     id: 'iron-rust-same-substance-true-false',
     kind: 'multipleChoiceResponse',
     time: 1,
@@ -4878,15 +4987,63 @@ export const chapter7Data = [{
       }
     ]
   }, {
-    id: 'condensation-steam-physical-or-chemical',
+    id: 'rusting-iron-objects-coastal-areas',
+    kind: 'textResponse',
+    time: 5,
+    short: false,
+    title: 'Rusting in Coastal Areas',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![rusting ship in coastal areas](/learning-items/grade7/rust-ship-near-beach.jpeg)
+
+    Explain why rusting of iron objects is faster in coastal areas than in deserts. 
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Oxygen and water are needed for iron objects to rust.
+
+            Oxygen is present everywhere.
+
+            In coastal areas, air has more moisture (or water) because of the nearby sea. 
+
+            The water from the sea evaporates and is present as moisture in the air. The air in deserts, however, is dry because there is no water body close by.
+
+            Since more moisture is available in the air in coastal areas, iron objects like ships and iron doors rust faster.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'galvanisation',
+    time: 1,
+    kind: 'image',
+    title: 'Galvanisation',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Rust can destroy iron.
+
+    One way to protect iron is through a process called galvanisation.
+
+    The process of depositing a layer of zinc on iron is called galvanisation.`,
+  imagePath: '/learning-items/grade7/galvanisation4.jpg',
+  }, {
+    id: 'iron-pipes-galvanisation',
     kind: 'multipleChoiceResponse',
     time: 1,
     title: 'True or False',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      ![condensation of steam](/learning-items/grade7/condensation-of-steam.jpeg)
+      ![iron pipes galvanisation](/learning-items/grade7/iron-pipes-galvanised2.jpeg)
       
-      Condensation of steam is not a chemical change. True or False?`,
+      Iron pipes coated with zinc do not get rusted easily. True or False?`,
     maxSelected: 1,
     choices: [
       {
@@ -4901,11 +5058,11 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: '__Correct__. Condensation of steam is a physical change. As we mentioned earlier in the chapter, a change of state (for example, from gas to liquid) is called a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+        response: '__Correct__. A coating of zinc protects iron from rusting. This process of coating zinc on iron is called Galvanisation.'
       },
       {
         answerSet: ['opt2'],
-        response: 'This is incorrect. Condensation of steam is a physical change. When the state of an object changes (for example, from gas to liquid) we call that change a physical change. Condensation of steam is a change of state from gas (steam) to liquid (water).'
+        response: 'This is incorrect. A coating of zinc prevents rusting.'
       }
     ]
   }, {
@@ -4948,7 +5105,7 @@ export const chapter7Data = [{
       },
       {
         answerSet: ['opt2'],
-        response: '__Correct__. Change B is burning of gas to produce heat and light. This change creates a substance that did not exist previously and thus is a chemical change.'
+        response: '__Correct__. Change B is burning of gas to produce heat and light. This change creates a new substance and thus is a chemical change.'
       },
       {
         answerSet: ['opt3'],
@@ -5034,47 +5191,32 @@ export const chapter7Data = [{
 
             When the wax melts, it just changes from solid to liquid, which is a physical change.
 
-            When the wax burns, it is used to produce heat and light. Since a new substance is produced, it is a chemical change.
+            When the wax burns, it is used to produce heat and light. Since a new substance is produced in this process, it is a chemical change.
 
-            When we cook food we see both physical and chemical changes. For example, when we cook vegetables that is a chemical change; and when we boil water that is a physical change. Also, when we roll the dough to make chapatis, that is a physical change. And finally when we put those chapatis on a tava or pan to bake them, that is a chemical change. 
+            Finally, when we cook food we see both physical and chemical changes. For example, when we cook vegetables that is a chemical change; and when we boil water that is a physical change. Also, when we roll the dough to make chapatis, that is a physical change. And finally when we put those chapatis on a tava or pan to bake them, that is a chemical change. 
             `
           }
         ]
       }
     }
   }, {
-    id: 'rusting-iron-objects-coastal-areas',
-    kind: 'textResponse',
-    time: 5,
-    short: false,
-    title: 'Rusting in Coastal Areas',
-    presenterImagePath: '/instructors/kunal2.jpg',
+    id: 'crystallisation',
+    kind: 'video',
+    time: 1,
+    title: 'Crystallisation',
     instructions: dedent`
-    ![rusting ship in coastal areas](/learning-items/grade7/rust-ship-near-beach.jpeg)
+      In this video, a teacher adds a blue powder (copper sulphate powder) into a blue solution (copper sulphate solution). He keeps adding the powder until the powder does not dissolve in the solution any more.
 
-    Explain why rusting of iron objects is faster in coastal areas than in deserts. 
+      He then suspends a thread in that solution. After a few days, he takes out large crystals of copper sulphate from the solution.
+
+      The process of obtaining large crystals of pure substances from their solution is called Cyrstallisation.
+
+      Now, if you are confused and wondering why we are studying this stuff, I must say that I am confused too. I actually am not sure why the authors of the science book put cyrstallisation into this chapter.
     `,
-    hacks: {
-      afterBody: {
-        preface: 'Here is a response from another student who answered this quiz:',
-        show: 'locked',
-        fakePeerResponses: [
-          {
-            studentName: 'Sid',
-            imagePath: '/fake-responses/sid.png',
-            response: dedent`
-            Oxygen and water are needed for iron objects to rust.
+    videoId: 'QdwKhbtzsug',
+    startTime: 21,
+    endTime: 86,
 
-            Oxygen is present everywhere.
-
-            In coastal areas, air has more moisture (or water) because of the nearby sea. The water from the sea evaporates and is present as moisture in the air. The air in deserts, however, is dry because there is not water body close by.
-
-            Since more moisture is available in the air in coastal areas, iron objects like ships and iron doors rust faster.
-            `
-          }
-        ]
-      }
-    }
   }, {
     id: 'baking-soda-lemon-juice',
     kind: 'textResponse',
@@ -5088,7 +5230,7 @@ export const chapter7Data = [{
 
     When baking soda is mixed with lemon juice, bubbles are formed with the evolution of a gas. You can see a [video of that experiment here.](https://www.youtube.com/watch?v=o71ezx5fPZY)
 
-    What type of change is it? Explain. 
+    What type of change is this? Explain. 
     `,
     hacks: {
       afterBody: {
@@ -5109,20 +5251,6 @@ export const chapter7Data = [{
         ]
       }
     }
-  }, {
-    id: 'burning-magnesium-strip',
-    kind: 'video',
-    time: 1,
-    title: 'Burning a Magnesium Strip',
-    instructions: dedent`
-      Here you will see a teacher burn a magnesium strip. By the way, magnesium strips or ribbons are used to ignite fireworks.
-
-      When the magnesium strip burns, it produces a bright white light, and a powdery ash. The ash is called magnesium oxide.
-
-      Burning of a magnesium ribbon is a chemical change because this reaction produces two new substances —  ash and light.
-    `,
-    videoId: 'dH6p5YwEME4',
-    startTime: 5,
   }, ]
 }, {
   id: ' 11',
