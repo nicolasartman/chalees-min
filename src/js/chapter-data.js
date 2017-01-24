@@ -4257,7 +4257,7 @@ export const chapter7Data = [{
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter5--thumbnail.png',
   title: 'Acids, Bases and Salts',
   items: [{
-    id: 'chapter-3-video',
+    id: 'chapter-5-video',
     kind: 'video',
     time: 3,
     title: 'Using a Tabla to Learn About Acids & Bases',
@@ -4268,7 +4268,7 @@ export const chapter7Data = [{
 
       We will see that acids are sour and bases are bitter. We will also see how acids and bases change the colour of litmus paper. We will do all of this while listening to the sounds made by the Tabla.
     `,
-    videoId: '1Iy2Yg92Sa4',
+    videoId: 'XtlmUmLRqmw',
   }, {
     id: 'acid-litmus-paper-quiz',
     kind: 'multipleChoiceResponse',
