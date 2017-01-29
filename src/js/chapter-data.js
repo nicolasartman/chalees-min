@@ -6062,11 +6062,17 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: 'This is incorrect. Light travels in straight lines. Look at _figure 15.2 on page 174_ of your science book to learn more.'
+        response: dedent`
+          This is incorrect. Light travels in straight lines. Look at this image _from page 174_ of your science book to see how.
+
+          ![light travels in straight lines](/learning-items/grade7/light-travels-in-straight-line.jpeg)`
       },
       {
         answerSet: ['opt2'],
-        response: 'No, this is not correct. '
+        response: dedent`
+          No this is not correct. Light travels in straight lines. Look at this image _from page 174_ of your science book to see how.
+
+          ![light travels in straight lines](/learning-items/grade7/light-travels-in-straight-line.jpeg)`
       },
       {
         answerSet: ['opt3'],
@@ -6108,7 +6114,10 @@ export const chapter7Data = [{
       },
       {
         answerSet: ['opt2'],
-        response: '__Correct__. The change in direction of light caused by a mirror is called reflection.'
+        response: dedent`
+          __Correct__. The change in the direction of light caused by a mirror is called reflection. By the way, the surface of water can also act like a mirror.
+          ![water reflects light acts like mirror](/learning-items/grade7/surface-of-water-acts-like-mirror.jpeg)
+          `
       },
       {
         answerSet: ['opt3'],
@@ -6135,16 +6144,64 @@ export const chapter7Data = [{
     time: 3,
     title: 'Image Formed By Plane Mirrors',
     instructions: dedent`
-      Images formed by plane mirrors (or flat mirrors) are __erect__. Erect means upright. When you stand in front of a mirror, your image in the mirror shows your head placed above your body, and not under it. This means that your image in the mirror is erect (an not inverted)..
+      Images formed by plane mirrors (or flat mirrors) are __erect__. Erect means upright. When you stand in front of a mirror, your image shows your head placed above your body, and not under it. This means that your image in the mirror is erect (and not inverted).
 
       Images formed by plane mirrors (or flat mirrors) are __the same size as the object__. The image is not bigger or smaller than the object.
 
-      Images fomed by plane mirrors (or flat mirrors) are __the same distance behind the mirror as the object is in front of them__. You will see an experiment in the video that will demonstrate this fact.
+      Images formed by plane mirrors (or flat mirrors) are __the same distance behind the mirror as the object is in front of them__. You will see an experiment in the video that will demonstrate this fact.
 
-      Images fomed by plane mirrors (or flat mirrors) are __virtual__. That means that even if we tried, we could not get the image from the mirror on to a screen placed either in front or behind the mirror.
+      Images formed by plane mirrors (or flat mirrors) are __virtual__. That means that even if we tried, we could not get the image from the mirror on to a screen placed either in front or behind the mirror.
     `,
     videoId: 'qWT92yaGy2k',
     endTime: 217,
+  }, {
+    id: 'plane-mirror-image-type',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Plane Mirror Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![plane mirror image erect](/learning-items/grade7/mirror-image-erect.jpeg)
+
+     A plane mirror produces which of the following images.     
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'inverted and magnified image'
+      },
+      {
+        id: 'opt2',
+        text: 'erect and virtual image'
+      },
+      {
+        id: 'opt3',
+        text: 'image is same size as the object'
+      },
+      {
+        id: 'opt4',
+        text: 'erect and smaller than the object'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Incorrect__. A plane mirror does not produce an inverted image. It produces an upright or erect image. Also, the image is the same size as the object and not bigger or smaller than the object.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The image produced by a plane mirror is erect. That means it is upright and not inverted. The image is also virtual. That means that the image cannot be produced on a screen.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. The image produced by a plane mirror is the same size as that of the object.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Incorrect__. The image produced by a plane mirror is erect. But it is not smaller than the object. It is in fact the same size as that of the object.'
+      }
+    ]
   }, {
     id: 'plane-mirror-front-back-inversion',
     kind: 'video',
@@ -6158,18 +6215,311 @@ export const chapter7Data = [{
     videoId: 'qWT92yaGy2k',
     startTime: 217,
   }, {
+    id: 'plane-mirror-front-back-inversion-explanation',
+    kind: 'video',
+    time: 3,
+    title: 'Optional Video: How Mirrors Work',
+    instructions: dedent`
+      This video is optional.
+
+      Why is it that when we raise our left hand, the image in the mirror raises its right hand?
+
+      This video explains. 
+
+      A mirror flips the image from front to back. Watch this video to find out how.
+    `,
+    videoId: 'sqAjsCtpkAA',
+    endTime: 126,
+  }, {
+    id: 'concave-convex-surfaces',
+    time: 1,
+    kind: 'image',
+    title: 'Concave and Convex Surfaces',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The __inner__ side of a spoon is a concave surface.
+
+    The __outer__ side of a spoon is a convex surface.`,   
+    imagePath: '/learning-items/grade7/concave-convex-surface-spoon3.jpeg',
+
+  }, {
     id: 'concave-mirror-a-way-to-remember',
     time: 1,
     kind: 'image',
-    title: 'Concave Mirrors',
+    title: 'Concave: A Way To Remember',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    A concave mirror is a spherical mirror with an inward buldge.
+    A __concave__ mirror is a spherical mirror which curves inward.
 
-    A way to remember this is to think of a cave, whose mouth also has an inward buldge.
+    A way to remember this is to think of a __cave__, whose mouth also curves inward.
 
-    Thus convex mirror is a spherical mirror with an outward buldge.`,   
+    Alternatively, a convex mirror is a spherical mirror which curves outward.`,   
     imagePath: '/learning-items/grade7/concave-mirror-inward-buldge.jpg',
+
+  }, {
+    id: 'concave-convex-mirrors-video',
+    kind: 'video',
+    time: 2,
+    title: 'Concave and Convex Mirrors: A Video',
+    instructions: dedent`
+      This video is great. Here the teacher talks about the types of images made by concave and convex mirrors.
+
+      __Concave Mirrors__
+
+      _When standing really close to a concave mirror_, the image is erect, larger than the object and virtual. A virtual image is one that cannot be obtained on a screen.
+
+      _When standing farther away from the concave mirror_, the image is inverted; that means the image is upside down. The image is also real; that means the image can be obtained on the screen.
+
+      __Convex Mirrors__
+
+      Convex mirrors make images that are erect and virtual.  The image is also smaller than the object.
+    `,
+    videoId: 'jtTBOMVMSYM',
+    endTime: 65,
+  }, {
+    id: 'concave-convex-mirrors',
+    time: 1,
+    kind: 'image',
+    title: 'Uses of Concave and Convex Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A concave mirror curves inward. It is used by dentists. It is also used by people who want to shave their faces or do make up.
+
+    A convex mirror curves outward. It is used in parking spaces to see things around corners and forms images of objects spread over a large area.`,   
+    imagePath: '/learning-items/grade7/concave-mirror-convex-mirror.jpeg',
+
+  }, {
+    id: 'concave-mirror-images',
+    time: 3,
+    kind: 'image',
+    title: 'Images Formed By Concave Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is a [great simulation](http://cdac.olabs.edu.in/?sub=74&brch=9&sim=38&cnt=59) for the images produced by a concave mirror. You can move the candle in the simulation to see how the concave mirror behaves.
+
+    __When Standing Really Close To A Concave Mirror__
+
+    In this scenario, the image produced is erect, larger than the object, and also virtual. A virtual image simply means that it cannot be obtained on a screen.
+    ![concave mirror standing close image erect virtual magnified](/learning-items/grade7/concave-mirror-erect-virtual-image.jpeg)
+
+    Here is a diagram that shows the image produced by a concave mirror when the object is really close to it. Notice how the candle (the object) is really close to the mirror, and the image of the candle is erect, magnified and virtual.
+    ![concave mirror standing close image erect virtual magnified](/learning-items/grade7/concave-mirror-erect-virtual-image-ray-diagram.jpeg)
+
+    __When Standing Far Away From A Concave Mirror__
+
+    In this scenario, the image produced is inverted; that means it is upside down. The image is also real; that means the image can be obtained on a screen.
+    ![concave mirror standing far image inverted real](/learning-items/grade7/concave-mirror-image-real-inverted.jpeg)
+
+    Here is a diagram that shows the image produced by a concave mirror when the object is far away from it. Notice how the candle (the object) is far away from the mirror, and the image of the candle is inverted, bigger than the object and real. 
+
+    You can play with this [great simulation](http://cdac.olabs.edu.in/?sub=74&brch=9&sim=38&cnt=59) to see the type of images produced by the concave mirror.
+     `,   
+    imagePath: '/learning-items/grade7/concave-mirror-image-real-inverted-ray-diagram.jpeg',
+
+  }, {
+    id: 'real-virtual-image-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Real or Virtual',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     An image which can be obtained on the screen is called a _________. `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'real image'
+      },
+      {
+        id: 'opt2',
+        text: 'virtual image'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. An image that can be obtained on a screen in the real world is called a real image.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. An image which __cannot__ be obtained on a screen is called a virtual image.'
+      }
+    ]
+  }, {
+    id: 'concave-mirror-images-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![concave mirror](/learning-items/grade7/concave-mirror.jpeg)
+
+     A concave mirror always forms a real image. True or False?
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. It is true that the concave mirror forms an inverted, real image. But when the object is really close to the concave mirror, the image is erect, magnified and __virtual__.
+
+          [Watch this video](https://www.youtube.com/watch?v=jtTBOMVMSYM) to review the concept.
+          `
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Concave mirrors form both real and virtual images. The type of image depends on the distance of the object from the mirror.'
+      }
+    ]
+  }, {
+    id: 'concave-mirror-uses',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Uses of Concave Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     A concave mirror is used ________.
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'in parking spaces'
+      },
+      {
+        id: 'opt2',
+        text: 'by dentists'
+      },
+      {
+        id: 'opt3',
+        text: 'when doing make up'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`This is incorrect. A __convex__ mirror is used in parking spaces to see around corners.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Concave mirrors are used by dentists to see a magnified form of teeth.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          __Correct__. Concave mirrors are used by people when doing make up so they can see a magnified version of their face. When the object is placed very close to a concave mirror, the image is magnified.
+
+        ![concave mirror makeup mirror](/learning-items/grade7/make-up-mirror.jpeg)            
+          `
+      }
+    ]
+  }, {
+    id: 'convex-mirror-images',
+    time: 3,
+    kind: 'image',
+    title: 'Images Formed By Convex Mirrors',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is a [great simulation](https://www.edumedia-sciences.com/en/media/367-convex-mirror) for the images produced by a convex mirror. You can move the candle in the simulation to see how the convex mirror behaves.
+
+    A convex mirror always produces an image that is erect, virtual and smaller than the object.
+    ![convex mirror image smaller virtual erect](/learning-items/grade7/convex-mirror-image-smaller-virtual-erect.jpeg)
+
+    Here is a diagram that shows the image produced by a convex mirror. Notice how the image of the candle is erect, virtual and smaller than the object.
+     `,   
+    imagePath: '/learning-items/grade7/convex-mirror-image-smaller-virtual-erect-ray-diagram.jpeg',
+
+  }, {
+    id: 'convex-mirror-images-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     We can obtain an enlarged and erect image using a convex mirror. True or False?
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The image produced by a convex mirror is not enlarged. It is in fact smaller than the object.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The image produced by a convex mirror is smaller than the object.'
+      }
+    ]
+  }, {
+    id: 'convex-mirror-uses-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Convex Mirror Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Which of the following statements about the convex mirror are true?
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Used as magnifying glass'
+      },
+      {
+        id: 'opt2',
+        text: 'Image produced is smaller than the object'
+      },
+      {
+        id: 'opt3',
+        text: 'Image produced is same size as the object'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is __not true__. A magnifying glass is transparent and is not a mirror.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is __true__. The image produced by a convex mirror is smaller than the object.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is __not true__. The image produced by a convex mirror is not the same size as the object. It is in fact smaller than the object.'
+      }
+    ]
+  }, {
+    id: 'concave-convex-lenses',
+    time: 1,
+    kind: 'image',
+    title: 'Convex and Concave Lenses',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A __convex__ lens feels __thicker__ in the middle than at the edges. An example of a convex lens is a magnifying glass.
+
+    A __concave__ lens feels __thinner__ in the middle than at the edges. 
+
+    Here is one way to remember this — When you think of a concave lens, think of a cave. A cave has a mouth that curves inward. The shape of the concave lens is like the mouth of a cave.`,   
+    imagePath: '/learning-items/grade7/concave-convex-lens.jpeg',
 
   }, {
     id: 'convex-concave-converging-diverging',
@@ -6178,13 +6528,138 @@ export const chapter7Data = [{
     title: 'Converging and Diverging Lenses',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    A convex lens converges (bends inward) the light generally falling on it. Therefore, it is called a __converging lens__. This lens is shown on the top of the gif.
+    A __convex__ lens converges the light falling on it (or bends light inward). Therefore, it is called a __converging lens__. This lens is shown on the top of the gif.
 
-    On the other hand, a concave lens diverges (bends outward) the light and is called a __diverging lens__. This lens is shown on the bottom of the gif.
+    A __concave__ lens diverges the light falling on it (or bends light outward). Therefore, it is called a __diverging lens__. This lens is shown on the bottom of the gif.
 
     ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/convex-concave-converging-diverging-lens.gif)
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'convex-lens-video',
+    kind: 'video',
+    time: 1,
+    title: 'Convex Lens',
+    instructions: dedent`
+      A convex lens creates an image that is real and inverted. As you will see in this video, the image of the candle is obtained on the screen; thus it is real. And the image is upside down or inverted.
+
+      Although, when an object is placed very close to the convex lens, the lens acts like a magnifying glass and forms an image that is virtual, erect and magnified. 
+    `,
+    videoId: 'MvUIsetjVck',
+    startTime: 113,
+    endTime: 148,
+  }, {
+    id: 'convex-lens-simulation',
+    time: 1,
+    kind: 'image',
+    title: 'Convex Lens Simulation',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is a [great simulation](http://www.physics-chemistry-interactive-flash-animation.com/optics_interactive/converging_lens_convex_positive.htm) of the convex lens.
+
+    You will see that the candle creates a real and inverted image on the screen. You can move the candle around to see how the convex lens works.`,   
+    imagePath: '/learning-items/grade7/convex-lens-image-real-inverted.jpeg',
+
+  }, {
+    id: 'convex-lens-magnifying-glass',
+    time: 1,
+    kind: 'image',
+    title: 'Magnifying Glass',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A magnifying glass is a convex lens.
+
+    When an object is placed very close to a magnifying glass, the image formed is virtual, erect and magnified.`,   
+    imagePath: '/learning-items/grade7/convex-lens-magnifying-glass.jpeg',
+
+  }, {
+    id: 'convex-lens-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Convex Lens Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Which of the following statements about the convex lens are true?
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Used by dentists'
+      },
+      {
+        id: 'opt2',
+        text: 'Creates a real and inverted image'
+      },
+      {
+        id: 'opt3',
+        text: 'Used as a magnifying glass'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is __not true__. Dentists use a mirror and not a lens. And that mirror happens to be a concave mirror.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is __true__. The image produced by a convex lens is real and inverted.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is __also true__. The convex lens is used as a magnifying glass.'
+      }
+    ]
+  }, {
+    id: 'convex-lens-quiz-2',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     The image formed by a convex ________ is always virtual and smaller in size.
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'lens'
+      },
+      {
+        id: 'opt2',
+        text: 'mirror'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          __Incorrect__. The image formed by a convex lens can be obtained on a screen. Thus that image is real and not virtual.
+          
+          ![convex lens image real inverted](/learning-items/grade7/convex-lens-image-real-inverted.jpeg)
+          `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct.__ The image formed by the convex mirror is always virtual, erect and smaller than the object.
+
+        ![convex mirror image virtual erect smaller than object](/learning-items/grade7/convex-mirror-image-smaller-virtual-erect.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'concave-lens-simulation',
+    time: 1,
+    kind: 'image',
+    title: 'Concave Lens Simulation',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This is a [great simulation](https://www.edumedia-sciences.com/en/media/703-diverging-lens) of how the concave lens works.
+
+    Here, you will see that the man (the object) creates an erect, virtual and smaller image.`,   
+    imagePath: '/learning-items/grade7/concave-lens.jpeg',
+
   }, {
     id: 'prism-sunlight-seven-colours',
     time: 1,
@@ -6206,7 +6681,9 @@ export const chapter7Data = [{
     title: 'How Do We See Objects?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Ok, so we know that white light comprises of 7 colours.
+    On page 176 of the science book, Paheli asks _what makes things visible to us?_ Here is one answer:
+
+    We know that white light comprises of 7 colours.
 
     A leaf looks green because when white light falls on it, it absorbs all colours, but reflects green. Thus our eye perceives the leaf as green.`,   
     imagePath: '/learning-items/grade7/how-do-we-see-objects.jpg',
