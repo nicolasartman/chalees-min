@@ -5253,6 +5253,659 @@ export const chapter7Data = [{
     }
   }, ]
 }, {
+  id: ' 7',
+  title: 'Weather, Climate and Adaptations',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter7-thumbnail-2.jpeg',
+  items: [{
+    id: 'weather',
+    time: 1,
+    kind: 'image',
+    title: 'Weather',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Weather is the day to day condition of a place with respect to temperature, humidity, rainfall, and windpseed.
+
+    I am writing this on _January 31st, 2017_, and I am located in _New Delhi_. 
+
+    Today, the temperature in Delhi is 21 degree Celsius, with 58% humidity, no rainfall and a windspeed of 14 km/h. It is a very pleasant day.
+`,
+    imagePath: '/learning-items/grade7/weather.jpeg'
+  }, {
+    id: 'elements-of-weather',
+    time: 1,
+    kind: 'image',
+    title: 'Elements of Weather',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Elements of cricket include bowling, batting, wicket keeping and fielding.
+
+    The word element here means _part of_. Much like batting and bowling are part of cricket.
+
+    Elements of weather include temperature, humidity, rainfall and windspeed.
+`,
+    imagePath: '/learning-items/grade7/elements-of-weather-cricket.jpeg'
+  }, {
+    id: 'elements-of-weather-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Weather Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![weather report](/learning-items/grade7/weather-report-weekly.jpeg)
+
+      All of the following are elements of weather, except for one.
+
+      Select the odd one out.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Humidity'
+      },
+      {
+        id: 'opt2',
+        text: 'Temperature'
+      },
+      {
+        id: 'opt3',
+        text: 'Car Speed'
+      },
+      {
+        id: 'opt4',
+        text: 'Rainfall'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'Humidity is the amount of water vapour in the air. We will learn about this soon. Humidity is an element of weather.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'Temperature is an element of weather.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Car speed has got nothing to do with weather.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'Rainfall is a part of weather.'
+      }
+    ]
+  }, {
+    id: 'weather-changes',
+    time: 1,
+    kind: 'image',
+    title: 'Weather Changes Frequently',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Weather changes frequently. Sometimes weather changes daily, sometimes it changes within an hour.
+`,
+    imagePath: '/learning-items/grade7/weather-changes-hourly.jpeg'
+  }, {
+    id: 'humidity-humidifier',
+    time: 1,
+    kind: 'image',
+    title: 'What is Humidity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Humidity is the amount of water vapour or moisture in the air.
+
+    One way to remember this is to think of a machine called the _Humidifier_.
+
+    You can find the humidifier in beauty salons. It adds water vapour or moisture to the air around it and is sometimes used to treat dry skin.
+`,
+    imagePath: '/learning-items/grade7/humidifier-humidity.jpeg'
+  }, {
+    id: 'high-humidity',
+    time: 1,
+    kind: 'image',
+    title: 'What Does High Humidity Feel Like?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When humidity is high, we feel hotter than the actual temperature.
+
+    For example, when the humidity is 60% (which, by the way, is not very high), 35 degree Celsius will feel like 45 degree Celsius.
+
+    Why does that happen? Read this [amazing page from MIT](https://engineering.mit.edu/ask/why-do-we-sweat-more-high-humidity) if you are curious to find the answer.`,
+    imagePath: '/learning-items/grade7/what-does-high-humidity-feel-like.jpeg'
+  }, {
+    id: 'humidity-cartoon',
+    time: 1,
+    kind: 'image',
+    title: 'A Cartoon On Humidity',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This cartoon is going to help you remember the definition of humidity.
+
+    Humidity is the amount of moisture in the air. 
+
+    The lady on the laptop thinks that the humidity is high, as the person outside her window is not walking, but is swimming in water.`,
+    imagePath: '/learning-items/grade7/humidity-cartoon.jpg'
+  }, {
+    id: 'explain-humidity',
+    kind: 'textResponse',
+    time: 2,
+    short: true,
+    title: 'Tweet About Humidity',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine you have to explain humidity to someone while using twitter. How would you do it in less than 140 characters?
+
+    Write your answer in the box below. and then tweet it with #humhaihumid`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`When it is humid, we feel hotter. Mumbai is Humid. #humhaihumid
+            `
+          },{
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`#humhaihumid Humidity is the amount of water vapour in the air. 
+            `
+          },{
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`The time before monsoons is humid because of a lot of moisture in air. #humhaihumid 
+            `
+          },
+        ]
+      }
+    }
+  }, {
+    id: 'seasons-video',
+    kind: 'video',
+    time: 2,
+    title: 'Why Are Days Longer In Summers?',
+    instructions: dedent`
+    On Page 71, the science book asks the following: _Are days shorter in winter than in summers?_
+
+    Yes, they are. Watch this video to find out why.`,
+    videoId: 'KUU7IyfR34o',
+    endTime: 93,
+  }, {
+    id: 'sun-changes-weather',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![sun changes weather](/learning-items/grade7/sun-changes-weather.jpeg)
+
+      Changes in weather, like temperature and rainfall, are driven by the _______.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'government'
+      },
+      {
+        id: 'opt2',
+        text: 'sun'
+      },
+      {
+        id: 'opt3',
+        text: 'moon'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'No this is not correct. Government departments monitor the weather, but do not generally impact the day to day weather.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The sun changes temperature, rainfall and other weather elements on earth.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'While the moon causes changes on earth — like high and low tides — it does not cause temperature- and rainfall-related changes.'
+      }
+    ]
+  }, {
+    id: 'climate',
+    time: 1,
+    kind: 'image',
+    title: 'Climate',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In the gif below you see monthly average temperatures from 1961–1990. 
+
+    For example when you see JAN, you are looking at an average of temperatures in January 1961, and January 1962, all the way to January 1990. 
+
+    This image is an example of __climate data__.
+
+    The average weather pattern taken over a large period of time, say 25 years, is called __climate__.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/average-temperature-monthly.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'wet-climate',
+    time: 1,
+    kind: 'image',
+    title: 'Wet Climate',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    If you look at the graph below, you will notice that in a given year, it rains on 70% of the days in Shillong, Meghalaya.
+
+    That means that out of the 365 days in a year, it rains in Shillong on an average of 256 days.
+
+    If a place has a lot of rainfall like Shillong, we say that the place has a wet climate (specially when you compare it to a dry place like Rajasthan).`,
+    imagePath: '/learning-items/grade7/meghalaya-wet-climate.jpeg'
+  }, {
+    id: 'hot-climate-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Hot Climate Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Have a look at the graph below.
+
+      Which city, New Delhi or Srinagar, has a hotter climate?
+
+      ![hot climate New Delhi SriNagar](/learning-items/grade7/average-monthly-temperatures-delhi-srinagar-.jpeg)
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'New Delhi'
+      },
+      {
+        id: 'opt2',
+        text: 'Srinagar'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. In the graph we can see that the average temperature in New Delhi are greater than the average temperature in Srinagar. And this is true for the entire year.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Look at the month of May. The average temperature in New Delhi in May is 40 degree Celsius. The average temperature in Srinagar in May is 27 degree Celsius. The temperature in New Delhi is higher than the temperature in Srinagar. And this is true for all months of the year. Thus, New Delhi has a hotter climate.'
+      }
+    ]
+  }, {
+    id: 'weather-versus-climate',
+    time: 1,
+    kind: 'image',
+    title: 'Weather versus Climate',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Weather is measured over a short period of time. For instance when we say, _how is the weather,_ we mean, how hot or wet it is on that day.
+
+    Climate is associated with a long period of time. For instance, when we talk about Climate Change, we mean a change in global climate patterns that cause sea levels to rise as measured over 10 or 20 years.
+`,
+    imagePath: '/learning-items/grade7/weather-vs-climate-2.jpeg'
+  }, {
+    id: 'weather-versus-climate-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Weather Vs. Climate Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![hot climate New Delhi SriNagar](/learning-items/grade7/weather-report-weekly.jpeg)
+
+      Which of the following two changes more frequently?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Weather'
+      },
+      {
+        id: 'opt2',
+        text: 'Climate'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Weather is change in temperature, rainfall etc. on a daily or even hourly basis.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. When we talk of climate, we talk of average changes in weather over a long period of time, say 25 years.'
+      }
+    ]
+  }, {
+    id: 'polar-regions-of-the-world',
+    time: 1,
+    kind: 'image',
+    title: 'Polar Regions Of The World',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This image shows us the two major polar regions of the world — Arctic in the north, and Antarctica in the south.
+
+    These regions are covered with snow and are cold for most of the year.
+`,
+    imagePath: '/learning-items/grade7/polar-regions-world.jpeg'
+  }, {
+    id: 'sun-does-not-set-in-summers-in-polar-regions',
+    time: 1,
+    kind: 'image',
+    title: 'Sun At Night',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This picture was taken at midnight.
+
+    As you can see the sun has not set even in the middle of the night.
+
+    This picture was taken in Norway, which is in the Arctic (Polar Region). During some months in the summer, the sun does not set here. You can see an [amazing YouTube video](https://www.youtube.com/watch?v=ndlQNicOeso) of this here.
+
+    Also, if you are curious, [here is an explanation](http://www.athropolis.com/arctic-facts/fact-midnight-sun.htm) for why this happens.
+`,
+    imagePath: '/learning-items/grade7/arctic-sun-does-not-set-summer.jpeg'
+  }, {
+    id: 'sun-does-not-rise-in-winters-in-polar-regions',
+    time: 1,
+    kind: 'image',
+    title: 'No Sun During The Day',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This picture was taken in the afternoon at 1PM.
+
+    As you can see the sun has not risen here and the lights are on.
+
+    This picture was taken in Norway, which is in the Arctic (Polar Region). During some months in the winter, the sun does not rise here. 
+`,
+    imagePath: '/learning-items/grade7/arctic-sun-does-not-rise-winter.jpeg'
+  }, {
+    id: 'polar-bear-layers-fur-swim-adaptations',
+    time: 1,
+    kind: 'image',
+    title: 'Adaptations Made By Polar Bears',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Polar Bears live in the Arctic.
+
+    They have two thick layers of fur and a layer of fat underneath to keep them warm in the cold climate. They are so well insulated that they have to move slowly to prevent overheating.
+
+    On warm days they swim to cool off.
+`,
+    imagePath: '/learning-items/grade7/polar-bear-layers-fur-swim-adaptation.jpg'
+  }, {
+    id: 'polar-bear-close-nostrils-adaptations',
+    time: 1,
+    kind: 'image',
+    title: 'Polar Bears Can Close Their Nostrils',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Polar Bears can close their nostrils underwater, and can dive for up to 3 minutes.
+`,
+    imagePath: '/learning-items/grade7/polar-bear-close-nostrils-adaptation.jpg'
+  }, {
+    id: 'polar-bear-camouflage',
+    time: 1,
+    kind: 'image',
+    title: 'Polar Bears Can Hide In Snow',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Polar Bears have white fur and thus they can easily hide in the snow. This ability to hide protects the polar bears from their hunters and allows them to get close to their prey without being detected.
+
+    The ability to hide in one\`s surroundings is called camouflage.
+
+    Here is a cartoon that shows the polar bear getting close to its prey — the walruses.
+`,
+    imagePath: '/learning-items/grade7/polar-bear-camouflage-adaptation-2.jpg'
+  }, {
+    id: 'polar-bear-adaptations-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Polar Bears Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![polar bears](/learning-items/grade7/polar-bears-adaptations-quiz.jpeg)
+
+      Which features adapt polar bears to live in extremely cold climate? 
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Thin skin, large eyes'
+      },
+      {
+        id: 'opt2',
+        text: 'White fur, fat below skin'
+      },
+      {
+        id: 'opt3',
+        text: 'Gills for respiration'
+      },
+      {
+        id: 'opt4',
+        text: 'Strong sense of smell'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Polar bears do not have thin skin.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Polar Bears have white fur which allows them to hide in snow. They also have fat below their skin to keep them warm.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Polar Bears do not have gills and cannot breathe under water. They can close their nostrils under water, however.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Polar Bears have a strong sense of smell, which can lead them to prey.'
+      }
+    ]
+  }, {
+    id: 'penguin-adaptations',
+    time: 1,
+    kind: 'image',
+    title: 'Penguin Adaptations',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Penguins live in the Southern Hemisphere. This includes Antarctica (which is classified as Polar Region).
+
+    Penguins have thick skin and fat to protect them from the cold. 
+
+    Their feet have webs, which act as paddles to provide more surface to push against water. This makes them good swimmers.
+`,
+    imagePath: '/learning-items/grade7/penguin-adaptation.jpeg'
+  }, {
+    id: 'penguins-huddle',
+    kind: 'video',
+    time: 2,
+    title: 'Penguins Huddle',
+    instructions: dedent`
+    Penguins huddle together to stay warm and to protect themselves from the extreme cold of Antarctica.`,
+    videoId: 'OL7O5O7U4Gs',
+    startTime: 9,
+    endTime: 164
+  }, {
+    id: 'polar-region-adaptations-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Polar Region Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![polar regions](/learning-items/grade7/polar-region.jpeg)
+
+      Which adaptations are found in Polar Regions?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Diet heavy on fruits'
+      },
+      {
+        id: 'opt2',
+        text: 'Layer of fat under skin'
+      },
+      {
+        id: 'opt3',
+        text: 'Sticky pads on feet'
+      },
+      {
+        id: 'opt4',
+        text: 'White fur'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Not many fruits are available in Polar Regions. A diet heavy on fruits can be found in animals in forests, which we will discuss next.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Polar Bears, who live in Arctic, and Penguins, who live in Antarctic, both have a layer of fat under their skin.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Some frogs have sticky pads on their feet that they have developed to climb trees. These frogs live in forests, which we will talk about next.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Polar Bears have white fur.'
+      }
+    ]
+  }, {
+    id: 'bar-headed-geese',
+    kind: 'video',
+    time: 2,
+    title: 'Birds That Fly Over Everest',
+    instructions: dedent`
+    Some birds migrate or move over long distances. 
+
+    For example, the bar-headed goose travels from southern India to central asia. And what is in the middle of those two places? Mount Everest. These birds are seen flying over Mount Everest.
+
+    You can read more about them in this [article from Science Magazine](http://www.sciencemag.org/news/2011/06/most-extreme-migration-earth).
+    `,
+    videoId: 'WnNQWj98BR0',
+    startTime: 15,
+    endTime: 121
+  }, {
+    id: 'tropical-rainforests',
+    time: 1,
+    kind: 'image',
+    title: 'Tropical Rainforests',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Below is a map of where we can find tropical rainforests. The western parts of India, otherwise known as Western Ghats, are a tropical rainforest.
+
+    These forests have a lot of plant and animal species. They are also warm — day temperatures cross 40 degree celsius regularly. These forests are close to the equator and also get a lot of rain.
+`,
+    imagePath: '/learning-items/grade7/tropical-rainforests-world.jpeg'
+  }, {
+    id: 'tropical-rainforests-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Tropical Rainforests Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![tropical rainforests](/learning-items/grade7/western-ghats-tropical-forests.jpeg)
+
+      This is an image from the forests of Western Ghats in India. They are a part of the tropical rainforests of the world.
+
+      Based on what you know about tropical rainforests, which of the following options best describes a tropical region? 
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'cold and humid'
+      },
+      {
+        id: 'opt2',
+        text: 'hot and dry'
+      },
+      {
+        id: 'opt3',
+        text: 'hot and humid'
+      },
+      {
+        id: 'opt4',
+        text: 'moderate temperature, heavy rainfall'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Tropical rainforests are not cold. They are near the equator and temperatures in these forests get up to 40 degree Celsius regularly.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. These forests are hot, but they are not dry. They receive a lot of rain, thus the name rainforests.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. These forests are hot. These forests also receive a lot of rain. The rain water evaporates and the trees in the forest lose water through transpiration. This water vapour or moisture fills the air. Thus these places are really humid.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Tropical rainforests are hot. They do not have moderate temperature.'
+      }
+    ]
+  }, {
+    id: 'adaptations-by-animals-in-rainforests',
+    time: 1,
+    kind: 'image',
+    title: 'Adaptations By Animals In Rainforests',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Animals adapt to living in the tropical rainforests.
+
+    For example monkeys live on trees and have adapted to the forest by developing long tails that can grasp branches.
+
+    Toucan is a bird that has a long beak and is found in Central and South America. It sits on big branches and its long beak can still reach smaller branches for food that otherwise cannot support its weight.
+`,
+    imagePath: '/learning-items/grade7/monkey-toucan-adaptation.jpeg'
+  }, {
+    id: 'elephant-adaptation',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Elephant Adaptations',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+  
+    ![elephant](/learning-items/grade7/elephant-adaptations.jpeg)
+
+    How do elephants living in the rainforests adapt themselves?
+
+    Feel free to read _page 76_ from your science book to answer this question.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            After reading the science book I found that elephants have a strong sense of smell. 
+
+            They have also developed a trunk that can pick up food.
+            
+            Their large ears help it stay cool in the hot forest.
+
+            Their tusks are modified teeth that help them tear the bark of trees, which the elephants can then eat.
+
+            `
+          }
+        ]
+      }
+    }
+  }, ]
+}, {
   id: ' 11',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
   title: 'Transportation in Animals and Plants',
