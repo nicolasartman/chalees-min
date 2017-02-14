@@ -5906,6 +5906,699 @@ export const chapter7Data = [{
     }
   }, ]
 }, {
+  id: ' 12',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter-12-thumbnail.jpg',
+  title: 'Reproduction in Plants',
+  items: [{
+    id: 'chapter-12-video-poem',
+    kind: 'video',
+    time: 2,
+    title: 'Asexual Reproduction in Plants',
+    instructions: dedent`
+      This video is a poem about asexual reproduction in plants.
+      
+      Some people I know get nervous when the word _sex_ is used around them. I am sure you are not one of them.  
+
+      We know that plants can make more of themselves through seeds. But plants can also reproduce through stems and leaves; in other words, plants can reproduce asexually. Let us watch to learn more.
+    `,
+    videoId: 'Y2_A18dqeFY',
+  }, {
+    id: 'spore-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Pick The Correct Option',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+     Which of the following plants uses spore propagation to reproduce?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Rose'
+      },
+      {
+        id: 'opt2',
+        text: 'Fern'
+      },
+      {
+        id: 'opt3',
+        text: 'Bread Mould'
+      },
+      {
+        id: 'opt4',
+        text: 'Apple Tree'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. The stems of rose plants are used for reproduction. Since a stem is involved in reproduction, this process is  called Vegetative Reproduction.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct__. Fern is a plant that does not have seeds and uses spores for reproduction. Here is a picture of fern and spores.
+
+        ![fern spore](/learning-items/grade7/fern-spore.jpeg)`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        __Correct__.  Mould is a fungus. That just means that mould does not have chlorophyll and cannot make its own food.
+
+         Mould grows on bread because bread provides a very good source of food for mould. You cannot see them, but there are millions of mould spores in the air around you. These mould spores can settle on the bread and multiply into a gross looking fungi.
+        ![mould bread fungi spore](/learning-items/grade7/mould-bread-fungi.jpeg)`
+      },{
+        answerSet: ['opt4',],
+        response: 'This is not correct. Apples have seeds in them. These seeds when planted in soil with sunlight and water grow into a new apple tree. Since seeds are involved in this reproduction, this process is called Sexual Reproduction.'
+      }
+    ]
+  }, {
+    id: 'difference-asexual-sexual',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Asexual and Sexual Reproduction',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![sexual reproduction plants involves seeds](/learning-items/grade7/sexual-reproduction-plants-seb-apple.jpeg)
+
+    What is the main difference between Asexual and Sexual Reproduction in plants? 
+
+    Write your answer in the space below and then tweet it with the #maindifference`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are responses from other students who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            Sexual reproduction involves seeds, example seb (apple). Asexual does not. #maindifference`
+          }, {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            Plants that reproduce through stems, leaves and spores do so asexually. Plants like Apple trees need seeds. #maindifference`
+          }
+
+        ]
+      }
+    }
+  }, {
+    id: 'reproduction-from-leaves',
+    kind: 'video',
+    time: 2,
+    title: 'Making More Plants From Leaves',
+    instructions: dedent`
+      Bryophyllum is a plant that is found in Asia and South Africa. It has buds on the edges of its leaves. 
+
+      If a bryophyllum leaf is placed on moist soil, a new plant is produced from each of the buds on the leaf.
+
+      Notice how no seeds were needed to produce a new plant here. That is why this form of reproduction is called Asexual Reproduction.
+    `,
+    videoId: 'bDuYDk5dfzU',
+    startTime: 12,
+    endTime: 120,
+  }, {
+    id: 'growing-roses-from-stems',
+    kind: 'video',
+    time: 4,
+    title: 'Growing A New Rose Plant From A Stem',
+    instructions: dedent`
+      Take a piece of rose stem and cut it along with the node — a node is a place on the stem from where the leaves grow; by the way this piece of stem is called cutting. 
+
+      Then sow the cutting in soil and water it. After a few days new roots will come out from the bottom of the stem. After some more days the buds on the stem will give rise to new leaves and then to new rose flowers. 
+
+      Notice how no seeds were needed to produce a new rose plant here. That is why this form of reproduction is called Asexual Reproduction.
+    `,
+    videoId: 'GyRi9n7beqI',
+    startTime: 37,
+    endTime: 257,
+  }, {
+    id: 'bryophyllum-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    ![bryophyllum reproduce leaves](/learning-items/grade7/bryophyllum-asexual-reproduction-vegetative-propagation.jpeg)
+
+    Byrophyllum can reproduce through its ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'stem'
+      },
+      {
+        id: 'opt2',
+        text: 'leaves'
+      },
+      {
+        id: 'opt3',
+        text: 'roots'
+      },
+      {
+        id: 'opt4',
+        text: 'flower'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Bryophyllum reproduces through its leaves and not stem. Roses reproduce through their stems.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Bryophyllum reproduces through its leaves.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is also not correct. Bryophyllum reproduces through its leaves and not its flowers.'
+      }
+    ]
+  }, {
+    id: 'vegetative-parts-plant',
+    time: 1,
+    kind: 'image',
+    title: 'What Are Vegetative Parts Of A Plant?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The science book say something on _page 133_ that is hard to remember.
+
+    It says that __leaves, roots and stems__ are the _vegetative parts of a plant_.
+
+    It also says that the __flower__ is the _reproductive part of a plant_.
+
+    Here is one easy way to remember this. Think of vegetables like spinach and carrots.
+
+    Spinach consists of leaves and carrot is a root. When we eat vegetables like spinach (leaves), and carrots (root), we are eating the vegetative parts of the plant. 
+
+    ![vegetative parts plant leaves roots stem](/learning-items/grade7/vegetative-parts-plant-leaves-roots-stems.jpeg)
+
+    And then I hope the GIF below gets stuck in your head and helps you remember that the flower is the reproductive part of the plant.
+    
+    ![flower reproductive part plant](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/flower-reproductive-part-of-plant2.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'vegetative-propagation',
+    time: 1,
+    kind: 'image',
+    title: 'What is Vegetative Propagation?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We know that vegetative parts of plant include leaves, roots and stems.
+
+    And one meaning of the word _propagation_ is to reproduce.
+
+    So vegetative propagation is the reproduction of plants from vegetative parts like leaves, roots and stems. Examples include rose (from stem) and bryophyllum (from leaves).
+
+    Also, since no seeds are involved here, vegetative propagation is categorized as asexual reproduction.
+    `,
+    imagePath: '/learning-items/grade7/vegetative-propagation-rose-bryophyllum.jpeg',
+
+  }, {
+    id: 'reproductive-part-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    The reproductive part of the plant is ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'leaf'
+      },
+      {
+        id: 'opt2',
+        text: 'root'
+      },
+      {
+        id: 'opt3',
+        text: 'stem'
+      },
+      {
+        id: 'opt4',
+        text: 'flower'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Leaf is a vegetative part of a plant.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Root is a vegetative part of a plant.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Stem is a vegetative part of a plant.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Flower is a reproductive part of a plant.'
+      }
+    ]
+  }, {
+    id: 'vegetative-propagation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    Production of new individuals from the vegetative part of a plant is called ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'sexual reproduction'
+      },
+      {
+        id: 'opt2',
+        text: 'vegetative propagation'
+      },
+      {
+        id: 'opt3',
+        text: 'spore formation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Sexual reproduction require seeds to grow a new plant. Examples include apple trees, which need seeds to grow.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ Production of new individuals from the vegetative part of a plant is called vegetative propagation. For example a rose plant can be grown from rose stem; and stem is a vegetative part of a plant.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Spore formation involves organisms like the fern plant and fungi.'
+      }
+    ]
+  }, {
+    id: 'budding-asexual',
+    kind: 'video',
+    time: 2,
+    title: 'Budding - Asexual Reproduction',
+    instructions: dedent`
+      Yeast is used to bake breads. Here is what a block of compressed yeast from a bakery looks like.
+
+     ![yeast compressed bakery](/learning-items/grade7/baker-yeast-cake-budding.jpeg)
+
+      If we mix a pinch of this yeast in water with some sugar, and see it under the microscope, we will find something similar to this video below.
+
+      A small bulb-like project comes out of yeast cell; this is called a bud. It then gets detached from the parent and forms a new cell. This process is called __budding__.
+
+      Notice how no seeds are involved in this form of reproduction. Thus it is a form of Asexual Reproduction. By now, we have come across 3 different types of Asexual Reproduction:
+       - Vegetative Propagation (rose, bryophyllum)
+       - Spore Formation (fern, fungi)
+       - Budding (yeast)
+    `,
+    videoId: 'GFEgB_ytDZY',
+    startTime: 108,
+    endTime: 183
+  }, {
+    id: 'fragmentation-asexual',
+    time: 1,
+    kind: 'image',
+    title: 'Fragmentation — Asexual Reproduction',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is what algae looks like. A particular type of algae called Spirogyra is shown in this picture.
+
+    ![algae fragmentation](/learning-items/grade7/algae-fragmentation.jpeg)
+
+    They reproduce through a technique called __fragmentation__, in which an algae grows and breaks into two or more fragments. 
+    
+    So thus far, we have studied the following 4 types of Asexual Reproduction:
+     - Vegetative Propagation (rose, bryophyllum)
+     - Spore Formation (fern, fungi)
+     - Budding (yeast)
+     - Fragmentation (algae)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg',
+
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw and Share',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Use a _pen and paper_ to draw a picture that describes the 4 methods of asexual reproduction. 
+
+    Then take a photo of the drawing from your phone and upload it here.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/learning-items/grade7/asexual-reproduction-vegetative-propagation-budding-fragmentation-spores-2.jpeg'
+      }
+    }
+  }, {
+    id: 'sexual-reproduction-video',
+    kind: 'video',
+    time: 6,
+    title: 'Sexual Reproduction in Plants',
+    instructions: dedent`
+      Sexual reproduction in plants involves seeds and flowers. 
+
+      Let us watch this video recorded at a flower market in Thailand to see how that works.
+    `,
+    videoId: 'EArZXsRXsj4',
+  }, {
+    id: 'pollination-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    The transfer of pollen grains from the anther to the stigma of the same flower or another flower of the same kind is known as ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'vegetative propagation'
+      },
+      {
+        id: 'opt2',
+        text: 'pollination'
+      },
+      {
+        id: 'opt3',
+        text: 'fertilisation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Vegetative Propagation means reproduction through vegetative parts of the plant, like leaves and stems. Rose and Bryophyllum reproduce in this manner.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ The transfer of pollen grains from the anther (male part) to the stigma (female part) of a flower is known as pollination.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Fertilisation is the when the male reproductive cells (from pollen) and female reproductive cells (from ovules) combine in a plant. It is ok if you do not know much about this topic yet. We will learn about it soon.'
+      }
+    ]
+  }, {
+    id: 'stamen-remember',
+    time: 1,
+    kind: 'image',
+    title: 'Stamen — A Way To Remember',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Stamen is the male part of the flower. Here is a way to remember that: 
+
+    Stamen has the word _men_ in it.
+
+    Also, stamen consists of anther at the top, supported by filament at the bottom. 
+
+    Anther produces pollen, which contain the male sex cells of the plant. We will soon see that these male sex cells are necessary to produce a new seed and through that seed a new plant.
+    `,
+    imagePath: '/learning-items/grade7/stamen-anther-filament-pollen.jpeg',
+
+  }, {
+    id: 'pistil-identify-parts',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Identify Parts of Pistil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    Pistil is the Female Part of flower. 
+
+    It produces the female sex cells. We will soon see that these female sex cells are necessary to produce a new seed and through that seed a new plant.
+
+    For now, can you identify the 4 parts of the Pistil from the image below?
+    ![pistil parts](/learning-items/grade7/pistil-stigma-style-ovary-ovules.jpeg)
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '(1)Style (2)Stigma (3)Ovary (4)Ovule'
+      },
+      {
+        id: 'opt2',
+        text: '(1)Stigma (2)Style (3)Ovary (4)Ovule'
+      },
+      {
+        id: 'opt3',
+        text: '(1)Stigma (2)Style (3)Ovule (4)Ovary'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. (1) is Stigma and (2) is Style.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ (1)Stigma (2)Style (3)Ovary (4)Ovule.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. (3) is Ovary and (4) is Ovule.'
+      }
+    ]
+  }, {
+    id: 'pollination-fertilisation',
+    time: 5,
+    kind: 'image',
+    title: 'How Flowers Turn To Fruits With Seeds',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Let us start this section by looking at pollination.
+
+    Pollen from the male part of one flower (anther) travels to the female part of another flower (stigma) by sticking on animals like bees. This process is called __pollination__.
+
+    ![pollination stamen pistil pollen anther](/learning-items/grade7/pollination-pollen-anther-stamen.jpeg)
+
+    Once the pollen lands on stigma, the contents of pollen move from the stigma to the style and then into the ovules. 
+
+    Remember, the contents of pollen are in the __ovules__ now. 
+    ![pollen moves from stigma to style to ovules](/learning-items/grade7/pollen-moves-stigma-style-ovary2.jpeg)
+
+    Now to understand the rest of this story, we have to learn __3 new words__:
+     - Gametes
+     - Zygote
+     - Embryo
+
+    ![gametes zygote embryo](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/gametes-zygote-embryo-gif-final.gif)
+
+    Let us start with the first two words: __Gametes and Zygote__.
+
+    Now we have seen thus far that the contents of pollen have moved to the ovules. 
+
+    Pollen has some cells called __Male Gametes__. Ovules have some cells called __Female Gametes__.
+
+    Gametes means cells that can combine with others to reproduce.
+
+    So when male gametes from pollen and female gametes from ovules combine, they have the ability to reproduce and create a new organism.
+
+    The result is called a Zygote, which is just a fused cell. Or a joined cell.
+
+    This process, by the way, is called __fertilisation__.
+    ![fertilisation male gametes female gametes zygote](/learning-items/grade7/fertilisation-male-gamete-female-gamete-zygote2.jpeg)
+    
+    The zygote grows into something called an __Embryo__. 
+
+    An embryo is an important part of the new seed and can be thought of as a young, developing plant.
+
+    This new seed will help to make new plants in the future.
+    ![zygote embryo seed](/learning-items/grade7/zygote-embryo-seed2.jpeg)
+
+    So we have seen that the contents of pollen move into the ovules. This leads to fertilisation.
+
+    And then the Ovules in the flower turn into seeds. Also, the Ovary in the flower turns into the fleshy part of the fruit that surrounds the seed.
+   ![ovules seeds ovary fruit](/learning-items/grade7/ovules-seed-ovary-fruit.jpeg)
+
+    This is how flowers turn into fruits with seeds. 
+
+    The fruit can now be eaten by animals in the forest, who will then drop the seeds somewhere, and if enough sunlight, soil and water are available, that seed will grow into a new plant.
+
+    This process of plant reproduction through seeds is known as __Sexual Reproduction__.
+    `,
+    imagePath: '/learning-items/grade7/sexual-reproduction-plants-flowers-fruits-seeds.jpeg',
+
+  }, {
+    id: 'fertilisation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    The fusion of male and female gametes is termed as ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'pollination'
+      },
+      {
+        id: 'opt2',
+        text: 'zygote'
+      },
+      {
+        id: 'opt3',
+        text: 'fertilisation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Pollination happens when pollen from the male part of one flower (anther) travels to the female part of another flower (stigma) by sticking on insects and animals like bees. '
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is half correct. Male gametes and female gametes join together to create a zygote. The other correct answer can also be fertilisation.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. The fusion or joining together of male gametes and female gametes is called fertilisation. This creates a zygote (fused cell), which then grows into the embryo and seed.'
+      }
+    ]
+  }, {
+    id: 'describe-fertilisation',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Fertilisation Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    How does the process of fertilisation take place in flowers?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Flowers have a male part called Stamen. Stamen has anther, which also has pollen(sneeze).
+
+            Flowers also have a female part called Pistil. Pistil has stigma, style, ovary and ovules.
+
+            Ok, so when a bee comes to a flower, the pollen sticks to it. When it goes to another flower of the same type, it transfers the pollen on to that flower.
+
+            Now the cells inside pollen move from stigma to style and then to the ovules.
+
+            Then the male reproductive cells (or male gametes) from the pollen combine with the female reproductive cells (or female gametes) in the Ovule. This is called fertilisation and produces and joint cell called zygote.
+
+            This cell can grow to form a seed. An important part of the seed is an embryo.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'flowers-fruits',
+    time: 1,
+    kind: 'image',
+    title: 'From Flowers To Fruits',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We have seen in this chapter that flowers turn to fruits.
+
+    More specifically, here is what happens:
+     - Ovules turn to seeds
+     - Ovary turns to fruit
+
+    One way to remember this is by inventing two new words:
+     - __Ovuleeds__: Ovules turn to seeds
+     - __Ovaruit__: Ovaries turn to fruit
+
+    ![ovule seed ovary fruit ovuleeds ovaruit](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/ovule-seeds-ovary-fruit.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'ovary-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill in the blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    A mature ovary forms the  ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'seed'
+      },
+      {
+        id: 'opt2',
+        text: 'pistil'
+      },
+      {
+        id: 'opt3',
+        text: 'stamen'
+      },
+      {
+        id: 'opt4',
+        text: 'fruit'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Ovules form seeds. A mature ovary forms fruits.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Pistil is the female part of the flower. Ovary is a part of the pistil.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Stamen is the male part of the flower.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. An ovary turns into fruit. You can recall the word __ovaruit__ to remember this.'
+      }
+    ]
+  }, {
+    id: 'seed-dispersal',
+    kind: 'video',
+    time: 5,
+    locked: true,
+    title: 'Seed Dispersal',
+    instructions: dedent`
+      Once a seed has been formed by the plant, the seed can grow into a new plant.
+
+      To have the best chance of growing into a new plant, the seed needs to be far away from the parent. If the seed were to grow right next to the parent, there would be a lot of competition for sunlight and water between the parent and the seed.
+
+      Thus plants benefit from seed dispersal. That simply means movement of seed far away from the parent.
+
+      This can happen in a few ways:
+       - by wind
+       - by animals
+       - by water
+    `,
+    videoId: 'xY4JFOSuqvY',
+    startTime: 23,
+    endTime: 304,
+  },   ]
+}, {
   id: ' 11',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
   title: 'Transportation in Animals and Plants',
