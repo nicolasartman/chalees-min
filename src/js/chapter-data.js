@@ -5906,13 +5906,573 @@ export const chapter7Data = [{
     }
   }, ]
 }, {
+  id: ' 10',
+  title: 'Respiration in Organisms',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter10-thumbnail.jpg',
+  items: [{
+    id: 'lungs-video',
+    kind: 'video',
+    time: 5,
+    title: 'Talking To Dr. Sanjay About Lungs',
+    instructions: dedent`
+    In this video, Dr. Sanjay shares stories from the emergency room in a hospital. He talks about helping patients who could not breathe because they had been shot from a gun.
+
+    While sharing these stories, Dr. Sanjay also talks about how we breathe and why we breathe.
+
+    The video begins with Dr. Sanjay opening the chest of a dead person to explain the location of lungs in the human body.`,
+    videoId: 'F4ApOc4p-CE',
+  }, {
+    id: 'rib-cage-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![skeleton lungs quiz](/learning-items/grade7/lungs-quiz-rib-cage.jpeg)
+
+      The bones surrounding the lungs are called _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'pelvic bones'
+      },
+      {
+        id: 'opt2',
+        text: 'bird cage'
+      },
+      {
+        id: 'opt3',
+        text: 'nic cage'
+      },
+      {
+        id: 'opt4',
+        text: 'rib cage'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. The pelvic bones are shown in the image below. We use these bones to sit.
+
+          ![skeleton pelvic bones](/learning-items/grade7/lungs-quiz-pelvic-bones.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is incorrect. A bird cage has got nothing to do with lungs.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          This is incorrect. Nic Cage is a (somewhat) famous actor in America.
+
+          ![nic cage](/learning-items/grade7/lungs-quiz-nic-cage.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt4'],
+        response: dedent`
+          __Correct__. The bones surrounding the lungs are called rib cage.
+
+          ![skeleton rib cage](/learning-items/grade7/lungs-quiz-rib-cage-solution.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'cells',
+    time: 1,
+    kind: 'image',
+    title: 'What Are Cells?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Let us remind ourselves of the word _cells_.
+
+    Our body is made up of a lot of cells. You have more than 30 trillion cells in your body.
+
+    Cells have an amazing ability to make copies of themselves (almost like a photocopy machine). Also, they can combine to make the different parts of our body, like cheek, skin, blood and bones.`,
+    imagePath: '/learning-items/grade7/cells-cheek-skin-blood.jpeg'
+  }, {
+    id: 'why-do-we-breathe',
+    time: 2,
+    kind: 'image',
+    title: 'Why Do We Breathe Air?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here is a 6-step process that explains why we breathe air:
+     1. We need energy to do things.
+     2. That means our cells need energy.
+     3. We eat food for energy.
+     4. Our blood carries glucose (or simplified food) to all cells of our body.
+     5. Cells convert glucose into energy. To do this they need oxygen. This step is called __Respiration.__
+     6. We breathe air because it has oxygen.
+    `,
+    imagePath: '/learning-items/grade7/why-do-we-breathe-3.jpeg'
+  }, {
+    id: 'respiration',
+    time: 1,
+    kind: 'image',
+    title: 'What Is Respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The process of breaking down food into energy is called __Respiration__. 
+
+    To help you remember this, we made a GIF.
+
+    ![food to energy respiration](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/food-to-energy-respiration-gif-compressor.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'aerobic-respiration',
+    time: 1,
+    kind: 'image',
+    title: 'What is Aerobic Respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    __Respiration__ means converting food to energy.
+    
+    __Aerobic__ means in the presence of air or oxygen.
+    
+    Thus, __aerobic respiration__ means converting food to energy in the presence of oxygen.
+
+    You and I and all of the rest of humans use aerobic respiration to convert our food to energy.
+    `,
+    imagePath: '/learning-items/grade7/aerobic-respiration.jpeg'
+  }, {
+    id: 'aerobic-respiration-how-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'How To Remember Aerobic Respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    This phrase, __aerobic respiration__, can be tough to remember. Here is one way to remember it.
+
+    __Aero__ means air.
+
+    Think of the word _Aeroplane_, or a plane that moves through the air.
+
+    Thus, aerobic respiration means respiration in the presence of oxygen.
+    `,
+    imagePath: '/learning-items/grade7/aero-means-air-aerobic-respiration.jpeg'
+  }, {
+    id: 'why-do-people-breathe-fast-when-they-run',
+    kind: 'textResponse',
+    time: 3,
+    title: 'Quiz On Running',
+    short: true,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+  
+    ![running athlete](/learning-items/grade7/why-we-breathe-fast-when-we-run.jpeg)
+
+    Why does an athlete breathe faster and deeper than usual after finishing the race?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            When we run, our body needs more energy than when we do during other tasks like sleeping.
+
+            To get energy, the cells in our body need to convert glucose into energy. To do that our cells need oxygen.
+
+            Now since the cells need more energy, they need to convert more glucose into energy, and thus the cells need more oxygen.
+
+            Since oxygen is part of the air, the athlete breathes faster and deeper after running to take in more oxygen into their body.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'anaerobic-respiration',
+    time: 1,
+    kind: 'image',
+    title: 'What is Anaerobic Respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    __Respiration__ means converting food to energy.
+    
+    __Anaerobic__ means in the absence of air or oxygen.
+    
+    Thus, __anaerobic respiration__ means converting food to energy without using oxygen.
+
+    Yeast, a micro-organism used to make alcohol and beer, uses anaerobic respiration.
+    `,
+    imagePath: '/learning-items/grade7/anaerobic-respiration.jpeg'
+  }, {
+    id: 'anaerobic-respiration-how-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'How To Remember Anaerobic Respiration?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent` 
+    This phrase, __anaerobic respiration__, can be tough to remember. Here is one way to remember it.
+
+    The first two letters __"an"__ in anaerobic mean without. 
+
+    Think of the word _Analphabet_, which means a person without the letters of the alphabet or someone who cannot read or write.
+
+    And we know that __aero__ means air or oxygen.
+
+    Thus, __anaerobic__ means without oxygen.
+    `,
+    imagePath: '/learning-items/grade7/anaerobic-respiration-remember.jpeg'
+  }, {
+    id: 'difference-aerobic-anaerobic',
+    kind: 'textResponse',
+    time: 3,
+    title: 'Difference Between Aerobic and Anaerobic',
+    short: true,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    What is the main difference between aerobic and anaerobic respiration?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`
+            Aerobic means with oxygen.
+
+            Anaerobic means without oxygen.
+
+            That is the main difference.
+
+            To remember the meaning of aerobic, I just think of an aeroplane, which flies in the air. Thus aerobic means with air or oxygen.
+
+            And anaerobic is just the opposite of that.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'yeast-anaerobes',
+    time: 1,
+    kind: 'image',
+    title: 'Yeast Can Live Without Air',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This is what dried and powdered yeast looks like. It is used to make beer and alcohol.
+
+    ![dried powdered yeast](/learning-items/grade7/dried-powder-yeast.jpeg)
+
+    If you put yeast under the microscope, this is what they look like.
+
+    ![yeast under microscope](/learning-items/grade7/yeast-under-microscope.jpeg)
+
+    Yeast use __anaerobic respiration__.
+
+    That means that yeast do not need oxygen to convert food into energy. They can survive without air. Here is the anaerobic respiration equation again:
+
+    _Glucose (in the absence of oxygen) --> Energy + Carbon dioxide + Alcohol_
+
+    One of the things produced here is alcohol. Thus, yeast are used to make beer and wine.
+
+    By the way, because yeast use anaerobic respiration they are called __anaerobes__. 
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'human-muscles-anaerobic-respiration',
+    time: 2,
+    kind: 'image',
+    title: 'Our Muscles (Sometimes) Do Not Need Oxygen',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When we run or do heavy exercise, our muscles need a lot of energy. Thus we breathe fast so we can take in more oxygen to convert more glucose into energy.
+
+    But even with breathing fast, the supply of oxygen is limited.
+    
+    So muscles convert glucose into energy _without oxygen_ to fulfill the demand for additional energy; this process, as you know, is called anaerobic respiration.
+
+    In muscles, this process also produces something called lactic acid.
+    
+    Lactic acid is poisonous and can cause muscles to stop working. This is why we feel a burning sensation or soreness in our muscles during heavy exercise.
+
+    ![human muscles anaerobic respiration](/learning-items/grade7/human-muscles-anaerobic-respiration.jpeg)
+
+    By the way, animals like Gazelles and Deer need a lot of energy when they are being chased by a predator like Cheetah. 
+
+    In such situations Gazelles and Deer also go through anaerobic respiration. 
+    `,
+    imagePath: '/learning-items/grade7/gazelle-deer-anaerobic-respiration.jpeg'
+  }, {
+    id: 'lactic-acid-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      During heavy exercise, we get muscle pain in the legs due to the buildup of ___________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'carbon dioxide'
+      },
+      {
+        id: 'opt2',
+        text: 'lactic acid'
+      },
+      {
+        id: 'opt3',
+        text: 'alcohol'
+      },
+      {
+        id: 'opt4',
+        text: 'water'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Carbon dioxide does not cause muscle pain.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. When our muscles convert glucose to energy in the absence of oxygen, they also produce Lactic Acid. This acid is poisonous and causes muscle pain.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Alcohol is produced by Yeast, but it is not produced in human muscles.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. '
+      }
+    ]
+  }, {
+    id: 'how-do-we-breathe',
+    kind: 'video',
+    time: 2,
+    title: 'How Do We Breathe?',
+    instructions: dedent`
+    In this video you will see how we breathe.
+
+    We will also see some new words like _nostrils, nasal cavity, chest cavity, and diaphragm_. This video and the rest of this chapter will explain these new words. 
+
+    When we inhale (or breathe in), air passes through our nostrils, into the nasal cavity, then to the windpipe, and then to our lungs. 
+
+    The oxygen from the air in our lungs is then picked up by red blood cells and taken to all cells in our body.
+
+    The lungs are located in the chest cavity and are surrounded by bones called the rib cage, which protect the lungs. 
+
+    A muscular sheet called diaphragm forms the bottom of the chest cavity.`,
+    videoId: 'V81C7m0LQxA',
+    startTime: 12,
+    endTime: 115,
+  }, {
+    id: 'ribs-movement-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz On Ribs',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      During exhalation (or breathing out), the ribs
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'move outwards'
+      },
+      {
+        id: 'opt2',
+        text: 'move downwards'
+      },
+      {
+        id: 'opt3',
+        text: 'move upwards'
+      },
+      {
+        id: 'opt4',
+        text: 'do not move'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The ribs move outwards while breathing in or inhalation.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. When we exhale or breathe out our ribs move inwards and downwards.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. The ribs move upwards while breathing in or inhalation.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Ribs move when we breathe.'
+      }
+    ]
+  }, {
+    id: 'cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A cavity is an empty space in a solid object.
+
+    You can find cavities in teeth and trees.
+
+    Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth. 
+    `,
+    imagePath: '/learning-items/grade7/cavities-teeth-tree-cave.jpeg'
+  }, {
+    id: 'nasal-cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is The Nasal Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The nasal cavity is a large air filled space above and behind the nose, and in the middle of the face.
+    `,
+    imagePath: '/learning-items/grade7/nasal-cavity.jpeg'
+  }, {
+    id: 'chest-cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is The Chest Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The chest cavity is surrounded by the rib cage, the backbone and the breast bone (which is a flat bone running down the centre of the chest). 
+
+    The chest cavity is separated from the intestines in the abdomen by a sheet of muscle called the diaphragm. 
+    `,
+    imagePath: '/learning-items/grade7/chest-cavity-2.jpeg'
+  }, {
+    id: 'diaphragm',
+    kind: 'video',
+    time: 2,
+    title: 'Diaphragm',
+    instructions: dedent`
+    The speaker in this video will use some big, tough words. Do not worry about them. In fact, you should __watch this video on mute__ (with no sound). Simply observe how the diaphragm moves in this video. 
+
+    Diaphragm  is a sheet of muscle, which separates the chest from the intestines.
+    
+    The _"G"_ is silent in the word diaphragm. This is similar to words like _align_ and _high_.
+      
+    When watching the video, notice that when we inhale, the ribcage moves outwards and upwards and the diaphragm moves down. This creates space for lungs to expand.
+
+    The opposite happens when we exhale or breathe out.`,
+    videoId: 'hp-gCvW8PRY',
+    endTime: 66,
+  }, {
+    id: 'diaphragm-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Diaphragm can be found in the _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'cranial cavity'
+      },
+      {
+        id: 'opt2',
+        text: 'chest cavity'
+      },
+      {
+        id: 'opt3',
+        text: 'abdominal cavity'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. Cranial cavity is the space inside the skull.
+
+          ![cranial cavity](/learning-items/grade7/cranial-cavity-quiz.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+          __Correct__. Diaphragm forms the bottom of the chest cavity.
+
+          ![chest cavity](/learning-items/grade7/chest-cavity-quiz.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          This is incorrect. Abdominal cavity contains our stomach and intestines and is located below the chest cavity.
+
+          ![abdominal cavity](/learning-items/grade7/abdominal-cavity-quiz.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'what-do-we-breathe-out',
+    kind: 'video',
+    time: 2,
+    title: 'Do We Breathe Out Oxygen? Yes.',
+    instructions: dedent`
+    So we know that we breathe in oxygen and breathe out carbon dioxide.
+
+    Actually, that is not completely correct.
+
+    __Breathing In__: When we breathe in air, we breathe in all gases that make up the air. Oxygen is 21% of air. So 21% of every breath we inhale is oxygen. And only 0.04% of air is carbon dioxide. So 0.04% of every breath we take in is carbon dioxide.
+
+    __Breathing Out__: When we exhale, we breathe out a mixture of gases. 4 to 6% of the air we exhale is carbon dioxide. And 16% of the air we exhale is oxygen. We use some of the oxygen we inhaled, and the rest we simply breathe out.`,
+    videoId: 'TA2s6uo_vTQ',
+  }, {
+    id: 'detecting-carbon-dioxide',
+    kind: 'video',
+    time: 2,
+    title: 'Detecting Carbon dioxide',
+    instructions: dedent`
+    4 to 6% of every breath we exhale is carbon dioxide. This video shows a simple experiment to detect the presence of carbon dioxide in our breath.
+
+    To do this experiment you will need limewater. In Hindi that means chuna (limestone) mixed with some water.`,
+    videoId: 'xvQNaAFkE6c',
+    startTime: 22,
+    endTime: 79,
+  }, {
+    id: 'read-and-draw',
+    kind: 'imageResponse',
+    time: 10,
+    locked: true,
+    title: 'Read and Draw',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    From your science book, read sections _10.5, 10.6 and 10.7_ on pages 115 and 116. These are really short sections that you will be able to read in a few minutes.
+
+    Then use a _pencil and paper_ to draw a cartoons of what you have learned from these sections. Take a picture of that cartoon and upload it here.`,
+    /*
+    hacks: {
+      afterBody: {
+        preface: 'The image below was made and uploaded by Prabsimar, a student of class 6 at Ahlcon International School.',
+        show: 'locked',
+        feedbackImagePath: '/image-response-feedback/dl-components-of-food.jpeg',
+      }
+    }
+    */
+  },  ]
+}, {
   id: ' 12',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter-12-thumbnail.jpg',
   title: 'Reproduction in Plants',
   items: [{
     id: 'chapter-12-video-poem',
     kind: 'video',
-    time: 2,
+    time: 3,
     title: 'Asexual Reproduction in Plants',
     instructions: dedent`
       This video is a poem about asexual reproduction in plants.
@@ -5921,7 +6481,7 @@ export const chapter7Data = [{
 
       We know that plants can make more of themselves through seeds. But plants can also reproduce through stems and leaves; in other words, plants can reproduce asexually. Let us watch to learn more.
     `,
-    videoId: 'Y2_A18dqeFY',
+    videoId: '1bzUlxAMiqI',
   }, {
     id: 'spore-quiz',
     kind: 'multipleChoiceResponse',
