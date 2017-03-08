@@ -5906,6 +5906,509 @@ export const chapter7Data = [{
     }
   }, ]
 }, {
+  id: ' 9',
+  title: 'Soil',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter9-thumbnail.jpg',
+  items: [{
+    id: 'how-is-soil-formed-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'How Is Soil Formed?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![how is soil formed](/learning-items/grade7/how-is-soil-formed-quiz.jpeg)
+
+      Can you tell me how is soil formed? Select the best response from the following.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'I do not know'
+      },
+      {
+        id: 'opt2',
+        text: 'Rocks break down to make soil'
+      },
+      {
+        id: 'opt3',
+        text: 'In factories'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'It is completely ok that you do not know. Let us learn how soil is formed next.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Rocks are broken down by wind and water to form soil. Let us learn about this next.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. Soil is not formed in factories. Let us learn how soil is formed next.'
+      }
+    ]
+  }, {
+    id: 'weathering',
+    time: 1,
+    kind: 'image',
+    title: 'Weathering',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Look at this strange looking rock. It took wind thousands of years to turn a large rock into the shape of a mushroom. 
+
+    When the wind changes the shape of a rock, it also erodes or breaks down parts of the rock. These eroded particles are further broken down by wind to form soil. 
+  
+    The process by which rocks are broken down into soil by wind (and water and other climate factors) is called Weathering.
+ `,
+    imagePath: '/learning-items/grade7/how-is-soil-formed.jpeg'
+  }, {
+    id: 'soil-profile',
+    kind: 'video',
+    time: 4,
+    title: 'Layers Of Soil',
+    instructions: dedent`
+    In this video we will look at 4 different layers of soil:
+
+    1) __A Horizon or Top Soil__: This layer is dark in colour and contains humus. Rotting leaves make up humus and humus makes the soil fertile.
+    2) __B Horizon or Middle Layer__: This layer has less humus but more minerals. Also, this layer is harder than the A Horizon.
+    3) __C Horizon__: This is made up of small lumps of rocks with cracks and crevices.
+    4) __Bedrock__: This consists of hard rocks.
+
+    _Note:_ The video also talks about a layer called _O Horizon_, which is the top most layer of soil. Our science book, however, does not mention this layer.
+`,
+    videoId: 'ysIm7ImsK6c',
+    startTime:94,
+    endTime: 310,
+  }, {
+    id: 'soil-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'What Does Soil Contain?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![soil](/learning-items/grade7/soil-quiz.jpeg)
+
+      In addition to the rock particles, the soil contains`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'air and water'
+      },
+      {
+        id: 'opt2',
+        text: 'water and plants'
+      },
+      {
+        id: 'opt3',
+        text: 'minerals, organic matter, air and water'
+      },
+      {
+        id: 'opt4',
+        text: 'water, air and plants'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is correct, but incomplete. Soil contains both air and water. But it also contains minerals and organic matter. Organic matter means the remains of dead plants and animals.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is correct, but incomplete. Soil can contain water. It definitely contains the roots of plants. But it also contains minerals and organic matter. Organic matter means the remains of dead plants and animals.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Soil contains minerals, air and water. It also contains organic matter, which is the dead remains of plants and animals.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is correct, but incomplete. Soil can contain water and air. It definitely contains the roots of plants. But it also contains minerals and organic matter. Organic matter means the remains of dead plants and animals.'
+      }
+    ]
+  }, {
+    id: 'clayey-soil-sandy-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Clayey Soil And Sandy Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    There are two main types of soil we will study: Clayey Soil and Sandy Soil.
+
+    Here is the main difference between them:
+     - Clayey soil has __small__ soil particles.
+     - Sandy soil has __large__ soil particles.
+`,
+    imagePath: '/learning-items/grade7/clayey-small-particles-sandy-big-particles.jpeg'
+  }, {
+    id: 'how-to-remember-clayey-soil-sandy-soil',
+    time: 1,
+    kind: 'image',
+    title: 'How To Remember: Clayey & Sandy Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    It can be hard to remember that Clayey soil has small particles and Sandy soil has large particles. The image below can help you remember this fact.
+
+    Notice that the size of letters in the image is increasing from _A_ to _Z_.
+
+    Letter _C_ stands for Clayey Soil, and the size of letter _C_ is small. This can help you remember that Clayey soil has small particles.
+
+    Letter _S_ stands for Sandy Soil, and the size of letter _S_ is large. This can help you remember that Sandy soil has large particles.
+`,
+    imagePath: '/learning-items/grade7/how-to-remember-clayey-small-particles-sandy-big-particles.jpeg'
+  }, {
+    id: 'difference-between-clayey-soil-sandy-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Difference Between Clayey & Sandy Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    __Clayey Soil__: We know that Clayey soil has small particles. These small particles are packed really tightly with each other. Thus there are only small empty spaces left in between those particles. 
+
+    Small empty spaces leaves very little space for air. Thus Clayey soil does not have a lot of air. Also, water can easily be held in between these small empty spaces. Thus Clayey soil can hold a lot of water.
+
+    __Sandy Soil__: We know that Sandy soil has large particles. These large particles do not fit closely and cannot be packed really tightly. Thus there are large empty spaces in between those particles. 
+
+    Large empty spaces leaves a lot of space for air. That means that Sandy soil has a lot of air or is well aerated. Also, water can easily leak through these large empty spaces. Thus Sandy soil does not hold a lot of water and is dry.
+`,
+    imagePath: '/learning-items/grade7/clayey-less-air-wet-sandy-aerated-less-water-difference.jpeg'
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw and Share',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Use a _pen and paper_ to draw a picture that describes the differences between Clayey Soil and Sandy Soil. 
+
+    Then take a photo of the drawing from your phone and upload it here.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded by Sid, a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/learning-items/grade7/clayey-sandy-difference.jpeg'
+      }
+    }
+  }, {
+    id: 'loamy-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Loamy Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Loamy soil is a mixture of clayey and sandy soil. It also contains another type of soil called silt. 
+
+    Loamy soil is very fertile and used to grow a lot of crops as it also contains a lot of humus. [This video](https://www.youtube.com/watch?v=1_axgwGfCHw) explains humus very well.
+`,
+    imagePath: '/learning-items/grade7/loamy-soil-mixture-clayey-sandy-fertile.jpeg'
+  }, {
+    id: 'how-to-remember-loamy-soil',
+    time: 1,
+    kind: 'image',
+    title: 'How To Remember: Loamy Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    It can be hard to remember that Loamy soil is a mixture of Clayey and Sandy soil. The image below can help you remember this fact.
+
+    Letter _L_ stands for Loamy Soil, and _L_ is in between _C (for Clayey)_ and _S (for Sandy)_. This can help you remember that Loamy soil is a mixture of Clayey and Sandy soil
+`,
+    imagePath: '/learning-items/grade7/loamy-soil-mixture-clayey-sandy-how-to-remember.jpeg'
+  }, {
+    id: 'percolation-rate',
+    time: 3,
+    kind: 'image',
+    title: 'Percolation Rate (Activity 9.4)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    _Activity 9.4 on Page 100_ of your science book, lists the following steps.
+
+    __Step 1__: Imagine you have an empty pipe, and you make the pipe stand in some soil.
+    ![percolation rate empty pipe](/learning-items/grade7/percolation-rate-empty-pipe.jpeg)
+
+    __Step 2__: Then you pour water into that empty pipe from a 200 milliliter bottle. You also start the  timer when you begin pouring.  
+    ![percolation rate pour water](/learning-items/grade7/percolation-rate-pour-water.jpeg)
+
+    __Step 3__: The water will start percolating through the soil or passing through the soil. Wait till __all__ the water has percolated. 
+    ![percolation rate water leaks](/learning-items/grade7/percolation-rate-water-leaks.jpeg)
+
+    __Step 4__: When all the water has passed through the soil, and the pipe is completely empty, stop the timer. Let us say that the time taken was 20 minutes. We can use this experiment to calculate the __Percolation Rate__. 
+    ![percolation rate stop watch](/learning-items/grade7/percolation-rate-stop-watch.jpeg)
+
+    Now to understand Percolation Rate, let us first  think of Over Rate in cricket.
+    ![over rate cricket](/learning-items/grade7/over-rate-cricket.jpeg)
+
+    Over Rate is the speed with which a team bowls their overs. 
+
+    It is calculated by dividing the number of overs bowled by the time taken to bowl those overs. So if 30 overs were bowled in 3 hours, the over rate is 10 overs per hour.
+    ![over rate example](/learning-items/grade7/overrate-example.jpeg)
+
+    Similarly, __Percolation Rate__ is the speed with which water can pass through the soil. 
+
+    It is calculated by dividing the amount of water poured in soil by the time it took to percolate. So if it takes 200 mL of water 20 minutes to pass through soil, the percolation rate is 10 mL/min.
+`,
+    imagePath: '/learning-items/grade7/percolation-rate-example.jpeg'
+  }, {
+    id: 'percolation-rate-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Percolation Rate Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Razia conducted an experiment in the field related to the rate of percolation. 
+
+    She observed that it took 40 min for 200 mL of water to percolate through the soil sample. Calculate the rate of percolation.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '10 mL/min'
+      },
+      {
+        id: 'opt2',
+        text: '5'
+      },
+      {
+        id: 'opt3',
+        text: '5 mL/min'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent
+        `This is not correct. Percolation rate is calculated by dividing the amount of water (200 mL) with the time taken (40 min). So 200 mL divided by 40 min gives us 5 mL/min.
+        
+        ![percolation rate quiz](/learning-items/grade7/percolation-rate-quiz.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is half correct as the units are missing. The correct answer should be 5 mL/min. Percolation rate is calculated by dividing the amount of water (200 mL) with the time taken (40 min). So 200 mL divided by 40 min gives us 5 mL/min'
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`__Correct__. Percolation rate is calculated by dividing the amount of water (200 mL) with the time taken (40 min). So 200 mL divided by 40 min gives us 5 mL/min.
+        
+        ![percolation rate quiz](/learning-items/grade7/percolation-rate-quiz.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'highest-percolation-rate',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Highest Percolation Rate',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Which soil would have the highest rate of percolation?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Clayey'
+      },
+      {
+        id: 'opt2',
+        text: 'Loamy'
+      },
+      {
+        id: 'opt3',
+        text: 'Sandy'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`No this is not correct. 
+
+        Clayey soil has small particles. These small particles are packed tightly against each other, and thus there are only small spaces between these particles. Water is easily held in between these small spaces, and thus the percolation of water (speed with which water passes Clayey soil) would be slow.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`No this is not correct. 
+
+        Loamy soil is a mixture of Clayey and Sandy soil. Since this type of soil has both big and small particles, its percolation rate will be higher than Clayey but lower than Sandy soil.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`__Correct__. 
+
+        Sandy soil has large particles. These large particles are NOT packed tightly against each other, and thus there are large spaces between these particles. Water can easily leak or percolate in between these large spaces. Thus the percolation of water (or the speed with which water passes Sandy soil) would be highest.`
+      }
+    ]
+  }, {
+    id: 'percolation-rate-video',
+    kind: 'video',
+    time: 3,
+    title: 'Video On Percolation Rate',
+    instructions: dedent`
+    In this experiment we will use 3 different soil samples: Sandy, Loamy and Clayey.
+
+    We will then pass red-coloured water through each of them to see which soil lets the most amount of water pass through it.
+
+    ![percolation rate experiment](/learning-items/grade7/percolation-rate-experiment.jpeg)
+
+    You will see that Sandy Soil has the highest percolation rate. That means that water passes through sand faster than it does through loam or clay.
+
+    Sand has large particles. These large particles are NOT packed tightly against each other, and thus there are large spaces between these particles. Water can easily leak or percolate in between these large spaces. 
+
+    But Clay and Loam do not have large particles and thus they can hold water better than Sand.
+
+    Thus the percolation of water for Sand (or the speed with which water passes Sandy soil) is the highest.`,
+    videoId: 'N_pARn50GHo',
+  }, {
+    id: 'soil-contains-moisture',
+    time: 1,
+    kind: 'image',
+    title: 'Soil Contains Moisture (Activity 9.5)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    This experiment will show that soil contains water or moisture.
+
+    Take a spoon full of soil and put it into a test tube. Then heat that test tube. 
+
+    Very soon, water in the soil will evaporate. Some of this evaporated water vapour will condense on the inner side of the test tube. Thus, you will soon see droplets of water on the inner sides of the test tube. This shows that soil contains water.
+`,
+    imagePath: '/learning-items/grade7/moisture-in-water.jpeg'
+  }, {
+    id: 'seeing-moisture-in-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Seeing Water Evaporate From Soil',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Look at this GIF carefully. Can you see the air above land shimmer? In other words, can you see the air above land sparkle?
+
+    On a hot day, water vapour evaporates from soil. This vapour reflects the sunlight and thus causes the shimmering you see in the GIF.
+
+    ![water evaporates from soil shimmer](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/water-evaporating-soil.gif)
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'absorption-of-water-in-soil',
+    kind: 'video',
+    time: 3,
+    title: 'Absorption Of Water In Soil (Activity 9.6)',
+    instructions: dedent`
+    In this activity we will take equal amounts of 3 soil samples — Clay, Loam and Sand. We then pour a similar amount of water through each of them.
+    
+    __Clayey Soil__: We find that only a little bit of the water passes through clay. That tells us that clay absorbs a lot of water. 
+
+    Clayey soil has small particles; and small particles have small spaces between them. Those small spaces allow only a little bit of water to pass through. Thus clay absorbs or retains a lot of  water.
+
+    __Sandy Soil__: We also find that most of the water passes through sand. That tells us that sand absorbs very little water. 
+
+    Sand has big particles; and big particles have big spaces between them. Those big spaces allow almost all of the water to pass through. Thus sand absorbs or retains a very small amount of water.
+
+    __Loamy Soil__: Loamy soil is a mixture of sand and clay. Thus, loamy soil absorbs more water than sand but less water than clay. 
+    `,
+    videoId: 'Ond_-SsiWE8',
+    startTime: 50,
+  }, {
+    id: 'soil-absorption-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Soil Absorption Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      The water holding capacity is the highest in ________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'sandy soil'
+      },
+      {
+        id: 'opt2',
+        text: 'clayey soil'
+      },
+      {
+        id: 'opt3',
+        text: 'loamy soil'
+      },
+      {
+        id: 'opt4',
+        text: 'mixture of sand and loam'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Sandy soil does not absorb a lot of water. In fact, almost all of the water passes right through sand.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Clayey soil has the highest water holding capacity.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. Loamy soil is a mixture of clayey and sandy soil. Therefore, the water holding capacity of loamy soil is less than that of clay.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is not correct. Sand does not absorb a lot of water. While a mixture of sand and loam will absorb more water than pure sand, it will still not hold as much water as pure clay.'
+      }
+    ]
+  }, {
+    id: 'crops-and-soil',
+    time: 1,
+    kind: 'image',
+    title: 'Soil And Crops',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Clayey and Loamy soils are good at holding water. Thus they are used to grow crops like rice and wheat that require a lot of water.
+
+    ![clayey loamy soil grow rice wheat](/learning-items/grade7/clayey-loamy-soil-grow-rice-wheat.jpeg)
+
+    Sandy or Loamy soils have a lot of air and can drain water easily. Thus, they are used to grow cotton.
+`,
+    imagePath: '/learning-items/grade7/sandy-soil-cotton.jpeg'
+  }, {
+    id: 'pottery-soil-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    locked: true,
+    title: 'Final Soil Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![clayey soil makes pottery](/learning-items/grade7/clayey-soil-make-pottery.jpeg)
+
+      Which soil is best for making pots, toys and statues?
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'sandy soil'
+      },
+      {
+        id: 'opt2',
+        text: 'clayey soil'
+      },
+      {
+        id: 'opt3',
+        text: 'loamy soil'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. '
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. '
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. '
+      }
+    ]
+  },  ]
+}, {
   id: ' 10',
   title: 'Respiration in Organisms',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter10-thumbnail.jpg',
