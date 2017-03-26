@@ -47,6 +47,7 @@ const Application = React.createClass({
           <div>
             <Helmet>
               <meta name="description" content="Chalees Minute School helps students master middle school science topics in 40 minutes or less. We are aligned with NCERT and CBSE curriculum." />
+              <title>Chalees Min School</title>
             </Helmet>
             <LoadingOverlay shouldShow={!this.state.isReady} />
             {this.props.header}
