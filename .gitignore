@@ -48,3 +48,7 @@ dev.config.js
 
 # Gif diff leftovers
 *.orig
+
+# Elm and build stuff
+dist
+elm-stuff

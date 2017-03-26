@@ -61,7 +61,9 @@ view : Model -> Html Msg
 view model =
     case model.page of
         Home ->
-            HomeFrame.view model
+            div []
+                [ text "oh, hi!"
+                ]
 
         Potato ->
             div [] []
