@@ -28,6 +28,8 @@ const Chapter = React.createClass({
   async initializeSubscriptions(chapterId) {
     this.databaseReferences = [];
     const currentChapter = chapters.find(chapter => chapter.id === chapterId);
+    // more hacks!
+    document.title = currentChapter.title + ' - Chalees Min School';
     const user = await authorize();
     if (user) {
       this.databaseReferences = currentChapter.items.map((learningItem) => {
