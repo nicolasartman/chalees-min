@@ -12,7 +12,7 @@ const Header = () => (
         <div className="pure-u-1">
         	<nav className="home-menu pure-menu pure-menu-horizontal main-nav">
         		<Link to="/" className="header-brand">
-              <img src={logo} srcset={logo + " 1x, " + logoHighDpi + " 2x"} role="presentation" className="header-brand-logo" />
+              <img src={logo} srcSet={logo + " 1x, " + logoHighDpi + " 2x"} role="presentation" className="header-brand-logo" />
             </Link>
 
             <UserMenu />

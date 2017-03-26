@@ -4,6 +4,7 @@ import flattenDeep from 'lodash/flattenDeep';
 export const chapter6Data = [{
   id: '1',
   title: 'Food: Where Does It Come From?',
+  description: 'Learn all about how food goes from growing out of the ground to being eaten at the dinner table!',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
   items: [{
     id: 'where-does-food-come-from',
@@ -2185,9 +2186,9 @@ export const chapter6Data = [{
     instructions: dedent`
     How much water does a person in a large city like Delhi use everyday?
 
-    _240 litres per person per day._ 
+    _240 litres per person per day._
 
-    That is equal to about 24 buckets of water each day (if each bucket holds 10 litres of water). 
+    That is equal to about 24 buckets of water each day (if each bucket holds 10 litres of water).
     `,
     imagePath: '/learning-items/how-much-water-does-someone-use-in-delhi-everyday.jpeg'
   }, {
@@ -2240,12 +2241,12 @@ export const chapter6Data = [{
     title: 'What If We Do Not Get Water?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Water shortages can cause violent fights. 
+    Water shortages can cause violent fights.
 
     In large parts of India, people (mostly women) spend a lot of time collecting drinking water for their families.
 
     Watch these two videos — [Video 1](http://video.nytimes.com/video/2006/09/28/world/1194817098866/part-1-water-woes-in-india.html) and [Video 2](http://video.nytimes.com/video/2006/09/28/world/1194817115048/part-2-water-woes-in-india.html) — from the New York Times to see the current state of fresh water in Indian cities.
-    
+
     Even though these videos were made in 2006, the situation has only gotten worse in the last decade.
     `,
     imagePath: '/learning-items/water-shortage.jpeg'
@@ -2356,7 +2357,7 @@ export const chapter6Data = [{
 
     After some time you will see some water droplets on the outside of the bottle. Why?
 
-    ![condensation around a bottle](/learning-items/condensation-around-bottle.jpeg)    
+    ![condensation around a bottle](/learning-items/condensation-around-bottle.jpeg)
     `,
     hacks: {
       afterBody: {
@@ -2367,7 +2368,7 @@ export const chapter6Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-              Yes, I have seen this happen. Not just with water, but with all other cold drinks also. I think this is because of condensation. 
+              Yes, I have seen this happen. Not just with water, but with all other cold drinks also. I think this is because of condensation.
 
               There is water vapour in the air around the bottle. The bottle is cold. That cold bottle cools the water vapour, which condenses back into tiny water droplets. We see these water droplets outside the bottle.`
           }
@@ -2807,7 +2808,7 @@ export const chapter6Data = [{
     The green dustbin is meant for plant waste like leftover food. This waste is biodegradable; in other words, this waste can rot or decompose. Since this waste is damp, it is also called wet waste.
 
     The blue dustbin is meant for objects like plastics and glass, which do not biodegrade and need to be recycled. This type of waste is sometimes called dry waste.
-    
+
     Sometimes, I have noticed, that people do not put the right type of waste in the correct dustbin.
     `,
     imagePath: '/learning-items/dustbin-types-wet-dry-waste.jpeg'
@@ -2830,7 +2831,7 @@ export const chapter6Data = [{
     title: 'Vermicomposting',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The method of making compost from kitchen garbage using redworms is called vermicomposting. 
+    The method of making compost from kitchen garbage using redworms is called vermicomposting.
 
     The word _Vermi_ simply means _Worms_.
     `,
@@ -2875,9 +2876,9 @@ export const chapter6Data = [{
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
             response: dedent`
-            Add a small amount of new food waste in one corner of the pit. 
+            Add a small amount of new food waste in one corner of the pit.
 
-            All the worms shift to that part of the bin. 
+            All the worms shift to that part of the bin.
 
             Remove the worm free compost from your bin.`
           }
@@ -3079,7 +3080,7 @@ export const chapter7Data = [{
     time: 3,
     title: 'Autotroph, Heterotroph and Saprotroph',
     instructions: dedent`
-      These 3 words can be confusing. 
+      These 3 words can be confusing.
 
       Watch this short video to understand and remember the meaning of Autotroph, Heterotroph and Saprotroph.
     `,
@@ -3136,7 +3137,7 @@ export const chapter7Data = [{
     Imagine a friend of yours is struggling to remember the definition of Saprotrophs.
 
     What will you tell him/her that will help them remember the definition of Saprotrophs? Write your answer in the box below.`,
-    
+
   }, {
     id: 'photosynthesis-again',
     time: 1,
@@ -3146,12 +3147,12 @@ export const chapter7Data = [{
     instructions: dedent`
     I know you have been studying photosynthesis for years now. And that it may be boring. But since the definition of photosynthesis is in the science book, let us look at it one more time.
 
-    Sun is the source of energy of most living organisms. 
+    Sun is the source of energy of most living organisms.
 
     Plants use sunlight, carbon dioxide from the air, and water from the soil to make food (carbohydrates) and produce oxygen. This process is called photosynthesis.
 
     In the absence of photosynthesis, there would be no food, and life would be impossible on earth.`,
-    
+
     imagePath: '/learning-items/grade7/photosynthesis.jpeg',
 
   }, {
@@ -3170,7 +3171,7 @@ export const chapter7Data = [{
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    We know that plants get water from the soil. 
+    We know that plants get water from the soil.
 
     How do they absorb Carbon dioxide and give out Oxygen?`,
     maxSelected: 1,
@@ -3214,7 +3215,7 @@ export const chapter7Data = [{
     In the picture below, we have zoomed into an image of the leaf. There you see two stomata that look like tiny mouths surrounded by swollen lips.
 
     Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
-  
+
     imagePath: '/learning-items/grade7/stomata-means-mouths.jpeg',
 
   }, {
@@ -3225,7 +3226,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
-  
+
     imagePath: '/learning-items/grade7/stomata-diagram.jpeg',
 
   }, {
@@ -3235,14 +3236,14 @@ export const chapter7Data = [{
     title: 'Open and Closed Stomata',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Stomata open to absorb carbon dioxide, which is needed for photosynthesis. 
+    Stomata open to absorb carbon dioxide, which is needed for photosynthesis.
 
     Now, when stomata are open, water is also lost.
 
     Therefore, when carbon dioxide is not needed by the plant, the stomata close to avoid water loss.
 
     Here you are looking at a microscopic image of an open and closed stoma.`,
-  
+
     imagePath: '/learning-items/grade7/stomata-from-microscope-2.jpeg',
 
   }, {
@@ -3258,7 +3259,7 @@ export const chapter7Data = [{
     What is the most difficult stomata-related question you would ask in that exam?
 
     Tell us in the space below.`,
-    
+
   }, {
     id: 'cholorophyll-meaning',
     time: 1,
@@ -3266,13 +3267,13 @@ export const chapter7Data = [{
     title: 'What is Chlorophyll?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    _Chloro_ means green. 
+    _Chloro_ means green.
     _Phlly_ means leaf.
 
     Chlorophyll is a green pigment in leaves that captures energy from sunlight, which is later used to make food.
 
     In the image below, we have zoomed into a picture of a leaf. The green substance inside the round spheres is Chlorophyll.
-    `, 
+    `,
     imagePath: '/learning-items/grade7/chlorophyll-definition-3.jpeg',
   }, {
     id: 'cholorophyll-analogy',
@@ -3284,7 +3285,7 @@ export const chapter7Data = [{
     Chlorophyll is like Solar Panels; they both help capture energy from the sun.
 
     The energy captured by Chlorophyll is used to make food for plants.
-    
+
     The energy capture by Solar Panels is used to light homes.
     `,
     imagePath: '/learning-items/grade7/chlorophyll-like-solar-panels.jpeg',
@@ -3387,7 +3388,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     A parasite is an organism that derives its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites & humans are their hosts
-    
+
     Amarbel, the yellow plant you saw in a previous example, is also a parasite.
 
     You can think of parasites as heterotrophs.
@@ -3401,9 +3402,9 @@ export const chapter7Data = [{
     instructions: dedent`
       Insect eating plants are called Insectivorous Plants.
 
-      In the video below, you will see how a Pitcher Plant consumes a snail. 
+      In the video below, you will see how a Pitcher Plant consumes a snail.
 
-      When a snail (or some insect) lands in the pitcher, they are digested by the digestive juices inside the pitcher. 
+      When a snail (or some insect) lands in the pitcher, they are digested by the digestive juices inside the pitcher.
 
       Plants like the Pitcher Plant, do not get all of the nutrition they need from photosynthesis, and thus need to feed on snails and other insects.
       `,
@@ -3449,7 +3450,7 @@ export const chapter7Data = [{
     time: 8,
     title: 'Food\'s Journey',
     instructions: dedent`
-      In this video we talk to a person who experiences a lot of digestion-related problems. 
+      In this video we talk to a person who experiences a lot of digestion-related problems.
 
       Through our conversation, we discuss the journey of food from the mouth to the toilet.
     `,
@@ -3501,7 +3502,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     We discussed a lot of new ideas while talking to Sunil Sir in the video above.
-    
+
     Use a _pen and paper_ to draw a picture that shows everything you learned from that video.
 
     Then take a photo of that drawing from your phone and upload it here.`,
@@ -3512,7 +3513,7 @@ export const chapter7Data = [{
     title: 'Ingestion, Digestion, Egestion',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Ingestion, simply put, is eating. The word _Ingestion_, reminds me of the word _Insert._ When we eat, we are ingesting (or inserting) food in our body. 
+    Ingestion, simply put, is eating. The word _Ingestion_, reminds me of the word _Insert._ When we eat, we are ingesting (or inserting) food in our body.
 
     Digestion is the process of breaking food down into smaller substances that can be used by the body.
 
@@ -3528,7 +3529,7 @@ export const chapter7Data = [{
     time: 2,
     title: 'Ingestion in Starfish',
     instructions: dedent`
-      Here is a video that shows how starfish eat. 
+      Here is a video that shows how starfish eat.
 
       A starfish pops out its stomach through its mouth to eat its food.
     `,
@@ -3570,7 +3571,7 @@ export const chapter7Data = [{
 
     Alimentary Canal is the passage through which the food passes in our body.
 
-    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus. 
+    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus.
     `,
     imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
   }, {
@@ -3598,7 +3599,7 @@ export const chapter7Data = [{
       Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
 
     What will you tell him/her that will help them remember the definition of Alimentary Canal? Write your answer in the box below.`,
-    
+
   }, {
     id: 'mouth-or-stomach',
     kind: 'multipleChoiceResponse',
@@ -3645,7 +3646,7 @@ export const chapter7Data = [{
     title: 'Saliva and Starch',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Starch can be found in foods like pasta. It is sometimes known as a complex sugar. 
+    Starch can be found in foods like pasta. It is sometimes known as a complex sugar.
 
     Saliva can begin the process of digestion by turning the complex sugars in Starch into simple sugars. Our body can then use these simple sugars for energy.
     `,
@@ -3674,7 +3675,7 @@ export const chapter7Data = [{
 
     Humans have four types of teeth: Incisors, Canines, Pre-Molars, and Molars. [This video](https://www.youtube.com/watch?v=UA8o59seAow) will introduce you to different types of teeth.
 
-    Also, bacteria in the mouth react with the leftover food that is stuck between teeth to produce acid. This acid can damage the teeth. [This video](https://www.youtube.com/watch?v=_oIlv59bTL4) shows how proper brushing can avoid tooth decay. 
+    Also, bacteria in the mouth react with the leftover food that is stuck between teeth to produce acid. This acid can damage the teeth. [This video](https://www.youtube.com/watch?v=_oIlv59bTL4) shows how proper brushing can avoid tooth decay.
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
   }, {
@@ -3683,9 +3684,9 @@ export const chapter7Data = [{
     time: 3,
     title: 'How your tongue works',
     instructions: dedent`
-      Your tongue can taste a few different flavours like sweet (ice cream), sour (lemon), salty (potato chips), bitter (coffee) and umami (soy sauce). 
+      Your tongue can taste a few different flavours like sweet (ice cream), sour (lemon), salty (potato chips), bitter (coffee) and umami (soy sauce).
 
-      This video will show you how your tongue does all that. 
+      This video will show you how your tongue does all that.
     `,
     videoId: 'C4rdqXXzPGU',
     endTime: 198,
@@ -3727,7 +3728,7 @@ export const chapter7Data = [{
     instructions: dedent`
       ![human stomach](/learning-items/grade7/stomach3.jpeg)
 
-      We learned earlier in the chapter that after the Oesophagus, the food comes to the Stomach. 
+      We learned earlier in the chapter that after the Oesophagus, the food comes to the Stomach.
 
       The stomach is like a mixie or blender, where the food mixes with digestive juices and _______ acid.
 
@@ -3793,7 +3794,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Our body needs bile to digest fats.
 
-    If we did not produce any bile then the fats would not be digested and would be passed in our poop. The indigestible fats will then give our poop a white, greasy look. 
+    If we did not produce any bile then the fats would not be digested and would be passed in our poop. The indigestible fats will then give our poop a white, greasy look.
     `,
     imagePath: '/learning-items/grade7/no-bile-white-poop.jpeg'
   }, {
@@ -3843,14 +3844,14 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Based on studying this entire chapter, here is a summary of how the food gets digested:
-    
+
     _Saliva_
      - breaks starch into simple sugars
-    
+
     _Stomach_
      - HCl kills harmful bacteria
      - digestive juices break down proteins
-    
+
     _Small Intestine_
      - bile breaks down fats
      - pancreatic juice
@@ -3865,9 +3866,9 @@ export const chapter7Data = [{
     time: 1,
     title: 'Digestion in Cows',
     instructions: dedent`
-      When cows eat, they quickly swallow the grass and store it in a part of the stomach called __rumen__. 
+      When cows eat, they quickly swallow the grass and store it in a part of the stomach called __rumen__.
 
-      Here the food is partially digested and is called _cud_. 
+      Here the food is partially digested and is called _cud_.
 
       But later the cud returns to the mouth in small lumps and the cow chews it again. This process is called __rumination__ and these animals are called __ruminants__.
     `,
@@ -3913,7 +3914,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Scouring Quiz',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
       What does the word Scouring mean?`,
     maxSelected: 1,
     choices: [
@@ -3966,12 +3967,12 @@ export const chapter7Data = [{
     title: 'Fleece means Hair',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Fleece, simply put, means hair. I am sure you have heard this nursery rhyme: 
+    Fleece, simply put, means hair. I am sure you have heard this nursery rhyme:
 
     _Mary had a little lamb, her fleece was white as snow._
 
     The word _fleece_ refers to the hair of lamb.`,
-    
+
     imagePath: '/learning-items/grade7/fleece-means-hair.jpeg',
 
   }, {
@@ -3986,7 +3987,7 @@ export const chapter7Data = [{
     _Child rearing_ is the act of raising a child.
 
     _Sheep rearing_ is the act of raising sheep. `,
-    
+
     imagePath: '/learning-items/grade7/rearing-means-to-raise.jpeg',
 
   }, {
@@ -4013,7 +4014,7 @@ export const chapter7Data = [{
      - Angora Goats in J&K
      - Llamas in South America
      - Alpacas in South America`,
-    
+
     imagePath: '/learning-items/grade7/animals-that-yield-wool.jpeg',
 
   }, {
@@ -4070,10 +4071,10 @@ export const chapter7Data = [{
     instructions: dedent`
     Yes.
 
-    The sheep grow hair not because we need sweaters, but because the sheep need hair to protect themselves from cold. 
+    The sheep grow hair not because we need sweaters, but because the sheep need hair to protect themselves from cold.
 
     So sheep can feel cold after they are sheared; specially if they are sheared in winters. In some cases, the sheep can even die of cold.`,
-  
+
     imagePath: '/learning-items/grade7/do-sheep-feel-cold-after-they-are-sheared.jpeg',
 
   }, {
@@ -4102,7 +4103,7 @@ export const chapter7Data = [{
     To remember the word Sericulture, I think of the word _Agriculture_, which is the process of raising crops.
 
     Thus, Sericulture is the process of raising silkworms to produce silk.`,
-  
+
     imagePath: '/learning-items/grade7/sericulture-raising-silkworms.jpeg',
 
   }, {
@@ -4115,7 +4116,7 @@ export const chapter7Data = [{
        - Female silk moths (or flying insects) lays thousands of eggs.
        - The eggs turn into larvae (or the baby version of an insect). These larvae are called caterpillars or silkworms.
        - The silkworms eat mulberry leaves for about 25-30 days.
-       - Silkworm begin to secrete a fibre and covers itself in that fibre. This covering is called a cocoon. 
+       - Silkworm begin to secrete a fibre and covers itself in that fibre. This covering is called a cocoon.
        - The silkworm inside the cocoon develops into a silk moth (or flying insect).
        - To obtain silk, the cocoons are boiled. This kills the silkworm inside and prevents it from turning into a moth and coming out of the cocoon.
        -  Silk fibres from cocoons are removed and then spun together to make silk thread.
@@ -4129,7 +4130,7 @@ export const chapter7Data = [{
     title: 'Silkworm Quiz',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Silkworm is (a) a caterpillar, (b) a larva. 
+    Silkworm is (a) a caterpillar, (b) a larva.
 
     Choose the correct option.`,
     maxSelected: 1,
@@ -4223,7 +4224,7 @@ export const chapter7Data = [{
     title: 'Why are Cocoons Boiled?',
     instructions: dedent`
       A few weeks after the caterpillar has spun a cocoon, it develops into a silk moth (or a flying insect). They emerge from the cocoon by braking the cocoon and the silk thread.
-      
+
       To prevent the moth from breaking the delicate thread, the cocoons are boiled. This kills the moth inside. The undamaged silk thread can then be removed from the cocoon.
 
       The video below shows what would happen if the cocoons were __not__ boiled — in that case the silk moth would emerge from the cocoon. This video running in fast forward mode. It shows 16 minutes of recorded video tape in 4 minutes.
@@ -4239,7 +4240,7 @@ export const chapter7Data = [{
     Imagine a friend of yours is struggling to understand the process with which silks are made.
 
     What will you tell him/her that can help them understand that enitre process? Write your answer in the box below.`,
-    
+
   }, {
     id: 'bonus-sericulture-video',
     kind: 'video',
@@ -4264,7 +4265,7 @@ export const chapter7Data = [{
     instructions: dedent`
       In this video, we will use the Tabla to learn about acids and bases.
 
-      Yes, you read that correctly. 
+      Yes, you read that correctly.
 
       We will see that acids are sour and bases are bitter. We will also see how acids and bases change the colour of litmus paper. We will do all of this while listening to the sounds made by the Tabla.
     `,
@@ -4277,7 +4278,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![nitric acid](/learning-items/grade7/nitric-acid-3.jpeg)
-      
+
       Nitric Acid turns blue litmus paper red.
 
       True or False?`,
@@ -4310,7 +4311,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![soap solution base](/learning-items/grade7/soap-solution-2.jpeg)
-      
+
       Soap solution is a base, which turns red litmus paper blue.
 
       True or False?`,
@@ -4343,9 +4344,9 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     An indicator is a substance used to test if something is an acid or base.
- 
+
     Some examples are: litmus paper, turmeric (or haldi), and china rose (or gudhal).`,
-    
+
     imagePath: '/learning-items/grade7/indicators-litmus-paper-turmeric-china-rose.jpeg',
 
   }, {
@@ -4357,10 +4358,10 @@ export const chapter7Data = [{
     instructions: dedent`
     The image below is of Lichen.
 
-    Lichen contains a dye (or colour) called Litmus. 
+    Lichen contains a dye (or colour) called Litmus.
 
     Litmus can be extracted from Lichen and is made available as litmus paper or litmus solution.`,
-    
+
     imagePath: '/learning-items/grade7/lichen-litmus.jpeg',
 
   }, {
@@ -4369,10 +4370,10 @@ export const chapter7Data = [{
     time: 2,
     title: 'Detecting Acids and Bases with Litmus Paper',
     instructions: dedent`
-      Acids turn _blue_ litmus paper red. Also, acids do not change the colour of _red_ litmus paper. 
+      Acids turn _blue_ litmus paper red. Also, acids do not change the colour of _red_ litmus paper.
 
       Bases turn _red_ litmus paper blue. And bases do not change the colour of _blue_ litmus paper.
-      
+
       Watch this video to see how.
       `,
     videoId: '6DCBWK_Hg5w',
@@ -4385,8 +4386,8 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![window cleaner ammonia base](/learning-items/grade7/window-cleaner.jpeg)
-      
-      Ammonia is found in many window cleaners. It turns red litmus blue. 
+
+      Ammonia is found in many window cleaners. It turns red litmus blue.
 
       What is its nature?`,
     maxSelected: 1,
@@ -4437,7 +4438,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![blue litmus paper no colour change](/learning-items/grade7/blue-litmus-stays-blue.jpeg)
 
-    Blue litmus paper was dipped in a solution. It remains blue, and does not change colour. 
+    Blue litmus paper was dipped in a solution. It remains blue, and does not change colour.
 
     What is the nature of the solution? Please explain.`,
     hacks: {
@@ -4449,7 +4450,7 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            I know the solution is not acid. 
+            I know the solution is not acid.
 
             Because when blue litmus paper is dipped in an acid, it changes colour to red.
 
@@ -4467,7 +4468,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Turmeric means Haldi in Hindi; it is used in cooking.`,
-    
+
     imagePath: '/learning-items/grade7/turmeric-haldi.jpeg',
 
   }, {
@@ -4493,7 +4494,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     The following sentence is hard to remember:
-    
+
     _If we add turmeric solution to bases, their colour changes to red._
 
     The GIF below can help us remember that turmeric turns bases to red.
@@ -4509,7 +4510,7 @@ export const chapter7Data = [{
     instructions: dedent`
       China Rose is a flower; another name of China Rose is Hibiscus or Gudhal (in Hindi).
 
-      We can make China Rose solution (or Hibiscus solution) by soaking the petals of this flower in hot water. 
+      We can make China Rose solution (or Hibiscus solution) by soaking the petals of this flower in hot water.
 
       If we add china rose solution to bases, their colour changes to green.
 
@@ -4526,7 +4527,7 @@ export const chapter7Data = [{
     instructions: dedent`
       Which country does this flag represent?
 
-      ![china rose gudhal flag](/learning-items/grade7/china-rose-gurhal-flag.jpeg)      
+      ![china rose gudhal flag](/learning-items/grade7/china-rose-gurhal-flag.jpeg)
 `,
     maxSelected: 1,
     choices: [
@@ -4571,13 +4572,13 @@ export const chapter7Data = [{
     time: 1,
     title: 'Neutralisation',
     instructions: dedent`
-      Watch this video and notice at __1 minute 24 seconds__ when lemon water (which is an acid) is added to soap solution (which is a base). 
+      Watch this video and notice at __1 minute 24 seconds__ when lemon water (which is an acid) is added to soap solution (which is a base).
 
-      After adding a few drops of lemon water, you will notice that the colour of soap solution is no longer red. 
+      After adding a few drops of lemon water, you will notice that the colour of soap solution is no longer red.
 
       This happens because as lemon water, an acid, is added to soap water, a base, the solution becomes neither acidic nor basic. At that point the solution is neutral.
 
-      When an acid and base are mixed, they neutralise or cancel out the effect of each other. This reaction is called neutralisation.      
+      When an acid and base are mixed, they neutralise or cancel out the effect of each other. This reaction is called neutralisation.
     `,
     videoId: 'Olezbt9cxfo',
     startTime: 31,
@@ -4591,7 +4592,7 @@ export const chapter7Data = [{
 
       Sodium Hydroxide (NaOH) is found in soaps; it is a base.
 
-      When we mix HCl and NaOH, neutralisation occurs. This reaction produces salt, water and heat.   
+      When we mix HCl and NaOH, neutralisation occurs. This reaction produces salt, water and heat.
     `,
     videoId: '-eN0Tt2Gu0I',
   }, {
@@ -4603,9 +4604,9 @@ export const chapter7Data = [{
     instructions: dedent`
     ![turmeric](/learning-items/grade7/turmeric.jpeg)
 
-    Three liquids are given to you. 
+    Three liquids are given to you.
 
-    One is Hydrochloric Acid (HCl), another is Sodium Hydroxide (NaOH) and the third is sugar solution. But these liquids are not labelled, so you do not know which is which. 
+    One is Hydrochloric Acid (HCl), another is Sodium Hydroxide (NaOH) and the third is sugar solution. But these liquids are not labelled, so you do not know which is which.
 
     You only have turmeric indicator. How will you identify the 3 liquids?
 `,
@@ -4668,15 +4669,15 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![table 5.2 partial](/learning-items/grade7/table-5-2-litmus-test-partial.jpeg)
-    Click on the links below to see answers from Table 5.2, 5.3 and 5.5 in this chapter. 
+    Click on the links below to see answers from Table 5.2, 5.3 and 5.5 in this chapter.
 
     We strongly recommend that you perform the activities in these tables and then check here to confirm your answers.
 
-    [Table 5.2](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-2-litmus-test.jpeg) — Effect on red and blue litmus paper 
+    [Table 5.2](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-2-litmus-test.jpeg) — Effect on red and blue litmus paper
 
-    [Table 5.3](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-3-turmeric-test.jpeg) — Turmeric Test 
+    [Table 5.3](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-3-turmeric-test.jpeg) — Turmeric Test
 
-    [Table 5.5](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-5-turmeric-china-rose-litmus-test.jpeg) — Effect on litmus paper, turmeric and china rose solution 
+    [Table 5.5](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/table-5-5-turmeric-china-rose-litmus-test.jpeg) — Effect on litmus paper, turmeric and china rose solution
     `,
   imagePath: '/learning-items/white-space-2.jpeg',
   locked: true,
@@ -4693,7 +4694,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![burning match stick](/learning-items/grade7/quiz-match-physical-chemical-change.jpg)
-      
+
       Is burning a matchstick a physical or a chemical change?`,
     maxSelected: 1,
     choices: [
@@ -4741,7 +4742,7 @@ export const chapter7Data = [{
 
     __Changing State:__ Boiling water is a physical change.
 
-    No new substances are produced as a result of this change. 
+    No new substances are produced as a result of this change.
 
     For example, when we cut paper, we are still left with small bits of paper. We have not produced a new substance in this process.`,
   imagePath: '/learning-items/grade7/physical-change4.jpg',
@@ -4782,7 +4783,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![cutting log of wood](/learning-items/grade7/cutting-log-wood.jpeg)
-      
+
       Cutting a log of wood into pieces is a chemical change. True or False?`,
     maxSelected: 1,
     choices: [
@@ -4813,7 +4814,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![melting candle wax](/learning-items/grade7/melting-candle-wax.jpeg)
-      
+
       Is __melting__ of wax a physical or chemical change?`,
     maxSelected: 1,
     choices: [
@@ -4859,7 +4860,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![formation of manure from leaves](/learning-items/grade7/leaves-to-manure.jpeg)
-      
+
       Formation of manure from leaves is a physical change. True or False?`,
     maxSelected: 1,
     choices: [
@@ -4890,7 +4891,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![dissolving sugar in water](/learning-items/grade7/mixing-sugar-water.jpeg)
-      
+
       Is dissolving sugar in water a physical or chemical change?`,
     maxSelected: 1,
     choices: [
@@ -4921,7 +4922,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![condensation of steam](/learning-items/grade7/condensation-of-steam.jpeg)
-      
+
       Condensation of steam is not a chemical change. True or False?`,
     maxSelected: 1,
     choices: [
@@ -4996,7 +4997,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![rusting ship in coastal areas](/learning-items/grade7/rust-ship-near-beach.jpeg)
 
-    Explain why rusting of iron objects is faster in coastal areas than in deserts. 
+    Explain why rusting of iron objects is faster in coastal areas than in deserts.
     `,
     hacks: {
       afterBody: {
@@ -5011,7 +5012,7 @@ export const chapter7Data = [{
 
             Oxygen is present everywhere.
 
-            In coastal areas, air has more moisture (or water) because of the nearby sea. 
+            In coastal areas, air has more moisture (or water) because of the nearby sea.
 
             The water from the sea evaporates and is present as moisture in the air. The air in deserts, however, is dry because there is no water body close by.
 
@@ -5042,7 +5043,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![iron pipes galvanisation](/learning-items/grade7/iron-pipes-galvanised2.jpeg)
-      
+
       Iron pipes coated with zinc do not get rusted easily. True or False?`,
     maxSelected: 1,
     choices: [
@@ -5073,8 +5074,8 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![lpg gas cylinder](/learning-items/grade7/lpg-cylinder-2.jpeg)
-      
-      The gas we use in the kitchen is called Liquified Petroleum Gas (LPG). 
+
+      The gas we use in the kitchen is called Liquified Petroleum Gas (LPG).
 
       In the cylinder it exists as a liquid. When it comes out from the cylinder it becomes a gas (Change A), and then it burns (Change B).
 
@@ -5122,10 +5123,10 @@ export const chapter7Data = [{
     time: 1,
     title: 'Physical or Chemical Change',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
-      Anaerobic bacteria digest animal waste and produce biogas (Change A). 
+    instructions: dedent`
+      Anaerobic bacteria digest animal waste and produce biogas (Change A).
 
-      The biogas is then burnt as fuel (Change B). 
+      The biogas is then burnt as fuel (Change B).
 
       The following statements pertain to these changes. Choose the correct one.`,
     maxSelected: 1,
@@ -5175,7 +5176,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![burning candle](/learning-items/grade7/candle-burning.jpeg)
 
-    When a candle burns, both physical and chemical changes take place. Identify these changes. 
+    When a candle burns, both physical and chemical changes take place. Identify these changes.
 
     Also, give another example of a familiar process in which both the chemical and physical changes take place.`,
     hacks: {
@@ -5187,13 +5188,13 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            I can think of several changes that happen when a candle burns. 
+            I can think of several changes that happen when a candle burns.
 
             When the wax melts, it just changes from solid to liquid, which is a physical change.
 
             When the wax burns, it is used to produce heat and light. Since a new substance is produced in this process, it is a chemical change.
 
-            Finally, when we cook food we see both physical and chemical changes. For example, when we cook vegetables that is a chemical change; and when we boil water that is a physical change. Also, when we roll the dough to make chapatis, that is a physical change. And finally when we put those chapatis on a tava or pan to bake them, that is a chemical change. 
+            Finally, when we cook food we see both physical and chemical changes. For example, when we cook vegetables that is a chemical change; and when we boil water that is a physical change. Also, when we roll the dough to make chapatis, that is a physical change. And finally when we put those chapatis on a tava or pan to bake them, that is a chemical change.
             `
           }
         ]
@@ -5230,7 +5231,7 @@ export const chapter7Data = [{
 
     When baking soda is mixed with lemon juice, bubbles are formed with the evolution of a gas. You can see a [video of that experiment here.](https://www.youtube.com/watch?v=o71ezx5fPZY)
 
-    What type of change is this? Explain. 
+    What type of change is this? Explain.
     `,
     hacks: {
       afterBody: {
@@ -5241,7 +5242,7 @@ export const chapter7Data = [{
             studentName: 'Koushiki',
             imagePath: '/fake-responses/koushiki.png',
             response: dedent`
-            I liked the video link in this quiz. 
+            I liked the video link in this quiz.
 
             When baking soda is mixed with lemon juice, bubbles are produced. These are due to a gas called carbon dioxide.
 
@@ -5265,7 +5266,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Weather is the day to day condition of a place with respect to temperature, humidity, rainfall, and windpseed.
 
-    I am writing this on _January 31st, 2017_, and I am located in _New Delhi_. 
+    I am writing this on _January 31st, 2017_, and I am located in _New Delhi_.
 
     Today, the temperature in Delhi is 21 degree Celsius, with 58% humidity, no rainfall and a windspeed of 14 km/h. It is a very pleasant day.
 `,
@@ -5379,7 +5380,7 @@ export const chapter7Data = [{
     instructions: dedent`
     This cartoon is going to help you remember the definition of humidity.
 
-    Humidity is the amount of moisture in the air. 
+    Humidity is the amount of moisture in the air.
 
     The lady on the laptop thinks that the humidity is high, as the person outside her window is not walking, but is swimming in water.`,
     imagePath: '/learning-items/grade7/humidity-cartoon.jpg'
@@ -5407,12 +5408,12 @@ export const chapter7Data = [{
           },{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
-            response: dedent`#humhaihumid Humidity is the amount of water vapour in the air. 
+            response: dedent`#humhaihumid Humidity is the amount of water vapour in the air.
             `
           },{
             studentName: 'Koushiki',
             imagePath: '/fake-responses/koushiki.png',
-            response: dedent`The time before monsoons is humid because of a lot of moisture in air. #humhaihumid 
+            response: dedent`The time before monsoons is humid because of a lot of moisture in air. #humhaihumid
             `
           },
         ]
@@ -5476,9 +5477,9 @@ export const chapter7Data = [{
     title: 'Climate',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    In the gif below you see monthly average temperatures from 1961–1990. 
+    In the gif below you see monthly average temperatures from 1961–1990.
 
-    For example when you see JAN, you are looking at an average of temperatures in January 1961, and January 1962, all the way to January 1990. 
+    For example when you see JAN, you are looking at an average of temperatures in January 1961, and January 1962, all the way to January 1990.
 
     This image is an example of __climate data__.
 
@@ -5617,7 +5618,7 @@ export const chapter7Data = [{
 
     As you can see the sun has not risen here and the lights are on.
 
-    This picture was taken in Norway, which is in the Arctic (Polar Region). During some months in the winter, the sun does not rise here. 
+    This picture was taken in Norway, which is in the Arctic (Polar Region). During some months in the winter, the sun does not rise here.
 `,
     imagePath: '/learning-items/grade7/arctic-sun-does-not-rise-winter.jpeg'
   }, {
@@ -5667,7 +5668,7 @@ export const chapter7Data = [{
     instructions: dedent`
       ![polar bears](/learning-items/grade7/polar-bears-adaptations-quiz.jpeg)
 
-      Which features adapt polar bears to live in extremely cold climate? 
+      Which features adapt polar bears to live in extremely cold climate?
       `,
     maxSelected: 1,
     choices: [
@@ -5715,7 +5716,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Penguins live in the Southern Hemisphere. This includes Antarctica (which is classified as Polar Region).
 
-    Penguins have thick skin and fat to protect them from the cold. 
+    Penguins have thick skin and fat to protect them from the cold.
 
     Their feet have webs, which act as paddles to provide more surface to push against water. This makes them good swimmers.
 `,
@@ -5784,7 +5785,7 @@ export const chapter7Data = [{
     time: 2,
     title: 'Birds That Fly Over Everest',
     instructions: dedent`
-    Some birds migrate or move over long distances. 
+    Some birds migrate or move over long distances.
 
     For example, the bar-headed goose travels from southern India to central asia. And what is in the middle of those two places? Mount Everest. These birds are seen flying over Mount Everest.
 
@@ -5816,7 +5817,7 @@ export const chapter7Data = [{
 
       This is an image from the forests of Western Ghats in India. They are a part of the tropical rainforests of the world.
 
-      Based on what you know about tropical rainforests, which of the following options best describes a tropical region? 
+      Based on what you know about tropical rainforests, which of the following options best describes a tropical region?
       `,
     maxSelected: 1,
     choices: [
@@ -5876,7 +5877,7 @@ export const chapter7Data = [{
     title: 'Elephant Adaptations',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-  
+
     ![elephant](/learning-items/grade7/elephant-adaptations.jpeg)
 
     How do elephants living in the rainforests adapt themselves?
@@ -5891,10 +5892,10 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            After reading the science book I found that elephants have a strong sense of smell. 
+            After reading the science book I found that elephants have a strong sense of smell.
 
             They have also developed a trunk that can pick up food.
-            
+
             Their large ears help it stay cool in the hot forest.
 
             Their tusks are modified teeth that help them tear the bark of trees, which the elephants can then eat.
@@ -5955,10 +5956,10 @@ export const chapter7Data = [{
     title: 'Weathering',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Look at this strange looking rock. It took wind thousands of years to turn a large rock into the shape of a mushroom. 
+    Look at this strange looking rock. It took wind thousands of years to turn a large rock into the shape of a mushroom.
 
-    When the wind changes the shape of a rock, it also erodes or breaks down parts of the rock. These eroded particles are further broken down by wind to form soil. 
-  
+    When the wind changes the shape of a rock, it also erodes or breaks down parts of the rock. These eroded particles are further broken down by wind to form soil.
+
     The process by which rocks are broken down into soil by wind (and water and other climate factors) is called Weathering.
  `,
     imagePath: '/learning-items/grade7/how-is-soil-formed.jpeg'
@@ -6064,11 +6065,11 @@ export const chapter7Data = [{
     title: 'Difference Between Clayey & Sandy Soil',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    __Clayey Soil__: We know that Clayey soil has small particles. These small particles are packed really tightly with each other. Thus there are only small empty spaces left in between those particles. 
+    __Clayey Soil__: We know that Clayey soil has small particles. These small particles are packed really tightly with each other. Thus there are only small empty spaces left in between those particles.
 
     Small empty spaces leaves very little space for air. Thus Clayey soil does not have a lot of air. Also, water can easily be held in between these small empty spaces. Thus Clayey soil can hold a lot of water.
 
-    __Sandy Soil__: We know that Sandy soil has large particles. These large particles do not fit closely and cannot be packed really tightly. Thus there are large empty spaces in between those particles. 
+    __Sandy Soil__: We know that Sandy soil has large particles. These large particles do not fit closely and cannot be packed really tightly. Thus there are large empty spaces in between those particles.
 
     Large empty spaces leaves a lot of space for air. That means that Sandy soil has a lot of air or is well aerated. Also, water can easily leak through these large empty spaces. Thus Sandy soil does not hold a lot of water and is dry.
 `,
@@ -6080,7 +6081,7 @@ export const chapter7Data = [{
     title: 'Draw and Share',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a _pen and paper_ to draw a picture that describes the differences between Clayey Soil and Sandy Soil. 
+    Use a _pen and paper_ to draw a picture that describes the differences between Clayey Soil and Sandy Soil.
 
     Then take a photo of the drawing from your phone and upload it here.`,
     hacks: {
@@ -6097,7 +6098,7 @@ export const chapter7Data = [{
     title: 'Loamy Soil',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Loamy soil is a mixture of clayey and sandy soil. It also contains another type of soil called silt. 
+    Loamy soil is a mixture of clayey and sandy soil. It also contains another type of soil called silt.
 
     Loamy soil is very fertile and used to grow a lot of crops as it also contains a lot of humus. [This video](https://www.youtube.com/watch?v=1_axgwGfCHw) explains humus very well.
 `,
@@ -6126,24 +6127,24 @@ export const chapter7Data = [{
     __Step 1__: Imagine you have an empty pipe, and you make the pipe stand in some soil.
     ![percolation rate empty pipe](/learning-items/grade7/percolation-rate-empty-pipe.jpeg)
 
-    __Step 2__: Then you pour water into that empty pipe from a 200 milliliter bottle. You also start the  timer when you begin pouring.  
+    __Step 2__: Then you pour water into that empty pipe from a 200 milliliter bottle. You also start the  timer when you begin pouring.
     ![percolation rate pour water](/learning-items/grade7/percolation-rate-pour-water.jpeg)
 
-    __Step 3__: The water will start percolating through the soil or passing through the soil. Wait till __all__ the water has percolated. 
+    __Step 3__: The water will start percolating through the soil or passing through the soil. Wait till __all__ the water has percolated.
     ![percolation rate water leaks](/learning-items/grade7/percolation-rate-water-leaks.jpeg)
 
-    __Step 4__: When all the water has passed through the soil, and the pipe is completely empty, stop the timer. Let us say that the time taken was 20 minutes. We can use this experiment to calculate the __Percolation Rate__. 
+    __Step 4__: When all the water has passed through the soil, and the pipe is completely empty, stop the timer. Let us say that the time taken was 20 minutes. We can use this experiment to calculate the __Percolation Rate__.
     ![percolation rate stop watch](/learning-items/grade7/percolation-rate-stop-watch.jpeg)
 
     Now to understand Percolation Rate, let us first  think of Over Rate in cricket.
     ![over rate cricket](/learning-items/grade7/over-rate-cricket.jpeg)
 
-    Over Rate is the speed with which a team bowls their overs. 
+    Over Rate is the speed with which a team bowls their overs.
 
     It is calculated by dividing the number of overs bowled by the time taken to bowl those overs. So if 30 overs were bowled in 3 hours, the over rate is 10 overs per hour.
     ![over rate example](/learning-items/grade7/overrate-example.jpeg)
 
-    Similarly, __Percolation Rate__ is the speed with which water can pass through the soil. 
+    Similarly, __Percolation Rate__ is the speed with which water can pass through the soil.
 
     It is calculated by dividing the amount of water poured in soil by the time it took to percolate. So if it takes 200 mL of water 20 minutes to pass through soil, the percolation rate is 10 mL/min.
 `,
@@ -6155,7 +6156,7 @@ export const chapter7Data = [{
     title: 'Percolation Rate Quiz',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Razia conducted an experiment in the field related to the rate of percolation. 
+    Razia conducted an experiment in the field related to the rate of percolation.
 
     She observed that it took 40 min for 200 mL of water to percolate through the soil sample. Calculate the rate of percolation.`,
     maxSelected: 1,
@@ -6178,7 +6179,7 @@ export const chapter7Data = [{
         answerSet: ['opt1',],
         response: dedent
         `This is not correct. Percolation rate is calculated by dividing the amount of water (200 mL) with the time taken (40 min). So 200 mL divided by 40 min gives us 5 mL/min.
-        
+
         ![percolation rate quiz](/learning-items/grade7/percolation-rate-quiz.jpeg)
         `
       },
@@ -6189,7 +6190,7 @@ export const chapter7Data = [{
       {
         answerSet: ['opt3'],
         response: dedent`__Correct__. Percolation rate is calculated by dividing the amount of water (200 mL) with the time taken (40 min). So 200 mL divided by 40 min gives us 5 mL/min.
-        
+
         ![percolation rate quiz](/learning-items/grade7/percolation-rate-quiz.jpeg)
         `
       }
@@ -6221,19 +6222,19 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: dedent`No this is not correct. 
+        response: dedent`No this is not correct.
 
         Clayey soil has small particles. These small particles are packed tightly against each other, and thus there are only small spaces between these particles. Water is easily held in between these small spaces, and thus the percolation of water (speed with which water passes Clayey soil) would be slow.`
       },
       {
         answerSet: ['opt2'],
-        response: dedent`No this is not correct. 
+        response: dedent`No this is not correct.
 
         Loamy soil is a mixture of Clayey and Sandy soil. Since this type of soil has both big and small particles, its percolation rate will be higher than Clayey but lower than Sandy soil.`
       },
       {
         answerSet: ['opt3'],
-        response: dedent`__Correct__. 
+        response: dedent`__Correct__.
 
         Sandy soil has large particles. These large particles are NOT packed tightly against each other, and thus there are large spaces between these particles. Water can easily leak or percolate in between these large spaces. Thus the percolation of water (or the speed with which water passes Sandy soil) would be highest.`
       }
@@ -6252,7 +6253,7 @@ export const chapter7Data = [{
 
     You will see that Sandy Soil has the highest percolation rate. That means that water passes through sand faster than it does through loam or clay.
 
-    Sand has large particles. These large particles are NOT packed tightly against each other, and thus there are large spaces between these particles. Water can easily leak or percolate in between these large spaces. 
+    Sand has large particles. These large particles are NOT packed tightly against each other, and thus there are large spaces between these particles. Water can easily leak or percolate in between these large spaces.
 
     But Clay and Loam do not have large particles and thus they can hold water better than Sand.
 
@@ -6267,7 +6268,7 @@ export const chapter7Data = [{
     instructions: dedent`
     This experiment will show that soil contains water or moisture.
 
-    Take a spoon full of soil and put it into a test tube. Then heat that test tube. 
+    Take a spoon full of soil and put it into a test tube. Then heat that test tube.
 
     Very soon, water in the soil will evaporate. Some of this evaporated water vapour will condense on the inner side of the test tube. Thus, you will soon see droplets of water on the inner sides of the test tube. This shows that soil contains water.
 `,
@@ -6293,16 +6294,16 @@ export const chapter7Data = [{
     title: 'Absorption Of Water In Soil (Activity 9.6)',
     instructions: dedent`
     In this activity we will take equal amounts of 3 soil samples — Clay, Loam and Sand. We then pour a similar amount of water through each of them.
-    
-    __Clayey Soil__: We find that only a little bit of the water passes through clay. That tells us that clay absorbs a lot of water. 
+
+    __Clayey Soil__: We find that only a little bit of the water passes through clay. That tells us that clay absorbs a lot of water.
 
     Clayey soil has small particles; and small particles have small spaces between them. Those small spaces allow only a little bit of water to pass through. Thus clay absorbs or retains a lot of  water.
 
-    __Sandy Soil__: We also find that most of the water passes through sand. That tells us that sand absorbs very little water. 
+    __Sandy Soil__: We also find that most of the water passes through sand. That tells us that sand absorbs very little water.
 
     Sand has big particles; and big particles have big spaces between them. Those big spaces allow almost all of the water to pass through. Thus sand absorbs or retains a very small amount of water.
 
-    __Loamy Soil__: Loamy soil is a mixture of sand and clay. Thus, loamy soil absorbs more water than sand but less water than clay. 
+    __Loamy Soil__: Loamy soil is a mixture of sand and clay. Thus, loamy soil absorbs more water than sand but less water than clay.
     `,
     videoId: 'Ond_-SsiWE8',
     startTime: 50,
@@ -6519,7 +6520,7 @@ export const chapter7Data = [{
     title: 'What Is Respiration?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The process of breaking down food into energy is called __Respiration__. 
+    The process of breaking down food into energy is called __Respiration__.
 
     To help you remember this, we made a GIF.
 
@@ -6534,9 +6535,9 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     __Respiration__ means converting food to energy.
-    
+
     __Aerobic__ means in the presence of air or oxygen.
-    
+
     Thus, __aerobic respiration__ means converting food to energy in the presence of oxygen.
 
     You and I and all of the rest of humans use aerobic respiration to convert our food to energy.
@@ -6548,7 +6549,7 @@ export const chapter7Data = [{
     kind: 'image',
     title: 'How To Remember Aerobic Respiration?',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     This phrase, __aerobic respiration__, can be tough to remember. Here is one way to remember it.
 
     __Aero__ means air.
@@ -6566,7 +6567,7 @@ export const chapter7Data = [{
     short: true,
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-  
+
     ![running athlete](/learning-items/grade7/why-we-breathe-fast-when-we-run.jpeg)
 
     Why does an athlete breathe faster and deeper than usual after finishing the race?`,
@@ -6599,9 +6600,9 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     __Respiration__ means converting food to energy.
-    
+
     __Anaerobic__ means in the absence of air or oxygen.
-    
+
     Thus, __anaerobic respiration__ means converting food to energy without using oxygen.
 
     Yeast, a micro-organism used to make alcohol and beer, uses anaerobic respiration.
@@ -6613,10 +6614,10 @@ export const chapter7Data = [{
     kind: 'image',
     title: 'How To Remember Anaerobic Respiration?',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     This phrase, __anaerobic respiration__, can be tough to remember. Here is one way to remember it.
 
-    The first two letters __"an"__ in anaerobic mean without. 
+    The first two letters __"an"__ in anaerobic mean without.
 
     Think of the word _Analphabet_, which means a person without the letters of the alphabet or someone who cannot read or write.
 
@@ -6680,7 +6681,7 @@ export const chapter7Data = [{
 
     One of the things produced here is alcohol. Thus, yeast are used to make beer and wine.
 
-    By the way, because yeast use anaerobic respiration they are called __anaerobes__. 
+    By the way, because yeast use anaerobic respiration they are called __anaerobes__.
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
   }, {
@@ -6693,18 +6694,18 @@ export const chapter7Data = [{
     When we run or do heavy exercise, our muscles need a lot of energy. Thus we breathe fast so we can take in more oxygen to convert more glucose into energy.
 
     But even with breathing fast, the supply of oxygen is limited.
-    
+
     So muscles convert glucose into energy _without oxygen_ to fulfill the demand for additional energy; this process, as you know, is called anaerobic respiration.
 
     In muscles, this process also produces something called lactic acid.
-    
+
     Lactic acid is poisonous and can cause muscles to stop working. This is why we feel a burning sensation or soreness in our muscles during heavy exercise.
 
     ![human muscles anaerobic respiration](/learning-items/grade7/human-muscles-anaerobic-respiration.jpeg)
 
-    By the way, animals like Gazelles and Deer need a lot of energy when they are being chased by a predator like Cheetah. 
+    By the way, animals like Gazelles and Deer need a lot of energy when they are being chased by a predator like Cheetah.
 
-    In such situations Gazelles and Deer also go through anaerobic respiration. 
+    In such situations Gazelles and Deer also go through anaerobic respiration.
     `,
     imagePath: '/learning-items/grade7/gazelle-deer-anaerobic-respiration.jpeg'
   }, {
@@ -6761,13 +6762,13 @@ export const chapter7Data = [{
     instructions: dedent`
     In this video you will see how we breathe.
 
-    We will also see some new words like _nostrils, nasal cavity, chest cavity, and diaphragm_. This video and the rest of this chapter will explain these new words. 
+    We will also see some new words like _nostrils, nasal cavity, chest cavity, and diaphragm_. This video and the rest of this chapter will explain these new words.
 
-    When we inhale (or breathe in), air passes through our nostrils, into the nasal cavity, then to the windpipe, and then to our lungs. 
+    When we inhale (or breathe in), air passes through our nostrils, into the nasal cavity, then to the windpipe, and then to our lungs.
 
     The oxygen from the air in our lungs is then picked up by red blood cells and taken to all cells in our body.
 
-    The lungs are located in the chest cavity and are surrounded by bones called the rib cage, which protect the lungs. 
+    The lungs are located in the chest cavity and are surrounded by bones called the rib cage, which protect the lungs.
 
     A muscular sheet called diaphragm forms the bottom of the chest cavity.`,
     videoId: 'V81C7m0LQxA',
@@ -6830,7 +6831,7 @@ export const chapter7Data = [{
 
     You can find cavities in teeth and trees.
 
-    Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth. 
+    Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth.
     `,
     imagePath: '/learning-items/grade7/cavities-teeth-tree-cave.jpeg'
   }, {
@@ -6850,9 +6851,9 @@ export const chapter7Data = [{
     title: 'What Is The Chest Cavity?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The chest cavity is surrounded by the rib cage, the backbone and the breast bone (which is a flat bone running down the centre of the chest). 
+    The chest cavity is surrounded by the rib cage, the backbone and the breast bone (which is a flat bone running down the centre of the chest).
 
-    The chest cavity is separated from the intestines in the abdomen by a sheet of muscle called the diaphragm. 
+    The chest cavity is separated from the intestines in the abdomen by a sheet of muscle called the diaphragm.
     `,
     imagePath: '/learning-items/grade7/chest-cavity-2.jpeg'
   }, {
@@ -6861,12 +6862,12 @@ export const chapter7Data = [{
     time: 2,
     title: 'Diaphragm',
     instructions: dedent`
-    The speaker in this video will use some big, tough words. Do not worry about them. In fact, you should __watch this video on mute__ (with no sound). Simply observe how the diaphragm moves in this video. 
+    The speaker in this video will use some big, tough words. Do not worry about them. In fact, you should __watch this video on mute__ (with no sound). Simply observe how the diaphragm moves in this video.
 
     Diaphragm  is a sheet of muscle, which separates the chest from the intestines.
-    
+
     The _"G"_ is silent in the word diaphragm. This is similar to words like _align_ and _high_.
-      
+
     When watching the video, notice that when we inhale, the ribcage moves outwards and upwards and the diaphragm moves down. This creates space for lungs to expand.
 
     The opposite happens when we exhale or breathe out.`,
@@ -6979,8 +6980,8 @@ export const chapter7Data = [{
     title: 'Asexual Reproduction in Plants',
     instructions: dedent`
       This video is a poem about asexual reproduction in plants.
-      
-      Some people I know get nervous when the word _sex_ is used around them. I am sure you are not one of them.  
+
+      Some people I know get nervous when the word _sex_ is used around them. I am sure you are not one of them.
 
       We know that plants can make more of themselves through seeds. But plants can also reproduce through stems and leaves; in other words, plants can reproduce asexually. Let us watch to learn more.
     `,
@@ -6991,7 +6992,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Pick The Correct Option',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
      Which of the following plants uses spore propagation to reproduce?
       `,
     maxSelected: 1,
@@ -7047,7 +7048,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![sexual reproduction plants involves seeds](/learning-items/grade7/sexual-reproduction-plants-seb-apple.jpeg)
 
-    What is the main difference between Asexual and Sexual Reproduction in plants? 
+    What is the main difference between Asexual and Sexual Reproduction in plants?
 
     Write your answer in the space below and then tweet it with the #maindifference`,
     hacks: {
@@ -7076,7 +7077,7 @@ export const chapter7Data = [{
     time: 2,
     title: 'Making More Plants From Leaves',
     instructions: dedent`
-      Bryophyllum is a plant that is found in Asia and South Africa. It has buds on the edges of its leaves. 
+      Bryophyllum is a plant that is found in Asia and South Africa. It has buds on the edges of its leaves.
 
       If a bryophyllum leaf is placed on moist soil, a new plant is produced from each of the buds on the leaf.
 
@@ -7091,9 +7092,9 @@ export const chapter7Data = [{
     time: 4,
     title: 'Growing A New Rose Plant From A Stem',
     instructions: dedent`
-      Take a piece of rose stem and cut it along with the node — a node is a place on the stem from where the leaves grow; by the way this piece of stem is called cutting. 
+      Take a piece of rose stem and cut it along with the node — a node is a place on the stem from where the leaves grow; by the way this piece of stem is called cutting.
 
-      Then sow the cutting in soil and water it. After a few days new roots will come out from the bottom of the stem. After some more days the buds on the stem will give rise to new leaves and then to new rose flowers. 
+      Then sow the cutting in soil and water it. After a few days new roots will come out from the bottom of the stem. After some more days the buds on the stem will give rise to new leaves and then to new rose flowers.
 
       Notice how no seeds were needed to produce a new rose plant here. That is why this form of reproduction is called Asexual Reproduction.
     `,
@@ -7106,7 +7107,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     ![bryophyllum reproduce leaves](/learning-items/grade7/bryophyllum-asexual-reproduction-vegetative-propagation.jpeg)
 
     Byrophyllum can reproduce through its ___________.
@@ -7163,12 +7164,12 @@ export const chapter7Data = [{
 
     Here is one easy way to remember this. Think of vegetables like spinach and carrots.
 
-    Spinach consists of leaves and carrot is a root. When we eat vegetables like spinach (leaves), and carrots (root), we are eating the vegetative parts of the plant. 
+    Spinach consists of leaves and carrot is a root. When we eat vegetables like spinach (leaves), and carrots (root), we are eating the vegetative parts of the plant.
 
     ![vegetative parts plant leaves roots stem](/learning-items/grade7/vegetative-parts-plant-leaves-roots-stems.jpeg)
 
     And then I hope the GIF below gets stuck in your head and helps you remember that the flower is the reproductive part of the plant.
-    
+
     ![flower reproductive part plant](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/flower-reproductive-part-of-plant2.gif)
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
@@ -7195,7 +7196,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     The reproductive part of the plant is ___________.
       `,
     maxSelected: 1,
@@ -7241,7 +7242,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     Production of new individuals from the vegetative part of a plant is called ___________.
       `,
     maxSelected: 1,
@@ -7306,8 +7307,8 @@ export const chapter7Data = [{
 
     ![algae fragmentation](/learning-items/grade7/algae-fragmentation.jpeg)
 
-    They reproduce through a technique called __fragmentation__, in which an algae grows and breaks into two or more fragments. 
-    
+    They reproduce through a technique called __fragmentation__, in which an algae grows and breaks into two or more fragments.
+
     So thus far, we have studied the following 4 types of Asexual Reproduction:
      - Vegetative Propagation (rose, bryophyllum)
      - Spore Formation (fern, fungi)
@@ -7323,7 +7324,7 @@ export const chapter7Data = [{
     title: 'Draw and Share',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a _pen and paper_ to draw a picture that describes the 4 methods of asexual reproduction. 
+    Use a _pen and paper_ to draw a picture that describes the 4 methods of asexual reproduction.
 
     Then take a photo of the drawing from your phone and upload it here.`,
     hacks: {
@@ -7339,7 +7340,7 @@ export const chapter7Data = [{
     time: 6,
     title: 'Sexual Reproduction in Plants',
     instructions: dedent`
-      Sexual reproduction in plants involves seeds and flowers. 
+      Sexual reproduction in plants involves seeds and flowers.
 
       Let us watch this video recorded at a flower market in Thailand to see how that works.
     `,
@@ -7350,7 +7351,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     The transfer of pollen grains from the anther to the stigma of the same flower or another flower of the same kind is known as ___________.
       `,
     maxSelected: 1,
@@ -7389,11 +7390,11 @@ export const chapter7Data = [{
     title: 'Stamen — A Way To Remember',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Stamen is the male part of the flower. Here is a way to remember that: 
+    Stamen is the male part of the flower. Here is a way to remember that:
 
     Stamen has the word _men_ in it.
 
-    Also, stamen consists of anther at the top, supported by filament at the bottom. 
+    Also, stamen consists of anther at the top, supported by filament at the bottom.
 
     Anther produces pollen, which contain the male sex cells of the plant. We will soon see that these male sex cells are necessary to produce a new seed and through that seed a new plant.
     `,
@@ -7405,8 +7406,8 @@ export const chapter7Data = [{
     time: 1,
     title: 'Identify Parts of Pistil',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
-    Pistil is the Female Part of flower. 
+    instructions: dedent`
+    Pistil is the Female Part of flower.
 
     It produces the female sex cells. We will soon see that these female sex cells are necessary to produce a new seed and through that seed a new plant.
 
@@ -7455,9 +7456,9 @@ export const chapter7Data = [{
 
     ![pollination stamen pistil pollen anther](/learning-items/grade7/pollination-pollen-anther-stamen.jpeg)
 
-    Once the pollen lands on stigma, the contents of pollen move from the stigma to the style and then into the ovules. 
+    Once the pollen lands on stigma, the contents of pollen move from the stigma to the style and then into the ovules.
 
-    Remember, the contents of pollen are in the __ovules__ now. 
+    Remember, the contents of pollen are in the __ovules__ now.
     ![pollen moves from stigma to style to ovules](/learning-items/grade7/pollen-moves-stigma-style-ovary2.jpeg)
 
     Now to understand the rest of this story, we have to learn __3 new words__:
@@ -7469,7 +7470,7 @@ export const chapter7Data = [{
 
     Let us start with the first two words: __Gametes and Zygote__.
 
-    Now we have seen thus far that the contents of pollen have moved to the ovules. 
+    Now we have seen thus far that the contents of pollen have moved to the ovules.
 
     Pollen has some cells called __Male Gametes__. Ovules have some cells called __Female Gametes__.
 
@@ -7481,8 +7482,8 @@ export const chapter7Data = [{
 
     This process, by the way, is called __fertilisation__.
     ![fertilisation male gametes female gametes zygote](/learning-items/grade7/fertilisation-male-gamete-female-gamete-zygote2.jpeg)
-    
-    The zygote grows into something called an __Embryo__. 
+
+    The zygote grows into something called an __Embryo__.
 
     An embryo is an important part of the new seed and can be thought of as a young, developing plant.
 
@@ -7494,7 +7495,7 @@ export const chapter7Data = [{
     And then the Ovules in the flower turn into seeds. Also, the Ovary in the flower turns into the fleshy part of the fruit that surrounds the seed.
    ![ovules seeds ovary fruit](/learning-items/grade7/ovules-seed-ovary-fruit.jpeg)
 
-    This is how flowers turn into fruits with seeds. 
+    This is how flowers turn into fruits with seeds.
 
     The fruit can now be eaten by animals in the forest, who will then drop the seeds somewhere, and if enough sunlight, soil and water are available, that seed will grow into a new plant.
 
@@ -7508,7 +7509,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     The fusion of male and female gametes is termed as ___________.
       `,
     maxSelected: 1,
@@ -7599,7 +7600,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent` 
+    instructions: dedent`
     A mature ovary forms the  ___________.
       `,
     maxSelected: 1,
@@ -7672,10 +7673,10 @@ export const chapter7Data = [{
     title: 'Blood Components',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    There are 4 main components of blood: Red Blood Cells, White Blood Cells, Platelets, and Plasma. 
+    There are 4 main components of blood: Red Blood Cells, White Blood Cells, Platelets, and Plasma.
 
     This image shows what they look like. We will discuss each one of them in this chapter.`,
-    
+
     imagePath: '/learning-items/grade7/components-of-blood-2.jpeg',
 
   }, {
@@ -7686,7 +7687,7 @@ export const chapter7Data = [{
     instructions: dedent`
       Red Blood Cells (RBCs) are an important part of our blood.
 
-      RBCs also have an incredible substance inside them called Haemoglobin, which can join very easily with oxygen. 
+      RBCs also have an incredible substance inside them called Haemoglobin, which can join very easily with oxygen.
 
       Thus, red blood cells can take oxygen to all parts of our body. Here is a song to help you remember the function of red blood cells.
     `,
@@ -7697,7 +7698,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
      Red Blood Cells contain ___________.
       `,
     maxSelected: 1,
@@ -7745,7 +7746,7 @@ export const chapter7Data = [{
     title: 'Platelets',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Have you ever fallen down and started to bleed? 
+    Have you ever fallen down and started to bleed?
 
     If so, you may have noticed that a dark red clot forms to prevent blood from flowing outside your body. Platelets help create that clot.
     `,
@@ -7758,7 +7759,7 @@ export const chapter7Data = [{
     title: 'Why are Platelets called Platelets?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    This is what  platelets look like when seen through a microscope. 
+    This is what  platelets look like when seen through a microscope.
 
     They get their name because they look like small plates.
     `,
@@ -7771,7 +7772,7 @@ export const chapter7Data = [{
     title: 'What Happens During an Injury?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    When blood begins to flow out of our body due to an injury, platelets start to look like an octopus, with long tentacles. 
+    When blood begins to flow out of our body due to an injury, platelets start to look like an octopus, with long tentacles.
 
     This new shape helps the platelets form a seal that stops blood from flowing out of our body.
     `,
@@ -7797,7 +7798,7 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            I just learned that platelets help us when we get injured. 
+            I just learned that platelets help us when we get injured.
 
             They make that solid, red-looking substance on the skin that stops blood from flowing out of our body.
 
@@ -7852,7 +7853,7 @@ export const chapter7Data = [{
     instructions: dedent`
     This image shows the 4 components of blood after we have separated them using a machine called centrifuge.
 
-    As you can see, Plasma and Red Blood Cells make up most of the blood. 
+    As you can see, Plasma and Red Blood Cells make up most of the blood.
 
     And yes, if we extract plasma from blood, we find that it is yellow in colour.
     `,
@@ -7892,7 +7893,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
      The blood from the heart is transported to all parts of the body by the ___________.
       `,
     maxSelected: 1,
@@ -7963,7 +7964,7 @@ export const chapter7Data = [{
     title: 'Capillaries',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    When arteries reach cells they turn into really thin tubes called capillaries. 
+    When arteries reach cells they turn into really thin tubes called capillaries.
 
     The walls of capillaries are really thin.
 
@@ -7992,7 +7993,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Fill in the blank',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
      Arteries and Veins are joined by a network of ___________.
       `,
     maxSelected: 1,
@@ -8043,7 +8044,7 @@ export const chapter7Data = [{
     instructions: dedent`
     We know that Pulmonary means lungs.
 
-    Thus, pulmonary arteries and veins connect the heart to the lungs. 
+    Thus, pulmonary arteries and veins connect the heart to the lungs.
 
     Arteries take blood away from the heart; thus blood goes from the heart to the lungs in the pulmonary arteries.
 
@@ -8080,7 +8081,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'Cyclone Quiz',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
+    instructions: dedent`
      Which of the following places is __unlikely__ to be affected by a cyclone?
 
      ![cities in india affected by cyclone](/learning-items/grade7/cyclones-in-india.jpeg)
@@ -8147,7 +8148,7 @@ export const chapter7Data = [{
 
       Then the drum was put in ice water. This caused any steam left inside the drum to condense back into water, thus reducing the amount of air inside the drum.
 
-      Now less air inside the drum means that the air pressure inside the drum has decreased. But the air pressure outside the drum continues to be the same as before. 
+      Now less air inside the drum means that the air pressure inside the drum has decreased. But the air pressure outside the drum continues to be the same as before.
 
       This difference is air pressure crushes the steel drum.
     `,
@@ -8170,13 +8171,13 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Imagine a pillar of air above your head. Further imagine that this pillar continues to the edge of the atmosphere.
-    
+
     ![pillar of air](/learning-items/grade7/imagine-a-pillar-of-air.jpeg)
 
     We have seen that air has weight. So that means that this pillar of air must also have some weight. And all of this weight above our head must exert some pressure on us.
 
     The pressure exerted by the air above of our head is similar to the pressure exerted on us if we were carrying a car on our head.`,
-    
+
     imagePath: '/learning-items/grade7/air-pressure-similar-to-a-car.jpeg',
 
   }, {
@@ -8231,9 +8232,9 @@ export const chapter7Data = [{
 
       When we blow air on top of a piece of paper, the paper rises. Why?
 
-      When we blow air on top of a piece of paper, the air on top is moving faster than the air below the paper. 
+      When we blow air on top of a piece of paper, the air on top is moving faster than the air below the paper.
 
-      Fast moving air creates low pressure. So there is low pressure on top of paper, and high at the bottom. This difference in pressure is what lifts the paper. 
+      Fast moving air creates low pressure. So there is low pressure on top of paper, and high at the bottom. This difference in pressure is what lifts the paper.
     `,
     videoId: 'MYXiL2wGDAw',
   }, {
@@ -8245,10 +8246,10 @@ export const chapter7Data = [{
     instructions: dedent`
     Airplanes fly because _fast moving air creates low pressure._
 
-    The wings of airplanes are designed such that the air on top of the wing travels faster than the air below the wing. 
+    The wings of airplanes are designed such that the air on top of the wing travels faster than the air below the wing.
 
     This creates low pressure on top and high pressure below the wing. And this difference in pressure lifts the airplane.`,
-    
+
     imagePath: '/learning-items/grade7/fast-moving-air-creates-low-pressure.jpeg',
 
   }, {
@@ -8259,9 +8260,9 @@ export const chapter7Data = [{
     instructions: dedent`
       The bottle in the video is not empty. It has air inside it.
 
-      When we put the bottle in hot water, the air inside the bottle expands, thus inflating the balloon. 
+      When we put the bottle in hot water, the air inside the bottle expands, thus inflating the balloon.
 
-      When we put the bottle in ice cold water, the air inside the balloon contracts, thus deflating the balloon. 
+      When we put the bottle in ice cold water, the air inside the balloon contracts, thus deflating the balloon.
 
       Air expands on heating and contracts on cooling.
     `,
@@ -8275,7 +8276,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     We can see warm air rising in hot air balloons, candle lanterns and steam from a pressure cooker.`,
-    
+
     imagePath: '/learning-items/grade7/warm-air-rises.jpeg',
 
   }, {
@@ -8309,7 +8310,7 @@ export const chapter7Data = [{
             response: dedent`
             Warm air rises.
 
-            A ventilator is at the top of the house where air can come in and go out. So if there is no ventilator in the house, hot air will have no way to leave the house. 
+            A ventilator is at the top of the house where air can come in and go out. So if there is no ventilator in the house, hot air will have no way to leave the house.
 
             I do not want to live in a very hot house.
             `
@@ -8330,7 +8331,7 @@ export const chapter7Data = [{
 
     The opposite happens in winters, where the winds move from the land to the ocean.
     `,
-    
+
     imagePath: '/learning-items/grade7/monsoon-winds-summer.jpeg',
 
   }, {
@@ -8376,7 +8377,7 @@ export const chapter7Data = [{
     Specifically, the eye of the storm.
 
     The eye of the storm is the center of the cyclone and is a calm area. Surrounding it are winds moving at really high speeds. `,
-  
+
     imagePath: '/learning-items/grade7/eye-of-the-storm-cyclone.jpeg',
 
   }, {
@@ -8388,10 +8389,10 @@ export const chapter7Data = [{
     instructions: dedent`
     Cyclones can be devastating. Luckily, we have satellites in space that can help us detect the cyclones ahead of time, so we can warn the people who will be affected by them.
 
-    Here is a satellite launched by India on September 8, 2016. Its name is INSAT 3DR. 
+    Here is a satellite launched by India on September 8, 2016. Its name is INSAT 3DR.
 
     You can also see an image produced by this satellite, through which can see if cyclones are starting in the ocean.`,
-  
+
     imagePath: '/learning-items/grade7/satellites-that-monitor-cyclones.jpeg',
 
   }, {
@@ -8404,7 +8405,7 @@ export const chapter7Data = [{
     Anemometer is a device that is used to measure wind speeds. They can be useful when flying kites, or when flying airplanes, or when reporting on a cyclone.
 
     They get their name from _Anemoi_, the wind gods in Greek mythology.`,
-  
+
     imagePath: '/learning-items/grade7/anemometer.jpeg',
 
   }, {
@@ -8419,7 +8420,7 @@ export const chapter7Data = [{
     They suck everything in their path near the base and throw them out near the top, thus causing a lot of damage.
 
     Tornadoes generally form over land; while Cyclones form over the ocean.`,
-  
+
     imagePath: '/learning-items/grade7/tornadoes.jpeg',
 
   }, {
@@ -8431,7 +8432,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![tornadoes](/learning-items/grade7/tornado.jpeg)
 
-    3 out of 4 Tornadoes occur in the USA. [Here is a video](http://video.nationalgeographic.com/video/101-videos/tornadoes-101) that shows how tornadoes occur. 
+    3 out of 4 Tornadoes occur in the USA. [Here is a video](http://video.nationalgeographic.com/video/101-videos/tornadoes-101) that shows how tornadoes occur.
 
     The video says that the tornado can spin up to 300 miles per hour. That is about 482 kilometers per hour.
     `,
@@ -8451,7 +8452,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![light bulb straight line](/learning-items/grade7/light-travels-in-straight-line2.jpg)
 
-     Light travels in ________ lines.     
+     Light travels in ________ lines.
       `,
     maxSelected: 1,
     choices: [
@@ -8499,7 +8500,7 @@ export const chapter7Data = [{
 
      Any polished or shiny surface can act like a mirror.
 
-     Mirror changes the direction of light that falls on it. This change in direction of light by a mirror is called ________ of light.     
+     Mirror changes the direction of light that falls on it. This change in direction of light by a mirror is called ________ of light.
       `,
     maxSelected: 1,
     choices: [
@@ -8544,7 +8545,7 @@ export const chapter7Data = [{
 
     The cat which appears behind the mirror is called an __image__.
 
-    The cat itself is called the __object__. `,   
+    The cat itself is called the __object__. `,
     imagePath: '/learning-items/grade7/image-object-plane-mirror.jpg',
 
   }, {
@@ -8572,7 +8573,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![plane mirror image erect](/learning-items/grade7/mirror-image-erect.jpeg)
 
-     A plane mirror produces which of the following images.     
+     A plane mirror produces which of the following images.
       `,
     maxSelected: 1,
     choices: [
@@ -8633,7 +8634,7 @@ export const chapter7Data = [{
 
       Why is it that when we raise our left hand, the image in the mirror raises its right hand?
 
-      This video explains. 
+      This video explains.
 
       A mirror flips the image from front to back. Watch this video to find out how.
     `,
@@ -8648,7 +8649,7 @@ export const chapter7Data = [{
     instructions: dedent`
     The __inner__ side of a spoon is a concave surface.
 
-    The __outer__ side of a spoon is a convex surface.`,   
+    The __outer__ side of a spoon is a convex surface.`,
     imagePath: '/learning-items/grade7/concave-convex-surface-spoon3.jpeg',
 
   }, {
@@ -8662,7 +8663,7 @@ export const chapter7Data = [{
 
     A way to remember this is to think of a __cave__, whose mouth also curves inward.
 
-    Alternatively, a convex mirror is a spherical mirror which curves outward.`,   
+    Alternatively, a convex mirror is a spherical mirror which curves outward.`,
     imagePath: '/learning-items/grade7/concave-mirror-inward-buldge.jpg',
 
   }, {
@@ -8694,7 +8695,7 @@ export const chapter7Data = [{
     instructions: dedent`
     A concave mirror curves inward. It is used by dentists. It is also used by people who want to shave their faces or do make up.
 
-    A convex mirror curves outward. It is used in parking spaces to see things around corners and forms images of objects spread over a large area.`,   
+    A convex mirror curves outward. It is used in parking spaces to see things around corners and forms images of objects spread over a large area.`,
     imagePath: '/learning-items/grade7/concave-mirror-convex-mirror.jpeg',
 
   }, {
@@ -8719,10 +8720,10 @@ export const chapter7Data = [{
     In this scenario, the image produced is inverted; that means it is upside down. The image is also real; that means the image can be obtained on a screen.
     ![concave mirror standing far image inverted real](/learning-items/grade7/concave-mirror-image-real-inverted.jpeg)
 
-    Here is a diagram that shows the image produced by a concave mirror when the object is far away from it. Notice how the candle (the object) is far away from the mirror, and the image of the candle is inverted, bigger than the object and real. 
+    Here is a diagram that shows the image produced by a concave mirror when the object is far away from it. Notice how the candle (the object) is far away from the mirror, and the image of the candle is inverted, bigger than the object and real.
 
     You can play with this [great simulation](http://cdac.olabs.edu.in/?sub=74&brch=9&sim=38&cnt=59) to see the type of images produced by the concave mirror.
-     `,   
+     `,
     imagePath: '/learning-items/grade7/concave-mirror-image-real-inverted-ray-diagram.jpeg',
 
   }, {
@@ -8828,7 +8829,7 @@ export const chapter7Data = [{
         response: dedent`
           __Correct__. Concave mirrors are used by people when doing make up so they can see a magnified version of their face. When the object is placed very close to a concave mirror, the image is magnified.
 
-        ![concave mirror makeup mirror](/learning-items/grade7/make-up-mirror.jpeg)            
+        ![concave mirror makeup mirror](/learning-items/grade7/make-up-mirror.jpeg)
           `
       }
     ]
@@ -8845,7 +8846,7 @@ export const chapter7Data = [{
     ![convex mirror image smaller virtual erect](/learning-items/grade7/convex-mirror-image-smaller-virtual-erect.jpeg)
 
     Here is a diagram that shows the image produced by a convex mirror. Notice how the image of the candle is erect, virtual and smaller than the object.
-     `,   
+     `,
     imagePath: '/learning-items/grade7/convex-mirror-image-smaller-virtual-erect-ray-diagram.jpeg',
 
   }, {
@@ -8925,9 +8926,9 @@ export const chapter7Data = [{
     instructions: dedent`
     A __convex__ lens feels __thicker__ in the middle than at the edges. An example of a convex lens is a magnifying glass.
 
-    A __concave__ lens feels __thinner__ in the middle than at the edges. 
+    A __concave__ lens feels __thinner__ in the middle than at the edges.
 
-    Here is one way to remember this — When you think of a concave lens, think of a cave. A cave has a mouth that curves inward. The shape of the concave lens is like the mouth of a cave.`,   
+    Here is one way to remember this — When you think of a concave lens, think of a cave. A cave has a mouth that curves inward. The shape of the concave lens is like the mouth of a cave.`,
     imagePath: '/learning-items/grade7/concave-convex-lens.jpeg',
 
   }, {
@@ -8952,7 +8953,7 @@ export const chapter7Data = [{
     instructions: dedent`
       A convex lens creates an image that is real and inverted. As you will see in this video, the image of the candle is obtained on the screen; thus it is real. And the image is upside down or inverted.
 
-      Although, when an object is placed very close to the convex lens, the lens acts like a magnifying glass and forms an image that is virtual, erect and magnified. 
+      Although, when an object is placed very close to the convex lens, the lens acts like a magnifying glass and forms an image that is virtual, erect and magnified.
     `,
     videoId: 'MvUIsetjVck',
     startTime: 113,
@@ -8966,7 +8967,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Here is a [great simulation](http://www.physics-chemistry-interactive-flash-animation.com/optics_interactive/converging_lens_convex_positive.htm) of the convex lens.
 
-    You will see that the candle creates a real and inverted image on the screen. You can move the candle around to see how the convex lens works.`,   
+    You will see that the candle creates a real and inverted image on the screen. You can move the candle around to see how the convex lens works.`,
     imagePath: '/learning-items/grade7/convex-lens-image-real-inverted.jpeg',
 
   }, {
@@ -8978,7 +8979,7 @@ export const chapter7Data = [{
     instructions: dedent`
     A magnifying glass is a convex lens.
 
-    When an object is placed very close to a magnifying glass, the image formed is virtual, erect and magnified.`,   
+    When an object is placed very close to a magnifying glass, the image formed is virtual, erect and magnified.`,
     imagePath: '/learning-items/grade7/convex-lens-magnifying-glass.jpeg',
 
   }, {
@@ -9044,7 +9045,7 @@ export const chapter7Data = [{
         answerSet: ['opt1',],
         response: dedent`
           __Incorrect__. The image formed by a convex lens can be obtained on a screen. Thus that image is real and not virtual.
-          
+
           ![convex lens image real inverted](/learning-items/grade7/convex-lens-image-real-inverted.jpeg)
           `
       },
@@ -9066,7 +9067,7 @@ export const chapter7Data = [{
     instructions: dedent`
     This is a [great simulation](https://www.edumedia-sciences.com/en/media/703-diverging-lens) of how the concave lens works.
 
-    Here, you will see that the man (the object) creates an erect, virtual and smaller image.`,   
+    Here, you will see that the man (the object) creates an erect, virtual and smaller image.`,
     imagePath: '/learning-items/grade7/concave-lens.jpeg',
 
   }, {
@@ -9078,9 +9079,9 @@ export const chapter7Data = [{
     instructions: dedent`
     Sunlight consists of 7 colours. These are: Violet, Indigo, Blue, Green, Yellow, Orange, Red. We can remember them with the acronym VIBGYOR.
 
-    These colours together create white light. 
+    These colours together create white light.
 
-    When white light passes through a prism, we can see all of the 7 component colours.`,   
+    When white light passes through a prism, we can see all of the 7 component colours.`,
     imagePath: '/learning-items/grade7/colour-spectrum-white-light.jpg',
 
   }, {
@@ -9094,7 +9095,7 @@ export const chapter7Data = [{
 
     We know that white light comprises of 7 colours.
 
-    A leaf looks green because when white light falls on it, it absorbs all colours, but reflects green. Thus our eye perceives the leaf as green.`,   
+    A leaf looks green because when white light falls on it, it absorbs all colours, but reflects green. Thus our eye perceives the leaf as green.`,
     imagePath: '/learning-items/grade7/how-do-we-see-objects.jpg',
 
   },  ]
@@ -9108,7 +9109,7 @@ export const chapter7Data = [{
     time: 2,
     title: 'A Walk Through The Forest',
     instructions: dedent`
-      In this video we walk through the forest and think about these ideas: 
+      In this video we walk through the forest and think about these ideas:
        - humus
        - canopy
        - forests and oxygen
@@ -9123,7 +9124,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![dead leaves plants](/learning-items/grade7/dead-plants.jpg)
 
-     Micro-organisms act upon dead plants to produce _________.     
+     Micro-organisms act upon dead plants to produce _________.
       `,
     maxSelected: 1,
     choices: [
@@ -9170,10 +9171,10 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     The branchy part of the tree above the stem is called the crown.
- 
-    The word crown usually refers to an ornament worn by someone on the __top__ of their head — like a king or a queen. ![crown](/learning-items/grade7/crown-2.png)  
 
-    Similarly, the __top__ of the tree, is also called a crown. `,   
+    The word crown usually refers to an ornament worn by someone on the __top__ of their head — like a king or a queen. ![crown](/learning-items/grade7/crown-2.png)
+
+    Similarly, the __top__ of the tree, is also called a crown. `,
     imagePath: '/learning-items/grade7/tree-crown.jpeg',
 
   }, {
@@ -9185,7 +9186,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![overlapping leaves canopy](/learning-items/grade7/forest-canopy.jpeg)
 
-     Overlapping leaves and branches of many trees that together look like the roof of a forest is called _________.     
+     Overlapping leaves and branches of many trees that together look like the roof of a forest is called _________.
       `,
     maxSelected: 1,
     choices: [
@@ -9217,7 +9218,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Understorey comprises of all trees growing between the canopy and forest floor.
 
-    You can think of _understorey_ as all plants growing below the canopy and above the forest floor.`,   
+    You can think of _understorey_ as all plants growing below the canopy and above the forest floor.`,
     imagePath: '/learning-items/grade7/understorey.jpeg',
 
   }, {
@@ -9229,7 +9230,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![herbs layer](/learning-items/grade7/understorey-quiz.jpeg)
 
-     Herbs form the ________ layer in the forest.     
+     Herbs form the ________ layer in the forest.
       `,
     maxSelected: 1,
     choices: [
@@ -9269,7 +9270,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Plants use carbon dioxide and produce oxygen. And humans need oxygen.
 
-    More than 20% of the world’s oxygen is produced by the trees in the Amazon rainforest.`,   
+    More than 20% of the world’s oxygen is produced by the trees in the Amazon rainforest.`,
     imagePath: '/learning-items/grade7/forests-balance-oxygen-carbon-dioxide.jpeg',
 
   },*/{
@@ -9281,7 +9282,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Dead leaves and plants are decomposed by worms and bacteria into a dark coloured substance called humus.
 
-    Humus helps the soil retain moisture and thus is very helpful in droughts. Humus also has nutrients needed by plants; thus humus makes the soil more fertile.`,   
+    Humus helps the soil retain moisture and thus is very helpful in droughts. Humus also has nutrients needed by plants; thus humus makes the soil more fertile.`,
     imagePath: '/learning-items/grade7/leaves-decompose-humus-earthworms.jpeg',
 
   }, {
@@ -9322,11 +9323,11 @@ export const chapter7Data = [{
     instructions: dedent`
     Animals can spread tree seeds in a forest, and thus help the forest grow.
 
-    Consider a raccoon, an animal found in the forests of North America. A raccoon eats fruits from a tree including the seeds inside the fruit. 
+    Consider a raccoon, an animal found in the forests of North America. A raccoon eats fruits from a tree including the seeds inside the fruit.
 
     A few hours later, the raccoon poops out waste, which includes seeds they had previously eaten. These seeds now have a chance to blossom into a new fruit tree.
 
-    Animals like the raccoon can help regenerate forests by dispersing the seeds of trees.`,   
+    Animals like the raccoon can help regenerate forests by dispersing the seeds of trees.`,
     imagePath: '/learning-items/grade7/seed-dispersal-animals-raccoon.jpeg',
 
   }, {
@@ -9358,7 +9359,7 @@ export const chapter7Data = [{
     instructions: dedent`
       Much like dead leaves, dead animals are decomposed by micro-organisms into humus.
 
-      Thus, even the dead bodies of animals are useful for plants in the forests. 
+      Thus, even the dead bodies of animals are useful for plants in the forests.
 
       This video was recorded over 7 days, and is played in fast forward mode.
     `,
@@ -9447,7 +9448,7 @@ export const chapter7Data = [{
 
     In fact, more than 25% of medicines we use originate in rainforests around the world.
 
-    Below you will see two examples of medicines that originate in forests and are used to treat asthma and cancer.`,   
+    Below you will see two examples of medicines that originate in forests and are used to treat asthma and cancer.`,
     imagePath: '/learning-items/grade7/medicines-from-forests-asthma-cancer.jpeg',
 
   }, {
@@ -9508,7 +9509,7 @@ export const chapter7Data = [{
 
     It can take up to 10 minutes for a falling raindrop to travel from a rainforest\`s thick canopy to the floor of the forest.
 
-    This extra time allows the water that reaches the floor to seep underground before more water gathers. Floods are prevented since forests do not allow the rain water to gather or accumulate.`,   
+    This extra time allows the water that reaches the floor to seep underground before more water gathers. Floods are prevented since forests do not allow the rain water to gather or accumulate.`,
     imagePath: '/learning-items/grade7/how-forests-prevent-floods.jpeg',
   }, {
     id: 'soil-erosion',
@@ -9517,9 +9518,9 @@ export const chapter7Data = [{
     title: 'How Forests Prevent Soil Erosion',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Roots of forest trees bind soil together. But if trees are not present, then soil is washed away or eroded. 
+    Roots of forest trees bind soil together. But if trees are not present, then soil is washed away or eroded.
 
-    In this picture you can observe that in the absence of trees, soil is eroded into the sea.`,   
+    In this picture you can observe that in the absence of trees, soil is eroded into the sea.`,
     imagePath: '/learning-items/grade7/soil-erosion.jpeg',
   }, {
     id: 'forests-prevent-floods-quiz',
@@ -9558,7 +9559,7 @@ export const chapter7Data = [{
     title: 'Forests in India',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    21% of India is under forest cover.`,   
+    21% of India is under forest cover.`,
     imagePath: '/learning-items/grade7/india-area-under-forest.jpeg',
   }, {
     id: 'deforestation',
@@ -9570,7 +9571,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Deforestation is the destruction of forests to make land available for other uses like farming and animal grazing.
 
-    Every second an area of the rainforest the size of a football pitch is cut down.`,   
+    Every second an area of the rainforest the size of a football pitch is cut down.`,
     imagePath: '/learning-items/grade7/deforestation.jpeg',
   }, ]
 },{
@@ -9583,7 +9584,7 @@ export const chapter7Data = [{
     time: 5,
     title: 'How Pendulums Work',
     instructions: dedent`
-      We travel to Japan in this video to see the largest pendulum clock in the world. And then to a tall building with pendulums on the roof. 
+      We travel to Japan in this video to see the largest pendulum clock in the world. And then to a tall building with pendulums on the roof.
 
       While doing that, we answer these questions:
        - Why are pendulums used in clocks?
@@ -9600,7 +9601,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![pendulum swinging](/learning-items/grade7/pendulum-time-period.jpeg)
 
-     The time taken for the pendulum to swing from O to B, then from B to A, and then back to O is called _________?     
+     The time taken for the pendulum to swing from O to B, then from B to A, and then back to O is called _________?
       `,
     maxSelected: 1,
     choices: [
@@ -9651,7 +9652,7 @@ export const chapter7Data = [{
     time: 1,
     title: 'What is Speed?',
     instructions: dedent`
-      Speed is how fast an object moves. Here is the formula: 
+      Speed is how fast an object moves. Here is the formula:
 
       Speed = Distance / Time
 
@@ -9665,11 +9666,11 @@ export const chapter7Data = [{
     title: 'How Fast?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    How fast does a cheetah run? 
+    How fast does a cheetah run?
 
-    How fast does Usain Bolt, Olympic gold medal winner, run? 
+    How fast does Usain Bolt, Olympic gold medal winner, run?
 
-    What is the speed of the earth per second`,   
+    What is the speed of the earth per second`,
     imagePath: '/learning-items/grade7/speed-cheetah.jpeg',
 
   }, {
@@ -9681,9 +9682,9 @@ export const chapter7Data = [{
     instructions: dedent`
     ![car speed](/learning-items/grade7/car.jpeg)
 
-     Imagine a car goes from point A to point B. 
+     Imagine a car goes from point A to point B.
 
-     The speed of the car was 40 km per hour and the it took 1 hour to finish the journey . Given this information, will you be able to calculate the distance between the two points?     
+     The speed of the car was 40 km per hour and the it took 1 hour to finish the journey . Given this information, will you be able to calculate the distance between the two points?
       `,
     maxSelected: 1,
     choices: [
@@ -9756,7 +9757,7 @@ export const chapter7Data = [{
     instructions: dedent`
       Speed is measured in kilometres per hour. For instance, we may say that a car moves at 50 km per hour.
 
-      We can show this in a different way. 
+      We can show this in a different way.
 
       We can say that the same car moves at 14 metres per second.
 
@@ -9813,9 +9814,9 @@ export const chapter7Data = [{
     instructions: dedent`
     A speedometer measures speed.
 
-    An odometer measures the distance travelled by an object. 
+    An odometer measures the distance travelled by an object.
 
-    We can find odometers in the dashboard of a car.`,   
+    We can find odometers in the dashboard of a car.`,
     imagePath: '/learning-items/grade7/odometer.jpeg',
 
   }, {
@@ -9826,7 +9827,7 @@ export const chapter7Data = [{
     instructions: dedent`
       A line graph is a picture that shows points on a graph connected by a line.
 
-      In this video, we create a line graph to show how many apples were eaten in a month. 
+      In this video, we create a line graph to show how many apples were eaten in a month.
     `,
     videoId: 'n2YkbdNORp8',
     endTime: 200,
@@ -9836,7 +9837,7 @@ export const chapter7Data = [{
     time: 6,
     title: 'How to read a Line Graph',
     instructions: dedent`
-      Here is another video that teaches how to read a line graph. 
+      Here is another video that teaches how to read a line graph.
     `,
     videoId: 'ZTrAuUjcYVw',
     endTime: 330,
@@ -9879,7 +9880,7 @@ export const chapter7Data = [{
     instructions: dedent`
       When current flows through a wire, it acts like a magnet.
 
-      This fundamental fact of nature has changed our lives. We use this fact to build things like the electric doorbells and really fast trains. 
+      This fundamental fact of nature has changed our lives. We use this fact to build things like the electric doorbells and really fast trains.
 
       Let us travel to Japan in this video to see how this works.
     `,
@@ -9893,7 +9894,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![electric wires](/learning-items/grade7/electric-wires.jpeg)
 
-     When electric current flows through a wire, the wire behaves like a _________?     
+     When electric current flows through a wire, the wire behaves like a _________?
       `,
     maxSelected: 1,
     choices: [
@@ -9995,9 +9996,9 @@ export const chapter7Data = [{
     title: 'Symbols for Electric Components',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Here are some symbols that are used to represent electrical components like bulb and cells in a circuit. 
- 
-    A diagram that uses these symbols to show an electric circuit is called a circuit diagram. `,   
+    Here are some symbols that are used to represent electrical components like bulb and cells in a circuit.
+
+    A diagram that uses these symbols to show an electric circuit is called a circuit diagram. `,
     imagePath: '/learning-items/grade7/electric-symbols.jpeg',
 
   }, {
@@ -10022,7 +10023,7 @@ export const chapter7Data = [{
 
     Well, it can be easy to draw a circuit with these symbols.
 
-    Consider a circuit with a few cells and several bulbs like the one in the image below. It would be hard to draw this circuit as it is shown in the picture. The easy thing to do would be to use symbols for components like bulb and cells to draw the circuit.`,   
+    Consider a circuit with a few cells and several bulbs like the one in the image below. It would be hard to draw this circuit as it is shown in the picture. The easy thing to do would be to use symbols for components like bulb and cells to draw the circuit.`,
     imagePath: '/learning-items/grade7/electric-circuit-without-symbols.jpeg',
   }, {
     id: 'remembering-symbol-for-cell',
@@ -10047,7 +10048,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![electric wires](/learning-items/grade7/will-it-glow-bulb.jpeg)
 
-     Will the bulb in this circuit diagram light up?    
+     Will the bulb in this circuit diagram light up?
       `,
     maxSelected: 1,
     choices: [
@@ -10077,9 +10078,9 @@ export const chapter7Data = [{
     title: 'Draw a Circuit Diagram',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a pen and paper to draw the following circuit: 
+    Use a pen and paper to draw the following circuit:
 
-    _A circuit that contains a light bulb, a battery and an OFF switch._ 
+    _A circuit that contains a light bulb, a battery and an OFF switch._
 
     Then take a photo of your drawing from a phone and upload it here.`,
   }, {
@@ -10093,7 +10094,7 @@ export const chapter7Data = [{
 
      There are 4 cells in this image that are connected with wires.
 
-     Are the cells connected in the correct way? 
+     Are the cells connected in the correct way?
       `,
     maxSelected: 1,
     choices: [
@@ -10153,9 +10154,9 @@ export const chapter7Data = [{
     title: 'Heating Effects of Current',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Metals give off heat when current passes through them. Specially a metal named Nichrome, which is a mix of Nickel and Chromium. 
+    Metals give off heat when current passes through them. Specially a metal named Nichrome, which is a mix of Nickel and Chromium.
 
-    Nichrome is used in several household appliances, like a toaster.`,   
+    Nichrome is used in several household appliances, like a toaster.`,
     imagePath: '/learning-items/grade7/heating-effect-current-nichrome.jpeg',
 
   }, {
@@ -10181,7 +10182,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Here are two examples of what a fuse looks like.
 
-    A fuse is a thin wire in an electrical circuit that melts when too much current flows through it.`,   
+    A fuse is a thin wire in an electrical circuit that melts when too much current flows through it.`,
     imagePath: '/learning-items/grade7/what-does-a-fuse-look-like.jpeg',
 
   }, {
@@ -10195,9 +10196,9 @@ export const chapter7Data = [{
 
     Imagine this plug is connected to a toaster. Further imagine if suddenly there is an excessive amount of current flowing through the wires. This current will certainly damage the toaster.
 
-    The fuse can protect the toaster. 
+    The fuse can protect the toaster.
 
-    This thin wire melts when too much current flows through it. This means that the circuit is no longer complete and current stops flowing through the toaster.`,   
+    This thin wire melts when too much current flows through it. This means that the circuit is no longer complete and current stops flowing through the toaster.`,
     imagePath: '/learning-items/grade7/fuse-inside-electric-plug.jpeg',
 
   }, {
@@ -10209,7 +10210,7 @@ export const chapter7Data = [{
     instructions: dedent`
     The electrical circuit of an air conditioner also has a fuse.
 
-    The fuse protects the air conditioner in case a large amount of current starts flowing through the circuit.`,   
+    The fuse protects the air conditioner in case a large amount of current starts flowing through the circuit.`,
     imagePath: '/learning-items/grade7/fuse-inside-air-conditioner.jpeg',
 
   }, {
@@ -10222,7 +10223,7 @@ export const chapter7Data = [{
 
       A fuse can solve this problem.
 
-      A fuse is a metal wire that melts when too much current flows through it. So if a fuse is a part of an electrical circuit, and a large amount of current flows through the circuit, then the fuse will melt. 
+      A fuse is a metal wire that melts when too much current flows through it. So if a fuse is a part of an electrical circuit, and a large amount of current flows through the circuit, then the fuse will melt.
 
       Once the fuse melts the circuit is no longer fully connected and thus the flow of current will stop; that will protect the appliance from getting destroyed.
 
@@ -10249,9 +10250,9 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            No, I will not agree with the electrician. 
+            No, I will not agree with the electrician.
 
-            The wire used for making a fuse has a low melting point and therefore any random wire cannot be used to replace the fuse. 
+            The wire used for making a fuse has a low melting point and therefore any random wire cannot be used to replace the fuse.
             `
           }
         ]

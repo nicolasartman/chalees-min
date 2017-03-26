@@ -10,6 +10,7 @@ import Header from './header.js';
 import {chapter6Data, chapter7Data} from './chapter-data.js';
 import database from './database.js';
 import {authorize} from './auth.js';
+import Helmet from 'react-helmet';
 
 const chapters = [...chapter6Data, ...chapter7Data];
 
@@ -95,6 +96,9 @@ const Chapter = React.createClass({
     return (
       <div>
         <main id="main" className="container chapter">
+          <Helmet>
+            <meta name="description" content={currentChapter ? currentChapter.description : ''} />
+          </Helmet>
           <div className="pure-g">
             <div className="pure-u-1">
               <h2 className="chapter-title">
