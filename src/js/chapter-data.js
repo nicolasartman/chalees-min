@@ -4254,6 +4254,695 @@ export const chapter7Data = [{
 
   },]
 }, {
+  id: ' 4',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter4-thumbnail.png',
+  title: 'Heat',
+  items: [{
+    id: 'chapter-4-video',
+    kind: 'video',
+    time: 4,
+    title: 'Difference Between Conduction And Convection',
+    instructions: dedent`
+      It can be hard to understand the difference between conduction and convection. This video explains the difference clearly.
+
+      We begin by talking about something called _Heat Transfer_.
+
+      Heat transfer means that heat flows from a body with higher temperature to a body with lower temperature. For instance, if you heat a pot on a stove, the heat will move from the bottom of the pot to the handles of the pot.
+
+      Both Conduction and Convection are types of heat transfer.
+
+      Conduction is heat transfer in solids (example when heating a pot).
+
+      Convection is heat transfer in liquids and gases (example when heating water).
+
+    `,
+    videoId: '1Iy2Yg92Sa4',
+  }, {
+    id: 'draw-the-difference',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw and Share',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Use a _pen and paper_ to draw a picture that describes the differences between Conduction and Convection.
+
+    Then take a photo of the drawing from your phone and upload it here.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School. She also said, "Heat transfers from a body with higher temperature to a body with lower temperature. Conduction and Convection are both types of heat transfer."',
+        feedbackImagePath: '/learning-items/grade7/clayey-sandy-difference.jpeg'
+      }
+    }
+  }, {
+    id: 'wooden-spoonquiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Conduction Or Convection',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+      A wooden spoon is dipped in a cup of ice cream. Its other end:`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'becomes cold by conduction'
+      },
+      {
+        id: 'opt2',
+        text: 'becomes cold by convection'
+      },
+      {
+        id: 'opt3',
+        text: 'does not become cold'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`__Correct__. 
+        
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. It has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+
+        And since the spoon is solid, the process is conduction.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`The spoon will become cold, but the process is __not__ convection. The process is conduction. 
+        
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. It has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+
+        Since the spoon is solid, its molecules are packed really closely to each other. They will vibrate and lose energy to the ice cream. The process in which heat transfer occurs in solids is called __conduction.__`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`This is not correct.
+        
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream also has some heat energy. It has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold.`
+      }
+    ]
+  }, {
+    id: 'iron-ball-in-water-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Iron Ball Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![iron ball in water quiz](/learning-items/grade7/dropping-iron-ball-in-water.jpeg)
+
+    An iron ball at 40°C is dropped in water which is also at 40°C. The heat will`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'flow from iron ball to water'
+      },
+      {
+        id: 'opt2',
+        text: 'not flow at all'
+      },
+      {
+        id: 'opt3',
+        text: 'flow from water to iron ball'
+      },
+      {
+        id: 'opt4',
+        text: 'increase the temperature of both'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. The temperature of water and the iron ball cannot magically increase. There needs to be a new source of heat for that to happen. Since both the water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball. '
+      }
+    ]
+  }, {
+    id: 'conductors-insulators',
+    kind: 'video',
+    time: 2,
+    title: 'Conductors and Insulators',
+    instructions: dedent`
+      The experiment in this video will show that metal is a conductor. This means that metals allow heat to flow through them easily.
+
+      Also, this video will show that wood and plastic are insulators. This means that wood and plastic do not allow heat to pass through them easily.
+    `,
+    videoId: 'nOcT53wd1BM',
+  }, {
+    id: 'stainless-steel-pan-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Stainless Steel Pot Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![stainless steel pot copper bottom quiz](/learning-items/grade7/stainless-steel-pot-copper-bottom-quiz.jpeg)
+
+    Stainless steel pots are usually provided with copper bottoms. The reason for that could be that:`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'copper bottom makes the pot more durable'
+      },
+      {
+        id: 'opt2',
+        text: 'such pots appear colourful'
+      },
+      {
+        id: 'opt3',
+        text: 'copper is better conductor of heat than stainless steel'
+      },
+      {
+        id: 'opt4',
+        text: 'copper is easier to clean than stainless steel'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Copper bottoms do not make the pot more durable.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Copper bottoms are not added to stainless steel pots to make them more beautiful.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Copper is a better conductor of heat that stainless steel. That means that copper allows heat to flow more easily than stainless steel. Therefore, pots with copper bottoms cook food much faster than those with stainless steel bottoms.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Copper and stainless steel are equally easy to clean.'
+      }
+    ]
+  }, {
+    id: 'paper-metal-wood-experiment-video',
+    kind: 'video',
+    time: 1,
+    title: 'Amazing Conduction Experiment (Optional)',
+    instructions: dedent`
+      In this experiment, the teacher wraps a piece of paper around some __wood__ and places it over fire. The paper burns.
+
+      But then, the teacher wraps another piece of paper around __metal__ and places it over fire. The paper does not burn. Why does this happen?
+
+      This happens because, metal can conduct heat from the fire pretty quickly. Thus the paper never gets above the temperature needed to burn. But wood does not conduct heat very quickly. So the temperature increases quickly and burns the paper.
+    `,
+    videoId: 'tDs4cFOqTdM',
+    startTime: 1365,
+    endTime: 1410,
+  }, {
+    id: 'convection-land-sea-breeze',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Land And Sea Breeze',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Earlier in this chapter, we saw that heat transfer in a liquid or gas is called __Convection__. One example of convection is the breeze (or wind) that blows in coastal areas.
+
+    During the day, air above land gets heated faster than the air over sea. And hot air rises — we have seen this in hot air balloons. When the hot air above land expands and rises, the cool air from the sea, takes its place. This is called sea breeze.
+
+    In this example, transfer of heat is happening through air, and air is a gas. Thus, this is an example of convection. 
+
+    At night the reverse process happens. During night time, water cools down more slowly than land. Thus the air above water expands and rises. When this happens the air from land moves in to take its place. This is called land breeze.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'land-breeze-sea-breeze-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![land breeze sea breeze quiz](/learning-items/grade7/land-breeze-sea-breeze-quiz.jpeg)
+
+    Land breeze blows during _____. Sea breeze blows during _____.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'day; night'
+      },
+      {
+        id: 'opt2',
+        text: 'night; day'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Land Breeze blows during night. Sea breeze blows during day.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ Land Breeze blows during night. Sea breeze blows during day.'
+      }
+    ]
+  }, {
+    id: 'convection-water-heater',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Water Heater',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Water in a heater gets heated due to __Convection.__
+
+    The flame or source of heat in a water heater is at the bottom of the heater. 
+
+    The water at the bottom of the heater gets heated first and rises up; and the cold water from the top sinks to the bottom.
+
+    Heat transfer in water, which is a liquid, is called Convection.
+
+    If we look inside a heater, we will find that the pipe used to take water away from this heater and to our taps is located at the top of the heater. This is because all of the hot water in the heater rises to the top.
+
+    Also new, cold water is added to the heater from the bottom of the heater. This is done so the cold water does not mix with the hot water at the top.    
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'convection-hot-air-in-car',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Hot Air In Car',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Another example of convection can be seen on a hot day next to a car.
+
+    When we open a car door on a hot day, we do not enter the car immediately. We wait for the hot air from inside the car to escape.
+
+    In fact, after opening the car door, if we look on the ground, we can sometimes see the rising air’s shadow or turbulence.    
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'radiation-sun-heat',
+    time: 2,
+    kind: 'image',
+    title: 'Radiation Example: Heat From Sun',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    On page 43, our science books says, _“From the sun, the heat comes to us by another process known as radiation.”_ Let us think about this sentence.
+    
+    ![sun heat radiation science book](/learning-items/grade7/class7-science-book-radiation.jpeg)
+
+    The heat we receive from the sun is due to radiation. Here is why the heat from the sun is __not__ due to conduction or convection.
+
+    Conduction is heat transfer in solids (like heating a pan), and Convection is heat transfer in gases or liquids (like boiling water). 
+
+    Radiation does not need a medium. It can take place in the _presence or absence_ of a medium.
+
+    For example the heat from the sun travels to the earth through space (which is empty, and not a medium) and then just before it reaches the earth it goes through the atmosphere (which is a gas, and definitely a medium).
+
+    Heat transfer from radiation can happen with or without a medium.
+    
+    ![sun heat radiation](/learning-items/grade7/sun-heat-radiation.jpeg)
+
+    Oh and one more thing. We know that Sun can transfer heat through radiation. But Sun is not alone in that group. Everything that has some temperature radiates. You radiate. The sun radiates, the light bulb radiates, and so do your phone and cat and dog.
+
+    Things with greater temperature generally radiate more. 
+   `,
+    imagePath: '/learning-items/grade7/our-body-radiates-cats-radiate-dogs-radiate.jpeg',
+  }, {
+    id: 'radiation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    No medium is required for transfer of heat by the process of _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'conduction'
+      },
+      {
+        id: 'opt2',
+        text: 'convection'
+      },
+      {
+        id: 'opt3',
+        text: 'radiation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Conduction requires solids to transfer heat. Example, heating a pan.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Convection requires liquids or gases to transfer heat. Example heating air or boiling water.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Radiation can transfer heat in the presence or absence of a medium. Example, heat from the sun.'
+      }
+    ]
+  }, {
+    id: 'radiation-example-fire',
+    time: 1,
+    kind: 'image',
+    title: 'Radiation Example — Heat From Fire',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When we sit in front of a fire, we feel warm. That is due to __radiation__. 
+
+    When I said this in a class, one student asked me, _"why is heat from fire not Conduction or Convection?"_ Let us think about this together.
+
+    If we were to stick a metal rod in the fire, the fire would heat the rod, and the rod would burn our hand. Since the rod is solid, the process here is __conduction__.
+
+    If we put our hand above the fire, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__. 
+
+    Now this fire will also heat the air around it (in addition to the hot air rising from the fire). And we may feel a bit of that warm air. The process responsible here is also __convection__.
+
+    Finally, imagine that the air around the fire is really cool or that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__. 
+
+    Everything that has some temperature transfers heat through radiation.
+   `,
+    imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
+  }, {
+    id: 'label-diagram-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Conduction, Convection Or Radiation?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![label diagram conduction convection radiation quiz](/learning-items/grade7/label-diagram-conduction-convection-radaition-quiz.jpeg)
+
+    Identify where heat is being transferred by conduction, convection and radiation.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '1-conduction, 2-convection, 3-radiation'
+      },
+      {
+        id: 'opt2',
+        text: '1-convection, 2-conduction, 3-radiation'
+      },
+      {
+        id: 'opt3',
+        text: '1-conduction, 2-convection'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct.
+
+        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labeled conduction, this option is not correct. 
+
+        Here is the correct response.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct__. In this example heat transfers from the flame to the pot. And then from the pot to the water.
+
+        __1) Convection__ - Since water is a liquid, heat transfer within water is through convection.
+
+        __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
+
+        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+
+        Also, as the water heats up and evaporates, it heats the air above and around it. This transfer of heat through air is called Convection.
+
+        ![convection hot air from pan](/learning-items/grade7/convection-hot-air-from-pan.jpeg)
+
+        Finally, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+
+        ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        Option (1) and (2) are not correct. And option (3) is missing. Here is the correct answer.
+
+        __1) Convection__ - Since water is a liquid, heat transfer within water is through convection.
+
+        __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
+
+        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+
+        Also, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+
+        ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'what-is-clinical-thermometer',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Clinical Thermometer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A clinical thermometer is used to measure the temperature of our body. Doctors use it in their clinics and we use it in our homes.
+
+    This thermometer can measure a range of temperatures: from 35°C to 42°C. The normal temperature of the human body is around 37°C. 
+
+    By the way, when you read 37°C, you can say 37 degree Celcius. 
+
+    Above 42°C, death can occur. Below 35°C, we can experience intense shivering, loss of movement in fingers, slowing down of heart, and possibly death.
+
+    There is a bulb in the front of the thermometer; it stores mercury. Mercury is very sensitive to temperature change. So if the temperature of our body changes even slightly, the mercury inside the thermometer moves, and we can tell the correct temperature.
+
+    But mercury is poisonous. Exposure to mercury can cause memory loss, trouble speaking or hearing and even death. Therefore new, digital thermometers do not use mercury.
+
+    ![clinical thermometer temperature range](/learning-items/grade7/clinical-thermometer.jpeg)
+
+    Also, there is a kink near the bulb of the clinical thermometer. 
+
+    This kink stops mercury from falling back into the bulb of the thermometer immediately after measuring the body temperature. This gives us enough time to take the thermometer out of our mouth, so we can easily read the temperature. 
+   `,
+    imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
+  }, {
+    id: 'how-to-read-a-thermometer-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'How To Read A Thermometer',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![how to read a clinical thermometer quiz](/learning-items/grade7/how-to-read-clinical-thermometer.jpeg)
+
+    What temperature is shown by the thermometer?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '36.1°C'
+      },
+      {
+        id: 'opt2',
+        text: '36.6°C'
+      },
+      {
+        id: 'opt3',
+        text: '36.9°C'
+      },
+      {
+        id: 'opt4',
+        text: '36.7°C'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
+        __This is incorrect.__
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __This is incorrect.__
+
+        [Here is a video](https://www.youtube.com/watch?v=Oqb-Oh1nVq0) that shows how to use a clinical thermometer.
+
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
+        __This selection is incorrect.__
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.'
+      }
+    ]
+  }, {
+    id: 'what-is-laboratory-thermometer',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Laboratory Thermometer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A lab thermometer is used in a laboratory to measure temperature. For example to measure the temperature of hot water.
+
+    This thermometer can measure a range of temperatures from -10°C to 110°C.
+
+    ![laboratory thermometer temperature range](/learning-items/grade7/laboratory-thermometer.jpeg)
+
+    Also, a laboratory thermometer does not have a kink near its bulb. You may recall that a clinical thermometer has a kink near its bulb.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'similarities-differences-lab-clinical-thermometer',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Comparing Thermometers',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![clinical laboratory thermometer similarities differences](/learning-items/grade7/laboratory-clinical-thermometer-size-comparison2.jpeg)
+
+    State the similarities and differences between a clinical thermometer and a lab thermometer.
+
+    Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            The first difference is in the size. The lab thermometer is much bigger than the clinical thermometer. 
+
+            The lab thermometer can also measure temperatures from -10°C to 110°C. But the clinical thermometer measures temperature from 35°C to 42°C.
+
+            Finally, there is a kink near the bulb of a clinical thermometer, but no kink is present in a laboratory thermometer. 
+
+            The kink prevents the mercury from falling back into the bulb of the clinical thermometer immediately. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature. 
+
+            But if we measure the temperature of hot water with a lab thermometer, we have to do so while keeping the thermometer in the water. Otherwise the mercury begins to fall as soon as we take the lab thermometer out of the water.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'clinical-or-laboratory-thermometerquiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![boiling water](/learning-items/grade7/boiling-water.jpeg)
+
+    Temperature of boiling water cannot be measured by _________ thermometer.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'clinical'
+      },
+      {
+        id: 'opt2',
+        text: 'laboratory'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Water boils at 100°C. But the maximum temperature measured by a clinical thermometer is 42°C.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Water boils at 100°C. And the maximum temperature measured by a laboratory thermometer is 110°C. Thus, a laboratory thermometer __can measure__ the boiling temperature of water.'
+      }
+    ]
+  }, {
+    id: 'dark-coloured-clothes-in-winter',
+    time: 1,
+    kind: 'image',
+    title: 'Dark Coloured Clothes In Winter',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Dark colours absorb more heat than light colours. This is why the insides of solar cookers are generally black. 
+
+    ![insides of solar panel are dark black](/learning-items/grade7/insides-of-solar-panels-dark-colour-black2.jpeg)
+
+    That is also why we wear dark coloured clothes in winter, so we can feel warmer.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'final-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    locked: true,
+    title: 'Final Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![white house](/learning-items/grade7/white-house.jpeg)
+
+    In places of hot climate it is advised that outer walls of houses be painted white. Explain. 
+   `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            I know that dark colours absorb more heat than light colours. 
+
+            So that means that white absorbs less heat than black.
+
+            In places of hot climate, outer walls of houses are painted white because white colour will absorb less heat and will keep the house cooler.
+            `
+          }
+        ]
+      }
+    }
+  },  ]
+}, {
   id: ' 5',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter5--thumbnail.png',
   title: 'Acids, Bases and Salts',
