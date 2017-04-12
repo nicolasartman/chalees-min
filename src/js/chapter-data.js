@@ -3088,7 +3088,6 @@ export const chapter7Data = [{
   id: ' 1',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter1-thumbnail2.jpeg',
   title: 'Nutrition in Plants',
-  description: 'Watch videos to learn Chapter 1, Nutrition In Plants, from the Class 7 NCERT science book. Take a quiz on Autotrophs, Heterotrophs and Saprotrophs.',
   items: [{
     id: 'chapeter-1-video',
     kind: 'video',
@@ -3459,7 +3458,6 @@ export const chapter7Data = [{
   id: ' 2',
   thumbnailImagePath: '/chapter-thumbnails/grade7/Grade7-Chapter2-Thumbnail.png',
   title: 'Nutrition in Animals',
-  description: 'Learn Chapter 2, Nutrition In Animals, from the Class 7 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'chapeter-2-video',
     kind: 'video',
@@ -3913,7 +3911,6 @@ export const chapter7Data = [{
   id: ' 3',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter3-thumbnail.png',
   title: 'Fibre to Fabric',
-  description: 'Learn Chapter 3, Fibre To Fabric, from the Class 7 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'chapter-3-video',
     kind: 'video',
@@ -4274,7 +4271,6 @@ export const chapter7Data = [{
   id: ' 4',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter4-thumbnail.png',
   title: 'Heat',
-  description: 'Watch videos to learn Chapter 4, Heat, from the NCERT science book in Class 7. Try questions and answers on conduction, convection and radiation.',
   items: [{
     id: 'chapter-4-video',
     kind: 'video',
@@ -4976,7 +4972,6 @@ export const chapter7Data = [{
   id: ' 5',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter5--thumbnail.png',
   title: 'Acids, Bases and Salts',
-  description: 'Watch videos, try quizzes and view solutions to learn from Chapter 5, Acids, Bases and Salts, in the Class 7 NCERT science book.',
   items: [{
     id: 'chapter-5-video',
     kind: 'video',
@@ -5406,7 +5401,6 @@ export const chapter7Data = [{
   id: ' 6',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter6-thumbnail-3.jpeg',
   title: 'Physical and Chemical Changes',
-  description: 'Learn Chapter 6, Physical and Chemical Changes, from the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'matchstick-physical-or-chemical',
     kind: 'multipleChoiceResponse',
