@@ -4,7 +4,7 @@ import flattenDeep from 'lodash/flattenDeep';
 export const chapter6Data = [{
   id: '1',
   title: 'Food: Where Does It Come From?',
-  description: 'Learn all about how food goes from growing out of the ground to being eaten at the dinner table!',
+  description: 'Watch videos, try quizzes and view solutions to learn from Chapter 1, Food: Where Does It Come From, in the Class 6 NCERT science book.',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
   items: [{
     id: 'where-does-food-come-from',
@@ -186,6 +186,7 @@ export const chapter6Data = [{
   id: '2',
   thumbnailImagePath: '/chapter-thumbnails/chapter-2.jpg',
   title: 'Components Of Food',
+  description: 'Watch videos to learn Chapter 2, Components Of Food, from the NCERT science book in Class 6. Try questions and answers on topics like Carbohydrates, Fats and more.',
   items: [{
     id: 'carbohydrates',
     kind: 'video',
@@ -304,6 +305,7 @@ export const chapter6Data = [{
   id: '3',
   thumbnailImagePath: '/chapter-thumbnails/chapter-3.jpg',
   title: 'Fibre To Fabric',
+  description: 'Watch videos to learn Chapter 3, Fibre To Fabric, from the NCERT science book in Class 6. Try questions and answers on knitting, spinning and weaving.',  
   items: [{
     id: 'how-i-learned-to-knit',
     kind: 'video',
@@ -377,7 +379,8 @@ export const chapter6Data = [{
   id: '4',
   thumbnailImagePath: '/chapter-thumbnails/chapter-4.png',
   title: 'Sorting Materials Into Groups',
-  items: [{
+  description: 'Learn Chapter 4, Sorting Materials Into Groups, in the Class 6 NCERT science book by answering questions, viewing solutions and watching videos.',
+    items: [{
     id: 'sorting-materials-into-groups',
     kind: 'video',
     time: 2,
@@ -461,6 +464,7 @@ export const chapter6Data = [{
   id: '5',
   thumbnailImagePath: '/chapter-thumbnails/chapter-5.jpg',
   title: 'Separation of Substances',
+  description: 'Watch videos, answer questions and view solutions from Chapter 5, Separation Of Substances, in the Class 6 NCERT science book.',
   items: [{
     id: 'how-does-salt-dissolve-in-water',
     kind: 'video',
@@ -615,6 +619,7 @@ export const chapter6Data = [{
   id: '6',
   thumbnailImagePath: '/chapter-thumbnails/chapter-6.jpg',
   title: 'Changes Around Us',
+  description: 'Learn Chapter 6, Changes Around Us, in the Class 6 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'the-train-track-behind-facebooks-office',
     kind: 'video',
@@ -766,6 +771,7 @@ export const chapter6Data = [{
   id: '7',
   thumbnailImagePath: '/chapter-thumbnails/chapter-7-flower.jpg',
   title: 'Getting To Know Plants',
+  description: 'Watch videos to learn about Chapter 7, Getting To Know Plants, from the NCERT science book in Class 6. Answer quiz questions while learning about plants.',
   items: [{
     id: 'why-do-plants-produce-flowers',
     time: 6,
@@ -1082,6 +1088,7 @@ export const chapter6Data = [{
   id: '8',
   thumbnailImagePath: '/chapter-thumbnails/chapter-8.png',
   title: 'Body Movements',
+  description: 'Watch videos to learn about Chapter 8, Body Movement, in the Class 6 NCERT science book. Answer questions and view solutions on topics like Joints and Muscles.',
   items: [{
     id: 'what-keeps-our-bones-together',
     kind: 'video',
@@ -1366,6 +1373,7 @@ export const chapter6Data = [{
 }, {
   id: '9',
   title: 'Living Organisms and Their Surroundings',
+  description: 'Learn Chapter 9, Living Organisms And Their Surroundings, in the Class 6 NCERT science book by answering questions, viewing solutions and watching videos.',
   thumbnailImagePath: '/chapter-thumbnails/thumbnail-living-organisms.png',
   items: [{
     id: '5-animals-5-interesting-facts',
@@ -1621,6 +1629,7 @@ export const chapter6Data = [{
   id: '10',
   thumbnailImagePath: '/chapter-thumbnails/thumbnail-measurement.jpg',
   title: 'Motion and Measurement of Distances',
+  description: 'Watch videos, answer questions, and view solutions from Chapter 10, Motion And Measurement Of Distances, in the Class 6 NCERT science book.',
   items: [{
     id: 'means-of-transport-quiz',
     kind: 'multipleChoiceResponse',
@@ -1908,6 +1917,7 @@ export const chapter6Data = [{
   id: '11',
   thumbnailImagePath: '/chapter-thumbnails/chapter-11.jpg',
   title: 'Lights, Shadows And Reflections',
+  description: 'Learn Chapter 11, Lights Shadows And Reflections, in the Class 6 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'can-shadows-be-colourful',
     kind: 'video',
@@ -1945,6 +1955,7 @@ export const chapter6Data = [{
   id: '12',
   thumbnailImagePath: '/chapter-thumbnails/chapter-12.jpg',
   title: 'Electricity and Circuits',
+  description: 'Watch videos to learn Chapter 12, Electricity And Circuits, from the Class 6 NCERT science book. Try questions on topics like Circuits, Conductors and Insulators.',
   items: [{
     id: 'what-is-an-electric-cell',
     time: 1,
@@ -2096,7 +2107,7 @@ export const chapter6Data = [{
   id: '13',
   thumbnailImagePath: '/chapter-thumbnails/chapter-13.jpg',
   title: 'Fun With Magnets',
-  // All the times in this item are completely made-up
+  description: 'Learn Chapter 13, Fun With Magnets, in the Class 6 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'when-do-magnets-misbehave',
     time: 4,
@@ -2131,6 +2142,7 @@ export const chapter6Data = [{
   id: '14',
   thumbnailImagePath: '/chapter-thumbnails/chapter-14.jpg',
   title: 'Water',
+  description: 'Watch videos to learn about Chapter 14, Water, from the Class 6 NCERT science book. Try quiz questions on topics like Water Cycle, Transpiration and more.',
   items: [{
     id: 'how-to-convert-seawater-to-drinking-water',
     kind: 'video',
@@ -2450,6 +2462,7 @@ export const chapter6Data = [{
   id: '15',
   thumbnailImagePath: '/chapter-thumbnails/chapter-15.png',
   title: 'Air Around Us',
+  description: 'Learn Chapter 15, Air Around Us, in the Class 6 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'composition-of-air',
     kind: 'video',
@@ -2672,6 +2685,7 @@ export const chapter6Data = [{
   id: '16',
   thumbnailImagePath: '/chapter-thumbnails/chapter-16.jpg',
   title: 'Garbage In, Garbage Out',
+  description: 'Watch videos, answer quiz questions and view solutions from Chapter 16, Garbage In Garbage Out, in the Class 6 NCERT science book.',
   items: [{
     id: 'landfill-in-hawaii-and-new-delhi',
     kind: 'video',
@@ -3074,6 +3088,7 @@ export const chapter7Data = [{
   id: ' 1',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter1-thumbnail2.jpeg',
   title: 'Nutrition in Plants',
+  description: 'Watch videos to learn Chapter 1, Nutrition In Plants, from the Class 7 NCERT science book. Take a quiz on Autotrophs, Heterotrophs and Saprotrophs.',
   items: [{
     id: 'chapeter-1-video',
     kind: 'video',
@@ -3444,6 +3459,7 @@ export const chapter7Data = [{
   id: ' 2',
   thumbnailImagePath: '/chapter-thumbnails/grade7/Grade7-Chapter2-Thumbnail.png',
   title: 'Nutrition in Animals',
+  description: 'Learn Chapter 2, Nutrition In Animals, from the Class 7 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'chapeter-2-video',
     kind: 'video',
@@ -3897,6 +3913,7 @@ export const chapter7Data = [{
   id: ' 3',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter3-thumbnail.png',
   title: 'Fibre to Fabric',
+  description: 'Learn Chapter 3, Fibre To Fabric, from the Class 7 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
     id: 'chapter-3-video',
     kind: 'video',
@@ -4254,9 +4271,712 @@ export const chapter7Data = [{
 
   },]
 }, {
+  id: ' 4',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter4-thumbnail.png',
+  title: 'Heat',
+  description: 'Watch videos to learn Chapter 4, Heat, from the NCERT science book in Class 7. Try questions and answers on conduction, convection and radiation.',
+  items: [{
+    id: 'chapter-4-video',
+    kind: 'video',
+    time: 4,
+    title: 'Difference Between Conduction And Convection',
+    instructions: dedent`
+      It can be hard to understand the difference between conduction and convection. This video explains the difference clearly.
+
+      We begin by talking about something called _Heat Transfer_.
+
+      If we heat a pot on a stove, the heat will move from the bottom of the pot to the handles of the pot. This is heat transfer. Heat transfer means that heat flows from a body with higher temperature to a body with lower temperature.
+
+      Both Conduction and Convection are types of heat transfer.
+
+      Conduction is heat transfer in solids (example when heating a pot).
+
+      Convection is heat transfer in liquids and gases (example when heating water).
+
+    `,
+    videoId: '1Iy2Yg92Sa4',
+  }, {
+    id: 'draw-the-difference',
+    kind: 'imageResponse',
+    time: 5,
+    title: 'Draw What You Have Learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Use a _pen and paper_ to draw a picture that describes the differences between Conduction and Convection.
+
+    Then take a photo of the drawing from your phone and upload it here.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School. She also said, "Heat transfers from a body with higher temperature to a body with lower temperature. Conduction and Convection are both types of heat transfer."',
+        feedbackImagePath: '/learning-items/grade7/clayey-sandy-difference.jpeg'
+      }
+    }
+  }, {
+    id: 'wooden-spoonquiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Conduction Or Convection?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`      
+      A wooden spoon is dipped in a cup of ice cream. Its other end:`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'becomes cold by conduction'
+      },
+      {
+        id: 'opt2',
+        text: 'becomes cold by convection'
+      },
+      {
+        id: 'opt3',
+        text: 'does not become cold'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`__Correct__. 
+        
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat energy than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream. This will make the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+
+        And since the spoon is solid, the process of transfer of heat in the spoon will be conduction.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`The spoon will become cold, but the process is __not__ convection. The process is conduction. 
+        
+        You should know that everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+
+                And since the spoon is solid, the process of transfer of heat in the spoon will be conduction.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`This is not correct.
+        
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream also has some heat energy. Ice cream has very little heat energy, but it has some. 
+
+        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold.`
+      }
+    ]
+  }, {
+    id: 'iron-ball-in-water-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 2,
+    title: 'Heat Transfer Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![iron ball in water quiz](/learning-items/grade7/dropping-iron-ball-in-water.jpeg)
+
+    An iron ball at 40°C is dropped in water which is also at 40°C. The heat will`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'flow from iron ball to water'
+      },
+      {
+        id: 'opt2',
+        text: 'not flow at all'
+      },
+      {
+        id: 'opt3',
+        text: 'flow from water to iron ball'
+      },
+      {
+        id: 'opt4',
+        text: 'increase the temperature of both'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. For heat to flow or transfer, there needs to be a difference in temperature. Since both water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. The temperature of water and the iron ball cannot magically increase. There needs to be a new source of heat for that to happen. Since both the water and the iron ball are at 40°C, no heat will transfer from the ball to the water or from the water to the ball. '
+      }
+    ]
+  }, {
+    id: 'conductors-insulators',
+    kind: 'video',
+    time: 2,
+    title: 'Conductors and Insulators',
+    instructions: dedent`
+      The experiment in this video will show that metal is a conductor. A conductor is a substance that allows heat to flow through itself easily.
+
+      Also, this video will show that wood and plastic are insulators. An insulator is a substance that does not allow heat to pass through it easily.
+    `,
+    videoId: 'nOcT53wd1BM',
+  }, {
+    id: 'stainless-steel-pan-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Stainless Steel Pot Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![stainless steel pot copper bottom quiz](/learning-items/grade7/stainless-steel-pot-copper-bottom-quiz.jpeg)
+
+    Stainless steel pots are usually provided with copper bottoms. The reason for that could be that:`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'copper bottom makes the pot more durable'
+      },
+      {
+        id: 'opt2',
+        text: 'such pots appear colourful'
+      },
+      {
+        id: 'opt3',
+        text: 'copper is better conductor of heat than stainless steel'
+      },
+      {
+        id: 'opt4',
+        text: 'copper is easier to clean than stainless steel'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Copper bottoms do not make the pot more durable.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Copper bottoms are not added to stainless steel pots to make them more beautiful.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Copper is a better conductor of heat that stainless steel. That means that copper allows heat to flow more easily than stainless steel. Therefore, pots with copper bottoms cook food much faster than those with stainless steel bottoms.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Copper and stainless steel are equally easy to clean.'
+      }
+    ]
+  }, {
+    id: 'paper-metal-wood-experiment-video',
+    kind: 'video',
+    time: 1,
+    title: 'Amazing Conduction Experiment (Optional)',
+    instructions: dedent`
+      In this experiment, the teacher wraps a piece of paper around some __wood__ and places it over a fire. The paper burns.
+
+      But then, the teacher wraps another piece of paper around __metal__ and places it over the same fire. The paper does not burn. Why does this happen?
+
+      __Why does this happen?__ This happens because, metal can conduct heat from the fire pretty quickly. Thus the paper never gets above the temperature needed to burn. But wood does not conduct heat very quickly. So the temperature increases quickly and burns the paper.
+    
+      This experiment shows that metal is a much better conductor of heat than wood.
+    `,
+    videoId: 'tDs4cFOqTdM',
+    startTime: 1365,
+    endTime: 1410,
+  }, {
+    id: 'convection-land-sea-breeze',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Sea Breeze, Land Breeze',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Earlier in this chapter, we saw that heat transfer in a liquid or gas is called __Convection__. One example of convection is the breeze (or wind) that blows in coastal areas.
+
+    During the day, air above land gets heated faster than the air over sea. And hot air rises — we have seen this in hot air balloons. When the hot air above land expands and rises, the cool air from the sea, takes its place. This is called __sea breeze__.
+
+    In this example, transfer of heat is happening through air, and air is a gas. Thus, this is an example of convection. 
+
+    At night the reverse process happens. 
+
+    During night time, water cools down more slowly than land. Thus the air above water expands and rises. When this happens the air from land moves in to take its place. This is called __land breeze__.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'land-breeze-sea-breeze-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![land breeze sea breeze quiz](/learning-items/grade7/land-breeze-sea-breeze-quiz.jpeg)
+
+    Land breeze blows during _____. Sea breeze blows during _____.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'day; night'
+      },
+      {
+        id: 'opt2',
+        text: 'night; day'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Land Breeze (or wind from land to sea) blows during night. Sea breeze (or wind from sea to land) blows during day.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ Land Breeze blows during night. Sea breeze blows during day.'
+      }
+    ]
+  }, {
+    id: 'convection-water-heater',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Water Heater',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Water in a heater transfers heat due to __Convection.__
+
+    The flame or source of heat in a water heater is at the bottom of the heater. 
+
+    The water at the bottom of the heater gets heated first and rises up; and the cold water from the top of the heater sinks to the bottom.
+
+    In this example, the heat is transferring through water, which is a liquid. Thus the process responsible for heat transfer is Convection.
+
+    Now engineers take advantage of this process. If we look inside a heater, we will find that the pipe used to take water away from this heater and to our taps is located at the top of the heater. This is because all of the hot water in the heater rises to the top.
+
+    Also new, cold water is added to the heater from the bottom of the heater. This is done so the cold water does not mix with the hot water at the top.    
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'convection-hot-air-in-car',
+    time: 1,
+    kind: 'image',
+    title: 'Convection Example: Hot Air In Car',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Another example of convection can be seen on a hot day next to a car.
+
+    When we open a car door on a hot day, we do not enter the car immediately. We wait for the hot air from inside the car to escape.
+
+    In this example hot air is rising. And thus heat is transferring through air, which is a gas. Thus, the process responsible for heat transfer is convection.
+
+    _Note:_ After opening the car door, if we look on the ground, we can sometimes see the rising hot air’s shadow or turbulence.    
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'radiation-sun-heat',
+    time: 2,
+    kind: 'image',
+    title: 'Radiation Example: Heat From The Sun',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    On page 43, our science books says this: _“From the sun, the heat comes to us by another process known as radiation.”_ Let us think about this sentence.
+    
+    ![sun heat radiation science book](/learning-items/grade7/class7-science-book-radiation.jpeg)
+
+    The heat we receive from the sun is due to radiation. Here is why the heat from the sun is __not__ due to conduction or convection.
+
+    Conduction is heat transfer in solids, like heating pots or pans in the kitchen. And convection is heat transfer in gases or liquids, like boiling water. 
+
+    Radiation does not need a medium like solids, liquids or gases. It can take place in the _presence or absence_ of a medium.
+
+    For example the heat from the sun travels to the earth through space (which is empty, and not a medium) and then just before it reaches the earth it goes through the atmosphere (which is a gas, and definitely a medium).
+
+    Heat transfer from radiation can happen with or without a medium.
+    
+    ![sun heat radiation](/learning-items/grade7/sun-heat-radiation.jpeg)
+
+    Oh and one more thing. We know that sun can transfer heat through radiation. But Sun is not alone in that group. Everything that has some temperature radiates. 
+
+    You radiate; the sun radiates; the light bulb radiates; your phone, cat and dog also radiate.
+
+    Things with greater temperature generally radiate more. 
+   `,
+    imagePath: '/learning-items/grade7/our-body-radiates-cats-radiate-dogs-radiate.jpeg',
+  }, {
+    id: 'radiation-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    No medium is required for transfer of heat by the process of _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'conduction'
+      },
+      {
+        id: 'opt2',
+        text: 'convection'
+      },
+      {
+        id: 'opt3',
+        text: 'radiation'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Conduction requires solids to transfer heat. Example, heating a pan.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Convection requires liquids or gases to transfer heat. Example heating air or boiling water.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Radiation can transfer heat in the presence or absence of a medium. Example, heat from the sun.'
+      }
+    ]
+  }, {
+    id: 'radiation-example-fire',
+    time: 1,
+    kind: 'image',
+    title: 'Radiation Example — Heat From Fire',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When we sit in front of a fire, we feel warm. That is due to __radiation__. 
+
+    When I said this in a class, one student asked, _"why is heat from fire not conduction or convection?"_ Let us think about this together.
+
+    If we were to stick a metal rod in the fire, the fire would heat the rod, and the rod would burn our hand. Since the rod is solid, the process here is __conduction__.
+
+    If we put our hand above the fire, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__. 
+
+    Now this fire will also heat the air around it (in addition to the hot air rising from the fire). And we may feel a bit of that warm air. The process responsible here is also __convection__.
+
+    Finally, imagine that the air around the fire is really cool or that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__. 
+
+    Everything that has some temperature transfers heat through radiation.
+   `,
+    imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
+  }, {
+    id: 'label-diagram-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Conduction, Convection Or Radiation?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![label diagram conduction convection radiation quiz](/learning-items/grade7/label-diagram-conduction-convection-radaition-quiz.jpeg)
+
+    In the image above, heat transfer is happening at points 1, 2 and 3.
+
+    Identify whether heat is being transferred by conduction, convection and radiation at those 3 points.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '1-conduction, 2-convection, 3-radiation'
+      },
+      {
+        id: 'opt2',
+        text: '1-convection, 2-conduction, 3-radiation'
+      },
+      {
+        id: 'opt3',
+        text: '1-conduction, 2-convection'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct.
+
+        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labeled conduction, this option is not correct. 
+
+        Here is the correct response.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct__. In this example heat transfers from the flame to the pot. And then from the pot to the water.
+
+        __1) Convection__ - Since water is a liquid, heat transfer within water is through convection.
+
+        __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
+
+        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+
+        Also, as the water heats up and evaporates, it heats the air above and around it. This transfer of heat through air is called Convection.
+
+        ![convection hot air from pan](/learning-items/grade7/convection-hot-air-from-pan.jpeg)
+
+        Finally, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+
+        ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        Option (1) and (2) are not correct. And option (3) is missing. Here is the correct answer.
+
+        __1) Convection__ - Since water is a liquid, heat transfer within water is through convection.
+
+        __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
+
+        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+
+        ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
+
+        Also, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+
+        ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'what-is-clinical-thermometer',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Clinical Thermometer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A clinical thermometer is used to measure the temperature of our body. Doctors use it in their clinics and we use it in our homes.
+
+    This thermometer can measure a range of temperatures: from 35°C to 42°C. The normal temperature of the human body is around 37°C. 
+
+    By the way, when we read 37°C, we say 37 degree Celcius. 
+
+    Above 42°C, death can occur. Below 35°C, we can experience intense shivering, loss of movement in fingers, slowing down of heart, and death.
+
+    There is a bulb in the front of the thermometer; it stores mercury. Mercury is very sensitive to temperature change. So if the temperature of our body changes even slightly, the mercury inside the thermometer moves, and we can tell the correct temperature.
+
+    But mercury is poisonous. Exposure to mercury can cause memory loss, trouble speaking or hearing and even death. Therefore new, digital thermometers do not use mercury.
+
+    ![clinical thermometer temperature range](/learning-items/grade7/clinical-thermometer.jpeg)
+
+    Also, there is a kink near the bulb of the clinical thermometer. 
+
+    This kink stops mercury from falling back into the bulb of the thermometer immediately after measuring the body temperature. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature. 
+   `,
+    imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
+  }, {
+    id: 'how-to-read-a-thermometer-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'How To Read A Thermometer',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![how to read a clinical thermometer quiz](/learning-items/grade7/how-to-read-clinical-thermometer.jpeg)
+
+    What temperature is shown by the thermometer?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: '36.1°C'
+      },
+      {
+        id: 'opt2',
+        text: '36.6°C'
+      },
+      {
+        id: 'opt3',
+        text: '36.9°C'
+      },
+      {
+        id: 'opt4',
+        text: '36.7°C'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
+        __This is incorrect.__
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __This is incorrect.__
+
+        [Here is a video](https://www.youtube.com/watch?v=Oqb-Oh1nVq0) that shows how to use a clinical thermometer.
+
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
+        __This selection is incorrect.__
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+
+        The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
+
+        Here is a way to think about this: The total space between 36°C and 37°C represents 1 degree. And there are a total of 10 divisions between 36°C and 37°C. So each small division represents 1/10 = 0.1 degree. Thus the first division is 36.1°C, the second is 36.2°C, the third division is 36.3°C and so on.
+        `
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.'
+      }
+    ]
+  }, {
+    id: 'what-is-laboratory-thermometer',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Laboratory Thermometer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A lab thermometer is used in a laboratory to measure temperature. For example it is used to measure the temperature of hot water.
+
+    This thermometer can measure a range of temperatures. From -10°C to 110°C.
+
+    ![laboratory thermometer temperature range](/learning-items/grade7/laboratory-thermometer.jpeg)
+
+    Also, a laboratory thermometer does not have a kink near its bulb. You may recall that a clinical thermometer has a kink near its bulb.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'similarities-differences-lab-clinical-thermometer',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Comparing Thermometers',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![clinical laboratory thermometer similarities differences](/learning-items/grade7/laboratory-clinical-thermometer-size-comparison2.jpeg)
+
+    State the differences between a lab thermometer and a clinical thermometer.
+
+    Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            The first difference is in the size. The lab thermometer is much bigger than the clinical thermometer. 
+
+            The lab thermometer can also measure temperatures from -10°C to 110°C. But the clinical thermometer measures temperature only from 35°C to 42°C.
+
+            Finally, there is a kink near the bulb of a clinical thermometer, but no kink is present in a laboratory thermometer. 
+
+            The kink prevents the mercury from falling back into the bulb of the clinical thermometer immediately. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature. 
+
+            But if we measure the temperature of hot water with a lab thermometer, we have to do so while keeping the thermometer in the water. Otherwise the mercury begins to fall as soon as we take the lab thermometer out of the water.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'clinical-or-laboratory-thermometerquiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![boiling water](/learning-items/grade7/boiling-water.jpeg)
+
+    Temperature of boiling water cannot be measured by _________ thermometer.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'clinical'
+      },
+      {
+        id: 'opt2',
+        text: 'laboratory'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Water boils at 100°C. But the maximum temperature measured by a clinical thermometer is 42°C. Thus the temperature of boiling water __cannot be measured__ by a clinical thermometer.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Water boils at 100°C. And the maximum temperature measured by a laboratory thermometer is 110°C. Thus, a laboratory thermometer __can measure__ the boiling temperature of water.'
+      }
+    ]
+  }, {
+    id: 'dark-coloured-clothes-in-winter',
+    time: 1,
+    kind: 'image',
+    title: 'Dark Coloured Clothes In Winter',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Dark colours absorb more heat than light colours. This is why the insides of solar cookers are generally black. 
+
+    ![insides of solar panel are dark black](/learning-items/grade7/insides-of-solar-panels-dark-colour-black2.jpeg)
+
+    That is also why we wear dark coloured clothes in winter, so we can feel warmer.
+   `,
+    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+  }, {
+    id: 'final-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    locked: true,
+    title: 'Final Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![white house](/learning-items/grade7/white-house.jpeg)
+
+    In places of hot climate it is advised that outer walls of houses be painted white. Explain. 
+
+    Write your answer in the space below.
+   `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            I know that dark colours absorb more heat than light colours. 
+
+            So that means that white absorbs less heat than black.
+
+            In places of hot climate, outer walls of houses are painted white because white colour will absorb less heat and will keep the house cooler.
+            `
+          }
+        ]
+      }
+    }
+  },  ]
+}, {
   id: ' 5',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter5--thumbnail.png',
   title: 'Acids, Bases and Salts',
+  description: 'Watch videos, try quizzes and view solutions to learn from Chapter 5, Acids, Bases and Salts, in the Class 7 NCERT science book.',
   items: [{
     id: 'chapter-5-video',
     kind: 'video',
@@ -4686,6 +5406,7 @@ export const chapter7Data = [{
   id: ' 6',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter6-thumbnail-3.jpeg',
   title: 'Physical and Chemical Changes',
+  description: 'Learn Chapter 6, Physical and Chemical Changes, from the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'matchstick-physical-or-chemical',
     kind: 'multipleChoiceResponse',
@@ -5256,6 +5977,7 @@ export const chapter7Data = [{
 }, {
   id: ' 7',
   title: 'Weather, Climate and Adaptations',
+  description: 'Learn Chapter 7, Weather Climate and Adaptations, from the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter7-thumbnail-2.jpeg',
   items: [{
     id: 'weather',
@@ -5909,6 +6631,7 @@ export const chapter7Data = [{
 }, {
   id: ' 9',
   title: 'Soil',
+  description: 'Watch videos to learn Chapter 9, Soil, from the NCERT science book in Class 7. Try questions and answers on clayey, sandy and loamy soils.',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter9-thumbnail.jpg',
   items: [{
     id: 'how-is-soil-formed-quiz',
@@ -6412,6 +7135,7 @@ export const chapter7Data = [{
 }, {
   id: ' 10',
   title: 'Respiration in Organisms',
+  description: 'Watch videos, try quizzes and view solutions to learn Chapter 10, Respiration In Organisms, in the Class 7 NCERT science book. ',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter10-thumbnail.jpg',
   items: [{
     id: 'lungs-video',
@@ -6973,6 +7697,7 @@ export const chapter7Data = [{
   id: ' 12',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter-12-thumbnail.jpg',
   title: 'Reproduction in Plants',
+  description: 'Learn Chapter 12, Reproduction In Plants, in the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'chapter-12-video-poem',
     kind: 'video',
@@ -7666,6 +8391,7 @@ export const chapter7Data = [{
   id: ' 11',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter11-thumbnail2.jpg',
   title: 'Transportation in Animals and Plants',
+  description: 'Learn Chapter 11, Transportation In Animals And Plants, in the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'components-of-blood',
     time: 1,
@@ -8066,6 +8792,7 @@ export const chapter7Data = [{
   id: ' 8',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter8-thumbnail.jpg',
   title: 'Winds, Storms and Cyclones',
+  description: 'Learn Chapter 8, Winds, Storms and Cyclones, in the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'chapter-8-video',
     kind: 'video',
@@ -8443,6 +9170,7 @@ export const chapter7Data = [{
   id: ' 15',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter15-thumbnail.jpg',
   title: 'Light',
+  description: 'Learn Chapter 15, Light, in the Class 7 NCERT science book by watching videos. Try answering questions on concave and convex lenses and mirrors.',
   items: [{
     id: 'light-straight-line-quiz',
     kind: 'multipleChoiceResponse',
@@ -9100,9 +9828,616 @@ export const chapter7Data = [{
 
   },  ]
 }, {
+  id: ' 16',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter16-water-thumbnail.jpg',
+  title: 'Water: A Precious Resource',
+  description: 'Learn Chapter 16, Water: A Precious Resource, in the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
+  items: [{
+    id: 'water-resources-on-earth',
+    time: 1,
+    kind: 'image',
+    title: 'How Much Water Is On Earth?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     __Oceans__: The big blue section in the chart below represents the oceans on earth. Most of the water on earth, about 97%, is in the oceans. Ocean water is salty and thus not fit for drinking.
+
+     __Glaciers__: The green section in the chart represents water in glaciers. About 1.7% of the total water on earth is in the form of snow and ice in glaciers. Since this water is frozen, it is not available for drinking or human use.
+
+     __Groundwater__: The yellow section in the chart shows groundwater. This water that is found below the ground and is taken out using hand pumps and wells. We can use this water for drinking, cooking and washing. Only about 1.7% of all the water on earth is below the ground.
+
+     __Rivers__: Rivers and lakes make a very small portion of the total water on earth. It is shown in orange colour in the chart and it is so tiny that we can barely see it in the chart.
+
+     _Source: Wikipedia, Water Distribution On Earth_`,
+    imagePath: '/learning-items/grade7/water-resources-oceans-glaciers-groundwater-rivers-percentage.jpeg',
+
+  }, {
+    id: 'freshwater-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     The freshwater stored in the ground is much more than the water present in the rivers and lakes of the world.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        __Correct__. Freshwater below ground is much more than the water in all rivers and lakes of the world.
+
+        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour. 
+
+        Freshwater below the ground is about 1.7% of all water on earth and that is a lot more than the water in all the rivers and lakes of the world.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        This is not correct. The amount of water in all the rivers and lakes of the world is much smaller than the water available below ground.
+
+        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour. 
+
+        The yellow section in the chart is a lot bigger than the orange section. Thus, the amount of groundwater on earth is a lot more than the water in all rivers and lakes of the world.`
+      }
+    ]
+  }, {
+    id: 'water-resources-video',
+    kind: 'video',
+    time: 2,
+    title: 'Salt water and Freshwater',
+    instructions: dedent`
+    __Salt water__: Oceans make about 97% of all water on earth. Ocean water contains salt and thus is also called salt water. We cannot use salt water for drinking and washing purposes as it contains salt in it. 
+
+    In some places ocean water is purified by removing salt from it; humans can then use this purified water. But this process takes a lot of energy and is expensive.
+
+    __Freshwater__: The remaining 3% of all water on earth is freshwater. It includes water frozen as snow in glaciers, water below the ground, and water in rivers. This water does not have salt in it, and thus we humans can use this water.
+
+    Also, even though water frozen as snow in glaciers does not have salt, it is not available for humans to use because it is frozen. So we can only use the freshwater below the ground and water in rivers and lakes.
+    `,
+    videoId: '_mM9W71_nVA',
+    startTime: 9,
+    endTime: 149,
+  }, {
+    id: 'river-water-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Water from rivers is the only source for irrigation in the fields.
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. Rivers are an important source of irrigation in farms.
+
+        But farmers can also take out water from below the ground using wells and hand pumps. This groundwater can then be used to irrigate fields.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct__. Water from rivers is __not__ the only source for irrigation in fields.
+
+        Farmers can take out water from below the ground using wells and hand pumps. This groundwater can also be used to irrigate fields.`
+      }
+    ]
+  }, {
+    id: 'what-happens-when-people-donot-get-water',
+    time: 1,
+    kind: 'image',
+    title: 'What If We Do Not Get Water?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Water on our planet is limited. And water shortages can cause violent fights.
+
+    In large parts of India, people (mostly women) spend a lot of time collecting drinking water for their families.
+
+    Watch these two videos — [Video 1](http://video.nytimes.com/video/2006/09/28/world/1194817098866/part-1-water-woes-in-india.html) and [Video 2](http://video.nytimes.com/video/2006/09/28/world/1194817115048/part-2-water-woes-in-india.html) — from the New York Times to see the current state of fresh water in Indian cities.
+
+    Even though these videos were made in 2006, the situation has only gotten worse in the last decade.
+    `,
+    imagePath: '/learning-items/water-shortage.jpeg'
+  }, {
+    id: 'water-shortage-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Water shortage is a problem faced only by people living in rural areas.
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. 
+
+        It is true that people living in villages (or rural areas) face water shortage. 
+
+        But shortage of water is a major problem experienced by people who live in cities also.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        __Correct__. Water shortage is a problem faced  by people living in rural areas __and__ in cities.`
+      }
+    ]
+  }, {
+    id: 'water-cycle',
+    kind: 'video',
+    time: 4,
+    title: 'Water Cycle',
+    instructions: dedent`
+    The circulation of water between oceans and land is known as Water Cycle.
+
+    It involves processes like evaporation, transpiration and condensation. Let us learn about them in this video.`,
+    videoId: 'jFjI6y46QRk',
+    endTime: 255,
+  }, {
+    id: 'water-cycle-quiz',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Water Cycle Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The image below show processes involved in the water cycle. They are labelled by numbers. 
+
+    The image also shows the names of the processes but in their jumbled up form. 
+
+    Your task is to rearrage the words. You should then write them in the box below.
+
+    _Note:_ Number 6 is going to be hard. But do not worry. We will learn about it soon.
+
+    ![water cycle quiz jumbled up words](/learning-items/grade7/class-7-grade-16-figure-16-5-quiz.jpeg)
+`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from a student who took this quiz.',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            1 - Groundwater
+
+            2 - Evaporation
+
+            3 - Condensation
+
+            4 - Clouds
+
+            5 - Transpiration
+
+            6 - Infiltration
+
+            7 - Precipitation`
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'ground-water-digging-a-well',
+    kind: 'video',
+    time: 2,
+    title: 'Groundwater',
+    instructions: dedent`
+    Water that collects below ground in soil or in spaces between rocks is called groundwater.
+
+    In some places, if we dig a hole in the ground, we will find water. This water can be taken out by digging wells and installing pumps. 
+
+    Here is a video of a few people digging a well by hand to take out groundwater.
+`,
+    videoId: 'RuzDyFquyqw',
+    startTime: 37,
+    endTime: 132,
+  }, {
+    id: 'how-does-water-collect-below-ground',
+    kind: 'video',
+    time: 1,
+    title: 'How Does Water Reach Below Ground?',
+    instructions: dedent`
+    Water on the surface of the earth (example rain water or water in rivers) sometimes seeps through the soil and fills the empty spaces between the cracks of rocks.
+
+    This is how water is stored below ground. 
+
+    This process of seeping of water into ground is called __Infiltration__.
+
+    The upper limit of the water below ground is called __Water Table__.
+
+    Watch this video to learn more about water table and infiltration. The teacher in this video talks about the _hydrologic cycle_, which is just a fancy name for _water cycle_.
+`,
+    videoId: 'IDAj5T1ST7o',
+    startTime: 114,
+    endTime: 168,
+  }, {
+    id: 'infiltration-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     The process of water seepage into the ground is called ________.
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Groundwater'
+      },
+      {
+        id: 'opt2',
+        text: 'Precipitation'
+      },
+      {
+        id: 'opt3',
+        text: 'Condensation'
+      },
+      {
+        id: 'opt4',
+        text: 'Infiltration'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. 
+
+        The water available below the surface of the ground is called groundwater. In this question, we are asking about the __process__ by which water moves into the ground.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        This is incorrect.
+
+        Precipitation is rain. In this question, we are asking about the __process__ by which water moves into the ground.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        This is wrong.
+
+        Condensation is when water vapour turns back into liquid droplets. This process happens in clouds. In this question, we are asking about the __process__ by which water moves into the ground.`
+      },
+      {
+        answerSet: ['opt4'],
+        response: dedent`
+        __Correct__. The process of water seepage into the ground is called infiltration.
+
+        The word __infiltration__ generally means _entering or moving in_. This word is generally used when an army __infiltrates__ into enemy location.
+
+        In this case, however, infiltrate refers to the process of water moveing into or entering the ground.
+
+        ![army infiltrates](/learning-items/grade7/army-infiltrate-2.jpg)`
+      }
+    ]
+  }, {
+    id: 'aquifer',
+    kind: 'video',
+    time: 4,
+    title: 'What Is An Aquifer?',
+    instructions: dedent`
+    Places below the ground where water is stored between rocks is called an aquifer. The image below shows both the aquifer and the water table. 
+    ![aquifer water table](/learning-items/grade7/aquifer-water-table.jpeg)
+
+    Aquifer is made up of two words — _aqua_ and _fer_. 
+
+    _Aqua_ means water. 
+
+    And _fer_ means _to carry or bring_.  Like the word _Ferry_, which is a boat that carries or brings passengers.
+
+    Thus aquifer means a place that carries or brings water.
+
+    Here is a map of the major aquifers all around the word. The places in dark blue show where aquifers are located. The major aquifer in India is located where the Ganga flows.
+    ![aquifers around the world India ganga plain](/learning-items/grade7/aquifer-around-the-world.jpeg)
+
+    Finally, here is a short video that gives more information on how water is collected below the ground in aquifers.
+`,
+    videoId: 'oNWAerr_xEE',
+    endTime: 115,
+  }, {
+    id: 'aquifer-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     The water bearing layer of the earth is called ________.
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Water Table'
+      },
+      {
+        id: 'opt2',
+        text: 'Infiltration'
+      },
+      {
+        id: 'opt3',
+        text: 'Aquifer'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. 
+
+        The upper limit of the water below ground is called Water Table. This question is about the region below the ground that holds water.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        This is incorrect.
+
+        Infiltration is the process by which water moves or seeps into the ground. Here we are asking about the region below the ground that holds water.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        __Correct__.
+
+        The water bearing layer of the earth is called an aquifer. In other words, places below the ground where water is stored between rocks is called an aquifer.`
+      }
+    ]
+  }, {
+    id: 'tweet-what-youve-learned',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Tweet what you\'ve learned',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Explain how groundwater is recharged. 
+
+    Write your answer in 140 characters, and then submit it in the box below. Finally, you can tweet your answer with the hashtag #chapter16.
+
+    _Hint_: When we say _groundwater recharge_, we mean recharging or filling up the ground with new water.
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here are some tweets from selected students:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Surface water infiltrates the ground. There it becomes new groundwater #chapter16'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'Rain falls on earth and that water seeps into ground. This recharges the groundwater. #chapter16'
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'depletion-of-water-table',
+    kind: 'video',
+    time: 4,
+    title: 'Depletion Of Water Table',
+    instructions: dedent`
+    The word _depletion_ means reduction in the quantity of something. Like in this gif, apples are getting depleted.
+
+    ![apple depletion](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/depletion-of-apples.gif)
+
+    Water table depletion happens when the level of groundwater goes down. If that happens we will need to dig deeper wells and use more energy to pump water from the ground. 
+
+    There are several reasons for water table depletion. Three of them are:
+     - Increasing Population
+     - Increasing Industries
+     - Agricultural Activities
+
+     You can learn about all of these in the video below. 
+`,
+    videoId: 'mOkU0Ei2-Pk',
+    startTime: 10,
+    endTime: 231,
+  }, {
+    id: 'water-table-depletion-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Select The Correct Option',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Which one of the following is __not__ responsible for water shortage?
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Rapid growth of industries'
+      },
+      {
+        id: 'opt2',
+        text: 'Increasing population'
+      },
+      {
+        id: 'opt3',
+        text: 'Heavy rainfall'
+      },
+      {
+        id: 'opt4',
+        text: 'Mismanagement of water'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. 
+
+        Industries use water to produce things. An increase in the number of industries will mean more water will be used. If more water is used by industries, then that can cause a shortage of water that we need in our homes.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        This is incorrect.
+
+        People drink water and use it for cooking and washing purposes. The amount of water available on earth is limited. As the population increases, more people will need water. And that can cause a shortage of water.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        __Correct__.
+
+        Heavy rainfall will recharge the groundwater, and will make sure there is enough water in rivers and ponds. An increase in the availability of water will __not__ be responsible for water shortage.`
+      },
+      {
+        answerSet: ['opt4'],
+        response: dedent`
+        This is not correct.
+
+        If our water pipes leak, or if we use a lot of water to wash our cars, or if we mismanage water in any other way then that can lead to a shortage of water.`
+      }
+    ]
+  }, {
+    id: 'water-table-depletion-quiz-short-answer',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Water Table Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    There are ten tube wells in a lane of fifty houses. What could be the long term impact on the water table?
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is an answer from one student who responded to this quiz.',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            If a lot of people use tube wells to take out groundwater, then the level of water table is likely to go down. 
+
+            This problem will get worse in times of drought or when it does not rain.`
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'rainwater-harvesting',
+    kind: 'video',
+    time: 9,
+    title: 'Rainwater Harvesting',
+    instructions: dedent`
+    Rainwater Harvesting is a way to collect water when it rains so it can be used later.
+
+    In this video, Aamir Khan talks to several amazing people who have set up rainwater harvesting systems to conserve water in cities and villages.`,
+    videoId: 'DhgaCEP6jn4',
+  }, {
+    id: 'final-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Final Quiz',
+    locked: true,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![water drop exploding](/learning-items/grade7/water-drop-exploding.jpg)
+
+    Choose the correct option. The total water:
+    `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'in lakes and rivers is constant'
+      },
+      {
+        id: 'opt2',
+        text: 'under ground is constant'
+      },
+      {
+        id: 'opt3',
+        text: 'in seas and oceans is constant'
+      },
+      {
+        id: 'opt4',
+        text: 'of the world is constant'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        This is not correct. 
+
+        Lakes and rivers can lose water due to evaporation. Lakes and rivers can gain water because of rainfall. Thus the total water in the lakes and rivers of the world is __not__ constant.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+        This is incorrect.
+
+        People can take out a lot of water from the ground using wells and pumps. When this happens, the water table depletes. Thus the total water under ground is __not__ constant.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+        This is not correct.
+
+        Oceans and seas can lose water due to evaporation. Also, glaciers are melting due to global warming, which causes an increase in the amount of water in our oceans and seas. This is what leads to a rise in sea level and causes flooding in coastal areas.
+
+        Thus the total water in oceans and seas is __not__ constant.`
+      },
+      {
+        answerSet: ['opt4'],
+        response: dedent`
+        __Correct__.
+
+        The total water of the world is constant. This can be difficult to understand but is true.
+
+        The water on earth changes from solid (ice in glaciers) to liquid (rivers) to gas (water vapour). But the total amount of water on earth remains constant.
+
+        The glaciers of our world might melt, but that adds more water to the oceans of our world. Thus, the total amount of water on earth remains constant.`
+      }
+    ]
+  },   ]
+}, {
   id: ' 17',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter17--thumbnail.jpg',
   title: 'Forests: Our Lifeline',
+  description: 'Watch videos to learn Chapter 17, Forests: Our Lifeline, from the NCERT science book in Class 7. Try questions and answers on humus, canopy and seed dispersal.',
   items: [{
     id: 'chapter-17-video',
     kind: 'video',
@@ -9578,6 +10913,7 @@ export const chapter7Data = [{
   id: ' 13',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter13-thumbnail2.jpeg',
   title: 'Motion and Time',
+  description: 'Watch videos to learn Chapter 13, Motion And Time, from the NCERT science book in Class 7. Try questions and answers on pendulums.',
   items: [{
     id: 'chapter-13-video',
     kind: 'video',
@@ -9872,6 +11208,7 @@ export const chapter7Data = [{
   id: ' 14',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter14-thumbnail.png',
   title: 'Electric Current and its Effects',
+  description: 'Learn Chapter 14, Electric Current And Its Effects, in the Class 7 NCERT science book by watching videos, answering questions, and viewing solutions.',
   items: [{
     id: 'chapter-14-video',
     kind: 'video',
