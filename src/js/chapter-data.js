@@ -4294,7 +4294,7 @@ export const chapter7Data = [{
       Convection is heat transfer in liquids and gases (example when heating water).
 
     `,
-    videoId: '1Iy2Yg92Sa4',
+    videoId: 'HQH_j28_FK4',
   }, {
     id: 'draw-the-difference',
     kind: 'imageResponse',
@@ -4308,10 +4308,24 @@ export const chapter7Data = [{
     hacks: {
       afterBody: {
         show: 'locked',
-        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School. She also said, "Heat transfers from a body with higher temperature to a body with lower temperature. Conduction and Convection are both types of heat transfer."',
-        feedbackImagePath: '/learning-items/grade7/clayey-sandy-difference.jpeg'
+        preface: 'The picture below was made and uploaded by Koushiki, a student of Class 6 at Ahlcon International School. ',
+        feedbackImagePath: '/learning-items/grade7/difference-between-conduction-and-convection.jpeg'
       }
     }
+  }, {
+    id: 'conduction-solids',
+    time: 1,
+    kind: 'image',
+    title: 'Conduction Happens In Solids',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A cooking pan is a solid substance. If we zoom into it, we will find that it is made up of particles that are tightly packed.
+
+    When we heat the bottom of the pan, the particles at the bottom start vibrating. These vibrating particles bump into the particles next to them, causing them to vibrate also.
+
+    This is how heat is transfered in solids. And the transfer of heat in solids is called conduction.
+   `,
+    imagePath: '/learning-items/grade7/heat-transfer-conduction.jpg',
   }, {
     id: 'wooden-spoonquiz',
     kind: 'multipleChoiceResponse',
@@ -4319,6 +4333,8 @@ export const chapter7Data = [{
     title: 'Conduction Or Convection?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`      
+     ![ice cream wooden spoon conduction](/learning-items/grade7/ice-cream-cold-spoon-conduction.jpg)      
+      
       A wooden spoon is dipped in a cup of ice cream. Its other end:`,
     maxSelected: 1,
     choices: [
@@ -4352,9 +4368,9 @@ export const chapter7Data = [{
         
         You should know that everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some. 
 
-        In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+        In this example, the wooden spoon has more heat than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
 
-                And since the spoon is solid, the process of transfer of heat in the spoon will be conduction.`
+        And since the spoon is a solid, the process of transfer of heat in the spoon will be conduction.`
       },
       {
         answerSet: ['opt3'],
@@ -4478,7 +4494,7 @@ export const chapter7Data = [{
     instructions: dedent`
       In this experiment, the teacher wraps a piece of paper around some __wood__ and places it over a fire. The paper burns.
 
-      But then, the teacher wraps another piece of paper around __metal__ and places it over the same fire. The paper does not burn. Why does this happen?
+      But then, the teacher wraps another piece of paper around __metal__ and places it over the same fire. The paper does not burn.
 
       __Why does this happen?__ This happens because, metal can conduct heat from the fire pretty quickly. Thus the paper never gets above the temperature needed to burn. But wood does not conduct heat very quickly. So the temperature increases quickly and burns the paper.
     
@@ -4571,7 +4587,7 @@ export const chapter7Data = [{
 
     _Note:_ After opening the car door, if we look on the ground, we can sometimes see the rising hot air’s shadow or turbulence.    
    `,
-    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+    imagePath: '/learning-items/grade7/convection-heating-a-car-summer-day.jpg',
   }, {
     id: 'radiation-sun-heat',
     time: 2,
@@ -4672,7 +4688,7 @@ export const chapter7Data = [{
 
     In the image above, heat transfer is happening at points 1, 2 and 3.
 
-    Identify whether heat is being transferred by conduction, convection and radiation at those 3 points.`,
+    Identify whether heat is being transferred by conduction, convection or radiation at those 3 points.`,
     maxSelected: 1,
     choices: [
       {
@@ -4694,7 +4710,7 @@ export const chapter7Data = [{
         response: dedent`
         This is not correct.
 
-        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labeled conduction, this option is not correct. 
+        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labelled conduction, this option is not correct. 
 
         Here is the correct response.
 
@@ -4710,7 +4726,7 @@ export const chapter7Data = [{
 
         __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
 
-        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+        __3) Radiation__ - From burner to pot is radiation. Everything that has some temperature transfers heat through radiation.
 
         ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
 
@@ -4732,7 +4748,7 @@ export const chapter7Data = [{
 
         __2) Conduction__ - Since the pot is a solid, heat transfer within the pot is through conduction.
 
-        __3) Radiation__ - From burner to pot is radaition. Everything that has some temperature transfers heat through radiation.
+        __3) Radiation__ - From burner to pot is radiation. Everything that has some temperature transfers heat through radiation.
 
         ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
 
@@ -4936,7 +4952,7 @@ export const chapter7Data = [{
 
     That is also why we wear dark coloured clothes in winter, so we can feel warmer.
    `,
-    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+    imagePath: '/learning-items/grade7/dark-coloured-clothes-absorb-more-heat.jpg',
   }, {
     id: 'final-quiz',
     kind: 'textResponse',
