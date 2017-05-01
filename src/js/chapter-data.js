@@ -6132,7 +6132,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Imagine you have to explain humidity to someone while using twitter. How would you do it in less than 140 characters?
 
-    Write your answer in the box below. and then tweet it with #humhaihumid`,
+    Write your answer in the box below and then tweet it with #humhaihumid`,
     hacks: {
       afterBody: {
         preface: 'Here is a response from another student who answered this quiz:',
@@ -10450,6 +10450,427 @@ export const chapter7Data = [{
     ]
   },   ]
 }, {
+  id: ' 18',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter18-thumbnail-2.jpg',
+  title: 'Wastewater Story',
+  description: 'Learn Chapter 18, Wastewater Story, from the NCERT science book in Class 7 by answering questions and checking solutions.',
+  items: [{
+    id: 'what-is-wastewater-sewage',
+    time: 1,
+    kind: 'image',
+    title: 'What Is Wastewater And Sewage?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![water going down drain wastewater](/learning-items/grade7/water-down-sink-wastewater.jpeg)
+    Water that goes down the drain from sinks, showers, toilets, and laundries is __wastewater__. This water is dirty and not fit for drinking.
+    
+    ![indian toilet sewage poop](/learning-items/grade7/indian-toilet-2.jpeg)
+    Another name for this wastewater is __sewage__. Sewage contains wastewater released by homes, hospitals, industries and offices. It also contains human waste like poop and urine. 
+    
+    Sewage often makes it into newspapers. Below is one headline about sewage. Also, the impurities in sewage are called pollutants or contaminants.
+`,
+    imagePath: '/learning-items/grade7/sewage-newspaper.jpeg',
+
+  }, {
+    id: 'wastewater-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Wastewater released by houses is called _________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'sewer'
+      },
+      {
+        id: 'opt2',
+        text: 'sewage'
+      },
+      {
+        id: 'opt3',
+        text: 'drinking water'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. A sewer is a network of pipes that carries wastewater from our homes to a place where this water can be cleaned. We will learn about sewers soon.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Sewage is pronounced _"su-ij"._ The wastewater released from the kitchen and toilet in our homes is called sewage.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. The wastewater released from our homes is not fit for drinking. Among other things, this wastewater contains urine and poop.'
+      }
+    ]
+  }, {
+    id: 'contaminants-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank (Again)',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Cleaning of wastewater is a process of removing _________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'oxygen from water'
+      },
+      {
+        id: 'opt2',
+        text: 'contaminants'
+      },
+      {
+        id: 'opt3',
+        text: 'pollutants'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`This is incorrect. 
+
+        Later in this chapter we will learn how wastewater is cleaned, before it can be released into a river. There you will see that we do not remove oxygen from wastewater. 
+
+        In fact, water stops being water, if oxygen is removed from it.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`__Correct__. 
+
+        A contaminant in water is a substance that pollutes the water or makes it impure. Cleaning of wastewater is a process of removing contaminants like poop, oil and other impurities from water.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`__Correct__. 
+
+        A pollutant in water is a substance that pollutes water or makes it unclean. Both pollutant and contaminant mean the same thing.
+
+        Cleaning of wastewater is a process of removing pollutants like poop, oil and other impurities from water.`
+      }
+    ]
+  }, {
+    id: 'what-is-sewer',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Sewer?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![sewer pipe carries sewage water to treatment plant](/learning-items/grade7/sewer-pipes-sewage.jpeg)
+    A __sewer__ is a network of underground pipes that carry sewage or wastewater from places where it is produced (like in homes and industries) to a place where this wastewater can be cleaned.
+    
+    A __manhole__ is a small opening in the sewer system which can let a person enter a sewer.
+`,
+    imagePath: '/learning-items/grade7/manhole-cover-sewer.jpeg',
+
+  }, {
+    id: 'what-is-excreta',
+    time: 1,
+    kind: 'image',
+    title: 'What Is Excreta?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word __excreta__, I am reminded of the word __exit__.
+
+    Excreta is waste that exits our body. This includes poop and urine.
+`,
+    imagePath: '/learning-items/grade7/excreta-human-waste-poop.jpeg',
+
+  }, {
+    id: 'wastewater-treatment-step-1',
+    kind: 'video',
+    time: 3,
+    title: 'Step 1 In Wastewater Treatment: Bar Screen',
+    instructions: dedent`
+      Wastewater that leaves our our toilets, kitchens and industries goes through the sewer pipeline into the wastewater treatment plant. This is where the wastewater gets cleaned.
+
+      In the first step of this process, wastewater is made to pass through a filter called bar screen. This screen is like a sieve that removes large objects like plastic bags, clothes, tree leaves from the wastewater.
+
+     ![wastewater treatment step 1 bar screen](/learning-items/grade7/wastewater-treatment-bar-screen-step-1.jpeg)
+
+     ---
+      ___Note__: Here is a great 2-minute animation that shows how this process works._
+    `,
+    videoId: 'FMWNMNrfzC4',
+    startTime: 30,
+    endTime: 170,
+  }, {
+    id: 'explain-bar-screen',
+    kind: 'textResponse',
+    time: 2,
+    short: true,
+    title: 'Tweet About Bar Screen',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    What is the first step in wastewater treatment?
+
+    Write your answer in the box below and then tweet it with the hashtag #barscreen.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are responses from other students who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`Bar screen is a sieve. It removes large particles from wastewater. #barscreen 
+            `
+          },{
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`Some people flush plastics into their toilets. Bar screen removes them from water. #barscreen.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'wastewater-treatment-step-2',
+    time: 1,
+    kind: 'image',
+    title: 'Step 2 In Wastewater Treatment: Grit Removal',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Grit means small particles of sand and stone.
+
+    To remove grit from wastewater, the water is made to move through a tank.
+
+    The speed of wastewater is slow enough that sand, small stones, glass and grit settle down at the bottom of the tank due to the force of gravity. These grit particles can cause damage to the water treatment machine, thus they are removed at this step.      
+
+    ![wastewater treatment step 2 grit sand removal](/learning-items/grade7/wastewater-treatment-grit-sand-removal-step-2.jpeg)
+
+    ---
+
+    ___Note:__ Other impurities in wastewater, like poop, are not removed at this step. The wastewater flowing through the tank is moving too fast for poop to settle down due to the force of gravity. We will remove poop from wastewater in the next step_.
+`,
+    imagePath: '/learning-items/white-space-2.jpeg',
+
+  }, {
+    id: 'wastewater-treatment-step-3',
+    time: 2,
+    kind: 'image',
+    title: 'Step 3 In Wastewater Treatment: Poop Removal',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In this step, we will to remove poop from wastewater. To do this wastewater is stored in a large tank. This is what the tank looks like in real life.
+    ![wastewater treatment step 3 clarifier poop oil removal](/learning-items/grade7/clarifier-wastewater-treatment-step-3-poop-oil-removal.jpeg)
+
+    Oil floats on top of the wastewater. It is removed using a long mechanical arm. Here is what that process looks like.
+    ![wastewater treatment step 3 clarifier oil removal](/learning-items/grade7/clarifier-wastewater-treatment-step-3-oil-removal.jpeg)
+
+    Poop (or faeces) settle at the bottom of the tank. This settled poop is called __sludge__. The sludge is removed from the bottom of the tank and the remaining wastewater is called clarified water.
+`,
+    imagePath: '/learning-items/grade7/wastewater-treatment-poop-oil-removal-step-3.jpeg',
+
+  }, {
+    id: 'wastewater-treatment-step-4',
+    kind: 'video',
+    time: 2,
+    title: 'Step 4 In Wastewater Treatment: Adding Air',
+    instructions: dedent`
+      By now, we have removed a lot of impurities from wastewater, but some impurities still remain. These include more human poop and food waste.
+
+      To remove these impurities, air is pumped into clarified water. This air encourages bacteria grow in water. The bacteria consume the remaining human waste and food waste and then settle down at the bottom of the tank as more sludge.
+
+      Once that happens water is removed from the top of the tank, and dried sludge is removed from bottom of the tank. This sludge can be used as manure in fields.
+
+     ![wastewater treatment step 4 aeration](/learning-items/grade7/wastewater-treatment-aeration-step-4.jpeg)
+
+     ---
+      ___Note__: Here is a great 10-second video that shows how air is added to wastewater._
+    `,
+    videoId: 'Vrg24QMOPPQ',
+    startTime: 40,
+    endTime: 50,
+  }, {
+    id: 'sludge-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Dried _________ is used as manure in fields.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'clarified water'
+      },
+      {
+        id: 'opt2',
+        text: 'sludge'
+      },
+      {
+        id: 'opt3',
+        text: 'grit'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`This is incorrect. 
+
+        Dried clarified water does not make sense. And it is definitely not used as manure.`
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`__Correct__. 
+
+        Dried sludge is used as manure in fields. Sludge is solid poop or faeces that settles at the bottom of a tank in the wastewater treatment facility.`
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`This is not correct. 
+
+        Grit means small pieces of sand. Sand is not used as manure in fields.`
+      }
+    ]
+  }, {
+    id: 'wastewater-treatment-step-5',
+    time: 1,
+    kind: 'image',
+    title: 'Step 5 In Wastewater Treatment: Disinfection',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In this step, the wastewater is further disinfected (or cleaned) by using ultraviolet light or by adding chemicals like ozone and chlorine. 
+
+    After this step the clean water is released into rivers or the ocean.
+`,
+    imagePath: '/learning-items/grade7/wastewater-treatment-disinfection-step-5.jpeg',
+
+  }, {
+    id: 'wastewater-to-water',
+    kind: 'textResponse',
+    time: 5,
+    title: 'How Is Wastewater Cleaned?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Describe the steps involved in converting wastewater to clean water.
+
+    Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            First Step - A bar screen is used to remove large things like plastic, twigs, napkins from the wastewater.
+
+            Second Step - The water flows through a large tank. Heavy particles like grit, sand, stone, mirrors settle down due to the force of gravity. Water is flowing way too fast through this tank for other impurities like poop to settle down.
+
+            Third Step - The water is slowed down further in another tank. Here human faeces settle down as sludge at the bottom. And oil floats at the top. They are both removed. The remaining water is called clarified water.
+
+            Fourth Step - Air is added to water. This air helps aerobic bacteria to grow. These bacteria consume human and food waste and settle down at the bottom of the tank as sludge.
+
+            Fifth Step - The water is disinfected using chemicals like ozone and chlorine. The water is then released in rivers.
+            `
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'not-down-the-drain',
+    time: 1,
+    kind: 'image',
+    title: 'What Not To Throw Down The Drain',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    We should not throw the following things down the sink or the drain:
+
+     - Cooking oil: The oil can harden and block the sewer pipes.
+     - Chemicals like paints: These chemicals can kill the bacteria that purify water.
+     - Tea leaves: They can choke or block the sewer.
+
+     We should throw these things in the dustbin.
+     `,
+    imagePath: '/learning-items/grade7/oil-paint-tea-leaves-donot-throw-drain.jpeg',
+
+  }, {
+    id: 'drain-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     Drains get blocked by __________.
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'cooking oil'
+      },
+      {
+        id: 'opt2',
+        text: 'fats'
+      },
+      {
+        id: 'opt3',
+        text: 'tea leaves'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Cooking oil can harden or solidify in the drain and can block sewers.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Fats can solidify in the drain and can block sewers.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Tea leaves can block the drain. They should be thrown in the dustbin instead.'
+      }
+    ]
+  }, {
+    id: 'defecating-public-places',
+    time: 1,
+    kind: 'image',
+    title: 'Defecation In Public Places',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Defecation means pooping.
+
+    Defecating and urinating in public places is bad because:
+    - Human waste can mix with groundwater. 
+    - We use groundwater for drinking and washing purposes.
+    - Water polluted with human waste can cause water-borne diseases like cholera and typhoid. `,
+    imagePath: '/learning-items/grade7/urinating-defecating-public-places.jpeg',
+
+  }, {
+    id: 'crossword-puzzle',
+    kind: 'imageResponse',
+    time: 7,
+    locked: true,
+    title: 'Crossword Puzzle',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![chapter 18 wastewater story crossword puzzle](/learning-items/grade7/chapter-18-crossword-wastewater.jpeg)
+    Solve this crossword puzzle. 
+
+    Then upload a picture of your solution in the box below.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'Here is the solution:',
+        feedbackImagePath: '/learning-items/grade7/chapter-18-crossword-wastewater-solution.jpeg'
+      }
+    }
+  }, ]
+}, {
   id: ' 17',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter17--thumbnail.jpg',
   title: 'Forests: Our Lifeline',
@@ -10925,7 +11346,7 @@ export const chapter7Data = [{
     Every second an area of the rainforest the size of a football pitch is cut down.`,
     imagePath: '/learning-items/grade7/deforestation.jpeg',
   }, ]
-},{
+}, {
   id: ' 13',
   thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter13-thumbnail2.jpeg',
   title: 'Motion and Time',
