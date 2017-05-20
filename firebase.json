@@ -4,6 +4,11 @@
   },
   "hosting": {
     "public": "dist",
+    "redirects": [{
+      "source" : "/live",
+      "destination" : "https://www.something.com",
+      "type" : 301
+    }],
     "rewrites": [
       {
         "source": "**",

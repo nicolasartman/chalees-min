@@ -5,6 +5,8 @@ import Footer from './footer.js';
 import {chapter6Data, chapter7Data} from './chapter-data.js';
 import sortBy from 'lodash/sortBy';
 import logo from '../images/chalees-min-logo@2x.png';
+import cameraIcon from '../images/icons/camera-icon.png';
+
 
 // Clone the chapters since sort mutates the array
 const chapter6Lessons = sortBy(
@@ -44,6 +46,10 @@ const HomePage = React.createClass({
               Grade 7 Science
             </button>
           </div>
+          {<a href="somewhere" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
+            <img src={cameraIcon} style={{position: 'relative', top: 3, marginRight: 7}}/>
+            Live Class, Every Saturday at 12PM
+          </a>}
         </div>      
         
         <div className={`homepage-grade-section ${(this.state.grade6 || this.state.grade7) ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>
