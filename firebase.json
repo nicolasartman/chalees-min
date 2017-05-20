@@ -6,7 +6,7 @@
     "public": "dist",
     "redirects": [{
       "source" : "/live",
-      "destination" : "https://www.something.com",
+      "destination" : "https://hangouts.google.com/hangouts/_/fwzxlibgxvchxcz4hlcnjie4due",
       "type" : 301
     }],
     "rewrites": [
