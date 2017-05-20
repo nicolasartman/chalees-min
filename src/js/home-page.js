@@ -48,7 +48,7 @@ const HomePage = React.createClass({
           </div>
           {<a href="https://hangouts.google.com/hangouts/_/fwzxlibgxvchxcz4hlcnjie4due" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
             <img src={cameraIcon} style={{position: 'relative', top: 3, marginRight: 7}}/>
-            Live Class, Every Saturday at 12PM
+            Live Class Today at 12PM!
           </a>}
         </div>      
         
