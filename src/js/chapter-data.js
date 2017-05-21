@@ -3152,7 +3152,27 @@ export const chapter7Data = [{
     Imagine a friend of yours is struggling to remember the definition of Saprotrophs.
 
     What will you tell him/her that will help them remember the definition of Saprotrophs? Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            Sapro means dead or decaying. Troph means food or nourishment.
 
+            To remember this, the video showed that Jaba The Hutt is a Saprotroph. I did not know who Jaba The Hutt was, but after looking at its picture, I realized that it lools like a big worm.
+
+            And worms feed on dead and decaying matter.
+
+            Therefore, Saprotroph get their food or nourishment from dead or decaying matter. Example worms and mushrooms.
+            `
+          },
+        ]
+      }
+    }
   }, {
     id: 'photosynthesis-again',
     time: 1,
@@ -3227,11 +3247,11 @@ export const chapter7Data = [{
     instructions: dedent`
     Stomata is a Greek word, which means mouths.
 
-    In the picture below, we have zoomed into an image of the leaf. There you see two stomata that look like tiny mouths surrounded by swollen lips.
+    In the picture below, we have zoomed into an image of the leaf. Here you see two stomata that look like tiny mouths surrounded by swollen lips.
 
     Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
 
-    imagePath: '/learning-items/grade7/stomata-means-mouths.jpeg',
+    imagePath: '/learning-items/grade7/stomata-means-mouths-2.jpeg',
 
   }, {
     id: 'stomata-another-look',
@@ -3242,7 +3262,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Stomata are tiny openings (or pores) in the leaf, from which plants take in carbon dioxide and give out water and oxygen.`,
 
-    imagePath: '/learning-items/grade7/stomata-diagram.jpeg',
+    imagePath: '/learning-items/grade7/stomata-diagram-2.jpeg',
 
   }, {
     id: 'stomata-microscope-open-close',
@@ -3253,20 +3273,18 @@ export const chapter7Data = [{
     instructions: dedent`
     Stomata open to absorb carbon dioxide, which is needed for photosynthesis.
 
-    Now, when stomata are open, water is also lost.
-
-    Therefore, when carbon dioxide is not needed by the plant, the stomata close to avoid water loss.
+    Now, when stomata are open, water is also lost. Therefore, when carbon dioxide is not needed by the plant, the stomata close to avoid water loss.
 
     Here you are looking at a microscopic image of an open and closed stoma.`,
 
-    imagePath: '/learning-items/grade7/stomata-from-microscope-2.jpeg',
+    imagePath: '/learning-items/grade7/stomata-from-microscope-3.jpeg',
 
   }, {
     id: 'make-an-exam',
     kind: 'textResponse',
     time: 3,
     short: true,
-    title: 'Make an Exam Question',
+    title: 'Make An Exam Question',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Imagine you were creating a final exam on the topic of Stomata.
@@ -3274,7 +3292,30 @@ export const chapter7Data = [{
     What is the most difficult stomata-related question you would ask in that exam?
 
     Tell us in the space below.`,
-
+    hacks: {
+      afterBody: {
+        preface: 'Here are responses from other students who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`What is the function of stomata?
+            `
+          },{
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`What will happen if there was no stomata in the leaf?
+            `
+          },{
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: dedent`Why does stomata close? 
+            `
+          },
+        ]
+      }
+    }
   }, {
     id: 'cholorophyll-meaning',
     time: 1,
@@ -3285,25 +3326,25 @@ export const chapter7Data = [{
     _Chloro_ means green.
     _Phlly_ means leaf.
 
-    Chlorophyll is a green pigment in leaves that captures energy from sunlight, which is later used to make food.
+    Chlorophyll is a green pigment in leaves that captures energy from sunlight, which is later used to make food for the plant.
 
     In the image below, we have zoomed into a picture of a leaf. The green substance inside the round spheres is Chlorophyll.
     `,
-    imagePath: '/learning-items/grade7/chlorophyll-definition-3.jpeg',
+    imagePath: '/learning-items/grade7/chlorophyll-definition-4.jpeg',
   }, {
     id: 'cholorophyll-analogy',
     time: 1,
     kind: 'image',
-    title: 'Chlorophyll is like Solar Panels',
+    title: 'Chlorophyll is like a Solar Panel',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Chlorophyll is like Solar Panels; they both help capture energy from the sun.
+    Chlorophyll is like a Solar Panel; they both help capture energy from the sun.
 
     The energy captured by Chlorophyll is used to make food for plants.
 
     The energy capture by Solar Panels is used to light homes.
     `,
-    imagePath: '/learning-items/grade7/chlorophyll-like-solar-panels.jpeg',
+    imagePath: '/learning-items/grade7/chlorophyll-like-solar-panel-2.jpeg',
   }, {
     id: 'can-humans-photosynthesize',
     kind: 'multipleChoiceResponse',
@@ -3402,13 +3443,13 @@ export const chapter7Data = [{
     title: 'Parasites and Hosts',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    A parasite is an organism that derives its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites & humans are their hosts
+    A parasite is an organism that derives its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites and humans are their hosts
 
     Amarbel, the yellow plant you saw in a previous example, is also a parasite.
 
     You can think of parasites as heterotrophs.
     `,
-    imagePath: '/learning-items/grade7/parasites-lice-host.jpeg',
+    imagePath: '/learning-items/grade7/parasites-lice-host-2.jpeg',
   }, {
     id: 'insectivorous-plants',
     kind: 'video',
