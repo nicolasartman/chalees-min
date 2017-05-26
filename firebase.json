@@ -6,7 +6,7 @@
     "public": "dist",
     "redirects": [{
       "source" : "/live",
-      "destination" : "https://hangouts.google.com/hangouts/_/fwzxlibgxvchxcz4hlcnjie4due",
+      "destination" : "https://meet.google.com/udp-uepj-vru",
       "type" : 301
     }],
     "rewrites": [
