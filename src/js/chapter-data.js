@@ -7193,19 +7193,76 @@ export const chapter7Data = [{
   id: ' 10',
   title: 'Respiration in Organisms',
   description: 'Watch videos, try quizzes and view solutions to learn Chapter 10, Respiration In Organisms, in the Class 7 NCERT science book. ',
-  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter10-thumbnail.jpg',
+  thumbnailImagePath: '/chapter-thumbnails/grade7/grade7-chapter10-thumbnail-2.png',
   items: [{
     id: 'lungs-video',
     kind: 'video',
-    time: 5,
-    title: 'Talking To Dr. Sanjay About Lungs',
+    time: 8,
+    title: 'Chat With Dr. Sanjay On Lungs',
     instructions: dedent`
-    In this video, Dr. Sanjay shares stories from the emergency room in a hospital. He talks about helping patients who could not breathe because they had been shot from a gun.
+    In this video, Dr. Sanjay shares stories from the emergency room in a hospital. He talks about helping a young boy who could not breathe.
 
-    While sharing these stories, Dr. Sanjay also talks about how we breathe and why we breathe.
+    While sharing this story, Dr. Sanjay also talks about how we breathe and why we breathe.
+    `,
+    videoId: 'KHPF091ZM-o',
+  }, {
+    id: 'trachea-cage-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![skeleton lungs quiz](/learning-items/grade7/trachea-2.jpeg)
 
-    The video begins with Dr. Sanjay opening the chest of a dead person to explain the location of lungs in the human body.`,
-    videoId: 'F4ApOc4p-CE',
+      Another name for the windpipe is _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'nostril'
+      },
+      {
+        id: 'opt2',
+        text: 'trachea'
+      },
+      {
+        id: 'opt3',
+        text: 'alveoli'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. Nostrils are the opening in the nose that let air inside our body.
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Another name for the windpipe is trachea.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          This is incorrect. Alveoli are small bags in the lungs that transfer oxygen to our blood.
+        `
+      }
+    ]
+  }, {
+    id: 'how-do-we-breathe',
+    kind: 'video',
+    time: 2,
+    title: 'How Do We Breathe?',
+    instructions: dedent`
+    We talked about this topic in the interview with Dr. Sanjay. Now let us look at it in more detail.
+
+    __Inhaling__: When we inhale (or breathe in), air passes through our nose and mouth, goes into the windpipe, and then to our lungs. The lungs are located in the chest and are surrounded by bones called the rib cage, which protect the lungs. A muscular sheet called diaphragm is located below the lungs and forms the bottom of the chest.
+
+    __Exhaling__: When we exhale (or breathe out), air passes from the lungs to the wind pipe and then out of our body through our nose or mouth.
+     `,
+    videoId: '-MCeNo-tco4',
+    startTime: 190,
+    endTime: 299,
   }, {
     id: 'rib-cage-quiz',
     kind: 'multipleChoiceResponse',
@@ -7263,6 +7320,154 @@ export const chapter7Data = [{
 
           ![skeleton rib cage](/learning-items/grade7/lungs-quiz-rib-cage-solution.jpeg)
         `
+      }
+    ]
+  }, {
+    id: 'cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is A Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A cavity is an empty space in a solid object. 
+
+    You can find cavities in teeth and trees. Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth.
+
+    We will soon use the word _cavity_ to learn about the _nasal cavity_ and the _chest cavity_.
+    `,
+    imagePath: '/learning-items/grade7/cavities-teeth-tree-cave.jpeg'
+  }, {
+    id: 'nasal-cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is The Nasal Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The nasal cavity is a large air filled space above and behind the nose, and in the middle of the face.
+    `,
+    imagePath: '/learning-items/grade7/nasal-cavity.jpeg'
+  }, {
+    id: 'chest-cavity',
+    time: 1,
+    kind: 'image',
+    title: 'What Is The Chest Cavity?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    The chest cavity is surrounded by the rib cage, the backbone and the breast bone (which is a flat bone running down the centre of the chest).
+
+    The chest cavity is separated from the intestines in the abdomen by a sheet of muscle called the diaphragm.
+    `,
+    imagePath: '/learning-items/grade7/chest-cavity-2.jpeg'
+  }, {
+    id: 'diaphragm',
+    kind: 'video',
+    time: 2,
+    title: 'Diaphragm',
+    instructions: dedent`
+    The speaker in this video will use some big, tough words. Do not worry about them. In fact, you should __watch this video on mute__ (with no sound). Simply observe how the diaphragm moves when we breathe.
+
+    Diaphragm  is a sheet of muscle, which separates the chest from the intestines.
+
+    The _"G"_ is silent in the word diaphragm. This is similar to words like _align_ and _high_.
+
+    __When we inhale__, the ribcage moves outwards and upwards and the diaphragm moves down. This creates space for lungs to expand.
+
+    __When we exhale__, the reverse happens. The ribcage moves inwards and downwards and the diaphragm moves up.`,
+    videoId: 'hp-gCvW8PRY',
+    endTime: 66,
+  }, {
+    id: 'diaphragm-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Diaphragm can be found in the _________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'cranial cavity'
+      },
+      {
+        id: 'opt2',
+        text: 'chest cavity'
+      },
+      {
+        id: 'opt3',
+        text: 'abdominal cavity'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. Cranial cavity is the space inside the skull.
+
+          ![cranial cavity](/learning-items/grade7/cranial-cavity-quiz.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt2'],
+        response: dedent`
+          __Correct__. Diaphragm forms the bottom of the chest cavity.
+
+          ![chest cavity](/learning-items/grade7/chest-cavity-quiz.jpeg)
+        `
+      },
+      {
+        answerSet: ['opt3'],
+        response: dedent`
+          This is incorrect. Abdominal cavity contains our stomach and intestines and is located below the chest cavity.
+
+          ![abdominal cavity](/learning-items/grade7/abdominal-cavity-quiz.jpeg)
+        `
+      }
+    ]
+  }, {
+    id: 'ribs-movement-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz On Ribs',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      During exhalation (or breathing out), the ribs
+      `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'move outwards'
+      },
+      {
+        id: 'opt2',
+        text: 'move downwards'
+      },
+      {
+        id: 'opt3',
+        text: 'move upwards'
+      },
+      {
+        id: 'opt4',
+        text: 'do not move'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The ribs move outwards while breathing in or inhalation.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. When we exhale or breathe out our ribs move inwards and downwards.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is incorrect. The ribs move upwards while breathing in or inhalation.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: 'This is incorrect. Ribs move when we breathe.'
       }
     ]
   }, {
@@ -7533,174 +7738,6 @@ export const chapter7Data = [{
       {
         answerSet: ['opt4'],
         response: 'This is incorrect. '
-      }
-    ]
-  }, {
-    id: 'how-do-we-breathe',
-    kind: 'video',
-    time: 2,
-    title: 'How Do We Breathe?',
-    instructions: dedent`
-    In this video you will see how we breathe.
-
-    We will also see some new words like _nostrils, nasal cavity, chest cavity, and diaphragm_. This video and the rest of this chapter will explain these new words.
-
-    When we inhale (or breathe in), air passes through our nostrils, into the nasal cavity, then to the windpipe, and then to our lungs.
-
-    The oxygen from the air in our lungs is then picked up by red blood cells and taken to all cells in our body.
-
-    The lungs are located in the chest cavity and are surrounded by bones called the rib cage, which protect the lungs.
-
-    A muscular sheet called diaphragm forms the bottom of the chest cavity.`,
-    videoId: 'V81C7m0LQxA',
-    startTime: 12,
-    endTime: 115,
-  }, {
-    id: 'ribs-movement-quiz',
-    kind: 'multipleChoiceResponse',
-    time: 1,
-    title: 'Quiz On Ribs',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-      During exhalation (or breathing out), the ribs
-      `,
-    maxSelected: 1,
-    choices: [
-      {
-        id: 'opt1',
-        text: 'move outwards'
-      },
-      {
-        id: 'opt2',
-        text: 'move downwards'
-      },
-      {
-        id: 'opt3',
-        text: 'move upwards'
-      },
-      {
-        id: 'opt4',
-        text: 'do not move'
-      }
-    ],
-    automaticResponses: [
-      {
-        answerSet: ['opt1',],
-        response: 'This is incorrect. The ribs move outwards while breathing in or inhalation.'
-      },
-      {
-        answerSet: ['opt2'],
-        response: '__Correct__. When we exhale or breathe out our ribs move inwards and downwards.'
-      },
-      {
-        answerSet: ['opt3'],
-        response: 'This is incorrect. The ribs move upwards while breathing in or inhalation.'
-      },
-      {
-        answerSet: ['opt4'],
-        response: 'This is incorrect. Ribs move when we breathe.'
-      }
-    ]
-  }, {
-    id: 'cavity',
-    time: 1,
-    kind: 'image',
-    title: 'What Is A Cavity?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    A cavity is an empty space in a solid object.
-
-    You can find cavities in teeth and trees.
-
-    Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth.
-    `,
-    imagePath: '/learning-items/grade7/cavities-teeth-tree-cave.jpeg'
-  }, {
-    id: 'nasal-cavity',
-    time: 1,
-    kind: 'image',
-    title: 'What Is The Nasal Cavity?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    The nasal cavity is a large air filled space above and behind the nose, and in the middle of the face.
-    `,
-    imagePath: '/learning-items/grade7/nasal-cavity.jpeg'
-  }, {
-    id: 'chest-cavity',
-    time: 1,
-    kind: 'image',
-    title: 'What Is The Chest Cavity?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    The chest cavity is surrounded by the rib cage, the backbone and the breast bone (which is a flat bone running down the centre of the chest).
-
-    The chest cavity is separated from the intestines in the abdomen by a sheet of muscle called the diaphragm.
-    `,
-    imagePath: '/learning-items/grade7/chest-cavity-2.jpeg'
-  }, {
-    id: 'diaphragm',
-    kind: 'video',
-    time: 2,
-    title: 'Diaphragm',
-    instructions: dedent`
-    The speaker in this video will use some big, tough words. Do not worry about them. In fact, you should __watch this video on mute__ (with no sound). Simply observe how the diaphragm moves in this video.
-
-    Diaphragm  is a sheet of muscle, which separates the chest from the intestines.
-
-    The _"G"_ is silent in the word diaphragm. This is similar to words like _align_ and _high_.
-
-    When watching the video, notice that when we inhale, the ribcage moves outwards and upwards and the diaphragm moves down. This creates space for lungs to expand.
-
-    The opposite happens when we exhale or breathe out.`,
-    videoId: 'hp-gCvW8PRY',
-    endTime: 66,
-  }, {
-    id: 'diaphragm-quiz',
-    kind: 'multipleChoiceResponse',
-    time: 1,
-    title: 'Fill In The Blank',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-      Diaphragm can be found in the _________.`,
-    maxSelected: 1,
-    choices: [
-      {
-        id: 'opt1',
-        text: 'cranial cavity'
-      },
-      {
-        id: 'opt2',
-        text: 'chest cavity'
-      },
-      {
-        id: 'opt3',
-        text: 'abdominal cavity'
-      }
-    ],
-    automaticResponses: [
-      {
-        answerSet: ['opt1',],
-        response: dedent`
-          This is incorrect. Cranial cavity is the space inside the skull.
-
-          ![cranial cavity](/learning-items/grade7/cranial-cavity-quiz.jpeg)
-        `
-      },
-      {
-        answerSet: ['opt2'],
-        response: dedent`
-          __Correct__. Diaphragm forms the bottom of the chest cavity.
-
-          ![chest cavity](/learning-items/grade7/chest-cavity-quiz.jpeg)
-        `
-      },
-      {
-        answerSet: ['opt3'],
-        response: dedent`
-          This is incorrect. Abdominal cavity contains our stomach and intestines and is located below the chest cavity.
-
-          ![abdominal cavity](/learning-items/grade7/abdominal-cavity-quiz.jpeg)
-        `
       }
     ]
   }, {
