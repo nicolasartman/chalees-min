@@ -3328,7 +3328,9 @@ export const chapter7Data = [{
 
     Chlorophyll is a green pigment in leaves that captures energy from sunlight, which is later used to make food for the plant.
 
-    In the image below, we have zoomed into a picture of a leaf. The green substance inside the round spheres is Chlorophyll.
+    In the image below, we have zoomed into a leaf using a microscope. The green substance inside the round spheres is Chlorophyll.
+
+    _Image Source: Kristian Peters, Wikipedia_
     `,
     imagePath: '/learning-items/grade7/chlorophyll-definition-4.jpeg',
   }, {
@@ -3404,7 +3406,7 @@ export const chapter7Data = [{
 
       The yellow plant you see in this image is called _Amarbel_ or _Cuscuta_.
 
-      It derives its food from the green plant in this image.
+      It gets its food from the green plant in this image.
 
       Is the _Amarbel_ an autotroph, heterotroph or saprotroph?`,
     maxSelected: 1,
@@ -3429,11 +3431,11 @@ export const chapter7Data = [{
       },
       {
         answerSet: ['opt2'],
-        response: '__Correct__. _Hetero_ means other and _troph_ means food or nourishment. Since the Amarbel derives its nutrition from another plant it is called a Heterotroph. Amarbel is also called a parasite. We will learn about parasites next.'
+        response: '__Correct__. _Hetero_ means other and _troph_ means food or nourishment. Since the Amarbel gets its nutrition from another plant it is called a Heterotroph. Amarbel is also called a parasite. We will learn about parasites next.'
       },
       {
         answerSet: ['opt3'],
-        response: 'No, Saprotroph is not correct. _Sapro_ means dead or decaying and _troph_ means food or nourishment. Examples include mushrooms and worms. Amarbel derives its nutrition from the green plant; and the green plant is not dead.'
+        response: 'No, Saprotroph is not correct. _Sapro_ means dead or decaying and _troph_ means food or nourishment. Examples include mushrooms and worms. Amarbel gets its nutrition from the green plant; and the green plant is not dead.'
       }
     ]
   }, {
@@ -3443,7 +3445,7 @@ export const chapter7Data = [{
     title: 'Parasites and Hosts',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    A parasite is an organism that derives its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites and humans are their hosts
+    A parasite is an organism that gets its nutrition from another organism. For example, the lice that live in human hair, feed on us humans. Thus lice are parasites and humans are their hosts
 
     Amarbel, the yellow plant you saw in a previous example, is also a parasite.
 
@@ -4553,15 +4555,17 @@ export const chapter7Data = [{
     instructions: dedent`
     Earlier in this chapter, we saw that heat transfer in a liquid or gas is called __Convection__. One example of convection is the breeze (or wind) that blows in coastal areas.
 
-    During the day, air above land gets heated faster than the air over sea. And hot air rises — we have seen this in hot air balloons. When the hot air above land expands and rises, the cool air from the sea, takes its place. This is called __sea breeze__.
+    During the day, air above land gets heated faster than the air over sea. And hot air rises — we have seen this in hot air balloons. When the hot air above land expands and rises, the cool air from the sea takes its place. This is called __sea breeze__.
 
     In this example, transfer of heat is happening through air, and air is a gas. Thus, this is an example of convection. 
+
+    ![sea breeze day](/learning-items/grade7/sea-breeze-day.jpeg)
 
     At night the reverse process happens. 
 
     During night time, water cools down more slowly than land. Thus the air above water expands and rises. When this happens the air from land moves in to take its place. This is called __land breeze__.
    `,
-    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+    imagePath: '/learning-items/grade7/land-breeze-night.jpeg',
   }, {
     id: 'land-breeze-sea-breeze-quiz',
     kind: 'multipleChoiceResponse',
@@ -4602,17 +4606,17 @@ export const chapter7Data = [{
     instructions: dedent`
     Water in a heater transfers heat due to __Convection.__
 
-    The flame or source of heat in a water heater is at the bottom of the heater. 
+    The flame or source of heat in a water heater is at _the bottom of the heater_. 
 
     The water at the bottom of the heater gets heated first and rises up; and the cold water from the top of the heater sinks to the bottom.
 
     In this example, the heat is transferring through water, which is a liquid. Thus the process responsible for heat transfer is Convection.
 
-    Now engineers take advantage of this process. If we look inside a heater, we will find that the pipe used to take water away from this heater and to our taps is located at the top of the heater. This is because all of the hot water in the heater rises to the top.
+    Now engineers take advantage of this process. If we look inside a heater, we will find that the pipe used to take water away from this heater and to our taps is located at the top of the heater. This is because all the hot water in the heater rises to the top.
 
     Also new, cold water is added to the heater from the bottom of the heater. This is done so the cold water does not mix with the hot water at the top.    
    `,
-    imagePath: '/learning-items/grade7/laboratory-clinical-thermometer-kink-comparison.jpeg',
+    imagePath: '/learning-items/grade7/water-heater-convection.jpeg',
   }, {
     id: 'convection-hot-air-in-car',
     time: 1,
@@ -4707,17 +4711,19 @@ export const chapter7Data = [{
 
     When I said this in a class, one student asked, _"why is heat from fire not conduction or convection?"_ Let us think about this together.
 
-    If we were to stick a metal rod in the fire, the fire would heat the rod, and the rod would burn our hand. Since the rod is solid, the process here is __conduction__.
+    ---
 
-    If we put our hand above the fire, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__. 
+    If we put a kettle on top of the fire, the kettle will get hot. Since the kettle is solid, the process here is __conduction__.
 
-    Now this fire will also heat the air around it (in addition to the hot air rising from the fire). And we may feel a bit of that warm air. The process responsible here is also __convection__.
+    If we put our hand above the kettle, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__. 
 
-    Finally, imagine that the air around the fire is really cool or that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__. 
+    Now this fire will also heat the air around it (in addition to the hot air rising from the fire). And we may feel a bit of that warm air. The process responsible here is __also convection__.
+
+    Finally, imagine that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__. 
 
     Everything that has some temperature transfers heat through radiation.
    `,
-    imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
+    imagePath: '/learning-items/grade7/conduction-convection-radiation.jpeg',
   }, {
     id: 'label-diagram-quiz',
     kind: 'multipleChoiceResponse',
