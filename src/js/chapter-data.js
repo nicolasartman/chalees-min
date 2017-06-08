@@ -310,14 +310,18 @@ export const chapter6Data = [{
     id: 'how-i-learned-to-knit',
     kind: 'video',
     time: 4,
-    title: 'How I learned to knit',
-    instructions: 'Here is a story of how I learned to knit and then learned something interesting about life.',
+    title: 'How I Learned To Knit',
+    instructions: dedent`
+    The video below tells a story of how I learned to knit a scarf. 
+
+    And while doing so, I learned something about life itself.`,
     videoId: '0EL7M44_Ey0',
   }, {
     id: 'tell-us-your-learning-story',
     kind: 'textResponse',
     time: 10,
-    title: 'Tell us your learning story',
+    short: true,
+    title: 'Tell Us Your Learning Story',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       Have you ever gone from knowing nothing about a subject to knowing a lot.
@@ -338,39 +342,235 @@ export const chapter6Data = [{
     }
   }, {
     id: 'cottons-journey',
-    time: 5,
+    time: 2,
     kind: 'image',
     title: 'Cotton\'s Journey',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Cotton goes from the field, to fibre, to yarn to fabric. Study the image below to see how cotton shirts are made.',
-    imagePath: '/learning-items/cotton-journey.png'
+    instructions: dedent`
+    Cotton is a plant that grows in the farm. Cotton fibres from the plant are collected and seeds are removed from it.
+     
+    These cotton fibres are then twisted or spun, and are turned into yarn or thread.
+     
+    The thread is then weaved into cotton fabric which can be used to make things like shirts.
+    `,
+    imagePath: '/learning-items/cotton-journey-field-fibre-yarn-fabric.jpeg'
   }, {
-    id: 'how-cotton-is-made',
+    id: 'yarn-made-from-fibre',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Yarn is made from fibres.
+
+      True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Fibre is twisted or spun together to create yarn or thread. In the next part of this chapter we will see how cotton fibres are converted to yarn.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. Yarn is actually made from fibres. In the next part of this chapter we will see how cotton fibres are converted to yarn.'
+      }
+    ]
+  }, {
+    id: 'cotton-from-farm',
     kind: 'video',
-    time: 5,
-    title: 'How cotton is made',
-    instructions: 'This video gives a very thorough overview of how cotton is made from farm to fabric.',
-    videoId: 'kH_b3Heo48I',
-    startTime: 20
+    time: 1,
+    title: 'Getting Cotton Fibres From Plants',
+    instructions: dedent`
+    India is one of the largest producers of cotton in the world.
+ 
+    Cotton is a plant that grows in farms. In the video below, you can see farmers picking cotton fibres from plants. In many farms this work is also done by machines.
+ 
+    _Note:_ If you are curious about how a cotton T-shirt is made from cotton fibres, you can check out [this video](https://youtu.be/FIA3wWj35Yw?t=5s) also.
+      `,
+    videoId: '_4ku4blO8eQ',
+  },  {
+    id: 'spinning-cotton-fibre-to-yarn',
+    kind: 'video',
+    time: 3,
+    title: 'Spinning Cotton Fibres To Make Yarn',
+    instructions: dedent`
+      Once cotton fibres have been picked from plants they are converted to yarn (or thread).
+       
+      Watch this video to see how cotton fibres are spun (or twisted) to create yarn. 
+      `,
+    videoId: 'uslx0Mxn-E8',
+    endTime: 175,
   }, {
     id: 'draw-what-you-have-learned',
     kind: 'imageResponse',
     time: 10,
-    title: 'Draw what you have learned',
+    title: 'Draw What You Have Learned',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: 'Use a pencil and paper to draw a picture that shows what you have learned about how cotton fabric is made. Then take a picture of it and share it here.',
+    instructions: dedent`
+    Use a _pencil and paper_ to draw a picture that shows what you have learned about how cotton fabric is made from cotton fibres. 
+
+    Then take a photo of that drawing and upload it here.`,
     hacks: {
       afterBody: {
-        preface: 'Here is a comic that another student in the class submitted.',
+        preface: 'Here is a comic that another student submitted.',
         show: 'locked',
         feedbackImagePath: '/image-response-feedback/dl-fibre-to-fabric.png'
       }
     }
   }, {
+    id: 'getting-jute-from-plants',
+    kind: 'video',
+    time: 2,
+    title: 'Getting Jute From Plants',
+    instructions: dedent`
+      Jute is used to make ropes and bags like the one shown in this image.
+      ![jute rope](/learning-items/jute-rope.jpeg)
+
+      Jute fibres come from the Jute plant which is grown in farms in India. Here is a picture of a Jute farm in India.
+      ![jute rope](/learning-items/jute-plant-farm.jpeg)
+
+      The video below shows how Jute fibres are removed from Jute plants. The plant is immersed in water for a few days. The stem rots and the Jute fibres are separated by hand.
+      `,
+    videoId: 'sNlILhEjbNw',
+  }, {
+    id: 'jute-from-coconut',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Jute is obtained from the outer covering of coconuts.
+
+      True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. We get Jute fibres from the Jute plant and __not__ from coconut.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Jute is __not__ obtained from the outer covering of coconuts. We get Jute fibres from the Jute plant.'
+      }
+    ]
+  }, {
+    id: 'natural-synthetic-fibres',
+    time: 2,
+    kind: 'image',
+    title: 'Natural And Synthetic Fibres',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Fibres that are obtained from plants and animals are called __natural fibres__.
+
+    For example cotton and jute fibres are obtained from plants, and wool is obtained from sheep. Thus, cotton, jute and wool are natural fibres.
+    ![cotton wool natural fibres](/learning-items/natural-fibres-cotton-wool.jpeg)
+
+    Fibres that are obtained from chemicals are called __synthetic fibres__.
+
+    Examples include fibres like Nylon and Polyester. Let us learn about them next.
+    `,
+  imagePath: '/learning-items/white-space-2.jpeg',
+  },  {
+    id: 'how-is-nylon-made',
+    kind: 'video',
+    time: 4,
+    title: 'How Is Nylon Made?',
+    instructions: dedent`
+    Nylon is a synthetic fibre. Two different chemicals are mixed to make Nylon.
+ 
+    These chemicals have confusing names. If you are curious, their names are 1,6-diaminohexane and sebacoyl chloride.
+ 
+    This video shows how mixing these two chemicals makes Nylon in the lab.
+      `,
+    videoId: 'c7ihpZhCj6k',
+    endTime: 193,
+  }, {
+    id: 'cotton-natural-or-synthetic',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Natural Or Synthetic Fibre',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     ![cotton natural fibres](/learning-items/cotton-fibre.jpeg)
+
+      Is cotton a natural fibre or synthetic fibre?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Natural Fibre'
+      },
+      {
+        id: 'opt2',
+        text: 'Synthetic Fibre'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Cotton is grown in a farm and comes from a plant. Thus it is a natural fibre.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'No, this is not correct. Cotton is a natural fibre as it grows on a plant.'
+      }
+    ]
+  },  {
+    id: 'polyester-natural-or-synthetic',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Natural Or Synthetic Fibre',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+     ![polyester natural fibres](/learning-items/polyester-fabric.jpeg)
+
+      Is polyester a natural fibre or synthetic fibre?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Natural Fibre'
+      },
+      {
+        id: 'opt2',
+        text: 'Synthetic Fibre'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Polyester is a synthetic fibre made using plastic bottles. [Here is a video](https://www.youtube.com/watch?v=zyF9MxlcItw) that shows the process of making polyester from plastic bottles.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Polyester is made from plastics, and thus it is a synthetic fibre.'
+      }
+    ]
+  }, {
     id: 'singing-the-chapter',
     kind: 'video',
     time: 3,
-    title: 'Singing the chapter',
+    title: 'Singing The Chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: '1u2uRhDeQOI',
     locked: true
@@ -3504,16 +3704,83 @@ export const chapter7Data = [{
   title: 'Nutrition in Animals',
   description: 'Learn Chapter 2, Nutrition In Animals, from the Class 7 NCERT science book by answering questions, viewing solutions and watching videos.',
   items: [{
-    id: 'chapeter-2-video',
+    id: 'chapter-2-video',
     kind: 'video',
-    time: 8,
-    title: 'Food\'s Journey',
+    time: 5,
+    title: 'Food\'s Journey: From Mouth To Stomach',
     instructions: dedent`
-      In this video we talk to a person who experiences a lot of digestion-related problems.
-
-      Through our conversation, we discuss the journey of food from the mouth to the toilet.
+    In this video we talk to a Mr. Sunil, who experiences a lot of digestion-related problems.
+    
+    While talking to him, we will also follow the path that food takes from our mouth to our stomach.
     `,
     videoId: 'vdKeOul-CWM',
+    endTime: 322,
+  }, {
+    id: 'buccal-cavity-quiz',
+    time: 3,
+    kind: 'textResponse',
+    short: true,
+    title: 'Teaching Buccal Cavity',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+
+    ![mouth buccal cavity](/learning-items/grade7/buccal-cavity-mouth.jpeg)
+
+    Imagine you were teaching the meaning of the word _Buccal Cavity_ to a friend.
+
+    What would you say to make your friend understand and remember the meaning of the word Buccal Cavity?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is what Prabsimar, another student who took this quiz, said:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',            
+            response: dedent`
+            Buccal means mouth.
+
+            One way I remember Buccal is by turning it into the word Bhook-al. 
+
+            Bhook in hindi means hunger, and we eat food through our mouth. This helps me remember that Buccal is mouth.
+            
+            Another way in which I remember the word Buccal is by thinking of a company called Buccal Protect.
+
+            This company is like Colgate and makes toothpaste. Since we use toothpaste to clean our teeth and mouth, I remember that Buccal is linked with mouth.`
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'mouth-or-stomach',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Mouth Or Stomach?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![digestive system quiz](/learning-items/grade7/man-eating.jpg)
+
+      Where does digestion begin?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt2',
+        text: 'Mouth'
+      },{
+        id: 'opt1',
+        text: 'Stomach'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. The food enters our body through the mouth and the saliva in the mouth starts converting Starch into Simple Sugars. Thus digestion begins in the mouth.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The saliva in the mouth converts Starch (which can be found in foods like pasta) into simple sugars. These simple sugars can be used to provide energy to our body.'
+      }
+    ]
   }, {
     id: 'digestive-system-quiz',
     kind: 'multipleChoiceResponse',
@@ -3528,11 +3795,11 @@ export const chapter7Data = [{
     choices: [
       {
         id: 'opt1',
-        text: 'Small Intestine'
+        text: 'Stomach'
       },
       {
         id: 'opt2',
-        text: 'Gall Bladder'
+        text: 'Buccal Cavity'
       },
       {
         id: 'opt3',
@@ -3542,162 +3809,65 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: 'That is incorrect. Small intestine is the largest gland in the body, and can be seen towards the bottom of the image.'
+        response: 'This is incorrect. The arrow is pointing to the oesophagus or the food pipe. This pipe connects the mouth to the stomach.'
       },
       {
         answerSet: ['opt2'],
-        response: 'No, that is not the gall bladder.'
+        response: 'This is incorrect. Buccal means mouth. The arrow is pointing to the oesophagus or the food pipe. This pipe connects the mouth to the stomach.'
       },
       {
         answerSet: ['opt3'],
-        response: '__Correct__. This is the Oesophagus or the Foodpipe.'
+        response: '__Correct__. The arrow is poiting to the oesophagus or the foodpipe.'
       }
     ]
+  }, {
+    id: 'stomach-function-quiz',
+    time: 3,
+    kind: 'textResponse',
+    short: true,
+    title: 'What Happens In The Stomach?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+
+    ![stomach](/learning-items/grade7/stomach.jpeg)
+
+    Imagine you were creating a final exam question on the topic of stomach.
+
+    What question would you ask and what would the answer to that question be?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is what Sid, another student who took this quiz, said:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            I would ask: What is the function of stomach inside our body?
+
+            Here is the correct answer. The stomach is like a mixie which churns the food.
+
+            The stomach also has HCl or Hydrochloric Acid which kills harmful bacteria in the food.
+
+            Also, it releases digestive juices, which convert the proteins in the food into simpler substances.`
+          }
+        ]
+      }
+    }
   }, {
     id: 'draw-what-you-have-learned',
     kind: 'imageResponse',
     time: 10,
-    title: 'Draw what you have learned',
+    title: 'Draw What You Have Learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    We discussed a lot of new ideas while talking to Sunil Sir in the video above.
+    ![sunil sir video](/learning-items/grade7/video-sunil.jpeg)
 
-    Use a _pen and paper_ to draw a picture that shows everything you learned from that video.
+    We discussed a lot of new ideas while talking to Mr. Sunil in the video at the start of this chapter.
+
+    Use a _pencil and paper_ to draw a picture that shows everything you learned from that video.
 
     Then take a photo of that drawing from your phone and upload it here.`,
-  }, {
-    id: 'ingestion-digestion-egestion',
-    time: 1,
-    kind: 'image',
-    title: 'Ingestion, Digestion, Egestion',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    Ingestion, simply put, is eating. The word _Ingestion_, reminds me of the word _Insert._ When we eat, we are ingesting (or inserting) food in our body.
-
-    Digestion is the process of breaking food down into smaller substances that can be used by the body.
-
-    Egestion is the removal of faecal matter (poop) from the body.
-
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/ingestion-digestion-egestion-gif3.gif)
-
-    `,
-    imagePath: '/learning-items/white-space-2.jpeg'
-  }, {
-    id: 'ingestion-starfish',
-    kind: 'video',
-    time: 2,
-    title: 'Ingestion in Starfish',
-    instructions: dedent`
-      Here is a video that shows how starfish eat.
-
-      A starfish pops out its stomach through its mouth to eat its food.
-    `,
-    videoId: 'vw0apxiWzQ8',
-  }, {
-    id: 'egestion',
-    time: 1,
-    kind: 'image',
-    title: 'What is Egestion?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    Egestion is the process of removing faecal matter (or poop) from the body.
-    `,
-    imagePath: '/learning-items/grade7/egestion.jpeg'
-  }, {
-    id: 'egestion-exit',
-    time: 1,
-    kind: 'image',
-    title: 'A way to remember Egestion',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    When I think of the word, _Egestion_, I think of the word _Exit_.
-
-    Exit means for us to leave or go out of a building.
-
-    Egestion means for poop to leave or exit our body.
-    `,
-    imagePath: '/learning-items/grade7/egestion-exit.jpeg'
-  }, {
-    id: 'alimentary-canal',
-    time: 1,
-    kind: 'image',
-    title: 'What is the Alimentary Canal?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    Alimentary means food or nourishment.
-
-    Canal means path or passage.
-
-    Alimentary Canal is the passage through which the food passes in our body.
-
-    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus.
-    `,
-    imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
-  }, {
-    id: 'how-to-remember-alimentary-canal',
-    time: 1,
-    kind: 'image',
-    title: 'A way to remember Alimentary Canal',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-    In 2013, a book named Gulp was released. The sub-title of the book is _Adventures on the Alimentary Canal_.
-
-    I use the image on the cover of this book to remember the meaning of Alimentary Canal.
-
-    Alimentary Canal is path along which the food passes in our body. It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum, and anus.
-    `,
-    imagePath: '/learning-items/grade7/alimentary-canal-food-passage.jpeg'
-  }, {
-    id: 'teach-a-friend',
-    kind: 'textResponse',
-    time: 5,
-    short: true,
-    title: 'Teach a Friend',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-      Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
-
-    What will you tell him/her that will help them remember the definition of Alimentary Canal? Write your answer in the box below.`,
-
-  }, {
-    id: 'mouth-or-stomach',
-    kind: 'multipleChoiceResponse',
-    time: 1,
-    title: 'Stomach or Mouth or Small Intestine?',
-    presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`
-      ![digestive system quiz](/learning-items/grade7/man-eating.jpg)
-
-      Where does digestion begin?`,
-    maxSelected: 1,
-    choices: [
-      {
-        id: 'opt1',
-        text: 'Stomach'
-      },
-      {
-        id: 'opt2',
-        text: 'Mouth'
-      },
-      {
-        id: 'opt3',
-        text: 'Small Intestine'
-      }
-    ],
-    automaticResponses: [
-      {
-        answerSet: ['opt1',],
-        response: 'This is incorrect. The food enters our body through the mouth and the saliva in the mouth starts converting Starch into Simple Sugars. Thus digestion begins in the mouth.'
-      },
-      {
-        answerSet: ['opt2'],
-        response: '__Correct__. The saliva in the mouth converts Starch (that can be found in foods like pasta) into simple sugars. These simple sugars can be used to provide energy to our body.'
-      },
-      {
-        answerSet: ['opt3'],
-        response: 'Not correct. Digestion begins in the mouth.'
-      }
-    ]
   }, {
     id: 'saliva-and-starch',
     time: 1,
@@ -3822,16 +3992,111 @@ export const chapter7Data = [{
       }
     ]
   }, {
-    id: 'chapeter-2-video-small-intestine',
+    id: 'ingestion-digestion-egestion',
+    time: 1,
+    kind: 'image',
+    title: 'Ingestion, Digestion, Egestion',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Ingestion, simply put, is eating. The word _Ingestion_, reminds me of the word _Insert._ When we eat, we are ingesting (or inserting) food in our body.
+
+    Digestion is the process of breaking food down into smaller substances that can be used by the body.
+
+    Egestion is the removal of faecal matter (poop) from the body.
+
+    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/ingestion-digestion-egestion-gif3.gif)
+
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, /*{
+    id: 'ingestion-starfish',
+    kind: 'video',
+    time: 2,
+    title: 'Ingestion in Starfish',
+    instructions: dedent`
+      Here is a video that shows how starfish eat.
+
+      A starfish pops out its stomach through its mouth to eat its food.
+    `,
+    videoId: 'vw0apxiWzQ8',
+  }, */{
+    id: 'egestion',
+    time: 1,
+    kind: 'image',
+    title: 'What is Egestion?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Egestion is the process of removing faecal matter (or poop) from the body.
+    `,
+    imagePath: '/learning-items/grade7/egestion.jpeg'
+  }, /*{
+    id: 'egestion-exit',
+    time: 1,
+    kind: 'image',
+    title: 'A way to remember Egestion',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word, _Egestion_, I think of the word _Exit_.
+
+    Exit means for us to leave or go out of a building.
+
+    Egestion means for poop to leave or exit our body.
+    `,
+    imagePath: '/learning-items/grade7/egestion-exit.jpeg'
+  }, */{
+    id: 'alimentary-canal',
+    time: 1,
+    kind: 'image',
+    title: 'What is the Alimentary Canal?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Alimentary means food or nourishment.
+
+    Canal means path or passage.
+
+    Alimentary Canal is the passage through which the food passes in our body.
+
+    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus.
+    `,
+    imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
+  }, {
+    id: 'how-to-remember-alimentary-canal',
+    time: 1,
+    kind: 'image',
+    title: 'A way to remember Alimentary Canal',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In 2013, a book named Gulp was released. The sub-title of the book is _Adventures on the Alimentary Canal_.
+
+    I use the image on the cover of this book to remember the meaning of Alimentary Canal.
+
+    Alimentary Canal is path along which the food passes in our body. It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum, and anus.
+    `,
+    imagePath: '/learning-items/grade7/alimentary-canal-food-passage.jpeg'
+  }, {
+    id: 'teach-a-friend',
+    kind: 'textResponse',
+    time: 5,
+    short: true,
+    title: 'Teach a Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
+
+    What will you tell him/her that will help them remember the definition of Alimentary Canal? Write your answer in the box below.`,
+
+  }, {
+    id: 'chapter-2-video-small-intestine',
     kind: 'video',
     time: 3,
-    title: 'Recap of Small Intestine',
+    title: 'Small Intestine and Large Intestine',
     instructions: dedent`
-      I know we have seen this video before. But let us watch the small intestine portion of this video again, to recap what we had learned previously.
+      Let us finish watching the remainder of this video. 
+
+      We will now follow the food as it moves from the stomach to the small intestine and then to the large intestine. In the end we will watch the food become poop.
     `,
     videoId: 'vdKeOul-CWM',
     startTime: 322,
-    endTime: 410,
   }, {
     id: 'bile-small-intestine',
     time: 1,
