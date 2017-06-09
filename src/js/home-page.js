@@ -46,10 +46,10 @@ const HomePage = React.createClass({
               Grade 7 Science
             </button>
           </div>
-          {/*}<a target="_blank" href="https://meet.google.com/udp-uepj-vru" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
+          <a target="_blank" href="https://meet.google.com/udp-uepj-vru" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
             <img src={cameraIcon} style={{position: 'relative', top: 3, marginRight: 7}}/>
             Live Class Today at 12PM!
-          </a> */}
+          </a>
         </div>      
         
         <div className={`homepage-grade-section ${(this.state.grade6 || this.state.grade7) ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>
