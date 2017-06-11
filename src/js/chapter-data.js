@@ -3868,11 +3868,18 @@ export const chapter7Data = [{
     Use a _pencil and paper_ to draw a picture that shows everything you learned from that video.
 
     Then take a photo of that drawing from your phone and upload it here.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded by Kshirja, a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/learning-items/grade7/human-digestive-system-kshirja.jpg'
+      }
+    }
   }, {
     id: 'saliva-and-starch',
     time: 1,
     kind: 'image',
-    title: 'Saliva and Starch',
+    title: 'Saliva And Starch',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Starch can be found in foods like pasta. It is sometimes known as a complex sugar.
@@ -3884,7 +3891,7 @@ export const chapter7Data = [{
     id: 'milk-teeth',
     time: 1,
     kind: 'image',
-    title: 'What are Milk Teeth?',
+    title: 'What Are Milk Teeth?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Milk teeth are the set of teeth that grow during the first year of the life of the baby.
@@ -3894,24 +3901,24 @@ export const chapter7Data = [{
     imagePath: '/learning-items/grade7/milk-teeth.jpeg'
   }, {
     id: 'teeth-type-and-decay',
-    time: 5,
-    kind: 'image',
-    title: 'Let us talk about adult teeth',
-    presenterImagePath: '/instructors/kunal2.jpg',
+    time: 3,
+    kind: 'video',
+    title: 'Types Of Teeth',
     instructions: dedent`
+    Humans have four types of teeth: _Incisors, Canines, Pre-Molars and Molars_. 
 
-    ![woman teeth](/learning-items/grade7/woman-teeth.jpg)
+    Watch this video to find out more about them. 
 
-    Humans have four types of teeth: Incisors, Canines, Pre-Molars, and Molars. [This video](https://www.youtube.com/watch?v=UA8o59seAow) will introduce you to different types of teeth.
-
-    Also, bacteria in the mouth react with the leftover food that is stuck between teeth to produce acid. This acid can damage the teeth. [This video](https://www.youtube.com/watch?v=_oIlv59bTL4) shows how proper brushing can avoid tooth decay.
+    Also, the teacher in this video talks really fast. So if you have trouble understand her, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
-    imagePath: '/learning-items/white-space-2.jpeg'
+    videoId: 'b5CPd1_r03s',
+    startTime: 58,
+    endTime: 156,
   }, {
     id: 'tongue',
     kind: 'video',
     time: 3,
-    title: 'How your tongue works',
+    title: 'How Your Tongue Works',
     instructions: dedent`
       Your tongue can taste a few different flavours like sweet (ice cream), sour (lemon), salty (potato chips), bitter (coffee) and umami (soy sauce).
 
@@ -3952,7 +3959,7 @@ export const chapter7Data = [{
     id: 'stomach-quiz',
     kind: 'multipleChoiceResponse',
     time: 1,
-    title: 'Let us talk about the Stomach',
+    title: 'Let Us Talk About The Stomach',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![human stomach](/learning-items/grade7/stomach3.jpeg)
