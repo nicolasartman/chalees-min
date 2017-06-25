@@ -2312,32 +2312,446 @@ export const chapter6Data = [{
     id: 'when-do-magnets-misbehave',
     time: 4,
     kind: 'video',
-    title: 'When do magnets misbehave?',
-    instructions: 'Heat has something to do with magnets not behaving as usual. Watch this video to find out.',
+    title: 'When Do Magnets Stop Working?',
+    instructions: dedent`
+    We have seen that magnets work really well on doors of refrigerators and almirahs. But sometimes magnets stop working.
+
+    _Hint_: Heat has something to do with magnets not behaving as usual. Watch this video to find out more.`,
     videoId: 'yjSNU62kxZo'
   }, {
-    id: 'share-what-you-have-learned',
-    time: 6,
+    id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
-    title: 'Share what you have learned',
-    instructions: 'What did you learn? Discuss your response with a friend and write it here.'
-  }, {
-    id: 'pick-question-to-investigate-and-share',
-    time: 10,
-    kind: 'imageResponse',
-    title: 'Pick question to investigate and share',
+    time: 3,
+    short: true,
+    title: 'Solve A Mystery',
+    presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      1) Pick a question from the link that you want to learn more about from [here](http://goo.gl/e2acXh).
-      2) Write it on a piece of paper; paste it on a wall.
-      3) Take a picture and upload here.`
+      ![unsolved science mystery](/learning-items/unsolved-problems-mystery.jpeg)
+      At the end of the video on magnets we saw that there are still so many questions science has not answered completely. [Here is a list of questions](http://science.sciencemag.org/content/309/5731/78.2.full) that we as humans know very little about.
+
+      Read through the list and pick a question that is interesting to you. And then write that question in the box below.
+
+      My hope is that you contribute to finding the answer to that question some day in the future.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are some thoughts your fellow students shared',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'I am interested in finding the answer to this question — Are we alone in the universe?'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Why were some dinosaurs so large?'
+          },
+          {
+            studentName: 'Koushiki',
+            imagePath: '/fake-responses/koushiki.png',
+            response: 'How do flowers come to be? I really like that question and want to think more about it.'
+          }
+        ]
+      }
+    }
   }, {
-    id: 'conduct-your-own-experiment',
-    time: 15,
+    id: 'how-were-magnets-discovered',
+    kind: 'video',
+    time: 3,
+    title: 'How Were Magnets Discovered?',
+    instructions: dedent`
+    ![how magnets were discovered magnes magnesia greece](/learning-items/how-magnets-were-disovered.jpeg)
+    Our science textbook tells a story of a shepherd named Magnes who was from Greece and who may have discovered a stone that was magnetic. 
+
+    The story says that one day Magnes was walking around with his stick, which had a small piece of iron at its end. The stick was attracted to a rock, and that is how magnetic rocks were discovered.
+ 
+    The rock came to be known as Magnetite and it is said that the rock was named Magnetite after Magnesia, the place in Greece where it was first discovered.
+    
+    ![magnesia greece map](/learning-items/magnesia-greece-magnets-discovered-2.jpeg)
+ 
+    Although many people think the story of magnets is slightly different. 
+
+    Some people believe that it was not the shepherd\'s stick, but the iron nails in his sandals that got attracted to the rock. The video below shows a version of that story.`,
+    videoId: 'Ce1P3dJdjIg',
+    endTime: 31,
+  }, {
+    id: 'natural-magnets',
+    kind: 'video',
+    time: 3,
+    title: 'What Are Natural Magnets?',
+    instructions: dedent`
+    ![natural magnet lodestone magnetite](/learning-items/natural-magnet-lodestone-magnetite.jpeg)
+    Some rocks are naturally magnetic. They attract metallic things like paper clips, coins and nails. This is a picture of one such rock.
+ 
+    The video below shows a really large rock that is a natural magnet. This rock contains a lot magnetite, which is mineral and a form of iron.`,
+    videoId: 'Vw91JOoKUBI',
+  },   {
+    id: 'artificial-magnets',
+    time: 4,
     kind: 'image',
-    title: 'Conduct your own experiment',
-    instructions: 'Follow the instructions in the link on how to conduct your own curie point experiment. [Click here for the instructions](http://goo.gl/LWKF9o).',
-    imagePath: '/learning-items/13-magnets-experiment.jpg'
-  }]
+    title: 'What Are Artificial Magnets?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![artificial magnet bar](/learning-items/artificial-magnet-bar.jpeg)
+    The magnets we see in our daily lives, like bar magnets, are made in a factory. Thus they are called artificial magnets. 
+
+    In case you are curious, [here is a detailed video](https://www.youtube.com/watch?v=noGGcyPHtdI) on how artificial magnets are made. Do not worry if you do not understand all the details in this video. Watch it to follow some of steps necessary to make magnets in a factory. 
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'draw-what-you-have-learned',
+    kind: 'imageResponse',
+    time: 8,
+    title: 'Table 13.1 - Magnetic and Non-Magnetic Materials',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    __Magnetic Materials__ - Now this may seem obvious, but materials that are attracted to magnets are magnetic materials. Examples include iron nails, metallic bangles. 
+     
+    __Non-Magnetic Materials__ - Materials that are not attracted to magnets are called non-magnetic. Examples include a piece of wood, clothes.
+
+    Based on this information, let us fill in _table 13.1 from page 127_ of your science book. 
+
+    Find materials around you — like shoes, soil, iron balls etc. — and test to see if they are magnetic or non-magnetic. Then use a pen and paper to draw a table like the one shown in this image below and write down the results of your experiment in that table.
+    ![table 13.1 magnetic non magnetic materials](/learning-items/table-13-1-magnetic-nonmagnetic-materials.jpeg)
+
+    Finally take a picture of that table from your phone and upload it below.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/learning-items/table-13-1-magnetic-nonmagnetic-materials-solution.jpeg'
+      }
+    }
+  },   {
+    id: 'recovering-needle-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz - Finding A Needle',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![needle on floor magnet](/learning-items/needle-on-floor.jpeg)
+    A needle has slipped and fallen down on the floor. How would you find it?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'use a magnifying lens'
+      },
+      {
+        id: 'opt2',
+        text: 'use a magnet'
+      },
+      {
+        id: 'opt3',
+        text: 'use your eyes to search'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. It can take a long time to scan the entire floor with a small magnifying lens. And you may still miss spots on the floor and thus not find the needle.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. As you move the magnet over the floor, the needle will get attracted to the magnet and will stick to it. This is one of the fastest ways of finding the needle.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not the best method as it can take a really long time. Also, it can be hard to spot a needle on the floor with just our eyes.'
+      }
+    ]
+  },  {
+    id: 'pencil-sharpener-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Quiz - Pencil Sharpener',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![pencil sharpener magnet quiz](/learning-items/pencil-sharpener-magnet-quiz.jpeg)
+    It was observed that a pencil sharpener gets attracted by a magnet although its body is made of plastic. 
+
+    Name the material that might have been used to make some part of pencil sharpener that caused the attraction.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'plastic body'
+      },
+      {
+        id: 'opt2',
+        text: 'blade'
+      },
+      {
+        id: 'opt3',
+        text: 'hole in the sharpener'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Plastic is non-magnetic. That means plastic is not attracted by a magnet.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. The blade in the pencil sharpener is made of metal like stainless steel. This blade causes the sharpener to be attracted to the magnet.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: 'This is not correct. The empty space in the hole of the pencil sharpener is neither magnetic nor non-magnetic.'
+      }
+    ]
+  },  {
+    id: 'poles-of-magnets',
+    kind: 'video',
+    time: 2,
+    title: 'Poles Of A Magnet',
+    instructions: dedent`
+    The region on a magnet where it is strongest is called the pole of a magnet.
+
+    Each magnet has two poles — the north pole and the south pole.  In a bar magnet, these poles exist at the two ends of the magnet. 
+ 
+    When we bring a bar magnet close to small iron particles (or iron filings), we find that most of these iron filings get attracted to the ends of the magnet. This suggests that the bar magnet is strongest at its ends or its poles.`,
+    videoId: '8llkHQtaOlg',
+  },  {
+    id: 'cylindrical-magnet-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![cylindrical magnet poles quiz](/learning-items/cylindrical-magnet-poles-quiz.jpeg)
+    A cylindrical magnet has only one pole. True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+          This is incorrect. Every magnet, regardless of its shape, has two poles.
+          ![cylindrical magnet poles quiz solution](/learning-items/cylindrical-magnet-poles-quiz-solution.jpeg)`
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Every magnet, regardless of its shape, has two poles. A cylindrical magnet also has a north pole and a south pole.'
+      }
+    ]
+  },  {
+    id: 'attraction-repulsion-magnets',
+    kind: 'video',
+    time: 1,
+    title: 'Attraction And Repulsion Between Magnets',
+    instructions: dedent`
+    __Like Poles Repel__:  For example, north pole of one magnet will repel the north pole of another magnet.
+ 
+    __Unlike Poles Attract__: For example, north pole of one magnet will attract the south pole of another magnet.`,
+    videoId: 'c4unwVdvN7Q',
+  },  {
+    id: 'attraction-repulsion-magnets-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Similar poles of a magnet repel each other.
+
+    True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. North pole of one magnet repels the north pole of another magnet. Also, south pole of one magnet repels the south pole of another magnet.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. Similar poles of a magnet repel each other. For example, north pole of one magnet repels the north pole of another magnet.'
+      }
+    ]
+  }, {
+    id: 'what-is-a-compass',
+    kind: 'video',
+    time: 3,
+    title: 'What Is A Compass?',
+    instructions: dedent`
+    You may have heard that the Sun rises in the east. East is a direction and  there are 4 main directions — North, South, East and West. 
+
+    For example, if you are in India, Jammu is in the north, Assam is in the east, Kerala is in the south, and Gujarat is in the west.
+
+    A compass can help us find these directions. 
+    ![magnetic compass](/learning-items/magnetic-compass.jpeg)
+    
+    A compass has a magnetic needle, which can rotate freely. This magnetic needle always points in the north direction. And once we know north, we can find the east, west and south by reading the markings on the compass.
+
+    Here is a short video that shows how we can use a compass to find any direction.
+    `,
+    videoId: 'M4VuTvTEzVo',
+    startTime: 18,
+    endTime: 107,
+  },  {
+    id: 'compass-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'True Or False',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    A compass can be used to find the East-West direction at any place.
+
+    True or False?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'True'
+      },
+      {
+        id: 'opt2',
+        text: 'False'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: dedent`
+        __Correct__. The compass needle always points north. 
+
+        Once we rotate the compass and line up the compass needle with the __N for North__ mark on the compass, we can find any direction by simply reading the markings on the compass. `
+      },
+      {
+        answerSet: ['opt2'],
+        response: 'This is not correct. A compass can be used to find the East-West direction or any other direction. Once we rotate the compass and line up the needle with the __N for North__ mark on the compass, we can find any direction by reading the labels on the compass.'
+      }
+    ]
+  },  {
+    id: 'making-compass',
+    time: 8,
+    kind: 'image',
+    title: 'How To Make Your Own Compass?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Here are the steps necessary to create your own compass at home. You will need a bar magnet and a piece of thread.
+
+    ![suspend bar magnet make compass](/learning-items/suspend-bar-magnet-make-compass.jpeg)
+    __Step 1__: Take a bar magnet and tie it to a thread
+
+    __Step 2__: Suspend the magnet and let it move freely. After some time the magnet will come to rest in the north-south direction. [Click here](http://www.explainthatstuff.com/how-compasses-work.html) to find out why a freely suspended bar magnet always comes to rest in the north-south direction.
+
+    Ok, even though a bar magnet comes to rest in the north-south direction, we do not know which end of the magnet is pointing north and which end is pointing south. To find out we will take help from the sun.
+
+    ![sun-rises-east](/learning-items/sun-rises-east.jpeg)
+    __Step 3__: Find out the direction in which the sun rises. That direction is east. _(Note that this is not a very accurate way of finding east.)_
+
+    __Step 4__: Now if you face the rising sun or east, then north will be to your left and the south will be to your right.
+
+    __Step 5__: Ok, we now know which way is north, so we will return to our bar magnet. The end of the magnet pointing in the northern direction is the north pole of the magnet. Mark that end of the magnet with the letter _N_. 
+
+    You have now made a compass. For when you need to find directions, suspend this bar magnet with a thread. The north pole of this magnet (which is marked __N__) will always point in the northern direction.  
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  },  {
+    id: 'magnet-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Fill In The Blank',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    In olden days, sailors used to find direction by suspending a piece of ________.`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'ordinary stone'
+      },
+      {
+        id: 'opt2',
+        text: 'bar magnet'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is not correct. Suspending any ordinary stone will not tell us the direction.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct.__ When we suspend a bar magnet, the north pole of the magnet points in the northern direction. And the south pole of the bar magnet points in the southern direction.'
+      }
+    ]
+  },  {
+    id: 'finding-magnet-poles',
+    kind: 'textResponse',
+    time: 3,
+    title: 'Finding Magnetic Poles',
+    short: true,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![bar magnet no markings labels](/learning-items/bar-magnet-no-markings.jpeg)
+    A bar magnet has no markings to indicate its poles. How would you find out near which end is its north pole located?`,
+    hacks: {
+      afterBody: {
+        preface: 'The image below is a collage of the answer given by some students.',
+        show: 'locked',
+        feedbackImagePath: '/learning-items/find-magnet-poles.jpeg',
+      }
+    }
+  },   {
+    id: 'make-a-compass',
+    kind: 'video',
+    time: 4,
+    title: 'How To Make a Compass At Home?',
+    instructions: dedent`
+    To make a compass needle at home you will need a paper clip, a cup with water, a bottle cap and a simple magnet.
+
+    Once you have made your compass by following the steps in the video below, you will find that much like any regular compass, your compass points in the north-south direction.
+
+    And oh, the music played in this video is too loud. Feel free to __turn the volume down__.
+    `,
+    videoId: 'Dm91NGofFxU',
+    startTime: 10,
+    endTime: 230,
+  }, {
+    id: 'question-10',
+    kind: 'imageResponse',
+    time: 5,
+    locked: true,
+    title: 'Match The Columns',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![toy boat water magnet](/learning-items/toy-boat-water-magnet.jpeg)
+    A magnet was brought from different directions towards a toy boat that has been floating in water in a tub.
+
+    Affect observed in each case is stated in Column I. Possible reasons for the observed affects are mentioned in Column II. 
+    ![question 10 chapter 13 class 6 match columns](/learning-items/question-10-chapter-13-match-columns.jpeg)
+
+    Use a pen and paper to draw this table in your notebook. Then match the statements given in Column I with those in Column II.
+
+    Finally, take a picture of the table using your phone and upload it in the box below.`,
+    hacks: {
+      afterBody: {
+        show: 'locked',
+        preface: 'The picture below was made and uploaded a student of Class 6 at Ahlcon International School.',
+        feedbackImagePath: '/learning-items/question-10-chapter-13-match-columns-solution.jpeg'
+      }
+    }
+  }, ]
 }, {
   id: '14',
   thumbnailImagePath: '/chapter-thumbnails/chapter-14.jpg',
