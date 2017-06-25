@@ -1,0 +1,5 @@
+# Don't build this on circle—we're using travis for this branch
+general:
+  branches:
+    only:
+      - master
