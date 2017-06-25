@@ -1,6 +1,9 @@
 machine:
   node:
-    version: 6.1.0
+general:
+  branches:
+    only:
+      - master
 deployment:
   staging:
     branch: master
@@ -10,4 +13,3 @@ deployment:
   #   branch: master
   #   commands:
   #     - npm run ci-deploy-production
-  
