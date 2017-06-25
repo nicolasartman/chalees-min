@@ -2314,7 +2314,7 @@ export const chapter6Data = [{
     kind: 'video',
     title: 'When Do Magnets Stop Working?',
     instructions: dedent`
-    We have seen magnets work really well on doors of refrigerators and almirahs. But sometimes magnets stop working.
+    We have seen that magnets work really well on doors of refrigerators and almirahs. But sometimes magnets stop working.
 
     _Hint_: Heat has something to do with magnets not behaving as usual. Watch this video to find out more.`,
     videoId: 'yjSNU62kxZo'
@@ -2366,8 +2366,9 @@ export const chapter6Data = [{
 
     The story says that one day Magnes was walking around with his stick, which had a small piece of iron at its end. The stick was attracted to a rock, and that is how magnetic rocks were discovered.
  
-    The rock came to be known as Magnetite. This rock contains a lot of iron. It is said that the rock was named Magnetite after Magnesia, the place in Greece where it was first discovered.
-    ![magnesia greece map](/learning-items/magnesia-greece-magnets-discovered.jpeg)
+    The rock came to be known as Magnetite and it is said that the rock was named Magnetite after Magnesia, the place in Greece where it was first discovered.
+    
+    ![magnesia greece map](/learning-items/magnesia-greece-magnets-discovered-2.jpeg)
  
     Although many people think the story of magnets is slightly different. 
 
@@ -2381,9 +2382,9 @@ export const chapter6Data = [{
     title: 'What Are Natural Magnets?',
     instructions: dedent`
     ![natural magnet lodestone magnetite](/learning-items/natural-magnet-lodestone-magnetite.jpeg)
-    Some rocks are naturally magnetic. They attract metallic things like coins and nails. This is a picture of one such rock.
+    Some rocks are naturally magnetic. They attract metallic things like paper clips, coins and nails. This is a picture of one such rock.
  
-    The video below shows a really large rock that is a natural magnet. This rock contains a lot magnetite, which is a form of iron.`,
+    The video below shows a really large rock that is a natural magnet. This rock contains a lot magnetite, which is mineral and a form of iron.`,
     videoId: 'Vw91JOoKUBI',
   },   {
     id: 'artificial-magnets',
@@ -2409,8 +2410,7 @@ export const chapter6Data = [{
      
     __Non-Magnetic Materials__ - Materials that are not attracted to magnets are called non-magnetic. Examples include a piece of wood, clothes.
 
-
-    Let us fill in _table 13.1 from page 127_ of your science book. 
+    Based on this information, let us fill in _table 13.1 from page 127_ of your science book. 
 
     Find materials around you — like shoes, soil, iron balls etc. — and test to see if they are magnetic or non-magnetic. Then use a pen and paper to draw a table like the one shown in this image below and write down the results of your experiment in that table.
     ![table 13.1 magnetic non magnetic materials](/learning-items/table-13-1-magnetic-nonmagnetic-materials.jpeg)
@@ -2507,7 +2507,7 @@ export const chapter6Data = [{
     time: 2,
     title: 'Poles Of A Magnet',
     instructions: dedent`
-    The region on a magnet where the magnet is the strongest is called the pole of a magnet.
+    The region on a magnet where it is strongest is called the pole of a magnet.
 
     Each magnet has two poles — the north pole and the south pole.  In a bar magnet, these poles exist at the two ends of the magnet. 
  
@@ -2551,9 +2551,9 @@ export const chapter6Data = [{
     time: 1,
     title: 'Attraction And Repulsion Between Magnets',
     instructions: dedent`
-    __Like Poles Repel__:  For example north pole of one magnet will repel the north pole of another magnet.
+    __Like Poles Repel__:  For example, north pole of one magnet will repel the north pole of another magnet.
  
-    __Unlike Poles Attract__: For example north pole of one magnet will attract the south pole of another magnet.`,
+    __Unlike Poles Attract__: For example, north pole of one magnet will attract the south pole of another magnet.`,
     videoId: 'c4unwVdvN7Q',
   },  {
     id: 'attraction-repulsion-magnets-quiz',
@@ -2596,7 +2596,7 @@ export const chapter6Data = [{
 
     For example, if you are in India, Jammu is in the north, Assam is in the east, Kerala is in the south, and Gujarat is in the west.
 
-    A compass can help us find directions. 
+    A compass can help us find these directions. 
     ![magnetic compass](/learning-items/magnetic-compass.jpeg)
     
     A compass has a magnetic needle, which can rotate freely. This magnetic needle always points in the north direction. And once we know north, we can find the east, west and south by reading the markings on the compass.
