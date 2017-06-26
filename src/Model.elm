@@ -11,8 +11,6 @@ type Msg
 
 type Route
     = Home
-    | Potato
-    | Temp String
 
 
 type alias Model =
