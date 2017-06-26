@@ -48,7 +48,7 @@ view model =
     case model.page of
         Home ->
             div []
-                [ text "oh, hi!"
+                [ text "oh, hi!!"
                 ]
 
 
