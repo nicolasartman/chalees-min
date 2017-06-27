@@ -4323,7 +4323,7 @@ export const chapter7Data = [{
 
     Watch this video to find out more about them. 
 
-    Also, the teacher in this video talks really fast. So if you have trouble understand her, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
+    Also, the teacher in this video talks really fast. So if you have trouble understanding her, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
     videoId: 'b5CPd1_r03s',
     startTime: 58,
@@ -4337,6 +4337,8 @@ export const chapter7Data = [{
       Your tongue can taste a few different flavours like sweet (ice cream), sour (lemon), salty (potato chips), bitter (coffee) and umami (soy sauce).
 
       This video will show you how your tongue does all that.
+
+      Also, the teacher in this video talks really fast. So if you have trouble understanding her, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
     videoId: 'C4rdqXXzPGU',
     endTime: 198,
@@ -4468,19 +4470,17 @@ export const chapter7Data = [{
     id: 'alimentary-canal',
     time: 1,
     kind: 'image',
-    title: 'What is the Alimentary Canal?',
+    title: 'What Is The Alimentary Canal?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Alimentary means food or nourishment.
+    Alimentary means _food or nourishment_.
 
-    Canal means path or passage.
+    Canal means _path or passage_.
 
-    Alimentary Canal is the passage through which the food passes in our body.
-
-    It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum and anus.
+    Alimentary Canal is the path through which the food passes in our body. It includes the mouth, oesophagus, stomach, small intestine, and large intestine.
     `,
     imagePath: '/learning-items/grade7/alimentary-canal-3.jpeg'
-  }, {
+  }, /*{
     id: 'how-to-remember-alimentary-canal',
     time: 1,
     kind: 'image',
@@ -4494,17 +4494,38 @@ export const chapter7Data = [{
     Alimentary Canal is path along which the food passes in our body. It includes the mouth, oesophagus, stomach, small intestine, large intestine, rectum, and anus.
     `,
     imagePath: '/learning-items/grade7/alimentary-canal-food-passage.jpeg'
-  }, {
+  }, */{
     id: 'teach-a-friend',
     kind: 'textResponse',
     time: 5,
     short: true,
-    title: 'Teach a Friend',
+    title: 'Teach A Friend',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-      Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
+    Imagine a friend of yours is struggling to remember the definition of Alimentary Canal.
 
     What will you tell him/her that will help them remember the definition of Alimentary Canal? Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are responses from other students who answered this quiz:',
+        //show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+            मान लो कि आपकी बॉडी में एक canal (or path) है जिसके through फ़ूड पास करता है. 
+
+            Alimentary Canal is the path through which the food travels through in your body. It includes the mouth, oesophagus, stomach, small intestine and large intestine.`
+          },{
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            Alimentary Canal sounds like Elementary School - Elementary school is when our journey in school happens, and Alimentary Canal is where the journey of food occurs.`
+          },
+        ]
+      }
+    }
 
   }, {
     id: 'chapter-2-video-small-intestine',
