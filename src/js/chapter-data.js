@@ -4427,7 +4427,7 @@ export const chapter7Data = [{
 
     Egestion is the removal of faecal matter (poop) from the body.
 
-    ![Image](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/ingestion-digestion-egestion-gif3.gif)
+    ![Image](https://media.giphy.com/media/3oKIPjWupbEMgF0FZ6/giphy.gif)
 
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
