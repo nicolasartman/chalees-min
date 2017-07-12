@@ -4531,9 +4531,9 @@ export const chapter7Data = [{
     id: 'chapter-2-video-small-intestine',
     kind: 'video',
     time: 3,
-    title: 'Small Intestine and Large Intestine',
+    title: 'Small Intestine And Large Intestine',
     instructions: dedent`
-      Let us finish watching the remainder of this video. 
+      Let us finish watching the remainder of this video with Mr. Sunil.
 
       We will now follow the food as it moves from the stomach to the small intestine and then to the large intestine. In the end we will watch the food become poop.
     `,
@@ -4543,31 +4543,34 @@ export const chapter7Data = [{
     id: 'bile-small-intestine',
     time: 1,
     kind: 'image',
-    title: 'Bile and the Small Intestine',
+    title: 'Bile And The Small Intestine',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Liver produces Bile.
 
     Bile is a yellowish-green liquid that is temporarily stored in the Gall Bladder. It is eventually send to the Small Intestine where it helps in the digestion of fats.
+
+    __Note:__ The reason why bile is stored in the gall bladder is because liver produces bile continuously, but we only need bile after we have consumed some food. Thus, the excess bile is stored in the gall bladder. After we eat food, bile from the gall bladder is sent to the small intestine to help with digestion.
+
     `,
     imagePath: '/learning-items/grade7/liver-bile-gall-bladder-small-intestine-fats2.jpeg'
   }, {
     id: 'no-bile',
     time: 1,
     kind: 'image',
-    title: 'What if we had no Bile?',
+    title: 'What If We Had No Bile?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Our body needs bile to digest fats.
 
-    If we did not produce any bile then the fats would not be digested and would be passed in our poop. The indigestible fats will then give our poop a white, greasy look.
+    If we our liver does not produce any bile then the fats in our food would not be digested, and would be passed in our poop. The indigestible fats will then give our poop a white, oily look.
     `,
-    imagePath: '/learning-items/grade7/no-bile-white-poop.jpeg'
+    imagePath: '/learning-items/grade7/Steatorrhea-white-poop-no-bile.jpeg'
   }, {
     id: 'large-intestine-quiz',
     kind: 'multipleChoiceResponse',
     time: 1,
-    title: 'Function of Large Intestine',
+    title: 'Function Of Large Intestine',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
       ![human stomach](/learning-items/grade7/large-intestine.jpeg)
@@ -4609,7 +4612,7 @@ export const chapter7Data = [{
     title: 'Digestive System Recap',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Based on studying this entire chapter, here is a summary of how the food gets digested:
+    Based on studying this entire chapter, here is a summary of how our food gets digested:
 
     _Saliva_
      - breaks starch into simple sugars
@@ -4625,18 +4628,23 @@ export const chapter7Data = [{
         - turns fats into fatty acids
         - turns proteins into amino acids
     `,
-    imagePath: '/learning-items/grade7/digestive-system-recap.jpeg'
+    imagePath: '/learning-items/grade7/digestive-system-summary-recap.jpeg'
   }, {
     id: 'digestion-in-cows',
     kind: 'video',
     time: 1,
-    title: 'Digestion in Cows',
+    title: 'How Cows Digest Grass?',
     instructions: dedent`
-      When cows eat, they quickly swallow the grass and store it in a part of the stomach called __rumen__.
+      When cows eat, they do not chew the grass completely, but quickly swallow the grass and store it in a special part of their stomach called __rumen__.
 
-      Here the food is partially digested and is called _cud_.
+      In the rumen, the food is only partially digested. This partially digested food is called __cud__.
 
-      But later the cud returns to the mouth in small lumps and the cow chews it again. This process is called __rumination__ and these animals are called __ruminants__.
+      Then the cows do something incredible. 
+
+      They bring the cud from the rumen (or stomach) back to their mouth in small lumps so they can chew the food proeperly. This process is called __rumination__ and these animals are called __ruminants__.
+      
+      ---
+      Note: The teacher in this video talks really fast. So if you have trouble understanding him, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
     videoId: 'svw5KA8YlAA',
     startTime: 40,
@@ -4645,7 +4653,7 @@ export const chapter7Data = [{
     id: 'chewing-cud',
     kind: 'video',
     time: 1,
-    title: 'How cows eat',
+    title: 'How Do Cows Eat?',
     instructions: dedent`
       If you see this video closely at 0:18, you will notice that the cow brings the cud back to her mouth to chew it again.
     `,
