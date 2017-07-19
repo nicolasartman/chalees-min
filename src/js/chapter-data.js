@@ -12448,16 +12448,16 @@ export const chapter7Data = [{
   items: [{
     id: 'chapter-14-video',
     kind: 'video',
-    time: 5,
-    title: 'When a Wire Becomes a Magnet',
+    time: 4,
+    title: 'When A Wire Becomes A Magnet',
     instructions: dedent`
       When current flows through a wire, it acts like a magnet.
 
-      This fundamental fact of nature has changed our lives. We use this fact to build things like the electric doorbells and really fast trains.
+      This fundamental fact has changed our lives. We have used this knowledge to build things like doorbells, computers, cars and really fast trains.
 
       Let us travel to Japan in this video to see how this works.
     `,
-    videoId: 'F4ApOc4p-CE',
+    videoId: 'oSgYB1UJW0I',
   }, {
     id: 'electromagnet-quiz',
     kind: 'multipleChoiceResponse',
@@ -12506,9 +12506,9 @@ export const chapter7Data = [{
     instructions: dedent`
       When current flows through a wire, it acts like a magnet.
 
-      In this video a coil of wire is connected to a battery and a compass is placed inside the coil. Before the coil is connected to the battery, the compass points towards the Earths north pole.
+      In this video a coil of wire is connected to a battery and a compass is placed inside the coil. Before the coil is connected to the battery, the compass points towards the Earth\'s north pole.
 
-      As soon as the coil of wire is connected to the battery, it starts acting like a magnet. The compass feels the influence of this new magnet and thus moves.
+      As soon as the coil of wire is connected to the battery, current starts flowing through the coil. At that point, the coil starts acting like a magnet. The compass feels the influence of this new magnet and thus moves.
     `,
     videoId: 'AgZHqfIBkUI',
     startTime: 5,
@@ -12516,9 +12516,11 @@ export const chapter7Data = [{
     id: 'make-an-electromagnet',
     kind: 'video',
     time: 2,
-    title: 'Make an Electromagnet',
+    title: 'Making An Electromagnet',
     instructions: dedent`
-      Use simple materials found in your home to create an electromagnet that can lift things.
+      This video shows how to use simple materials like a nail, wire, battery and paper clips to create an electromagnet that can lift things.
+
+      _Note:_ We use a nail when making an electromagnet in this example because that helps us to create a stronger magnet.
     `,
     videoId: 'bH2VpzHtIh0',
     startTime: 41,
@@ -12554,10 +12556,35 @@ export const chapter7Data = [{
       }
     }
   }, {
+    id: 'why-electromagnets',
+    time: 4,
+    kind: 'image',
+    title: 'Optional - The Why Question',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Why does an electric wire become a magnet when current passes through it?
+
+    To understand this we have to understand the meaning of the word _fundamental_.
+
+    The word fundamental means something that is basic or something that cannot be reduced to any further parts.
+    Example: Why do things fall? Because of gravity. Why does gravity exist? It just does. It is _fundamental_. Gravitational forces cannot be reduced into any additional forces.
+
+    Now I know that answer can be dissatisfying. 
+
+    But concepts like gravitation and electromagnets are considered to be fundamental in nature, which means that is no more explanation for them. 
+
+    _References:_ [Source 1](https://physics.stackexchange.com/questions/43393/why-does-electricity-flowing-through-a-copper-coil-generate-a-magnetic-field); [Source 2](https://en.wikipedia.org/wiki/Fundamental_interaction)
+
+    ---
+
+    If you are still curious, here is a [video of a famous scientist explaining](https://www.youtube.com/watch?v=36GT2zI8lVA) the difficulty with answering why questions.
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
     id: 'electric-bell',
     kind: 'video',
     time: 1,
-    title: 'How an Electric Bell Works',
+    title: 'How An Electric Bell Works',
     instructions: dedent`
       See how an electromagnet is used to make a doorbell.
     `,
