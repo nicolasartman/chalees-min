@@ -2,6 +2,7 @@ import identity from 'lodash/identity';
 import cond from 'lodash/fp/cond';
 import Markdown from './markdown';
 import getIn from 'lodash/get';
+import TimerOverlay from './timer-overlay.js';
 
 import {authorize} from './auth.js';
 
@@ -23,6 +24,8 @@ const kinds = {
   'image': ImageContent
 };
 
+var timeoutHandle;
+
 const LearningItem = React.createClass({
   propTypes: {
     handleSave: React.PropTypes.func.isRequired,
@@ -32,6 +35,9 @@ const LearningItem = React.createClass({
     response: null,
     saveIsEnabled: true,
     saveButtonLabel: 'Save',
+    timer: '00:00',
+    timerOverlayVisible: true,
+    restart: false
   }),
   componentWillReceiveProps(newProps) {
     this.setState({response: newProps.response});
@@ -85,6 +91,9 @@ const LearningItem = React.createClass({
     return Promise.reject(error);
   },
   handleSave() {
+    //clearing out the timer
+    this.clearCountDownTimer();
+
     this.disableSave();
     this.setState({recentSaveStatus: null});
 
@@ -128,6 +137,35 @@ const LearningItem = React.createClass({
       )],
     ])();
   },
+  handleStartClick() {
+    this.setState({timerOverlayVisible: false});
+    this.startCountDownTimer(this.props.time);
+  },
+  startCountDownTimer(mins) {
+    let seconds = 60;
+    let self = this;
+    function tick() {
+        let current_minutes = mins-1
+        seconds--;
+        self.setState({timer: current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)});
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+            if(mins > 1){
+               setTimeout(function () { self.startCountDownTimer(mins - 1); }, 1000);
+            }
+          self.restartActive();
+        }
+    }
+    tick();
+  },
+  restartActive() {
+    this.setState({timerOverlayVisible: true});
+    this.setState({restart: true});
+  },
+  clearCountDownTimer() {
+    clearTimeout(timeoutHandle);
+  },
   render() {
     const props = this.props;
     const Child = kinds[props.kind];
@@ -146,6 +184,8 @@ const LearningItem = React.createClass({
 
     const presenterImageUrl = 'https://chalees-min.imgix.net' +
       props.presenterImagePath + '?w=34&h=34&auto=format&mask=ellipse';
+
+    const timerLabel = this.state.restart ? 'Restart Quiz' : 'Start Quiz';
 
     return (
       <div className={`learning-item ${this.props.className || ''}`}>
@@ -168,41 +208,46 @@ const LearningItem = React.createClass({
                 </div>
               </div>
             </div>
-            <Markdown source={props.instructions} />
-                    
-            <div className="hack-feedback-container hack-feedback-before-body">
-              {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
-            </div>
+           <TimerOverlay show={props.timer  && (this.state.timerOverlayVisible)} 
+                         label={timerLabel} startClick={this.handleStartClick}>
+              <Markdown source={props.instructions} />
+                      
+              <div className="hack-feedback-container hack-feedback-before-body">
+                {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
+              </div>
+              
+              {/* Learning item body */}
+              {content}
 
-            {/* Learning item body */}
-            {content}
-          
-            {/* Save button */}
-            {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
-              <button
-                className="pure-button"
-                disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
-                onClick={this.handleSave}
-              >
-                {this.state.saveButtonLabel}
-              </button>
-              <span style={{marginLeft: '15px'}}>
-                {cond([
-                  [() => !this.state.recentSaveStatus, () => null],
-                  [() => this.state.recentSaveStatus === 'success', () => (
-                    <span className="text-success">Saved successfully!</span>
-                  )],
-                  [() => this.state.recentSaveStatus.code === 'NO_RESPONSE_GIVEN', () => (
-                    <span className="text-error">Please make sure to provide a response</span>
-                  )],
-                  [() => this.state.recentSaveStatus, () => (
-                    <span className="text-error">Save failed, please try again</span>
-                  )],
-                ])()}
-              </span>
-            </div>)}
+              {/* Timer */}
+              {props.timer ? <p>Time left - {this.state.timer}</p> : null} 
+
+              {/* Save button */}
+              {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
+                <button
+                  className="pure-button"
+                  disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
+                  onClick={this.handleSave}
+                >
+                  {this.state.saveButtonLabel}
+                </button>
+                <span style={{marginLeft: '15px'}}>
+                  {cond([
+                    [() => !this.state.recentSaveStatus, () => null],
+                    [() => this.state.recentSaveStatus === 'success', () => (
+                      <span className="text-success">Saved successfully!</span>
+                    )],
+                    [() => this.state.recentSaveStatus.code === 'NO_RESPONSE_GIVEN', () => (
+                      <span className="text-error">Please make sure to provide a response</span>
+                    )],
+                    [() => this.state.recentSaveStatus, () => (
+                      <span className="text-error">Save failed, please try again</span>
+                    )],
+                  ])()}
+                </span>
+              </div>)}
+          </TimerOverlay>
           </div>
-          
           <div className="hack-feedback-container hack-feedback-after-body">
             {this.createHackFeedback(this.props.hacks && this.props.hacks.afterBody, this.props.response)}
           </div>
@@ -217,6 +262,7 @@ const LearningItem = React.createClass({
           </div>
         )}
       </div>
+      
     );
   },
 });
