@@ -71,7 +71,7 @@ const LearningItem = React.createClass({
   },
   handleSaveFinish() {
     this.enableSave();
-    this.setSaveButtonLabel('Save');    
+    this.setSaveButtonLabel('Save');
   },
   handleSaveSuccess(result) {
     this.handleSaveFinish();
@@ -109,7 +109,7 @@ const LearningItem = React.createClass({
   },
   createHackFeedback(data, response) {
     const showBehavior = data && data.show;
-    
+
     return cond([
       [() => showBehavior === 'ifResponse' && response, () => (
           <HackFeedback data={this.props.hacks.afterBody} />
@@ -118,7 +118,7 @@ const LearningItem = React.createClass({
         <div className={response ? '' : 'hack-feedback-lock'}>
           <HackFeedback data={data} />
           <div className="hack-feedback-lock-fader">
-            <img src={lockIcon} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
+            <img src={lockIcon} aria-hidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
             Answer this quiz to see more
           </div>
         </div>
@@ -169,14 +169,14 @@ const LearningItem = React.createClass({
               </div>
             </div>
             <Markdown source={props.instructions} />
-                    
+
             <div className="hack-feedback-container hack-feedback-before-body">
               {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
             </div>
 
             {/* Learning item body */}
             {content}
-          
+
             {/* Save button */}
             {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
               <button
@@ -202,7 +202,7 @@ const LearningItem = React.createClass({
               </span>
             </div>)}
           </div>
-          
+
           <div className="hack-feedback-container hack-feedback-after-body">
             {this.createHackFeedback(this.props.hacks && this.props.hacks.afterBody, this.props.response)}
           </div>
@@ -210,7 +210,7 @@ const LearningItem = React.createClass({
         {this.props.locked && !this.props.isChapterComplete && (
           <div className="learning-item-lock content-center">
             <div className="learning-item-lock-message">
-              <img src={lockIconInverse} ariaHidden style={{height: '2em', position: 'relative', marginBottom: '0.5em'}}/>
+              <img src={lockIconInverse} aria-hidden style={{height: '2em', position: 'relative', marginBottom: '0.5em'}}/>
               <br />
               Answer all of the questions in this chapter to view!
             </div>

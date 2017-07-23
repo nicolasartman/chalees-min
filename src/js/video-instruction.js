@@ -40,7 +40,7 @@ const VideoInstruction = function(props) {
         </div>
         <iframe style={videoStyle} id="youtube-player" type="text/html" width="640" height="390"
           src={`https://www.youtube.com/embed/${props.videoId}?autoplay=0&rel=0&start=${props.startTime || 0}&end=${props.endTime || 0}`}
-          allowFullScreen frameborder="0" wmode="transparent"/>
+          allowFullScreen frameBorder="0" wmode="transparent"/>
       </div>
     );
   } else {
