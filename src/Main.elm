@@ -1,11 +1,11 @@
 module Main exposing (..)
 
-import Navigation exposing (program)
+import HomePage
 import Html exposing (Html, br, button, div, text)
 import Json.Decode exposing (Value)
 import Navigation exposing (Location)
+import Return exposing (Return)
 import Route exposing (Route)
-import UrlParser
 
 
 type Page
@@ -26,6 +26,7 @@ type alias Model =
 
 type Msg
     = RouteChange (Maybe Route)
+    | HomeMsg HomePage.Msg
 
 
 init : Value -> Location -> ( Model, Cmd Msg )
@@ -35,18 +36,24 @@ init flags location =
         }
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> Return Msg Model
 update msg model =
     case msg of
         RouteChange newRoute ->
             setRoute newRoute model
+
+        HomeMsg msg ->
+            HomePage.update msg { chapters = [] }
+                |> Return.mapCmd HomeMsg
+                |> Return.map (\ignorefornow -> model)
 
 
 view : Model -> Html Msg
 view model =
     case model.page of
         Home ->
-            div [] [ text "home page" ]
+            HomePage.view { chapters = [] }
+                |> Html.map HomeMsg
 
         Blank ->
             div [] [ text "blank page" ]
