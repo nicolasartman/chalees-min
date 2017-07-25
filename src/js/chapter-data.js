@@ -20,6 +20,7 @@ export const chapter6Data = [{
     id: 'our-foods-journey',
     kind: 'multipleChoiceResponse',
     time: 1,
+    isTimed: 15,
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
@@ -108,6 +109,7 @@ export const chapter6Data = [{
     id: 'pick-a-question-to-investigate',
     kind: 'textResponse',
     time: 6,
+    isTimed: 60,
     short: true,
     title: 'Pick a question to investigate',
     presenterImagePath: '/instructors/kunal2.jpg',
@@ -305,14 +307,14 @@ export const chapter6Data = [{
   id: '3',
   thumbnailImagePath: '/chapter-thumbnails/chapter-3.jpg',
   title: 'Fibre To Fabric',
-  description: 'Watch videos to learn Chapter 3, Fibre To Fabric, from the NCERT science book in Class 6. Try questions and answers on knitting, spinning and weaving.',  
+  description: 'Watch videos to learn Chapter 3, Fibre To Fabric, from the NCERT science book in Class 6. Try questions and answers on knitting, spinning and weaving.',
   items: [{
     id: 'how-i-learned-to-knit',
     kind: 'video',
     time: 4,
     title: 'How I Learned To Knit',
     instructions: dedent`
-    The video below tells a story of how I learned to knit a scarf. 
+    The video below tells a story of how I learned to knit a scarf.
 
     And while doing so, I learned something about life itself.`,
     videoId: '0EL7M44_Ey0',
@@ -348,9 +350,9 @@ export const chapter6Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     Cotton is a plant that grows in the farm. Cotton fibres from the plant are collected and seeds are removed from it.
-     
+
     These cotton fibres are then twisted or spun, and are turned into yarn or thread.
-     
+
     The thread is then weaved into cotton fabric which can be used to make things like shirts.
     `,
     imagePath: '/learning-items/cotton-journey-field-fibre-yarn-fabric.jpeg'
@@ -392,9 +394,9 @@ export const chapter6Data = [{
     title: 'Getting Cotton Fibres From Plants',
     instructions: dedent`
     India is one of the largest producers of cotton in the world.
- 
+
     Cotton is a plant that grows in farms. In the video below, you can see farmers picking cotton fibres from plants. In many farms this work is also done by machines.
- 
+
     _Note:_ If you are curious about how a cotton T-shirt is made from cotton fibres, you can check out [this video](https://youtu.be/FIA3wWj35Yw?t=5s) also.
       `,
     videoId: '_4ku4blO8eQ',
@@ -405,8 +407,8 @@ export const chapter6Data = [{
     title: 'Spinning Cotton Fibres To Make Yarn',
     instructions: dedent`
       Once cotton fibres have been picked from plants they are converted to yarn (or thread).
-       
-      Watch this video to see how cotton fibres are spun (or twisted) to create yarn. 
+
+      Watch this video to see how cotton fibres are spun (or twisted) to create yarn.
       `,
     videoId: 'uslx0Mxn-E8',
     endTime: 175,
@@ -417,7 +419,7 @@ export const chapter6Data = [{
     title: 'Draw What You Have Learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Use a _pencil and paper_ to draw a picture that shows what you have learned about how cotton fabric is made from cotton fibres. 
+    Use a _pencil and paper_ to draw a picture that shows what you have learned about how cotton fabric is made from cotton fibres.
 
     Then take a photo of that drawing and upload it here.`,
     hacks: {
@@ -497,9 +499,9 @@ export const chapter6Data = [{
     title: 'How Is Nylon Made?',
     instructions: dedent`
     Nylon is a synthetic fibre. Two different chemicals are mixed to make Nylon.
- 
+
     These chemicals have confusing names. If you are curious, their names are 1,6-diaminohexane and sebacoyl chloride.
- 
+
     This video shows how mixing these two chemicals makes Nylon in the lab.
       `,
     videoId: 'c7ihpZhCj6k',
@@ -2362,15 +2364,15 @@ export const chapter6Data = [{
     title: 'How Were Magnets Discovered?',
     instructions: dedent`
     ![how magnets were discovered magnes magnesia greece](/learning-items/how-magnets-were-disovered.jpeg)
-    Our science textbook tells a story of a shepherd named Magnes who was from Greece and who may have discovered a stone that was magnetic. 
+    Our science textbook tells a story of a shepherd named Magnes who was from Greece and who may have discovered a stone that was magnetic.
 
     The story says that one day Magnes was walking around with his stick, which had a small piece of iron at its end. The stick was attracted to a rock, and that is how magnetic rocks were discovered.
- 
+
     The rock came to be known as Magnetite and it is said that the rock was named Magnetite after Magnesia, the place in Greece where it was first discovered.
-    
+
     ![magnesia greece map](/learning-items/magnesia-greece-magnets-discovered-2.jpeg)
- 
-    Although many people think the story of magnets is slightly different. 
+
+    Although many people think the story of magnets is slightly different.
 
     Some people believe that it was not the shepherd\'s stick, but the iron nails in his sandals that got attracted to the rock. The video below shows a version of that story.`,
     videoId: 'Ce1P3dJdjIg',
@@ -2383,7 +2385,7 @@ export const chapter6Data = [{
     instructions: dedent`
     ![natural magnet lodestone magnetite](/learning-items/natural-magnet-lodestone-magnetite.jpeg)
     Some rocks are naturally magnetic. They attract metallic things like paper clips, coins and nails. This is a picture of one such rock.
- 
+
     The video below shows a really large rock that is a natural magnet. This rock contains a lot magnetite, which is mineral and a form of iron.`,
     videoId: 'Vw91JOoKUBI',
   },   {
@@ -2394,9 +2396,9 @@ export const chapter6Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![artificial magnet bar](/learning-items/artificial-magnet-bar.jpeg)
-    The magnets we see in our daily lives, like bar magnets, are made in a factory. Thus they are called artificial magnets. 
+    The magnets we see in our daily lives, like bar magnets, are made in a factory. Thus they are called artificial magnets.
 
-    In case you are curious, [here is a detailed video](https://www.youtube.com/watch?v=noGGcyPHtdI) on how artificial magnets are made. Do not worry if you do not understand all the details in this video. Watch it to follow some of steps necessary to make magnets in a factory. 
+    In case you are curious, [here is a detailed video](https://www.youtube.com/watch?v=noGGcyPHtdI) on how artificial magnets are made. Do not worry if you do not understand all the details in this video. Watch it to follow some of steps necessary to make magnets in a factory.
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
   }, {
@@ -2406,11 +2408,11 @@ export const chapter6Data = [{
     title: 'Table 13.1 - Magnetic and Non-Magnetic Materials',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    __Magnetic Materials__ - Now this may seem obvious, but materials that are attracted to magnets are magnetic materials. Examples include iron nails, metallic bangles. 
-     
+    __Magnetic Materials__ - Now this may seem obvious, but materials that are attracted to magnets are magnetic materials. Examples include iron nails, metallic bangles.
+
     __Non-Magnetic Materials__ - Materials that are not attracted to magnets are called non-magnetic. Examples include a piece of wood, clothes.
 
-    Based on this information, let us fill in _table 13.1 from page 127_ of your science book. 
+    Based on this information, let us fill in _table 13.1 from page 127_ of your science book.
 
     Find materials around you — like shoes, soil, iron balls etc. — and test to see if they are magnetic or non-magnetic. Then use a pen and paper to draw a table like the one shown in this image below and write down the results of your experiment in that table.
     ![table 13.1 magnetic non magnetic materials](/learning-items/table-13-1-magnetic-nonmagnetic-materials.jpeg)
@@ -2469,7 +2471,7 @@ export const chapter6Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![pencil sharpener magnet quiz](/learning-items/pencil-sharpener-magnet-quiz.jpeg)
-    It was observed that a pencil sharpener gets attracted by a magnet although its body is made of plastic. 
+    It was observed that a pencil sharpener gets attracted by a magnet although its body is made of plastic.
 
     Name the material that might have been used to make some part of pencil sharpener that caused the attraction.`,
     maxSelected: 1,
@@ -2509,8 +2511,8 @@ export const chapter6Data = [{
     instructions: dedent`
     The region on a magnet where it is strongest is called the pole of a magnet.
 
-    Each magnet has two poles — the north pole and the south pole.  In a bar magnet, these poles exist at the two ends of the magnet. 
- 
+    Each magnet has two poles — the north pole and the south pole.  In a bar magnet, these poles exist at the two ends of the magnet.
+
     When we bring a bar magnet close to small iron particles (or iron filings), we find that most of these iron filings get attracted to the ends of the magnet. This suggests that the bar magnet is strongest at its ends or its poles.`,
     videoId: '8llkHQtaOlg',
   },  {
@@ -2552,7 +2554,7 @@ export const chapter6Data = [{
     title: 'Attraction And Repulsion Between Magnets',
     instructions: dedent`
     __Like Poles Repel__:  For example, north pole of one magnet will repel the north pole of another magnet.
- 
+
     __Unlike Poles Attract__: For example, north pole of one magnet will attract the south pole of another magnet.`,
     videoId: 'c4unwVdvN7Q',
   },  {
@@ -2592,13 +2594,13 @@ export const chapter6Data = [{
     time: 3,
     title: 'What Is A Compass?',
     instructions: dedent`
-    You may have heard that the Sun rises in the east. East is a direction and  there are 4 main directions — North, South, East and West. 
+    You may have heard that the Sun rises in the east. East is a direction and  there are 4 main directions — North, South, East and West.
 
     For example, if you are in India, Jammu is in the north, Assam is in the east, Kerala is in the south, and Gujarat is in the west.
 
-    A compass can help us find these directions. 
+    A compass can help us find these directions.
     ![magnetic compass](/learning-items/magnetic-compass.jpeg)
-    
+
     A compass has a magnetic needle, which can rotate freely. This magnetic needle always points in the north direction. And once we know north, we can find the east, west and south by reading the markings on the compass.
 
     Here is a short video that shows how we can use a compass to find any direction.
@@ -2631,7 +2633,7 @@ export const chapter6Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        __Correct__. The compass needle always points north. 
+        __Correct__. The compass needle always points north.
 
         Once we rotate the compass and line up the compass needle with the __N for North__ mark on the compass, we can find any direction by simply reading the markings on the compass. `
       },
@@ -2661,9 +2663,9 @@ export const chapter6Data = [{
 
     __Step 4__: Now if you face the rising sun or east, then north will be to your left and the south will be to your right.
 
-    __Step 5__: Ok, we now know which way is north, so we will return to our bar magnet. The end of the magnet pointing in the northern direction is the north pole of the magnet. Mark that end of the magnet with the letter _N_. 
+    __Step 5__: Ok, we now know which way is north, so we will return to our bar magnet. The end of the magnet pointing in the northern direction is the north pole of the magnet. Mark that end of the magnet with the letter _N_.
 
-    You have now made a compass. For when you need to find directions, suspend this bar magnet with a thread. The north pole of this magnet (which is marked __N__) will always point in the northern direction.  
+    You have now made a compass. For when you need to find directions, suspend this bar magnet with a thread. The north pole of this magnet (which is marked __N__) will always point in the northern direction.
     `,
     imagePath: '/learning-items/white-space-2.jpeg'
   },  {
@@ -2738,7 +2740,7 @@ export const chapter6Data = [{
     ![toy boat water magnet](/learning-items/toy-boat-water-magnet.jpeg)
     A magnet was brought from different directions towards a toy boat that has been floating in water in a tub.
 
-    Affect observed in each case is stated in Column I. Possible reasons for the observed affects are mentioned in Column II. 
+    Affect observed in each case is stated in Column I. Possible reasons for the observed affects are mentioned in Column II.
     ![question 10 chapter 13 class 6 match columns](/learning-items/question-10-chapter-13-match-columns.jpeg)
 
     Use a pen and paper to draw this table in your notebook. Then match the statements given in Column I with those in Column II.
@@ -3924,7 +3926,7 @@ export const chapter7Data = [{
           },{
             studentName: 'Koushiki',
             imagePath: '/fake-responses/koushiki.png',
-            response: dedent`Why does stomata close? 
+            response: dedent`Why does stomata close?
             `
           },
         ]
@@ -4124,7 +4126,7 @@ export const chapter7Data = [{
     title: 'Food\'s Journey: From Mouth To Stomach',
     instructions: dedent`
     In this video we talk to a Mr. Sunil, who experiences a lot of digestion-related problems.
-    
+
     While talking to him, we will also follow the path that food takes from our mouth to our stomach.
     `,
     videoId: 'vdKeOul-CWM',
@@ -4150,14 +4152,14 @@ export const chapter7Data = [{
         fakePeerResponses: [
           {
             studentName: 'Prabsimar',
-            imagePath: '/fake-responses/prabsimar.png',            
+            imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
             Buccal means mouth.
 
-            One way I remember Buccal is by turning it into the word Bhook-al. 
+            One way I remember Buccal is by turning it into the word Bhook-al.
 
             Bhook in hindi means hunger, and we eat food through our mouth. This helps me remember that Buccal is mouth.
-            
+
             Another way in which I remember the word Buccal is by thinking of a company called Buccal Protect.
 
             This company is like Colgate and makes toothpaste. Since we use toothpaste to clean our teeth and mouth, I remember that Buccal is linked with mouth.`
@@ -4319,9 +4321,9 @@ export const chapter7Data = [{
     kind: 'video',
     title: 'Types Of Teeth',
     instructions: dedent`
-    Humans have four types of teeth: _Incisors, Canines, Pre-Molars and Molars_. 
+    Humans have four types of teeth: _Incisors, Canines, Pre-Molars and Molars_.
 
-    Watch this video to find out more about them. 
+    Watch this video to find out more about them.
 
     Also, the teacher in this video talks really fast. So if you have trouble understanding her, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
@@ -4514,7 +4516,7 @@ export const chapter7Data = [{
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
             response: dedent`
-            मान लो कि आपकी बॉडी में एक canal (or path) है जिसके through फ़ूड पास करता है. 
+            मान लो कि आपकी बॉडी में एक canal (or path) है जिसके through फ़ूड पास करता है.
 
             Alimentary Canal is the path through which the food travels through in your body. It includes the mouth, oesophagus, stomach, small intestine and large intestine.`
           },{
@@ -4639,10 +4641,10 @@ export const chapter7Data = [{
 
       In the rumen, the food is only partially digested. This partially digested food is called __cud__.
 
-      Then the cows do something incredible. 
+      Then the cows do something incredible.
 
       They bring the cud from the rumen (or stomach) back to their mouth in small lumps so they can chew the food proeperly. This process is called __rumination__ and these animals are called __ruminants__.
-      
+
       ---
       Note: The teacher in this video talks really fast. So if you have trouble understanding him, click the __cc button__ on the video. This way you will be able to read what the teacher is saying.
     `,
@@ -5090,9 +5092,9 @@ export const chapter7Data = [{
     time: 1,
     title: 'Conduction Or Convection?',
     presenterImagePath: '/instructors/kunal2.jpg',
-    instructions: dedent`      
-     ![ice cream wooden spoon conduction](/learning-items/grade7/ice-cream-cold-spoon-conduction.jpg)      
-      
+    instructions: dedent`
+     ![ice cream wooden spoon conduction](/learning-items/grade7/ice-cream-cold-spoon-conduction.jpg)
+
       A wooden spoon is dipped in a cup of ice cream. Its other end:`,
     maxSelected: 1,
     choices: [
@@ -5112,29 +5114,29 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: dedent`__Correct__. 
-        
-        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some. 
+        response: dedent`__Correct__.
 
-        In this example, the wooden spoon has more heat energy than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream. This will make the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some.
+
+        In this example, the wooden spoon has more heat energy than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream. This will make the wooden spoon have less heat. In other words the wooden spoon will become cold.
 
         And since the spoon is solid, the process of transfer of heat in the spoon will be conduction.`
       },
       {
         answerSet: ['opt2'],
-        response: dedent`The spoon will become cold, but the process is __not__ convection. The process is conduction. 
-        
-        You should know that everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some. 
+        response: dedent`The spoon will become cold, but the process is __not__ convection. The process is conduction.
 
-        In this example, the wooden spoon has more heat than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold. 
+        You should know that everything has some heat energy. The wooden spoon has some heat energy. The ice cream, strangely, also has some heat energy. Ice cream has very little heat energy, but it has some.
+
+        In this example, the wooden spoon has more heat than the ice cream, so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold.
 
         And since the spoon is a solid, the process of transfer of heat in the spoon will be conduction.`
       },
       {
         answerSet: ['opt3'],
         response: dedent`This is not correct.
-        
-        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream also has some heat energy. Ice cream has very little heat energy, but it has some. 
+
+        Everything has some heat energy. The wooden spoon has some heat energy. The ice cream also has some heat energy. Ice cream has very little heat energy, but it has some.
 
         In this example, the wooden spoon has more heat than the ice cream so heat will transfer (or conduct) from the spoon to the ice cream, making the wooden spoon have less heat. In other words the wooden spoon will become cold.`
       }
@@ -5255,7 +5257,7 @@ export const chapter7Data = [{
       But then, the teacher wraps another piece of paper around __metal__ and places it over the same fire. The paper does not burn.
 
       __Why does this happen?__ This happens because, metal can conduct heat from the fire pretty quickly. Thus the paper never gets above the temperature needed to burn. But wood does not conduct heat very quickly. So the temperature increases quickly and burns the paper.
-    
+
       This experiment shows that metal is a much better conductor of heat than wood.
     `,
     videoId: 'tDs4cFOqTdM',
@@ -5272,11 +5274,11 @@ export const chapter7Data = [{
 
     During the day, air above land gets heated faster than the air over sea. And hot air rises — we have seen this in hot air balloons. When the hot air above land expands and rises, the cool air from the sea takes its place. This is called __sea breeze__.
 
-    In this example, transfer of heat is happening through air, and air is a gas. Thus, this is an example of convection. 
+    In this example, transfer of heat is happening through air, and air is a gas. Thus, this is an example of convection.
 
     ![sea breeze day](/learning-items/grade7/sea-breeze-day.jpeg)
 
-    At night the reverse process happens. 
+    At night the reverse process happens.
 
     During night time, water cools down more slowly than land. Thus the air above water expands and rises. When this happens the air from land moves in to take its place. This is called __land breeze__.
    `,
@@ -5321,7 +5323,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Water in a heater transfers heat due to __Convection.__
 
-    The flame or source of heat in a water heater is at _the bottom of the heater_. 
+    The flame or source of heat in a water heater is at _the bottom of the heater_.
 
     The water at the bottom of the heater gets heated first and rises up; and the cold water from the top of the heater sinks to the bottom.
 
@@ -5329,7 +5331,7 @@ export const chapter7Data = [{
 
     Now engineers take advantage of this process. If we look inside a heater, we will find that the pipe used to take water away from this heater and to our taps is located at the top of the heater. This is because all the hot water in the heater rises to the top.
 
-    Also new, cold water is added to the heater from the bottom of the heater. This is done so the cold water does not mix with the hot water at the top.    
+    Also new, cold water is added to the heater from the bottom of the heater. This is done so the cold water does not mix with the hot water at the top.
    `,
     imagePath: '/learning-items/grade7/water-heater-convection.jpeg',
   }, {
@@ -5345,7 +5347,7 @@ export const chapter7Data = [{
 
     In this example hot air is rising. And thus heat is transferring through air, which is a gas. Thus, the process responsible for heat transfer is convection.
 
-    _Note:_ After opening the car door, if we look on the ground, we can sometimes see the rising hot air’s shadow or turbulence.    
+    _Note:_ After opening the car door, if we look on the ground, we can sometimes see the rising hot air’s shadow or turbulence.
    `,
     imagePath: '/learning-items/grade7/convection-heating-a-car-summer-day.jpg',
   }, {
@@ -5356,26 +5358,26 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     On page 43, our science books says this: _“From the sun, the heat comes to us by another process known as radiation.”_ Let us think about this sentence.
-    
+
     ![sun heat radiation science book](/learning-items/grade7/class7-science-book-radiation.jpeg)
 
     The heat we receive from the sun is due to radiation. Here is why the heat from the sun is __not__ due to conduction or convection.
 
-    Conduction is heat transfer in solids, like heating pots or pans in the kitchen. And convection is heat transfer in gases or liquids, like boiling water. 
+    Conduction is heat transfer in solids, like heating pots or pans in the kitchen. And convection is heat transfer in gases or liquids, like boiling water.
 
     Radiation does not need a medium like solids, liquids or gases. It can take place in the _presence or absence_ of a medium.
 
     For example the heat from the sun travels to the earth through space (which is empty, and not a medium) and then just before it reaches the earth it goes through the atmosphere (which is a gas, and definitely a medium).
 
     Heat transfer from radiation can happen with or without a medium.
-    
+
     ![sun heat radiation](/learning-items/grade7/sun-heat-radiation.jpeg)
 
-    Oh and one more thing. We know that sun can transfer heat through radiation. But Sun is not alone in that group. Everything that has some temperature radiates. 
+    Oh and one more thing. We know that sun can transfer heat through radiation. But Sun is not alone in that group. Everything that has some temperature radiates.
 
     You radiate; the sun radiates; the light bulb radiates; your phone, cat and dog also radiate.
 
-    Things with greater temperature generally radiate more. 
+    Things with greater temperature generally radiate more.
    `,
     imagePath: '/learning-items/grade7/our-body-radiates-cats-radiate-dogs-radiate.jpeg',
   }, {
@@ -5422,7 +5424,7 @@ export const chapter7Data = [{
     title: 'Radiation Example — Heat From Fire',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    When we sit in front of a fire, we feel warm. That is due to __radiation__. 
+    When we sit in front of a fire, we feel warm. That is due to __radiation__.
 
     When I said this in a class, one student asked, _"why is heat from fire not conduction or convection?"_ Let us think about this together.
 
@@ -5430,11 +5432,11 @@ export const chapter7Data = [{
 
     If we put a kettle on top of the fire, the kettle will get hot. Since the kettle is solid, the process here is __conduction__.
 
-    If we put our hand above the kettle, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__. 
+    If we put our hand above the kettle, we would feel the hot air rising. Since air is a gas, heat transfer through air is __convection__.
 
     Now this fire will also heat the air around it (in addition to the hot air rising from the fire). And we may feel a bit of that warm air. The process responsible here is __also convection__.
 
-    Finally, imagine that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__. 
+    Finally, imagine that a cool wind is blowing around the fire. Even then, we will still experience heat from the fire. This heat transfer is because of __radiation__.
 
     Everything that has some temperature transfers heat through radiation.
    `,
@@ -5472,7 +5474,7 @@ export const chapter7Data = [{
         response: dedent`
         This is not correct.
 
-        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labelled conduction, this option is not correct. 
+        Water is a liquid. And within water, heat trasfers through convection. Since (1) is labelled conduction, this option is not correct.
 
         Here is the correct response.
 
@@ -5496,7 +5498,7 @@ export const chapter7Data = [{
 
         ![convection hot air from pan](/learning-items/grade7/convection-hot-air-from-pan.jpeg)
 
-        Finally, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+        Finally, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation.
 
         ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
         `
@@ -5514,7 +5516,7 @@ export const chapter7Data = [{
 
         ![label diagram conduction convection radiation solution](/learning-items/grade7/label-diagram-conduction-convection-radaition-solution.jpeg)
 
-        Also, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation. 
+        Also, if we stand next to the stove, we will experience some heat from the flame. This heat transfer happens through radiation.
 
         ![radiation heat received from fire](/learning-items/grade7/radiation-heat-received-from-fire.jpeg)
         `
@@ -5529,9 +5531,9 @@ export const chapter7Data = [{
     instructions: dedent`
     A clinical thermometer is used to measure the temperature of our body. Doctors use it in their clinics and we use it in our homes.
 
-    This thermometer can measure a range of temperatures: from 35°C to 42°C. The normal temperature of the human body is around 37°C. 
+    This thermometer can measure a range of temperatures: from 35°C to 42°C. The normal temperature of the human body is around 37°C.
 
-    By the way, when we read 37°C, we say 37 degree Celcius. 
+    By the way, when we read 37°C, we say 37 degree Celcius.
 
     Above 42°C, death can occur. Below 35°C, we can experience intense shivering, loss of movement in fingers, slowing down of heart, and death.
 
@@ -5541,9 +5543,9 @@ export const chapter7Data = [{
 
     ![clinical thermometer temperature range](/learning-items/grade7/clinical-thermometer.jpeg)
 
-    Also, there is a kink near the bulb of the clinical thermometer. 
+    Also, there is a kink near the bulb of the clinical thermometer.
 
-    This kink stops mercury from falling back into the bulb of the thermometer immediately after measuring the body temperature. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature. 
+    This kink stops mercury from falling back into the bulb of the thermometer immediately after measuring the body temperature. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature.
    `,
     imagePath: '/learning-items/grade7/clinical-thermometer-kink.jpeg',
   }, {
@@ -5581,7 +5583,7 @@ export const chapter7Data = [{
         response: dedent`
         ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
         __This is incorrect.__
-        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them.
 
         The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
 
@@ -5595,7 +5597,7 @@ export const chapter7Data = [{
 
         [Here is a video](https://www.youtube.com/watch?v=Oqb-Oh1nVq0) that shows how to use a clinical thermometer.
 
-        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them.
 
         The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
 
@@ -5607,7 +5609,7 @@ export const chapter7Data = [{
         response: dedent`
         ![how to read a clinical thermometer quiz solution](/learning-items/grade7/how-to-read-clinical-thermometer-solution.jpeg)
         __This selection is incorrect.__
-        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them. 
+        To read the correct temperature, begin by counting the total number of divisions between 36°C to 37°C. There are 10 of them.
 
         The first division is 36.1°C; the second is 36.2°C; the third division is 36.3°C and so on. Thus, the correct answer is 36.7°C.
 
@@ -5656,13 +5658,13 @@ export const chapter7Data = [{
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
             response: dedent`
-            The first difference is in the size. The lab thermometer is much bigger than the clinical thermometer. 
+            The first difference is in the size. The lab thermometer is much bigger than the clinical thermometer.
 
             The lab thermometer can also measure temperatures from -10°C to 110°C. But the clinical thermometer measures temperature only from 35°C to 42°C.
 
-            Finally, there is a kink near the bulb of a clinical thermometer, but no kink is present in a laboratory thermometer. 
+            Finally, there is a kink near the bulb of a clinical thermometer, but no kink is present in a laboratory thermometer.
 
-            The kink prevents the mercury from falling back into the bulb of the clinical thermometer immediately. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature. 
+            The kink prevents the mercury from falling back into the bulb of the clinical thermometer immediately. This gives us enough time to take the thermometer out of our mouth, so we can read the temperature.
 
             But if we measure the temperature of hot water with a lab thermometer, we have to do so while keeping the thermometer in the water. Otherwise the mercury begins to fall as soon as we take the lab thermometer out of the water.
             `
@@ -5708,7 +5710,7 @@ export const chapter7Data = [{
     title: 'Dark Coloured Clothes In Winter',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Dark colours absorb more heat than light colours. This is why the insides of solar cookers are generally black. 
+    Dark colours absorb more heat than light colours. This is why the insides of solar cookers are generally black.
 
     ![insides of solar panel are dark black](/learning-items/grade7/insides-of-solar-panels-dark-colour-black2.jpeg)
 
@@ -5726,7 +5728,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![white house](/learning-items/grade7/white-house.jpeg)
 
-    In places of hot climate it is advised that outer walls of houses be painted white. Explain. 
+    In places of hot climate it is advised that outer walls of houses be painted white. Explain.
 
     Write your answer in the space below.
    `,
@@ -5739,7 +5741,7 @@ export const chapter7Data = [{
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
             response: dedent`
-            I know that dark colours absorb more heat than light colours. 
+            I know that dark colours absorb more heat than light colours.
 
             So that means that white absorbs less heat than black.
 
@@ -8050,7 +8052,7 @@ export const chapter7Data = [{
     title: 'What Is A Cavity?',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    A cavity is an empty space in a solid object. 
+    A cavity is an empty space in a solid object.
 
     You can find cavities in teeth and trees. Also, the word _cave_ and _cavity_ are related. A cave is a cavity or hole in the earth.
 
@@ -10691,7 +10693,7 @@ export const chapter7Data = [{
         response: dedent`
         __Correct__. Freshwater below ground is much more than the water in all rivers and lakes of the world.
 
-        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour. 
+        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour.
 
         Freshwater below the ground is about 1.7% of all water on earth and that is a lot more than the water in all the rivers and lakes of the world.`
       },
@@ -10700,7 +10702,7 @@ export const chapter7Data = [{
         response: dedent`
         This is not correct. The amount of water in all the rivers and lakes of the world is much smaller than the water available below ground.
 
-        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour. 
+        In the beginning of this chapter we saw a chart. It showed freshwater below the ground (or groundwater) in yellow colour, and rivers and lakes in orange colour.
 
         The yellow section in the chart is a lot bigger than the orange section. Thus, the amount of groundwater on earth is a lot more than the water in all rivers and lakes of the world.`
       }
@@ -10711,7 +10713,7 @@ export const chapter7Data = [{
     time: 2,
     title: 'Salt water and Freshwater',
     instructions: dedent`
-    __Salt water__: Oceans make about 97% of all water on earth. Ocean water contains salt and thus is also called salt water. We cannot use salt water for drinking and washing purposes as it contains salt in it. 
+    __Salt water__: Oceans make about 97% of all water on earth. Ocean water contains salt and thus is also called salt water. We cannot use salt water for drinking and washing purposes as it contains salt in it.
 
     In some places ocean water is purified by removing salt from it; humans can then use this purified water. But this process takes a lot of energy and is expensive.
 
@@ -10798,9 +10800,9 @@ export const chapter7Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        This is not correct. 
+        This is not correct.
 
-        It is true that people living in villages (or rural areas) face water shortage. 
+        It is true that people living in villages (or rural areas) face water shortage.
 
         But shortage of water is a major problem experienced by people who live in cities also.`
       },
@@ -10829,9 +10831,9 @@ export const chapter7Data = [{
     title: 'Water Cycle Quiz',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    The image below show processes involved in the water cycle. They are labelled by numbers. 
+    The image below show processes involved in the water cycle. They are labelled by numbers.
 
-    The image also shows the names of the processes but in their jumbled up form. 
+    The image also shows the names of the processes but in their jumbled up form.
 
     Your task is to rearrage the words. You should then write them in the box below.
 
@@ -10873,7 +10875,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Water that collects below ground in soil or in spaces between rocks is called groundwater.
 
-    In some places, if we dig a hole in the ground, we will find water. This water can be taken out by digging wells and installing pumps. 
+    In some places, if we dig a hole in the ground, we will find water. This water can be taken out by digging wells and installing pumps.
 
     Here is a video of a few people digging a well by hand to take out groundwater.
 `,
@@ -10888,7 +10890,7 @@ export const chapter7Data = [{
     instructions: dedent`
     Water on the surface of the earth (example rain water or water in rivers) sometimes seeps through the soil and fills the empty spaces between the cracks of rocks.
 
-    This is how water is stored below ground. 
+    This is how water is stored below ground.
 
     This process of seeping of water into ground is called __Infiltration__.
 
@@ -10931,7 +10933,7 @@ export const chapter7Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        This is not correct. 
+        This is not correct.
 
         The water available below the surface of the ground is called groundwater. In this question, we are asking about the __process__ by which water moves into the ground.`
       },
@@ -10967,12 +10969,12 @@ export const chapter7Data = [{
     time: 4,
     title: 'What Is An Aquifer?',
     instructions: dedent`
-    Places below the ground where water is stored between rocks is called an aquifer. The image below shows both the aquifer and the water table. 
+    Places below the ground where water is stored between rocks is called an aquifer. The image below shows both the aquifer and the water table.
     ![aquifer water table](/learning-items/grade7/aquifer-water-table.jpeg)
 
-    Aquifer is made up of two words — _aqua_ and _fer_. 
+    Aquifer is made up of two words — _aqua_ and _fer_.
 
-    _Aqua_ means water. 
+    _Aqua_ means water.
 
     And _fer_ means _to carry or bring_.  Like the word _Ferry_, which is a boat that carries or brings passengers.
 
@@ -11013,7 +11015,7 @@ export const chapter7Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        This is not correct. 
+        This is not correct.
 
         The upper limit of the water below ground is called Water Table. This question is about the region below the ground that holds water.`
       },
@@ -11040,7 +11042,7 @@ export const chapter7Data = [{
     title: 'Tweet what you\'ve learned',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    Explain how groundwater is recharged. 
+    Explain how groundwater is recharged.
 
     Write your answer in 140 characters, and then submit it in the box below. Finally, you can tweet your answer with the hashtag #chapter16.
 
@@ -11074,14 +11076,14 @@ export const chapter7Data = [{
 
     ![apple depletion](https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/grade7/depletion-of-apples.gif)
 
-    Water table depletion happens when the level of groundwater goes down. If that happens we will need to dig deeper wells and use more energy to pump water from the ground. 
+    Water table depletion happens when the level of groundwater goes down. If that happens we will need to dig deeper wells and use more energy to pump water from the ground.
 
     There are several reasons for water table depletion. Three of them are:
      - Increasing Population
      - Increasing Industries
      - Agricultural Activities
 
-     You can learn about all of these in the video below. 
+     You can learn about all of these in the video below.
 `,
     videoId: 'mOkU0Ei2-Pk',
     startTime: 10,
@@ -11118,7 +11120,7 @@ export const chapter7Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        This is not correct. 
+        This is not correct.
 
         Industries use water to produce things. An increase in the number of industries will mean more water will be used. If more water is used by industries, then that can cause a shortage of water that we need in our homes.`
       },
@@ -11163,7 +11165,7 @@ export const chapter7Data = [{
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
             response: dedent`
-            If a lot of people use tube wells to take out groundwater, then the level of water table is likely to go down. 
+            If a lot of people use tube wells to take out groundwater, then the level of water table is likely to go down.
 
             This problem will get worse in times of drought or when it does not rain.`
           }
@@ -11215,7 +11217,7 @@ export const chapter7Data = [{
       {
         answerSet: ['opt1',],
         response: dedent`
-        This is not correct. 
+        This is not correct.
 
         Lakes and rivers can lose water due to evaporation. Lakes and rivers can gain water because of rainfall. Thus the total water in the lakes and rivers of the world is __not__ constant.`
       },
@@ -11262,10 +11264,10 @@ export const chapter7Data = [{
     instructions: dedent`
     ![water going down drain wastewater](/learning-items/grade7/water-down-sink-wastewater.jpeg)
     Water that goes down the drain from sinks, showers, toilets, and laundries is __wastewater__. This water is dirty and not fit for drinking.
-    
+
     ![indian toilet sewage poop](/learning-items/grade7/indian-toilet-2.jpeg)
-    Another name for this wastewater is __sewage__. Sewage contains wastewater released by homes, hospitals, industries and offices. It also contains human waste like poop and urine. 
-    
+    Another name for this wastewater is __sewage__. Sewage contains wastewater released by homes, hospitals, industries and offices. It also contains human waste like poop and urine.
+
     Sewage often makes it into newspapers. Below is one headline about sewage. Also, the impurities in sewage are called pollutants or contaminants.
 `,
     imagePath: '/learning-items/grade7/sewage-newspaper.jpeg',
@@ -11335,21 +11337,21 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: dedent`This is incorrect. 
+        response: dedent`This is incorrect.
 
-        Later in this chapter we will learn how wastewater is cleaned, before it can be released into a river. There you will see that we do not remove oxygen from wastewater. 
+        Later in this chapter we will learn how wastewater is cleaned, before it can be released into a river. There you will see that we do not remove oxygen from wastewater.
 
         In fact, water stops being water, if oxygen is removed from it.`
       },
       {
         answerSet: ['opt2'],
-        response: dedent`__Correct__. 
+        response: dedent`__Correct__.
 
         A contaminant in water is a substance that pollutes the water or makes it impure. Cleaning of wastewater is a process of removing contaminants like poop, oil and other impurities from water.`
       },
       {
         answerSet: ['opt3'],
-        response: dedent`__Correct__. 
+        response: dedent`__Correct__.
 
         A pollutant in water is a substance that pollutes water or makes it unclean. Both pollutant and contaminant mean the same thing.
 
@@ -11365,7 +11367,7 @@ export const chapter7Data = [{
     instructions: dedent`
     ![sewer pipe carries sewage water to treatment plant](/learning-items/grade7/sewer-pipes-sewage.jpeg)
     A __sewer__ is a network of underground pipes that carry sewage or wastewater from places where it is produced (like in homes and industries) to a place where this wastewater can be cleaned.
-    
+
     A __manhole__ is a small opening in the sewer system which can let a person enter a sewer.
 `,
     imagePath: '/learning-items/grade7/manhole-cover-sewer.jpeg',
@@ -11420,7 +11422,7 @@ export const chapter7Data = [{
           {
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
-            response: dedent`Bar screen is a sieve. It removes large particles from wastewater. #barscreen 
+            response: dedent`Bar screen is a sieve. It removes large particles from wastewater. #barscreen
             `
           },{
             studentName: 'Prabsimar',
@@ -11442,7 +11444,7 @@ export const chapter7Data = [{
 
     To remove grit from wastewater, the water is made to move through a tank.
 
-    The speed of wastewater is slow enough that sand, small stones, glass and grit settle down at the bottom of the tank due to the force of gravity. These grit particles can cause damage to the water treatment machine, thus they are removed at this step.      
+    The speed of wastewater is slow enough that sand, small stones, glass and grit settle down at the bottom of the tank due to the force of gravity. These grit particles can cause damage to the water treatment machine, thus they are removed at this step.
 
     ![wastewater treatment step 2 grit sand removal](/learning-items/grade7/wastewater-treatment-grit-sand-removal-step-2.jpeg)
 
@@ -11516,19 +11518,19 @@ export const chapter7Data = [{
     automaticResponses: [
       {
         answerSet: ['opt1',],
-        response: dedent`This is incorrect. 
+        response: dedent`This is incorrect.
 
         Dried clarified water does not make sense. And it is definitely not used as manure.`
       },
       {
         answerSet: ['opt2'],
-        response: dedent`__Correct__. 
+        response: dedent`__Correct__.
 
         Dried sludge is used as manure in fields. Sludge is solid poop or faeces that settles at the bottom of a tank in the wastewater treatment facility.`
       },
       {
         answerSet: ['opt3'],
-        response: dedent`This is not correct. 
+        response: dedent`This is not correct.
 
         Grit means small pieces of sand. Sand is not used as manure in fields.`
       }
@@ -11540,7 +11542,7 @@ export const chapter7Data = [{
     title: 'Step 5 In Wastewater Treatment: Disinfection',
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
-    In this step, the wastewater is further disinfected (or cleaned) by using ultraviolet light or by adding chemicals like ozone and chlorine. 
+    In this step, the wastewater is further disinfected (or cleaned) by using ultraviolet light or by adding chemicals like ozone and chlorine.
 
     After this step the clean water is released into rivers or the ocean.
 `,
@@ -11644,7 +11646,7 @@ export const chapter7Data = [{
     Defecation means pooping.
 
     Defecating and urinating in public places is bad because:
-    - Human waste can mix with groundwater. 
+    - Human waste can mix with groundwater.
     - We use groundwater for drinking and washing purposes.
     - Water polluted with human waste can cause water-borne diseases like cholera and typhoid. `,
     imagePath: '/learning-items/grade7/urinating-defecating-public-places.jpeg',
@@ -11658,7 +11660,7 @@ export const chapter7Data = [{
     presenterImagePath: '/instructors/kunal2.jpg',
     instructions: dedent`
     ![chapter 18 wastewater story crossword puzzle](/learning-items/grade7/chapter-18-crossword-wastewater.jpeg)
-    Solve this crossword puzzle. 
+    Solve this crossword puzzle.
 
     Then upload a picture of your solution in the box below.`,
     hacks: {
@@ -12569,9 +12571,9 @@ export const chapter7Data = [{
     The word fundamental means something that is basic or something that cannot be reduced to any further parts.
     Example: Why do things fall? Because of gravity. Why does gravity exist? It just does. It is _fundamental_. Gravitational forces cannot be reduced into any additional forces.
 
-    Now I know that answer can be dissatisfying. 
+    Now I know that answer can be dissatisfying.
 
-    But concepts like gravitation and electromagnets are considered to be fundamental in nature, which means that is no more explanation for them. 
+    But concepts like gravitation and electromagnets are considered to be fundamental in nature, which means that is no more explanation for them.
 
     _References:_ [Source 1](https://physics.stackexchange.com/questions/43393/why-does-electricity-flowing-through-a-copper-coil-generate-a-magnetic-field); [Source 2](https://en.wikipedia.org/wiki/Fundamental_interaction)
 
