@@ -1,10 +1,12 @@
 module Main exposing (..)
 
+import Element exposing (el, viewport)
 import HomePage
 import Html exposing (Html, br, button, div, text)
 import Json.Decode exposing (Value)
 import Navigation exposing (Location)
 import Return exposing (Return)
+import RootStylesheet exposing (rootStylesheet)
 import Route exposing (Route)
 
 
@@ -13,10 +15,6 @@ type Page
     | NotFound
     | Home
     | About
-
-
-
--- | Section
 
 
 type alias Model =
@@ -50,19 +48,20 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    case model.page of
-        Home ->
-            HomePage.view { chapters = [] }
-                |> Html.map HomeMsg
+    viewport rootStylesheet <|
+        case model.page of
+            Home ->
+                HomePage.view { chapters = [] }
+                    |> Element.map HomeMsg
 
-        Blank ->
-            div [] [ text "blank page" ]
+            Blank ->
+                Element.empty
 
-        NotFound ->
-            div [] [ text "not found page" ]
+            NotFound ->
+                Element.empty
 
-        About ->
-            div [] [ text "about page" ]
+            About ->
+                Element.empty
 
 
 subscriptions : Model -> Sub Msg

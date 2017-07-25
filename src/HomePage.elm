@@ -1,7 +1,10 @@
 module HomePage exposing (..)
 
-import Html exposing (Html, text, div, button, br, p)
+import Element exposing (el, row, textLayout)
+import Element.Attributes exposing (height, px)
+import Html exposing (Html, br, button, div, p, text)
 import Html.Attributes exposing (style)
+import RootStylesheet exposing (Styles(..))
 
 
 -- import Html.Events exposing (onClick)
@@ -16,11 +19,11 @@ type alias Model =
     }
 
 
-view : Model -> Html Msg
+view : Model -> Element.Element Styles variation msg
 view model =
-    div []
-        [ div [] []
-        ]
+    row Header
+        [ height (px 200) ]
+        []
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

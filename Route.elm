@@ -7,9 +7,6 @@ import Section exposing (SectionSpecifier)
 import UrlParser as Url exposing ((</>), Parser, oneOf, parsePath, s, string)
 
 
--- ROUTING --
-
-
 type Route
     = Home
     | About
@@ -26,7 +23,7 @@ routeParser =
 
 
 
--- INTERNAL --
+-- Private
 
 
 routeToString : Route -> String
@@ -47,7 +44,7 @@ routeToString page =
 
 
 
--- PUBLIC HELPERS --
+-- Public
 
 
 linkTo : Route -> Attribute msg
