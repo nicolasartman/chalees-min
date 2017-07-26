@@ -1,8 +1,7 @@
 module HomePage exposing (..)
 
-import Element exposing (el, row, textLayout)
-import Element.Attributes exposing (height, px)
-import Html exposing (Html, br, button, div, p, text)
+import Element exposing (button, column, el, empty, full, row, text, textLayout)
+import Element.Attributes exposing (..)
 import Html.Attributes exposing (style)
 import RootStylesheet exposing (Styles(..))
 
@@ -22,8 +21,12 @@ type alias Model =
 view : Model -> Element.Element Styles variation msg
 view model =
     row Header
-        [ height (px 200) ]
-        []
+        [ height (px 70), width (percent 100), alignRight, padding 20 ]
+        [ column Unstyled
+            [ height (percent 100), verticalCenter ]
+            [ button <| el BasicButton [] <| text "click me"
+            ]
+        ]
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
