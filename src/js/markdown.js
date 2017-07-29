@@ -1,4 +1,5 @@
 import Markdown from 'react-markdown';
+import GifPlayer from 'react-gif-player';
 
 // Render all links from markdown so they open in a new window so the learner
 // doesn't potentially lose progress
@@ -15,6 +16,9 @@ const imageRenderer = (imageNode) => {
   const imageSource = imageNode.src.startsWith('/')
     ? `${imgixBase}${imageNode.src}?${imgixParameters}`
     : imageNode.src;
+  if (imageSource.substr(imageSource.length - 3) === 'gif') {
+    return <GifPlayer gif={imageSource}/>
+  }
   return <img src={imageSource} alt={imageNode.alt} title={imageNode.title} />
 };
 
