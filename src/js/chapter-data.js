@@ -2122,35 +2122,336 @@ export const chapter6Data = [{
     id: 'can-shadows-be-colourful',
     kind: 'video',
     time: 3,
-    title: 'Can shadows be colourful?',
-    instructions: 'Watch this video to learn if a shadow can be blue, green, yellow and other colours.',
+    title: 'Can Shadows Be Colourful?',
+    instructions: dedent`
+    We know that shadows are black.
+
+    But can shadows be yellow or red or green? Watch this video to find out.
+    `,
     videoId: 'MKW3uUM9xDU',
+  },  {
+    id: 'create-final-exam',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Imagine You Were Creating An Exam',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Imagine you were creating a final exam on the video above. 
+
+    What question would you ask your students in the class? And what would the answer to your question be?`,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz.',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: dedent`
+            I would ask the following question:
+            
+            Imagine you have two light sources - one red and one green. What will be the colour of the shadow on the screen where your hand blocks the red light.
+
+            Here is the answer:
+            The colour of the shadow would be green.`
+          }
+        ]
+      }
+    }
+  },  {
+    id: 'what-are-luminous-objects',
+    time: 1,
+    kind: 'image',
+    title: 'What Are Luminous Objects?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Objects like the sun and the electric bulb that emit their own light are called luminous objects.
+   `,
+    imagePath: '/learning-items/sun-luminous.jpeg',
   }, {
-    id: 'lets-think-about-the-video',
+    id: 'luminous-objects-way-to-remember',
+    time: 1,
+    kind: 'image',
+    title: 'Luminous Objects: A Way To Remember',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    When I think of the word _Luminous_, I remember the ad for _Luminous Inverters and Batteries_ with Sachin Tendulkar.
+
+    Now Luminous Inverters and Batteries can light up a home in case of a power cut. This helps me remember that luminous means things that emit or provide light.
+   `,
+    imagePath: '/learning-items/luminous-meaning-sachin-tendulkar.jpeg',
+  }, {
+    id: 'moon-lumnious-or-non-luminous',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Luminous Or Non-Luminous?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      ![moon non luminous](/learning-items/moon-non-luminous.jpeg)
+
+      Is the moon luminous or non-luminous?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Luminous'
+      },
+      {
+        id: 'opt2',
+        text: 'Non-Luminous'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. Moon is non-luminous. It does not have any light of its own and it only reflects the light from the sun.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Moon is non-luminous as it does not emit any light of its own.'
+      }
+    ]
+  }, {
+    id: 'transparent-translucent-opaque',
+    kind: 'video',
+    time: 4,
+    title: 'Transparent, Translucent And Opaque',
+    instructions: dedent`
+    __Transparent__ objects allow light to pass through them. We are able to see clearly through such objects. Example a glass window.
+
+    __Translucent__ objects allow only some light to pass through them. We can see through these objects, but not very clearly. Example a plastic bag.
+
+    __Opaque__ objects do not allow any light to pass through them. We are unable to see through such objects. Example a piece of wood.
+
+    Let us watch this video to learn more about transparent, translucent and opaque objects.
+      `,
+    videoId: 'dvMYs5JXjPg',
+    startTime: 11,
+    endTime: 262,
+  }, {
+    id: 'is-it-transparent-translucent-opaque',
     kind: 'textResponse',
     time: 5,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video in 140 characters; then tweet it with #chapter11',
+    title: 'Transparent Translucent Or Opaque?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Categorize the objects used in the previous video as Transparent, Translucent or Opaque.
+
+    Here is the list of objects one more time:
+    - Wood
+    - Plastic Bag
+    - Tissue Paper
+    - Cardboard
+    - Tin Foil or Aluminium Foil
+    - Glass
+    - SunGlasses
+    - Paper Bag
+    - Plastic Bag
+    - Blue Plastic
+    - Bubble Wrap
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'Here is a response from another student who answered this quiz:',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: dedent`
+             - Wood: Opaque
+             - Plastic Bag: Translucent
+             - Tissue Paper: Translucent
+             - Cardboard: Opaque
+             - Tin Foil or Aluminium Foil: Opaque
+             - Glass: Transparent
+             - SunGlasses: Translucent
+             - Paper Bag: Opaque
+             - Plastic Bag: Translucent
+             - Blue Plastic: Translucent
+             - Bubble Wrap: Translucent
+            `
+          }
+        ]
+      }
+    }
   }, {
-    id: 'read-and-draw',
-    kind: 'imageResponse',
-    time: 15,
-    title: 'Read and Draw',
-    instructions: 'From your textbook, read the section 11.4, “Mirrors and Reflections”. Then use a pen and pencil to draw a cartoon of what you have learned from that section. Take a picture of that cartoon and upload it here.',
+    id: 'why-is-glass-transparent',
+    time: 3,
+    kind: 'image',
+    title: '(Optional) Why Is Glass Transparent?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![glass transparent](/learning-items/glass-transparent.jpeg)
+    The answer to this question is really tough for me to describe.
+
+    That is because this answer requires us to understand things like  atoms, electrons, and the fact that electrons carry energy.
+
+    Still interested in the answer? 
+
+    If yes, then watch this [YouTube Video](https://www.youtube.com/watch?v=Omr0JNyDBI0), which explains why glass is transparent.
+    `,
+    imagePath: '/learning-items/white-space-2.jpeg'
+  }, {
+    id: 'what-are-shadows',
+    time: 2,
+    kind: 'image',
+    title: 'What Are Shadows?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Shadows are a dark area or shape produced by an opaque body when it comes between rays of light and a surface.
+
+    For instance here is an shadow of some people on a wall.
+    ![shadow people](/learning-items/shadows-people.jpeg)
+
+    And here is the shadow of the moon falling on earth. This event is also called a solar eclipse. It happens when the moon comes in between the sun and the earth. 
+   `,
+    imagePath: '/learning-items/shadow-moon-earth-solar-eclipse.jpeg',
+  }, {
+    id: 'dark-room-shadow-quiz',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'Shadow Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    ![dark room shadow quiz](/learning-items/dark-room-shadow.jpeg)
+     
+     Can you see a shadow of yourself in a completely dark room?
+     `,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'Yes'
+      },
+      {
+        id: 'opt2',
+        text: 'No'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: 'This is incorrect. You will not be able to see a shadow of yourself in a completely dark room. Shadows are formed when an opaque objects blocks the path of light. If there is no light, we will not see a shadow.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. You will not be able to see a shadow of yourself in a completely dark room.'
+      }
+    ]
+  }, {
+    id: 'shadow-puppet-film',
+    kind: 'video',
+    time: 5,
+    title: 'Shadow Film',
+    instructions: dedent`
+    This is a short YouTube film where you will see amazing shadows that were made by using just hands.`,
+    videoId: 'us7wAnXfzpk',
+    startTime: 5,
+  }, {
+    id: 'how-to-make-shadow-puppets',
+    kind: 'video',
+    time: 2,
+    title: 'How To Make Shadow Puppets?',
+    instructions: dedent`
+    This video will teach you how to make shadow puppets using your hands. 
+
+    You will learn how to make shadows that look like deer, birds and many other animals.`,
+    videoId: 'Uv-MdaBfk8U',
+  }, {
+    id: 'shadow-quiz',
+    kind: 'textResponse',
+    time: 2,
+    short: true,
+    title: 'Shadow Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Can you think of a shape that would give a circular shadow if held in one way and a rectangular shadow if held in another way?`,
+    hacks: {
+      afterBody: {
+        preface: 'This image below describes the answer.',
+        show: 'locked',
+        feedbackImagePath: '/learning-items/cylinder-circular-rectangular-shadow.jpeg',
+      }
+    }
+  }, {
+    id: 'how-to-make-pinhole-camera',
+    kind: 'video',
+    time: 3,
+    title: 'How To Make A Pinhole Camera?',
+    instructions: dedent`
+    A pinhole camera is a box with a tiny hole. Using this camera you can see an image of the things around you. Although the image produced is upside down.
+
+    We will use simple things found in the house to build this camera. These things include a small box, butter paper, a needle, and black paper.
+      `,
+    videoId: 'SsGlQMMZZUw',
+    endTime: 178,
+  }, {
+    id: 'why-pinhole-camera-image-inverted',
+    time: 2,
+    kind: 'image',
+    title: 'Why Is The Image Of Pinhole Camera Inverted?',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Light travels in a straight line. 
+
+    In the image below, light rays that travel from the top of the tree to anywhere on the cardboard box that __does not__ have the hole get blocked.
+    
+    ![pinhole camera light ray blocked](/learning-items/pinhole-camera-inverted-image-light-blocked.jpeg)
+
+    The light rays that go through the hole are the only ones that do not get blocked. 
+
+    Thus light that travels from the __top__ of the tree and through the hole gets inside the box. This light ray continues to travel in the straight line and lands towards the __bottom__ of the screen inside the box. 
+
+    Also, the light ray that travels from the __bottom__ of the tree and through the hole gets inside the box. This light ray continues to travel in the straight line and lands towards the __top__ of the screen inside the box. 
+ 
+    This produces an inverted or upside down image.
+   `,
+    imagePath: '/learning-items/pinhole-camera-inverted-image.jpeg',
+  }, {
+    id: 'how-to-make-periscope',
+    kind: 'video',
+    time: 3,
+    title: 'How To Make A Periscope?',
+    instructions: dedent`
+    A periscope is a device that can help us see things that are otherwise out of sight.
+
+    For example, the girl in the image below can see what is happening on the other side of the wall using a periscope.
+    ![periscope](/learning-items/periscope.jpeg)
+
+    In this video we will use simple things found in the house to build a periscope. This includes things like a pencil box, mirrors and glue.
+      `,
+    videoId: 'Nzwc5zBl5vM',
+  }, {
+    id: 'classify-objects',
+    kind: 'textResponse',
+    time: 5,
+    title: 'Final Quiz',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+    Classify the materials given below as opaque, transparent or translucent and as luminous or non-luminous: 
+
+    _Air, water, a piece of rock, a sheet of aluminium, a mirror, a wooden board, a sheet of polythene, a CD, smoke, a sheet of plane glass, fog, a piece of red hot iron, an umbrella, a lighted fluorescent tube, a wall, a sheet of carbon paper, the flame of a gas burner, a sheet of cardboard, a lighted torch, a sheet of cellophane, a wire mesh, kerosene stove, sun, firefly, candle_
+
+    Write the answers in the box below using the following format: _Air - Transparent, Non-Luminous_
+    `,
+    hacks: {
+      afterBody: {
+        preface: 'This image below shows the correct answer.',
+        show: 'locked',
+        feedbackImagePath: '/learning-items/class6-chapter11-categorize-question.jpeg',
+      }
+    }
   }, {
     id: 'singing-the-chapter',
     kind: 'video',
+    locked: true,
     time: 3,
     title: 'Singing the chapter',
     instructions: 'Watch this video to review the chapter in only a few minutes',
     videoId: 'lo9naFiH778',
-  }, {
-    id: 'lets-think-about-the-video-two',
-    kind: 'textResponse',
-    time: 10,
-    title: 'Let\'s think about the video',
-    instructions: 'Summarize what you have learned in this video and write it below.',
-  }]
+  }, ]
 }, {
   id: '12',
   thumbnailImagePath: '/chapter-thumbnails/chapter-12.jpg',
