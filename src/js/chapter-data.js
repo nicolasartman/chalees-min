@@ -19,6 +19,7 @@ export const chapter6Data = [{
   }, {
     id: 'our-foods-journey',
     kind: 'multipleChoiceResponse',
+    timer: true,
     time: 1,
     title: 'Our food\'s journey',
     presenterImagePath: '/instructors/kunal2.jpg',
