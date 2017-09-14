@@ -32,11 +32,11 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 1em;
-  
+
   @media (max-width: $max-width-sm) {
     padding: 0;
   }
-  
+
   &.homepage {
     max-width: 80em;
     padding-bottom: 3em;
@@ -165,7 +165,7 @@ $page-transition-duration: 1s;
 // Scale everything down a bit on mobile
 @media (max-width: $max-width-sm) {
   .loading-overlay img {
-    
+
   }
 }
 
@@ -183,65 +183,65 @@ $page-transition-duration: 1s;
   $height-desktop: 3.5em;
   $height-mobile: 3em;
   $header-text-color: black;
-  
+
   height: $height-mobile;
   color: $header-text-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   .pure-menu-link {
     color: $header-text-color;
     height: $height-mobile;
     line-height: $height-mobile;
     padding-top: 0;
     padding-bottom: 0;
-    
+
     // TODO: try to achieve font weight 500
     font-weight: 500;
     &:hover, &:active, &:focus {
       background-color: darken(white, 5%);
     }
-    
+
   }
-  
+
   .header-brand {
     // TODO: reconcile
     display: inline-block;
-    
+
     text-decoration: none;
-  
+
     .header-brand-logo {
       height: 1.18em;
       width: auto;
       margin-right: 5px;
-      vertical-align: middle;      
+      vertical-align: middle;
     }
-    
-    
+
+
   }
-  
+
   & > .pure-menu-list > .pure-menu-item {
     $border-color-hover: #BBB;
 
     border-width: 1px;
     border-style: solid;
-    border-color: transparent;    
-    
+    border-color: transparent;
+
     &:hover {
-      border-color: $border-color-hover;      
+      border-color: $border-color-hover;
     }
   }
-  
+
   .pure-menu-children {
     $border-color: #BBB;
     border: 1px solid $border-color;
     border-top-width: 2px;
     box-shadow: 0 6px 12px rgba(0,0,0, 0.2);
-    
+
     & .pure-menu-item {
       border-bottom: 1px solid lighten($border-color, 7%);
-      
+
       &:last-child {
         border-bottom: none;
       };
@@ -252,7 +252,7 @@ $page-transition-duration: 1s;
     right: -1px; // the top menu has a border, so account for that
   }
 
-  
+
   // Use a larger header on desktop widths...
   @media (min-width: 48em) {
     height: 3.5em;
@@ -264,14 +264,14 @@ $page-transition-duration: 1s;
       line-height: $height-desktop;
     }
   }
-  
+
   // ...And a smaller logo on small phones
   @include media-phone {
     .header-brand .header-brand-logo {
       height: 1.1em;
     }
   }
-  
+
   // Very small phone screen special accomodations. A bit too one-off.
   @media (max-width: 25em) {
     .header-brand .header-brand-logo {
@@ -319,17 +319,17 @@ $page-transition-duration: 1s;
   max-width: 90%;
   border-radius: 25px;
   transform: translateY(40px);
-  
+
   &:hover {
     background-color: $chalees-purple;
   }
-  
+
   &.live-banner-invisible {
     height: 0px;
     opacity: 0;
     pointer-events: none;
   }
-  
+
   &:hover, &:active {
     text-decoration: none;
   }
@@ -350,7 +350,7 @@ $page-transition-duration: 1s;
 .home-nav {
   background: transparent;
   justify-content: flex-end;
-  
+
   .pure-menu-link:hover,
   .pure-menu-link:active,
   .pure-menu-link:focus,
@@ -363,7 +363,7 @@ $page-transition-duration: 1s;
   background-color: transparent;
   &, a {
     color: $body-background-color;
-  }    
+  }
 }
 
 // Awful, awful hack because this page is being rebuild from scratch soon
@@ -393,9 +393,9 @@ $page-transition-duration: 1s;
   align-items: center;
   justify-content: center;
   transition: height 0.5s ease;
-  
+
   &.open {
-    height: 260px;    
+    height: 260px;
   }
 }
 
@@ -406,23 +406,23 @@ $page-transition-duration: 1s;
   background-color: $body-background-color;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   position: relative;
-  
+
   .homepage-grade-section-body {
     width: 100%;
     max-width: 80em;
     padding: 30px 15px 0;
   }
-  
+
   &.homepage-grade-section-invisible {
     opacity: 0;
     pointer-events: none;
     height: 0;
   }
-  
+
   &.homepage-grade-section-visible {
     opacity: 1;
   }
-  
+
   .not-selected-chapter {
     display: none;
   }
@@ -435,7 +435,7 @@ $page-transition-duration: 1s;
 .homepage-title-secondary {
   text-align: center;
   font-size: 24px;
-  
+
   @include media-tablet-and-smaller {
     font-size: 20px;
   }
@@ -449,7 +449,7 @@ $page-transition-duration: 1s;
   @include media-tablet {
     max-width: 75%;
   }
-  
+
   @include media-phone {
     max-width: 90%;
   }
@@ -457,14 +457,14 @@ $page-transition-duration: 1s;
 
 .homepage-tile {
   margin-bottom: 30px;
-  
+
   @include media-phone {
     margin-bottom: 30px;
   }
-  
+
   a {
     text-decoration: none;
-  }  
+  }
 }
 .homepage-tile-content {
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -516,7 +516,7 @@ $page-transition-duration: 1s;
 .chapter-title {
   text-align: left;
   margin: 1em 0;
-  
+
   @include media-tablet-and-smaller {
     margin: 20px;
   }
@@ -532,18 +532,18 @@ $page-transition-duration: 1s;
   border-radius: 3px;
   box-shadow: 0px 0px 12px 1px transparentize(black, 0.7);
   position: relative;
-  
+
   .learning-item-section {
-    padding: 1.25em 1.25em;    
+    padding: 1.25em 1.25em;
   }
-  
+
   @include media-tablet-and-smaller {
     border-right: none;
     border-left: none;
     border-radius: 0;
     margin-top: 1.75em;
   }
-  
+
   &.first-item {
     margin-top: 0;
   }
@@ -556,7 +556,7 @@ $page-transition-duration: 1s;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    
+
     .learning-item-lock-message {
       text-align: center;
       padding: 1.5em;
@@ -566,6 +566,33 @@ $page-transition-duration: 1s;
       max-width: 70%;
     }
     z-index: 1000;
+  }
+
+  /* Timer Overlay */
+  .learning-item-timer-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & > div {
+      text-align: center;
+      padding: 1.5em;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 5px;
+      color: white;
+      max-width: 70%;
+    }
+  }
+
+  .timer-seconds-remaining {
+    font-weight: bold;
+    color: $chalees-purple;
   }
 }
 
@@ -593,27 +620,27 @@ $page-transition-duration: 1s;
   height: 100%;
   position: absolute;
   color: transparent;
-  
+
   transition: all 0.1s ease-in;
-  
+
   &:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
   };
-  
+
   z-index: $login-gate-overlay-z-index;
 }
 
 // Locked hack feedback on a learning item
 .hack-feedback-container {
   $section-background-color: #F7F7F7;
-  
+
   .hack-feedback-preface {
     display: flex;
     align-items: flex-start;
   }
-  
+
   &.hack-feedback-before-body{
     .learning-item-section {
       padding: 0;
@@ -624,7 +651,7 @@ $page-transition-duration: 1s;
     .hack-feedback-lock {
       height: 0;
     }
-  } 
+  }
   &.hack-feedback-after-body {
     .hack-feedback {
       border-top: 1px solid #CCC;
@@ -639,7 +666,7 @@ $page-transition-duration: 1s;
     height: $height;
     overflow-y: hidden;
     position: relative;
-    
+
     .hack-feedback-lock-fader {
       display: block;
       text-align: center;
@@ -657,23 +684,23 @@ $page-transition-duration: 1s;
         $section-background-color 100%);
     }
   }
-  
+
   .hack-feedback-preface-image {
     align-self: flex-start;
   }
-  
+
   .hack-feedback-preface-text {
     align-self: center;
   }
-  
+
   .peer-response {
     margin: 1em 1em 0 1em;
     display: flex;
-    
+
     .peer-image {
       align-self: flex-start;
     }
-    
+
     .peer-response-text {
       align-self: center;
     }
@@ -710,12 +737,12 @@ $page-transition-duration: 1s;
     transition-duration: 0.3s;
     transition-timing-function: ease;
     margin: 0.5em 0;
-    
+
     @include media-laptop-and-larger {
       flex: 1;
       & + .choice {
         margin-left: 1em;
-      }      
+      }
     }
 
     @include media-tablet {
@@ -732,7 +759,7 @@ $page-transition-duration: 1s;
       background-color: lighten($chalees-purple, 50%);
       border: 2px solid $chalees-purple;
     }
-    
+
     &[disabled] {
       color: #AAA;
       border: 2px solid hsl(0, 0, 85%);
@@ -741,12 +768,12 @@ $page-transition-duration: 1s;
   .multiple-choice-selection-feedback {
     display: flex;
     align-items: flex-start;
-    
+
     // Workaround for the paragraph margins
     > .markdown > p:first-child {
       margin-top: 0;
     }
-    
+
     .feedback-text {
       align-self: center;
     }
@@ -834,21 +861,21 @@ $page-transition-duration: 1s;
   $border-width: 2px;
   transition: all 0.15s linear;
   border: $border-width solid $button-color;
-  
+
   &:disabled {
     border: $border-width solid transparent;
   }
 
   &, &:focus {
-    background-color: white;    
+    background-color: white;
     background-image: none;
-  }  
-  
+  }
+
   &:hover, &:active, &.active {
     color: white;
     background-color: $button-color;
   }
-  
+
   // Additional button variations
   &.button-secondary {
     $button-color: hsl(0, 0, 50%);
@@ -857,8 +884,8 @@ $page-transition-duration: 1s;
     border: 2px solid $button-color;
 
     &, &:focus {
-      background-color: white;    
-    }  
+      background-color: white;
+    }
 
     &:hover, &:active {
       color: white;
@@ -889,7 +916,7 @@ $page-transition-duration: 1s;
   align-items: center;
   justify-content: center;
   z-index: $modal-z-index;
-  
+
   @include media-tablet-and-smaller {
     top: 0;
     left: 0;
@@ -899,7 +926,7 @@ $page-transition-duration: 1s;
     border: none;
     transform: none;
   }
-  
+
   .close-button {
     position: absolute;
     top: 10px;
@@ -910,7 +937,7 @@ $page-transition-duration: 1s;
     background-color: transparent;
     font-size: 32px;
     opacity: 0.25;
-    
+
     &:hover {
       opacity: 1;
     }
@@ -954,19 +981,19 @@ $page-transition-duration: 1s;
   font-size: 2.5em;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
   letter-spacing: 0.025em;
- 
+
   .contact-email {
     font-size: 1.5em;
-    
+
     @include media-phone {
       font-size: 1.3em;
     }
   }
-  
+
   @include media-phone {
     font-size: 1.25em;
   }
-  
+
   @include media-tablet {
     font-size: 1.75em;
   }
@@ -1014,4 +1041,17 @@ $page-transition-duration: 1s;
 }
 
 
+/* Flash text red */
+@keyframes "flash-red" {
+  from {
+    text-shadow: 0 0 0.3em $chalees-red;
+  }
+  to {
+    text-shadow: none;
+  }
+}
 
+.flash-red {
+  color: $chalees-red;
+  animation: "flash-red" 1s ease-in-out infinite;
+}
