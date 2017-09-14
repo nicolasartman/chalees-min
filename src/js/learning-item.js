@@ -2,6 +2,7 @@ import identity from 'lodash/identity';
 import cond from 'lodash/fp/cond';
 import Markdown from './markdown';
 import getIn from 'lodash/get';
+import classNames from 'classnames'
 
 import {authorize} from './auth.js';
 
@@ -40,7 +41,11 @@ const LearningItem = React.createClass({
     }
   },
   async componentWillMount() {
-    const { props: { isTimed } } = this;
+    const { props: { isTimed, response } } = this;
+    if (response) {
+      this.setState({ showTimerOverlay: false });
+    }
+
     const user = await authorize();
     if (user) {
       this.setState({userIsSignedIn: true});
@@ -239,8 +244,8 @@ const LearningItem = React.createClass({
               }
               { showTimeRemaining &&
                 <p style={{textAlign:'right'}}>
-                  Time Remaining:{' '}
-                  <span className={timeRemaining < 11 ? 'flash-red' : 'timer-seconds-remaining'}>
+                  Time Remaining:
+                  <span className={classNames('timer-seconds-remaining', { 'flash-red': timeRemaining < 11 })}>
                     {timeRemaining} seconds
                   </span>
                 </p>

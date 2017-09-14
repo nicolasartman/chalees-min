@@ -583,7 +583,7 @@ $page-transition-duration: 1s;
     & > div {
       text-align: center;
       padding: 1.5em;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.95);
       border-radius: 5px;
       color: white;
       max-width: 70%;
@@ -591,6 +591,8 @@ $page-transition-duration: 1s;
   }
 
   .timer-seconds-remaining {
+    display: inline-block;
+    width: 92px;
     font-weight: bold;
     color: $chalees-purple;
   }
@@ -1052,6 +1054,6 @@ $page-transition-duration: 1s;
 }
 
 .flash-red {
-  color: $chalees-red;
+  color: $chalees-red !important;
   animation: "flash-red" 1s ease-in-out infinite;
 }
