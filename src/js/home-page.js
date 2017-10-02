@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import HomepageTile from './homepage-tile.js';
 import UserMenu from './user-menu.js';
 import Footer from './footer.js';
-import {chapter6Data, chapter7Data} from './chapter-data.js';
+import {chapter6Data, chapter7Data} from './chapter-data';
 import sortBy from 'lodash/sortBy';
 import logo from '../images/chalees-min-logo@2x.png';
 import cameraIcon from '../images/icons/camera-icon.png';
@@ -21,7 +21,7 @@ const chapter7Lessons = sortBy(
 
 const HomePage = React.createClass({
   getInitialState: () => ({}),
-  
+
   render: function() {
     return (
       <div className="homepage">
@@ -30,7 +30,7 @@ const HomePage = React.createClass({
         <nav className="home-menu pure-menu pure-menu-horizontal main-nav home-nav">
           <UserMenu />
         </nav>
-        
+
         <div className={`homepage-banner-area ${(this.state.grade6 || this.state.grade7) ? 'open' : ''}`}>
           <div className="homepage-title-primary">
             <img src={logo} className="homepage-logo" />
@@ -50,8 +50,8 @@ const HomePage = React.createClass({
             <img src={cameraIcon} style={{position: 'relative', top: 3, marginRight: 7}}/>
             Live Class Today at 12PM!
           </a>*/}
-        </div>      
-        
+        </div>
+
         <div className={`homepage-grade-section ${(this.state.grade6 || this.state.grade7) ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>
           <div className="container homepage-grade-section-body">
             <div className={`pure-g ${this.state.grade6 ? 'selected-chapter' : 'not-selected-chapter'}`}>
@@ -59,7 +59,7 @@ const HomePage = React.createClass({
                 <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
               ))}
             </div>
-        
+
             <div className={`pure-g ${this.state.grade7 ? 'selected-chapter' : 'not-selected-chapter'}`}>
               {chapter7Lessons.map((chapter, index) => (
                 <HomepageTile key={index} imagePath={chapter.thumbnailImagePath} chapterId={chapter.id} title={chapter.title} />
@@ -68,7 +68,7 @@ const HomePage = React.createClass({
           </div>
         </div>
         {this.props.children}
-        
+
         <Footer className={!(this.state.grade6 || this.state.grade7) ? 'homepage-footer' : 'homepage-footer-open'} />
       </div>
     );

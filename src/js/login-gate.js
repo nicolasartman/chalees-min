@@ -31,7 +31,7 @@ const LoginGate = React.createClass({
                                     </div> : null}
           {this.props.children}
         </div>
-        <Modal isOpen={this.state.isModalOpen} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay">
+        <Modal isOpen={this.state.isModalOpen} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay" contentLabel="login-gate">
           <div style={{textAlign: 'center'}}>
             <div className='modal-header'>
               <button className='close-button' aria-hidden='true' onClick={this.closeModal}>X</button>

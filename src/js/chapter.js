@@ -7,7 +7,7 @@ import VideoInstruction from './video-instruction.js';
 import LearningItem from './learning-item.js';
 import HomePage from './home-page.js';
 import Header from './header.js';
-import {chapter6Data, chapter7Data} from './chapter-data.js';
+import {chapter6Data, chapter7Data} from './chapter-data';
 import database from './database.js';
 import {authorize} from './auth.js';
 import Helmet from 'react-helmet';

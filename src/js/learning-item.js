@@ -2,6 +2,7 @@ import identity from 'lodash/identity';
 import cond from 'lodash/fp/cond';
 import Markdown from './markdown';
 import getIn from 'lodash/get';
+import classNames from 'classnames'
 
 import {authorize} from './auth.js';
 
@@ -32,14 +33,25 @@ const LearningItem = React.createClass({
     response: null,
     saveIsEnabled: true,
     saveButtonLabel: 'Save',
+    showTimerOverlay: false
   }),
-  componentWillReceiveProps(newProps) {
-    this.setState({response: newProps.response});
+  componentWillReceiveProps({ response }) {
+    if (response) {
+      this.setState({ response, showTimerOverlay: false });
+    }
   },
   async componentWillMount() {
+    const { props: { isTimed, response } } = this;
+    if (response) {
+      this.setState({ showTimerOverlay: false });
+    }
+
     const user = await authorize();
     if (user) {
       this.setState({userIsSignedIn: true});
+      if (!isNaN(isTimed)) {
+        this.setState({ showTimerOverlay: true });
+      }
     }
   },
   setResponse(response) {
@@ -71,7 +83,7 @@ const LearningItem = React.createClass({
   },
   handleSaveFinish() {
     this.enableSave();
-    this.setSaveButtonLabel('Save');    
+    this.setSaveButtonLabel('Save');
   },
   handleSaveSuccess(result) {
     this.handleSaveFinish();
@@ -87,6 +99,7 @@ const LearningItem = React.createClass({
   handleSave() {
     this.disableSave();
     this.setState({recentSaveStatus: null});
+    this.disableTimer();
 
     const handleBeforeSaveAction = this.state.handleBeforeSaveAction || identity;
     const handleAfterSave = this.state.handleAfterSave || identity;
@@ -109,7 +122,7 @@ const LearningItem = React.createClass({
   },
   createHackFeedback(data, response) {
     const showBehavior = data && data.show;
-    
+
     return cond([
       [() => showBehavior === 'ifResponse' && response, () => (
           <HackFeedback data={this.props.hacks.afterBody} />
@@ -118,7 +131,7 @@ const LearningItem = React.createClass({
         <div className={response ? '' : 'hack-feedback-lock'}>
           <HackFeedback data={data} />
           <div className="hack-feedback-lock-fader">
-            <img src={lockIcon} ariaHidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
+            <img src={lockIcon} aria-hidden style={{height: '1em', position: 'relative', top: 2, left: -5}}/>
             Answer this quiz to see more
           </div>
         </div>
@@ -128,8 +141,45 @@ const LearningItem = React.createClass({
       )],
     ])();
   },
+  startTimer() {
+    const { props: { isTimed } } = this;
+    this.setState({
+      timeRemaining: parseInt(isTimed, 10),
+      retryItem: true,
+      showTimerOverlay: false,
+      showTimeRemaining: true
+    });
+    this.itemTimeout = window.setInterval(this.updateTimer, 1000);
+  },
+  updateTimer() {
+    const timeRemaining = this.state.timeRemaining - 1;
+
+    if (timeRemaining > 0) {
+      this.setState({ timeRemaining });
+    } else {
+      this.setState({
+        showTimerOverlay: true,
+        showTimeRemaining: false
+      });
+      window.clearInterval(this.itemTimeout);
+    }
+  },
+  disableTimer() {
+    window.clearInterval(this.itemTimeout);
+    this.setState({
+      showTimeRemaining: false
+    })
+  },
   render() {
-    const props = this.props;
+    const {
+      props,
+      state: {
+        showTimerOverlay,
+        retryItem,
+        showTimeRemaining,
+        timeRemaining
+      }
+    } = this;
     const Child = kinds[props.kind];
     const content = Child ? (
       <Child
@@ -168,41 +218,74 @@ const LearningItem = React.createClass({
                 </div>
               </div>
             </div>
-            <Markdown source={props.instructions} />
-                    
-            <div className="hack-feedback-container hack-feedback-before-body">
-              {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
-            </div>
+            <div style={{position: 'relative'}}>
+              { showTimerOverlay &&
+                <div className="learning-item-timer-overlay">
+                  <div>
+                    { retryItem ?
+                      <p>
+                        Time is up. Click restart to play again.
+                      </p>
+                      :
+                      <p>
+                        You will have {props.isTimed} seconds to answer this question.
+                        Click start when ready.
+                      </p>
+                    }
+                    <p>
+                      <button
+                        className="pure-button"
+                        children={retryItem ? "Restart" : "Start"}
+                        onClick={this.startTimer}
+                      />
+                    </p>
+                  </div>
+                </div>
+              }
+              { showTimeRemaining &&
+                <p style={{textAlign:'right'}}>
+                  Time Remaining:
+                  <span className={classNames('timer-seconds-remaining', { 'flash-red': timeRemaining < 11 })}>
+                    {timeRemaining} seconds
+                  </span>
+                </p>
+              }
+              <Markdown source={props.instructions} />
 
-            {/* Learning item body */}
-            {content}
-          
-            {/* Save button */}
-            {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
-              <button
-                className="pure-button"
-                disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
-                onClick={this.handleSave}
-              >
-                {this.state.saveButtonLabel}
-              </button>
-              <span style={{marginLeft: '15px'}}>
-                {cond([
-                  [() => !this.state.recentSaveStatus, () => null],
-                  [() => this.state.recentSaveStatus === 'success', () => (
-                    <span className="text-success">Saved successfully!</span>
-                  )],
-                  [() => this.state.recentSaveStatus.code === 'NO_RESPONSE_GIVEN', () => (
-                    <span className="text-error">Please make sure to provide a response</span>
-                  )],
-                  [() => this.state.recentSaveStatus, () => (
-                    <span className="text-error">Save failed, please try again</span>
-                  )],
-                ])()}
-              </span>
-            </div>)}
+              <div className="hack-feedback-container hack-feedback-before-body">
+                {this.createHackFeedback(this.props.hacks && this.props.hacks.beforeBody, this.props.response)}
+              </div>
+
+              {/* Learning item body */}
+              {content}
+
+              {/* Save button */}
+              {this.state.shouldAllowSaving && (<div style={{marginTop: 15}} className="content-vertical-center">
+                <button
+                  className="pure-button"
+                  disabled={!this.state.userIsSignedIn || !this.state.saveIsEnabled}
+                  onClick={this.handleSave}
+                >
+                  {this.state.saveButtonLabel}
+                </button>
+                <span style={{marginLeft: '15px'}}>
+                  {cond([
+                    [() => !this.state.recentSaveStatus, () => null],
+                    [() => this.state.recentSaveStatus === 'success', () => (
+                      <span className="text-success">Saved successfully!</span>
+                    )],
+                    [() => this.state.recentSaveStatus.code === 'NO_RESPONSE_GIVEN', () => (
+                      <span className="text-error">Please make sure to provide a response</span>
+                    )],
+                    [() => this.state.recentSaveStatus, () => (
+                      <span className="text-error">Save failed, please try again</span>
+                    )],
+                  ])()}
+                </span>
+              </div>)}
+            </div>
           </div>
-          
+
           <div className="hack-feedback-container hack-feedback-after-body">
             {this.createHackFeedback(this.props.hacks && this.props.hacks.afterBody, this.props.response)}
           </div>
@@ -210,7 +293,7 @@ const LearningItem = React.createClass({
         {this.props.locked && !this.props.isChapterComplete && (
           <div className="learning-item-lock content-center">
             <div className="learning-item-lock-message">
-              <img src={lockIconInverse} ariaHidden style={{height: '2em', position: 'relative', marginBottom: '0.5em'}}/>
+              <img src={lockIconInverse} aria-hidden style={{height: '2em', position: 'relative', marginBottom: '0.5em'}}/>
               <br />
               Answer all of the questions in this chapter to view!
             </div>
