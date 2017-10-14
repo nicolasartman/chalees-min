@@ -3,9 +3,10 @@ import flattenDeep from 'lodash/flattenDeep';
 
 import chapter6Data from './chapter6Data'
 import chapter7Data from './chapter7Data'
+import englishData, { categories as englishCategories} from './englishData'
 
 // validate that all data items have ids that are unique
-const learningItems = [...chapter6Data, ...chapter7Data].map(chapter => {
+const learningItems = [...chapter6Data, ...chapter7Data, ...englishData].map(chapter => {
   if (!chapter.items) {
     alert(`Catastrophic error in chapter-data.js: chapter ${chapter.id} lacks an items list`);
     throw new Error();
@@ -32,9 +33,18 @@ const learningItems = [...chapter6Data, ...chapter7Data].map(chapter => {
   })
 });
 
+const categories = [...englishCategories]
+
+function getCategoryData(categoryId) {
+  return englishData.filter(chapter => !chapter.hidden && chapter.categoryId === categoryId)
+}
+
 export {
   chapter6Data,
-  chapter7Data
+  chapter7Data,
+  englishData,
+  categories,
+  getCategoryData
 }
 
 // TODO: add automaticResponses id validation too

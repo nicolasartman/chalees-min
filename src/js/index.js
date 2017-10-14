@@ -17,6 +17,7 @@ import HomePage from './home-page.js';
 import Application from './application.js';
 import Header from './header.js';
 import Footer from './footer.js';
+import Category from './category.js';
 
 import '../scss/styles.scss';
 
@@ -26,6 +27,7 @@ ReactDOM.render((
       <IndexRoute components={{children: HomePage, footer: () => null}} />
       <Route path="chapter/:id" components={{children: Chapter, header: Header}} />
       <Route path="contact" components={{children: Contact, header: Header}} />
+      <Route path="english/:categoryId" components={{children: Category, header: Header}} />
       <Redirect from="*" to="/" />
     </Route>
   </Router>

@@ -7,12 +7,12 @@ import VideoInstruction from './video-instruction.js';
 import LearningItem from './learning-item.js';
 import HomePage from './home-page.js';
 import Header from './header.js';
-import {chapter6Data, chapter7Data} from './chapter-data';
+import {chapter6Data, chapter7Data, englishData} from './chapter-data';
 import database from './database.js';
 import {authorize} from './auth.js';
 import Helmet from 'react-helmet';
 
-const chapters = [...chapter6Data, ...chapter7Data];
+const chapters = [...chapter6Data, ...chapter7Data, ...englishData];
 
 const Chapter = React.createClass({
   getInitialState: () => ({
@@ -85,9 +85,9 @@ const Chapter = React.createClass({
     this.databaseReferences.map(subscription => subscription.off());
   },
   render() {
-    const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId);
+    const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId) || {};
     const isChapterComplete =
-      ((currentChapter && currentChapter.items) || []).filter((item) => (
+      (currentChapter.items || []).filter((item) => (
         item.kind.endsWith("Response") && !item.locked
       )).length === Object.keys(this.state.learningItemResponses).length;
 
@@ -95,9 +95,9 @@ const Chapter = React.createClass({
       <div>
         <main id="main" className="container chapter">
           <Helmet>
-            <meta name="description" content={currentChapter ? currentChapter.description : ''} />
+            <meta name="description" content={currentChapter.description} />
             <title>
-              {currentChapter
+              {currentChapter.title
                 ? currentChapter.title + ' - Chalees Min School'
                 : 'Chalees Min School'
               }
@@ -106,12 +106,18 @@ const Chapter = React.createClass({
           <div className="pure-g">
             <div className="pure-u-1">
               <h2 className="chapter-title">
-                <strong>Chapter {currentChapter && currentChapter.id}</strong> &ndash; {currentChapter && currentChapter.title}
+              {currentChapter.caption ?
+                <span>{currentChapter.caption}</span>
+                :
+                <span>
+                  <strong>Chapter {currentChapter.id}</strong> &ndash; {currentChapter.title}
+                </span>
+              }
               </h2>
               {/* The transitionName below is totally wrong, but it's not worth fixing right now
                 because we're doing a full rewrite */}
               <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                {((currentChapter && currentChapter.items) || []).map((item, index) => (
+                {(currentChapter.items || []).map((item, index) => (
                   <LearningItem
                     className={index === 0 && 'first-item'}
                     key={index}

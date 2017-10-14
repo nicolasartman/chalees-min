@@ -1,20 +1,32 @@
 .fade-switch-enter {
-    opacity: 0.01;
+  opacity: 0.01;
+  transform: translateY(20px);
 }
+
 .fade-switch-enter.fade-switch-enter-active {
-    opacity: 1.0;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);;
 }
+
 .fade-switch-leave {
-    /* Completely hide the button while it's being animated and before it's removed from the DOM. 
-    visibility: hidden;
-    height: 0px;
-    width: 0px;
-    */
-    /* Starting opacity */
-    opacity: 1.0;
+  transform: translateY(0px);
+  opacity: 1;
 }
+
 .fade-switch-leave.fade-switch-leave-active {
-    /* Ending opacity: 
-    Trigger opacity change so the "transitionend" event will fire, causing React to remove from the DOM. */
-    opacity: 0;
+  opacity: 0.01;
+  transform: translateY(20px);
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);;
+}
+
+.fade-switch-appear {
+  transform: translateY(20px);
+  opacity: 0.01;
+}
+
+.fade-switch-appear.fade-switch-appear-active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);;
 }

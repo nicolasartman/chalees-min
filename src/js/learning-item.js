@@ -12,6 +12,7 @@ import VideoInstruction from './video-instruction.js';
 import TextResponse from './text-response.js';
 import ImageResponse from './image-response.js';
 import ImageContent from './image-content.js';
+import ImageSelect from './image-select.js';
 import HackFeedback from './hack-feedback.js';
 import lockIcon from '../images/icons/lock-icon.svg';
 import lockIconInverse from '../images/icons/lock-icon-inverse.svg';
@@ -21,7 +22,8 @@ const kinds = {
   'video': VideoInstruction,
   'textResponse': TextResponse,
   'imageResponse': ImageResponse,
-  'image': ImageContent
+  'image': ImageContent,
+  'imageSelect': ImageSelect
 };
 
 const LearningItem = React.createClass({
