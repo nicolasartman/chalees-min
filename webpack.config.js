@@ -50,9 +50,9 @@ module.exports = {
         'style!css?sourceMap!postcss!sass?sourceMap',
       include: scssSourcePath
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif|svg|mp3|mpeg)$/,
       loaders: ['url?'+JSON.stringify(fileLoaderConfig)]
-      
+
       // Image optimization: seems to not really save any data right now, might be worth adding back
       // in later
       // loaders: isProduction ? ['url?'+JSON.stringify(fileLoaderConfig), 'image-webpack'] : ['url'],

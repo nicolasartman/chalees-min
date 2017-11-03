@@ -1,0 +1,122 @@
+.image-select {
+  .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    & > div {
+      text-align: center;
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.95);
+      border-radius: 5px;
+      color: white;
+      max-width: 70%;
+    }
+  }
+
+  .word-ctr {
+    height: 64px;
+    padding: 1px;
+  }
+
+  .word {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .word-show {
+    animation: "pop-down" 0.4s ease-in-out;
+  }
+
+  @keyframes "pop-down" {
+    0% { margin-top: -20px; opacity: 0; }
+    100% { margin-top: 20px; opacity: 1; }
+  }
+
+  .image-strip {
+    overflow: hidden;
+  }
+
+  .image {
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    &:before,  &:after {
+      width: 3.5rem;
+      position: absolute;
+      transition: all ease-in 0.2s;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      margin-top: 20px;
+      transform: scale(0.6);
+      transform-origin: left top;
+    }
+
+    &:before {
+      content: url('https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/icons/correct.png');
+    }
+
+    &:after {
+      content: url('https://s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/icons/incorrect.png');
+    }
+
+    img {
+      border: 2px solid hsl(0, 0, 70%);
+      padding: 0.5rem;
+      margin: 0 auto;
+      max-width: 99%;
+    }
+  }
+
+  .image-approve, .image-error {
+    background-color: lighten($chalees-purple, 50%);
+    border-color: $chalees-purple;
+  }
+
+  .image-approve:before, .image-error:after {
+    animation: pop-up-fade 0.5s ease-in-out;
+  }
+
+  .image-error img {
+    animation: nod-left-right 0.5s ease-in-out;
+  }
+
+  @keyframes pop-up-fade {
+    0% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+    25%, 75% {
+      margin-top: 0;
+      opacity: 1;
+    }
+    100% {
+      margin-top: -20px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes nod-left-right {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 60% {
+      transform: translateX(-10px);
+    }
+    40%, 80% {
+      transform: translateX(10px);
+    }
+  }
+}
