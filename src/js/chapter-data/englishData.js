@@ -1,5 +1,4 @@
 const englishData = [{
-  // causes it to not show up on the homepage
   id: 'eng-1',
   thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
   title: 'Maggie',
