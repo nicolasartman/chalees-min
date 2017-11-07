@@ -29,6 +29,9 @@ const grades = [{
   data: englishData
 }]
 
+// Toggle to show/hide the live class button
+const showLiveClassButton = false;
+
 const HomePage = React.createClass({
   getInitialState: () => ({}),
 
@@ -41,12 +44,14 @@ const HomePage = React.createClass({
     return (
       <div className="homepage">
         <div className="homepage-background-hack" />
-        {/* Wrapping this in main-nav is a dirty hack, but we're rewriting everything so this is a special exception hack */}
+        {/* Wrapping this in main-nav is a dirty hack, but we're rewriting everything
+            so this is a special exception hack
+        */}
         <nav className="home-menu pure-menu pure-menu-horizontal main-nav home-nav">
           <UserMenu />
         </nav>
 
-        <div className={`homepage-banner-area ${currentGrade ? 'open' : ''}`}>
+        <div className={`homepage-banner-area ${currentGrade ? 'open' : ''} ${showLiveClassButton ? "liveClassButtonIsVisible" : ""}`}>
           <div className="homepage-title-primary">
             <img src={logo} className="homepage-logo" />
           </div>
@@ -63,12 +68,10 @@ const HomePage = React.createClass({
               />
             ))}
           </div>
-          {/*
-          <a target="_blank" href="https://meet.google.com/udp-uepj-vru" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
+          {showLiveClassButton && <a target="_blank" href="https://meet.google.com/udp-uepj-vru" className={"live-banner " + (this.state.grade6 || this.state.grade7 ? 'live-banner-invisible' : '')}>
             <img src={cameraIcon} style={{position: 'relative', top: 3, marginRight: 7}}/>
             Live Class Today at 12PM!
-          </a>
-          */}
+          </a>}
         </div>
 
         <div className={`homepage-grade-section ${currentGrade ? 'homepage-grade-section-visible' : 'homepage-grade-section-invisible'}`}>

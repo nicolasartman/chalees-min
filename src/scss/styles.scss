@@ -395,6 +395,12 @@ $page-transition-duration: 1s;
   transition: height 0.5s ease;
   margin-top: 50px;
 
+  &.liveClassButtonIsVisible {
+    @include media-phone {
+      margin-top: 10px;
+    }
+  }
+
   &.open {
     height: 200px;
 
