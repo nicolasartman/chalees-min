@@ -1,216 +1,199 @@
 const englishData = [{
-  id: 'eng-1',
-  thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
-  title: 'Maggie',
-  caption: 'Learn English with Maggie',
+  id: 'maggi',
+  thumbnailImagePath: '/chapter-thumbnails/english/maggi.jpeg',
+  title: 'Maggi',
+  caption: 'Learn English with Maggi',
   categoryId: 'food',
-  description: 'Learn English with Maggie',
+  description: 'Learn English with Maggi',
   items: [{
-    id: 'picture-select-ex-1',
-    kind: 'imageSelect',
+    id: 'two-minutes-maggi-video',
+    kind: 'video',
     time: 4,
-    title: 'Maggie ex. 1',
+    title: 'Maggi Noodles Video (in Hindi)',
+    instructions: dedent`
+    The packet of Maggi says: _2 minutes to great taste._ 
+
+    Let us learn about these words.`,
+    videoId: '9yWggksD6v4',
+  }, {
+    id: 'match-picture-game',
+    kind: 'imageSelect',
+    time: 2,
+    title: 'Game: Match Word With Picture',
     questions: [{
-      word: 'Maggie',
+      word: 'Great',
       images: [{
         id: 1,
-        path: '//i.imgur.com/300Yir1.jpg',
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/sad-face.jpeg',
       }, {
         id: 2,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/pizza.jpeg'
       }, {
         id: 3,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/great.jpeg'
       }, {
         id: 4,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/low-battery.jpeg'
+      }],
+      answer: 3
+    }, {
+      word: 'Tasty',
+      images: [{
+        id: 1,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/sad-face.jpeg',
+      }, {
+        id: 2,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/pizza.jpeg'
+      }, {
+        id: 3,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/great.jpeg'
+      }, {
+        id: 4,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/low-battery.jpeg'
       }],
       answer: 2
     }, {
-      word: 'Saggie',
+      word: 'Not Great',
       images: [{
         id: 1,
-        path: '//i.imgur.com/300Yir1.jpg',
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/sad-face.jpeg',
       }, {
         id: 2,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/pizza.jpeg'
       }, {
         id: 3,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/great.jpeg'
       }, {
         id: 4,
-        path: '//i.imgur.com/300Yir1.jpg'
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/low-battery.jpeg'
       }],
       answer: 4
     }]
   },{
-    id: 'multiple-choice-example-1',
+    id: 'tasty-timed-mcq',
     kind: 'multipleChoiceResponse',
-    time: 2,
-    isTimed: 12,
-    title: 'Multiple Choice Example 1',
+    time: 1,
+    isTimed: 15,
+    maxSelected: 1,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Tasty Quiz',
     instructions: dedent`
-      Select all that apply.
-
-      Select Option 1 and 2, Option 3 and 4, or Option 5, and save to see an automatic response.
+      Which sound is connected with the word __Tasty__?
     `,
     choices: [
       {
         id: 'opt1',
-        text: 'Option 1'
+        text: 'ouch'
       },
       {
         id: 'opt2',
-        text: 'Option 2'
+        text: 'mmm'
       },
       {
         id: 'opt3',
-        text: 'Option 3'
+        text: 'splash'
       },
       {
         id: 'opt4',
-        text: 'Option 4'
-      },
-      {
-        id: 'opt5',
-        text: 'Option 5'
+        text: 'sigh'
       }
     ],
     automaticResponses: [
       {
-        answerSet: ['opt1', 'opt2'],
-        response: 'This is an automatic response to demonstrate selecting multiple options.'
+        answerSet: ['opt1',],
+        response: '__Wrong__. We say ouch when we have some pain.'
       },
       {
-        answerSet: ['opt3', 'opt4'],
-        response: 'This is an automatic response to demonstrate selecting multiple options.'
+        answerSet: ['opt2'],
+        response: '__Correct__. We say mmm when we see something tasty.'
       },
       {
-        answerSet: ['opt5'],
-        response: 'This is an automatic response to demonstrate selecting one option.  **bold** ![image](https://i.ytimg.com/vi/6sta6Gkpgcw/maxresdefault.jpg)'
+        answerSet: ['opt3'],
+        response: '__Incorrect__. Splash is the sound made when we jump in water.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Wrong__. When we are sad or tired we sometimes exhale a long breath. That is called a sigh.'
       }
     ]
   }, {
-    id: 'multiple-choice-example-2',
-    kind: 'multipleChoiceResponse',
-    time: 2,
-    title: 'Multiple Choice Example 2',
-    instructions: 'Select only one',
-    maxSelected: 1,
-    choices: [
-      {
-        id: 'opt1',
-        text: 'Option 1'
-      },
-      {
-        id: 'opt2',
-        text: 'Option 2'
-      },
-      {
-        id: 'opt3',
-        text: 'Option 3'
-      },
-      {
-        id: 'opt4',
-        text: 'Option 4'
-      },
-      {
-        id: 'opt5',
-        text: 'Option 5'
-      }
-    ]
-  }, {
-    id: 'multiple-choice-example-3',
-    kind: 'multipleChoiceResponse',
+    id: 'not-great-short-answer',
+    kind: 'textResponse',
     time: 3,
-    title: 'Multiple Choice Example 3',
-    instructions: 'Select up to two',
-    maxSelected: 2,
-    choices: [
-      {
-        id: 'opt1',
-        text: 'Option 1'
-      },
-      {
-        id: 'opt2',
-        text: 'Option 2'
-      },
-      {
-        id: 'opt3',
-        text: 'Option 3'
-      },
-      {
-        id: 'opt4',
-        text: 'Option 4'
-      },
-      {
-        id: 'opt5',
-        text: 'Option 5'
-      }
-    ],
+    short: true,
+    title: 'Teach A Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      What example would you give to explain the words __not great__ to a friend?
+      
+      Write your answer in the box below.`,
     hacks: {
-      // this can be beforeBody or afterBody - the functionality is identical
-      // except beforebody configurations can't use show: 'locked' (if set to that
-      // they'll simply act like show: 'ifResponse')
       afterBody: {
-
-        preface: 'this is the text that prefaces the fake peer data',
-
-        // can be 'ifResponse', 'locked', or left out to show all the time
-        //
-        // 'ifResponse' shows it only if there is a saved response for that item
-        // (it does not show while they're typing/selecting but before they've ever
-        // hit save for that item).
-        //
-        // 'locked' shows a preview of the content and displays a locked message over it
-        // until a response has been saved. after that, the response appears in full.
-        //
-        // setting the value to null or false or leaving it out causes the hack feedback
-        // to be shown all the time.
-        show: 'ifResponse',
-
-        // you can have either of the following present:
-
-        // An image to display as the feedback that will be resized to fit the space available
-        feedbackImagePath: '/test.jpg',
-
-        // a list of fake peer responses, in the same format as below
+        preface: 'Here are some examples from other students',
+        show: 'locked',
         fakePeerResponses: [
           {
             studentName: 'Sid',
             imagePath: '/fake-responses/sid.png',
-            response: 'Where does TV come from?'
+            response: 'Dropping a catch in cricket is not great.'
           },
           {
             studentName: 'Prabsimar',
             imagePath: '/fake-responses/prabsimar.png',
-            response: 'Where does cheese come from?'
+            response: 'It is not great to put your finger in your nose.'
           },
           {
             studentName: 'Koushiki',
             imagePath: '/fake-responses/koushiki.png',
-            response: 'Where do books come from?'
+            response: 'When people ask, how are you feeling? Sometimes you can say, not great.'
           }
-        ],
-
+        ]
       }
     }
   }, {
-    locked: true,
-    id: 'adorable-kittens',
-    kind: 'video',
-    time: 4,
-    title: 'Adorable Kittens!',
-    instructions: 'Watch these kittens be insanely cute!',
-    videoId: 'OtRRUEs3o0c',
-    startTime: 8
-  }]
+    id: 'meaning-of-tasteless',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'सही जवाब चुने',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Tasteless शब्द का क्या मतलब है?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'स्वादिष्ट चीज़ '
+      },
+      {
+        id: 'opt2',
+        text: 'बेस्वाद '
+      },
+      {
+        id: 'opt3',
+        text: 'bland'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Wrong__. Tasteless माने बेस्वाद'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. Tasteless माने बेस्वाद'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Bland is another word for tasteless.'
+      }
+    ]
+  },]
 }]
 
 export const categories = [{
   id: 'food',
   title: 'Food',
-  thumbnailImagePath: '/chapter-thumbnails/chapter-1.jpg',
+  thumbnailImagePath: '/chapter-thumbnails/english/food.jpeg',
   belongsTo: 'english'
 }]
 
