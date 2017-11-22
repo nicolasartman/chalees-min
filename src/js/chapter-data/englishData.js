@@ -444,13 +444,320 @@ const englishData = [{
       }
     ]
   },]
-}]
+}, {
+  id: 'independence-day-newspaper',
+  thumbnailImagePath: '/chapter-thumbnails/english/independence-day-news.jpeg',
+  title: 'Independence Day News',
+  caption: 'Learn English With Newspapers',
+  categoryId: 'newspapers',
+  description: 'Learn English With Newspapers',
+  items: [{
+    id: 'independence-day-video',
+    kind: 'video',
+    time: 7,
+    title: 'When India Got Its Independence',
+    instructions: dedent`
+    In this video we will read the headline printed in a newspaper on August 15th, 1947.
+
+    Let us watch and learn new English words.`,
+    videoId: 'GzxadEamkAQ',
+  }, {
+    id: 'independence-match-picture-game',
+    kind: 'imageSelect',
+    time: 1,
+    title: 'Game: Match Word With Picture',
+    questions: [{
+      word: 'Effort',
+      images: [{
+        id: 1,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/freedom-of-speech.jpeg',
+      }, {
+        id: 2,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/effort-mountain-climbing.jpeg'
+      }, {
+        id: 3,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/people.jpeg'
+      }, {
+        id: 4,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/birthday-cake.jpeg'
+      }],
+      answer: 2
+    }, {
+      word: 'Freedom Of Speech',
+      images: [{
+        id: 1,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/freedom-of-speech.jpeg',
+      }, {
+        id: 2,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/effort-mountain-climbing.jpeg'
+      }, {
+        id: 3,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/people.jpeg'
+      }, {
+        id: 4,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/birthday-cake.jpeg'
+      }],
+      answer: 1
+    }, {
+      word: 'People',
+      images: [{
+        id: 1,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/freedom-of-speech.jpeg',
+      }, {
+        id: 2,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/effort-mountain-climbing.jpeg'
+      }, {
+        id: 3,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/people.jpeg'
+      }, {
+        id: 4,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/birthday-cake.jpeg'
+      }],
+      answer: 3
+    }, {
+      word: 'Birthday',
+      images: [{
+        id: 1,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/freedom-of-speech.jpeg',
+      }, {
+        id: 2,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/effort-mountain-climbing.jpeg'
+      }, {
+        id: 3,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/people.jpeg'
+      }, {
+        id: 4,
+        path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/english/birthday-cake.jpeg'
+      }],
+      answer: 4
+    }]
+  }, {
+    id: 'call-for-timed-mcq',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    isTimed: 20,
+    maxSelected: 1,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Fill In The Blank',
+    instructions: dedent`
+      They ________ his resignation.
+    `,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'calls for'
+      },
+      {
+        id: 'opt2',
+        text: 'freedom'
+      },
+      {
+        id: 'opt3',
+        text: 'call for'
+      },
+      {
+        id: 'opt4',
+        text: 'effort'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Incorrect__. Correct answer would be: They __call for__ his resignation. They means more than one person. Since we are using _they_, the correct verb would be _call for_. If one person was calling for something, we would have said: She __calls for__ his resignation.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Wrong__. Resignation means to resign or leave a post at the office (इस्तीफा देना). It does not make any sense to say: They freedom his resignation.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. They call for his resignation is correct.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Wrong__. Resignation means to resign or leave a post at the office (इस्तीफा देना). It does not make any sense to say: They effort his resignation.'
+      }
+    ]
+  }, {
+    id: 'mr-ms-short-answer',
+    kind: 'textResponse',
+    time: 3,
+    short: true,
+    title: 'Teach A Friend',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      How would you explain the difference between Mr. and Ms. to a friend?
+      
+      Write your answer in the box below.`,
+    hacks: {
+      afterBody: {
+        preface: 'Here are some answers from other students',
+        show: 'locked',
+        fakePeerResponses: [
+          {
+            studentName: 'Sid',
+            imagePath: '/fake-responses/sid.png',
+            response: 'Mr. is short for Mister. And Ms. is short for Miss. We use Mr. in front of the name of a male, and we use Ms. in front of the name of a female.'
+          },
+          {
+            studentName: 'Prabsimar',
+            imagePath: '/fake-responses/prabsimar.png',
+            response: 'Mr. Jawaharlal Nehru is right because Nehru was male. Ms. Indira Gandhi is right because Indira Gandhi was female.'
+          }
+        ]
+      }
+    }
+  }, {
+    id: 'apostrophe-mcq',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    maxSelected: 1,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Fill In The Blank',
+    instructions: dedent`
+      She always carries _______ of her family.
+    `,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'picture\'s'
+      },
+      {
+        id: 'opt2',
+        text: 'pictures'
+      },
+      {
+        id: 'opt3',
+        text: 'pictures\''
+      },
+      {
+        id: 'opt4',
+        text: 'picture'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Wrong__. Picture\'s means पिक्चर का, के, की. In this sentence we are not referring to anything related with the picture. Picture\'s would be used correctly if we were talking about a picture\'s quality (पिक्चर की गुणवत्ता).'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Correct__. She always carries pictures of her family is correct.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Incorrect__. Pictures\' means बहुत सारी पिक्चरो का, के, की. In this sentence we are not referring to anything related with these pictures. Pictures\' would be used correctly if we were talking about pictures\' quality (पिक्चरो की गुणवत्ता).'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Wrong__. Picture would be correct if used in this way: She always carries __a picture__ of her family.'
+      }
+    ]
+  }, {
+    id: 'computer-timed-mcq',
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    isTimed: 30,
+    maxSelected: 1,
+    presenterImagePath: '/instructors/kunal2.jpg',
+    title: 'Fill In The Blank',
+    instructions: dedent`
+      My ______ scooter is not working well.
+    `,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'brother'
+      },
+      {
+        id: 'opt2',
+        text: 'brothers'
+      },
+      {
+        id: 'opt3',
+        text: 'brother\'s'
+      },
+      {
+        id: 'opt4',
+        text: 'brothers\''
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Wrong__. Since the scooter belongs to my brother (मेरे भाई का स्कूटर) we need an apostrophe. The correct answer is brother\'s.'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Incorrect__. The scooter belongs to my brother (मेरे भाई का स्कूटर). Thus we need an apostrophe. The correct answer is brother\'s.'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Correct__. Since the scooter belongs to my brother (मेरे भाई का स्कूटर), brother\'s is correct.'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Wrong__. Brothers\' means that the scooter belongs to not one, but two or more brothers (भाइयों के स्कूटर).'
+      }
+    ]
+  }, {
+    id: 'meaning-of-effort' ,
+    kind: 'multipleChoiceResponse',
+    time: 1,
+    title: 'सही जवाब चुने',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: dedent`
+      Effort शब्द का हिंदी में क्या मतलब है?`,
+    maxSelected: 1,
+    choices: [
+      {
+        id: 'opt1',
+        text: 'प्रयास'
+      },
+      {
+        id: 'opt2',
+        text: 'लोग'
+      },
+      {
+        id: 'opt3',
+        text: 'आज़ादी'
+      },
+      {
+        id: 'opt4',
+        text: 'श्रम'
+      }
+    ],
+    automaticResponses: [
+      {
+        answerSet: ['opt1',],
+        response: '__Correct__. Effort माने प्रयास'
+      },
+      {
+        answerSet: ['opt2'],
+        response: '__Incorrect__. Effort का मतलब है प्रयास'
+      },
+      {
+        answerSet: ['opt3'],
+        response: '__Wrong__. Effort माने प्रयास'
+      },
+      {
+        answerSet: ['opt4'],
+        response: '__Correct__. Effort माने प्रयास. और प्रयास का एक और शब्द है श्रम.'
+      }
+    ]
+  }, ]
+},]
 
 export const categories = [{
+  id: 'newspapers',
+  title: 'Newspapers',
+  thumbnailImagePath: '/chapter-thumbnails/english/newspaper.jpeg',
+  belongsTo: 'english'
+}, {
   id: 'food',
   title: 'Food',
   thumbnailImagePath: '/chapter-thumbnails/english/food.jpeg',
   belongsTo: 'english'
-}]
+}, ]
 
 export default englishData
