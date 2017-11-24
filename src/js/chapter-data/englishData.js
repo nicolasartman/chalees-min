@@ -445,6 +445,23 @@ const englishData = [{
     ]
   },]
 }, {
+  id: 'cake',
+  thumbnailImagePath: '/chapter-thumbnails/english/cake.jpeg',
+  title: 'Cake',
+  caption: 'Learn English with Cake',
+  categoryId: 'food',
+  description: 'Learn English with Cake',
+  items: [{
+    id: 'coming-soon-1n',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg'
+  },]
+}, 
+{
   id: 'independence-day-newspaper',
   thumbnailImagePath: '/chapter-thumbnails/english/independence-day-news.jpeg',
   title: 'Independence Day News',
@@ -746,9 +763,125 @@ const englishData = [{
       }
     ]
   }, ]
-},]
+}, {
+  id: 'business-news',
+  thumbnailImagePath: '/chapter-thumbnails/english/business-news.jpeg',
+  title: 'Business News',
+  caption: 'Learn English with Business News',
+  categoryId: 'newspapers',
+  description: 'Learn English with Business News',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-2.jpeg'
+  },]
+}, {
+  id: 'weather-news',
+  thumbnailImagePath: '/chapter-thumbnails/english/weather-news.jpeg',
+  title: 'Weather News',
+  caption: 'Learn English with Weather News',
+  categoryId: 'newspapers',
+  description: 'Learn English with Weather News',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-3.jpeg'
+  },]
+}, {
+  id: 'television-coming-soon',
+  thumbnailImagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg',
+  title: 'Coming Soon',
+  caption: 'Learn English with Television',
+  categoryId: 'television',
+  description: 'Learn English with television',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg'
+  },]
+}, {
+  id: 'movies-coming-soon',
+  thumbnailImagePath: '/chapter-thumbnails/english/coming-soon-2.jpeg',
+  title: 'Coming Soon',
+  caption: 'Learn English with Movies',
+  categoryId: 'movies',
+  description: 'Learn English with Movies',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-2.jpeg'
+  },]
+}, {
+  id: 'cricket-coming-soon',
+  thumbnailImagePath: '/chapter-thumbnails/english/coming-soon-3.jpeg',
+  title: 'Coming Soon',
+  caption: 'Learn English with Cricket',
+  categoryId: 'cricket',
+  description: 'Learn English with Cricket',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-3.jpeg'
+  },]
+}, {
+  id: 'speeches-coming-soon',
+  thumbnailImagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg',
+  title: 'Coming Soon',
+  caption: 'Learn English with Speeches',
+  categoryId: 'speeches',
+  description: 'Learn English with Speeches',
+  items: [{
+    id: 'coming-soon',
+    time: 1,
+    kind: 'image',
+    title: 'Coming Soon',
+    presenterImagePath: '/instructors/kunal2.jpg',
+    instructions: '<br>',
+    imagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg'
+  },]
+}]
 
 export const categories = [{
+  id: 'speeches',
+  title: 'Speeches',
+  thumbnailImagePath: '/chapter-thumbnails/english/speeches.jpeg',
+  belongsTo: 'english'
+}, {
+  id: 'cricket',
+  title: 'Cricket',
+  thumbnailImagePath: '/chapter-thumbnails/english/cricket.jpeg',
+  belongsTo: 'english'
+}, {
+  id: 'movies',
+  title: 'Movies',
+  thumbnailImagePath: '/chapter-thumbnails/english/movies.jpeg',
+  belongsTo: 'english'
+}, {
+  id: 'television',
+  title: 'Television',
+  thumbnailImagePath: '/chapter-thumbnails/english/tv.jpeg',
+  belongsTo: 'english'
+}, {
   id: 'newspapers',
   title: 'Newspapers',
   thumbnailImagePath: '/chapter-thumbnails/english/newspaper.jpeg',
