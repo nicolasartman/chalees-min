@@ -75,10 +75,10 @@ setRoute maybeRoute model =
         Nothing ->
             ( { model | page = NotFound }, Cmd.none )
 
-        Just (Route.Home) ->
+        Just Route.Home ->
             ( { model | page = Home }, Cmd.none )
 
-        Just (Route.About) ->
+        Just Route.About ->
             ( { model | page = About }, Cmd.none )
 
         Just (Route.Section _) ->

@@ -5,8 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node development-server.js",
-    "build": "cross-env NODE_ENV=production webpack -p"
+    "start": "elm-app start",
+    "build": "elm-app build"
   },
   "author": "Chalees Min Team",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "babel-eslint": "^7.2.1",
     "chalk": "^1.1.3",
     "clean-webpack-plugin": "^0.1.8",
+    "create-elm-app": "^1.10.2",
     "cross-env": "^5.0.1",
     "css-loader": "^0.27.3",
     "dotenv": "^4.0.0",
