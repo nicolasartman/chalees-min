@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "elm-app start",
-    "build": "elm-app build"
+    "build": "elm-app build",
+    "generate-api-interface": "graphqelm https://api.graph.cool/simple/v1/cj1rh31pc8ykf0127fwssmw32 --base API"
   },
   "author": "Chalees Min Team",
   "license": "MIT",
@@ -15,29 +16,9 @@
   },
   "homepage": "https://github.com/nicolasartman/chalees-min#readme",
   "dependencies": {
-    "autoprefixer": "^6.3.6",
-    "babel-eslint": "^7.2.1",
-    "chalk": "^1.1.3",
-    "clean-webpack-plugin": "^0.1.8",
+    "babel-eslint": "^8.2.1",
     "create-elm-app": "^1.10.2",
-    "cross-env": "^5.0.1",
-    "css-loader": "^0.27.3",
-    "dotenv": "^4.0.0",
-    "elm": "^0.18.0",
-    "elm-hot-loader": "^0.5.4",
-    "elm-webpack-loader": "^4.3.0",
-    "eslint": "^3.18.0",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.16.0",
-    "lodash": "^4.11.1",
-    "node-sass": "^4.5.1",
-    "normalize.css": "^5.0.0",
-    "postcss-loader": "^1.3.3",
-    "react-dev-utils": "^0.5.2",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.0",
-    "webpack": "^2.3.2",
-    "webpack-dev-server": "^2.4.2"
+    "graphqelm": "^3.0.1"
   },
   "repository": "git@github.com:nicolasartman/chalees-min.git"
 }
