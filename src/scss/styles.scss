@@ -17,13 +17,16 @@ html {
   min-height: 100%;
   min-width: 320px;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   background-color: $body-background-color;
-  &, & .pure-g [class *= "pure-u"] {
+  &,
+  & .pure-g [class*="pure-u"] {
     font-family: helvetica;
   }
 }
@@ -47,7 +50,7 @@ body {
   }
 }
 
-@each $size, $margin in ('small': 1em, 'medium': 2em, 'large': 3em, 'huge': 4em) {
+@each $size, $margin in ("small": 1em, "medium": 2em, "large": 3em, "huge": 4em) {
   .row-gap-#{$size} {
     margin-top: $margin;
   }
@@ -63,7 +66,7 @@ div[class*="pure-u-"] {
 }
 
 hr {
-  color: #CCCCCC;
+  color: #cccccc;
   height: 1px;
   margin: 1.5em 0;
 }
@@ -78,7 +81,8 @@ $page-transition-duration: 1s;
 
 .page-enter {
   opacity: 0.01;
-  transition: opacity $page-transition-duration/2 $page-transition-easing-function, transform $page-transition-duration/2 $page-transition-easing-function;
+  transition: opacity $page-transition-duration/2 $page-transition-easing-function,
+    transform $page-transition-duration/2 $page-transition-easing-function;
   transform: translateY($page-transition-slide-distance);
 }
 
@@ -89,7 +93,8 @@ $page-transition-duration: 1s;
 
 .page-leave {
   opacity: 1;
-  transition: opacity $page-transition-duration/2 $page-transition-easing-function, transform $page-transition-duration/2 $page-transition-easing-function;
+  transition: opacity $page-transition-duration/2 $page-transition-easing-function,
+    transform $page-transition-duration/2 $page-transition-easing-function;
   transform: translateY(0px);
 }
 
@@ -155,7 +160,7 @@ $page-transition-duration: 1s;
   margin: 1em 0 1.5em 0;
 }
 .loading-overlay.fade-out-leave {
-  opacity: 1.0;
+  opacity: 1;
 }
 .loading-overlay.fade-out-leave.fade-out-leave-active {
   opacity: 0;
@@ -165,7 +170,6 @@ $page-transition-duration: 1s;
 // Scale everything down a bit on mobile
 @media (max-width: $max-width-sm) {
   .loading-overlay img {
-
   }
 }
 
@@ -176,7 +180,7 @@ $page-transition-duration: 1s;
 .header {
   background-color: white;
   border-bottom: 2px solid $chalees-red;
-  box-shadow: 0 2px 5px rgba(0,0,0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .main-nav {
@@ -199,10 +203,11 @@ $page-transition-duration: 1s;
 
     // TODO: try to achieve font weight 500
     font-weight: 500;
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: darken(white, 5%);
     }
-
   }
 
   .header-brand {
@@ -217,12 +222,10 @@ $page-transition-duration: 1s;
       margin-right: 5px;
       vertical-align: middle;
     }
-
-
   }
 
   & > .pure-menu-list > .pure-menu-item {
-    $border-color-hover: #BBB;
+    $border-color-hover: #bbb;
 
     border-width: 1px;
     border-style: solid;
@@ -234,24 +237,23 @@ $page-transition-duration: 1s;
   }
 
   .pure-menu-children {
-    $border-color: #BBB;
+    $border-color: #bbb;
     border: 1px solid $border-color;
     border-top-width: 2px;
-    box-shadow: 0 6px 12px rgba(0,0,0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 
     & .pure-menu-item {
       border-bottom: 1px solid lighten($border-color, 7%);
 
       &:last-child {
         border-bottom: none;
-      };
+      }
     }
 
     // Right align dropdown menu children since the user menu is pulled right
     left: inherit;
     right: -1px; // the top menu has a border, so account for that
   }
-
 
   // Use a larger header on desktop widths...
   @media (min-width: 48em) {
@@ -292,10 +294,13 @@ $page-transition-duration: 1s;
   bottom: 0;
   height: 67px;
   width: 100%;
-  span, span > a {
+  span,
+  span > a {
     display: inline-block;
   }
-  a, :hover, :active {
+  a,
+  :hover,
+  :active {
     background-color: transparent;
   }
 }
@@ -311,7 +316,7 @@ $page-transition-duration: 1s;
   height: 50px;
   line-height: 50px;
   text-align: center;
-  background-color: fade-out($chalees-purple, 0.30);
+  background-color: fade-out($chalees-purple, 0.3);
   color: white;
   transition: opacity 0.2s ease, height 0.5s ease, background-color 0.25s ease;
   opacity: 1;
@@ -330,7 +335,8 @@ $page-transition-duration: 1s;
     pointer-events: none;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     text-decoration: none;
   }
 }
@@ -342,6 +348,9 @@ $page-transition-duration: 1s;
   right: 0;
   left: 0;
   bottom: 0;
+  // prettier breaks the line below because it interprets the comma as a sign of a multi-argument
+  // function and adds a line break
+  // prettier-ignore
   background-image: url(https://chalees-min.imgix.net/homepage-v2.png?w=1000&fit=clip&auto=format,compress);
   background-size: cover;
 }
@@ -355,13 +364,14 @@ $page-transition-duration: 1s;
   .pure-menu-link:active,
   .pure-menu-link:focus,
   .pure-menu-children {
-    background-color: #DDDDDD; // similar to the picture sky color
+    background-color: #dddddd; // similar to the picture sky color
   }
 }
 
 .homepage-footer {
   background-color: transparent;
-  &, a {
+  &,
+  a {
     color: $body-background-color;
   }
 }
@@ -369,7 +379,7 @@ $page-transition-duration: 1s;
 // Awful, awful hack because this page is being rebuild from scratch soon
 .homepage-footer-open {
   &::before {
-    content: '';
+    content: "";
     height: 50vh;
     width: 100%;
     background-color: $body-background-color;
@@ -402,10 +412,10 @@ $page-transition-duration: 1s;
   }
 
   &.open {
-    height: 200px;
+    height: 240px;
 
     @include media-phone {
-      height: 260px;
+      height: 340px;
     }
   }
 }
@@ -506,7 +516,7 @@ $page-transition-duration: 1s;
   text-align: center;
   min-height: 2.5em;
   padding: 0.4em 0.5em;
-  color: #EEE;
+  color: #eee;
   background-color: rgba(0, 0, 0, 0.5);
 
   display: flex;
@@ -527,7 +537,6 @@ $page-transition-duration: 1s;
   text-align: center;
 }
 
-
 // =======================
 // = Chapter Page Styles =
 // =======================
@@ -547,7 +556,7 @@ $page-transition-duration: 1s;
   align-items: flex-start;
   margin-top: 3em;
   background: white;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0px 0px 12px 1px transparentize(black, 0.7);
   position: relative;
@@ -620,21 +629,19 @@ $page-transition-duration: 1s;
 
 .learning-item-header {
   display: flex;
-  align-items: center,
+  align-items: center;
 }
 
 .learning-item-time {
   margin-left: 1em;
   min-width: 4em;
   padding: 0.5em 0;
-  color: #EEE;
+  color: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $chalees-purple;
 }
-
-
 
 // Login gate that covers interactive widgets for signed-out users
 .login-gate-overlay {
@@ -649,21 +656,21 @@ $page-transition-duration: 1s;
     color: white;
     background-color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
-  };
+  }
 
   z-index: $login-gate-overlay-z-index;
 }
 
 // Locked hack feedback on a learning item
 .hack-feedback-container {
-  $section-background-color: #F7F7F7;
+  $section-background-color: #f7f7f7;
 
   .hack-feedback-preface {
     display: flex;
     align-items: flex-start;
   }
 
-  &.hack-feedback-before-body{
+  &.hack-feedback-before-body {
     .learning-item-section {
       padding: 0;
       padding-bottom: 1.5em;
@@ -676,7 +683,7 @@ $page-transition-duration: 1s;
   }
   &.hack-feedback-after-body {
     .hack-feedback {
-      border-top: 1px solid #CCC;
+      border-top: 1px solid #ccc;
       background-color: $section-background-color;
     }
   }
@@ -700,10 +707,12 @@ $page-transition-duration: 1s;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+        to bottom,
         rgba(255, 255, 255, 0.2) 0%,
         $section-background-color 80%,
-        $section-background-color 100%);
+        $section-background-color 100%
+      );
     }
   }
 
@@ -783,7 +792,7 @@ $page-transition-duration: 1s;
     }
 
     &[disabled] {
-      color: #AAA;
+      color: #aaa;
       border: 2px solid hsl(0, 0, 85%);
     }
   }
@@ -802,7 +811,6 @@ $page-transition-duration: 1s;
   }
 }
 
-
 // =========
 // = Forms =
 // =========
@@ -810,9 +818,6 @@ $page-transition-duration: 1s;
 .pure-input {
   border: 1px solid hsl(0, 0, 75%);
 }
-
-
-
 
 // ===========
 // = Utility =
@@ -867,11 +872,11 @@ $page-transition-duration: 1s;
 // Text
 
 .text-success {
-  color: #3F823E;
+  color: #3f823e;
 }
 
 .text-error {
-  color: #D95D00;
+  color: #d95d00;
 }
 
 // =================
@@ -888,12 +893,15 @@ $page-transition-duration: 1s;
     border: $border-width solid transparent;
   }
 
-  &, &:focus {
+  &,
+  &:focus {
     background-color: white;
     background-image: none;
   }
 
-  &:hover, &:active, &.active {
+  &:hover,
+  &:active,
+  &.active {
     color: white;
     background-color: $button-color;
   }
@@ -905,11 +913,13 @@ $page-transition-duration: 1s;
     color: hsl(0, 0, 20%);
     border: 2px solid $button-color;
 
-    &, &:focus {
+    &,
+    &:focus {
       background-color: white;
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: white;
       background-color: $button-color;
     }
@@ -931,7 +941,7 @@ $page-transition-duration: 1s;
   border: 1px solid #555;
   background: $body-background-color;
   overflow: auto;
-  -Webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   border-radius: 3px;
   outline: none;
   display: flex;
@@ -1061,7 +1071,6 @@ $page-transition-duration: 1s;
   padding-left: 0;
   padding-right: 0;
 }
-
 
 /* Flash text red */
 @keyframes "flash-red" {

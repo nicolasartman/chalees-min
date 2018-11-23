@@ -1,38 +1,40 @@
-import ReactDom from 'react-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import pify from 'pify';
-import ImageResponse from './image-response.js';
-import TextResponse from './text-response.js';
-import VideoInstruction from './video-instruction.js';
-import LearningItem from './learning-item.js';
-import HomePage from './home-page.js';
-import Header from './header.js';
-import {chapter6Data, chapter7Data, englishData} from './chapter-data';
-import database from './database.js';
-import {authorize} from './auth.js';
-import Helmet from 'react-helmet';
+import ReactDom from "react-dom";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import pify from "pify";
+import ImageResponse from "./image-response.js";
+import TextResponse from "./text-response.js";
+import VideoInstruction from "./video-instruction.js";
+import LearningItem from "./learning-item.js";
+import HomePage from "./home-page.js";
+import Header from "./header.js";
+import { chapter6Data, chapter7Data, englishData } from "./chapter-data";
+import grade7MathsData from "./chapter-data/grade7MathsData.js";
+import database from "./database.js";
+import { authorize } from "./auth.js";
+import Helmet from "react-helmet";
 
-const chapters = [...chapter6Data, ...chapter7Data, ...englishData];
+const chapters = [...chapter6Data, ...chapter7Data, ...englishData, ...grade7MathsData];
 
 const Chapter = React.createClass({
   getInitialState: () => ({
     chapterId: null,
     learningItemResponses: {},
-    learningItemSaveHandlers: {}
+    learningItemSaveHandlers: {},
   }),
-  componentDidMount: async function () {
+  componentDidMount: async function() {
     this.setState({
       chapterId: this.props.params.id,
     });
-    this.initializeSubscriptions(this.props.params.id)
+    this.initializeSubscriptions(this.props.params.id);
   },
   async initializeSubscriptions(chapterId) {
     this.databaseReferences = [];
-    const currentChapter = chapters.find(chapter => chapter.id === chapterId);
+    const currentChapter = chapters.find((chapter) => chapter.id === chapterId);
     const user = await authorize();
     if (user) {
       this.databaseReferences = currentChapter.items.map((learningItem) => {
-        const ref = database.child('responses')
+        const ref = database
+          .child("responses")
           .child(`${user.uid}|${currentChapter.id}|${learningItem.id}`);
 
         const updateLearningItemState = (learningItemId, newLearningItemResponse) => {
@@ -43,18 +45,22 @@ const Chapter = React.createClass({
         };
 
         // Update the local data whenever it updates in the db
-        ref.on('value', (snapshot) => {
-          log('=======Firebase state update', snapshot.val());
+        ref.on("value", (snapshot) => {
+          log("=======Firebase state update", snapshot.val());
           const updatedLearningItem = snapshot.val();
-          updateLearningItemState(updatedLearningItem.itemKey, updatedLearningItem.content)
+          updateLearningItemState(updatedLearningItem.itemKey, updatedLearningItem.content);
         });
 
         // Create simple save handlers for the items with pre-filled item-specific data
         const saveHandler = (studentResponse) => {
           // Don't allow saving null, undefined, empty string, or empty arrays
-          if (studentResponse === undefined || studentResponse === null || studentResponse === '' ||
-            (Array.isArray(studentResponse) && studentResponse.length === 0)) {
-            return Promise.reject({code: 'NO_RESPONSE_GIVEN'});
+          if (
+            studentResponse === undefined ||
+            studentResponse === null ||
+            studentResponse === "" ||
+            (Array.isArray(studentResponse) && studentResponse.length === 0)
+          ) {
+            return Promise.reject({ code: "NO_RESPONSE_GIVEN" });
           }
 
           const payload = {
@@ -62,8 +68,8 @@ const Chapter = React.createClass({
             itemKey: learningItem.id,
             setKey: String(currentChapter.id),
             kind: learningItem.kind,
-            content: studentResponse
-          }
+            content: studentResponse,
+          };
           const resultPromise = ref.set(payload);
 
           // Firebase doesn't emit events for the client's own set operations, so we have
@@ -71,7 +77,7 @@ const Chapter = React.createClass({
           updateLearningItemState(learningItem.id, studentResponse);
 
           return resultPromise;
-        }
+        };
         this.setState((previousState) => {
           const newState = previousState;
           newState.learningItemSaveHandlers[learningItem.id] = saveHandler;
@@ -82,14 +88,13 @@ const Chapter = React.createClass({
     }
   },
   componentWillUnmount() {
-    this.databaseReferences.map(subscription => subscription.off());
+    this.databaseReferences.map((subscription) => subscription.off());
   },
   render() {
-    const currentChapter = chapters.find(chapter => chapter.id === this.state.chapterId) || {};
+    const currentChapter = chapters.find((chapter) => chapter.id === this.state.chapterId) || {};
     const isChapterComplete =
-      (currentChapter.items || []).filter((item) => (
-        item.kind.endsWith("Response") && !item.locked
-      )).length === Object.keys(this.state.learningItemResponses).length;
+      (currentChapter.items || []).filter((item) => item.kind.endsWith("Response") && !item.locked)
+        .length === Object.keys(this.state.learningItemResponses).length;
 
     return (
       <div>
@@ -98,31 +103,35 @@ const Chapter = React.createClass({
             <meta name="description" content={currentChapter.description} />
             <title>
               {currentChapter.title
-                ? currentChapter.title + ' - Chalees Min School'
-                : 'Chalees Min School'
-              }
+                ? currentChapter.title + " - Chalees Min School"
+                : "Chalees Min School"}
             </title>
           </Helmet>
           <div className="pure-g">
             <div className="pure-u-1">
               <h2 className="chapter-title">
-              {currentChapter.caption ?
-                <span>{currentChapter.caption}</span>
-                :
-                <span>
-                  <strong>Chapter {currentChapter.id}</strong> &ndash; {currentChapter.title}
-                </span>
-              }
+                {currentChapter.caption ? (
+                  <span>{currentChapter.caption}</span>
+                ) : (
+                  <span>
+                    <strong>Chapter {currentChapter.id}</strong> &ndash; {currentChapter.title}
+                  </span>
+                )}
               </h2>
               {/* The transitionName below is totally wrong, but it's not worth fixing right now
                 because we're doing a full rewrite */}
-              <ReactCSSTransitionGroup component="div" transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+              <ReactCSSTransitionGroup
+                component="div"
+                transitionName="page"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+              >
                 {(currentChapter.items || []).map((item, index) => (
                   <LearningItem
-                    className={index === 0 && 'first-item'}
+                    className={index === 0 && "first-item"}
                     key={index}
                     response={this.state.learningItemResponses[item.id]}
-                    handleSave={this.state.learningItemSaveHandlers[item.id] || (t => {})}
+                    handleSave={this.state.learningItemSaveHandlers[item.id] || ((t) => {})}
                     isChapterComplete={isChapterComplete}
                     {...item}
                   />
@@ -132,8 +141,8 @@ const Chapter = React.createClass({
           </div>
         </main>
       </div>
-    )
-  }
+    );
+  },
 });
 
 export default Chapter;
