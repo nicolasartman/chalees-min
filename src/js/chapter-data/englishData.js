@@ -862,6 +862,16 @@ const englishData = [{
 }]
 
 export const categories = [{
+  id: 'food',
+  title: 'Food',
+  thumbnailImagePath: '/chapter-thumbnails/english/food.jpeg',
+  belongsTo: 'english'
+}, {
+  id: 'newspapers',
+  title: 'Newspapers',
+  thumbnailImagePath: '/chapter-thumbnails/english/newspaper.jpeg',
+  belongsTo: 'english'
+}, {
   id: 'speeches',
   title: 'Speeches',
   thumbnailImagePath: '/chapter-thumbnails/english/speeches.jpeg',
@@ -881,16 +891,6 @@ export const categories = [{
   title: 'Television',
   thumbnailImagePath: '/chapter-thumbnails/english/tv.jpeg',
   belongsTo: 'english'
-}, {
-  id: 'newspapers',
-  title: 'Newspapers',
-  thumbnailImagePath: '/chapter-thumbnails/english/newspaper.jpeg',
-  belongsTo: 'english'
-}, {
-  id: 'food',
-  title: 'Food',
-  thumbnailImagePath: '/chapter-thumbnails/english/food.jpeg',
-  belongsTo: 'english'
-}, ]
+},  ]
 
 export default englishData
