@@ -1,5 +1,200 @@
 export default [
   {
+    id: "  4",
+    thumbnailImagePath: "/chapter-thumbnails/maths/simple-questions-thumbnail2.jpeg",
+    title: "Simple Equations",
+    caption: "Chapter 4 — Simple Equations",
+    description: "Chapter 4 — Simple Equations",
+    items: [
+        {
+            id: 'simple-equation-relevance',
+            kind: 'video',
+            time: 5,
+            title: 'Where will we use simple equations in real life?',
+            instructions: dedent`
+            Simple equations are used to make the apps that run on our phones.
+
+            Let us listen to Shivani, who is a designer of mobile phone apps, as she explains how she uses simple equations in her life.`,
+            videoId: 'Q0HFRCaF7N0',
+        },  
+        {
+            id: 'simple-equations-picture-game',
+            kind: 'imageSelect',
+            time: 1,
+            title: 'Game: Match words with picture',
+            questions: [{
+              word: 'Simple Equations',
+              images: [{
+                id: 1,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/bell.jpeg',
+              }, {
+                id: 2,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/balance.jpeg'
+              }, {
+                id: 3,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/variable.jpeg'
+              }, {
+                id: 4,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/pi.jpeg'
+              }],
+              answer: 2
+            }, {
+              word: 'Variable',
+              images: [{
+                id: 1,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/bell.jpeg',
+              }, {
+                id: 2,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/balance.jpeg'
+              }, {
+                id: 3,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/variable.jpeg'
+              }, {
+                id: 4,
+                path: '//s3-ap-southeast-1.amazonaws.com/chalees-min-images/learning-items/maths/pi.jpeg'
+              }],
+              answer: 3
+            }, ]
+          },
+          {
+            id: "simple-equations-in-real-life",
+            kind: "textResponse",
+            time: 2,
+            short: true,
+            title: "Tweet About Simple Equations",
+            presenterImagePath: "/instructors/kunal2.jpg",
+            instructions: dedent`
+            It is time now for you to think about where you have seen simple equations in real life.
+
+            Once you have the answer, write it in the box below and then tweet your answer with #SimpleEquationsInRealLife`,
+            hacks: {
+              afterBody: {
+                preface: "Here is a response from other students who answered this quiz:",
+                show: "locked",
+                fakePeerResponses: [
+                  {
+                    studentName: "Sid",
+                    imagePath: "/fake-responses/sid.png",
+                    response: dedent
+                    `Simple Equations are used when buying things with money. You can find out how much money you will receive back in change from the market using simple equations. #SimpleEquationsInRealLife`,
+                  },
+                  {
+                    studentName: "Prabsimar",
+                    imagePath: "/fake-responses/prabsimar.png",
+                    response: dedent
+                    `I used simple equations to find out how many days it will take me to read a book. #SimpleEquationsInRealLife`,
+                  }
+                ],
+              },
+            },
+        },
+        {
+            id: 'simple-equation-math',
+            kind: 'video',
+            time: 10,
+            title: 'How to write simple equations using maths?',
+            instructions: dedent`
+            OK, now that we know a few places where simple equations are used in real life, let us see how these equations are written using maths.
+
+            This video is long. But it explains the terms simple equations and expressions really well. 
+            `,
+            videoId: 'bAtuzMZOxR8',
+            endTime: 574,
+        },
+        {
+            id: 'exercise-4-1',
+            time: 5,
+            kind: 'image',
+            title: 'Solving Exercise 4.1',
+            presenterImagePath: '/instructors/kunal2.jpg',
+            instructions: dedent`
+            On page 81, the book asks a bunch of questions about simple equations.
+
+            You should try to solve them.
+
+            If you need step by step help, you can see video solutions on [question 1](https://youtu.be/HONe_TfoCSc), and [question 2](https://youtu.be/O-XcnA6rQd8) here.
+            `,
+            imagePath: '/learning-items/white-space-2.jpeg'
+        },
+        {
+            id: 'game-solve-question-3-exercise41',
+            kind: 'multipleChoiceResponse',
+            time: 1,
+            isTimed: 30,
+            maxSelected: 1,
+            presenterImagePath: '/instructors/kunal2.jpg',
+            title: 'Solve the equation',
+            instructions: dedent`
+              What is the value of _p_ in the following equation?
+
+              5p + 2 = 17
+            `,
+            choices: [
+              {
+                id: 'opt1',
+                text: '1'
+              },
+              {
+                id: 'opt2',
+                text: '2'
+              },
+              {
+                id: 'opt3',
+                text: '3'
+              },
+              {
+                id: 'opt4',
+                text: '4'
+              }
+            ],
+            automaticResponses: [
+              {
+                answerSet: ['opt1',],
+                response: '__Wrong__. If p were 1, then 5p + 2 would become 7. And that is not equal to 17'
+              },
+              {
+                answerSet: ['opt2'],
+                response: '__Incorrect__. If p were 2, then 5p + 2 would become 12. And that is not equal to 17'
+              },
+              {
+                answerSet: ['opt3'],
+                response: '__Correct__.'
+              },
+              {
+                answerSet: ['opt4'],
+                response: '__Wrong__. If p were 4, then 5p + 2 would become 22. And that is not equal to 17'
+              }
+            ]
+        },
+        {
+            id: 'solving-simple-equation',
+            kind: 'video',
+            time: 13,
+            title: 'How to solve a simple equation?',
+            instructions: dedent`
+            The following video uses a lot of examples to show how simple equations can be solved.
+            `,
+            videoId: '9DxrF6Ttws4',
+        },
+        {
+            id: 'exercise-4-2',
+            time: 14,
+            kind: 'image',
+            title: 'Solving Exercise 4.2',
+            presenterImagePath: '/instructors/kunal2.jpg',
+            instructions: dedent`
+            On page 86, the book asks us to solve a lot of simple equations.
+
+            You should try to solve them.
+
+            If you need step by step help, you can see video solutions on [question 1](https://youtu.be/BwP9tRnXYM8), [question 2](https://youtu.be/SZdQ7y_0ZWI), [question 3](https://youtu.be/IkDYMrb_Zeg) and [question 4](https://youtu.be/GPt5pn9tj6E) here.
+            `,
+            imagePath: '/learning-items/white-space-2.jpeg',
+            locked: true
+        }, 
+    ],
+  },
+  {
     // @Kunal: each of these chapter ids needs *two* spaces before its number,
     // because this is a hack :P
     id: "  8",
@@ -202,8 +397,8 @@ export default [
             startTime: 17,
             endTime: 155,
             locked: true
-        }, 
-   
+        },    
     ],
   },
+
 ];
