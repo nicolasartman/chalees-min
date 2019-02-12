@@ -399,6 +399,391 @@ export default [
             locked: true
         },    
     ],
+  }, 
+  {
+    id: "  11",
+    thumbnailImagePath: "/chapter-thumbnails/maths/area-thumbnail.jpeg",
+    title: "Perimeter and Area",
+    caption: "Chapter 11 — Perimeter and Area",
+    description: "Chapter 11 — Perimeter and Area",
+    items: [
+        {
+            id: 'area-relevance',
+            kind: 'video',
+            time: 6,
+            title: 'Where will we use area in real life?',
+            instructions: dedent`
+            Gaurav, who is an administrator in a school in Delhi, tells a story of how he calculates area on a daily basis. 
+
+            Let us listen to him as he explains the connection between area, whitewashing, and taxes.`,
+            videoId: 'llCEZ8iq5fE',
+        },
+        {
+            id: "area-in-real-life",
+            kind: "textResponse",
+            time: 2,
+            short: true,
+            title: "Tweet about area",
+            presenterImagePath: "/instructors/kunal2.jpg",
+            instructions: dedent`
+            It is time now for you to think about where you have seen area in real life. 
+
+            Once you have the answer, write it in the box below and then tweet your answer with #AreaInRealLife.`,
+            hacks: {
+              afterBody: {
+                preface: "Here are responses from other students who answered this quiz:",
+                show: "locked",
+                fakePeerResponses: [
+                  {
+                    studentName: "Sid",
+                    imagePath: "/fake-responses/sid.png",
+                    response: dedent
+                    `Area is used to calculate how much wood is needed when making furniture. #AreaInRealLife`,
+                  },
+                  {
+                    studentName: "Prabsimar",
+                    imagePath: "/fake-responses/prabsimar.png",
+                    response: dedent
+                    `I calculate area to solve the questions in the book. #AreaInRealLife`,
+                  }
+                ],
+              },
+            },
+          }, 
+          {
+            id: 'area-formula',
+            kind: 'video',
+            time: 4,
+            title: 'Area of a parallelogram',
+            instructions: dedent`
+            This short video will teach you how to calculate the area of a parallelogram.
+
+            It will also explain why the area of a parallelogram is base times height.`,
+            videoId: 'tueJRbVqMPI',
+          },
+          {
+            id: 'game-solve-area-parallelogram',
+            kind: 'multipleChoiceResponse',
+            time: 1,
+            isTimed: 60,
+            maxSelected: 1,
+            presenterImagePath: '/instructors/kunal2.jpg',
+            title: 'Find the area of a parallelogram',
+            instructions: dedent`
+              ![parallelogram area](/learning-items/maths/area-parallelogram.jpeg)
+              One of the sides of a parallelogram is 4 cm. And the height of the parallelogram is 3 cm. 
+
+              Find the area of this parallelogram.
+            `,
+            choices: [
+              {
+                id: 'opt1',
+                text: '12 cm'
+              },
+              {
+                id: 'opt2',
+                text: '7 square cm'
+              },
+              {
+                id: 'opt3',
+                text: '12 square cm'
+              },
+              {
+                id: 'opt4',
+                text: 'I do not know'
+              }
+            ],
+            automaticResponses: [
+              {
+                answerSet: ['opt1',],
+                response: '__Wrong__. The units are incorrect here. The correct answer is 12 square cm.'
+              },
+              {
+                answerSet: ['opt2'],
+                response: '__Incorrect__. The formula for area of a parallelogram is base times height. So the correct answer is 12 square cm'
+              },
+              {
+                answerSet: ['opt3'],
+                response: '__Correct__.'
+              },
+              {
+                answerSet: ['opt4'],
+                response: '__That is OK__. The formula for area of a parallelogram is base times height. So the correct answer is 12 square cm'
+              }
+            ]
+           },
+           {
+            id: 'game-solve-height-parallelogram',
+            kind: 'multipleChoiceResponse',
+            time: 1,
+            isTimed: 60,
+            maxSelected: 1,
+            presenterImagePath: '/instructors/kunal2.jpg',
+            title: 'Find the height of a parallelogram',
+            instructions: dedent`
+              ![parallelogram height](/learning-items/maths/height-parallelogram.jpeg)
+
+              The area of a parallelogram is 24 square cm. And its base is 6 cm. 
+
+              Find the height of this parallelogram.
+
+              _Hint_: You can watch [this video](https://www.youtube.com/watch?v=SKe3ItfdzTY) if you get stuck.`,
+            choices: [
+              {
+                id: 'opt1',
+                text: '4 square cm'
+              },
+              {
+                id: 'opt2',
+                text: '18 cm'
+              },
+              {
+                id: 'opt3',
+                text: '4  cm'
+              },
+              {
+                id: 'opt4',
+                text: 'I do not know'
+              }
+            ],
+            automaticResponses: [
+              {
+                answerSet: ['opt1',],
+                response: '__Wrong__. The units are incorrect here. The correct answer is 4 cm.'
+              },
+              {
+                answerSet: ['opt2'],
+                response: '__Incorrect__. The formula for area of a parallelogram is base times height. So the correct answer is 4 cm'
+              },
+              {
+                answerSet: ['opt3'],
+                response: '__Correct__.'
+              },
+              {
+                answerSet: ['opt4'],
+                response: '__That is OK__. The formula for area of a parallelogram is base times height. So the correct answer is 4 cm'
+              }
+            ]
+         },
+         {
+            id: 'triangle-formula',
+            kind: 'video',
+            time: 5,
+            title: 'Area of a triangle',
+            instructions: dedent`
+            This short video will teach you how to calculate the area of a triangle.
+
+            It will also explain why the area of a triangle is 1/2 times base times height of the triangle.`,
+            videoId: 'drDAnMhM_ic',
+          },
+          {
+            id: 'game-solve-area-triangle',
+            kind: 'multipleChoiceResponse',
+            time: 1,
+            isTimed: 60,
+            maxSelected: 1,
+            presenterImagePath: '/instructors/kunal2.jpg',
+            title: 'Find the area of a triangle',
+            instructions: dedent`
+              ![triangle area](/learning-items/maths/area-triangle2.jpeg)
+              The base of a triangle is 4 cm. And the height of that triangle is 2 cm. 
+
+              Find the area of this triangle.
+            `,
+            choices: [
+              {
+                id: 'opt1',
+                text: '4 cm'
+              },
+              {
+                id: 'opt2',
+                text: '7 square cm'
+              },
+              {
+                id: 'opt3',
+                text: '4 square cm'
+              },
+              {
+                id: 'opt4',
+                text: 'I do not know'
+              }
+            ],
+            automaticResponses: [
+              {
+                answerSet: ['opt1',],
+                response: '__Wrong__. The units are incorrect here. The correct answer is 4 square cm.'
+              },
+              {
+                answerSet: ['opt2'],
+                response: '__Incorrect__. The formula for area of a triangle is 1/2 times base times height. So the correct answer is 4 square cm'
+              },
+              {
+                answerSet: ['opt3'],
+                response: '__Correct__.'
+              },
+              {
+                answerSet: ['opt4'],
+                response: '__That is OK__. The formula for area of a triangle is 1/2 times base times height. So the correct answer is 4 square cm'
+              }
+            ]
+          },
+         {
+            id: 'game-solve-base-triangle',
+            kind: 'multipleChoiceResponse',
+            time: 1,
+            isTimed: 60,
+            maxSelected: 1,
+            presenterImagePath: '/instructors/kunal2.jpg',
+            title: 'Find the base of a triangle',
+            instructions: dedent`
+              ![triangle base](/learning-items/maths/base-triangle2.jpeg)
+              The area of a triangle is 36 square cm. And its height is 3 cm.
+
+              Find the base of this triangle.
+            `,
+            choices: [
+              {
+                id: 'opt1',
+                text: '24'
+              },
+              {
+                id: 'opt2',
+                text: '24 cm'
+              },
+              {
+                id: 'opt3',
+                text: '24 square cm'
+              },
+              {
+                id: 'opt4',
+                text: '12 cm'
+              }
+            ],
+            automaticResponses: [
+              {
+                answerSet: ['opt1',],
+                response: '__Wrong__. The units are missing here. The correct answer is 24 cm.'
+              },
+              {
+                answerSet: ['opt2'],
+                response: '__Correct__.'
+              },
+              {
+                answerSet: ['opt3'],
+                response: '__Incorrect__. The units are incorrect here. The correct answer is 24 cm.'
+              },
+              {
+                answerSet: ['opt4'],
+                response: '__Wrong__. The formula for area of a triangle is 1/2 times base times height. So the correct answer is 24 cm.'
+              }
+            ]
+         },
+         {
+            id: 'exercise-11-2',
+            time: 15,
+            kind: 'image',
+            title: 'Solving Exercise 11.2',
+            presenterImagePath: '/instructors/kunal2.jpg',
+            instructions: dedent`
+            On page 216, the book asks us to solve a lot of area-related questions.
+
+            You should try to solve them.
+
+            If you need step by step help, you can see [video solutions](https://www.youtube.com/watch?v=O0LKXoGxKOk&index=10&list=PL5aQFo5utHded86IX2c3YpN6TpaZLdugJ) for all questions here.
+            `,
+            imagePath: '/learning-items/white-space-2.jpeg',
+         },                    
+         {
+            id: 'circle-area',
+            kind: 'video',
+            time: 3,
+            title: 'Area of a circle',
+            instructions: dedent`
+            You probably already know how to calculate the area of a circle. 
+
+            But just in case you forgot, here is a short video that will be a good reminder.`,
+            videoId: '2wSOEU_4YjY',
+         },
+         {
+            id: 'circle-area-concentric',
+            kind: 'textResponse',
+            short: true,
+            time: 2,
+            isTimed: 99,
+            title: 'Calculate the area of a circle',
+            presenterImagePath: '/instructors/kunal2.jpg',
+            instructions: dedent`
+            ![circle area](/learning-items/maths/concentric-circle-area.jpeg)
+
+            Two circles have the same center. The outer circle has a radius of 10 cm. And the inner circle has a radius of 4 cm.
+
+            What is the area of the shaded blue region?
+
+            Write your answer in the box below.`,
+            hacks: {
+              afterBody: {
+                preface: 'Here is one way to calculate the area of the shaded blue region.',
+                show: 'locked',
+                feedbackImagePath: '/learning-items/maths/concentric-circle-area-solution.jpeg',
+              }
+            }
+         },
+          {
+            id: 'exercise-11-3',
+            time: 15,
+            kind: 'image',
+            title: 'Solving Exercise 11.3',
+            presenterImagePath: '/instructors/kunal2.jpg',
+            instructions: dedent`
+            On page 223, the book asks us to solve a lot of area-related questions for circles.
+
+            You should try to solve them.
+
+            If you need step by step help, you can see [video solutions](https://www.youtube.com/watch?v=BvhGLjmdvco&index=18&list=PL5aQFo5utHded86IX2c3YpN6TpaZLdugJ) for all questions here.
+            `,
+            imagePath: '/learning-items/white-space-2.jpeg',
+            locked: true
+         },                                
+    ],
   },
+  {
+    id: "  14",
+    thumbnailImagePath: "/chapter-thumbnails/maths/symmetry-thumbnail.jpeg",
+    title: "Symmetry",
+    caption: "Chapter 14 — Symmetry",
+    description: "Chapter 14 — Symmetry",
+    items: [
+        {
+        id: 'coming-soon-1n',
+        time: 1,
+        kind: 'image',
+        title: 'Coming Soon',
+        presenterImagePath: '/instructors/kunal2.jpg',
+        instructions: '<br>',
+        imagePath: '/chapter-thumbnails/english/coming-soon-1.jpeg'
+      }, 
+            
+    ],
+  },
+  {
+    id: "  15",
+    thumbnailImagePath: "/chapter-thumbnails/maths/solid-shapes-thumbnail.jpeg",
+    title: "Visualising Solid Shapes",
+    caption: "Chapter 15 — Visualising Solid Shapes",
+    description: "Chapter 15 — Visualising Solid Shapes",
+    items: [
+        {
+        id: 'coming-soon-1n',
+        time: 1,
+        kind: 'image',
+        title: 'Coming Soon',
+        presenterImagePath: '/instructors/kunal2.jpg',
+        instructions: '<br>',
+        imagePath: '/chapter-thumbnails/english/coming-soon-2.jpeg'
+      }, 
+            
+    ],
+  },
+
 
 ];
