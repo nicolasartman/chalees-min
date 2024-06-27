@@ -4,7 +4,7 @@ let config;
 if (__DEPLOY_TARGET__ === 'production') {
   config = {
     apiKey: "AIzaSyBwi1Se-jPT45UNXpWLUe8l5BM0BbEW7Xw",
-    authDomain: "chalees-min.firebaseapp.com",
+    authDomain: "chaleesmin.school",
     databaseURL: "https://chalees-min.firebaseio.com",
     storageBucket: "chalees-min.appspot.com",
   };
